@@ -155,6 +155,8 @@ INSTALLED_APPS += ["messages_ui"]
 
 INSTALLED_APPS += ["ajax_loading_overlay"]
 
+INSTALLED_APPS += ["django.contrib.markup"]
+
 INSTALLED_APPS += ["compressor"]
 COMPRESS_CSS_FILTERS = ["compressor.filters.css_default.CssAbsoluteFilter",
                         "compressor.filters.cssmin.CSSMinFilter"]
