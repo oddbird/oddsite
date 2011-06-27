@@ -1,21 +1,23 @@
 {% extends "base_site.html" %}
+{% load markup %}
 
 {% block maincontent %}
+{% filter markdown %}
 <article id="home">
   <hgroup>
-    <h2>OddBird is a trio of brothers who thrive on possibilities and daydreams, freely shared ideas and playful collaboration. We cross disciplines, break boundaries and eat our dessert with the soup spoon.</h2>
+    <h2>OddBird is a [trio of brothers](#people) who thrive on possibilities and [daydreams](store.apple.com), freely shared ideas and playful collaboration. We cross disciplines, break boundaries and eat our dessert with the soup spoon.</h2>
     <h3>We love chasing ideas into existence. We could do that all night long, and sometimes we do.</h3>
   </hgroup>
 
   <section id="work">
     <h3>OddProjects</h3>
     <div id="org">
-      <p>We design and build web tools for people. We built [Susy] for web designers because we wanted to use it, and we are core contributors to [Compass], [Django] and other open-source projects.</p>
-      <p>These days we’re building the UI for [Mozilla’s] new [Test Case Management System] and a parcel-mapping tool for [The Providence Plan].</p>
+      <p>We design and build web tools for people. We built [Susy](susy.oddbird.net) for web designers because we wanted to use it, and we are core contributors to [Compass](compass-style.org), [Django](djangoproject.com) and other open-source projects.</p>
+      <p>These days we’re building the UI for [Mozilla’s](mozilla.org) new [Test Case Management System](tcm.oddsites.net) and a parcel-mapping tool for [The Providence Plan](provplan.org).</p>
     </div>
     <div id="people">
       <p id="carl" class="hcard">Carl is a [coder](github.com/carljm), [Pythonista](www.python.org), and [Django](www.djangoproject.com) core developer. When he’s not chasing a more elegant algorithm, he chases frisbees, hockey pucks, and a four-year-old son.</p>
-      <p id ="eric" class="hcard">Eric is a [multimedia artist], writer, musician, interface [designer], and [front-end developer]. He is a core developer on the [compass] project, bass player for [Teacup Gorilla] and [Iron City], co-con-founding writer/producer/director at [Vicious Trap], and explorer of cutting-edge html and css.</p>
+      <p id ="eric" class="hcard">Eric is a [multimedia artist](eric.oddbird.net), writer, musician, [designer](dribbble.com/ericam), and [front-end developer](github.com/ericam). He is a core developer on the [compass](compass-style.org) project, bass player for [Teacup Gorilla](teacupgorilla.com) and [Iron City](theironcity.com), co-con-founding writer/producer/director at [Vicious Trap](vicioustrap.com), and explorer of cutting-edge html and css.</p>
       <p id="jonny" class="hcard">Jonny is…</p>
     </div>
   </section>
@@ -42,4 +44,5 @@
     </form>
   </section>
 </article>
+{% endfilter %}
 {% endblock maincontent %}
