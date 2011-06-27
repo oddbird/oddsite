@@ -4,9 +4,7 @@
 <div>
 {% block page %}
 
-  <header role="banner">
-    <h1><a href="/" rel="home">OddBird</a></h1>
-  </header>
+  <h1 role="banner"><a href="/" rel="home">OddBird</a></h1>
 
   <div role="main">
     {% include "messages_ui/_messages.html" %}
@@ -16,10 +14,16 @@
     {% endblock maincontent %}
   </div><!-- /~main -->
 
+  <aside id="colophon">
+    <h2>Colophon</h2>
+    <p>This site is built on plain old semantic HTML5, powered by the django web framework for python and styled using CSS3 with help from Modernizr, Susy, Compass, and Sass inspired by the “320 and up” boilerplate extension.</p>
+  </aside>
+
   <footer role="contentinfo">
     <p class="author vcard">
-      <small>copyright &copy; 2011</small>
-      <strong class="fn org">OddBird</strong>
+      <small>copyright &copy; 2009-2011</small>
+      <strong class="fn org">OddBird</strong> -
+      reasonable rights reserved
     </p>
   </footer>
 

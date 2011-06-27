@@ -1,8 +1,45 @@
 {% extends "base_site.html" %}
 
 {% block maincontent %}
+<article id="home">
+  <hgroup>
+    <h2>OddBird is a trio of brothers who thrive on possibilities and daydreams, freely shared ideas and playful collaboration. We cross disciplines, break boundaries and eat our dessert with the soup spoon.</h2>
+    <h3>We love chasing ideas into existence. We could do that all night long, and sometimes we do.</h3>
+  </hgroup>
 
-<h2>Home Page</h2>
-<p>Some home page content.</p>
+  <section id="work">
+    <h3>OddProjects</h3>
+    <div id="org">
+      <p>We design and build web tools for people. We built [Susy] for web designers because we wanted to use it, and we are core contributors to [Compass], [Django] and other open-source projects.</p>
+      <p>These days we’re building the UI for [Mozilla’s] new [Test Case Management System] and a parcel-mapping tool for [The Providence Plan].</p>
+    </div>
+    <div id="people">
+      <p id="carl" class="hcard">Carl is a [coder](github.com/carljm), [Pythonista](www.python.org), and [Django](www.djangoproject.com) core developer. When he’s not chasing a more elegant algorithm, he chases frisbees, hockey pucks, and a four-year-old son.</p>
+      <p id ="eric" class="hcard">Eric is a [multimedia artist], writer, musician, interface [designer], and [front-end developer]. He is a core developer on the [compass] project, bass player for [Teacup Gorilla] and [Iron City], co-con-founding writer/producer/director at [Vicious Trap], and explorer of cutting-edge html and css.</p>
+      <p id="jonny" class="hcard">Jonny is…</p>
+    </div>
+  </section>
 
+  <section id="process">
+    <h3>OddProcess</h3>
+    <p>We use an [iterative process], deploying and integrating new functionality frequently and aiming to deliver usable product launches as early and often as possible. We encourage clients to stay closely connected with the daily progress, offering frequent feedback and re-prioritization via [Pivotal Tracker](pivotaltracker.com), our project management tool. The tighter the feedback loop between us, the faster our progress.</p>
+    <p>In all of our projects we work exclusively with the open web stack: accessible semantic HTML5 markup, unobtrusive Javascript, and advanced CSS3 styling that degrades gracefully in older browsers. Our primary designer, [Eric Meyer](http://github.com/ericam), is a pioneer in the use of these techniques and in building [open-source tools](http://www.oddbird.net/susy/) that make these techniques more accessible to other designers.</p>
+    <p>On the server side, we are a Python/Django shop, and have extensive Django experience; our primary Python developer, [Carl Meyer](http://github.com/carljm), is a member of the [Django core development team](http://docs.djangoproject.com/en/dev/internals/committers/).</p>
+  </section>
+
+  <section id="contact">
+    <header>
+      <h3>Talk to Birds</h3>
+      <p>Inspire us. What’s your vision, and how can we help?</p>
+    </header>
+    <form>
+      <ul>
+        <li>
+          <label for="contact-body">leave a short message after the tone</label>
+          <textarea name="contact-body" placeholder="leave your name, email and a message after the tone..."></textarea>
+        </li>
+      </ul>
+    </form>
+  </section>
+</article>
 {% endblock maincontent %}

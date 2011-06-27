@@ -1,16 +1,22 @@
 // xsmall --------------------------------------------------------------------
 
 body > div
-  padding: rhythm(1) rhythm(.5)
+  padding: rhythm(1)
 
-div[role="main"]
-  +h-borders(1px,1)
-  border-color: $mid
+[role="banner"]
+  a
+    #{$link}
+      +replace-text('logo.png')
+      display: block
+      height: rhythm(3)
+
+[role="main"]
+  +trailer
 
 footer[role="contentinfo"]
-  +adjust-font-size-to(12px,.75)
-  +padding-leader(.25,12px)
-  +padding-trailer(1.5,12px)
-  font-style: italic
   small, strong
     font: inherit
+
+// components ----------------------------------------------------------------
+
+@import xsmall/components
