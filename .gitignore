@@ -1,0 +1,10 @@
+TAGS
+collected-assets/
+*.DS_Store
+*~
+*.pyc
+.sass-cache/
+oddsite/settings/local.py
+.livereload
+htmlcov/
+djangodb.sqlite

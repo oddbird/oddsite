@@ -1,0 +1,29 @@
+// 480 Grid ------------------------------------------------------------------
+// (6*4em + 5*1em + 2em) = 31em = 496px
+// 100px + 16px x 24px
+
+$total-cols         : 6
+$col-width          : 4em
+$gutter-width       : 1em
+$side-gutter-width  : 1em
+
+/* Layout ------------------------------------------------------------------
+
+body > div
+  +container
+  +susy-grid-background
+  +hpadding(0)
+
+header[role="banner"]
+  +full
+
+div[role="main"]
+  +full
+  +pie-clearfix
+
+footer[role="contentinfo"]
+  +full
+
+// Components ----------------------------------------------------------------
+
+@import small/components

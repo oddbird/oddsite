@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<div>
+{% block page %}
+
+  <header role="banner">
+    <h1><a href="/" rel="home">OddBird</a></h1>
+  </header>
+
+  <div role="main">
+    {% include "messages_ui/_messages.html" %}
+
+    {% block maincontent %}
+
+    {% endblock maincontent %}
+  </div><!-- /~main -->
+
+  <footer role="contentinfo">
+    <p class="author vcard">
+      <small>copyright &copy; 2011</small>
+      <strong class="fn org">OddBird</strong>
+    </p>
+  </footer>
+
+{% endblock page %}
+</div>
+{% endblock body %}

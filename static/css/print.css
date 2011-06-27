@@ -1,0 +1,93 @@
+/* Sizes -------------------------------------------------------------------- */
+/* */
+/* norm        : 1 */
+/* small       : 0.618 */
+/* xsmall      : 0.382 */
+/* xxsmall     : 0.236 */
+/* xxxsmall    : 0.146 */
+/* med         : 1.618 */
+/* large       : 2.618 */
+/* xlarge      : 4.236 */
+/* xxlarge     : 6.854 */
+/* */
+/* normem      : 1em */
+/* smallem     : 0.618em */
+/* xsmallem    : 0.382em */
+/* xxsmallem   : 0.236em */
+/* xxxsmallem  : 0.146em */
+/* medem       : 1.618em */
+/* largeem     : 2.618em */
+/* xlargeem    : 4.236em */
+/* xxlargeem   : 6.854em */
+/* */
+/* normpx      : 14px */
+/* smallpx     : 8.653px */
+/* xsmallpx    : 5.348px */
+/* xxsmallpx   : 3.305px */
+/* xxxsmallpx  : 2.043px */
+/* medpx       : 22.652px */
+/* largepx     : 36.651px */
+/* xlargepx    : 59.301px */
+/* xxlargepx   : 95.949px */
+/* colors -------------------------------------------------------------------- */
+/* */
+/* base              : #404040 */
+/* blue              : #4040bf */
+/* red               : #bf4040 */
+/* green             : #40bf40 */
+/* yellow            : #dfaf20 */
+/* */
+/* dark              : #595959 */
+/* darker            : #404040 */
+/* darkest           : black */
+/* light             : #a6a6a6 */
+/* lighter           : #cccccc */
+/* lightest          : #f2f2f2 */
+/* */
+/* blue-dark         : #333399 */
+/* blue-darker       : #262673 */
+/* blue-darkest      : #19194d */
+/* blue-light        : #7979d2 */
+/* blue-lighter      : #b3b3e6 */
+/* blue-lightest     : #d9d9f2 */
+/* */
+/* red-dark          : #993333 */
+/* red-darker        : #732626 */
+/* red-darkest       : #4d1919 */
+/* red-light         : #d27979 */
+/* red-lighter       : #e6b3b3 */
+/* red-lightest      : #f2d9d9 */
+/* */
+/* green-dark        : #339933 */
+/* green-darker      : #267326 */
+/* green-darkest     : #194d19 */
+/* green-light       : #79d279 */
+/* green-lighter     : #b3e6b3 */
+/* green-lightest    : #d9f2d9 */
+/* */
+/* yellow-dark       : #9c7b16 */
+/* yellow-darker     : #59460d */
+/* yellow-darkest    : #2d2306 */
+/* yellow-light      : #e9c763 */
+/* yellow-lighter    : #f2dfa6 */
+/* yellow-lightest   : #f9efd2 */
+/* Print Defaults ------------------------------------------------------------ */
+nav { display: none; }
+
+* { background: transparent !important; color: #595959 !important; float: none !important; text-shadow: none !important; }
+
+body { font-family: Cambria, Georgia, serif; font-size: 12px; line-height: 18px; background: white; color: black; }
+
+a:link, a:visited { color: #595959 !important; }
+a:not([href^="#"]):not([href="/"]):not([rel="home"]):link, a:not([href^="#"]):not([href="/"]):not([rel="home"]):visited { color: #333366 !important; text-decoration: underline; }
+a:not([href^="#"]):not([href="/"]):not([rel="home"]):after { content: " (" attr(href) ") "; }
+
+abbr:after { content: " (" attr(title) ")"; }
+
+pre, blockquote, img { page-break-inside: avoid; }
+
+@page { margin: 0.5cm; }
+
+p, h2, h3 { orphans: 3; widows: 3; }
+
+h2, h3 { page-break-after: avoid; }

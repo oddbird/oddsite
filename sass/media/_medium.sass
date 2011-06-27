@@ -1,0 +1,28 @@
+// 768 Grid ------------------------------------------------------------------
+// (12*4em + 11*1em + 2em) = 61em = 976px
+// 64px + 16px x 24px
+
+$total-cols         : 12
+$col-width          : 4em
+$gutter-width       : 1em
+$side-gutter-width  : $gutter-width
+
+/* Layout ------------------------------------------------------------------
+
+body > div
+  +container
+  +susy-grid-background
+  +hpadding(0)
+
+header[role="banner"]
+  +full
+
+div[role="main"]
+  +full
+
+footer[role="contentinfo"]
+  +full
+
+// Components ----------------------------------------------------------------
+
+@import medium/components

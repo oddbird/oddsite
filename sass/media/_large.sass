@@ -1,0 +1,27 @@
+// 992 Grid ------------------------------------------------------------------
+// (24*2em + 23*1em + 2em) = 73em = 1168px
+// 48px + 16px x 24px
+
+$total-cols         : 24
+$col-width          : 2em
+$gutter-width       : 1em
+$side-gutter-width  : $gutter-width
+
+/* Layout --------------------------------------------------------------------
+
+body > div
+  +container
+  +susy-grid-background
+
+header[role="banner"]
+  +full
+
+div[role="main"]
+  +full
+
+footer[role="contentinfo"]
+  +full
+
+// Components ----------------------------------------------------------------
+
+@import large/components
