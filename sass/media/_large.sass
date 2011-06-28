@@ -2,8 +2,8 @@
 // (24*2em + 23*1em + 2em) = 73em = 1168px
 // 48px + 16px x 24px
 
-$total-cols         : 24
-$col-width          : 2em
+$total-cols         : 12
+$col-width          : 5em
 $gutter-width       : 1em
 $side-gutter-width  : $gutter-width
 
@@ -14,10 +14,12 @@ body > div
   +susy-grid-background
 
 [role="banner"]
-  +full
+  +columns(3)
+  +alpha
 
 [role="main"]
-  +full
+  +columns(9)
+  +omega
 
 #colophon
   +full

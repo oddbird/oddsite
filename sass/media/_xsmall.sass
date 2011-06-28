@@ -1,20 +1,32 @@
-// xsmall --------------------------------------------------------------------
+// xsmall layout -------------------------------------------------------------
 
-body > div
-  padding: rhythm(1)
+body
+  padding: rhythm(1) 0
+
+.xssection
+  position: relative
+  padding: 0 rhythm(1)
 
 [role="banner"]
-  a
-    #{$link}
-      +replace-text('logo.png')
-      display: block
-      height: rhythm(3)
+  @extend .xssection
+
+#logo
+  #{$link}
+    +replace-text('logo.png')
+    display: block
+    height: rhythm(4,$largepx)
 
 [role="main"]
   +trailer
+  padding: rhythm(.5) 0
+  > section
+    @extend .xssection
 
 footer[role="contentinfo"]
-  small, strong
+  @extend .xssection
+  .colophon
+    +italic
+  .fn.org
     font: inherit
 
 // components ----------------------------------------------------------------

@@ -1,30 +1,26 @@
 {% extends 'base.html' %}
+{% load markup %}
 
 {% block body %}
 <div>
 {% block page %}
 
-  <h1 role="banner"><a href="/" rel="home">OddBird</a></h1>
+  <hgroup role="banner">
+    <h1><a href="/" rel="home" id="logo">OddBird</a></h1>
+    <h3 class="hcard">{% filter markdown %}<span class="fn org">OddBird</span> is a [trio of brothers](#people) who thrive on freely shared ideas and playful collaboration. We cross disciplines, break boundaries and eat our dessert with the soup spoon.{% endfilter %}</h3>
+    <h2>We love chasing ideas into existence. We could do that all night long, and sometimes we do.</h2>
+  </hgroup>
 
-  <div role="main">
+  <section role="main">
     {% include "messages_ui/_messages.html" %}
-
     {% block maincontent %}
 
     {% endblock maincontent %}
-  </div><!-- /~main -->
-
-  <aside id="colophon">
-    <h2>Colophon</h2>
-    <p>This site is built on plain old semantic HTML5, powered by the django web framework for python and styled using CSS3 with help from Modernizr, Susy, Compass, and Sass inspired by the “320 and up” boilerplate extension.</p>
-  </aside>
+  </section><!-- /~main -->
 
   <footer role="contentinfo">
-    <p class="author vcard">
-      <small>copyright &copy; 2009-2011</small>
-      <strong class="fn org">OddBird</strong> -
-      reasonable rights reserved
-    </p>
+    <p class="colophon">This site is built on plain old semantic HTML5, powered by the django web framework for python and styled using CSS3 with help from Modernizr, Susy, Compass, and Sass inspired by the “320 and up” boilerplate extension.</p>
+    <p><small class="author vcard">copyright &copy; 2009-2011 <strong class="fn org">OddBird</strong></small></p>
   </footer>
 
 {% endblock page %}

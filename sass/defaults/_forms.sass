@@ -128,15 +128,12 @@ button,  input[type="reset"], input[type="submit"], input[type="button"], input[
 
 .button
   @extend .allcaps
-  +transition((box-shadow),300ms)
   +adjust-font-size-to(12px,.5)
-  +border-radius(1em)
-  +background($alt)
-  +background(linear-gradient(top, rgba($light,.25), rgba($light,0) 100%), $alt)
+  +border-radius
   +rhythm-borders(1px,.25,12px)
   +hpadding
-  +text-shadow(contrast-color(contrast-color($alt)) 1px 1px 0)
-  border-color: $dark
+  background: $lighter
+  border-color: $light
   vertical-align: top
   cursor: pointer
   color: contrast-color($alt)
@@ -162,3 +159,6 @@ input
 .errorlist
   +no-style-list
   color: red
+
+.form-actions
+  text-align: right

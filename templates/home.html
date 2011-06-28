@@ -3,46 +3,39 @@
 
 {% block maincontent %}
 {% filter markdown %}
-<article id="home">
-  <hgroup>
-    <h2>OddBird is a [trio of brothers](#people) who thrive on possibilities and [daydreams](store.apple.com), freely shared ideas and playful collaboration. We cross disciplines, break boundaries and eat our dessert with the soup spoon.</h2>
-    <h3>We love chasing ideas into existence. We could do that all night long, and sometimes we do.</h3>
-  </hgroup>
-
-  <section id="work">
-    <h3>OddProjects</h3>
-    <div id="org">
-      <p>We design and build web tools for people. We built [Susy](susy.oddbird.net) for web designers because we wanted to use it, and we are core contributors to [Compass](compass-style.org), [Django](djangoproject.com) and other open-source projects.</p>
-      <p>These days we’re building the UI for [Mozilla’s](mozilla.org) new [Test Case Management System](tcm.oddsites.net) and a parcel-mapping tool for [The Providence Plan](provplan.org).</p>
+<section id="work">
+  <h3>OddProjects</h3>
+  <p>We design and build web tools for people. We built [Susy](susy.oddbird.net) for web designers because we wanted to use it, and we are core contributors to [Compass](compass-style.org), [Django](djangoproject.com) and other open-source projects.</p>
+  <p>These days we’re building the UI for [Mozilla’s](mozilla.org) new [Test Case Management System](tcm.oddsites.net) and a parcel-mapping tool for [The Providence Plan](provplan.org).</p>
+</section>
+<section id="people">
+  <h3>OddPeople</h3>
+  <p id="carl" class="hcard"><span class="fn">Carl</span> is a [coder](github.com/carljm), [Pythonista](www.python.org), and [Django](www.djangoproject.com) core developer. When he’s not chasing a more elegant algorithm, he chases frisbees, hockey pucks, and a four-year-old son.</p>
+  <p id ="eric" class="hcard"><span class="fn">Eric</span> is a [multimedia artist](eric.oddbird.net), writer, musician, [designer](dribbble.com/ericam), and [front-end developer](github.com/ericam). He is a core developer on the [compass](compass-style.org) project, bass player for [Teacup Gorilla](teacupgorilla.com) and [Iron City](theironcity.com), co-con-founder at [Vicious Trap](vicioustrap.com), and the exploring sort of person.</p>
+  <p id="jonny" class="hcard"><span class="fn">Jonny</span> is…</p>
+</section>
+<section id="process">
+  <h3>OddProcess</h3>
+  <p>We use an [**iterative** process], deploying and integrating new functionality frequently and aiming to deliver usable product launches as early and often as possible.</p>
+  <p>We encourage clients to stay closely **connected** with the daily progress, offering frequent feedback and re-prioritization via [Pivotal Tracker](pivotaltracker.com), our project management tool.</p>
+  <p>In all of our projects we work exclusively with the open web stack: **accessible** semantic HTML5 markup, unobtrusive Javascript, and advanced CSS3 styling. On the server side we are a Python/Django shop, and have extensive Django experience.</p>
+</section>
+<section id="contact">
+  <header>
+    <h3>Contact the OddsBird</h3>
+    <p>What’s your vision, and how can we help?</p>
+  </header>
+  <form id="contact-form">
+    <ul>
+      <li>
+        <label for="contact-body">leave a short message after the tone</label>
+        <textarea name="contact-body" placeholder="leave your name, email and a message after the tone..."></textarea>
+      </li>
+    </ul>
+    <div class="form-actions">
+      <button type="submit">send it.</button>
     </div>
-    <div id="people">
-      <p id="carl" class="hcard">Carl is a [coder](github.com/carljm), [Pythonista](www.python.org), and [Django](www.djangoproject.com) core developer. When he’s not chasing a more elegant algorithm, he chases frisbees, hockey pucks, and a four-year-old son.</p>
-      <p id ="eric" class="hcard">Eric is a [multimedia artist](eric.oddbird.net), writer, musician, [designer](dribbble.com/ericam), and [front-end developer](github.com/ericam). He is a core developer on the [compass](compass-style.org) project, bass player for [Teacup Gorilla](teacupgorilla.com) and [Iron City](theironcity.com), co-con-founding writer/producer/director at [Vicious Trap](vicioustrap.com), and explorer of cutting-edge html and css.</p>
-      <p id="jonny" class="hcard">Jonny is…</p>
-    </div>
-  </section>
-
-  <section id="process">
-    <h3>OddProcess</h3>
-    <p>We use an [iterative process], deploying and integrating new functionality frequently and aiming to deliver usable product launches as early and often as possible. We encourage clients to stay closely connected with the daily progress, offering frequent feedback and re-prioritization via [Pivotal Tracker](pivotaltracker.com), our project management tool. The tighter the feedback loop between us, the faster our progress.</p>
-    <p>In all of our projects we work exclusively with the open web stack: accessible semantic HTML5 markup, unobtrusive Javascript, and advanced CSS3 styling that degrades gracefully in older browsers. Our primary designer, [Eric Meyer](http://github.com/ericam), is a pioneer in the use of these techniques and in building [open-source tools](http://www.oddbird.net/susy/) that make these techniques more accessible to other designers.</p>
-    <p>On the server side, we are a Python/Django shop, and have extensive Django experience; our primary Python developer, [Carl Meyer](http://github.com/carljm), is a member of the [Django core development team](http://docs.djangoproject.com/en/dev/internals/committers/).</p>
-  </section>
-
-  <section id="contact">
-    <header>
-      <h3>Talk to Birds</h3>
-      <p>Inspire us. What’s your vision, and how can we help?</p>
-    </header>
-    <form>
-      <ul>
-        <li>
-          <label for="contact-body">leave a short message after the tone</label>
-          <textarea name="contact-body" placeholder="leave your name, email and a message after the tone..."></textarea>
-        </li>
-      </ul>
-    </form>
-  </section>
-</article>
+  </form>
+</section>
 {% endfilter %}
 {% endblock maincontent %}

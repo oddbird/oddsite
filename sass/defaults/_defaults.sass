@@ -29,27 +29,33 @@ a
 /* Headings ------------------------------------------------------------------
 
 h1
-  +adjust-font-size-to(21px)
-
-h1, h2
   @extend .allcaps
+  +adjust-font-size-to($largepx)
+
+h2
+  +adjust-font-size-to($medpx,1.5)
+  +bold
+  +italic
 
 h3
-  font-weight: bold
+  +adjust-font-size-to($halfmedpx,1.5)
 
 h4
-  @extend .smallcaps
+  @extend .allcaps
 
-h5, h6
-  font-style: italic
+h5
+  +bold
+
+h6
+  +italic
 
 /* Inline --------------------------------------------------------------------
 
 cite, em, dfn, address, i
-  font-style: italic
+  +italic
 
 strong, dfn, b
-  font-weight: bold
+  +bold
 
 sup, sub
   position: relative
@@ -92,6 +98,8 @@ pre, code, tt
 
 p
   +trailer
+  &:empty
+    display: none
 
 pre
   padding: rhythm()

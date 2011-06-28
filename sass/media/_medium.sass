@@ -15,10 +15,17 @@ body > div
   +hpadding(0)
 
 [role="banner"]
-  +full
+  +columns(3)
+  +alpha
+  a
+    #{$link}
+      height: rhythm(4,$xlargepx)
 
 [role="main"]
-  +full
+  margin: 0
+  clear: none
+  +columns(9)
+  +omega
 
 #colophon
   +full
@@ -28,4 +35,5 @@ body > div
 
 // Components ----------------------------------------------------------------
 
+@import medium/defaults
 @import medium/components
