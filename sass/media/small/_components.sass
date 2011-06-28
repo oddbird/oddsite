@@ -1,0 +1,28 @@
+#work
+  p
+    +columns(3)
+    &:first-of-type
+      +alpha
+    &:nth-of-type(2n)
+      +omega
+
+#people
+  p
+    +full
+    &:nth-of-type(even)
+      +prefix(2)
+    &:nth-of-type(odd)
+      +suffix(2)
+
+#process
+  p
+    +full
+  h3, p
+    +prefix(2)
+
+#contact
+  p
+    +full
+
+#contact-form
+  +full

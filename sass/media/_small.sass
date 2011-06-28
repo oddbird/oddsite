@@ -9,22 +9,47 @@ $side-gutter-width  : 1em
 
 /* Layout ------------------------------------------------------------------
 
-body > div
+.xssection
+  padding: 0
+
+.ssection
   +container
   +susy-grid-background
-  +hpadding(0)
 
 [role="banner"]
-  +full
+  @extend .ssection
+  h1
+    +columns(2)
+    +alpha
+  h2
+    +full
+  h3
+    +adjust-font-size-to($smallpx)
+    +allcaps
+    +columns(4)
+    +omega
+    +trailer(.5,$smallpx)
+
+#logo
+  #{$link}
+    +background-size(contain)
 
 [role="main"]
-  +full
-
-#colophon
-  +full
+  +padding-trailer
+  > section
+    @extend .ssection
+  h3
+    +full
 
 [role="contentinfo"]
-  +full
+  @extend .ssection
+  .colophon, .author
+    +columns(3)
+  .colophon
+    +alpha
+  .author
+    +omega
+    text-align: right
 
 // Components ----------------------------------------------------------------
 

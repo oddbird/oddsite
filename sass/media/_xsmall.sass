@@ -9,22 +9,29 @@ body
 
 [role="banner"]
   @extend .xssection
+  h2
+    +trailer(1,$medpx)
+  h3
+    +trailer(1,$smallpx)
 
 #logo
   #{$link}
+    +transition(all,300ms)
     +replace-text('logo.png')
     display: block
     height: rhythm(4,$largepx)
 
 [role="main"]
-  +trailer
-  padding: rhythm(.5) 0
+  +padding-trailer
+  h2
+    +gone
   > section
     @extend .xssection
 
 footer[role="contentinfo"]
   @extend .xssection
   .colophon
+    +adjust-font-size-to($smallpx)
     +italic
   .fn.org
     font: inherit

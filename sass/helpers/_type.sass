@@ -29,13 +29,22 @@
 .mono
   +mono-family
 
-.caps
+=caps
   letter-spacing: .1em
 
-.allcaps
-  @extend .caps
+=allcaps
+  +caps
   text-transform: uppercase
 
-.smallcaps
-  @extend .caps
+=smallcaps
+  +caps
   font-variant: small-caps
+
+.caps
+  +caps
+
+.allcaps
+  +allcaps
+
+.smallcaps
+  +smallcaps
