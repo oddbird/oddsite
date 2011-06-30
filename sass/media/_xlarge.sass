@@ -9,21 +9,32 @@ $side-gutter-width  : $gutter-width
 
 /* Layout ------------------------------------------------------------------
 
-body > div
+.lsection
+  width: auto
+  max-width: none
+  background: none
+
+.xlsection
   +container
   +susy-grid-background
 
 [role="banner"]
-  +full
+  @extend .xlsection
+  h1
+    +columns(6)
+    +alpha
+
+#logo
+  #{$link}
+    height: rhythm(6,$xlargepx)
+    background-image: image-url('logo_lg.png')
 
 [role="main"]
-  +full
-
-#colophon
-  +full
+  > section
+    @extend .xlsection
 
 [role="contentinfo"]
-  +full
+  @extend .xlsection
 
 // Components ----------------------------------------------------------------
 

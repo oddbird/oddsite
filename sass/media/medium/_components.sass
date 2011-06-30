@@ -1,0 +1,36 @@
+#work
+  p
+    +columns(4)
+    &:first-of-type
+      +prefix(3)
+      +alpha
+    &:nth-of-type(2n)
+      +omega
+
+#people
+  p
+    +full
+    +prefix(3)
+    &:nth-of-type(odd)
+      +prefix(6)
+      +suffix(1)
+    &:nth-of-type(even)
+      +prefix(4)
+      +suffix(3)
+
+#process
+  p
+    +full
+    +prefix(3)
+
+#contact
+  p
+    +reset-box-model
+    +columns(3)
+    +omega
+
+#contact-form
+  +columns(6)
+  +prefix(3)
+  +alpha
+  clear: none

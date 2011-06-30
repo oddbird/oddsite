@@ -11,32 +11,47 @@ $side-gutter-width  : $gutter-width
 
 .ssection
   width: auto
-  max-width: 0
+  max-width: none
   background: none
 
-body > div
+.msection
   +container
   +susy-grid-background
-  +hpadding(0)
 
 [role="banner"]
-  +columns(3)
-  +alpha
-  a
-    #{$link}
-      height: rhythm(4,$xlargepx)
+  @extend .msection
+  h1
+    +columns(3)
+    +alpha
+  h2
+    +full
+    +prefix(3)
+  h3
+    +columns(9)
+    +omega
+    +trailer(.5,$medpx)
+
+#logo
+  #{$link}
+    height: rhythm(4,$xlargepx)
 
 [role="main"]
-  margin: 0
-  clear: none
-  +columns(9)
-  +omega
-
-#colophon
-  +full
+  > section
+    @extend .msection
+  h3
+    +full
+    +prefix(3)
 
 [role="contentinfo"]
-  +full
+  @extend .msection
+  .colophon
+    +columns(5)
+    +prefix(3)
+    +alpha
+  .author
+    +columns(4)
+    +omega
+    text-align: right
 
 // Components ----------------------------------------------------------------
 

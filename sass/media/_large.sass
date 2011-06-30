@@ -9,24 +9,53 @@ $side-gutter-width  : $gutter-width
 
 /* Layout --------------------------------------------------------------------
 
-body > div
+.msection
+  width: auto
+  max-width: none
+  background: none
+
+.lsection
   +container
   +susy-grid-background
-
-[role="banner"]
-  +columns(3)
-  +alpha
-
-[role="main"]
-  +columns(9)
-  +omega
-
-#colophon
-  +full
-
-[role="contentinfo"]
-  +full
 
 // Components ----------------------------------------------------------------
 
 @import large/components
+
+[role="banner"]
+  @extend .lsection
+  h1
+    +columns(3)
+    +alpha
+  h2
+    +reset-box-model
+    +columns(6)
+    +trailer(1,$largepx)
+    clear: none
+  h3
+    +adjust-font-size-to($normpx)
+    +columns(3)
+    +omega
+    +trailer(0)
+
+#logo
+  #{$link}
+    height: rhythm(5,$xlargepx)
+
+[role="main"]
+  > section
+    @extend .lsection
+  h3
+    +full
+    +prefix(3)
+
+[role="contentinfo"]
+  @extend .lsection
+  .colophon
+    +columns(5)
+    +prefix(3)
+    +alpha
+  .author
+    +columns(4)
+    +omega
+    text-align: right

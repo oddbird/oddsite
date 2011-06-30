@@ -1,0 +1,41 @@
+#work
+  p
+    &:first-of-type, &:nth-of-type(2n)
+      +float(none)
+      +reset-box-model
+      +full
+      +prefix(5)
+      +suffix(3)
+      +trailer
+      display: block
+      width: auto
+
+#people
+  p
+    +columns(3)
+    clear: none
+    &:nth-of-type(odd), &:nth-of-type(even)
+      padding: 0
+      margin-left: 0
+    &:first-of-type
+      +prefix(3)
+      +alpha
+    &:last-of-type
+      +omega
+
+#process
+  p
+    +full
+    +prefix(3)
+
+#contact
+  p
+    +reset-box-model
+    +columns(3)
+    +omega
+
+#contact-form
+  +columns(6)
+  +prefix(3)
+  +alpha
+  clear: none
