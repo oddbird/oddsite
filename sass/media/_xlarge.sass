@@ -23,6 +23,11 @@ $side-gutter-width  : $gutter-width
   h1
     +columns(6)
     +alpha
+  h3
+    +columns(6)
+    +omega
+  h2
+    +columns(12)
 
 #logo
   #{$link}
@@ -32,6 +37,9 @@ $side-gutter-width  : $gutter-width
 [role="main"]
   > section
     @extend .xlsection
+  h3
+    +full
+    +prefix(6)
 
 [role="contentinfo"]
   @extend .xlsection

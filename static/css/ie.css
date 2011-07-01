@@ -323,8 +323,8 @@ footer[role="contentinfo"] .fn.org { font: inherit; }
 [role="main"] h3 { clear: both; margin-left: 3.226%; margin-right: 3.226%; }
 
 [role="contentinfo"] .colophon, [role="contentinfo"] .author { display: inline; float: left; width: 45.161%; margin-right: 3.226%; }
-[role="contentinfo"] .colophon { margin-left: 3.226%; }
-[role="contentinfo"] .author { display: inline; float: right; margin-right: 3.226%; #margin-left: -1em; text-align: right; }
+[role="contentinfo"] .colophon { display: inline; float: right; margin-right: 3.226%; #margin-left: -1em; text-align: right; }
+[role="contentinfo"] .author { margin-left: 3.226%; }
 
 #work p { display: inline; float: left; width: 45.161%; margin-right: 3.226%; }
 #work p:first-of-type { margin-left: 3.226%; }
@@ -354,8 +354,8 @@ footer[role="contentinfo"] .fn.org { font: inherit; }
 
 [role="main"] h3 { clear: both; margin-left: 1.639%; margin-right: 1.639%; padding-left: 24.59%; }
 
-[role="contentinfo"] .colophon { display: inline; float: left; width: 39.344%; margin-right: 1.639%; padding-left: 24.59%; margin-left: 1.639%; }
-[role="contentinfo"] .author { display: inline; float: left; width: 31.148%; margin-right: 1.639%; display: inline; float: right; margin-right: 1.639%; #margin-left: -1em; text-align: right; }
+[role="contentinfo"] .author { display: inline; float: left; width: 31.148%; margin-right: 1.639%; padding-left: 24.59%; margin-left: 1.639%; }
+[role="contentinfo"] .colophon { display: inline; float: left; width: 39.344%; margin-right: 1.639%; display: inline; float: right; margin-right: 1.639%; #margin-left: -1em; text-align: right; }
 
 h1 { font-size: 3.375em; line-height: 1.333em; }
 
@@ -373,6 +373,6 @@ h3 { font-size: 1.5em; line-height: 1.5em; text-transform: inherit; letter-spaci
 
 #process p { clear: both; margin-left: 1.639%; margin-right: 1.639%; padding-left: 24.59%; }
 
-#contact p { margin: 0; padding: 0; border: 0; display: inline; float: left; width: 22.951%; margin-right: 1.639%; display: inline; float: right; margin-right: 1.639%; #margin-left: -1em; }
+#contact p { clear: both; margin-left: 1.639%; margin-right: 1.639%; padding-left: 24.59%; }
 
-#contact-form { display: inline; float: left; width: 47.541%; margin-right: 1.639%; padding-left: 24.59%; margin-left: 1.639%; clear: none; }
+#contact-form { clear: both; margin-left: 1.639%; margin-right: 1.639%; padding-left: 24.59%; }

@@ -1,6 +1,6 @@
 #work
   p
-    &:first-of-type, &:nth-of-type(2n)
+    &:first-of-type, &:last-of-type
       +float(none)
       +reset-box-model
       +full
@@ -25,17 +25,8 @@
 
 #process
   p
-    +full
-    +prefix(3)
-
-#contact
-  p
-    +reset-box-model
-    +columns(3)
-    +omega
-
-#contact-form
-  +columns(6)
-  +prefix(3)
-  +alpha
-  clear: none
+    +pad(4,4)
+    &:nth-of-type(2)
+      +pad(6,2)
+    &:nth-of-type(3)
+      +pad(8,0)
