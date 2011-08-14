@@ -13,6 +13,29 @@
     @if $style
       font-style: $style
 
+// Font Files ----------------------------------------------------------------
+
++font-face('BaskervilleFS',font-files('baskervillefs_regular_macroman/Baskerville-Regular-webfont.woff',woff,'baskervillefs_regular_macroman/Baskerville-Regular-webfont.ttf',truetype,'baskervillefs_regular_macroman/Baskerville-Regular-webfont.svg#webfontSMxOInhK',svg),'baskervillefs_regular_macroman/Baskerville-Regular-webfont.eot',normal,normal)
++font-face('BaskervilleFS',font-files('baskervillefs_italic_macroman/Baskerville-Italic-webfont.woff',woff,'baskervillefs_italic_macroman/Baskerville-Italic-webfont.ttf',truetype,'baskervillefs_italic_macroman/Baskerville-Italic-webfont.svg#webfontSMxOInhK',svg),font-url('baskervillefs_italic_macroman/Baskerville-Italic-webfont.eot'),normal,italic)
++font-face('BaskervilleFS',font-files('baskervillefs_bold_macroman/Baskerville-Bold-webfont.woff',woff,'baskervillefs_bold_macroman/Baskerville-Bold-webfont.ttf',truetype,'baskervillefs_bold_macroman/Baskerville-Bold-webfont.svg#webfontSMxOInhK',svg),font-url('baskervillefs_bold_macroman/Baskerville-Bold-webfont.eot'),700,normal)
++font-face('BaskervilleFS',font-files('baskervillefs_bolditalic_macroman/Baskerville-BoldItalic-webfont.woff',woff,'baskervillefs_bolditalic_macroman/Baskerville-BoldItalic-webfont.ttf',truetype,'baskervillefs_bolditalic_macroman/Baskerville-BoldItalic-webfont.svg#webfontSMxOInhK',svg),font-url('baskervillefs_bolditalic_macroman/Baskerville-BoldItalic-webfont.eot'),700,italic)
+
++font-face('FranklinGothic',font-files('franklingothicfs_medium_macroman/FranklinGothic-Med-webfont.woff',woff,'franklingothicfs_medium_macroman/FranklinGothic-Med-webfont.ttf',truetype,'franklingothicfs_medium_macroman/FranklinGothic-Med-webfont.svg#webfontSMxOInhK',svg),'franklingothicfs_medium_macroman/FranklinGothic-Med-webfont.eot',normal,normal)
++font-face('FranklinGothic',font-files('franklingothicfs_mediumitalic_macroman/FranklinGothic-MedIt-webfont.woff',woff,'franklingothicfs_mediumitalic_macroman/FranklinGothic-MedIt-webfont.ttf',truetype,'franklingothicfs_mediumitalic_macroman/FranklinGothic-MedIt-webfont.svg#webfontSMxOInhK',svg),'franklingothicfs_mediumitalic_macroman/FranklinGothic-MedIt-webfont.eot',normal,italic)
++font-face('FranklinGothic',font-files('franklingothicfs_book_macroman/FranklinGothic-Book-webfont.woff',woff,'franklingothicfs_book_macroman/FranklinGothic-Book-webfont.ttf',truetype,'franklingothicfs_book_macroman/FranklinGothic-Book-webfont.svg#webfontSMxOInhK',svg),'franklingothicfs_book_macroman/FranklinGothic-Book-webfont.eot',200,'normal')
++font-face('FranklinGothic',font-files('franklingothicfs_bookitalic_macroman/FranklinGothic-BookIt-webfont.woff',woff,'franklingothicfs_bookitalic_macroman/FranklinGothic-BookIt-webfont.ttf',truetype,'franklingothicfs_bookitalic_macroman/FranklinGothic-BookIt-webfont.svg#webfontSMxOInhK',svg),'franklingothicfs_bookitalic_macroman/FranklinGothic-BookIt-webfont.eot',200,italic)
++font-face('FranklinGothic',font-files('franklingothicfs_demi_macroman/FranklinGothic-Demi-webfont.woff',woff,'franklingothicfs_demi_macroman/FranklinGothic-Demi-webfont.ttf',truetype,'franklingothicfs_demi_macroman/FranklinGothic-Demi-webfont.svg#webfontSMxOInhK',svg),'franklingothicfs_demi_macroman/FranklinGothic-Demi-webfont.eot',500,'normal')
++font-face('FranklinGothic',font-files('franklingothicfs_demiitalic_macroman/FranklinGothic-DemiIt-webfont.woff',woff,'franklingothicfs_demiitalic_macroman/FranklinGothic-DemiIt-webfont.ttf',truetype,'franklingothicfs_demiitalic_macroman/FranklinGothic-DemiIt-webfont.svg#webfontSMxOInhK',svg),'franklingothicfs_demiitalic_macroman/FranklinGothic-DemiIt-webfont.eot',500,italic)
++font-face('FranklinGothic',font-files('franklingothicfs_heavy_macroman/FranklinGothic-Hvy-webfont.woff',woff,'franklingothicfs_heavy_macroman/FranklinGothic-Hvy-webfont.ttf',truetype,'franklingothicfs_heavy_macroman/FranklinGothic-Hvy-webfont.svg#webfontSMxOInhK',svg),'franklingothicfs_heavy_macroman/FranklinGothic-Hvy-webfont.eot',700,'normal')
++font-face('FranklinGothic',font-files('franklingothicfs_heavyitalic_macroman/FranklinGothic-HvyIt-webfont.woff',woff,'franklingothicfs_heavyitalic_macroman/FranklinGothic-HvyIt-webfont.ttf',truetype,'franklingothicfs_heavyitalic_macroman/FranklinGothic-HvyIt-webfont.svg#webfontSMxOInhK',svg),'franklingothicfs_heavyitalic_macroman/FranklinGothic-HvyIt-webfont.eot',700,italic)
+
++font-face('FranklinGothicCond',font-files('franklingothicfs_condensed_macroman/FranklinGothic-Cd-webfont.woff',woff,'franklingothicfs_condensed_macroman/FranklinGothic-Cd-webfont.ttf',truetype,'franklingothicfs_condensed_macroman/FranklinGothic-Cd-webfont.svg#webfontSMxOInhK',svg),'franklingothicfs_condensed_macroman/FranklinGothic-Cd-webfont.eot',200,normal)
++font-face('FranklinGothicCond',font-files('franklingothicfs_condenseditalic_macroman/FranklinGothic-CdIt-webfont.woff',woff,'franklingothicfs_condenseditalic_macroman/FranklinGothic-CdIt-webfont.ttf',truetype,'franklingothicfs_condenseditalic_macroman/FranklinGothic-CdIt-webfont.svg#webfontSMxOInhK',svg),'franklingothicfs_condenseditalic_macroman/FranklinGothic-CdIt-webfont.eot',200,italic)
++font-face('FranklinGothicCond',font-files('franklingothicfs_demicondensed_macroman/FranklinGothic-DemiCd-webfont.woff',woff,'franklingothicfs_demicondensed_macroman/FranklinGothic-DemiCd-webfont.ttf',truetype,'franklingothicfs_demicondensed_macroman/FranklinGothic-DemiCd-webfont.svg#webfontSMxOInhK',svg),'franklingothicfs_demicondensed_macroman/FranklinGothic-DemiCd-webfont.eot',500,normal)
++font-face('FranklinGothicCond',font-files('franklingothicfs_demicondenseditalic_macroman/FranklinGothic-DemiCdIt-webfont.woff',woff,'franklingothicfs_demicondenseditalic_macroman/FranklinGothic-DemiCdIt-webfont.ttf',truetype,'franklingothicfs_demicondenseditalic_macroman/FranklinGothic-DemiCdIt-webfont.svg#webfontSMxOInhK',svg),'franklingothicfs_demicondenseditalic_macroman/FranklinGothic-DemiCdIt-webfont.eot',500,italic)
++font-face('FranklinGothicCond',font-files('franklingothicfs_mediumcondensed_macroman/FranklinGothic-MedCd-webfont.woff',woff,'franklingothicfs_mediumcondensed_macroman/FranklinGothic-MedCd-webfont.ttf',truetype,'franklingothicfs_mediumcondensed_macroman/FranklinGothic-MedCd-webfont.svg#webfontSMxOInhK',svg),'franklingothicfs_mediumcondensed_macroman/FranklinGothic-MedCd-webfont.eot',normal,normal)
++font-face('FranklinGothicCond',font-files('franklingothicfs_mediumcondenseditalic_macroman/FranklinGothic-MedCdIt-webfont.woff',woff,'franklingothicfs_mediumcondenseditalic_macroman/FranklinGothic-MedCdIt-webfont.ttf',truetype,'franklingothicfs_mediumcondenseditalic_macroman/FranklinGothic-MedCdIt-webfont.svg#webfontSMxOInhK',svg),'franklingothicfs_mediumcondenseditalic_macroman/FranklinGothic-MedCdIt-webfont.eot',normal,italic)
+
 // Font Stacks ---------------------------------------------------------------
 
 $sans-stack   : "Helvetica Neue", Helvetica, Arial, sans-serif
@@ -22,10 +45,13 @@ $mono-stack   : "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans 
 // Apply Fonts ---------------------------------------------------------------
 
 =sans-family
-  font-family: $sans-stack
+  font-family: 'FranklinGothic',$sans-stack
+
+=sanscond
+  font-family: 'FranklinGothicCond',$sans-stack
 
 =serif-family
-  font-family: $serif-stack
+  font-family: 'BaskervilleFS',$serif-stack
 
 =mono-family
   font-family: $mono-stack
