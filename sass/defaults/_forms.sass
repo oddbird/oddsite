@@ -37,6 +37,7 @@ legend
 /* Placeholders --------------------------------------------------------------
 
 =placeholder
+  +light
   color: $mid
 
 =apply-placeholders
@@ -58,14 +59,17 @@ form
 /* Text Inputs ---------------------------------------------------------------
 
 .textinput
-  +sans-family
+  +sanscond
   +adjust-font-size-to(14px,1)
   +rhythm-borders(1px,.25,14px)
   +box-sizing(border-box)
+  +box-shadow(inset rgba($blue-darker,$xxsmall) 0 0 $smallem)
   width: 100%
   height: rhythm(1.5,14px)
   vertical-align: top
   outline: 0
+  background-color: rgba($blue-hint,$xsmall)
+  border: 1px solid rgba($blue-darker,$xsmall)
 
 .input
   &[disabled]
@@ -73,18 +77,18 @@ form
     color: lighten($base,15)
 
   &:valid
-    +box-shadow(inset rgba(blue,.25) 0 0 .375em)
+    +box-shadow(inset rgba($blue,.25) 0 0 .375em)
     &:focus, &.hadfocus
-      +box-shadow(inset rgba(green,.25) 0 0 .375em)
+      +box-shadow(inset rgba($green,.25) 0 0 .375em)
       .no-boxshadow &
-        background-color: rgba(green,.25)
+        background-color: rgba($green,.25)
 
   &:invalid
-    +box-shadow(inset rgba(blue,.25) 0 0 .375em)
+    +box-shadow(inset rgba($blue,.25) 0 0 .375em)
     &:focus, &.hadfocus
-      +box-shadow(inset rgba(red,.25) 0 0 .375em)
+      +box-shadow(inset rgba($pink,.25) 0 0 .375em)
       .no-boxshadow &
-        background-color: rgba(red,.25)
+        background-color: rgba($pink,.25)
 
   .ie7 &
     height: auto
@@ -127,23 +131,22 @@ button,  input[type="reset"], input[type="submit"], input[type="button"], input[
   +button-reset
 
 .button
-  @extend .allcaps
   +adjust-font-size-to(12px,.5)
   +border-radius
   +rhythm-borders(1px,.25,12px)
   +hpadding
-  background: $lighter
-  border-color: $light
+  +sanscond
+  +demi
+  background: rgba($green,$xsmall)
+  color: $green-darkest
+  border-color: $green-darker
+  text-transform: uppercase
   vertical-align: top
   cursor: pointer
-  color: contrast-color($alt)
-  font-weight: bold
   &:hover, &:focus
-    +box-shadow($accent 0 0 .5em)
+    +box-shadow($pink-lighter 0 0 .5em)
   &:active
-    +transition(none)
-    +box-shadow($accent 0 0 .25em, inset $dark 1px 1px 1px)
-    +background(linear-gradient(bottom, rgba($light,.25), rgba($light,0) 100%), $alt)
+    +box-shadow(inset $green-darkest 1px 1px 1px)
   &[disabled]
     color: #888
 
@@ -161,4 +164,5 @@ input
   color: red
 
 .form-actions
+  +padding-leader(.5)
   text-align: right

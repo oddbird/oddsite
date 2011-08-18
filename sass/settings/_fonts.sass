@@ -20,6 +20,11 @@
 +font-face('BaskervilleFS',font-files('baskervillefs_bold_macroman/Baskerville-Bold-webfont.woff',woff,'baskervillefs_bold_macroman/Baskerville-Bold-webfont.ttf',truetype,'baskervillefs_bold_macroman/Baskerville-Bold-webfont.svg#webfontSMxOInhK',svg),font-url('baskervillefs_bold_macroman/Baskerville-Bold-webfont.eot'),700,normal)
 +font-face('BaskervilleFS',font-files('baskervillefs_bolditalic_macroman/Baskerville-BoldItalic-webfont.woff',woff,'baskervillefs_bolditalic_macroman/Baskerville-BoldItalic-webfont.ttf',truetype,'baskervillefs_bolditalic_macroman/Baskerville-BoldItalic-webfont.svg#webfontSMxOInhK',svg),font-url('baskervillefs_bolditalic_macroman/Baskerville-BoldItalic-webfont.eot'),700,italic)
 
++font-face('CenturyOldStyle',font-files('centuryoldstylefs_regular_macroman/CenturyOldStyle-Regular-webfont.woff',woff,'centuryoldstylefs_regular_macroman/CenturyOldStyle-Regular-webfont.ttf',truetype,'centuryoldstylefs_regular_macroman/CenturyOldStyle-Regular-webfont.svg#webfontSMxOInhK',svg),'centuryoldstylefs_regular_macroman/CenturyOldStyle-Regular-webfont.eot',normal,normal)
++font-face('CenturyOldStyle',font-files('centuryoldstylefs_italic_macroman/CenturyOldStyle-Italic-webfont.woff',woff,'centuryoldstylefs_italic_macroman/CenturyOldStyle-Italic-webfont.ttf',truetype,'centuryoldstylefs_italic_macroman/CenturyOldStyle-Italic-webfont.svg#webfontSMxOInhK',svg),font-url('centuryoldstylefs_italic_macroman/CenturyOldStyle-Italic-webfont.eot'),normal,italic)
++font-face('CenturyOldStyle',font-files('centuryoldstylefs_bold_macroman/CenturyOldStyle-Bold-webfont.woff',woff,'centuryoldstylefs_bold_macroman/CenturyOldStyle-Bold-webfont.ttf',truetype,'centuryoldstylefs_bold_macroman/CenturyOldStyle-Bold-webfont.svg#webfontSMxOInhK',svg),font-url('centuryoldstylefs_bold_macroman/CenturyOldStyle-Bold-webfont.eot'),700,normal)
++font-face('CenturyOldStyleCaps',font-files('centuryoldstylefs_caps_macroman/CenturyOldStyleCaps-Regular-webfont.woff',woff,'centuryoldstylefs_caps_macroman/CenturyOldStyleCaps-Regular-webfont.ttf',truetype,'centuryoldstylefs_caps_macroman/CenturyOldStyleCaps-Regular-webfont.svg#webfontSMxOInhK',svg),font-url('centuryoldstylefs_caps_macroman/CenturyOldStyleCaps-Regular-webfont.eot'),normal,normal)
+
 +font-face('FranklinGothic',font-files('franklingothicfs_medium_macroman/FranklinGothic-Med-webfont.woff',woff,'franklingothicfs_medium_macroman/FranklinGothic-Med-webfont.ttf',truetype,'franklingothicfs_medium_macroman/FranklinGothic-Med-webfont.svg#webfontSMxOInhK',svg),'franklingothicfs_medium_macroman/FranklinGothic-Med-webfont.eot',normal,normal)
 +font-face('FranklinGothic',font-files('franklingothicfs_mediumitalic_macroman/FranklinGothic-MedIt-webfont.woff',woff,'franklingothicfs_mediumitalic_macroman/FranklinGothic-MedIt-webfont.ttf',truetype,'franklingothicfs_mediumitalic_macroman/FranklinGothic-MedIt-webfont.svg#webfontSMxOInhK',svg),'franklingothicfs_mediumitalic_macroman/FranklinGothic-MedIt-webfont.eot',normal,italic)
 +font-face('FranklinGothic',font-files('franklingothicfs_book_macroman/FranklinGothic-Book-webfont.woff',woff,'franklingothicfs_book_macroman/FranklinGothic-Book-webfont.ttf',truetype,'franklingothicfs_book_macroman/FranklinGothic-Book-webfont.svg#webfontSMxOInhK',svg),'franklingothicfs_book_macroman/FranklinGothic-Book-webfont.eot',200,'normal')
@@ -39,7 +44,7 @@
 // Font Stacks ---------------------------------------------------------------
 
 $sans-stack   : "Helvetica Neue", Helvetica, Arial, sans-serif
-$serif-stack  : Cambria, Georgia, serif
+$serif-stack  : Baskerville, Palatino, Cambria, Georgia, serif
 $mono-stack   : "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, Courier, monospace, sans-serif
 
 // Apply Fonts ---------------------------------------------------------------
@@ -51,7 +56,10 @@ $mono-stack   : "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans 
   font-family: 'FranklinGothicCond',$sans-stack
 
 =serif-family
-  font-family: 'BaskervilleFS',$serif-stack
+  font-family: 'CenturyOldStyle',$serif-stack
+
+=serifcaps
+  font-family: 'CenturyOldStyleCaps',$serif-stack
 
 =mono-family
   font-family: $mono-stack

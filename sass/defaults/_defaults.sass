@@ -21,10 +21,10 @@ a
   &:hover, &:active
     outline: none
   #{$link}
-    color: $alt
+    color: $orange
     text-decoration: none
   #{$focus}
-    color: $accent
+    color: $blue-darker
 
 /* Headings ------------------------------------------------------------------
 
@@ -32,21 +32,17 @@ h1
   @extend .allcaps
   +adjust-font-size-to($largepx)
 
-h2
-  +adjust-font-size-to($medpx,1.5)
-  +italic
+h2, h3
+  +sanscond
+  text-transform: uppercase
 
 h3
   +adjust-font-size-to($smallpx)
-  +allcaps
 
 h4
-  @extend .allcaps
-
-h5
   +bold
 
-h6
+h5, h6
   +italic
 
 /* Inline --------------------------------------------------------------------

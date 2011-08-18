@@ -5,11 +5,16 @@
 <div>
 {% block page %}
 
-  <hgroup role="banner">
-    <h1><a href="/" rel="home" id="logo">OddBird</a></h1>
-    <h3 class="hcard"><span class="fn org">OddBird</span> is a trio of brothers who thrive on freely shared ideas and playful collaboration. We cross disciplines, break boundaries and eat our dessert with the soup&nbsp;spoon.</h3>
-    <h2>We love chasing ideas into existence. We could do that all night long, and sometimes we&nbsp;do.</h2>
-  </hgroup>
+  <header role="banner">
+    <hgroup>
+      <h1><a href="/" rel="home" id="logo">OddBird</a></h1>
+      <h2>Custom-built web tools for humans.</h2>
+    </hgroup>
+    <div class="intro">
+      <p>If you have a vision to make life easier, or help others, or change the world, and you just need a tool to <strong>Get That Shit Done</strong>: we're here to&nbsp;help.</p>
+      <p>We love chasing ideas into existence. We could do that all night long, and sometimes we&nbsp;do.</p>
+    </div>
+  </header>
 
   <section role="main">
     {% include "messages_ui/_messages.html" %}
@@ -20,7 +25,7 @@
 
   <footer role="contentinfo">
     <p class="colophon">This site is built on plain old semantic HTML5, powered by the django web framework for python and styled using CSS3 with help from Modernizr, Susy, Compass, and Sass inspired by the “320 and up” boilerplate extension.</p>
-    <p><small class="author vcard">copyright &copy; 2009-2011 <strong class="fn org">OddBird</strong></small></p>
+    <p class="author vcard">copyright &copy; 2009-2011 <strong class="fn org">OddBird</strong></p>
   </footer>
 
 {% endblock page %}

@@ -10,8 +10,10 @@ html
 
 body
   @extend .serif
-  +baseline-grid-background
-  color: $base
+  +background-image(linear-gradient(left,rgba($blue-light,$xxsmall),rgba($blue-light,0)),image-url('noise.png'))
+  +text-shadow(rgba($lightest,$small) 0 1px)
+  color: $blue-darkest
+  background-color: $blue-hint
 
 /* Selected Text -------------------------------------------------------------
 
@@ -28,4 +30,4 @@ body
   ::selection
     +selected-text($color)
 
-+apply-selected-text
++apply-selected-text($orange-lighter)

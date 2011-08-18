@@ -1,41 +1,4 @@
-// xsmall layout -------------------------------------------------------------
+@import xsmall/xs-add
 
-body
-  padding: rhythm(1) 0
-
-.xssection
-  position: relative
-  padding: 0 rhythm(1)
-
-[role="banner"]
-  @extend .xssection
-  h2
-    +trailer(1,$medpx)
-  h3
-    +trailer(1,$smallpx)
-    +sanscond
-
-#logo
-  #{$link}
-    +replace-text('logo.png')
-    display: block
-    height: rhythm(4,$largepx)
-
-[role="main"]
-  +padding-trailer
-  h2
-    +gone
-  > section
-    @extend .xssection
-
-footer[role="contentinfo"]
-  @extend .xssection
-  .colophon
-    +adjust-font-size-to($smallpx)
-    +italic
-  .fn.org
-    font: inherit
-
-// components ----------------------------------------------------------------
-
-@import xsmall/components
+@media only screen and (max-width: 30em)
+  @import xsmall/xs-only
