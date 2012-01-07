@@ -1,24 +1,130 @@
 // Imports -------------------------------------------------------------------
 
 @import defaults/defaults
-@import media/xsmall
 
-/* small ---------------------------------------------------------------------
-@media only screen and (min-width: 30em)
-  @import media/small
 
-/* medium  -------------------------------------------------------------------
-@media only screen and (min-width: 48em)
-  @import media/medium
+// Layout --------------------------------------------------------------------
 
-/* large ---------------------------------------------------------------------
-@media only screen and (min-width: 62em)
-  @import media/large
+[role="banner"]
+  +padding-leader(1.25)
+  position: relative
 
-/* xlarge --------------------------------------------------------------------
-@media only screen and (min-width: 86em)
-  @import media/xlarge
+  h2
+    +trailer(.25)
+    text-align: center
 
-// retina --------------------------------------------------------------------
-  @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2)
-    @import media/retina
+  .intro
+    +adjust-font-size-to($halfmedpx,1.25)
+    +rhythm(.5,1,1,0,$halfmedpx)
+    +full
+    +italic
+    position: relative
+    &::before
+      +stretch-y
+      +background-image(linear-gradient(left,rgba($blue-hint,$small),rgba($blue-hint,$small/2),rgba($blue-hint,0)))
+      left: -600%
+      right: -600%
+      content: " "
+      z-index: -1
+
+[role="main"]
+  +padding-trailer
+  h2, h3
+    +gone
+  > section
+    +full
+
+#logo
+  #{$link}
+    +replace-text('logo_d.png')
+    display: block
+    min-height: rhythm(4)
+
+footer[role="contentinfo"]
+  +container
+  +padding-leader
+  overflow: hidden
+  background: rgba($orange-light,$xsmall)
+
+  .colophon, .author
+    +adjust-font-size-to($halfsmallpx)
+    +full
+  .colophon
+    +italic
+    +trailer(1,$halfsmallpx)
+  .author
+    +sanscond
+    text-transform: uppercase
+  .fn.org
+    font: inherit
+
+// sections ------------------------------------------------------------------
+
+.openingline
+  &:first-letter
+    +adjust-font-size-to($xlargepx,2)
+    +float(left)
+    padding-right: .05em
+  &:first-line
+    @extend .smallcaps
+
+#work
+  +section(rgba($orange-lighter,$xxsmall))
+  +padding-leader(6)
+  +padding-trailer(.5)
+  background: image-url('projects/susy.png') no-repeat scroll top
+  .internal
+    @extend .openingline
+
+#people
+  +padding-leader(7)
+  background: image-url('faces/all.png') no-repeat scroll center rhythm(.5)
+  .fn
+    @extend .smallcaps
+
+#bird
+  @extend .openingline
+  .fn
+    @extend .allcaps
+
+#process
+  +section(rgba($blue-hint,$xsmall))
+  +rhythm(0,1,.5,1)
+  counter-reset: process
+  strong
+    +allcaps
+    font-weight: normal
+
+  p
+    position: relative
+    counter-increment: process
+    padding-left: rhythm(2)
+    &::before
+      +opacity(.5)
+      +adjust-font-size-to($largepx,1.5)
+      +border-radius($xxlargeem)
+      +float(left)
+      content: counter(process,decimal)
+      position: absolute
+      top: rhythm(.125,$largepx)
+      left: 0
+      height: rhythm(1.5,$largepx)
+      width: rhythm(1.5,$largepx)
+      border: 1px solid
+      text-align: center
+      z-index: -1
+    &:hover
+      &::before
+        +opacity(1)
+
+#contact
+  h3, label
+    +gone
+  p
+    +adjust-font-size-to($halfmedpx,1.25)
+    +trailer(.5,$medpx)
+  textarea
+    +transition(all,300ms)
+    min-height: rhythm(1)
+    &:focus
+      min-height: rhythm(6)

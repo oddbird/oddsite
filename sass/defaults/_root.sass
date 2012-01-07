@@ -10,10 +10,14 @@ html
 
 body
   @extend .serif
-  +background-image(linear-gradient(left,rgba($blue-light,$xxsmall),rgba($blue-light,0)),image-url('noise.png'))
+  +background-image(linear-gradient(top,rgba($blue-dark,$xxsmall),rgba($blue,0) rhythm(4)),linear-gradient(left,rgba($blue-light,$xxsmall),rgba($blue-light,0)),image-url('noise.png'))
   +text-shadow(rgba($lightest,$small) 0 1px)
   color: $blue-darkest
   background-color: $blue-hint
+  > div
+    +container
+    +box-shadow(rgba($blue-dark,$xxxsmall) 0 rhythm(-1) rhythm(1))
+    overflow: hidden
 
 /* Selected Text -------------------------------------------------------------
 

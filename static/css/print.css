@@ -1,34 +1,3 @@
-/* Sizes -------------------------------------------------------------------- */
-/* */
-/* norm        : 1 */
-/* small       : 0.667 */
-/* xsmall      : 0.444 */
-/* xxsmall     : 0.296 */
-/* xxxsmall    : 0.198 */
-/* med         : 1.5 */
-/* large       : 2.25 */
-/* xlarge      : 3.375 */
-/* xxlarge     : 5.063 */
-/* */
-/* normem      : 1em */
-/* smallem     : 0.667em */
-/* xsmallem    : 0.444em */
-/* xxsmallem   : 0.296em */
-/* xxxsmallem  : 0.198em */
-/* medem       : 1.5em */
-/* largeem     : 2.25em */
-/* xlargeem    : 3.375em */
-/* xxlargeem   : 5.063em */
-/* */
-/* normpx      : 16px */
-/* smallpx     : 10.667px */
-/* xsmallpx    : 7.111px */
-/* xxsmallpx   : 4.741px */
-/* xxxsmallpx  : 3.16px */
-/* medpx       : 24px */
-/* largepx     : 36px */
-/* xlargepx    : 54px */
-/* xxlargepx   : 81px */
 @font-face { font-family: "BaskervilleFS"; src: url('../fonts/baskervillefs_regular_macroman/Baskerville-Regular-webfont.eot'); src: url('../fonts/baskervillefs_regular_macroman/Baskerville-Regular-webfont.eot?iefix') format('eot'), url('../fonts/baskervillefs_regular_macroman/Baskerville-Regular-webfont.woff') format('woff'), url('../fonts/baskervillefs_regular_macroman/Baskerville-Regular-webfont.ttf') format('truetype'), url('../fonts/baskervillefs_regular_macroman/Baskerville-Regular-webfont.svg#webfontSMxOInhK') format('svg'); font-weight: normal; font-style: normal; }
 
 @font-face { font-family: "BaskervilleFS"; src: url('../fonts/url('../fonts/baskervillefs_italic_macroman/Baskerville-Italic-webfont.eot')'); src: url('../fonts/url('../fonts/baskervillefs_italic_macroman/Baskerville-Italic-webfont.eot')?iefix') format('eot'), url('../fonts/baskervillefs_italic_macroman/Baskerville-Italic-webfont.woff') format('woff'), url('../fonts/baskervillefs_italic_macroman/Baskerville-Italic-webfont.ttf') format('truetype'), url('../fonts/baskervillefs_italic_macroman/Baskerville-Italic-webfont.svg#webfontSMxOInhK') format('svg'); font-weight: normal; font-style: italic; }

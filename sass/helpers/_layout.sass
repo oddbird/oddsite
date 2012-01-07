@@ -1,26 +1,13 @@
-/* Layout --------------------------------------------------------------------
+// Layout --------------------------------------------------------------------
 
-.full
-  display: block
-  float: none
-  width: auto
-
-.half
-  max-width: 50%
-
-.left
-  +float(left)
-  margin:
-    right: 1em
-    bottom: 0.5em
-
-.right
-  +float(right)
-  margin:
-    left: 1em
-    bottom: 0.5em
+=container($n:false)
+  +pie-clearfix
+  margin: auto
+  width: columns-width($n)
+  max-width: 100%
 
 =section($bg)
+  position: relative
   &::before, &::after
     +stretch-y
     content: " "
@@ -32,6 +19,6 @@
     background: $bg
     z-index: -1
   &::before
-    +rotate(3deg)
+    +rotate(2deg)
   &::after
-    +rotate(-3deg)
+    +rotate(-2deg)
