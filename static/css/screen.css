@@ -259,7 +259,6 @@ button, input[type="reset"], input[type="submit"], input[type="button"], input[t
 
 [role="banner"] { padding-top: 1.875em; position: relative; }
 @media (max-width: 719px) { [role="banner"] hgroup { clear: both; margin-left: 3.571%; margin-right: 3.571%; margin-bottom: 1.5em; text-align: center; } }
-[role="banner"] h2 { font-size: 0.833em; line-height: 1.8em; }
 @media (min-width: 720px) { [role="banner"] h2 { display: inline; float: left; width: 63.636%; margin-right: 1.818%; display: inline; float: right; margin-right: 1.818%; #margin-left: -1em; font-size: 1.5em; line-height: 1.5em; } }
 [role="banner"] .intro { font-style: italic; position: relative; }
 @media (max-width: 719px) { [role="banner"] .intro { clear: both; margin-left: 3.571%; margin-right: 3.571%; font-size: 1.25em; line-height: 1.5em; margin-top: 0.6em; padding-top: 1.2em; padding-bottom: 1.2em; margin-bottom: 0em; }
