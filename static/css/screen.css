@@ -311,9 +311,7 @@ footer[role="contentinfo"] .fn.org { font: inherit; }
 #process p::before { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50); opacity: 0.5; font-size: 2.25em; line-height: 1em; -webkit-border-radius: 5.063em; -moz-border-radius: 5.063em; -ms-border-radius: 5.063em; -o-border-radius: 5.063em; border-radius: 5.063em; display: inline; float: left; content: counter(process, decimal); position: absolute; top: 0.083em; left: 0; height: 1em; width: 1em; border: 1px solid; text-align: center; z-index: -1; }
 #process p:hover::before { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100); opacity: 1; }
 @media (min-width: 720px) { #process { padding-top: 2.25em; }
-  #process p { padding-left: 8.491%; }
-  #process p:nth-of-type(1), #process p:nth-of-type(3) { margin-left: 33.962%; }
-  #process p:nth-of-type(2) { padding-right: 33.962%; } }
+  #process p { padding-left: 8.491%; margin-left: 16.981%; margin-right: 16.981%; } }
 
 #contact { padding-top: 1.5em; padding-bottom: 1.5em; }
 #contact ul { margin: 0; padding: 0; border: 0; list-style: none; overflow: hidden; *zoom: 1; text-align: center; }
