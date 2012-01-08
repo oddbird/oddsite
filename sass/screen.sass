@@ -113,14 +113,15 @@ footer[role="contentinfo"]
 
 #work
   +section(rgba($orange-lighter,$xxsmall))
-  +padding-leader(6)
+  +padding-leader(1)
   +padding-trailer(.5)
-  background: image-url('projects/susy.png') no-repeat scroll top
   .internal
     @extend .openingline
 
   +media-small
+    +padding-leader(8)
     +padding-trailer(1)
+    +background(image-url('oddprojects.png') no-repeat scroll center rhythm(.5))
     div
       +clearfix
     p
@@ -133,8 +134,8 @@ footer[role="contentinfo"]
         +omega
 
 #people
-  +padding-leader(7)
-  background: image-url('faces/all.png') no-repeat scroll center rhythm(.5)
+  +padding-leader(8)
+  +background(image-url('oddpeople.png') no-repeat scroll center rhythm(.5))
   .fn
     @extend .smallcaps
 
@@ -196,8 +197,9 @@ footer[role="contentinfo"]
       +squish(2,2,12)
 
 #contact
-  +padding-leader
   +padding-trailer
+  +padding-leader(4)
+  +background(image-url('oddcontact.png') no-repeat scroll center rhythm(.5))
   ul
     +no-style-list
     +clearfix
@@ -215,6 +217,7 @@ footer[role="contentinfo"]
     .oddbird
       +adjust-font-size-to($xlargepx)
       +trailer(1,$xlargepx)
+
     .twitter
       +adjust-font-size-to($halfmedpx)
       +columns(4,12)
