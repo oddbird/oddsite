@@ -70,7 +70,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 .allcaps, h1, caption, #bird .fn { font-family: "CenturyOldStyleCaps", Baskerville, Palatino, Cambria, Georgia, serif; letter-spacing: 0.1em; text-transform: uppercase; }
 
-.smallcaps, footer[role="contentinfo"] .colophon a:link, footer[role="contentinfo"] .colophon a:visited, .openingline:first-line, #work .internal:first-line, #bird:first-line, #people .fn, #contact .twitter { font-family: "CenturyOldStyleCaps", Baskerville, Palatino, Cambria, Georgia, serif; font-variant: small-caps; }
+.smallcaps, footer[role="contentinfo"] .colophon a:link, footer[role="contentinfo"] .colophon a:visited, .openingline:first-line, #work .internal:first-line, #bird:first-line, #people .fn { font-family: "CenturyOldStyleCaps", Baskerville, Palatino, Cambria, Georgia, serif; font-variant: small-caps; }
 
 /* * Media Queries Mixins * * @todo Do we have to take care of print ? * * @require sass-3.2 (you need eventually to do "sudo gem install sass --pre") * @author Maxime Thirouin <maxime.thirouin@gmail.com> */
 /*$media-query-width-big: 1280px; $media-query-width-medium: 960px; $media-query-width-small: 480px; */
@@ -320,5 +320,5 @@ footer[role="contentinfo"] .fn.org { font: inherit; }
   #contact .twitter { display: inline; float: left; width: 30.769%; margin-right: 3.846%; }
   #contact .twitter:last-child { display: inline; float: right; margin-right: 0; #margin-left: -1em; } }
 @media (min-width: 720px) { #contact .oddbird { font-size: 2.25em; line-height: 1.333em; }
-  #contact .twitter { display: inline; float: left; width: 32.075%; margin-right: 1.887%; text-transform: uppercase; }
+  #contact .twitter { font-size: 1.25em; line-height: 1.2em; display: inline; float: left; width: 32.075%; margin-right: 1.887%; }
   #contact .twitter:last-child { display: inline; float: right; margin-right: 0; #margin-left: -1em; } }
