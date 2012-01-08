@@ -213,12 +213,20 @@ footer[role="contentinfo"]
 
   +media-small
     .oddbird
-      +adjust-font-size-to($largepx)
+      +adjust-font-size-to($xlargepx)
+      +trailer(1,$xlargepx)
     .twitter
       +adjust-font-size-to($halfmedpx)
       +columns(4,12)
       &:last-child
         +omega(12)
 
+      &::before, &::after
+        +inline-block
+        +opacity(.5)
+      &::before
+        content: image-url('tweet.png')
+      &::after
+        content: image-url('closetweet.png')
 
 
