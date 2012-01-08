@@ -1,10 +1,10 @@
-// Layout --------------------------------------------------------------------
-
 =container($n:false)
   +pie-clearfix
   margin: auto
   width: columns-width($n)
   max-width: 100%
+
+// Layout --------------------------------------------------------------------
 
 =section($bg)
   position: relative
@@ -22,3 +22,29 @@
     +rotate(2deg)
   &::after
     +rotate(-2deg)
+
+// push, pull, squish
+
+@function move($n,$c:false)
+  $move: columns($n,$c) + gutter($c)
+  @return $move
+
+=push($n,$c:false,$a:false)
+  $sg: 0
+  @if $a
+    $sg: side-gutter()
+
+  margin-left: $sg + move($n,$c)
+
+=pull($n,$c:false)
+  margin-left: 0 - move($n,$c)
+
+=squish($l:false,$r:false,$c:false,$a:false,$o:false)
+  $sg: 0
+  @if $o
+    $sg: side-gutter()
+
+  @if $l
+    +push($l,$c,$a)
+  @if $r
+    margin-right: $sg + move($r,$c)

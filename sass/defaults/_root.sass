@@ -15,9 +15,14 @@ body
   color: $blue-darkest
   background-color: $blue-hint
   > div
-    +container
     +box-shadow(rgba($blue-dark,$xxxsmall) 0 rhythm(-1) rhythm(1))
     overflow: hidden
+
+    +media-tiny
+      +container(6)
+
+    +media-small
+      +container(12)
 
 /* Selected Text -------------------------------------------------------------
 

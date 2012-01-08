@@ -34,19 +34,22 @@
 
 =media-small
   //@media (max-width: $media-query-width-medium - 1px)
-  @media (min-width: 448px)
+  @media (min-width: 720px)
+    $total-cols         : 12
     @content
 
 =media-small-only
   //@media (min-width: $media-query-width-small) and (max-width: $media-query-width-medium - 1px)
-  @media (min-width: 448px) and (max-width: 960px)
+  @media (min-width: 720px) and (max-width: 960px)
+    $total-cols         : 12
     @content
 
 // mobile
 
 =media-tiny
   //@media (max-width: $media-query-width-small - 1px)
-  @media (max-width: 447px)
+  @media (max-width: 719px)
+    $total-cols         : 6
     @content
 
 // orientation

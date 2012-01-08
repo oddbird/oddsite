@@ -5,44 +5,69 @@
 
 // Layout --------------------------------------------------------------------
 
-[role="banner"]
-  +padding-leader(1.25)
-  position: relative
-
-  h2
-    +trailer(.25)
-    text-align: center
-
-  .intro
-    +adjust-font-size-to($halfmedpx,1.25)
-    +rhythm(.5,1,1,0,$halfmedpx)
-    +full
-    +italic
-    position: relative
-    &::before
-      +stretch-y
-      +background-image(linear-gradient(left,rgba($blue-hint,$small),rgba($blue-hint,$small/2),rgba($blue-hint,0)))
-      left: -600%
-      right: -600%
-      content: " "
-      z-index: -1
-
-[role="main"]
-  +padding-trailer
-  h2, h3
-    +gone
-  > section
-    +full
-
 #logo
   #{$link}
     +replace-text('logo_d.png')
     display: block
     min-height: rhythm(4)
 
+    +media-small
+      +columns(4)
+      +alpha
+
+[role="banner"]
+  +padding-leader(1.25)
+  position: relative
+
+  hgroup
+    +media-tiny
+      +full
+      +trailer
+      text-align: center
+
+  h2
+    +adjust-font-size-to($halfsmallpx)
+    +media-small
+      +columns(8)
+      +omega
+      +adjust-font-size-to($medpx,1.5)
+
+  .intro
+    +italic
+    position: relative
+
+    +media-tiny
+      +full
+      +adjust-font-size-to($halfmedpx,1.25)
+      +rhythm(.5,1,1,0,$halfmedpx)
+      &::before
+        +stretch-y
+        +background-image(linear-gradient(left,rgba($blue-hint,$small),rgba($blue-hint,$small/2),rgba($blue-hint,0)))
+        left: -600%
+        right: -600%
+        content: " "
+        z-index: -1
+
+    +media-small
+      +columns(8)
+      +omega
+      +adjust-font-size-to($medpx,1.5)
+      +trailer(1,$medpx)
+
+
+[role="main"]
+  +padding-trailer
+  h2, h3
+    +gone
+  > section
+    +media-tiny
+      +full
+    +media-small
+      +full
+
 footer[role="contentinfo"]
-  +container
   +leading-border(2px,1)
+  +padding-trailer(3)
   +background-image(linear-gradient(top,rgba($orange-light,$xsmall),rgba($orange-light,0)))
   +box-shadow(rgba($blue-hint,$small) 0 0 rhythm())
   overflow: hidden
@@ -50,21 +75,30 @@ footer[role="contentinfo"]
   border-color: $blue-hint
 
   .colophon, .copyright
-    +full
     color: $orange-darker
+    +media-tiny
+      +full
+
   .colophon
     +italic
     +trailer
+    +media-small
+      +columns(8)
+      +omega
     a
       #{$link}
         @extend .smallcaps
         text-transform: lowercase
         font-style: normal
         font-weight: bold
+
   .copyright
     +adjust-font-size-to($halfsmallpx)
     +sanscond
     text-transform: uppercase
+    +media-small
+      +columns(4)
+      +alpha
   .fn.org
     font: inherit
 
@@ -86,16 +120,45 @@ footer[role="contentinfo"]
   .internal
     @extend .openingline
 
+  +media-small
+    +padding-trailer(1)
+    div
+      +clearfix
+    p
+      +columns(4)
+      &:first-child
+        +prefix(2)
+        +alpha
+      &:last-child
+        +suffix(2)
+        +omega
+
 #people
   +padding-leader(7)
   background: image-url('faces/all.png') no-repeat scroll center rhythm(.5)
   .fn
     @extend .smallcaps
 
+  +media-small
+    +padding-trailer(1)
+
 #bird
   @extend .openingline
   .fn
     @extend .allcaps
+
+  +media-small
+    +full
+    +pad(3,3)
+
+    ~ .hcard
+      +columns(4)
+      &:first-child
+        +alpha
+      &:last-child
+        +omega
+      .fn
+        +bold
 
 #process
   +section(rgba($blue-hint,$xsmall))
@@ -127,20 +190,40 @@ footer[role="contentinfo"]
       &::before
         +opacity(1)
 
+  +media-small
+    +padding-leader(1.5)
+    p
+      +prefix(1,12)
+      &:nth-of-type(1), &:nth-of-type(3)
+        +push(4,12)
+      &:nth-of-type(2)
+        +suffix(4,12)
+
 #contact
   +padding-leader
   +padding-trailer
   ul
     +no-style-list
     +clearfix
-  .oddbird
-    +adjust-font-size-to($medpx)
-  .twitter
-    +columns(2,6)
-    @extend .smallcaps
-    &:last-child
-      +omega(6)
+    text-align: center
 
+  +media-tiny
+    .oddbird
+      +adjust-font-size-to($medpx)
+    .twitter
+      @extend .smallcaps
+      +columns(2,6)
+      &:last-child
+        +omega(6)
+
+  +media-small
+    .oddbird
+      +adjust-font-size-to($largepx)
+    .twitter
+      +columns(4,12)
+      text-transform: uppercase
+      &:last-child
+        +omega(12)
 
 
 
