@@ -275,7 +275,7 @@ footer[role="contentinfo"] .colophon, footer[role="contentinfo"] .copyright { co
 @media (max-width: 719px) { footer[role="contentinfo"] .colophon, footer[role="contentinfo"] .copyright { clear: both; margin-left: 3.571%; margin-right: 3.571%; } }
 footer[role="contentinfo"] .colophon { font-style: italic; margin-bottom: 1.5em; }
 @media (min-width: 720px) { footer[role="contentinfo"] .colophon { display: inline; float: left; width: 63.636%; margin-right: 1.818%; display: inline; float: right; margin-right: 1.818%; #margin-left: -1em; } }
-footer[role="contentinfo"] .colophon a:link, footer[role="contentinfo"] .colophon a:visited { text-transform: lowercase; font-style: normal; font-weight: bold; }
+footer[role="contentinfo"] .colophon a:link, footer[role="contentinfo"] .colophon a:visited { margin-left: 0.2em; text-transform: lowercase; font-style: normal; font-weight: bold; }
 footer[role="contentinfo"] .copyright { font-size: 0.833em; line-height: 1.8em; font-family: "FranklinGothicCond", "Helvetica Neue", Helvetica, Arial, sans-serif; text-transform: uppercase; }
 @media (min-width: 720px) { footer[role="contentinfo"] .copyright { display: inline; float: left; width: 30.909%; margin-right: 1.818%; margin-left: 1.818%; } }
 footer[role="contentinfo"] .fn.org { font: inherit; }
