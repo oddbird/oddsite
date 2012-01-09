@@ -242,18 +242,6 @@ button, input[type="reset"], input[type="submit"], input[type="button"], input[t
 
 .form-actions { padding-top: 0.75em; text-align: right; }
 
-.loading { position: relative; }
-.loading .overlay { position: absolute; top: 0; bottom: 0; left: 0; right: 0; font-weight: 700; background: rgba(242, 242, 242, 0.667); color: rgba(64, 64, 64, 0.667); text-align: center; }
-
-.message { padding-left: 2.25em; padding-right: 0.75em; background: rgba(204, 204, 204, 0.667) no-repeat scroll 0.75em; }
-.message.info { background-image: url('../images/ui/info.png'); background-color: rgba(153, 230, 255, 0.444); }
-.message.success { background-image: url('../images/ui/check.png'); background-color: rgba(230, 255, 153, 0.444); }
-.message.warning { background-image: url('../images/ui/warning.png'); background-color: rgba(255, 194, 153, 0.444); }
-.message.error { background-image: url('../images/ui/x.png'); background-color: rgba(255, 153, 204, 0.444); }
-
-#messages ul { margin: 0; padding: 0; border: 0; list-style: none; }
-#messages ul li { list-style-image: none; list-style-type: none; margin-left: 0; }
-
 #logo:link, #logo:visited { text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('../images/logo_d.png?1313364672'); background-repeat: no-repeat; background-position: 50% 50%; display: block; min-height: 6em; }
 @media (min-width: 720px) { #logo:link, #logo:visited { display: inline; float: left; width: 30.909%; margin-right: 1.818%; margin-left: 1.818%; } }
 
