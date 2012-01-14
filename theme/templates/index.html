@@ -1,0 +1,36 @@
+{% extends "base_site.html" %}
+
+{% block maincontent %}
+{% typogrify %}
+<h2>About OddBird</h2>
+<section id="work">
+  <h3>OddProjects</h3>
+  <div>
+    <p class="internal">We built <a href="http://susy.oddbird.net">Susy</a> for web designers like ourselves, and we are core contributors to <a href="http://compass-style.org">Compass</a>, <a href="http://djangoproject.com">Django</a>, <a href="http://pip-installer.org">pip</a>, <a href="http://virtualenv.org">virtualenv</a> and other open-source projects.</p>
+    <p class="client">These days we’re building <a href="http://cc.oddsites.net">Case Conductor</a>, <a href="http://mozilla.org">Mozilla’s</a> new Test Case management system. We just wrapped up a mapping tool for <a href="http://provplan.org">The Providence Plan</a>.</p>
+  </div>
+</section>
+<section id="people">
+  <h3>OddBrothers</h3>
+  <p id="bird" class="hcard"><span class="fn org">OddBird</span> is three brothers who thrive on freely shared ideas and playful collaboration, crossing disciplines, breaking boundaries and eating our dessert with the soup spoon.</p>
+  <p id="carl" class="hcard"><span class="fn">Carl</span> is a <a href="http://github.com/carljm">coder</a>, <a href="http://www.python.org">Pythonista</a>, and <a href="http://www.djangoproject.com">Django</a> core developer. When he’s not chasing a more elegant algorithm, he chases frisbees, hockey pucks, and a four-year-old son.</p>
+  <p id="eric" class="hcard"><span class="fn">Eric</span> is a <a href="http://eric.andmeyer.com">multimedia artist</a> working with <a href="http://greengreenmud.com/">words</a>, <a href="http://www.vicioustrap.com/">bodies</a>, <a href="http://www.ravenjane.com/">music</a>, images, lights, film, <a href="http://www.compass-style.org/">code</a>, and many many <a href="http://eric.andmeyer.com/people/">other artists</a>. He's probably starting a new project right now.</p>
+  <p id="jonny" class="hcard"><span class="fn">Jonny</span> is a <a href="http://github.com/jgerigmeyer">front-end developer</a>, project manager, and inconsistent <a href="http://www.goshen.edu/jonam/">college philosophy professor</a>. He likes his frisbees thrown deep, his students smart-alecky, and his scotch served neat.</p>
+</section>
+<section id="process">
+  <h3>OddProcess</h3>
+  <p>We use a <strong>lean</strong> process, deploying and integrating new functionality frequently and aiming to deliver usable product launches as early and often as possible.</p>
+  <p>We encourage clients to stay closely <strong>connected</strong> with the daily progress, offering frequent feedback and re-prioritization via <a href="http://pivotaltracker.com">Pivotal Tracker</a>.</p>
+  <p>We work with the open web stack: <strong>accessible</strong> semantic HTML5 markup, unobtrusive Javascript, and advanced CSS3 styling. On the server side we are a Python shop, and have extensive Django experience.</p>
+</section>
+<section id="contact" class="author vcard">
+  <h3>Contact the OddsBird</h3>
+  <ul>
+    <li class="oddbird"><span class="email">birds(put the 'at' sign here)oddbird.net</span></li>
+    <li class="carl twitter"><a href="http://www.twitter.com/carljm/">@carljm</a></li>
+    <li class="eric twitter"><a href="http://www.twitter.com/eriiicam/">@eriiicam</a></li>
+    <li class="jonny twitter"><a href="http://www.twitter.com/jgerigmeyer/">@jgerigmeyer</a></li>
+  </ul>
+</section>
+{% endtypogrify %}
+{% endblock maincontent %}

@@ -1,0 +1,3 @@
+#!/bin/bash
+
+PYTHONPATH=`pwd`/src pelican -s settings.py content/ $*
