@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <!--[if lte IE 8 ]>             <html class="no-js ie" lang="en" dir="ltr">   <![endif]-->
-<!--[if IE 9 ]>                 <html class="no-js ie9" lang="en" dir="ltr">  <![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!-->  <html class="no-js" lang="en" dir="ltr">      <!--<![endif]-->
+<!--[if (gt IE 8)|!(IE)]><!-->  <html class="no-js" lang="en" dir="ltr">      <!--<![endif]-->
 <head>
   <meta charset="utf-8" />
 
@@ -45,11 +44,7 @@
   <link href="http://universal-ie6-css.googlecode.com/files/ie6.1.0.css" media="screen, projection" />
   <![endif]-->
 
-  <!--[if (IE 7)|(IE 8)]>
-  <link rel="stylesheet" href="{{ STATIC_URL }}css/ie.css" />
-  <![endif]-->
-
-  <!--[if gte IE 9]><!-->
+  <!--[if gte IE 7]><!-->
   {% block styles %}
   <link rel="stylesheet" href="{{ STATIC_URL }}css/screen.css" />
   {% endblock styles %}

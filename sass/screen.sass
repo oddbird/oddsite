@@ -73,6 +73,9 @@ footer[role="contentinfo"]
   background-color: rgba($orange-light,$xsmall)
   border-color: $blue-hint
 
+  .no-rgba &
+    background: $orange-lightest
+
   .colophon, .copyright
     color: $orange-darker
     +media-tiny
@@ -116,6 +119,9 @@ footer[role="contentinfo"]
   +padding-trailer(.5)
   .internal
     @extend .openingline
+
+  .no-rgba &
+    background: $orange-lightest
 
   +media-small
     +padding-trailer(1)
@@ -188,6 +194,9 @@ footer[role="contentinfo"]
       &::before
         +opacity(1)
 
+  .no-rgba &
+    background: $lightest
+
   +media-small
     +padding-leader(1.5)
     p
@@ -202,6 +211,9 @@ footer[role="contentinfo"]
     +no-style-list
     +clearfix
     text-align: center
+
+  .no-last-child & .twitter.jonny
+    +omega(12)
 
   +media-tiny
     .oddbird
