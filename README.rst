@@ -36,9 +36,5 @@ should be used.
 Deployment
 ----------
 
-Deployment just means copying the generated HTML files under ``output/`` to
-within a web server's document root.
-
-A Fabric task is provided to simplify this even further::
-
-   $ fab deploy
+The site is deployed on Github Pages; "git push"ing the submodule under
+output/ deploys the changes live.
