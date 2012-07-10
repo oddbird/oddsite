@@ -9,15 +9,23 @@ other Python projects on your system, create a virtualenv and activate
 it.  Then run ``bin/install-reqs`` to install the dependencies for
 this project into your Python environment.
 
-You'll probably need to create a ``src/oddsite/settings/local.py`` file
-with some details of your local configuration, including, most likely,
-your database details (SQLite will be used by default).  See
-``src/oddsite/settings_local.sample.py`` for a sample that can be
-copied to ``src/oddsite/settings_local.py`` and modified.
+The ``output/`` directory is a git submodule (it is the repo
+"github.com/oddbird/oddbird.github.com", which is also the deployment on
+Github Pages).  Run ``git submodule init; git submodule update`` to get the
+submodule in place.
 
-Once this configuration is done, you should be able to run
-``./manage.py syncdb --migrate``, then ``./manage.py runserver`` and
-access the site in your browser at ``http://localhost:8000``.
+At this point everything in the site is done via the theme templates, in
+``theme/templates``.
+
+After editing theme templates, to regenerate the site as static HTML files
+under the ``output/`` directory, just run::
+
+   $ bin/gen
+
+After doing this, change into the ``output`` directory and commit the
+changes, and if you're ready to deploy them, ``git push``.  Then change back
+into the outer repo and you can commit the changes there along with the
+updated submodule.
 
 .. _virtualenv: http://www.virtualenv.org
 
@@ -28,27 +36,5 @@ should be used.
 Deployment
 ----------
 
-In addition to the above configuration, in any production deployment
-this entire app should be served exclusively over HTTPS (since serving
-authenticated pages over HTTP invites session hijacking
-attacks). Ideally, the non-HTTP URLs should redirect to the HTTPS
-version.
-
-``src/oddsite/settings/prod.py`` should be used as the settings module in a
-production deployment in place of ``src/oddsite/settings/default.py`` (set
-``DJANGO_SETTINGS_MODULE=oddsite.settings.prod``). Site-specific overrides
-can still be placed in ``src/oddsite/settings/local.py``.
-
-You can run ``./manage.py checksecure`` to verify that settings are correctly
-configured for a secure deployment.
-
-This app also uses the `staticfiles contrib app`_ in Django 1.3 for
-collecting static assets from reusable components into a single
-directory for production serving.  Under "runserver" in development
-this is handled automatically.  In production, run ``./manage.py
-collectstatic`` to collect all static assets into the
-``collected-assets`` directory (or whatever ``STATIC_ROOT`` is set to
-in ``settings_local.py``), and make those collected assets available
-by HTTP at the ``STATIC_URL`` setting.
-
-.. _staticfiles contrib app: http://docs.djangoproject.com/en/1.3/howto/static-files/
+The site is deployed on Github Pages; "git push"ing the submodule under
+output/ deploys the changes live.

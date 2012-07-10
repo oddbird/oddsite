@@ -73,6 +73,9 @@ footer[role="contentinfo"]
   background-color: rgba($orange-light,$xsmall)
   border-color: $blue-hint
 
+  .no-rgba &
+    background: $orange-lightest
+
   .colophon, .copyright
     color: $orange-darker
     +media-tiny
@@ -99,8 +102,6 @@ footer[role="contentinfo"]
     +media-small
       +columns(4)
       +alpha
-  .fn.org
-    font: inherit
 
 // sections ------------------------------------------------------------------
 
@@ -118,6 +119,9 @@ footer[role="contentinfo"]
   +padding-trailer(.5)
   .internal
     @extend .openingline
+
+  .no-rgba &
+    background: $orange-lightest
 
   +media-small
     +padding-trailer(1)
@@ -138,27 +142,27 @@ footer[role="contentinfo"]
   +background(image-url('oddpeople.png') no-repeat scroll center rhythm(.5))
   .fn
     @extend .smallcaps
+    +bold
 
   +media-small
     +padding-trailer(1)
 
 #bird
   @extend .openingline
-  .fn
+  strong
     @extend .allcaps
+    font-weight: normal
 
   +media-small
     +full
     +pad(3,3)
 
-    ~ .hcard
+    ~ .vcard
       +columns(4)
       &:first-child
         +alpha
       &:last-child
         +omega
-      .fn
-        +bold
 
 #process
   +section(rgba($blue-hint,$xsmall))
@@ -190,6 +194,9 @@ footer[role="contentinfo"]
       &::before
         +opacity(1)
 
+  .no-rgba &
+    background: $lightest
+
   +media-small
     +padding-leader(1.5)
     p
@@ -204,6 +211,9 @@ footer[role="contentinfo"]
     +no-style-list
     +clearfix
     text-align: center
+
+  .no-last-child & .twitter.jonny
+    +omega(12)
 
   +media-tiny
     .oddbird

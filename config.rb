@@ -7,10 +7,10 @@ project_type = :stand_alone
 # Set this to the root of your project when deployed:
 http_path = "/"
 sass_dir = "sass"
-css_dir = "static/css"
-images_dir = "static/images"
-fonts_dir = "static/fonts"
-javascripts_dir = "static/js"
+css_dir = "theme/static/css"
+images_dir = "theme/static/images"
+fonts_dir = "theme/static/fonts"
+javascripts_dir = "theme/static/js"
 line_comments = false
 preferred_syntax = :sass
 output_style = :compact

@@ -6,6 +6,11 @@
  ** @require sass-3.2 (you need eventually to do "sudo gem install sass --pre")
  ** @author Maxime Thirouin <maxime.thirouin@gmail.com>
 
+=ie
+  .ie &
+    $total-cols         : 12
+    @content
+
 // differentes screen width definition: 3 limits allow 4 configurations
 /*
  *$media-query-width-big: 1280px;
@@ -33,6 +38,8 @@
 // old computer & tablet
 
 =media-small
+  +ie
+    @content
   //@media (max-width: $media-query-width-medium - 1px)
   @media (min-width: 720px)
     $total-cols         : 12

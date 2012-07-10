@@ -14,9 +14,16 @@ body
   +text-shadow(rgba($lightest,$small) 0 1px)
   color: $blue-darkest
   background-color: $blue-hint
+
+  .no-boxshadow &
+    background: $blue-lightest
+
   > div
     +box-shadow(rgba($blue-dark,$xxxsmall) 0 rhythm(-1) rhythm(1))
     overflow: hidden
+
+    .no-boxshadow &
+      background: $blue-hint
 
     +media-tiny
       +container(6)
