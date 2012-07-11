@@ -14,7 +14,7 @@ The ``output/`` directory is a git submodule (it is the repo
 Github Pages).  Run ``git submodule init; git submodule update`` to get the
 submodule in place.
 
-The site templates are in ``_templates/``, and static files are in ``static/``.
+The site templates are in ``templates/``, and static files are in ``static/``.
 
 To view the site live locally, run ``make serve`` and visit
 ``http://localhost:5000`` in your browser.
