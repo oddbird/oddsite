@@ -1,0 +1,12 @@
+// Imports -------------------------------------------------------------------
+
+@import "settings/settings";
+
+body {
+  @include container;
+  @include serif-family;
+}
+
+[role="main"] {
+  @include h-borders(3px,1);
+}
