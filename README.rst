@@ -6,7 +6,7 @@ Development
 
 If you want to run this project in a `virtualenv`_ to isolate it from other
 Python projects on your system, create a virtualenv and activate it.  Then run
-``pip install -r requirements/dev.txt`` to install the dependencies for this
+``pip install -r requirements.txt`` to install the dependencies for this
 project into your Python environment.
 
 The ``output/`` directory is a git submodule (it is the repo
