@@ -1,7 +1,7 @@
-{% extends "base_site.html" %}
+{% extends "layout.html" %}
 
-{% block maincontent %}
-{% typogrify %}
+{% block body %}
+{# @@@ typogrify #}
 <h2>About OddBird</h2>
 <section id="work">
   <h3>OddProjects</h3>
@@ -32,5 +32,5 @@
     <li class="jonny twitter"><a href="http://www.twitter.com/jgerigmeyer/">@jgerigmeyer</a></li>
   </ul>
 </section>
-{% endtypogrify %}
-{% endblock maincontent %}
+{# endtypogrify #}
+{% endblock body %}

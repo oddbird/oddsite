@@ -1,0 +1,11 @@
+---
+active_modules: [pygments, tags, blog]
+author: OddBird
+canonical_url: http://oddbird.net/
+output_folder: ../output
+template_path: ../templates
+modules:
+  pygments:
+    style: tango
+  blog:
+    index_url: /blog/
