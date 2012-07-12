@@ -93,6 +93,29 @@
 
 </section>
 
+<aside class="contact">
+  <span class="email">birds@oddbird.net</span>
+  <ul>
+    <li><a href="http://twitter.com/carljm/">@carljm</a></li>
+    <li><a href="http://twitter.com/eriiicam/">@eriiicam</a></li>
+    <li><a href="http://twitter.com/jgerigmeyer/">@jgerigmeyer</a></li>
+  </ul>
+</aside>
+
+<aside class="blog">
+  <a href="/archive/">blog archive</a>
+  <ul>
+    {#- for entry in @@@ #}
+    <li>
+      <time datetime="{# entry.pub_date.isoformat() #}">
+          {#- if entry.pub_date %}{{ entry.pub_date.strftime("%m/%d/%y") }}{% endif #}
+        </time>
+        <a href="{# link_to('page', slug=entry.slug) #}">{ entry.title }</a>
+    </li>
+    {#- endfor #}
+  </ul>
+</aside>
+
 <footer role="contentinfo">
   <p class="colophon">
     This site is built on plain old semantic <a href="http://www.w3.org/TR/html5/">HTML5</a>,

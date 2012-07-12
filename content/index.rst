@@ -110,10 +110,3 @@ Home
 .. _frequent feedback: /process/feedback/
 .. _Pivotal Tracker: http://pivotaltracker.com/
 .. _Python: http://www.python.org/
-
-.. container:: contact
-
-  - birds@oddbird.net
-  - `@carljm <http://twitter.com/carljm/>`_
-  - `@eriiicam <http://twitter.com/eriiicam/>`_
-  - `@jgerigmeyer <http://twitter.com/jgerigmeyer/>`_
