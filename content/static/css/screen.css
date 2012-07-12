@@ -1,183 +1,184 @@
 @charset "UTF-8";
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+html {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
 @font-face {
-  font-family: "BaskervilleFS";
-  src: url('../fonts/baskervillefs_regular_macroman/Baskerville-Regular-webfont.eot');
-  src: url('../fonts/baskervillefs_regular_macroman/Baskerville-Regular-webfont.eot?#iefix') format('eot'), url('../fonts/baskervillefs_regular_macroman/Baskerville-Regular-webfont.woff') format('woff'), url('../fonts/baskervillefs_regular_macroman/Baskerville-Regular-webfont.ttf') format('truetype'), url('../fonts/baskervillefs_regular_macroman/Baskerville-Regular-webfont.svg#webfontSMxOInhK') format('svg');
+  font-family: "CenturyOldStyle";
+  src: url('../fonts/CenturyOldStyle-Regular-webfont.eot');
+  src: url('../fonts/CenturyOldStyle-Regular-webfont.eot?#iefix') format('eot'), url('../fonts/CenturyOldStyle-Regular-webfont.woff') format('woff'), url('../fonts/CenturyOldStyle-Regular-webfont.ttf') format('truetype'), url('../fonts/CenturyOldStyle-Regular-webfont.svg#webfontSMxOInhK') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "BaskervilleFS";
-  src: url('../fonts/url('../fonts/baskervillefs_italic_macroman/Baskerville-Italic-webfont.eot')');
-  src: url('../fonts/url('../fonts/baskervillefs_italic_macroman/Baskerville-Italic-webfont.eot')?#iefix') format('eot'), url('../fonts/baskervillefs_italic_macroman/Baskerville-Italic-webfont.woff') format('woff'), url('../fonts/baskervillefs_italic_macroman/Baskerville-Italic-webfont.ttf') format('truetype'), url('../fonts/baskervillefs_italic_macroman/Baskerville-Italic-webfont.svg#webfontSMxOInhK') format('svg');
-  font-weight: normal;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: "BaskervilleFS";
-  src: url('../fonts/url('../fonts/baskervillefs_bold_macroman/Baskerville-Bold-webfont.eot')');
-  src: url('../fonts/url('../fonts/baskervillefs_bold_macroman/Baskerville-Bold-webfont.eot')?#iefix') format('eot'), url('../fonts/baskervillefs_bold_macroman/Baskerville-Bold-webfont.woff') format('woff'), url('../fonts/baskervillefs_bold_macroman/Baskerville-Bold-webfont.ttf') format('truetype'), url('../fonts/baskervillefs_bold_macroman/Baskerville-Bold-webfont.svg#webfontSMxOInhK') format('svg');
-  font-weight: 700;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "BaskervilleFS";
-  src: url('../fonts/url('../fonts/baskervillefs_bolditalic_macroman/Baskerville-BoldItalic-webfont.eot')');
-  src: url('../fonts/url('../fonts/baskervillefs_bolditalic_macroman/Baskerville-BoldItalic-webfont.eot')?#iefix') format('eot'), url('../fonts/baskervillefs_bolditalic_macroman/Baskerville-BoldItalic-webfont.woff') format('woff'), url('../fonts/baskervillefs_bolditalic_macroman/Baskerville-BoldItalic-webfont.ttf') format('truetype'), url('../fonts/baskervillefs_bolditalic_macroman/Baskerville-BoldItalic-webfont.svg#webfontSMxOInhK') format('svg');
-  font-weight: 700;
-  font-style: italic;
-}
-
-@font-face {
   font-family: "CenturyOldStyle";
-  src: url('../fonts/centuryoldstylefs_regular_macroman/CenturyOldStyle-Regular-webfont.eot');
-  src: url('../fonts/centuryoldstylefs_regular_macroman/CenturyOldStyle-Regular-webfont.eot?#iefix') format('eot'), url('../fonts/centuryoldstylefs_regular_macroman/CenturyOldStyle-Regular-webfont.woff') format('woff'), url('../fonts/centuryoldstylefs_regular_macroman/CenturyOldStyle-Regular-webfont.ttf') format('truetype'), url('../fonts/centuryoldstylefs_regular_macroman/CenturyOldStyle-Regular-webfont.svg#webfontSMxOInhK') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "CenturyOldStyle";
-  src: url('../fonts/url('../fonts/centuryoldstylefs_italic_macroman/CenturyOldStyle-Italic-webfont.eot')');
-  src: url('../fonts/url('../fonts/centuryoldstylefs_italic_macroman/CenturyOldStyle-Italic-webfont.eot')?#iefix') format('eot'), url('../fonts/centuryoldstylefs_italic_macroman/CenturyOldStyle-Italic-webfont.woff') format('woff'), url('../fonts/centuryoldstylefs_italic_macroman/CenturyOldStyle-Italic-webfont.ttf') format('truetype'), url('../fonts/centuryoldstylefs_italic_macroman/CenturyOldStyle-Italic-webfont.svg#webfontSMxOInhK') format('svg');
+  src: url('../fonts/CenturyOldStyle-Italic-webfont.eot');
+  src: url('../fonts/CenturyOldStyle-Italic-webfont.eot?#iefix') format('eot'), url('../fonts/CenturyOldStyle-Italic-webfont.woff') format('woff'), url('../fonts/CenturyOldStyle-Italic-webfont.ttf') format('truetype'), url('../fonts/CenturyOldStyle-Italic-webfont.svg#webfontSMxOInhK') format('svg');
   font-weight: normal;
   font-style: italic;
 }
 
 @font-face {
   font-family: "CenturyOldStyle";
-  src: url('../fonts/url('../fonts/centuryoldstylefs_bold_macroman/CenturyOldStyle-Bold-webfont.eot')');
-  src: url('../fonts/url('../fonts/centuryoldstylefs_bold_macroman/CenturyOldStyle-Bold-webfont.eot')?#iefix') format('eot'), url('../fonts/centuryoldstylefs_bold_macroman/CenturyOldStyle-Bold-webfont.woff') format('woff'), url('../fonts/centuryoldstylefs_bold_macroman/CenturyOldStyle-Bold-webfont.ttf') format('truetype'), url('../fonts/centuryoldstylefs_bold_macroman/CenturyOldStyle-Bold-webfont.svg#webfontSMxOInhK') format('svg');
-  font-weight: 700;
+  src: url('../fonts/CenturyOldStyle-Bold-webfont.eot');
+  src: url('../fonts/CenturyOldStyle-Bold-webfont.eot?#iefix') format('eot'), url('../fonts/CenturyOldStyle-Bold-webfont.woff') format('woff'), url('../fonts/CenturyOldStyle-Bold-webfont.ttf') format('truetype'), url('../fonts/CenturyOldStyle-Bold-webfont.svg#webfontSMxOInhK') format('svg');
+  font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
   font-family: "CenturyOldStyleCaps";
-  src: url('../fonts/url('../fonts/centuryoldstylefs_caps_macroman/CenturyOldStyleCaps-Regular-webfont.eot')');
-  src: url('../fonts/url('../fonts/centuryoldstylefs_caps_macroman/CenturyOldStyleCaps-Regular-webfont.eot')?#iefix') format('eot'), url('../fonts/centuryoldstylefs_caps_macroman/CenturyOldStyleCaps-Regular-webfont.woff') format('woff'), url('../fonts/centuryoldstylefs_caps_macroman/CenturyOldStyleCaps-Regular-webfont.ttf') format('truetype'), url('../fonts/centuryoldstylefs_caps_macroman/CenturyOldStyleCaps-Regular-webfont.svg#webfontSMxOInhK') format('svg');
+  src: url('../fonts/CenturyOldStyleCaps-Regular-webfont.eot');
+  src: url('../fonts/CenturyOldStyleCaps-Regular-webfont.eot?#iefix') format('eot'), url('../fonts/CenturyOldStyleCaps-Regular-webfont.woff') format('woff'), url('../fonts/CenturyOldStyleCaps-Regular-webfont.ttf') format('truetype'), url('../fonts/CenturyOldStyleCaps-Regular-webfont.svg#webfontSMxOInhK') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "FranklinGothic";
-  src: url('../fonts/franklingothicfs_medium_macroman/FranklinGothic-Med-webfont.eot');
-  src: url('../fonts/franklingothicfs_medium_macroman/FranklinGothic-Med-webfont.eot?#iefix') format('eot'), url('../fonts/franklingothicfs_medium_macroman/FranklinGothic-Med-webfont.woff') format('woff'), url('../fonts/franklingothicfs_medium_macroman/FranklinGothic-Med-webfont.ttf') format('truetype'), url('../fonts/franklingothicfs_medium_macroman/FranklinGothic-Med-webfont.svg#webfontSMxOInhK') format('svg');
+  src: url('../fonts/FranklinGothic-Book-webfont.eot');
+  src: url('../fonts/FranklinGothic-Book-webfont.eot?#iefix') format('eot'), url('../fonts/FranklinGothic-Book-webfont.woff') format('woff'), url('../fonts/FranklinGothic-Book-webfont.ttf') format('truetype'), url('../fonts/FranklinGothic-Book-webfont.svg#webfontSMxOInhK') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "FranklinGothic";
-  src: url('../fonts/franklingothicfs_mediumitalic_macroman/FranklinGothic-MedIt-webfont.eot');
-  src: url('../fonts/franklingothicfs_mediumitalic_macroman/FranklinGothic-MedIt-webfont.eot?#iefix') format('eot'), url('../fonts/franklingothicfs_mediumitalic_macroman/FranklinGothic-MedIt-webfont.woff') format('woff'), url('../fonts/franklingothicfs_mediumitalic_macroman/FranklinGothic-MedIt-webfont.ttf') format('truetype'), url('../fonts/franklingothicfs_mediumitalic_macroman/FranklinGothic-MedIt-webfont.svg#webfontSMxOInhK') format('svg');
+  src: url('../fonts/FranklinGothic-BookIt-webfont.eot');
+  src: url('../fonts/FranklinGothic-BookIt-webfont.eot?#iefix') format('eot'), url('../fonts/FranklinGothic-BookIt-webfont.woff') format('woff'), url('../fonts/FranklinGothic-BookIt-webfont.ttf') format('truetype'), url('../fonts/FranklinGothic-BookIt-webfont.svg#webfontSMxOInhK') format('svg');
   font-weight: normal;
   font-style: italic;
 }
 
 @font-face {
   font-family: "FranklinGothic";
-  src: url('../fonts/franklingothicfs_book_macroman/FranklinGothic-Book-webfont.eot');
-  src: url('../fonts/franklingothicfs_book_macroman/FranklinGothic-Book-webfont.eot?#iefix') format('eot'), url('../fonts/franklingothicfs_book_macroman/FranklinGothic-Book-webfont.woff') format('woff'), url('../fonts/franklingothicfs_book_macroman/FranklinGothic-Book-webfont.ttf') format('truetype'), url('../fonts/franklingothicfs_book_macroman/FranklinGothic-Book-webfont.svg#webfontSMxOInhK') format('svg');
-  font-weight: 200;
-  font-style: "normal";
-}
-
-@font-face {
-  font-family: "FranklinGothic";
-  src: url('../fonts/franklingothicfs_bookitalic_macroman/FranklinGothic-BookIt-webfont.eot');
-  src: url('../fonts/franklingothicfs_bookitalic_macroman/FranklinGothic-BookIt-webfont.eot?#iefix') format('eot'), url('../fonts/franklingothicfs_bookitalic_macroman/FranklinGothic-BookIt-webfont.woff') format('woff'), url('../fonts/franklingothicfs_bookitalic_macroman/FranklinGothic-BookIt-webfont.ttf') format('truetype'), url('../fonts/franklingothicfs_bookitalic_macroman/FranklinGothic-BookIt-webfont.svg#webfontSMxOInhK') format('svg');
-  font-weight: 200;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: "FranklinGothic";
-  src: url('../fonts/franklingothicfs_demi_macroman/FranklinGothic-Demi-webfont.eot');
-  src: url('../fonts/franklingothicfs_demi_macroman/FranklinGothic-Demi-webfont.eot?#iefix') format('eot'), url('../fonts/franklingothicfs_demi_macroman/FranklinGothic-Demi-webfont.woff') format('woff'), url('../fonts/franklingothicfs_demi_macroman/FranklinGothic-Demi-webfont.ttf') format('truetype'), url('../fonts/franklingothicfs_demi_macroman/FranklinGothic-Demi-webfont.svg#webfontSMxOInhK') format('svg');
+  src: url('../fonts/FranklinGothic-Demi-webfont.eot');
+  src: url('../fonts/FranklinGothic-Demi-webfont.eot?#iefix') format('eot'), url('../fonts/FranklinGothic-Demi-webfont.woff') format('woff'), url('../fonts/FranklinGothic-Demi-webfont.ttf') format('truetype'), url('../fonts/FranklinGothic-Demi-webfont.svg#webfontSMxOInhK') format('svg');
   font-weight: 500;
-  font-style: "normal";
+  font-style: normal;
 }
 
 @font-face {
   font-family: "FranklinGothic";
-  src: url('../fonts/franklingothicfs_demiitalic_macroman/FranklinGothic-DemiIt-webfont.eot');
-  src: url('../fonts/franklingothicfs_demiitalic_macroman/FranklinGothic-DemiIt-webfont.eot?#iefix') format('eot'), url('../fonts/franklingothicfs_demiitalic_macroman/FranklinGothic-DemiIt-webfont.woff') format('woff'), url('../fonts/franklingothicfs_demiitalic_macroman/FranklinGothic-DemiIt-webfont.ttf') format('truetype'), url('../fonts/franklingothicfs_demiitalic_macroman/FranklinGothic-DemiIt-webfont.svg#webfontSMxOInhK') format('svg');
+  src: url('../fonts/FranklinGothic-DemiIt-webfont.eot');
+  src: url('../fonts/FranklinGothic-DemiIt-webfont.eot?#iefix') format('eot'), url('../fonts/FranklinGothic-DemiIt-webfont.woff') format('woff'), url('../fonts/FranklinGothic-DemiIt-webfont.ttf') format('truetype'), url('../fonts/FranklinGothic-DemiIt-webfont.svg#webfontSMxOInhK') format('svg');
   font-weight: 500;
   font-style: italic;
 }
 
 @font-face {
   font-family: "FranklinGothic";
-  src: url('../fonts/franklingothicfs_heavy_macroman/FranklinGothic-Hvy-webfont.eot');
-  src: url('../fonts/franklingothicfs_heavy_macroman/FranklinGothic-Hvy-webfont.eot?#iefix') format('eot'), url('../fonts/franklingothicfs_heavy_macroman/FranklinGothic-Hvy-webfont.woff') format('woff'), url('../fonts/franklingothicfs_heavy_macroman/FranklinGothic-Hvy-webfont.ttf') format('truetype'), url('../fonts/franklingothicfs_heavy_macroman/FranklinGothic-Hvy-webfont.svg#webfontSMxOInhK') format('svg');
-  font-weight: 700;
-  font-style: "normal";
+  src: url('../fonts/FranklinGothic-Hvy-webfont.eot');
+  src: url('../fonts/FranklinGothic-Hvy-webfont.eot?#iefix') format('eot'), url('../fonts/FranklinGothic-Hvy-webfont.woff') format('woff'), url('../fonts/FranklinGothic-Hvy-webfont.ttf') format('truetype'), url('../fonts/FranklinGothic-Hvy-webfont.svg#webfontSMxOInhK') format('svg');
+  font-weight: bold;
+  font-style: normal;
 }
 
 @font-face {
   font-family: "FranklinGothic";
-  src: url('../fonts/franklingothicfs_heavyitalic_macroman/FranklinGothic-HvyIt-webfont.eot');
-  src: url('../fonts/franklingothicfs_heavyitalic_macroman/FranklinGothic-HvyIt-webfont.eot?#iefix') format('eot'), url('../fonts/franklingothicfs_heavyitalic_macroman/FranklinGothic-HvyIt-webfont.woff') format('woff'), url('../fonts/franklingothicfs_heavyitalic_macroman/FranklinGothic-HvyIt-webfont.ttf') format('truetype'), url('../fonts/franklingothicfs_heavyitalic_macroman/FranklinGothic-HvyIt-webfont.svg#webfontSMxOInhK') format('svg');
-  font-weight: 700;
+  src: url('../fonts/FranklinGothic-HvyIt-webfont.eot');
+  src: url('../fonts/FranklinGothic-HvyIt-webfont.eot?#iefix') format('eot'), url('../fonts/FranklinGothic-HvyIt-webfont.woff') format('woff'), url('../fonts/FranklinGothic-HvyIt-webfont.ttf') format('truetype'), url('../fonts/FranklinGothic-HvyIt-webfont.svg#webfontSMxOInhK') format('svg');
+  font-weight: bold;
   font-style: italic;
 }
 
 @font-face {
   font-family: "FranklinGothicCond";
-  src: url('../fonts/franklingothicfs_condensed_macroman/FranklinGothic-Cd-webfont.eot');
-  src: url('../fonts/franklingothicfs_condensed_macroman/FranklinGothic-Cd-webfont.eot?#iefix') format('eot'), url('../fonts/franklingothicfs_condensed_macroman/FranklinGothic-Cd-webfont.woff') format('woff'), url('../fonts/franklingothicfs_condensed_macroman/FranklinGothic-Cd-webfont.ttf') format('truetype'), url('../fonts/franklingothicfs_condensed_macroman/FranklinGothic-Cd-webfont.svg#webfontSMxOInhK') format('svg');
-  font-weight: 200;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "FranklinGothicCond";
-  src: url('../fonts/franklingothicfs_condenseditalic_macroman/FranklinGothic-CdIt-webfont.eot');
-  src: url('../fonts/franklingothicfs_condenseditalic_macroman/FranklinGothic-CdIt-webfont.eot?#iefix') format('eot'), url('../fonts/franklingothicfs_condenseditalic_macroman/FranklinGothic-CdIt-webfont.woff') format('woff'), url('../fonts/franklingothicfs_condenseditalic_macroman/FranklinGothic-CdIt-webfont.ttf') format('truetype'), url('../fonts/franklingothicfs_condenseditalic_macroman/FranklinGothic-CdIt-webfont.svg#webfontSMxOInhK') format('svg');
-  font-weight: 200;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: "FranklinGothicCond";
-  src: url('../fonts/franklingothicfs_demicondensed_macroman/FranklinGothic-DemiCd-webfont.eot');
-  src: url('../fonts/franklingothicfs_demicondensed_macroman/FranklinGothic-DemiCd-webfont.eot?#iefix') format('eot'), url('../fonts/franklingothicfs_demicondensed_macroman/FranklinGothic-DemiCd-webfont.woff') format('woff'), url('../fonts/franklingothicfs_demicondensed_macroman/FranklinGothic-DemiCd-webfont.ttf') format('truetype'), url('../fonts/franklingothicfs_demicondensed_macroman/FranklinGothic-DemiCd-webfont.svg#webfontSMxOInhK') format('svg');
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "FranklinGothicCond";
-  src: url('../fonts/franklingothicfs_demicondenseditalic_macroman/FranklinGothic-DemiCdIt-webfont.eot');
-  src: url('../fonts/franklingothicfs_demicondenseditalic_macroman/FranklinGothic-DemiCdIt-webfont.eot?#iefix') format('eot'), url('../fonts/franklingothicfs_demicondenseditalic_macroman/FranklinGothic-DemiCdIt-webfont.woff') format('woff'), url('../fonts/franklingothicfs_demicondenseditalic_macroman/FranklinGothic-DemiCdIt-webfont.ttf') format('truetype'), url('../fonts/franklingothicfs_demicondenseditalic_macroman/FranklinGothic-DemiCdIt-webfont.svg#webfontSMxOInhK') format('svg');
-  font-weight: 500;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: "FranklinGothicCond";
-  src: url('../fonts/franklingothicfs_mediumcondensed_macroman/FranklinGothic-MedCd-webfont.eot');
-  src: url('../fonts/franklingothicfs_mediumcondensed_macroman/FranklinGothic-MedCd-webfont.eot?#iefix') format('eot'), url('../fonts/franklingothicfs_mediumcondensed_macroman/FranklinGothic-MedCd-webfont.woff') format('woff'), url('../fonts/franklingothicfs_mediumcondensed_macroman/FranklinGothic-MedCd-webfont.ttf') format('truetype'), url('../fonts/franklingothicfs_mediumcondensed_macroman/FranklinGothic-MedCd-webfont.svg#webfontSMxOInhK') format('svg');
+  src: url('../fonts/FranklinGothic-Cd-webfont.eot');
+  src: url('../fonts/FranklinGothic-Cd-webfont.eot?#iefix') format('eot'), url('../fonts/FranklinGothic-Cd-webfont.woff') format('woff'), url('../fonts/FranklinGothic-Cd-webfont.ttf') format('truetype'), url('../fonts/FranklinGothic-Cd-webfont.svg#webfontSMxOInhK') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "FranklinGothicCond";
-  src: url('../fonts/franklingothicfs_mediumcondenseditalic_macroman/FranklinGothic-MedCdIt-webfont.eot');
-  src: url('../fonts/franklingothicfs_mediumcondenseditalic_macroman/FranklinGothic-MedCdIt-webfont.eot?#iefix') format('eot'), url('../fonts/franklingothicfs_mediumcondenseditalic_macroman/FranklinGothic-MedCdIt-webfont.woff') format('woff'), url('../fonts/franklingothicfs_mediumcondenseditalic_macroman/FranklinGothic-MedCdIt-webfont.ttf') format('truetype'), url('../fonts/franklingothicfs_mediumcondenseditalic_macroman/FranklinGothic-MedCdIt-webfont.svg#webfontSMxOInhK') format('svg');
+  src: url('../fonts/FranklinGothic-CdIt-webfont.eot');
+  src: url('../fonts/FranklinGothic-CdIt-webfont.eot?#iefix') format('eot'), url('../fonts/FranklinGothic-CdIt-webfont.woff') format('woff'), url('../fonts/FranklinGothic-CdIt-webfont.ttf') format('truetype'), url('../fonts/FranklinGothic-CdIt-webfont.svg#webfontSMxOInhK') format('svg');
   font-weight: normal;
   font-style: italic;
+}
+
+@font-face {
+  font-family: "FranklinGothicCond";
+  src: url('../fonts/FranklinGothic-DemiCd-webfont.eot');
+  src: url('../fonts/FranklinGothic-DemiCd-webfont.eot?#iefix') format('eot'), url('../fonts/FranklinGothic-DemiCd-webfont.woff') format('woff'), url('../fonts/FranklinGothic-DemiCd-webfont.ttf') format('truetype'), url('../fonts/FranklinGothic-DemiCd-webfont.svg#webfontSMxOInhK') format('svg');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "FranklinGothicCond";
+  src: url('../fonts/FranklinGothic-DemiCdIt-webfont.eot');
+  src: url('../fonts/FranklinGothic-DemiCdIt-webfont.eot?#iefix') format('eot'), url('../fonts/FranklinGothic-DemiCdIt-webfont.woff') format('woff'), url('../fonts/FranklinGothic-DemiCdIt-webfont.ttf') format('truetype'), url('../fonts/FranklinGothic-DemiCdIt-webfont.svg#webfontSMxOInhK') format('svg');
+  font-weight: 500;
+  font-style: italic;
+}
+
+* html {
+  font-size: 100%;
+}
+
+html {
+  font-size: 16px;
+  line-height: 1.313em;
 }
 
 body {
-  *zoom: 1;
-  max-width: 39em;
+  padding-top: 1.313em;
+  max-width: 44em;
   margin-left: auto;
   margin-right: auto;
   padding-left: 1em;
@@ -190,11 +191,17 @@ body:after {
   clear: both;
 }
 
+p, ul, ol {
+  margin-bottom: 1.313em;
+}
+
 [role="main"] {
   border-top-style: solid;
   border-top-width: 0.188em;
-  padding-top: 1.313em;
+  padding-top: 1.125em;
   border-bottom-style: solid;
   border-bottom-width: 0.188em;
-  padding-bottom: 1.313em;
+  padding-bottom: 1.125em;
+  margin-top: 1.313em;
+  margin-bottom: 1.313em;
 }

@@ -1,0 +1,18 @@
+// ----------------------------------------------------------------------------
+// Imports
+
+@import "compass/reset";
+@import "fonts";
+
+// ----------------------------------------------------------------------------
+// Root
+
+@include establish-baseline;
+
+body {
+  @include padding-leader;
+  @include container;
+  @include serif;
+}
+
+p, ul, ol { @include trailer; }

@@ -1,12 +1,14 @@
-// Imports -------------------------------------------------------------------
+// ----------------------------------------------------------------------------
+// Imports
 
-@import "settings/settings";
+@import "base/settings";
+@import "general/root";
 
-body {
-  @include container;
-  @include serif-family;
-}
+// ----------------------------------------------------------------------------
+// Layout
 
 [role="main"] {
   @include h-borders(3px,1);
+  @include leader;
+  @include trailer;
 }

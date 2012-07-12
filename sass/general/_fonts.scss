@@ -1,0 +1,195 @@
+// ----------------------------------------------------------------------------
+// CenturyOldStyle
+
+@include font-face(
+  'CenturyOldStyle',
+  font-files(
+    'CenturyOldStyle-Regular-webfont.woff',woff,
+    'CenturyOldStyle-Regular-webfont.ttf',truetype,
+    'CenturyOldStyle-Regular-webfont.svg#webfontSMxOInhK',svg
+  ),
+  'CenturyOldStyle-Regular-webfont.eot',
+  normal,
+  normal
+);
+@include font-face(
+  'CenturyOldStyle',
+  font-files(
+    'CenturyOldStyle-Italic-webfont.woff',woff,
+    'CenturyOldStyle-Italic-webfont.ttf',truetype,
+    'CenturyOldStyle-Italic-webfont.svg#webfontSMxOInhK',svg
+  ),
+  'CenturyOldStyle-Italic-webfont.eot',
+  normal,
+  italic
+);
+@include font-face(
+  'CenturyOldStyle',
+  font-files(
+    'CenturyOldStyle-Bold-webfont.woff',woff,
+    'CenturyOldStyle-Bold-webfont.ttf',truetype,
+    'CenturyOldStyle-Bold-webfont.svg#webfontSMxOInhK',svg
+  ),
+  'CenturyOldStyle-Bold-webfont.eot',
+  bold,
+  normal
+);
+@include font-face(
+  'CenturyOldStyleCaps',
+  font-files(
+    'CenturyOldStyleCaps-Regular-webfont.woff',woff,
+    'CenturyOldStyleCaps-Regular-webfont.ttf',truetype,
+    'CenturyOldStyleCaps-Regular-webfont.svg#webfontSMxOInhK',svg
+  ),
+  'CenturyOldStyleCaps-Regular-webfont.eot',
+  normal,
+  normal
+);
+
+// ----------------------------------------------------------------------------
+// FranklinGothic
+
+@include font-face(
+  'FranklinGothic',
+  font-files(
+    'FranklinGothic-Book-webfont.woff',woff,
+    'FranklinGothic-Book-webfont.ttf',truetype,
+    'FranklinGothic-Book-webfont.svg#webfontSMxOInhK',svg
+  ),
+  'FranklinGothic-Book-webfont.eot',
+  normal,
+  normal
+);
+@include font-face(
+  'FranklinGothic',
+  font-files(
+    'FranklinGothic-BookIt-webfont.woff',woff,
+    'FranklinGothic-BookIt-webfont.ttf',truetype,
+    'FranklinGothic-BookIt-webfont.svg#webfontSMxOInhK',svg
+  ),
+  'FranklinGothic-BookIt-webfont.eot',
+  normal,
+  italic
+);
+@include font-face(
+  'FranklinGothic',
+  font-files(
+    'FranklinGothic-Demi-webfont.woff',woff,
+    'FranklinGothic-Demi-webfont.ttf',truetype,
+    'FranklinGothic-Demi-webfont.svg#webfontSMxOInhK',svg
+  ),
+  'FranklinGothic-Demi-webfont.eot',
+  500,
+  normal
+);
+@include font-face(
+  'FranklinGothic',
+  font-files(
+    'FranklinGothic-DemiIt-webfont.woff',woff,
+    'FranklinGothic-DemiIt-webfont.ttf',truetype,
+    'FranklinGothic-DemiIt-webfont.svg#webfontSMxOInhK',svg
+  ),
+  'FranklinGothic-DemiIt-webfont.eot',
+  500,
+  italic
+);
+@include font-face(
+  'FranklinGothic',
+  font-files(
+    'FranklinGothic-Hvy-webfont.woff',woff,
+    'FranklinGothic-Hvy-webfont.ttf',truetype,
+    'FranklinGothic-Hvy-webfont.svg#webfontSMxOInhK',svg
+  ),
+  'FranklinGothic-Hvy-webfont.eot',
+  bold,
+  normal
+);
+@include font-face(
+  'FranklinGothic',
+  font-files(
+    'FranklinGothic-HvyIt-webfont.woff',woff,
+    'FranklinGothic-HvyIt-webfont.ttf',truetype,
+    'FranklinGothic-HvyIt-webfont.svg#webfontSMxOInhK',svg
+  ),
+  'FranklinGothic-HvyIt-webfont.eot',
+  bold,
+  italic
+);
+
+// ----------------------------------------------------------------------------
+// FranklinGothic Cond
+
+@include font-face(
+  'FranklinGothicCond',
+  font-files(
+    'FranklinGothic-Cd-webfont.woff',woff,
+    'FranklinGothic-Cd-webfont.ttf',truetype,
+    'FranklinGothic-Cd-webfont.svg#webfontSMxOInhK',svg
+  ),
+  'FranklinGothic-Cd-webfont.eot',
+  normal,
+  normal
+);
+@include font-face(
+  'FranklinGothicCond',
+  font-files(
+    'FranklinGothic-CdIt-webfont.woff',woff,
+    'FranklinGothic-CdIt-webfont.ttf',truetype,
+    'FranklinGothic-CdIt-webfont.svg#webfontSMxOInhK',svg
+  ),
+  'FranklinGothic-CdIt-webfont.eot',
+  normal,
+  italic
+);
+@include font-face(
+  'FranklinGothicCond',
+  font-files(
+    'FranklinGothic-DemiCd-webfont.woff',woff,
+    'FranklinGothic-DemiCd-webfont.ttf',truetype,
+    'FranklinGothic-DemiCd-webfont.svg#webfontSMxOInhK',svg
+  ),
+  'FranklinGothic-DemiCd-webfont.eot',
+  500,
+  normal
+);
+@include font-face(
+  'FranklinGothicCond',
+  font-files(
+    'FranklinGothic-DemiCdIt-webfont.woff',woff,
+    'FranklinGothic-DemiCdIt-webfont.ttf',truetype,
+    'FranklinGothic-DemiCdIt-webfont.svg#webfontSMxOInhK',svg
+  ),
+  'FranklinGothic-DemiCdIt-webfont.eot',
+  500,
+  italic
+);
+
+// ----------------------------------------------------------------------------
+// Font Stacks
+
+$sans-stack   : "Helvetica Neue", Helvetica, Arial, sans-serif;
+$serif-stack  : Baskerville, Palatino, Cambria, Georgia, serif;
+$mono-stack   : "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, Courier, monospace, sans-serif;
+
+// ----------------------------------------------------------------------------
+// Font Mixins
+
+@mixin sans {
+  font-family: 'FranklinGothic',$sans-stack;
+}
+
+@mixin sanscond {
+  font-family: 'FranklinGothicCond',$sans-stack;
+}
+
+@mixin serif {
+  font-family: 'CenturyOldStyle',$serif-stack;
+}
+
+@mixin serifcaps {
+  font-family: 'CenturyOldStyleCaps',$serif-stack;
+}
+
+@mixin mono {
+  font-family: $mono-stack;
+}

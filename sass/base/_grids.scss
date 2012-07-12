@@ -1,0 +1,18 @@
+// ----------------------------------------------------------------------------
+// Grid
+
+$total-columns      : 9;
+$column-width       : 4em;
+$gutter-width       : 1em;
+$grid-padding       : 1em;
+
+// ----------------------------------------------------------------------------
+// Background
+
+$grid-background-baseline-color   : rgba($lighter,.25);
+$grid-background-baseline-height  : $base-line-height;
+$grid-background-column-color     : rgba($blue-lightest,.25);
+
+$show-column-grid-backgrounds     : true;
+$show-baseline-grid-backgrounds   : true;
+$show-grid-backgrounds            : true;
