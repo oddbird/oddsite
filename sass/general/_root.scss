@@ -9,10 +9,14 @@
 
 @include establish-baseline;
 
-body {
-  @include padding-leader;
-  @include container;
-  @include serif;
-}
+body { @include serif; }
 
-p, ul, ol { @include trailer; }
+h1, h2, h3, h4, strong { font-weight: bold; }
+em { font-style: italic; }
+
+p, ul, ol, pre { @include trailer; }
+
+pre {
+  @include adjust-font-size-to($smallpx);
+  @include mono;
+}

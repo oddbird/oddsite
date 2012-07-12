@@ -177,31 +177,36 @@ html {
 }
 
 body {
-  padding-top: 1.313em;
+  font-family: "CenturyOldStyle", Baskerville, Palatino, Cambria, Georgia, serif;
+}
+
+h1, h2, h3, h4, strong {
+  font-weight: bold;
+}
+
+em {
+  font-style: italic;
+}
+
+p, ul, ol, pre {
+  margin-bottom: 1.313em;
+}
+
+pre {
+  font-size: 0.75em;
+  line-height: 1.75em;
+  font-family: Consolas, Menlo, Monaco, "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace, serif;
+}
+
+body {
   max-width: 44em;
   margin-left: auto;
   margin-right: auto;
   padding-left: 1em;
   padding-right: 1em;
-  font-family: "CenturyOldStyle", Baskerville, Palatino, Cambria, Georgia, serif;
 }
 body:after {
   content: "";
   display: table;
   clear: both;
-}
-
-p, ul, ol {
-  margin-bottom: 1.313em;
-}
-
-[role="main"] {
-  border-top-style: solid;
-  border-top-width: 0.188em;
-  padding-top: 1.125em;
-  border-bottom-style: solid;
-  border-bottom-width: 0.188em;
-  padding-bottom: 1.125em;
-  margin-top: 1.313em;
-  margin-bottom: 1.313em;
 }
