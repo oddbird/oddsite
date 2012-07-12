@@ -73,27 +73,30 @@
 
 <body id="oddsite" class="{% block bodyclasses %}{% endblock %}">
 
-<div>
+<header role="banner">
+  <h1 class="logo"><a href="/" rel="home">OddBird</a></h1>
+  <p class="tagline">Custom-built web tools for humans.</p>
+</header>
 
-  <header role="banner">
-    <h1 class="logo"><a href="/" rel="home">OddBird</a></h1>
-    <p class="tagline">Custom-built web tools for humans.</p>
-  </header>
+<nav class="primary">
+  <ul>
+    <li><a href="/" rel="home">home</a></li>
+    <li><a href="/blog/">blog</a></li>
+  </ul>
+</nav>
 
-  <section role="main">
+<section role="main">
 
-    {% block body %}
+  {% block body %}
 
-    {% endblock body %}
+  {% endblock body %}
 
-  </section>
+</section>
 
-  <footer role="contentinfo">
-    <p class="colophon">This site is built on plain old semantic <a href="http://www.w3.org/TR/html5/">HTML5</a>, powered by <a href="http://www.jquery.com/">jQuery</a> and the <a href="https://github.com/mitsuhiko/rstblog/">rstblog</a> static site generator for <a href="http://www.python.org">Python</a>, and styled using <a href="http://www.w3.org/TR/css-2010/">CSS3</a> with help from <a href="http://www.modernizr.com/">Modernizr</a>, <a href="http://susy.oddbird.net/">Susy</a>, <a href="http://compass-style.org/">Compass</a>, <a href="http://sass-lang.com/">Sass</a>, and <a href="http://stuffandnonsense.co.uk/projects/320andup/">320 and Up</a>.</p>
-    <p class="copyright vcard">copyright &copy; 2009-2012 <a href="http://oddbird.net/" class="fn org url">OddBird</a></p>
-  </footer>
-
-</div>
+<footer role="contentinfo">
+  <p class="colophon">This site is built on plain old semantic <a href="http://www.w3.org/TR/html5/">HTML5</a>, powered by <a href="http://www.jquery.com/">jQuery</a> and the <a href="https://github.com/mitsuhiko/rstblog/">rstblog</a> static site generator for <a href="http://www.python.org">Python</a>, and styled using <a href="http://www.w3.org/TR/css-2010/">CSS3</a> with help from <a href="http://www.modernizr.com/">Modernizr</a>, <a href="http://susy.oddbird.net/">Susy</a>, <a href="http://compass-style.org/">Compass</a>, <a href="http://sass-lang.com/">Sass</a>, and <a href="http://stuffandnonsense.co.uk/projects/320andup/">320 and Up</a>.</p>
+  <p class="copyright vcard">copyright &copy; 2009-2012 <a href="http://oddbird.net/" class="fn org url">OddBird</a></p>
+</footer>
 
 <!-- JavaScript @@@ compress -->
 <script src="/static/js/jquery-1.7.2.js"></script>

@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block title %}{{ rst.title }}{% endblock %}
+
+{% block body %}
+
+  {%- if not config.hide_title %}
+  {{ rst.html_title }}
+  {%- endif %}
+
+  {% include "_byline.html" %}
+
+  {{ rst.fragment }}
+
+  {% if 'disqus' in config.active_modules %}
+    {{ get_disqus() }}
+  {% endif %}
+
+{% endblock %}

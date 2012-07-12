@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+{% block title %}Blog{% endblock %}
+{% block body %}
+
+  {%- for entry in pagination.get_slice() %}
+  <article class="post">
+    <h3>
+      <a href="{{ link_to('page', slug=entry.slug) }}">
+        {{ entry.title }}
+      </a>
+    </h3>
+
+    {# @@@ include "_byline.html" #}
+
+    {% if entry.summary %}
+    <div class="summary">{{ entry.render_summary() }}</div>
+    {% endif %}
+  </article>
+  {%- endfor %}
+
+  {% if show_pagination and pagination.pages > 1 %}
+    {{ pagination }}
+  {% endif %}
+{% endblock %}

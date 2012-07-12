@@ -1,4 +1,8 @@
 public: yes
+hide_title: yes
+
+Home
+====
 
 We love chasing ideas into existence.
 We could do that all night long,
