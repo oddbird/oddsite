@@ -2,13 +2,17 @@
 {% block title %}Blog Archive for {{ entry.year }}{% endblock %}
 {% block body %}
 
-  <h1>Blog <a href="{{ link_to('blog_archive') }}">Archive</a> for {{ entry.year }}</h1>
+  <h2>
+    <a href="{{ link_to('blog_archive') }}">Archive</a>:
+    {{ entry.year }}
+  </h2>
 
   <ul class=blog-archive>
     {%- for subentry in entry.months %}
-      <li><a href="{{ link_to('blog_archive', year=entry.year,
-                              month=subentry.month) }}">{{ subentry.month_name }}</a>
-        — {{ subentry.count }} {{ 'entry' if subentry.count == 1 else 'entries' }}
+      <li>
+        <a href="{{ link_to('blog_archive', year=entry.year, month=subentry.month) }}">{{ subentry.month_name }}</a>
+        [{{ subentry.count }}]
+      </li>
     {%- endfor %}
   </ul>
 {% endblock %}

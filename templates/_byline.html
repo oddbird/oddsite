@@ -2,7 +2,7 @@
 <p class="byline">
   {% if ctx.pub_date %}
   <time datetime="{{ ctx.pub_date.isoformat() }}" pubdate="pubdate">
-    {{ format_date(ctx.pub_date, format='medium') }}
+    {{ ctx.pub_date.strftime("%B %d, %Y") }}
   </time>
   {% endif %}
 
