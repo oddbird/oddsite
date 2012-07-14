@@ -4,7 +4,10 @@
   <h1>Tags</h1>
   <ul class=tagcloud>
   {%- for tag in get_tags(limit=50) %}
-    <li><a href="{{ link_to('tag', tag=tag.name) }}">{{ tag.name }}</a>
+    <li>
+      <a href="{{ link_to('tag', tag=tag.name) }}">{{ tag.name }}</a>
+      ({{ tag.count }})
+    </li>
   {%- endfor %}
   </ul>
 {% endblock %}
