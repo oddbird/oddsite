@@ -1,5 +1,6 @@
 public: yes
-tags: [new, test, eric]
+tags: [new, test]
+author: eric
 summary: |
   I'm just trying shit out.
 

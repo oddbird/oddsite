@@ -3,8 +3,8 @@ clean:
 	rm -rf output/*
 
 build: clean
-	run-rstblog build content/
+	python run.py build content/
 
 serve: build
-	run-rstblog serve content/
+	python run.py serve content/
 

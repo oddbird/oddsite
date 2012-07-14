@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+{% block title %}Authors{% endblock %}
+{% block body %}
+  <h1>Authors</h1>
+  <ul class="authors">
+  {%- for author in get_authors(limit=50) %}
+    <li>
+      <a href="{{ link_to('author', author=author.name) }}">{{ author.name }}</a>
+      ({{ author.count }})
+    </li>
+  {%- endfor %}
+  </ul>
+{% endblock %}

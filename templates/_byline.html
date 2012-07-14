@@ -6,7 +6,9 @@
   </time>
   {% endif %}
 
-  by { author }
+  {% if ctx.author %}
+  by <a href="{{ link_to('author', author=ctx.author) }}">{{ ctx.author }}</a>
+  {% endif %}
 
   {% if ctx.tags %}
     in

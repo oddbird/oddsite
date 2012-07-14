@@ -1,5 +1,6 @@
 public: yes
 tags: [rstblog, test]
+author: carl
 summary: |
   This is my first blog entry
   how many lines?
