@@ -1,17 +1,26 @@
 {% extends "layout.html" %}
-{% block title %}Entries by “{{ author.name }}”{% endblock %}
+{% block title %}Entries by {{ author.name }}{% endblock %}
 {% block body %}
-  <h2>Entries <a href="{{ link_to('authors') }}">by</a> “{{ author.name }}”</h2>
+  <h2>Entries <a href="{{ link_to('authors') }}">by</a> {{ author.name }}</h2>
   <ul>
-  {%- for entry in entries %}
-    <li>
-      {%- if entry.pub_date %}
-        <time datetime="{{ entry.pub_date.isoformat() }}">
-          {{ entry.pub_date.strftime("%m/%d/%y") }}
-        </time>
+  {%- for ctx in entries %}
+  <article class="post">
+    <h3>
+      <a href="{{ link_to('page', slug=ctx.slug) }}">
+        {{ ctx.title }}
+      </a>
+    </h3>
+
+    {% include "_byline.html" %}
+
+    <div class="body">
+      {% if ctx.summary %}
+        {{ ctx.render_summary() }}
+      {% else %}
+        {{ ctx.render_contents() }}
       {% endif %}
-      <a href="{{ link_to('page', slug=entry.slug) }}">{{ entry.title }}</a>
-    </li>
+    </div>
+  </article>
   {%- endfor %}
   </ul>
 {% endblock %}
