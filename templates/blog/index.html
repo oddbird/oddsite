@@ -12,9 +12,13 @@
 
     {% include "_byline.html" %}
 
-    {% if ctx.summary %}
-    <div class="summary">{{ ctx.render_summary() }}</div>
-    {% endif %}
+    <div class="body">
+      {% if ctx.summary %}
+        {{ ctx.render_summary() }}
+      {% else %}
+        {{ ctx.render_contents() }}
+      {% endif %}
+    </div>
   </article>
   {%- endfor %}
 
