@@ -65,14 +65,14 @@ Home
 
 .. |Carl| raw:: html
 
-  <strong class="vcard"><a href="/blog/carl/" class="fn url">Carl</a></strong>
+  <strong class="vcard"><a href="/authors/carl/" class="fn url">Carl</a></strong>
 
 .. _coder: http://github.com/carljm
 .. _Pythonista: http://www.python.org/
 
 .. |Eric| raw:: html
 
-  <strong class="vcard"><a href="/blog/eric/" class="fn url">Eric</a></strong>
+  <strong class="vcard"><a href="/authors/eric/" class="fn url">Eric</a></strong>
 
 .. _multimedia artist: http://eric.andmeyer.com/
 .. _writing: http://vicioustrap.com/
@@ -82,7 +82,7 @@ Home
 
 .. |Jonny| raw:: html
 
-  <strong class="vcard"><a href="/blog/jonny/" class="fn url">Jonny</a></strong>
+  <strong class="vcard"><a href="/authors/jonny/" class="fn url">Jonny</a></strong>
 
 .. _front-end developer: http://github.com/jgerigmeyer/
 .. _college philosophy professor: http://www.goshen.edu/jonam/
