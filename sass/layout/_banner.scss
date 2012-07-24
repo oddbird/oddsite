@@ -17,7 +17,7 @@ $logo-rhythm  : floor(image-height($logo)/$base-font-size);
 
 .tagline {
   @include sanscond;
-  color: rgba($blue-darker,.5);
+  color: rgba($blue-darkest,.5);
   font-weight: 500;
   text-transform: uppercase;
   text-align: center;

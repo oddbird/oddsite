@@ -1,2 +1,29 @@
 // ----------------------------------------------------------------------------
 // Nav
+
+[role="navigation"] {
+  @include rhythm(1,.25,.25,1);
+  @include darker-block;
+  @include border-radius;
+
+  a {
+    #{$link} { margin-right: rhythm(1); }
+    &:before {
+      @extend %icon-content;
+      margin-right: .4em;
+    }
+  }
+  [rel="home"] { @extend %icon-home; }
+  [href*="blog"] { @extend %icon-chat; }
+  [href*="carl"] { @extend %icon-cog; }
+  [href*="eric"] { @extend %icon-palette; }
+  [href*="jonny"] { @extend %icon-compass; }
+
+  ul {
+    @include inline-block-list;
+    display: inline;
+    text-transform: capitalize;
+  }
+
+  .secondary { font-style: italic; }
+}

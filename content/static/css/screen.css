@@ -178,6 +178,7 @@ html {
 
 html {
   font-family: "CenturyOldStyle", Baskerville, Palatino, Cambria, Georgia, serif;
+  text-shadow: 0px 1px 0px rgba(229, 249, 255, 0.5);
   background: #e5f9ff url('../images/noise.png?1343154559') fixed center;
   background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, rgba(77, 210, 255, 0.25)), color-stop(75%, rgba(204, 242, 255, 0.25))), url('../images/noise.png?1343154559');
   background-image: -webkit-linear-gradient(bottom, rgba(77, 210, 255, 0.25), rgba(204, 242, 255, 0.25) 75%), url('../images/noise.png?1343154559');
@@ -212,6 +213,50 @@ a:focus, a:hover, a:active {
   font-family: Consolas, Menlo, Monaco, "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace, serif;
 }
 
+@font-face {
+  font-family: "IcoMoon";
+  src: url('../fonts/icons.eot');
+  src: url('../fonts/icons.eot?#iefix') format('eot'), url('../fonts/icons.svg#icons') format('svg'), url('../fonts/icons.woff') format('woff'), url('../fonts/icons.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Use the following CSS code if you want to have a class per icon */
+[data-icon]:before, [role="navigation"] a:before, [role="contentinfo"] .title:before {
+  font-family: 'IcoMoon';
+  font-style: normal;
+  speak: none;
+}
+
+/* Use the following CSS code if you want to use data attributes for inserting your icons */
+[data-icon]:before {
+  content: attr(data-icon);
+}
+
+[role="navigation"] [rel="home"]:before {
+  content: "\e000";
+}
+
+.contact .title:before {
+  content: "\e002";
+}
+
+[role="navigation"] [href*="blog"]:before, .archive .title:before {
+  content: "\e007";
+}
+
+[role="navigation"] [href*="eric"]:before {
+  content: "\e006";
+}
+
+[role="navigation"] [href*="jonny"]:before {
+  content: "\e009";
+}
+
+[role="navigation"] [href*="carl"]:before {
+  content: "\e00a";
+}
+
 body {
   max-width: 44em;
   margin-left: auto;
@@ -241,15 +286,134 @@ body:after {
 
 .tagline {
   font-family: "FranklinGothicCond", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: rgba(0, 115, 153, 0.5);
+  color: rgba(0, 77, 102, 0.5);
   font-weight: 500;
   text-transform: uppercase;
   text-align: center;
   letter-spacing: .04em;
 }
 
+[role="navigation"] {
+  margin-top: 1.333em;
+  padding-top: 0.333em;
+  padding-bottom: 0.333em;
+  margin-bottom: 1.333em;
+  background: rgba(0, 77, 102, 0.125);
+  margin-left: -1em;
+  margin-right: -1em;
+  padding-left: 1em;
+  padding-right: 1em;
+  -webkit-border-radius: 0.125em;
+  -moz-border-radius: 0.125em;
+  -ms-border-radius: 0.125em;
+  -o-border-radius: 0.125em;
+  border-radius: 0.125em;
+}
+[role="navigation"] a:link, [role="navigation"] a:visited {
+  color: #cc5200;
+}
+[role="navigation"] a:focus, [role="navigation"] a:hover, [role="navigation"] a:active {
+  color: #b30059;
+}
+[role="navigation"] a:link, [role="navigation"] a:visited {
+  margin-right: 1.333em;
+}
+[role="navigation"] a:before {
+  margin-right: .4em;
+}
+[role="navigation"] ul {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  display: inline;
+  text-transform: capitalize;
+}
+[role="navigation"] ul li {
+  list-style-image: none;
+  list-style-type: none;
+  margin-left: 0;
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  white-space: nowrap;
+}
+[role="navigation"] .secondary {
+  font-style: italic;
+}
+
 [role="contentinfo"] {
+  overflow: hidden;
   font-family: "FranklinGothicCond", "Helvetica Neue", Helvetica, Arial, sans-serif;
   margin-top: 1.333em;
+  padding-top: 1.333em;
+  padding-bottom: 1.333em;
+  margin-bottom: 0em;
+  background: rgba(0, 77, 102, 0.125);
+  margin-left: -1em;
+  margin-right: -1em;
+  padding-left: 1em;
+  padding-right: 1em;
+  -moz-border-radius-topleft: 0.125em;
+  -webkit-border-top-left-radius: 0.125em;
+  border-top-left-radius: 0.125em;
+  -moz-border-radius-topright: 0.125em;
+  -webkit-border-top-right-radius: 0.125em;
+  border-top-right-radius: 0.125em;
   clear: both;
+}
+[role="contentinfo"] a:link, [role="contentinfo"] a:visited {
+  color: #cc5200;
+}
+[role="contentinfo"] a:focus, [role="contentinfo"] a:hover, [role="contentinfo"] a:active {
+  color: #b30059;
+}
+[role="contentinfo"] .title {
+  font-weight: 500;
+}
+[role="contentinfo"] .title a:link, [role="contentinfo"] .title a:visited {
+  color: #993d00;
+}
+[role="contentinfo"] .title a:focus, [role="contentinfo"] .title a:hover, [role="contentinfo"] .title a:active {
+  color: #b30059;
+}
+[role="contentinfo"] .title:before {
+  margin-right: .4em;
+}
+@media (min-width: 32em) {
+  [role="contentinfo"] .archive, [role="contentinfo"] .colophon {
+    width: 54.545%;
+    float: right;
+    margin-right: 0;
+  }
+  [role="contentinfo"] .contact, [role="contentinfo"] .copyright {
+    width: 43.182%;
+    float: left;
+    margin-right: 2.273%;
+  }
+  [role="contentinfo"] .colophon {
+    clear: left;
+  }
+}
+
+.archive, .contact {
+  margin-bottom: 1.333em;
+}
+.archive ul, .contact ul {
+  list-style: disc;
+  padding-left: 1em;
+}
+
+.colophon {
+  margin-bottom: 1.333em;
+}
+
+.copyright, .colophon {
+  font-size: 0.778em;
+  line-height: 1.714em;
+  text-transform: uppercase;
+  letter-spacing: .04em;
 }

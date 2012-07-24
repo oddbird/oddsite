@@ -6,10 +6,15 @@
   <p class="tagline">Custom web tools for humans.</p>
 </header>
 
-<nav class="primary">
-  <ul>
+<nav role="navigation">
+  <ul class="primary">
     <li><a href="/" rel="home">home</a></li>
     <li><a href="/blog/">blog</a></li>
+  </ul>
+  <ul class="secondary">
+    <li><a href="/authors/carl/">carl</a></li>
+    <li><a href="/authors/eric/">eric</a></li>
+    <li><a href="/authors/jonny/">jonny</a></li>
   </ul>
 </nav>
 
@@ -24,15 +29,10 @@
 <footer role="contentinfo">
 
   <div class="archive">
-    <p><a href="/archive/">archive</a></p>
+    <h3 class="title"><a href="/archive/">Blog Archive</a></h3>
     <ul>
       {%- for entry in get_recent_blog_entries() %}
       <li>
-        {%- if entry.pub_date %}
-        <time datetime="{{ entry.pub_date.isoformat() }}">
-            {{ entry.pub_date.strftime("%m/%d/%y") }}
-        </time>
-        {%- endif -%}
         <a href="{{ link_to('page', slug=entry.slug) }}">{{ entry.title }}</a>
       </li>
       {%- endfor %}
@@ -40,7 +40,7 @@
   </div>
 
   <div class="contact">
-    <p class="email">birds(who are 'at' the)oddbird.net</p>
+    <h3 class="title email">birds(who are 'at' the)oddbird.net</h3>
     <ul>
       <li><a href="http://twitter.com/carljm/">@carljm</a></li>
       <li><a href="http://twitter.com/eriiicam/">@eriiicam</a></li>
@@ -55,8 +55,10 @@
     for <a href="http://www.python.org">Python</a>,
     and styled using <a href="http://www.w3.org/TR/css-2010/">CSS3</a>,
     with help from
+    <a href="http://subtlepatterns.com/">Subtle Patterns</a>,
     <a href="http://www.jquery.com/">jQuery</a>,
     <a href="http://www.modernizr.com/">Modernizr</a>,
+    <a href="http://keyamoon.com/icomoon/">IcoMoon</a>,
     <a href="http://susy.oddbird.net/">Susy</a>,
     <a href="http://compass-style.org/">Compass</a>,
     and <a href="http://sass-lang.com/">Sass</a>.

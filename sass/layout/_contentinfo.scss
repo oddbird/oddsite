@@ -2,7 +2,60 @@
 // Contentinfo
 
 [role="contentinfo"] {
+  @include clearfix;
   @include sanscond;
-  @include leader;
+  @include rhythm(1,1,1,0);
+  @include darker-block;
+  @include border-top-radius;
   clear: both;
+
+  .title {
+    font-weight: 500;
+    a {
+      #{$link} { color: $orange-darker; }
+      #{$focus} { color: $pink-dark; }
+    }
+    &:before {
+      @extend %icon-content;
+      margin-right: .4em;
+    }
+  }
+
+  @media (min-width: 32em) {
+    .archive, .colophon {
+      @include span-columns(5 omega,9);
+    }
+    .contact, .copyright {
+      @include span-columns(4,9);
+    }
+    .colophon {
+      clear: left;
+    }
+  }
+}
+
+.archive, .contact {
+  @include trailer;
+  ul {
+    list-style: disc;
+    padding-left: 1em;
+  }
+}
+
+.archive {
+  .title { @extend %icon-chat; }
+}
+
+.contact {
+  .title { @extend %icon-email; }
+}
+
+.colophon {
+  @include trailer;
+}
+
+.copyright, .colophon {
+  @include adjust-font-size-to($smallpx);
+  text-transform: uppercase;
+  letter-spacing: .04em;
 }

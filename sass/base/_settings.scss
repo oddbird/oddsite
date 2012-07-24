@@ -25,3 +25,11 @@ $legacy-support-for-ie8         : true;
 
 $link   : "&:link, &:visited";
 $focus  : "&:focus, &:hover, &:active";
+
+$default-text-shadow-color      : rgba($blue-hint,.5);
+$default-text-shadow-h-offset   : 0px;
+$default-text-shadow-v-offset   : 1px;
+$default-text-shadow-blur       : 0px;
+$default-text-shadow-spread     : false ;
+
+$default-border-radius          : .125em;

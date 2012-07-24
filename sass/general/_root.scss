@@ -10,10 +10,24 @@
 $noise  : image-url('noise.png');
 $grad   : linear-gradient(bottom, rgba($blue-light,.25), rgba($blue-lightest,.25) 75%);
 
+@mixin darker-block {
+  background: rgba($blue-darkest,.125);
+  margin-left: 0 - $grid-padding;
+  margin-right: 0 - $grid-padding;
+  padding-left: $grid-padding;
+  padding-right: $grid-padding;
+
+  a {
+    #{$link} { color: $orange-dark; }
+    #{$focus} { color: $pink-dark; }
+  }
+}
+
 @include establish-baseline;
 
 html {
   @include serif;
+  @include text-shadow;
   @include background($blue-hint $noise fixed center);
   @include background-image($grad, $noise);
 }
@@ -22,3 +36,4 @@ html {
 // More
 
 @import "type";
+@import "icons";
