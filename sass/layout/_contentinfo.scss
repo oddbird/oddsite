@@ -21,12 +21,12 @@
     }
   }
 
-  @media (min-width: 32em) {
-    .archive, .colophon {
-      @include span-columns(5 omega,9);
+  @include at-breakpoint($total-columns) {
+    .archive, .colophon, .contact, .copyright {
+      @include span-columns($total-columns/2);
     }
-    .contact, .copyright {
-      @include span-columns(4,9);
+    .archive, .colophon {
+      @include omega;
     }
     .colophon {
       clear: left;

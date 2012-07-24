@@ -1,4 +1,11 @@
 // ----------------------------------------------------------------------------
 // Blog
 
-[role="main"] { @extend %type; }
+.post {
+  @include trailer(2);
+}
+
+.byline {
+  color: $mid;
+  font-style: italic;
+}

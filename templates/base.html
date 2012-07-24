@@ -71,7 +71,7 @@
   {% endblock htmlhead %}
 </head>
 
-<body id="oddsite" class="{% block bodyclasses %}{% endblock %}">
+<body id="oddsite" class="{% block bodyclasses %}{{ config.bodyclasses }}{% endblock %}">
 
 {% block layout %}{% endblock layout %}
 

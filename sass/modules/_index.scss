@@ -1,0 +1,24 @@
+// ----------------------------------------------------------------------------
+// Index
+
+$introsize: $medpx;
+$introlarge: $largepx;
+
+.intro {
+  @include adjust-font-size-to($introsize);
+  @include trailer(1,$introsize);
+  font-style: italic;
+}
+
+.projects {
+  @include section;
+}
+
+.people {
+  @include padding-leader(8);
+  background: image-url('oddpeople.png') no-repeat scroll top;
+}
+
+.process {
+  @include section(rgba(white,.5));
+}

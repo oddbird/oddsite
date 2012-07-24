@@ -23,7 +23,22 @@ a {
 // Type
 
 %type {
-  h1, h2, h3, h4, strong { font-weight: bold; }
+
+  h1 {
+    @include adjust-font-size-to($largepx);
+    a {
+      #{$link} { color: $orange-dark; }
+      #{$focus} { color: $pink-dark; }
+    }
+  }
+
+  h2 {
+    @include adjust-font-size-to($medpx);
+    @include trailer(.5,$medpx);
+  }
+
+  h3, h4, strong { font-weight: bold; }
+
   em { font-style: italic; }
 
   p, ul, ol, pre { @include trailer; }

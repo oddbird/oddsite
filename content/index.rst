@@ -1,14 +1,17 @@
 public: yes
 hide_title: yes
+bodyclasses: homepage
 
 Home
 ====
 
-.. container:: projects
+.. container:: intro
 
   We love chasing ideas into existence.
   We could do that all night long,
   and sometimes we do.
+
+.. container:: projects
 
   We created Susy_ for web designers like ourselves,
   and we are core contributors to

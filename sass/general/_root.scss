@@ -5,23 +5,37 @@
 @import "fonts";
 
 // ----------------------------------------------------------------------------
-// Root
+// Mixins
 
-$noise  : image-url('noise.png');
-$grad   : linear-gradient(bottom, rgba($blue-light,.25), rgba($blue-lightest,.25) 75%);
-
-@mixin darker-block {
-  background: rgba($blue-darkest,.125);
+@mixin bleed {
   margin-left: 0 - $grid-padding;
   margin-right: 0 - $grid-padding;
   padding-left: $grid-padding;
   padding-right: $grid-padding;
+}
+
+@mixin darker-block {
+  @include bleed;
+  background: rgba($blue-darkest,.125);
 
   a {
     #{$link} { color: $orange-dark; }
     #{$focus} { color: $pink-dark; }
   }
 }
+
+@mixin section($color: rgba($orange-light,.125)) {
+  @include bleed;
+  @include rhythm(0,1.5,.5,1);
+  @include border-radius;
+  background: $color;
+}
+
+// ----------------------------------------------------------------------------
+// Root
+
+$noise  : image-url('noise.png');
+$grad   : linear-gradient(bottom, rgba($blue-light,.25), rgba($blue-lightest,.25) 75%);
 
 @include establish-baseline;
 
@@ -31,6 +45,8 @@ html {
   @include background($blue-hint $noise fixed center);
   @include background-image($grad, $noise);
 }
+
+[role="main"] { @extend %type; }
 
 // ----------------------------------------------------------------------------
 // More

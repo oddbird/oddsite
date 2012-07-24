@@ -5,11 +5,11 @@
   <ul>
   {%- for ctx in entries %}
   <article class="post">
-    <h3>
+    <h1>
       <a href="{{ link_to('page', slug=ctx.slug) }}">
         {{ ctx.title }}
       </a>
-    </h3>
+    </h1>
 
     {% include "_byline.html" %}
 

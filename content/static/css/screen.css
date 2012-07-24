@@ -198,7 +198,22 @@ a:focus, a:hover, a:active {
   color: #b30059;
 }
 
-[role="main"] h1, [role="main"] h2, [role="main"] h3, [role="main"] h4, [role="main"] strong {
+[role="main"] h1 {
+  font-size: 1.778em;
+  line-height: 1.125em;
+}
+[role="main"] h1 a:link, [role="main"] h1 a:visited {
+  color: #cc5200;
+}
+[role="main"] h1 a:focus, [role="main"] h1 a:hover, [role="main"] h1 a:active {
+  color: #b30059;
+}
+[role="main"] h2 {
+  font-size: 1.333em;
+  line-height: 1.5em;
+  margin-bottom: 0.5em;
+}
+[role="main"] h3, [role="main"] h4, [role="main"] strong {
   font-weight: bold;
 }
 [role="main"] em {
@@ -258,7 +273,7 @@ a:focus, a:hover, a:active {
 }
 
 body {
-  max-width: 44em;
+  max-width: 29em;
   margin-left: auto;
   margin-right: auto;
   padding-left: 1em;
@@ -298,11 +313,11 @@ body:after {
   padding-top: 0.333em;
   padding-bottom: 0.333em;
   margin-bottom: 1.333em;
-  background: rgba(0, 77, 102, 0.125);
   margin-left: -1em;
   margin-right: -1em;
   padding-left: 1em;
   padding-right: 1em;
+  background: rgba(0, 77, 102, 0.125);
   -webkit-border-radius: 0.125em;
   -moz-border-radius: 0.125em;
   -ms-border-radius: 0.125em;
@@ -352,11 +367,11 @@ body:after {
   padding-top: 1.333em;
   padding-bottom: 1.333em;
   margin-bottom: 0em;
-  background: rgba(0, 77, 102, 0.125);
   margin-left: -1em;
   margin-right: -1em;
   padding-left: 1em;
   padding-right: 1em;
+  background: rgba(0, 77, 102, 0.125);
   -moz-border-radius-topleft: 0.125em;
   -webkit-border-top-left-radius: 0.125em;
   border-top-left-radius: 0.125em;
@@ -383,16 +398,15 @@ body:after {
 [role="contentinfo"] .title:before {
   margin-right: .4em;
 }
-@media (min-width: 32em) {
+@media (min-width: 34.875em) {
+  [role="contentinfo"] .archive, [role="contentinfo"] .colophon, [role="contentinfo"] .contact, [role="contentinfo"] .copyright {
+    width: 48.276%;
+    float: left;
+    margin-right: 3.448%;
+  }
   [role="contentinfo"] .archive, [role="contentinfo"] .colophon {
-    width: 54.545%;
     float: right;
     margin-right: 0;
-  }
-  [role="contentinfo"] .contact, [role="contentinfo"] .copyright {
-    width: 43.182%;
-    float: left;
-    margin-right: 2.273%;
   }
   [role="contentinfo"] .colophon {
     clear: left;
@@ -416,4 +430,59 @@ body:after {
   line-height: 1.714em;
   text-transform: uppercase;
   letter-spacing: .04em;
+}
+
+.intro {
+  font-size: 1.333em;
+  line-height: 1.5em;
+  margin-bottom: 1em;
+  font-style: italic;
+}
+
+.projects {
+  margin-left: -1em;
+  margin-right: -1em;
+  padding-left: 1em;
+  padding-right: 1em;
+  margin-top: 0em;
+  padding-top: 2em;
+  padding-bottom: 0.667em;
+  margin-bottom: 1.333em;
+  -webkit-border-radius: 0.125em;
+  -moz-border-radius: 0.125em;
+  -ms-border-radius: 0.125em;
+  -o-border-radius: 0.125em;
+  border-radius: 0.125em;
+  background: rgba(255, 148, 77, 0.125);
+}
+
+.people {
+  padding-top: 10.667em;
+  background: url('../images/oddpeople.png?1341997855') no-repeat scroll top;
+}
+
+.process {
+  margin-left: -1em;
+  margin-right: -1em;
+  padding-left: 1em;
+  padding-right: 1em;
+  margin-top: 0em;
+  padding-top: 2em;
+  padding-bottom: 0.667em;
+  margin-bottom: 1.333em;
+  -webkit-border-radius: 0.125em;
+  -moz-border-radius: 0.125em;
+  -ms-border-radius: 0.125em;
+  -o-border-radius: 0.125em;
+  border-radius: 0.125em;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.post {
+  margin-bottom: 2.667em;
+}
+
+.byline {
+  color: gray;
+  font-style: italic;
 }
