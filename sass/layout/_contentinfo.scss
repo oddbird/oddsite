@@ -1,0 +1,8 @@
+// ----------------------------------------------------------------------------
+// Contentinfo
+
+[role="contentinfo"] {
+  @include sanscond;
+  @include leader;
+  clear: both;
+}

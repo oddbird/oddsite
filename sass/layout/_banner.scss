@@ -1,0 +1,25 @@
+// ----------------------------------------------------------------------------
+// Banner
+
+$logo         : 'logo_d.png';
+$logo-rhythm  : floor(image-height($logo)/$base-font-size);
+
+.logo {
+  a {
+    @include replace-text($logo);
+    min-height: rhythm($logo-rhythm);
+    max-width: image-width($logo) + $largepx;
+    display: block;
+    margin: 0 auto;
+    background-position: bottom;
+  }
+}
+
+.tagline {
+  @include sanscond;
+  color: rgba($blue-darker,.5);
+  font-weight: 500;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: .04em;
+}

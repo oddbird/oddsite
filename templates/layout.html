@@ -75,7 +75,7 @@
 
 <header role="banner">
   <h1 class="logo"><a href="/" rel="home">OddBird</a></h1>
-  <p class="tagline">Custom-built web tools for humans.</p>
+  <p class="tagline">Custom web tools for humans.</p>
 </header>
 
 <nav class="primary">
@@ -93,32 +93,33 @@
 
 </section>
 
-<aside class="contact">
-  <span class="email">birds@oddbird.net</span>
-  <ul>
-    <li><a href="http://twitter.com/carljm/">@carljm</a></li>
-    <li><a href="http://twitter.com/eriiicam/">@eriiicam</a></li>
-    <li><a href="http://twitter.com/jgerigmeyer/">@jgerigmeyer</a></li>
-  </ul>
-</aside>
-
-<aside class="blog">
-  <a href="/archive/">archive</a>
-  <ul>
-    {%- for entry in get_recent_blog_entries() %}
-    <li>
-      {%- if entry.pub_date %}
-      <time datetime="{{ entry.pub_date.isoformat() }}">
-          {{ entry.pub_date.strftime("%m/%d/%y") }}
-      </time>
-      {%- endif -%}
-      <a href="{{ link_to('page', slug=entry.slug) }}">{{ entry.title }}</a>
-    </li>
-    {%- endfor %}
-  </ul>
-</aside>
-
 <footer role="contentinfo">
+
+  <div class="archive">
+    <p><a href="/archive/">archive</a></p>
+    <ul>
+      {%- for entry in get_recent_blog_entries() %}
+      <li>
+        {%- if entry.pub_date %}
+        <time datetime="{{ entry.pub_date.isoformat() }}">
+            {{ entry.pub_date.strftime("%m/%d/%y") }}
+        </time>
+        {%- endif -%}
+        <a href="{{ link_to('page', slug=entry.slug) }}">{{ entry.title }}</a>
+      </li>
+      {%- endfor %}
+    </ul>
+  </div>
+
+  <div class="contact">
+    <p class="email">birds(who are 'at' the)oddbird.net</p>
+    <ul>
+      <li><a href="http://twitter.com/carljm/">@carljm</a></li>
+      <li><a href="http://twitter.com/eriiicam/">@eriiicam</a></li>
+      <li><a href="http://twitter.com/jgerigmeyer/">@jgerigmeyer</a></li>
+    </ul>
+  </div>
+
   <p class="colophon">
     This site is built on plain old semantic <a href="http://www.w3.org/TR/html5/">HTML5</a>,
     powered by

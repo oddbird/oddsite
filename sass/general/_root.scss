@@ -7,16 +7,18 @@
 // ----------------------------------------------------------------------------
 // Root
 
+$noise  : image-url('noise.png');
+$grad   : linear-gradient(bottom, rgba($blue-light,.25), rgba($blue-lightest,.25) 75%);
+
 @include establish-baseline;
 
-body { @include serif; }
-
-h1, h2, h3, h4, strong { font-weight: bold; }
-em { font-style: italic; }
-
-p, ul, ol, pre { @include trailer; }
-
-pre {
-  @include adjust-font-size-to($smallpx);
-  @include mono;
+html {
+  @include serif;
+  @include background($blue-hint $noise fixed center);
+  @include background-image($grad, $noise);
 }
+
+// ----------------------------------------------------------------------------
+// More
+
+@import "type";

@@ -2,3 +2,10 @@
 // Layout
 
 body { @include container; }
+
+// ----------------------------------------------------------------------------
+// Template
+
+@import "banner";
+@import "nav";
+@import "contentinfo";

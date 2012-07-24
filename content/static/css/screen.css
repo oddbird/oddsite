@@ -168,33 +168,47 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 
 * html {
-  font-size: 100%;
+  font-size: 112.5%;
 }
 
 html {
-  font-size: 16px;
-  line-height: 1.313em;
+  font-size: 18px;
+  line-height: 1.333em;
 }
 
-body {
+html {
   font-family: "CenturyOldStyle", Baskerville, Palatino, Cambria, Georgia, serif;
+  background: #e5f9ff url('../images/noise.png?1343154559') fixed center;
+  background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, rgba(77, 210, 255, 0.25)), color-stop(75%, rgba(204, 242, 255, 0.25))), url('../images/noise.png?1343154559');
+  background-image: -webkit-linear-gradient(bottom, rgba(77, 210, 255, 0.25), rgba(204, 242, 255, 0.25) 75%), url('../images/noise.png?1343154559');
+  background-image: -moz-linear-gradient(bottom, rgba(77, 210, 255, 0.25), rgba(204, 242, 255, 0.25) 75%), url('../images/noise.png?1343154559');
+  background-image: -o-linear-gradient(bottom, rgba(77, 210, 255, 0.25), rgba(204, 242, 255, 0.25) 75%), url('../images/noise.png?1343154559');
+  background-image: linear-gradient(bottom, rgba(77, 210, 255, 0.25), rgba(204, 242, 255, 0.25) 75%), url('../images/noise.png?1343154559');
 }
 
-h1, h2, h3, h4, strong {
+a:hover, a:active {
+  outline: none;
+}
+a:link, a:visited {
+  color: #ff6600;
+  text-decoration: none;
+}
+a:focus, a:hover, a:active {
+  color: #b30059;
+}
+
+[role="main"] h1, [role="main"] h2, [role="main"] h3, [role="main"] h4, [role="main"] strong {
   font-weight: bold;
 }
-
-em {
+[role="main"] em {
   font-style: italic;
 }
-
-p, ul, ol, pre {
-  margin-bottom: 1.313em;
+[role="main"] p, [role="main"] ul, [role="main"] ol, [role="main"] pre {
+  margin-bottom: 1.333em;
 }
-
-pre {
-  font-size: 0.75em;
-  line-height: 1.75em;
+[role="main"] pre {
+  font-size: 0.778em;
+  line-height: 1.714em;
   font-family: Consolas, Menlo, Monaco, "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace, serif;
 }
 
@@ -208,5 +222,34 @@ body {
 body:after {
   content: "";
   display: table;
+  clear: both;
+}
+
+.logo a {
+  text-indent: -119988px;
+  overflow: hidden;
+  text-align: left;
+  background-image: url('../images/logo_d.png?1341997855');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  min-height: 6.667em;
+  max-width: 212px;
+  display: block;
+  margin: 0 auto;
+  background-position: bottom;
+}
+
+.tagline {
+  font-family: "FranklinGothicCond", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: rgba(0, 115, 153, 0.5);
+  font-weight: 500;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: .04em;
+}
+
+[role="contentinfo"] {
+  font-family: "FranklinGothicCond", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin-top: 1.333em;
   clear: both;
 }
