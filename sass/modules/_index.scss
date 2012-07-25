@@ -22,3 +22,36 @@ $introlarge: $largepx;
 .process {
   @include section(rgba(white,.5));
 }
+
+@include at-breakpoint($break) {
+  .intro {
+    @include squish(1,1);
+    @include adjust-font-size-to($introlarge,2);
+    @include trailer(1,$introlarge);
+  }
+
+  .projects {
+    @include clearfix;
+    @include pad(2,2);
+    p {
+      @include span-columns(4,8);
+      @include nth-omega(even);
+    }
+  }
+
+  .people {
+    @include clearfix;
+    p {
+      @include span-columns(4);
+      @include nth-omega(last);
+      &:first-child {
+        @include reset-columns;
+        @include squish(3,3);
+      }
+    }
+  }
+
+  .process {
+    @include pad(2,2);
+  }
+}
