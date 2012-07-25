@@ -9,3 +9,26 @@
   color: $mid;
   font-style: italic;
 }
+
+.readmore {
+  font-style: italic;
+  &:after { content: "»"; }
+}
+
+@include at-breakpoint($break) {
+  .post { @include clearfix; }
+  .title {
+    @include prefix(3);
+    @include trailer(.5,$xxlargepx);
+  }
+  .byline {
+    @include span-columns(3);
+    text-align: right;
+    time {
+      @include serifcaps;
+      display: block;
+      font-style: normal;
+    }
+  }
+  .post .body { @include span-columns(9 omega); }
+}

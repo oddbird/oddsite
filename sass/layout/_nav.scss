@@ -1,6 +1,8 @@
 // ----------------------------------------------------------------------------
 // Nav
 
+$activenav: $blue-darker;
+
 [role="navigation"] {
   @include rhythm(1,.25,.25,1);
   @include darker-block;
@@ -13,11 +15,26 @@
       margin-right: .4em;
     }
   }
-  [rel="home"] { @extend %icon-home; }
-  [href*="blog"] { @extend %icon-chat; }
-  [href*="carl"] { @extend %icon-cog; }
-  [href*="eric"] { @extend %icon-palette; }
-  [href*="jonny"] { @extend %icon-compass; }
+  [rel="home"] {
+    @extend %icon-home;
+    .home & { color: $activenav; }
+  }
+  [href*="blog"] {
+    @extend %icon-chat;
+    .blog & { color: $activenav; }
+  }
+  [href*="carl"] {
+    @extend %icon-cog;
+    .carl & { color: $activenav; }
+  }
+  [href*="eric"] {
+    @extend %icon-palette;
+    .eric & { color: $activenav; }
+  }
+  [href*="jonny"] {
+    @extend %icon-compass;
+    .jonny & { color: $activenav; }
+  }
 
   ul {
     @include inline-block-list;

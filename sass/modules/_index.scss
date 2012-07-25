@@ -1,8 +1,8 @@
 // ----------------------------------------------------------------------------
 // Index
 
-$introsize: $medpx;
-$introlarge: $largepx;
+$introsize: $largepx;
+$introlarge: $xxlargepx;
 
 @mixin dropcap {
   &:first-line { @include serifcaps; }
@@ -16,6 +16,7 @@ $introlarge: $largepx;
 .intro {
   @include adjust-font-size-to($introsize);
   @include trailer(1,$introsize);
+  color: $blue-darkest;
   font-style: italic;
 }
 
@@ -60,7 +61,7 @@ $introlarge: $largepx;
 @include at-breakpoint($break) {
   .intro {
     @include squish(1,1);
-    @include adjust-font-size-to($introlarge,2);
+    @include adjust-font-size-to($introlarge,2.5);
     @include trailer(1,$introlarge);
   }
 

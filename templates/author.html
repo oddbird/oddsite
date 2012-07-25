@@ -1,11 +1,12 @@
 {% extends "layout.html" %}
+
 {% block title %}Entries by {{ author.name }}{% endblock %}
+{% block bodyclasses %}{{ author.name }}{% endblock %}
+
 {% block body %}
-  <h2>Entries <a href="{{ link_to('authors') }}">by</a> {{ author.name }}</h2>
-  <ul>
   {%- for ctx in entries %}
   <article class="post">
-    <h1>
+    <h1 class="title">
       <a href="{{ link_to('page', slug=ctx.slug) }}">
         {{ ctx.title }}
       </a>
@@ -22,5 +23,4 @@
     </div>
   </article>
   {%- endfor %}
-  </ul>
 {% endblock %}

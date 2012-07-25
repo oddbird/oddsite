@@ -23,3 +23,10 @@ $logo-rhythm  : floor(image-height($logo)/$base-font-size);
   text-align: center;
   letter-spacing: .04em;
 }
+
+@include at-breakpoint($break) {
+  [role="banner"] {
+    @include leader(2);
+    @include trailer(2);
+  }
+}

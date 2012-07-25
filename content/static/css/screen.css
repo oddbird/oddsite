@@ -169,7 +169,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 html {
   font-size: 112.5%;
-  line-height: 1.33333em;
+  line-height: 1.22222em;
 }
 
 html {
@@ -196,8 +196,8 @@ a:focus, a:hover, a:active {
 }
 
 [role="main"] h1 {
-  font-size: 1.77778em;
-  line-height: 1.125em;
+  font-size: 2.05556em;
+  line-height: 1.18919em;
 }
 [role="main"] h1 a:link, [role="main"] h1 a:visited {
   color: #cc5200;
@@ -206,9 +206,9 @@ a:focus, a:hover, a:active {
   color: #b30059;
 }
 [role="main"] h2 {
-  font-size: 1.33333em;
-  line-height: 1.5em;
-  margin-bottom: 0.5em;
+  font-size: 1.5em;
+  line-height: 1.22222em;
+  margin-bottom: 0.40741em;
 }
 [role="main"] h3, [role="main"] h4, [role="main"] strong {
   font-weight: bolder;
@@ -217,11 +217,11 @@ a:focus, a:hover, a:active {
   font-style: italic;
 }
 [role="main"] p, [role="main"] ul, [role="main"] ol, [role="main"] pre {
-  margin-bottom: 1.33333em;
+  margin-bottom: 1.22222em;
 }
 [role="main"] pre {
-  font-size: 0.77778em;
-  line-height: 1.71429em;
+  font-size: 0.83333em;
+  line-height: 1.46667em;
   font-family: Consolas, Menlo, Monaco, "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace, serif;
 }
 
@@ -234,7 +234,7 @@ a:focus, a:hover, a:active {
 }
 
 /* Use the following CSS code if you want to have a class per icon */
-[data-icon]:before, [role="navigation"] a:before, [role="contentinfo"] .title:before {
+[data-icon]:before, [role="navigation"] a:before, [role="contentinfo"] .foottitle:before {
   font-family: 'IcoMoon';
   font-style: normal;
   speak: none;
@@ -249,11 +249,11 @@ a:focus, a:hover, a:active {
   content: "\e000";
 }
 
-.contact .title:before {
+.contact .foottitle:before {
   content: "\e002";
 }
 
-[role="navigation"] [href*="blog"]:before, .archive .title:before {
+[role="navigation"] [href*="blog"]:before, .archive .foottitle:before {
   content: "\e007";
 }
 
@@ -294,8 +294,8 @@ body:after {
   background-image: url('../images/logo_d.png?1341997855');
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  min-height: 6.66667em;
-  max-width: 212px;
+  min-height: 6.11111em;
+  max-width: 206px;
   display: block;
   margin: 0 auto;
   background-position: bottom;
@@ -310,11 +310,17 @@ body:after {
   letter-spacing: .04em;
 }
 
+@media (min-width: 45em) {
+  [role="banner"] {
+    margin-top: 2.44444em;
+    margin-bottom: 2.44444em;
+  }
+}
 [role="navigation"] {
-  margin-top: 1.33333em;
-  padding-top: 0.33333em;
-  padding-bottom: 0.33333em;
-  margin-bottom: 1.33333em;
+  margin-top: 1.22222em;
+  padding-top: 0.30556em;
+  padding-bottom: 0.30556em;
+  margin-bottom: 1.22222em;
   margin-left: -1em;
   margin-right: -1em;
   padding-left: 1em;
@@ -333,10 +339,25 @@ body:after {
   color: #b30059;
 }
 [role="navigation"] a:link, [role="navigation"] a:visited {
-  margin-right: 1.33333em;
+  margin-right: 1.22222em;
 }
 [role="navigation"] a:before {
   margin-right: .4em;
+}
+.home [role="navigation"] [rel="home"] {
+  color: #007399;
+}
+.blog [role="navigation"] [href*="blog"] {
+  color: #007399;
+}
+.carl [role="navigation"] [href*="carl"] {
+  color: #007399;
+}
+.eric [role="navigation"] [href*="eric"] {
+  color: #007399;
+}
+.jonny [role="navigation"] [href*="jonny"] {
+  color: #007399;
 }
 [role="navigation"] ul {
   margin: 0;
@@ -367,9 +388,9 @@ body:after {
 [role="contentinfo"] {
   overflow: hidden;
   font-family: "FranklinGothicCond", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  margin-top: 1.33333em;
-  padding-top: 1.33333em;
-  padding-bottom: 1.33333em;
+  margin-top: 1.22222em;
+  padding-top: 1.22222em;
+  padding-bottom: 1.22222em;
   margin-bottom: 0em;
   margin-left: -1em;
   margin-right: -1em;
@@ -390,16 +411,16 @@ body:after {
 [role="contentinfo"] a:focus, [role="contentinfo"] a:hover, [role="contentinfo"] a:active {
   color: #b30059;
 }
-[role="contentinfo"] .title {
+[role="contentinfo"] .foottitle {
   font-weight: 500;
 }
-[role="contentinfo"] .title a:link, [role="contentinfo"] .title a:visited {
+[role="contentinfo"] .foottitle a:link, [role="contentinfo"] .foottitle a:visited {
   color: #993d00;
 }
-[role="contentinfo"] .title a:focus, [role="contentinfo"] .title a:hover, [role="contentinfo"] .title a:active {
+[role="contentinfo"] .foottitle a:focus, [role="contentinfo"] .foottitle a:hover, [role="contentinfo"] .foottitle a:active {
   color: #b30059;
 }
-[role="contentinfo"] .title:before {
+[role="contentinfo"] .foottitle:before {
   margin-right: .4em;
 }
 @media (min-width: 45em) {
@@ -419,7 +440,7 @@ body:after {
 }
 
 .archive, .contact {
-  margin-bottom: 1.33333em;
+  margin-bottom: 1.22222em;
 }
 .archive ul, .contact ul {
   list-style: disc;
@@ -427,20 +448,21 @@ body:after {
 }
 
 .colophon {
-  margin-bottom: 1.33333em;
+  margin-bottom: 1.22222em;
 }
 
 .copyright, .colophon {
-  font-size: 0.77778em;
-  line-height: 1.71429em;
+  font-size: 0.83333em;
+  line-height: 1.46667em;
   text-transform: uppercase;
   letter-spacing: .04em;
 }
 
 .intro {
-  font-size: 1.33333em;
-  line-height: 1.5em;
-  margin-bottom: 1em;
+  font-size: 1.44444em;
+  line-height: 1.26923em;
+  margin-bottom: 0.84615em;
+  color: #004d66;
   font-style: italic;
 }
 
@@ -450,9 +472,9 @@ body:after {
   padding-left: 1em;
   padding-right: 1em;
   margin-top: 0em;
-  padding-top: 2em;
-  padding-bottom: 0.66667em;
-  margin-bottom: 1.33333em;
+  padding-top: 1.83333em;
+  padding-bottom: 0.61111em;
+  margin-bottom: 1.22222em;
   -webkit-border-radius: 0.125em;
   -moz-border-radius: 0.125em;
   -ms-border-radius: 0.125em;
@@ -464,14 +486,14 @@ body:after {
   font-family: "CenturyOldStyleCaps", Baskerville, Palatino, Cambria, Georgia, serif;
 }
 .projects p:first-child:first-letter {
-  font-size: 2.66667em;
+  font-size: 2.44444em;
   line-height: 1.25em;
   float: left;
   padding: .1em .1em 0 0;
 }
 
 .people {
-  padding-top: 10.66667em;
+  padding-top: 9.77778em;
   background: url('../images/oddpeople.png?1341997855') no-repeat scroll top;
 }
 .people strong {
@@ -481,7 +503,7 @@ body:after {
   font-family: "CenturyOldStyleCaps", Baskerville, Palatino, Cambria, Georgia, serif;
 }
 .people p:first-child:first-letter {
-  font-size: 2.66667em;
+  font-size: 2.44444em;
   line-height: 1.25em;
   float: left;
   padding: .1em .1em 0 0;
@@ -497,9 +519,9 @@ body:after {
   padding-left: 1em;
   padding-right: 1em;
   margin-top: 0em;
-  padding-top: 2em;
-  padding-bottom: 0.66667em;
-  margin-bottom: 1.33333em;
+  padding-top: 1.83333em;
+  padding-bottom: 0.61111em;
+  margin-bottom: 1.22222em;
   -webkit-border-radius: 0.125em;
   -moz-border-radius: 0.125em;
   -ms-border-radius: 0.125em;
@@ -513,11 +535,11 @@ body:after {
   clear: both;
 }
 .process p:before {
-  font-size: 2.38889em;
-  line-height: 1.11628em;
+  font-size: 1.5em;
+  line-height: 1.22222em;
   content: counter(process) ".";
   float: left;
-  margin: 0 0.83721em 0.55814em 0;
+  margin: 0 1.22222em 0.81481em 0;
   color: rgba(0, 115, 153, 0.25);
 }
 .process strong {
@@ -529,9 +551,9 @@ body:after {
   .intro {
     margin-left: 8.51064%;
     margin-right: 8.51064%;
-    font-size: 1.77778em;
-    line-height: 1.5em;
-    margin-bottom: 0.75em;
+    font-size: 2.05556em;
+    line-height: 1.48649em;
+    margin-bottom: 0.59459em;
   }
 
   .projects {
@@ -575,10 +597,46 @@ body:after {
   }
 }
 .post {
-  margin-bottom: 2.66667em;
+  margin-bottom: 2.44444em;
 }
 
 .byline {
   color: gray;
   font-style: italic;
+}
+
+.readmore {
+  font-style: italic;
+}
+.readmore:after {
+  content: "»";
+}
+
+@media (min-width: 45em) {
+  .post {
+    overflow: hidden;
+  }
+
+  .title {
+    padding-left: 25.53191%;
+    margin-bottom: 0.2973em;
+  }
+
+  .byline {
+    width: 23.40426%;
+    float: left;
+    margin-right: 2.12766%;
+    text-align: right;
+  }
+  .byline time {
+    font-family: "CenturyOldStyleCaps", Baskerville, Palatino, Cambria, Georgia, serif;
+    display: block;
+    font-style: normal;
+  }
+
+  .post .body {
+    width: 74.46809%;
+    float: right;
+    margin-right: 0;
+  }
 }

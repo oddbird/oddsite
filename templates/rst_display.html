@@ -9,7 +9,7 @@
 
   {% include "_byline.html" %}
 
-  {{ rst.fragment }}
+  <div class="body">{{ rst.fragment }}</div>
 
   {% if 'disqus' in config.active_modules %}
     {{ get_disqus() }}

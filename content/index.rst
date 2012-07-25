@@ -1,6 +1,8 @@
 public: yes
 hide_title: yes
-bodyclasses: homepage
+bodyclasses: home
+pageclasses: homepage
+template: layout.html
 
 Home
 ====

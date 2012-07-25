@@ -9,7 +9,7 @@
   @include border-top-radius;
   clear: both;
 
-  .title {
+  .foottitle {
     font-weight: 500;
     a {
       #{$link} { color: $orange-darker; }
@@ -43,11 +43,11 @@
 }
 
 .archive {
-  .title { @extend %icon-chat; }
+  .foottitle { @extend %icon-chat; }
 }
 
 .contact {
-  .title { @extend %icon-email; }
+  .foottitle { @extend %icon-email; }
 }
 
 .colophon {

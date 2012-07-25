@@ -18,10 +18,14 @@
   </ul>
 </nav>
 
-<section role="main">
+<section role="main" class="{{ config.pageclasses }}">
 
   {% block body %}
+    {%- if not config.hide_title %}
+      <h1>{{ ctx.title }}</h1>
+    {%- endif %}
 
+    {{ rst.fragment }}
   {% endblock body %}
 
 </section>
@@ -29,7 +33,7 @@
 <footer role="contentinfo">
 
   <div class="archive">
-    <h3 class="title"><a href="/archive/">Blog Archive</a></h3>
+    <h3 class="foottitle"><a href="/archive/">Blog Archive</a></h3>
     <ul>
       {%- for entry in get_recent_blog_entries() %}
       <li>
@@ -40,7 +44,7 @@
   </div>
 
   <div class="contact">
-    <h3 class="title email">birds(who are 'at' the)oddbird.net</h3>
+    <h3 class="foottitle email">birds(who are 'at' the)oddbird.net</h3>
     <ul>
       <li><a href="http://twitter.com/carljm/">@carljm</a></li>
       <li><a href="http://twitter.com/eriiicam/">@eriiicam</a></li>
