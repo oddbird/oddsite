@@ -211,7 +211,7 @@ a:focus, a:hover, a:active {
   margin-bottom: 0.5em;
 }
 [role="main"] h3, [role="main"] h4, [role="main"] strong {
-  font-weight: bold;
+  font-weight: bolder;
 }
 [role="main"] em {
   font-style: italic;
@@ -460,10 +460,35 @@ body:after {
   border-radius: 0.125em;
   background: rgba(255, 148, 77, 0.125);
 }
+.projects p:first-child:first-line {
+  font-family: "CenturyOldStyleCaps", Baskerville, Palatino, Cambria, Georgia, serif;
+}
+.projects p:first-child:first-letter {
+  font-size: 2.66667em;
+  line-height: 1.25em;
+  float: left;
+  padding: .1em .1em 0 0;
+}
 
 .people {
   padding-top: 10.66667em;
   background: url('../images/oddpeople.png?1341997855') no-repeat scroll top;
+}
+.people strong {
+  font-family: "CenturyOldStyleCaps", Baskerville, Palatino, Cambria, Georgia, serif;
+}
+.people p:first-child:first-line {
+  font-family: "CenturyOldStyleCaps", Baskerville, Palatino, Cambria, Georgia, serif;
+}
+.people p:first-child:first-letter {
+  font-size: 2.66667em;
+  line-height: 1.25em;
+  float: left;
+  padding: .1em .1em 0 0;
+}
+.people p:first-child strong {
+  font-weight: normal;
+  text-transform: uppercase;
 }
 
 .process {
@@ -481,6 +506,23 @@ body:after {
   -o-border-radius: 0.125em;
   border-radius: 0.125em;
   background: rgba(255, 255, 255, 0.5);
+  counter-reset: process;
+}
+.process p {
+  counter-increment: process;
+  clear: both;
+}
+.process p:before {
+  font-size: 2.38889em;
+  line-height: 1.11628em;
+  content: counter(process) ".";
+  float: left;
+  margin: 0 0.83721em 0.55814em 0;
+  color: rgba(0, 115, 153, 0.25);
+}
+.process strong {
+  font-family: "CenturyOldStyleCaps", Baskerville, Palatino, Cambria, Georgia, serif;
+  text-transform: uppercase;
 }
 
 @media (min-width: 45em) {

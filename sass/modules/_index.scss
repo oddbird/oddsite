@@ -4,6 +4,15 @@
 $introsize: $medpx;
 $introlarge: $largepx;
 
+@mixin dropcap {
+  &:first-line { @include serifcaps; }
+  &:first-letter {
+    @include adjust-font-size-to($medpx*2);
+    float: left;
+    padding: .1em .1em 0 0;
+  }
+}
+
 .intro {
   @include adjust-font-size-to($introsize);
   @include trailer(1,$introsize);
@@ -12,15 +21,40 @@ $introlarge: $largepx;
 
 .projects {
   @include section;
+  p:first-child { @include dropcap; }
 }
 
 .people {
   @include padding-leader(8);
   background: image-url('oddpeople.png') no-repeat scroll top;
+  strong { @include serifcaps; }
+  p:first-child {
+    @include dropcap;
+    strong {
+      font-weight: normal;
+      text-transform: uppercase;
+    }
+  }
 }
 
 .process {
   @include section(rgba(white,.5));
+  counter-reset: process;
+  p {
+    counter-increment: process;
+    clear: both;
+    &:before {
+      @include adjust-font-size-to($xlargepx);
+      content: counter(process) ".";
+      float: left;
+      margin: 0 rhythm(1.5,$xlargepx) rhythm(1,$xlargepx) 0;
+      color: rgba($blue-darker,.25);
+    }
+  }
+  strong {
+    @include serifcaps;
+    text-transform: uppercase;
+  }
 }
 
 @include at-breakpoint($break) {

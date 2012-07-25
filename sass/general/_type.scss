@@ -37,7 +37,7 @@ a {
     @include trailer(.5,$medpx);
   }
 
-  h3, h4, strong { font-weight: bold; }
+  h3, h4, strong { font-weight: bolder; }
 
   em { font-style: italic; }
 
