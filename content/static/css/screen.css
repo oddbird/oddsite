@@ -186,8 +186,12 @@ html {
 
 @media (min-width: 45em) {
   [role="main"] {
-    overflow: hidden;
     margin-bottom: 2.44444em;
+  }
+  [role="main"]:after {
+    content: "";
+    display: table;
+    clear: both;
   }
 }
 

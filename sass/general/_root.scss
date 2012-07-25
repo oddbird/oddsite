@@ -49,7 +49,7 @@ html {
 [role="main"] {
   @extend %type;
   @include at-breakpoint($break) {
-    @include clearfix;
+    @include pie-clearfix;
     @include trailer(2);
   }
 }
