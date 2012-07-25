@@ -231,12 +231,12 @@ a:focus, a:hover, a:active {
   margin-bottom: 1.22222em;
 }
 [role="main"] pre {
-  font-size: 0.83333em;
-  line-height: 1.46667em;
   font-family: Consolas, Menlo, Monaco, "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace, serif;
-  margin-left: -0.75em;
-  padding-left: .5em;
-  border-left: 0.25em solid rgba(0, 77, 102, 0.25);
+  font-size: 0.72222em;
+  line-height: 1.69231em;
+  margin-bottom: 1.69231em;
+  padding: 0.61111em 0.91667em;
+  border-left: 0.30556em solid rgba(0, 77, 102, 0.25);
 }
 
 @font-face {

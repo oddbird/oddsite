@@ -47,10 +47,10 @@ $h2size : $xlargepx;
   p, ul, ol, pre { @include trailer; }
 
   pre {
-    @include adjust-font-size-to($smallpx);
     @include mono;
-    margin-left: - .75em;
-    padding-left: .5em;
-    border-left: .25em solid rgba($blue-darkest,.25);
+    @include adjust-font-size-to($xsmallpx);
+    @include trailer(1,$xsmallpx);
+    padding: rhythm(.5) rhythm(.75);
+    border-left: rhythm(.25) solid rgba($blue-darkest,.25);
   }
 }
