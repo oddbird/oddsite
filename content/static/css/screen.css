@@ -248,13 +248,13 @@ a:focus, a:hover, a:active {
 }
 
 /* Use the following CSS code if you want to have a class per icon */
-[role="navigation"] a:link:before, [role="navigation"] a:visited:before, .foottitle:before, .archive [href*="/20"]:before, .contact [href*="twitter"]:before, .tagcloud a:before, [data-icon]:before {
+[role="navigation"] a:link:before, [role="navigation"] a:visited:before, .foottitle:before, .archive [href*="/20"]:before, .contact [href*="twitter"]:before, .listtitle:before, [data-icon]:before {
   font-family: 'IcoMoon';
   font-style: normal;
   speak: none;
 }
 
-[role="navigation"] a:link:before, [role="navigation"] a:visited:before, .foottitle:before, .archive [href*="/20"]:before, .contact [href*="twitter"]:before, .tagcloud a:before {
+[role="navigation"] a:link:before, [role="navigation"] a:visited:before, .foottitle:before, .archive [href*="/20"]:before, .contact [href*="twitter"]:before, .listtitle:before {
   padding-right: .4em;
 }
 
@@ -279,11 +279,11 @@ a:focus, a:hover, a:active {
   content: "\e004";
 }
 
-.tagcloud a:before {
+.listtitle.tags:before {
   content: "\e005";
 }
 
-[role="navigation"] [href*="blog"]:before, .archive .foottitle:before {
+[role="navigation"] [href*="blog"]:before, .archive .foottitle:before, .listtitle.year:before, .listtitle.month:before, .listtitle.archive:before {
   content: "\e007";
 }
 
@@ -315,6 +315,11 @@ body:after {
   body {
     max-width: 47em;
   }
+}
+body * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .logo a {
@@ -650,8 +655,54 @@ body:after {
 }
 
 @media (min-width: 45em) {
-  .post {
-    padding-left: 17.02128%;
-    padding-right: 17.02128%;
+  .post:after {
+    content: "";
+    display: table;
+    clear: both;
   }
+
+  .byline {
+    width: 23.40426%;
+    float: right;
+    margin-right: 0;
+  }
+  .byline time {
+    display: block;
+  }
+
+  .body {
+    width: 65.95745%;
+    float: left;
+    margin-right: 2.12766%;
+  }
+}
+.listtitle {
+  margin-bottom: 0.59459em;
+}
+.listtitle:before {
+  font-size: 0.7027em;
+  line-height: 0.84615em;
+}
+
+.blog-archive ul {
+  list-style: disc;
+  padding-left: 1em;
+}
+
+.tagcloud {
+  list-style-type: none;
+}
+.tagcloud, .tagcloud li {
+  margin: 0px;
+  padding: 0px;
+  display: inline;
+}
+.tagcloud li:after {
+  content: ", ";
+}
+.tagcloud li:last-child:after {
+  content: "";
+}
+.tagcloud li.last:after {
+  content: "";
 }

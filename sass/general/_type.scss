@@ -22,10 +22,13 @@ a {
 // ----------------------------------------------------------------------------
 // Type
 
+$h1size : $xxlargepx;
+$h2size : $xlargepx;
+
 %type {
 
   h1 {
-    @include adjust-font-size-to($xxlargepx);
+    @include adjust-font-size-to($h1size);
     a {
       #{$link} { color: $orange-dark; }
       #{$focus} { color: $pink-dark; }
@@ -33,8 +36,8 @@ a {
   }
 
   h2 {
-    @include adjust-font-size-to($xlargepx);
-    @include trailer(.5,$xlargepx);
+    @include adjust-font-size-to($h2size);
+    @include trailer(.5,$h2size);
   }
 
   h3, h4, strong { font-weight: bolder; }

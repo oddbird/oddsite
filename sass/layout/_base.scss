@@ -1,7 +1,10 @@
 // ----------------------------------------------------------------------------
 // Layout
 
-body { @include container($total-columns, $break); }
+body {
+  @include container($total-columns, $break);
+  * { @include box-sizing(border-box); }
+}
 
 // ----------------------------------------------------------------------------
 // Template

@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 {% block title %}Tags{% endblock %}
 {% block body %}
-  <h1>Tags</h1>
+  <h1 class="listtitle tags">Tags</h1>
   <ul class="tagcloud">
   {%- for tag in get_tags(limit=50) %}
     <li>

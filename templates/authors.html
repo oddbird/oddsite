@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 {% block title %}Authors{% endblock %}
 {% block body %}
-  <h1>Authors</h1>
+  <h1 class="listtitle">Authors</h1>
   <ul class="authors">
   {%- for author in get_authors(limit=50) %}
     <li>

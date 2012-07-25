@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 {% block title %}Entries tagged “{{ tag.name }}”{% endblock %}
 {% block body %}
-  <h2>Entries <a href="{{ link_to('tagcloud') }}">tagged</a> “{{ tag.name }}”</h2>
+  <h1 class="listtitle tags">Entries <a href="{{ link_to('tagcloud') }}">tagged</a> “{{ tag.name }}”</h1>
   <ul>
   {%- for entry in entries %}
     <li>
