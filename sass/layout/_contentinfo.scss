@@ -9,18 +9,6 @@
   @include border-top-radius;
   clear: both;
 
-  .foottitle {
-    font-weight: 500;
-    a {
-      #{$link} { color: $orange-darker; }
-      #{$focus} { color: $pink-dark; }
-    }
-    &:before {
-      @extend %icon-content;
-      margin-right: .4em;
-    }
-  }
-
   @include at-breakpoint($break) {
     .archive, .colophon {
       @include span-columns(7 omega);
@@ -34,24 +22,35 @@
   }
 }
 
-.archive, .contact {
-  @include trailer;
-  ul {
-    list-style: disc;
-    padding-left: 1em;
+.archive, .contact, .colophon { @include trailer; }
+
+.foottitle {
+  @extend %padded-icon;
+  font-weight: 500;
+
+  a {
+    #{$link} { color: $orange-darker; }
+    #{$focus} { color: $pink-dark; }
   }
+
+  .archive & { @extend %icon-chat; }
+  .contact & { @extend %icon-email; }
 }
 
 .archive {
-  .foottitle { @extend %icon-chat; }
+  [href*="/20"] {
+    @extend %padded-icon;
+    @extend %icon-bookmark;
+    &:before { @include adjust-font-size-to($smallpx); }
+  }
 }
 
 .contact {
-  .foottitle { @extend %icon-email; }
-}
-
-.colophon {
-  @include trailer;
+  [href*="twitter"] {
+    @extend %padded-icon;
+    @extend %icon-twitter;
+    &:before { @include adjust-font-size-to($smallpx); }
+  }
 }
 
 .copyright, .colophon {

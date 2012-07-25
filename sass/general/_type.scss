@@ -46,5 +46,8 @@ a {
   pre {
     @include adjust-font-size-to($smallpx);
     @include mono;
+    margin-left: - .75em;
+    padding-left: .5em;
+    border-left: .25em solid rgba($blue-darkest,.25);
   }
 }

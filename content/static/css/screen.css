@@ -184,6 +184,13 @@ html {
   background-image: linear-gradient(bottom, rgba(77, 210, 255, 0.25), rgba(204, 242, 255, 0.25) 75%), url('../images/noise.png?1343154559');
 }
 
+@media (min-width: 45em) {
+  [role="main"] {
+    overflow: hidden;
+    margin-bottom: 2.44444em;
+  }
+}
+
 a:hover, a:active {
   outline: none;
 }
@@ -223,6 +230,9 @@ a:focus, a:hover, a:active {
   font-size: 0.83333em;
   line-height: 1.46667em;
   font-family: Consolas, Menlo, Monaco, "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace, serif;
+  margin-left: -0.75em;
+  padding-left: .5em;
+  border-left: 0.25em solid rgba(0, 77, 102, 0.25);
 }
 
 @font-face {
@@ -234,10 +244,14 @@ a:focus, a:hover, a:active {
 }
 
 /* Use the following CSS code if you want to have a class per icon */
-[data-icon]:before, [role="navigation"] a:before, [role="contentinfo"] .foottitle:before {
+[role="navigation"] a:link:before, [role="navigation"] a:visited:before, .foottitle:before, .archive [href*="/20"]:before, .contact [href*="twitter"]:before, .tagcloud a:before, [data-icon]:before {
   font-family: 'IcoMoon';
   font-style: normal;
   speak: none;
+}
+
+[role="navigation"] a:link:before, [role="navigation"] a:visited:before, .foottitle:before, .archive [href*="/20"]:before, .contact [href*="twitter"]:before, .tagcloud a:before {
+  padding-right: .4em;
 }
 
 /* Use the following CSS code if you want to use data attributes for inserting your icons */
@@ -253,20 +267,32 @@ a:focus, a:hover, a:active {
   content: "\e002";
 }
 
+.contact [href*="twitter"]:before {
+  content: "\e003";
+}
+
+.archive [href*="/20"]:before {
+  content: "\e004";
+}
+
+.tagcloud a:before {
+  content: "\e005";
+}
+
 [role="navigation"] [href*="blog"]:before, .archive .foottitle:before {
   content: "\e007";
 }
 
-[role="navigation"] [href*="eric"]:before {
-  content: "\e006";
+[role="navigation"] [href*="carl"]:before {
+  content: "\e00a";
 }
 
 [role="navigation"] [href*="jonny"]:before {
-  content: "\e009";
+  content: "\e00b";
 }
 
-[role="navigation"] [href*="carl"]:before {
-  content: "\e00a";
+[role="navigation"] [href*="eric"]:before {
+  content: "\e008";
 }
 
 body {
@@ -341,9 +367,6 @@ body:after {
 [role="navigation"] a:link, [role="navigation"] a:visited {
   margin-right: 1.22222em;
 }
-[role="navigation"] a:before {
-  margin-right: .4em;
-}
 .home [role="navigation"] [rel="home"] {
   color: #007399;
 }
@@ -411,18 +434,6 @@ body:after {
 [role="contentinfo"] a:focus, [role="contentinfo"] a:hover, [role="contentinfo"] a:active {
   color: #b30059;
 }
-[role="contentinfo"] .foottitle {
-  font-weight: 500;
-}
-[role="contentinfo"] .foottitle a:link, [role="contentinfo"] .foottitle a:visited {
-  color: #993d00;
-}
-[role="contentinfo"] .foottitle a:focus, [role="contentinfo"] .foottitle a:hover, [role="contentinfo"] .foottitle a:active {
-  color: #b30059;
-}
-[role="contentinfo"] .foottitle:before {
-  margin-right: .4em;
-}
 @media (min-width: 45em) {
   [role="contentinfo"] .archive, [role="contentinfo"] .colophon {
     width: 57.44681%;
@@ -439,16 +450,28 @@ body:after {
   }
 }
 
-.archive, .contact {
+.archive, .contact, .colophon {
   margin-bottom: 1.22222em;
-}
-.archive ul, .contact ul {
-  list-style: disc;
-  padding-left: 1em;
 }
 
-.colophon {
-  margin-bottom: 1.22222em;
+.foottitle {
+  font-weight: 500;
+}
+.foottitle a:link, .foottitle a:visited {
+  color: #993d00;
+}
+.foottitle a:focus, .foottitle a:hover, .foottitle a:active {
+  color: #b30059;
+}
+
+.archive [href*="/20"]:before {
+  font-size: 0.83333em;
+  line-height: 1.46667em;
+}
+
+.contact [href*="twitter"]:before {
+  font-size: 0.83333em;
+  line-height: 1.46667em;
 }
 
 .copyright, .colophon {
@@ -532,14 +555,16 @@ body:after {
 }
 .process p {
   counter-increment: process;
-  clear: both;
+  position: relative;
+  padding-left: 1.83333em;
 }
 .process p:before {
-  font-size: 1.5em;
-  line-height: 1.22222em;
+  font-size: 2.05556em;
+  line-height: 1.18919em;
   content: counter(process) ".";
-  float: left;
-  margin: 0 1.22222em 0.81481em 0;
+  position: absolute;
+  top: 0;
+  left: 0;
   color: rgba(0, 115, 153, 0.25);
 }
 .process strong {
@@ -595,14 +620,22 @@ body:after {
     padding-left: 17.02128%;
     padding-right: 17.02128%;
   }
+  .process p {
+    padding-left: 3.66667em;
+  }
 }
 .post {
+  margin-top: 1.83333em;
   margin-bottom: 2.44444em;
 }
 
 .byline {
   color: gray;
   font-style: italic;
+}
+.byline time {
+  font-family: "CenturyOldStyleCaps", Baskerville, Palatino, Cambria, Georgia, serif;
+  font-style: normal;
 }
 
 .readmore {
@@ -614,29 +647,7 @@ body:after {
 
 @media (min-width: 45em) {
   .post {
-    overflow: hidden;
-  }
-
-  .title {
-    padding-left: 25.53191%;
-    margin-bottom: 0.2973em;
-  }
-
-  .byline {
-    width: 23.40426%;
-    float: left;
-    margin-right: 2.12766%;
-    text-align: right;
-  }
-  .byline time {
-    font-family: "CenturyOldStyleCaps", Baskerville, Palatino, Cambria, Georgia, serif;
-    display: block;
-    font-style: normal;
-  }
-
-  .post .body {
-    width: 74.46809%;
-    float: right;
-    margin-right: 0;
+    padding-left: 17.02128%;
+    padding-right: 17.02128%;
   }
 }

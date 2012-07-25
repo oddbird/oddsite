@@ -9,10 +9,9 @@ $activenav: $blue-darker;
   @include border-radius;
 
   a {
-    #{$link} { margin-right: rhythm(1); }
-    &:before {
-      @extend %icon-content;
-      margin-right: .4em;
+    #{$link} {
+      @extend %padded-icon;
+      margin-right: rhythm(1);
     }
   }
   [rel="home"] {
@@ -28,11 +27,11 @@ $activenav: $blue-darker;
     .carl & { color: $activenav; }
   }
   [href*="eric"] {
-    @extend %icon-palette;
+    @extend %icon-brush;
     .eric & { color: $activenav; }
   }
   [href*="jonny"] {
-    @extend %icon-compass;
+    @extend %icon-swipe;
     .jonny & { color: $activenav; }
   }
 

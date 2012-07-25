@@ -46,7 +46,13 @@ html {
   @include background-image($grad, $noise);
 }
 
-[role="main"] { @extend %type; }
+[role="main"] {
+  @extend %type;
+  @include at-breakpoint($break) {
+    @include clearfix;
+    @include trailer(2);
+  }
+}
 
 // ----------------------------------------------------------------------------
 // More

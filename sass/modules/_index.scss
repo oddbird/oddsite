@@ -38,17 +38,23 @@ $introlarge: $xxlargepx;
   }
 }
 
+$counter-size: $xxlargepx;
+$process-pre: rhythm(1.5);
+$process-post: rhythm(3);
+
 .process {
   @include section(rgba(white,.5));
   counter-reset: process;
   p {
     counter-increment: process;
-    clear: both;
+    position: relative;
+    padding-left: $process-pre;
     &:before {
-      @include adjust-font-size-to($xlargepx);
+      @include adjust-font-size-to($counter-size);
       content: counter(process) ".";
-      float: left;
-      margin: 0 rhythm(1.5,$xlargepx) rhythm(1,$xlargepx) 0;
+      position: absolute;
+      top: 0;
+      left: 0;
       color: rgba($blue-darker,.25);
     }
   }
@@ -88,5 +94,8 @@ $introlarge: $xxlargepx;
 
   .process {
     @include pad(2,2);
+    p {
+      padding-left: $process-post;
+    }
   }
 }

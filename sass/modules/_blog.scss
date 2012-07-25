@@ -2,12 +2,17 @@
 // Blog
 
 .post {
+  @include leader(1.5);
   @include trailer(2);
 }
 
 .byline {
   color: $mid;
   font-style: italic;
+  time {
+    @include serifcaps;
+    font-style: normal;
+  }
 }
 
 .readmore {
@@ -15,20 +20,13 @@
   &:after { content: "»"; }
 }
 
+.tagcloud {
+  a {
+    @extend %padded-icon;
+    @extend %icon-tag;
+  }
+}
+
 @include at-breakpoint($break) {
-  .post { @include clearfix; }
-  .title {
-    @include prefix(3);
-    @include trailer(.5,$xxlargepx);
-  }
-  .byline {
-    @include span-columns(3);
-    text-align: right;
-    time {
-      @include serifcaps;
-      display: block;
-      font-style: normal;
-    }
-  }
-  .post .body { @include span-columns(9 omega); }
+  .post { @include pad(2,2); }
 }

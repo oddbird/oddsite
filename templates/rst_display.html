@@ -2,17 +2,17 @@
 {% block title %}{{ rst.title }}{% endblock %}
 
 {% block body %}
+  <div class="post">
+    {%- if not config.hide_title %}
+    {{ rst.html_title }}
+    {%- endif %}
 
-  {%- if not config.hide_title %}
-  {{ rst.html_title }}
-  {%- endif %}
+    {% include "_byline.html" %}
 
-  {% include "_byline.html" %}
+    <div class="body">{{ rst.fragment }}</div>
 
-  <div class="body">{{ rst.fragment }}</div>
-
-  {% if 'disqus' in config.active_modules %}
-    {{ get_disqus() }}
-  {% endif %}
-
+    {% if 'disqus' in config.active_modules %}
+      {{ get_disqus() }}
+    {% endif %}
+  </div>
 {% endblock %}
