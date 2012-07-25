@@ -4,6 +4,10 @@
 $logo         : 'logo_d.png';
 $logo-rhythm  : floor(image-height($logo)/$base-font-size);
 
+[role="banner"] {
+  @include trailer;
+}
+
 .logo {
   a {
     @include replace-text($logo);
@@ -22,11 +26,4 @@ $logo-rhythm  : floor(image-height($logo)/$base-font-size);
   text-transform: uppercase;
   text-align: center;
   letter-spacing: .04em;
-}
-
-@include at-breakpoint($break) {
-  [role="banner"] {
-    @include leader(2);
-    @include trailer(2);
-  }
 }

@@ -4,42 +4,30 @@
 $activenav: $blue-darker;
 
 [role="navigation"] {
-  @include rhythm(1,.25,.25,1);
+  @include rhythm(0,.25,.25,0);
+  @include clearfix;
   @include darker-block;
-  @include border-radius;
+  @include border-bottom-radius;
+
+  li {
+    @include span-columns($total-columns/2);
+    @include nth-omega(even);
+    text-transform: capitalize;
+  }
 
   a {
-    #{$link} {
-      @extend %padded-icon;
-      margin-right: rhythm(1);
-    }
+    @extend %padded-icon;
+    display: block;
   }
   [rel="home"] {
     @extend %icon-home;
+    text-align: left;
     .home & { color: $activenav; }
   }
   [href*="blog"] {
     @extend %icon-chat;
+    text-align: right;
     .blog & { color: $activenav; }
   }
-  [href*="carl"] {
-    @extend %icon-cog;
-    .carl & { color: $activenav; }
-  }
-  [href*="eric"] {
-    @extend %icon-brush;
-    .eric & { color: $activenav; }
-  }
-  [href*="jonny"] {
-    @extend %icon-swipe;
-    .jonny & { color: $activenav; }
-  }
 
-  ul {
-    @include inline-block-list;
-    display: inline;
-    text-transform: capitalize;
-  }
-
-  .secondary { font-style: italic; }
 }

@@ -184,17 +184,6 @@ html {
   background-image: linear-gradient(bottom, rgba(77, 210, 255, 0.25), rgba(204, 242, 255, 0.25) 75%), url('../images/noise.png?1343154559');
 }
 
-@media (min-width: 45em) {
-  [role="main"] {
-    margin-bottom: 2.44444em;
-  }
-  [role="main"]:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-}
-
 a:hover, a:active {
   outline: none;
 }
@@ -248,13 +237,13 @@ a:focus, a:hover, a:active {
 }
 
 /* Use the following CSS code if you want to have a class per icon */
-[role="navigation"] a:link:before, [role="navigation"] a:visited:before, .foottitle:before, .archive [href*="/20"]:before, .contact [href*="twitter"]:before, .listtitle:before, [data-icon]:before {
+[role="navigation"] a:before, .foottitle:before, .archive [href*="/20"]:before, .contact [href*="twitter"]:before, .listtitle:before, [data-icon]:before {
   font-family: 'IcoMoon';
   font-style: normal;
   speak: none;
 }
 
-[role="navigation"] a:link:before, [role="navigation"] a:visited:before, .foottitle:before, .archive [href*="/20"]:before, .contact [href*="twitter"]:before, .listtitle:before {
+[role="navigation"] a:before, .foottitle:before, .archive [href*="/20"]:before, .contact [href*="twitter"]:before, .listtitle:before {
   padding-right: .4em;
 }
 
@@ -287,18 +276,6 @@ a:focus, a:hover, a:active {
   content: "\e007";
 }
 
-[role="navigation"] [href*="carl"]:before {
-  content: "\e00a";
-}
-
-[role="navigation"] [href*="jonny"]:before {
-  content: "\e00b";
-}
-
-[role="navigation"] [href*="eric"]:before {
-  content: "\e008";
-}
-
 body {
   max-width: 31em;
   margin-left: auto;
@@ -311,15 +288,14 @@ body:after {
   display: table;
   clear: both;
 }
-@media (min-width: 45em) {
-  body {
-    max-width: 47em;
-  }
-}
 body * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+}
+
+[role="banner"] {
+  margin-bottom: 1.22222em;
 }
 
 .logo a {
@@ -345,27 +321,23 @@ body * {
   letter-spacing: .04em;
 }
 
-@media (min-width: 45em) {
-  [role="banner"] {
-    margin-top: 2.44444em;
-    margin-bottom: 2.44444em;
-  }
-}
 [role="navigation"] {
-  margin-top: 1.22222em;
+  margin-top: 0em;
   padding-top: 0.30556em;
   padding-bottom: 0.30556em;
-  margin-bottom: 1.22222em;
+  margin-bottom: 0em;
+  overflow: hidden;
   margin-left: -1em;
   margin-right: -1em;
   padding-left: 1em;
   padding-right: 1em;
   background: rgba(0, 77, 102, 0.125);
-  -webkit-border-radius: 0.125em;
-  -moz-border-radius: 0.125em;
-  -ms-border-radius: 0.125em;
-  -o-border-radius: 0.125em;
-  border-radius: 0.125em;
+  -moz-border-radius-bottomleft: 0.125em;
+  -webkit-border-bottom-left-radius: 0.125em;
+  border-bottom-left-radius: 0.125em;
+  -moz-border-radius-bottomright: 0.125em;
+  -webkit-border-bottom-right-radius: 0.125em;
+  border-bottom-right-radius: 0.125em;
 }
 [role="navigation"] a:link, [role="navigation"] a:visited {
   color: #cc5200;
@@ -373,48 +345,30 @@ body * {
 [role="navigation"] a:focus, [role="navigation"] a:hover, [role="navigation"] a:active {
   color: #b30059;
 }
-[role="navigation"] a:link, [role="navigation"] a:visited {
-  margin-right: 1.22222em;
+[role="navigation"] li {
+  width: 48.3871%;
+  float: left;
+  margin-right: 3.22581%;
+  text-transform: capitalize;
+}
+[role="navigation"] li:nth-child(even) {
+  float: right;
+  margin-right: 0;
+}
+[role="navigation"] a {
+  display: block;
+}
+[role="navigation"] [rel="home"] {
+  text-align: left;
 }
 .home [role="navigation"] [rel="home"] {
   color: #007399;
 }
+[role="navigation"] [href*="blog"] {
+  text-align: right;
+}
 .blog [role="navigation"] [href*="blog"] {
   color: #007399;
-}
-.carl [role="navigation"] [href*="carl"] {
-  color: #007399;
-}
-.eric [role="navigation"] [href*="eric"] {
-  color: #007399;
-}
-.jonny [role="navigation"] [href*="jonny"] {
-  color: #007399;
-}
-[role="navigation"] ul {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  overflow: hidden;
-  display: inline;
-  text-transform: capitalize;
-}
-[role="navigation"] ul li {
-  list-style-image: none;
-  list-style-type: none;
-  margin-left: 0;
-  display: -moz-inline-box;
-  -moz-box-orient: vertical;
-  display: inline-block;
-  vertical-align: middle;
-  *vertical-align: auto;
-  white-space: nowrap;
-}
-[role="navigation"] ul li {
-  *display: inline;
-}
-[role="navigation"] .secondary {
-  font-style: italic;
 }
 
 [role="contentinfo"] {
@@ -442,21 +396,6 @@ body * {
 }
 [role="contentinfo"] a:focus, [role="contentinfo"] a:hover, [role="contentinfo"] a:active {
   color: #b30059;
-}
-@media (min-width: 45em) {
-  [role="contentinfo"] .archive, [role="contentinfo"] .colophon {
-    width: 57.44681%;
-    float: right;
-    margin-right: 0;
-  }
-  [role="contentinfo"] .contact, [role="contentinfo"] .copyright {
-    width: 40.42553%;
-    float: left;
-    margin-right: 2.12766%;
-  }
-  [role="contentinfo"] .colophon {
-    clear: left;
-  }
 }
 
 .archive, .contact, .colophon {
@@ -581,58 +520,6 @@ body * {
   text-transform: uppercase;
 }
 
-@media (min-width: 45em) {
-  .intro {
-    margin-left: 8.51064%;
-    margin-right: 8.51064%;
-    font-size: 2.05556em;
-    line-height: 1.48649em;
-    margin-bottom: 0.59459em;
-  }
-
-  .projects {
-    overflow: hidden;
-    padding-left: 17.02128%;
-    padding-right: 17.02128%;
-  }
-  .projects p {
-    width: 48.3871%;
-    float: left;
-    margin-right: 3.22581%;
-  }
-  .projects p:nth-child(even) {
-    float: right;
-    margin-right: 0;
-  }
-
-  .people {
-    overflow: hidden;
-  }
-  .people p {
-    width: 31.91489%;
-    float: left;
-    margin-right: 2.12766%;
-  }
-  .people p:last-child {
-    float: right;
-    margin-right: 0;
-  }
-  .people p:first-child {
-    float: none;
-    width: auto;
-    margin-right: auto;
-    margin-left: 25.53191%;
-    margin-right: 25.53191%;
-  }
-
-  .process {
-    padding-left: 17.02128%;
-    padding-right: 17.02128%;
-  }
-  .process p {
-    padding-left: 3.66667em;
-  }
-}
 .post {
   margin-top: 1.83333em;
   margin-bottom: 2.44444em;
@@ -654,28 +541,6 @@ body * {
   content: "»";
 }
 
-@media (min-width: 45em) {
-  .post:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-
-  .byline {
-    width: 23.40426%;
-    float: right;
-    margin-right: 0;
-  }
-  .byline time {
-    display: block;
-  }
-
-  .body {
-    width: 65.95745%;
-    float: left;
-    margin-right: 2.12766%;
-  }
-}
 .listtitle {
   margin-bottom: 0.59459em;
 }

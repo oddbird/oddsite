@@ -1,22 +1,17 @@
 {% extends "base.html" %}
 
 {% block layout %}
-<header role="banner">
-  <h1 class="logo"><a href="/" rel="home">OddBird</a></h1>
-  <p class="tagline">Custom web tools for humans.</p>
-</header>
-
 <nav role="navigation">
   <ul class="primary">
     <li><a href="/" rel="home">home</a></li>
     <li><a href="/blog/">blog</a></li>
   </ul>
-  <ul class="secondary">
-    <li><a href="/authors/carl/">carl</a></li>
-    <li><a href="/authors/eric/">eric</a></li>
-    <li><a href="/authors/jonny/">jonny</a></li>
-  </ul>
 </nav>
+
+<header role="banner">
+  <h1 class="logo"><a href="/" rel="home">OddBird</a></h1>
+  <p class="tagline">Custom web tools for humans.</p>
+</header>
 
 <section role="main" class="{{ config.pageclasses }}">
 
