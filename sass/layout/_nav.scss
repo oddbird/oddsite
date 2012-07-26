@@ -33,7 +33,7 @@ $activenav: $blue-darker;
   @include at-breakpoint($break) {
     @include stretch-x;
     top: 0;
-    padding: 0;
+    padding: 0 $grid-padding;
     background: transparent;
     text-align: right;
     li {
