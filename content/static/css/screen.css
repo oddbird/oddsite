@@ -292,7 +292,7 @@ a:focus, a:hover, a:active {
 }
 
 body > div {
-  max-width: 31em;
+  max-width: 27em;
   margin-left: auto;
   margin-right: auto;
   padding-left: 1em;
@@ -310,7 +310,7 @@ body > div:after {
 }
 @media (min-width: 45em) {
   body > div {
-    max-width: 47em;
+    max-width: 41em;
   }
 }
 body > div * {
@@ -375,9 +375,9 @@ body > div * {
   color: #b30059;
 }
 [role="navigation"] li {
-  width: 48.3871%;
+  width: 48.14815%;
   float: left;
-  margin-right: 3.22581%;
+  margin-right: 3.7037%;
   text-transform: capitalize;
 }
 [role="navigation"] li:nth-child(even) {
@@ -452,14 +452,14 @@ body > div * {
 }
 @media (min-width: 45em) {
   [role="contentinfo"] .archive, [role="contentinfo"] .colophon {
-    width: 57.44681%;
+    width: 57.31707%;
     float: right;
     margin-right: 0;
   }
   [role="contentinfo"] .contact, [role="contentinfo"] .copyright {
-    width: 40.42553%;
+    width: 40.2439%;
     float: left;
-    margin-right: 2.12766%;
+    margin-right: 2.43902%;
   }
   [role="contentinfo"] .colophon {
     clear: left;
@@ -624,39 +624,38 @@ body > div * {
 
 @media (min-width: 45em) {
   .intro {
-    margin-left: 8.51064%;
-    margin-right: 8.51064%;
     font-size: 2.05556em;
-    line-height: 1.48649em;
+    line-height: 1.18919em;
     margin-bottom: 0.59459em;
+    text-align: center;
   }
 
   .projects .wrap {
     overflow: hidden;
   }
   .projects p {
-    width: 31.91489%;
+    width: 31.70732%;
     float: left;
-    margin-right: 2.12766%;
+    margin-right: 2.43902%;
   }
   .projects p:nth-child(even) {
     float: right;
     margin-right: 0;
   }
   .projects p:first-child {
-    margin-left: 17.02128%;
+    margin-left: 17.07317%;
   }
   .projects p:last-child {
-    margin-right: 17.02128%;
+    margin-right: 17.07317%;
   }
 
   .people {
     overflow: hidden;
   }
   .people p {
-    width: 31.91489%;
+    width: 31.70732%;
     float: left;
-    margin-right: 2.12766%;
+    margin-right: 2.43902%;
   }
   .people p:last-child {
     float: right;
@@ -666,13 +665,13 @@ body > div * {
     float: none;
     width: auto;
     margin-right: auto;
-    margin-left: 25.53191%;
-    margin-right: 25.53191%;
+    margin-left: 25.60976%;
+    margin-right: 25.60976%;
   }
 
   .process {
-    padding-left: 17.02128%;
-    padding-right: 17.02128%;
+    padding-left: 17.07317%;
+    padding-right: 17.07317%;
   }
   .process p {
     padding-left: 3.66667em;
@@ -707,7 +706,7 @@ body > div * {
   }
 
   .byline {
-    width: 23.40426%;
+    width: 23.17073%;
     float: right;
     margin-right: 0;
   }
@@ -716,9 +715,9 @@ body > div * {
   }
 
   .body {
-    width: 65.95745%;
+    width: 65.85366%;
     float: left;
-    margin-right: 2.12766%;
+    margin-right: 2.43902%;
   }
 }
 .listtitle {

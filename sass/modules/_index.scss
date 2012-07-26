@@ -68,9 +68,10 @@ $process-post: rhythm(3);
 
 @include at-breakpoint($break) {
   .intro {
-    @include squish(1,1);
-    @include adjust-font-size-to($introlarge,2.5);
+    // @include squish(1,1);
+    @include adjust-font-size-to($introlarge);
     @include trailer(1,$introlarge);
+    text-align: center;
   }
 
   .projects {
