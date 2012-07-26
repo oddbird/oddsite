@@ -13,18 +13,38 @@ Home
   We could do that all night long,
   and sometimes we do.
 
-.. container:: projects
+|projects|
 
-  We created Susy_ for web designers like ourselves,
-  and we are core contributors to
-  Compass_, Django_, pip_, virtualenv_
-  and other open-source projects.
+.. |projects| raw:: html
 
-  Recent projects include MozTrap_,
-  Mozilla_’s new Test Case management system;
-  a `mapping tool`_ for `The Providence Plan`_;
-  and `Into the Green Green Mud`_,
-  a multimedia novel.
+  <div class="container projects">
+  <div class="wrap">
+    <p>
+      We created
+      <a href="http://susy.oddbird.net/">Susy</a>
+      for web designers like ourselves,
+      and we are core contributors to
+      <a href="http://compass-style.org/">Compass</a>,
+      <a href="http://djangoproject.com/">Django</a>,
+      <a href="http://pip-installer.org/">pip</a>,
+      <a href="http://virtualenv.org/">virtualenv</a>
+      and other open-source projects.
+    </p>
+    <p>
+      Recent projects include
+      <a href="http://moztrap.mozilla.org/">MozTrap</a>,
+      <a href="http://mozilla.org/">Mozilla</a>’s
+      new Test Case management system;
+      a
+      <a href="http://github.com/oddbird/mlt">mapping tool</a>
+      for
+      <a href="http://provplan.org/">The Providence Plan</a>;
+      and
+      <a href="http://greengreenmud.com/">Into the Green Green Mud</a>,
+      a multimedia novel.
+    </p>
+  </div>
+  </div>
 
 .. _Susy: http://susy.oddbird.net/
 .. _Compass: http://compass-style.org/

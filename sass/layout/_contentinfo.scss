@@ -4,9 +4,8 @@
 [role="contentinfo"] {
   @include clearfix;
   @include sanscond;
-  @include rhythm(1,1,1,0);
+  @include rhythm(0,1,1,0);
   @include darker-block;
-  @include border-top-radius;
   clear: both;
 
   @include at-breakpoint($break) {

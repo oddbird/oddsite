@@ -1,10 +1,13 @@
 // ----------------------------------------------------------------------------
 // Layout
 
-body {
+body > div {
   @include container($total-columns, $break);
-  * { @include box-sizing(border-box); }
+  @include box-shadow(rgba($blue-darker,.25) 0 0 rhythm(1));
+  @include clearfix;
   position: relative;
+
+  * { @include box-sizing(border-box); }
 }
 
 // ----------------------------------------------------------------------------

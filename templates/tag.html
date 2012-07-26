@@ -1,5 +1,7 @@
 {% extends "layout.html" %}
 {% block title %}Entries tagged “{{ tag.name }}”{% endblock %}
+{% block bodyclasses %}blog{% endblock bodyclasses %}
+
 {% block body %}
   <h1 class="listtitle tags">Entries <a href="{{ link_to('tagcloud') }}">tagged</a> “{{ tag.name }}”</h1>
   <ul>

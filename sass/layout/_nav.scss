@@ -7,7 +7,6 @@ $activenav: $blue-darker;
   @include rhythm(0,.25,.25,0);
   @include clearfix;
   @include darker-block;
-  @include border-bottom-radius;
 
   li {
     @include span-columns($total-columns/2);
@@ -33,6 +32,7 @@ $activenav: $blue-darker;
   @include at-breakpoint($break) {
     @include stretch-x;
     top: 0;
+    margin: 0;
     padding: 0 $grid-padding;
     background: transparent;
     text-align: right;

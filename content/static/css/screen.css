@@ -184,9 +184,12 @@ html {
   background-image: linear-gradient(bottom, rgba(77, 210, 255, 0.25), rgba(204, 242, 255, 0.25) 75%), url('../images/noise.png?1343154559');
 }
 
+[role="main"] {
+  padding-top: 2.44444em;
+  background: url('../images/headline.png?1343338233') no-repeat top;
+}
 @media (min-width: 45em) {
   [role="main"] {
-    margin-bottom: 2.44444em;
     clear: both;
   }
   [role="main"]:after {
@@ -288,32 +291,46 @@ a:focus, a:hover, a:active {
   content: "\e007";
 }
 
-body {
+body > div {
   max-width: 31em;
   margin-left: auto;
   margin-right: auto;
   padding-left: 1em;
   padding-right: 1em;
+  -webkit-box-shadow: rgba(0, 115, 153, 0.25) 0 0 1.22222em;
+  -moz-box-shadow: rgba(0, 115, 153, 0.25) 0 0 1.22222em;
+  box-shadow: rgba(0, 115, 153, 0.25) 0 0 1.22222em;
+  overflow: hidden;
   position: relative;
 }
-body:after {
+body > div:after {
   content: "";
   display: table;
   clear: both;
 }
 @media (min-width: 45em) {
-  body {
+  body > div {
     max-width: 47em;
   }
 }
-body * {
+body > div * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
 [role="banner"] {
-  margin-bottom: 1.22222em;
+  margin-left: -1em;
+  margin-right: -1em;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-bottom: 0.61111em;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(0, 153, 204, 0.125)), color-stop(100%, rgba(0, 153, 204, 0)));
+  background: -webkit-linear-gradient(top, rgba(0, 153, 204, 0.125), rgba(0, 153, 204, 0));
+  background: -moz-linear-gradient(top, rgba(0, 153, 204, 0.125), rgba(0, 153, 204, 0));
+  background: -o-linear-gradient(top, rgba(0, 153, 204, 0.125), rgba(0, 153, 204, 0));
+  background: -ms-linear-gradient(top, rgba(0, 153, 204, 0.125), rgba(0, 153, 204, 0));
+  background: linear-gradient(top, rgba(0, 153, 204, 0.125), rgba(0, 153, 204, 0));
 }
 
 .logo a {
@@ -350,12 +367,6 @@ body * {
   padding-left: 1em;
   padding-right: 1em;
   background: rgba(0, 77, 102, 0.125);
-  -moz-border-radius-bottomleft: 0.125em;
-  -webkit-border-bottom-left-radius: 0.125em;
-  border-bottom-left-radius: 0.125em;
-  -moz-border-radius-bottomright: 0.125em;
-  -webkit-border-bottom-right-radius: 0.125em;
-  border-bottom-right-radius: 0.125em;
 }
 [role="navigation"] a:link, [role="navigation"] a:visited {
   color: #cc5200;
@@ -394,6 +405,7 @@ body * {
     left: 0;
     right: 0;
     top: 0;
+    margin: 0;
     padding: 0 1em;
     background: transparent;
     text-align: right;
@@ -421,7 +433,7 @@ body * {
 [role="contentinfo"] {
   overflow: hidden;
   font-family: "FranklinGothicCond", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  margin-top: 1.22222em;
+  margin-top: 0em;
   padding-top: 1.22222em;
   padding-bottom: 1.22222em;
   margin-bottom: 0em;
@@ -430,12 +442,6 @@ body * {
   padding-left: 1em;
   padding-right: 1em;
   background: rgba(0, 77, 102, 0.125);
-  -moz-border-radius-topleft: 0.125em;
-  -webkit-border-top-left-radius: 0.125em;
-  border-top-left-radius: 0.125em;
-  -moz-border-radius-topright: 0.125em;
-  -webkit-border-top-right-radius: 0.125em;
-  border-top-right-radius: 0.125em;
   clear: both;
 }
 [role="contentinfo"] a:link, [role="contentinfo"] a:visited {
@@ -500,20 +506,37 @@ body * {
 }
 
 .projects {
-  margin-left: -1em;
-  margin-right: -1em;
-  padding-left: 1em;
-  padding-right: 1em;
+  position: relative;
   margin-top: 0em;
   padding-top: 1.83333em;
   padding-bottom: 0.61111em;
   margin-bottom: 1.22222em;
-  -webkit-border-radius: 0.125em;
-  -moz-border-radius: 0.125em;
-  -ms-border-radius: 0.125em;
-  -o-border-radius: 0.125em;
-  border-radius: 0.125em;
-  background: rgba(255, 148, 77, 0.125);
+}
+.projects::before, .projects::after {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  content: " ";
+  left: -100%;
+  right: -100%;
+  padding-left: 100%;
+  padding-right: 100%;
+  background: rgba(255, 148, 77, 0.1);
+  z-index: -1;
+}
+.projects::before {
+  -webkit-transform: rotate(2deg);
+  -moz-transform: rotate(2deg);
+  -ms-transform: rotate(2deg);
+  -o-transform: rotate(2deg);
+  transform: rotate(2deg);
+}
+.projects::after {
+  -webkit-transform: rotate(-2deg);
+  -moz-transform: rotate(-2deg);
+  -ms-transform: rotate(-2deg);
+  -o-transform: rotate(-2deg);
+  transform: rotate(-2deg);
 }
 .projects p:first-child:first-line {
   font-family: "CenturyOldStyleCaps", Baskerville, Palatino, Cambria, Georgia, serif;
@@ -547,21 +570,38 @@ body * {
 }
 
 .process {
-  margin-left: -1em;
-  margin-right: -1em;
-  padding-left: 1em;
-  padding-right: 1em;
+  position: relative;
   margin-top: 0em;
   padding-top: 1.83333em;
   padding-bottom: 0.61111em;
-  margin-bottom: 1.22222em;
-  -webkit-border-radius: 0.125em;
-  -moz-border-radius: 0.125em;
-  -ms-border-radius: 0.125em;
-  -o-border-radius: 0.125em;
-  border-radius: 0.125em;
-  background: rgba(255, 255, 255, 0.5);
+  margin-bottom: 0em;
   counter-reset: process;
+}
+.process::before, .process::after {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  content: " ";
+  left: -100%;
+  right: -100%;
+  padding-left: 100%;
+  padding-right: 100%;
+  background: rgba(255, 255, 255, 0.25);
+  z-index: -1;
+}
+.process::before {
+  -webkit-transform: rotate(2deg);
+  -moz-transform: rotate(2deg);
+  -ms-transform: rotate(2deg);
+  -o-transform: rotate(2deg);
+  transform: rotate(2deg);
+}
+.process::after {
+  -webkit-transform: rotate(-2deg);
+  -moz-transform: rotate(-2deg);
+  -ms-transform: rotate(-2deg);
+  -o-transform: rotate(-2deg);
+  transform: rotate(-2deg);
 }
 .process p {
   counter-increment: process;
@@ -591,19 +631,23 @@ body * {
     margin-bottom: 0.59459em;
   }
 
-  .projects {
+  .projects .wrap {
     overflow: hidden;
-    padding-left: 17.02128%;
-    padding-right: 17.02128%;
   }
   .projects p {
-    width: 48.3871%;
+    width: 31.91489%;
     float: left;
-    margin-right: 3.22581%;
+    margin-right: 2.12766%;
   }
   .projects p:nth-child(even) {
     float: right;
     margin-right: 0;
+  }
+  .projects p:first-child {
+    margin-left: 17.02128%;
+  }
+  .projects p:last-child {
+    margin-right: 17.02128%;
   }
 
   .people {
@@ -635,7 +679,7 @@ body * {
   }
 }
 .post {
-  margin-top: 1.83333em;
+  margin-top: 1.22222em;
   margin-bottom: 2.44444em;
 }
 

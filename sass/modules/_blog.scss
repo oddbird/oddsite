@@ -2,7 +2,7 @@
 // Posts
 
 .post {
-  @include leader(1.5);
+  @include leader(1);
   @include trailer(2);
 }
 

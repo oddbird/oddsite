@@ -5,7 +5,9 @@ $logo         : 'logo_d.png';
 $logo-rhythm  : floor(image-height($logo)/$base-font-size);
 
 [role="banner"] {
-  @include trailer;
+  @include bleed;
+  @include padding-trailer(.5);
+  @include background(linear-gradient(top, rgba($blue-dark,.125), rgba($blue-dark,0)))
 }
 
 .logo {
