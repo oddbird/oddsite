@@ -4,6 +4,7 @@
 body {
   @include container($total-columns, $break);
   * { @include box-sizing(border-box); }
+  position: relative;
 }
 
 // ----------------------------------------------------------------------------

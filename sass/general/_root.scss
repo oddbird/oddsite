@@ -51,6 +51,7 @@ html {
   @include at-breakpoint($break) {
     @include pie-clearfix;
     @include trailer(2);
+    clear: both;
   }
 }
 

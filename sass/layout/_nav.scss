@@ -13,6 +13,8 @@ $activenav: $blue-darker;
     @include span-columns($total-columns/2);
     @include nth-omega(even);
     text-transform: capitalize;
+    &:first-child { text-align: left; }
+    &:last-child { text-align: right; }
   }
 
   a {
@@ -21,13 +23,27 @@ $activenav: $blue-darker;
   }
   [rel="home"] {
     @extend %icon-home;
-    text-align: left;
     .home & { color: $activenav; }
   }
   [href*="blog"] {
     @extend %icon-chat;
-    text-align: right;
     .blog & { color: $activenav; }
   }
 
+  @include at-breakpoint($break) {
+    @include stretch-x;
+    top: 0;
+    padding: 0;
+    background: transparent;
+    text-align: right;
+    li {
+      @include reset-columns;
+      display: inline-block;
+    }
+    a { padding: rhythm(.25) rhythm(1); }
+    .home & [rel="home"], .blog & [href*="blog"] {
+      @include border-bottom-radius;
+      background: rgba($blue-darkest,.125);
+    }
+  }
 }
