@@ -31,6 +31,8 @@ Home
       and other open-source projects.
     </p>
     <p>
+      These days we're building tools for teachers, students, and parents
+      at <a href="http://www.portfoliyo.org">Portfoliyo</a>.
       Recent projects include
       <a href="http://moztrap.mozilla.org/">MozTrap</a>,
       <a href="http://mozilla.org/">Mozilla</a>’s
