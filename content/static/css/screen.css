@@ -175,18 +175,18 @@ html {
 html {
   font-family: "CenturyOldStyle", Baskerville, Palatino, Cambria, Georgia, serif;
   text-shadow: rgba(229, 249, 255, 0.5) 0px 1px 0px;
-  background: #e5f9ff url('../images/noise.png?1343154559') fixed center;
-  background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, rgba(77, 210, 255, 0.25)), color-stop(75%, rgba(204, 242, 255, 0.25))), url('../images/noise.png?1343154559');
-  background-image: -webkit-linear-gradient(bottom, rgba(77, 210, 255, 0.25), rgba(204, 242, 255, 0.25) 75%), url('../images/noise.png?1343154559');
-  background-image: -moz-linear-gradient(bottom, rgba(77, 210, 255, 0.25), rgba(204, 242, 255, 0.25) 75%), url('../images/noise.png?1343154559');
-  background-image: -o-linear-gradient(bottom, rgba(77, 210, 255, 0.25), rgba(204, 242, 255, 0.25) 75%), url('../images/noise.png?1343154559');
-  background-image: -ms-linear-gradient(bottom, rgba(77, 210, 255, 0.25), rgba(204, 242, 255, 0.25) 75%), url('../images/noise.png?1343154559');
-  background-image: linear-gradient(bottom, rgba(77, 210, 255, 0.25), rgba(204, 242, 255, 0.25) 75%), url('../images/noise.png?1343154559');
+  background: #e5f9ff url('../images/noise.png?1349719008') fixed center;
+  background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, rgba(77, 210, 255, 0.25)), color-stop(75%, rgba(204, 242, 255, 0.25))), url('../images/noise.png?1349719008');
+  background-image: -webkit-linear-gradient(bottom, rgba(77, 210, 255, 0.25), rgba(204, 242, 255, 0.25) 75%), url('../images/noise.png?1349719008');
+  background-image: -moz-linear-gradient(bottom, rgba(77, 210, 255, 0.25), rgba(204, 242, 255, 0.25) 75%), url('../images/noise.png?1349719008');
+  background-image: -o-linear-gradient(bottom, rgba(77, 210, 255, 0.25), rgba(204, 242, 255, 0.25) 75%), url('../images/noise.png?1349719008');
+  background-image: -ms-linear-gradient(bottom, rgba(77, 210, 255, 0.25), rgba(204, 242, 255, 0.25) 75%), url('../images/noise.png?1349719008');
+  background-image: linear-gradient(bottom, rgba(77, 210, 255, 0.25), rgba(204, 242, 255, 0.25) 75%), url('../images/noise.png?1349719008');
 }
 
 [role="main"] {
   padding-top: 2.44444em;
-  background: url('../images/headline.png?1343338233') no-repeat top;
+  background: url('../images/headline.png?1349719007') no-repeat top;
 }
 @media (min-width: 45em) {
   [role="main"] {
@@ -292,7 +292,7 @@ a:focus, a:hover, a:active {
 }
 
 body > div {
-  max-width: 27em;
+  max-width: 31em;
   margin-left: auto;
   margin-right: auto;
   padding-left: 1em;
@@ -310,7 +310,7 @@ body > div:after {
 }
 @media (min-width: 45em) {
   body > div {
-    max-width: 41em;
+    max-width: 47em;
   }
 }
 body > div * {
@@ -337,7 +337,7 @@ body > div * {
   text-indent: 110%;
   white-space: nowrap;
   overflow: hidden;
-  background-image: url('../images/logo_d.png?1341997855');
+  background-image: url('../images/logo_d.png?1349719007');
   background-repeat: no-repeat;
   background-position: 50% 50%;
   min-height: 6.11111em;
@@ -375,9 +375,9 @@ body > div * {
   color: #b30059;
 }
 [role="navigation"] li {
-  width: 48.14815%;
+  width: 48.3871%;
   float: left;
-  margin-right: 3.7037%;
+  margin-right: 3.22581%;
   text-transform: capitalize;
 }
 [role="navigation"] li:nth-child(even) {
@@ -452,14 +452,14 @@ body > div * {
 }
 @media (min-width: 45em) {
   [role="contentinfo"] .archive, [role="contentinfo"] .colophon {
-    width: 57.31707%;
+    width: 57.44681%;
     float: right;
     margin-right: 0;
   }
   [role="contentinfo"] .contact, [role="contentinfo"] .copyright {
-    width: 40.2439%;
+    width: 40.42553%;
     float: left;
-    margin-right: 2.43902%;
+    margin-right: 2.12766%;
   }
   [role="contentinfo"] .colophon {
     clear: left;
@@ -550,7 +550,7 @@ body > div * {
 
 .people {
   padding-top: 9.77778em;
-  background: url('../images/oddpeople.png?1341997855') no-repeat scroll top;
+  background: url('../images/oddpeople.png?1349719008') no-repeat scroll top;
 }
 .people strong {
   font-family: "CenturyOldStyleCaps", Baskerville, Palatino, Cambria, Georgia, serif;
@@ -634,28 +634,28 @@ body > div * {
     overflow: hidden;
   }
   .projects p {
-    width: 31.70732%;
+    width: 31.91489%;
     float: left;
-    margin-right: 2.43902%;
+    margin-right: 2.12766%;
   }
   .projects p:nth-child(even) {
     float: right;
     margin-right: 0;
   }
   .projects p:first-child {
-    margin-left: 17.07317%;
+    margin-left: 17.02128%;
   }
   .projects p:last-child {
-    margin-right: 17.07317%;
+    margin-right: 17.02128%;
   }
 
   .people {
     overflow: hidden;
   }
   .people p {
-    width: 31.70732%;
+    width: 31.91489%;
     float: left;
-    margin-right: 2.43902%;
+    margin-right: 2.12766%;
   }
   .people p:last-child {
     float: right;
@@ -665,13 +665,13 @@ body > div * {
     float: none;
     width: auto;
     margin-right: auto;
-    margin-left: 25.60976%;
-    margin-right: 25.60976%;
+    margin-left: 25.53191%;
+    margin-right: 25.53191%;
   }
 
   .process {
-    padding-left: 17.07317%;
-    padding-right: 17.07317%;
+    padding-left: 17.02128%;
+    padding-right: 17.02128%;
   }
   .process p {
     padding-left: 3.66667em;
@@ -706,7 +706,7 @@ body > div * {
   }
 
   .byline {
-    width: 23.17073%;
+    width: 23.40426%;
     float: right;
     margin-right: 0;
   }
@@ -715,9 +715,9 @@ body > div * {
   }
 
   .body {
-    width: 65.85366%;
+    width: 65.95745%;
     float: left;
-    margin-right: 2.43902%;
+    margin-right: 2.12766%;
   }
 }
 .listtitle {
