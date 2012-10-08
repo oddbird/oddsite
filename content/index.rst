@@ -31,19 +31,18 @@ Home
       and other open-source projects.
     </p>
     <p>
-      These days we're building tools for teachers, students, and parents
-      at <a href="http://www.portfoliyo.org">Portfoliyo</a>.
+      We're currently working on
+      <a href="http://www.portfoliyo.org">Portfoliyo</a>
+      for teachers, students, and parents;
+      and <a href="http://greengreenmud.com/">Into the Green Green Mud</a>,
+      a multimedia novel.
       Recent projects include
-      <a href="http://moztrap.mozilla.org/">MozTrap</a>,
-      <a href="http://mozilla.org/">Mozilla</a>’s
-      new Test Case management system;
-      a
+      <a href="http://moztrap.mozilla.org/">MozTrap</a>
+      for <a href="http://mozilla.org/">Mozilla</a>,
+      and a
       <a href="http://github.com/oddbird/mlt">mapping tool</a>
       for
-      <a href="http://provplan.org/">The Providence Plan</a>;
-      and
-      <a href="http://greengreenmud.com/">Into the Green Green Mud</a>,
-      a multimedia novel.
+      <a href="http://provplan.org/">The Providence Plan</a>.
     </p>
   </div>
   </div>
