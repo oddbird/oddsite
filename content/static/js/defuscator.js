@@ -28,7 +28,7 @@ jQuery.fn.defuscate = function( settings ) {
         replace: '$1@$2'
     }, settings);
     return this.each(function() {
-        if ( $(this).is('a[@href]') ) {
+        if ( $(this).is('a[href]') ) {
             $(this).attr('href', $(this).attr('href').replace(settings.find, settings.replace));
             var is_link = true;
         }
