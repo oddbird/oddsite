@@ -1,4 +1,3 @@
-@charset "UTF-8";
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -174,13 +173,12 @@ html {
 
 html {
   font-family: "CenturyOldStyle", Baskerville, Palatino, Cambria, Georgia, serif;
-  text-shadow: rgba(229, 249, 255, 0.5) 0px 1px 0px;
+  text-shadow: 0px 1px 0px rgba(229, 249, 255, 0.5);
   background: #e5f9ff url('../images/noise.png?1349719008') fixed center;
   background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, rgba(77, 210, 255, 0.25)), color-stop(75%, rgba(204, 242, 255, 0.25))), url('../images/noise.png?1349719008');
   background-image: -webkit-linear-gradient(bottom, rgba(77, 210, 255, 0.25), rgba(204, 242, 255, 0.25) 75%), url('../images/noise.png?1349719008');
   background-image: -moz-linear-gradient(bottom, rgba(77, 210, 255, 0.25), rgba(204, 242, 255, 0.25) 75%), url('../images/noise.png?1349719008');
   background-image: -o-linear-gradient(bottom, rgba(77, 210, 255, 0.25), rgba(204, 242, 255, 0.25) 75%), url('../images/noise.png?1349719008');
-  background-image: -ms-linear-gradient(bottom, rgba(77, 210, 255, 0.25), rgba(204, 242, 255, 0.25) 75%), url('../images/noise.png?1349719008');
   background-image: linear-gradient(bottom, rgba(77, 210, 255, 0.25), rgba(204, 242, 255, 0.25) 75%), url('../images/noise.png?1349719008');
 }
 
@@ -293,10 +291,10 @@ a:focus, a:hover, a:active {
 
 body > div {
   max-width: 31em;
-  margin-left: auto;
-  margin-right: auto;
   padding-left: 1em;
   padding-right: 1em;
+  margin-left: auto;
+  margin-right: auto;
   -webkit-box-shadow: rgba(0, 115, 153, 0.25) 0 0 1.22222em;
   -moz-box-shadow: rgba(0, 115, 153, 0.25) 0 0 1.22222em;
   box-shadow: rgba(0, 115, 153, 0.25) 0 0 1.22222em;
@@ -329,14 +327,13 @@ body > div * {
   background: -webkit-linear-gradient(top, rgba(0, 153, 204, 0.125), rgba(0, 153, 204, 0));
   background: -moz-linear-gradient(top, rgba(0, 153, 204, 0.125), rgba(0, 153, 204, 0));
   background: -o-linear-gradient(top, rgba(0, 153, 204, 0.125), rgba(0, 153, 204, 0));
-  background: -ms-linear-gradient(top, rgba(0, 153, 204, 0.125), rgba(0, 153, 204, 0));
   background: linear-gradient(top, rgba(0, 153, 204, 0.125), rgba(0, 153, 204, 0));
 }
 
 .logo a {
-  text-indent: 110%;
-  white-space: nowrap;
+  text-indent: -119988px;
   overflow: hidden;
+  text-align: left;
   background-image: url('../images/logo_d.png?1349719007');
   background-repeat: no-repeat;
   background-position: 50% 50%;
@@ -745,8 +742,5 @@ body > div * {
   content: ", ";
 }
 .tagcloud li:last-child:after {
-  content: "";
-}
-.tagcloud li.last:after {
   content: "";
 }

@@ -13,10 +13,10 @@ body {
   *zoom: 1;
   max-width: 71em;
   _width: 71em;
-  margin-left: auto;
-  margin-right: auto;
   padding-left: 0;
   padding-right: 0;
+  margin-left: auto;
+  margin-right: auto;
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
   box-sizing: content-box;
@@ -35,7 +35,6 @@ header, footer {
 .left, .right, .main {
   -webkit-transition: 0.2s all ease;
   -moz-transition: 0.2s all ease;
-  -ms-transition: 0.2s all ease;
   -o-transition: 0.2s all ease;
   transition: 0.2s all ease;
   float: left;
@@ -56,7 +55,6 @@ header, footer {
     width: 74.46809%;
     float: left;
     margin-right: 2.12766%;
-    display: inline;
     margin-right: 0;
   }
 
@@ -64,7 +62,6 @@ header, footer {
     width: 23.40426%;
     float: left;
     margin-right: 2.12766%;
-    display: inline;
     margin-left: 0;
   }
 
@@ -72,8 +69,6 @@ header, footer {
     width: 23.40426%;
     float: right;
     margin-right: 0;
-    #margin-left: -1em;
-    display: inline;
     margin-right: -100%;
   }
 }
@@ -82,21 +77,17 @@ header, footer {
     width: 49.29577%;
     float: left;
     margin-right: 1.40845%;
-    display: inline;
   }
 
   .left, .right {
     width: 23.94366%;
     float: left;
     margin-right: 1.40845%;
-    display: inline;
   }
 
   .right {
     float: right;
     margin-right: 0;
-    #margin-left: -1em;
-    display: inline;
     margin-right: 0;
   }
 }
