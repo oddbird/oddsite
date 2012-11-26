@@ -3,6 +3,9 @@
 {% block bodyclasses %}blog{% endblock %}
 
 {% block body %}
+  {% if show_pagination and pagination.pages > 1 %}
+    {{ pagination }}
+  {% endif %}
 
   {%- for ctx in pagination.get_slice() %}
   <article class="post">

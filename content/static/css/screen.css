@@ -722,8 +722,6 @@ body:after {
   }
 }
 .post {
-  margin-top: 22px;
-  margin-top: 1.22222rem;
   margin-bottom: 44px;
   margin-bottom: 2.44444rem;
   overflow: hidden;
@@ -768,6 +766,51 @@ body:after {
     display: block;
   }
 }
+.pagination {
+  font-style: italic;
+  text-align: center;
+}
+.pagination:first-child {
+  margin-top: -33px;
+  margin-top: -1.83333rem;
+}
+.pagination .location {
+  margin: 0 1em;
+}
+.pagination .location:before {
+  content: " • ";
+}
+.pagination .location:after {
+  content: " • ";
+}
+.pagination .now, .pagination .context {
+  display: inline-block;
+  vertical-align: middle;
+  font-style: normal;
+}
+.pagination .now {
+  font-size: 80px;
+  font-size: 4.44444rem;
+  line-height: 88px;
+  line-height: 4.88889rem;
+}
+.pagination .context {
+  font-size: 54px;
+  font-size: 3rem;
+  line-height: 66px;
+  line-height: 3.66667rem;
+  padding: 0 .125em;
+}
+.pagination .prev:before {
+  content: "« ";
+}
+.pagination .next:after {
+  content: " »";
+}
+.pagination .disabled {
+  color: #a6a6a6;
+}
+
 .archivetitle:before, .archiveentry [rel="bookmark"]:before, .archiveentry [rel="tag"]:before {
   font-size: .75em;
 }

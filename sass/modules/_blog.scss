@@ -2,7 +2,6 @@
 // Posts
 
 .post {
-  @include leader(1);
   @include trailer(2);
   @include clearfix;
 }
@@ -33,6 +32,32 @@
     text-align: right;
     .vcard, .tags { display: block; }
   }
+}
+
+// ----------------------------------------------------------------------------
+// Pagination
+
+.pagination {
+  font-style: italic;
+  text-align: center;
+  &:first-child { @include leader(-1.5); }
+  .location {
+    @include wrap(" • ");
+    margin: 0 1em;
+  }
+  .now, .context {
+    display: inline-block;
+    vertical-align: middle;
+    font-style: normal;
+  }
+  .now { @include adjust-font-size-to($xxxlargepx + $largepx); }
+  .context {
+    @include adjust-font-size-to($xxxlargepx);
+    padding: 0 .125em;
+  }
+  .prev { @include before("« "); }
+  .next { @include after(" »"); }
+  .disabled { color: $light; }
 }
 
 // ----------------------------------------------------------------------------

@@ -1,13 +1,19 @@
 <nav class="pagination">
   {% if pagination.has_prev -%}
-    <a href="{{ link_to(pagination.url_key, page=pagination.page - 1, **pagination.url_extra) }}" class="prev">Previous</a>
+    <a href="{{ link_to(pagination.url_key, page=pagination.page - 1, **pagination.url_extra) }}" class="prev">previous</a>
   {%- else -%}
-    <span class="prev disabled">Previous</span>
-  {%- endif %}{#
-  #} — <strong>{{ pagination.page }}</strong> — {#
-  #}{% if pagination.has_next -%}
-    <a href="{{ link_to(pagination.url_key, page=pagination.page + 1, **pagination.url_extra) }}" class="next">Next</a>
+    <span class="prev disabled">previous</span>
+  {%- endif %}
+
+    <span class="location">
+      <strong class="now">{{ pagination.page }}</strong>
+      of
+      <b class="context">{{ pagination.pages }}</b>
+    </span>
+
+  {% if pagination.has_next -%}
+    <a href="{{ link_to(pagination.url_key, page=pagination.page + 1, **pagination.url_extra) }}" class="next">next</a>
   {%- else -%}
-    <span class="next disabled">Next</span>
+    <span class="next disabled">next</span>
   {%- endif %}
 </nav>
