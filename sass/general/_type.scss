@@ -2,16 +2,12 @@
 // Links
 
 a {
-  &:hover, &:active {
-    outline: none;
-  }
+  &:hover, &:active { outline: none; }
   #{$link} {
     color: $alt;
     text-decoration: none;
   }
-  #{$focus} {
-    color: $accent;
-  }
+  #{$focus} { color: $accent; }
 }
 
 // ----------------------------------------------------------------------------
@@ -23,7 +19,7 @@ a {
 }
 
 // ----------------------------------------------------------------------------
-// Type
+// Mixins
 
 @mixin before($content) { &:before { content: $content; } }
 @mixin after($content) { &:after { content: $content; } }
@@ -33,6 +29,9 @@ a {
   @include before(nth($wrapper,1));
   @include after(nth($wrapper,2));
 }
+
+// ----------------------------------------------------------------------------
+// Type
 
 %type {
   h1 {

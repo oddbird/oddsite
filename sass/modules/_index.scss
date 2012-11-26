@@ -1,7 +1,6 @@
 // ----------------------------------------------------------------------------
 // Index
 
-$introsize: $largepx;
 $introlarge: $xxlargepx;
 
 @mixin dropcap {
@@ -25,8 +24,8 @@ $introlarge: $xxlargepx;
 
 .intro {
   @include transition(all 300ms);
-  @include adjust-font-size-to($introsize);
-  @include trailer(1,$introsize);
+  @include adjust-font-size-to($largepx);
+  @include trailer;
   color: $blue-darkest;
   font-style: italic;
   @include at-breakpoint($total-columns) { text-align: center; }
@@ -82,8 +81,8 @@ $process-post: rhythm(3);
   .intro {
     @include squish(1,1);
     @include adjust-font-size-to($introlarge);
-    @include leader(1.5,$introlarge);
-    @include trailer(2,$introlarge);
+    @include leader(1.5);
+    @include trailer(2);
   }
 
   .projects {

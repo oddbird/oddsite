@@ -25,11 +25,11 @@
 <footer role="contentinfo">
 
   <div class="listarchive">
-    <h3 class="foottitle"><a href="/archive/">Blog Archive</a></h3>
+    <h3 class="foottitle"><a href="/archive/" rel="archive">Blog Archive</a></h3>
     <ul>
       {%- for entry in get_recent_blog_entries() %}
       <li>
-        <a href="{{ link_to('page', slug=entry.slug) }}" class="permalink">{{ entry.title }}</a>
+        <a href="{{ link_to('page', slug=entry.slug) }}"  rel="bookmark">{{ entry.title }}</a>
       </li>
       {%- endfor %}
     </ul>

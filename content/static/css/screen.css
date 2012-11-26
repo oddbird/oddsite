@@ -255,13 +255,13 @@ a:focus, a:hover, a:active {
 }
 
 /* Use the following CSS code if you want to have a class per icon */
-[role="navigation"] a:before, .foottitle:before, .listarchive .permalink:before, .contact [href*="twitter"]:before, .archivetitle:before, .archiveentry [rel="bookmark"]:before, .archiveentry [rel="tag"]:before, [data-icon]:before {
+[role="navigation"] a:before, [role="contentinfo"] [href*="twitter"]:before, [role="contentinfo"] [rel="bookmark"]:before, .foottitle:before, .archivetitle:before, .archiveentry [rel="bookmark"]:before, .archiveentry [rel="tag"]:before, [data-icon]:before {
   font-family: 'IcoMoon';
   font-style: normal;
   speak: none;
 }
 
-[role="navigation"] a:before, .foottitle:before, .listarchive .permalink:before, .contact [href*="twitter"]:before, .archivetitle:before, .archiveentry [rel="bookmark"]:before, .archiveentry [rel="tag"]:before {
+[role="navigation"] a:before, [role="contentinfo"] [href*="twitter"]:before, [role="contentinfo"] [rel="bookmark"]:before, .foottitle:before, .archivetitle:before, .archiveentry [rel="bookmark"]:before, .archiveentry [rel="tag"]:before {
   padding-right: .4em;
 }
 
@@ -278,11 +278,11 @@ a:focus, a:hover, a:active {
   content: "\e002";
 }
 
-.contact [href*="twitter"]:before {
+[role="contentinfo"] [href*="twitter"]:before {
   content: "\e003";
 }
 
-.listarchive .permalink:before, .archiveentry [rel="bookmark"]:before {
+[role="contentinfo"] [rel="bookmark"]:before, .archiveentry [rel="bookmark"]:before {
   content: "\e004";
 }
 
@@ -408,27 +408,26 @@ body:after {
   }
 }
 
-.archive [role="main"] {
+[role="main"] {
+  clear: both;
+}
+[role="main"]:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.blog [role="main"] {
   padding-top: 33px;
   padding-top: 1.83333rem;
   padding-bottom: 33px;
   padding-bottom: 1.83333rem;
 }
-@media (min-width: 30em) {
-  [role="main"] {
-    clear: both;
-  }
-  [role="main"]:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-  .blog [role="main"] {
-    padding-top: 33px;
-    padding-top: 1.83333rem;
-    padding-bottom: 33px;
-    padding-bottom: 1.83333rem;
-  }
+
+[role="contentinfo"] [href*="twitter"]:before, [role="contentinfo"] [rel="bookmark"]:before {
+  font-size: 15px;
+  font-size: 0.83333rem;
+  line-height: 22px;
+  line-height: 1.22222rem;
 }
 
 [role="contentinfo"] {
@@ -456,11 +455,6 @@ body:after {
   color: #b30059;
 }
 
-.listarchive, .contact, .colophon {
-  margin-bottom: 22px;
-  margin-bottom: 1.22222rem;
-}
-
 .foottitle {
   font-weight: 500;
 }
@@ -471,18 +465,9 @@ body:after {
   color: #b30059;
 }
 
-.listarchive .permalink:before {
-  font-size: 15px;
-  font-size: 0.83333rem;
-  line-height: 22px;
-  line-height: 1.22222rem;
-}
-
-.contact [href*="twitter"]:before {
-  font-size: 15px;
-  font-size: 0.83333rem;
-  line-height: 22px;
-  line-height: 1.22222rem;
+.listarchive, .contact, .colophon {
+  margin-bottom: 22px;
+  margin-bottom: 1.22222rem;
 }
 
 .copyright, .colophon {

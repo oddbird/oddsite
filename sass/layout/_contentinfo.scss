@@ -1,15 +1,28 @@
 // ----------------------------------------------------------------------------
 // Contentinfo
 
+%footer-icon {
+  @extend %padded-icon;
+  &:before { @include adjust-font-size-to($smallpx); }
+}
+
 [role="contentinfo"] {
   @include clearfix;
   @include sanscond;
   @include rhythm(0,1,1,0);
   @include darker-block;
   clear: both;
-}
 
-.listarchive, .contact, .colophon { @include trailer; }
+  [href*="twitter"] {
+    @extend %footer-icon;
+    @extend %icon-twitter;
+  }
+
+  [rel="bookmark"] {
+    @extend %footer-icon;
+    @extend %icon-bookmark;
+  }
+}
 
 .foottitle {
   @extend %padded-icon;
@@ -24,21 +37,7 @@
   .contact & { @extend %icon-email; }
 }
 
-.listarchive {
-  .permalink {
-    @extend %padded-icon;
-    @extend %icon-bookmark;
-    &:before { @include adjust-font-size-to($smallpx); }
-  }
-}
-
-.contact {
-  [href*="twitter"] {
-    @extend %padded-icon;
-    @extend %icon-twitter;
-    &:before { @include adjust-font-size-to($smallpx); }
-  }
-}
+.listarchive, .contact, .colophon { @include trailer; }
 
 .copyright, .colophon {
   @include adjust-font-size-to($smallpx);
