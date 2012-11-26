@@ -1,5 +1,5 @@
 ---
-active_modules: [pygments, tags, blog, author, wrap, typogrify]
+active_modules: [pygments, pygments_everywhere, tags, blog, author, wrap, typogrify]
 author: OddBird
 canonical_url: http://oddbird.net/
 output_folder: ../output

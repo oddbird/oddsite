@@ -90,7 +90,7 @@ def write_author_page(builder, author):
     with builder.open_link_file('author', author=author.name) as f:
         rv = builder.render_template('author.html', {
             'author':      author,
-            'entries':  entries
+            'entries':  entries,
         })
         f.write(rv.encode('utf-8') + '\n')
 
@@ -105,10 +105,19 @@ def write_author_files(builder):
 def setup(builder):
     after_file_published.connect(remember_authors)
     before_build_finished.connect(write_author_files)
-    builder.register_url('author', config_key='modules.authors.author_url',
-                         config_default='/authors/<author>/')
-    builder.register_url('authorfeed', config_key='modules.authors.author_feed_url',
-                         config_default='/authors/<author>/feed.atom')
-    builder.register_url('authors', config_key='modules.authors.authors_url',
-                         config_default='/authors/')
+    builder.register_url(
+        'author',
+        config_key='modules.authors.author_url',
+        config_default='/authors/<author>/',
+        )
+    builder.register_url(
+        'authorfeed',
+        config_key='modules.authors.author_feed_url',
+        config_default='/authors/<author>/feed.atom',
+        )
+    builder.register_url(
+        'authors',
+        config_key='modules.authors.authors_url',
+        config_default='/authors/',
+        )
     builder.jinja_env.globals['get_authors'] = get_authors
