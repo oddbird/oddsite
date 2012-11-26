@@ -4,6 +4,7 @@ author: eric
 summary: |
   I'm just trying shit out.
 
+
 This is another test blog post
 ==============================
 

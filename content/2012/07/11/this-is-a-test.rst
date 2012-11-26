@@ -5,6 +5,11 @@ summary: |
   This is my first blog entry
   how many lines?
 
+  .. code:: scss
+
+    .container { @include container; }
+
+
 A test post
 ===========
 
