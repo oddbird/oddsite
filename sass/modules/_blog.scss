@@ -43,7 +43,7 @@
   @include trailer(1,$largepx);
   &:before { @include adjust-font-size-to($normpx,1,$largepx)}
   &.tags { @extend %icon-tag; }
-  &.year, &.month, &.archive { @extend %icon-chat; }
+  &.year, &.month, &.archivetitle { @extend %icon-chat; }
   @include breakpoint($break) { @include pad(3,1); }
 }
 

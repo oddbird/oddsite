@@ -7,21 +7,9 @@
   @include rhythm(0,1,1,0);
   @include darker-block;
   clear: both;
-
-  @include breakpoint($break) {
-    .archive, .colophon {
-      @include span-columns(7 omega);
-    }
-    .contact, .copyright {
-      @include span-columns(5);
-    }
-    .colophon {
-      clear: left;
-    }
-  }
 }
 
-.archive, .contact, .colophon { @include trailer; }
+.listarchive, .contact, .colophon { @include trailer; }
 
 .foottitle {
   @extend %padded-icon;
@@ -32,12 +20,12 @@
     #{$focus} { color: $pink-dark; }
   }
 
-  .archive & { @extend %icon-chat; }
+  .listarchive & { @extend %icon-chat; }
   .contact & { @extend %icon-email; }
 }
 
-.archive {
-  [href*="/20"] {
+.listarchive {
+  .permalink {
     @extend %padded-icon;
     @extend %icon-bookmark;
     &:before { @include adjust-font-size-to($smallpx); }
@@ -56,4 +44,10 @@
   @include adjust-font-size-to($smallpx);
   text-transform: uppercase;
   letter-spacing: .04em;
+}
+
+@include breakpoint($break) {
+  .listarchive, .colophon { @include span-columns(7 omega); }
+  .contact, .copyright { @include span-columns(5); }
+  .colophon { clear: left; }
 }

@@ -180,12 +180,13 @@ html {
 html {
   font-family: "BaskervilleFS", Baskerville, Palatino, Cambria, Georgia, serif;
   text-shadow: 0px 1px 0px rgba(229, 249, 255, 0.5);
-  background: #e5f9ff url('../images/noise.png?1353918467') fixed center;
-  background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, rgba(77, 210, 255, 0.25)), color-stop(75%, rgba(204, 242, 255, 0.25))), url('../images/noise.png?1353918467');
-  background-image: -webkit-linear-gradient(bottom, rgba(77, 210, 255, 0.25), rgba(204, 242, 255, 0.25) 75%), url('../images/noise.png?1353918467');
-  background-image: -moz-linear-gradient(bottom, rgba(77, 210, 255, 0.25), rgba(204, 242, 255, 0.25) 75%), url('../images/noise.png?1353918467');
-  background-image: -o-linear-gradient(bottom, rgba(77, 210, 255, 0.25), rgba(204, 242, 255, 0.25) 75%), url('../images/noise.png?1353918467');
-  background-image: linear-gradient(bottom, rgba(77, 210, 255, 0.25), rgba(204, 242, 255, 0.25) 75%), url('../images/noise.png?1353918467');
+  background: #e5f9ff url('../images/noise.png?1349719008') fixed center;
+  background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, rgba(77, 210, 255, 0.25)), color-stop(75%, rgba(204, 242, 255, 0.25))), url('../images/noise.png?1349719008');
+  background-image: -webkit-linear-gradient(bottom, rgba(77, 210, 255, 0.25), rgba(204, 242, 255, 0.25) 75%), url('../images/noise.png?1349719008');
+  background-image: -moz-linear-gradient(bottom, rgba(77, 210, 255, 0.25), rgba(204, 242, 255, 0.25) 75%), url('../images/noise.png?1349719008');
+  background-image: -o-linear-gradient(bottom, rgba(77, 210, 255, 0.25), rgba(204, 242, 255, 0.25) 75%), url('../images/noise.png?1349719008');
+  background-image: linear-gradient(bottom, rgba(77, 210, 255, 0.25), rgba(204, 242, 255, 0.25) 75%), url('../images/noise.png?1349719008');
+  overflow-x: hidden;
   color: #595959;
 }
 
@@ -206,8 +207,10 @@ a:focus, a:hover, a:active {
 }
 
 [role="main"] h1 {
-  font-size: 1.44444em;
-  line-height: 1.26923em;
+  font-size: 26px;
+  font-size: 1.44444rem;
+  line-height: 33px;
+  line-height: 1.83333rem;
 }
 [role="main"] h1 a:link, [role="main"] h1 a:visited {
   color: #cc5200;
@@ -216,7 +219,8 @@ a:focus, a:hover, a:active {
   color: #b30059;
 }
 [role="main"] h2 {
-  margin-bottom: 0.61111em;
+  margin-bottom: 11px;
+  margin-bottom: 0.61111rem;
   text-transform: uppercase;
 }
 [role="main"] h3, [role="main"] h4, [role="main"] strong {
@@ -226,15 +230,19 @@ a:focus, a:hover, a:active {
   font-style: italic;
 }
 [role="main"] p, [role="main"] ul, [role="main"] ol, [role="main"] pre {
-  margin-bottom: 1.22222em;
+  margin-bottom: 22px;
+  margin-bottom: 1.22222rem;
 }
 [role="main"] pre {
   font-family: Consolas, Menlo, Monaco, "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace, serif;
-  font-size: 0.72222em;
-  line-height: 1.69231em;
-  margin-bottom: 1.69231em;
-  padding: 0.61111em 0.91667em;
-  border-left: 0.30556em solid rgba(0, 77, 102, 0.25);
+  font-size: 13px;
+  font-size: 0.72222rem;
+  line-height: 22px;
+  line-height: 1.22222rem;
+  margin-bottom: 22px;
+  margin-bottom: 1.22222rem;
+  padding: 0.61111rem 0.91667rem;
+  border-left: 0.30556rem solid rgba(0, 77, 102, 0.25);
 }
 
 @font-face {
@@ -246,13 +254,13 @@ a:focus, a:hover, a:active {
 }
 
 /* Use the following CSS code if you want to have a class per icon */
-[role="navigation"] a:before, .foottitle:before, .archive [href*="/20"]:before, .contact [href*="twitter"]:before, .listtitle:before, .tagcloud [rel="tag"]:before, [data-icon]:before {
+[role="navigation"] a:before, .foottitle:before, .listarchive .permalink:before, .contact [href*="twitter"]:before, .listtitle:before, .tagcloud [rel="tag"]:before, [data-icon]:before {
   font-family: 'IcoMoon';
   font-style: normal;
   speak: none;
 }
 
-[role="navigation"] a:before, .foottitle:before, .archive [href*="/20"]:before, .contact [href*="twitter"]:before, .listtitle:before, .tagcloud [rel="tag"]:before {
+[role="navigation"] a:before, .foottitle:before, .listarchive .permalink:before, .contact [href*="twitter"]:before, .listtitle:before, .tagcloud [rel="tag"]:before {
   padding-right: .4em;
 }
 
@@ -273,7 +281,7 @@ a:focus, a:hover, a:active {
   content: "\e003";
 }
 
-.archive [href*="/20"]:before {
+.listarchive .permalink:before {
   content: "\e004";
 }
 
@@ -281,24 +289,24 @@ a:focus, a:hover, a:active {
   content: "\e005";
 }
 
-[role="navigation"] [href*="blog"]:before, .archive .foottitle:before, .listtitle.year:before, .listtitle.month:before, .listtitle.archive:before {
+[role="navigation"] [href*="blog"]:before, .listarchive .foottitle:before, .listtitle.year:before, .listtitle.month:before, .listtitle.archivetitle:before {
   content: "\e007";
 }
 
-body > div {
+body {
   max-width: 48.5em;
   padding-left: 1em;
   padding-right: 1em;
   margin-left: auto;
   margin-right: auto;
-  overflow: hidden;
-  -webkit-box-shadow: rgba(0, 115, 153, 0.25) 0 0 0.61111em;
-  -moz-box-shadow: rgba(0, 115, 153, 0.25) 0 0 0.61111em;
-  box-shadow: rgba(0, 115, 153, 0.25) 0 0 0.61111em;
-  background: url('../images/triangle.png?1353922782') no-repeat scroll top;
+  -webkit-box-shadow: rgba(0, 115, 153, 0.25) 0 0 0.61111rem;
+  -moz-box-shadow: rgba(0, 115, 153, 0.25) 0 0 0.61111rem;
+  box-shadow: rgba(0, 115, 153, 0.25) 0 0 0.61111rem;
   position: relative;
+  overflow-x: hidden;
+  background: url('../images/triangle.png?1353905138') no-repeat scroll top;
 }
-body > div:after {
+body:after {
   content: "";
   display: table;
   clear: both;
@@ -315,19 +323,18 @@ body > div:after {
   background: -o-linear-gradient(top, rgba(0, 153, 204, 0.125), rgba(0, 153, 204, 0));
   background: linear-gradient(top, rgba(0, 153, 204, 0.125), rgba(0, 153, 204, 0));
 }
-
-.logo a {
+[role="banner"] [rel="home"] {
   text-indent: -119988px;
   overflow: hidden;
   text-align: left;
-  background-image: url('../images/logo_d.png?1353918467');
+  background-image: url('../images/logo_d.png?1349719007');
   background-repeat: no-repeat;
   background-position: 50% 50%;
   -webkit-transition: all 300ms;
   -moz-transition: all 300ms;
   -o-transition: all 300ms;
   transition: all 300ms;
-  min-height: 6.11111em;
+  min-height: 6.11111rem;
   max-width: 206px;
   display: block;
   margin: 0 auto;
@@ -342,7 +349,7 @@ body > div:after {
   position: absolute;
   left: 0;
   right: 0;
-  top: 3.05556em;
+  top: 3.05556rem;
   height: 0;
 }
 [role="navigation"] li {
@@ -364,7 +371,7 @@ body > div:after {
   -o-transition: all 300ms;
   transition: all 300ms;
   display: block;
-  padding: 0.30556em 0.61111em;
+  padding: 0.30556rem 0.61111rem;
   border-radius: .25em;
 }
 @media (min-width: 30em) {
@@ -400,8 +407,10 @@ body > div:after {
 }
 
 .archive [role="main"] {
-  padding-top: 1.83333em;
-  padding-bottom: 1.83333em;
+  padding-top: 33px;
+  padding-top: 1.83333rem;
+  padding-bottom: 33px;
+  padding-bottom: 1.83333rem;
 }
 @media (min-width: 30em) {
   [role="main"] {
@@ -413,18 +422,24 @@ body > div:after {
     clear: both;
   }
   .blog [role="main"] {
-    padding-top: 1.83333em;
-    padding-bottom: 1.83333em;
+    padding-top: 33px;
+    padding-top: 1.83333rem;
+    padding-bottom: 33px;
+    padding-bottom: 1.83333rem;
   }
 }
 
 [role="contentinfo"] {
   overflow: hidden;
   font-family: "FranklinGothicCond", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  margin-top: 0em;
-  padding-top: 1.22222em;
-  padding-bottom: 1.22222em;
-  margin-bottom: 0em;
+  margin-top: 0px;
+  margin-top: 0rem;
+  padding-top: 22px;
+  padding-top: 1.22222rem;
+  padding-bottom: 22px;
+  padding-bottom: 1.22222rem;
+  margin-bottom: 0px;
+  margin-bottom: 0rem;
   margin-left: -1em;
   padding-left: 1em;
   margin-right: -1em;
@@ -438,24 +453,10 @@ body > div:after {
 [role="contentinfo"] a:focus, [role="contentinfo"] a:hover, [role="contentinfo"] a:active {
   color: #b30059;
 }
-@media (min-width: 30em) {
-  [role="contentinfo"] .archive, [role="contentinfo"] .colophon {
-    width: 56.98925%;
-    float: right;
-    margin-right: 0;
-  }
-  [role="contentinfo"] .contact, [role="contentinfo"] .copyright {
-    width: 39.78495%;
-    float: left;
-    margin-right: 3.22581%;
-  }
-  [role="contentinfo"] .colophon {
-    clear: left;
-  }
-}
 
-.archive, .contact, .colophon {
-  margin-bottom: 1.22222em;
+.listarchive, .contact, .colophon {
+  margin-bottom: 22px;
+  margin-bottom: 1.22222rem;
 }
 
 .foottitle {
@@ -468,26 +469,50 @@ body > div:after {
   color: #b30059;
 }
 
-.archive [href*="/20"]:before {
-  font-size: 0.83333em;
-  line-height: 1.46667em;
+.listarchive .permalink:before {
+  font-size: 15px;
+  font-size: 0.83333rem;
+  line-height: 22px;
+  line-height: 1.22222rem;
 }
 
 .contact [href*="twitter"]:before {
-  font-size: 0.83333em;
-  line-height: 1.46667em;
+  font-size: 15px;
+  font-size: 0.83333rem;
+  line-height: 22px;
+  line-height: 1.22222rem;
 }
 
 .copyright, .colophon {
-  font-size: 0.83333em;
-  line-height: 1.46667em;
+  font-size: 15px;
+  font-size: 0.83333rem;
+  line-height: 22px;
+  line-height: 1.22222rem;
   text-transform: uppercase;
   letter-spacing: .04em;
 }
 
+@media (min-width: 30em) {
+  .listarchive, .colophon {
+    width: 56.98925%;
+    float: right;
+    margin-right: 0;
+  }
+
+  .contact, .copyright {
+    width: 39.78495%;
+    float: left;
+    margin-right: 3.22581%;
+  }
+
+  .colophon {
+    clear: left;
+  }
+}
 .tagline {
   font-family: "FranklinGothicCond", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  margin-bottom: 1.22222em;
+  margin-bottom: 22px;
+  margin-bottom: 1.22222rem;
   color: rgba(0, 115, 153, 0.75);
   font-weight: 500;
   text-transform: uppercase;
@@ -500,9 +525,12 @@ body > div:after {
   -moz-transition: all 300ms;
   -o-transition: all 300ms;
   transition: all 300ms;
-  font-size: 1.44444em;
-  line-height: 1.26923em;
-  margin-bottom: 0.84615em;
+  font-size: 26px;
+  font-size: 1.44444rem;
+  line-height: 33px;
+  line-height: 1.83333rem;
+  margin-bottom: 22px;
+  margin-bottom: 1.22222rem;
   color: #004d66;
   font-style: italic;
 }
@@ -514,10 +542,14 @@ body > div:after {
 
 .projects {
   position: relative;
-  margin-top: 0em;
-  padding-top: 1.83333em;
-  padding-bottom: 0.61111em;
-  margin-bottom: 1.22222em;
+  margin-top: 0px;
+  margin-top: 0rem;
+  padding-top: 33px;
+  padding-top: 1.83333rem;
+  padding-bottom: 11px;
+  padding-bottom: 0.61111rem;
+  margin-bottom: 22px;
+  margin-bottom: 1.22222rem;
 }
 .projects::before, .projects::after {
   position: absolute;
@@ -549,15 +581,18 @@ body > div:after {
   font-variant: small-caps;
 }
 .projects p:first-child:first-letter {
-  font-size: 3em;
-  line-height: 1.22222em;
+  font-size: 54px;
+  font-size: 3rem;
+  line-height: 66px;
+  line-height: 3.66667rem;
   float: left;
   padding: .1em .1em 0 0;
 }
 
 .people {
-  padding-top: 9.77778em;
-  background: url('../images/oddpeople.png?1353918467') no-repeat scroll top;
+  padding-top: 176px;
+  padding-top: 9.77778rem;
+  background: url('../images/oddpeople.png?1349719008') no-repeat scroll top;
 }
 .people strong {
   font-variant: small-caps;
@@ -566,8 +601,10 @@ body > div:after {
   font-variant: small-caps;
 }
 .people p:first-child:first-letter {
-  font-size: 3em;
-  line-height: 1.22222em;
+  font-size: 54px;
+  font-size: 3rem;
+  line-height: 66px;
+  line-height: 3.66667rem;
   float: left;
   padding: .1em .1em 0 0;
 }
@@ -578,10 +615,14 @@ body > div:after {
 
 .process {
   position: relative;
-  margin-top: 0em;
-  padding-top: 1.83333em;
-  padding-bottom: 0.61111em;
-  margin-bottom: 0em;
+  margin-top: 0px;
+  margin-top: 0rem;
+  padding-top: 33px;
+  padding-top: 1.83333rem;
+  padding-bottom: 11px;
+  padding-bottom: 0.61111rem;
+  margin-bottom: 0px;
+  margin-bottom: 0rem;
   counter-reset: process;
 }
 .process::before, .process::after {
@@ -613,11 +654,13 @@ body > div:after {
 .process p {
   counter-increment: process;
   position: relative;
-  padding-left: 1.83333em;
+  padding-left: 1.83333rem;
 }
 .process p:before {
-  font-size: 2.05556em;
-  line-height: 1.18919em;
+  font-size: 37px;
+  font-size: 2.05556rem;
+  line-height: 44px;
+  line-height: 2.44444rem;
   content: counter(process) ".";
   position: absolute;
   top: 0;
@@ -633,10 +676,14 @@ body > div:after {
   .intro {
     margin-left: 8.60215%;
     margin-right: 8.60215%;
-    font-size: 2.05556em;
-    line-height: 1.18919em;
-    margin-top: 0.89189em;
-    margin-bottom: 1.18919em;
+    font-size: 37px;
+    font-size: 2.05556rem;
+    line-height: 44px;
+    line-height: 2.44444rem;
+    margin-top: 33px;
+    margin-top: 1.83333rem;
+    margin-bottom: 44px;
+    margin-bottom: 2.44444rem;
   }
 
   .projects .wrap {
@@ -683,18 +730,22 @@ body > div:after {
     padding-right: 17.2043%;
   }
   .process p {
-    padding-left: 3.66667em;
+    padding-left: 3.66667rem;
   }
 }
 .post {
-  margin-top: 1.22222em;
-  margin-bottom: 2.44444em;
+  margin-top: 22px;
+  margin-top: 1.22222rem;
+  margin-bottom: 44px;
+  margin-bottom: 2.44444rem;
   overflow: hidden;
 }
 
 .byline {
-  font-size: 0.83333em;
-  line-height: 1.46667em;
+  font-size: 15px;
+  font-size: 0.83333rem;
+  line-height: 22px;
+  line-height: 1.22222rem;
   color: gray;
   font-style: italic;
 }
@@ -730,11 +781,14 @@ body > div:after {
   }
 }
 .listtitle {
-  margin-bottom: 0.84615em;
+  margin-bottom: 22px;
+  margin-bottom: 1.22222rem;
 }
 .listtitle:before {
-  font-size: 0.69231em;
-  line-height: 1.22222em;
+  font-size: 18px;
+  font-size: 1rem;
+  line-height: 22px;
+  line-height: 1.22222rem;
 }
 @media (min-width: 30em) {
   .listtitle {
@@ -750,8 +804,10 @@ body > div:after {
 }
 
 .tagarchive .archivecount, .tagarchive [pubdate], .blog-archive .archivecount, .blog-archive [pubdate], .tagcloud .tagcount {
-  font-size: 0.83333em;
-  line-height: 1.46667em;
+  font-size: 15px;
+  font-size: 0.83333rem;
+  line-height: 22px;
+  line-height: 1.22222rem;
   float: left;
   margin-right: .4em;
   color: gray;
@@ -775,13 +831,17 @@ body > div:after {
 }
 
 .tagcloud [rel="tag"]:before {
-  font-size: 0.72222em;
-  line-height: 1.69231em;
+  font-size: 13px;
+  font-size: 0.72222rem;
+  line-height: 22px;
+  line-height: 1.22222rem;
 }
 
 .archivesection {
-  font-size: 0.83333em;
-  line-height: 1.46667em;
+  font-size: 15px;
+  font-size: 0.83333rem;
+  line-height: 22px;
+  line-height: 1.22222rem;
 }
 @media (min-width: 30em) {
   .archivesection {

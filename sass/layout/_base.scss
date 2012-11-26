@@ -44,12 +44,12 @@
 // ----------------------------------------------------------------------------
 // Layout
 
-body > div {
+body {
   @include container;
-  @include clearfix;
   @include box-shadow(rgba($blue-darker,.25) 0 0 rhythm(.5));
-  background: image-url('triangle.png') no-repeat scroll top;
   position: relative;
+  overflow-x: hidden;
+  background: image-url('triangle.png') no-repeat scroll top;
 }
 
 // ----------------------------------------------------------------------------

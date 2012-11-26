@@ -1,11 +1,7 @@
 {% extends "base.html" %}
 
 {% block layout %}
-<div>
-
-<header role="banner">
-  <h1 class="logo"><a href="/" rel="home">OddBird</a></h1>
-</header>
+<h1 role="banner"><a href="/" rel="home">OddBird</a></h1>
 
 <nav role="navigation">
   <ul class="primary">
@@ -28,12 +24,12 @@
 
 <footer role="contentinfo">
 
-  <div class="archive">
+  <div class="listarchive">
     <h3 class="foottitle"><a href="/archive/">Blog Archive</a></h3>
     <ul>
       {%- for entry in get_recent_blog_entries() %}
       <li>
-        <a href="{{ link_to('page', slug=entry.slug) }}">{{ entry.title }}</a>
+        <a href="{{ link_to('page', slug=entry.slug) }}" class="permalink">{{ entry.title }}</a>
       </li>
       {%- endfor %}
     </ul>
@@ -66,6 +62,4 @@
     <a href="http://oddbird.net/" class="fn org url">OddBird</a>
   </p>
 </footer>
-
-</div>
 {% endblock layout %}

@@ -1,33 +1,11 @@
 // ----------------------------------------------------------------------------
 // Defaults
 
-$base-size: 18px;
-$ratio: minor-third() fifth();
+$base-size    : 18px;
+$ratio        : minor-third() fifth();
 
 // ----------------------------------------------------------------------------
 // Variants
-
-$norm         : 1;
-$med          : ms(1,$norm);
-$small        : ms(-1,$norm);
-$xsmall       : ms(-2,$norm);
-$xxsmall      : ms(-3,$norm);
-$xxxsmall     : ms(-4,$norm);
-$large        : ms(2,$norm);
-$xlarge       : ms(3,$norm);
-$xxlarge      : ms(5,$norm);
-$xxxlarge     : ms(8,$norm);
-
-$normem       : 1em;
-$medem        : ms(1,$normem);
-$smallem      : ms(-1,$normem);
-$xsmallem     : ms(-2,$normem);
-$xxsmallem    : ms(-3,$normem);
-$xxxsmallem   : ms(-4,$normem);
-$largeem      : ms(2,$normem);
-$xlargeem     : ms(3,$normem);
-$xxlargeem    : ms(5,$normem);
-$xxxlargeem   : ms(8,$normem);
 
 $normpx       : $base-size;
 $medpx        : ms(1);
@@ -43,5 +21,11 @@ $xxxlargepx   : ms(8);
 // ----------------------------------------------------------------------------
 // Font Sizes
 
-$base-font-size     : $normpx;
-$base-line-height   : $medpx;
+$base-font-size             : $normpx;
+$base-line-height           : $medpx;
+
+$rhythm-unit                : rem;
+$rem-with-px-fallback       : true;
+
+$relative-font-sizing       : true;
+$round-to-nearest-half-line : true;
