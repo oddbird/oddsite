@@ -19,6 +19,7 @@ html {
   @include background($blue-hint $noise fixed center);
   @include background-image($grad, $noise);
   overflow-x: hidden;
+  height: 100%;
   color: $base;
 }
 

@@ -49,6 +49,7 @@ body {
   @include box-shadow(rgba($blue-darker,.25) 0 0 rhythm(.5));
   position: relative;
   overflow-x: hidden;
+  min-height: 100%;
   background: image-url('triangle.png') no-repeat scroll top;
 }
 
