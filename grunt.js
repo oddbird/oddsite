@@ -3,35 +3,40 @@ module.exports = function (grunt) {
 
     'use strict';
 
+    var SRC_CSS = 'content/static/css/';
+    var SRC_JS = 'content/static/js/';
+    var BUILD_CSS = 'content/static/dist/css/';
+    var BUILD_JS = 'content/static/dist/js/';
+
     // Project configuration.
     grunt.initConfig({
         lint: {
-            files: ['grunt.js', 'content/static/js/src/**/*.js', 'test/**/*.js']
+            files: ['grunt.js', SRC_JS + '**/*.js', 'test/**/*.js']
         },
         qunit: {
             files: 'test/**/*.html'
         },
         concat: {
             dist: {
-                src: 'content/static/js/src/**/*.js',
-                dest: 'content/static/js/dist/concat.js'
+                src: SRC_JS + '**/*.js',
+                dest: BUILD_JS + 'all-js.js'
             }
         },
         min: {
             dist: {
                 src: '<config:concat.dist.dest>',
-                dest: 'content/static/js/dist/minified.min.js'
+                dest: BUILD_JS + 'all-js.min.js'
             }
         },
-        cssmin: {
+        mincss: {
             dist: {
-                src: 'content/static/css/screen.css',
-                dest: 'content/static/css/minified.min.css'
+                src: SRC_CSS + 'screen.css',
+                dest: BUILD_CSS + 'screen.min.css'
             }
         },
         watch: {
             files: ['<config:lint.files>', 'sass/**/*.scss'],
-            tasks: 'lint concat min compass:dev cssmin'
+            tasks: 'lint concat min compass mincss'
         },
         jshint: {
             options: {
@@ -59,9 +64,9 @@ module.exports = function (grunt) {
     });
 
     // Default task.
-    grunt.registerTask('default', 'lint concat min compass:dev cssmin');
+    grunt.registerTask('default', 'lint concat min compass mincss');
 
     // Plugin tasks.
-    grunt.loadNpmTasks('grunt-css');
+    grunt.loadNpmTasks('grunt-contrib-mincss');
     grunt.loadNpmTasks('grunt-compass');
 };
