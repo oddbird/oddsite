@@ -36,7 +36,10 @@ module.exports = function (grunt) {
         },
         watch: {
             files: ['content/**/*', 'templates/**/*.html', 'sass/**/*.scss'],
-            tasks: 'lint concat min compass cssmin exec:clean exec:build'
+            tasks: 'default'
+        },
+        server: {
+            base: 'output/'
         },
         jshint: {
             options: {
@@ -68,19 +71,15 @@ module.exports = function (grunt) {
             },
             build: {
                 command: 'python run.py build content/'
-            },
-            serve: {
-                command: 'python run.py serve content/',
-                stdout: true
             }
         }
     });
 
     // Default task.
-    grunt.registerTask('default', 'lint concat min compass cssmin exec:clean exec:build');
+    grunt.registerTask('default', 'lint concat min compass cssmin exec');
 
     // Run server.
-    grunt.registerTask('serve', 'lint concat min compass cssmin exec');
+    grunt.registerTask('serve', 'default server watch');
 
     // Plugin tasks.
     grunt.loadNpmTasks('grunt-css');
