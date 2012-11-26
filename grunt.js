@@ -3,8 +3,6 @@ module.exports = function (grunt) {
 
     'use strict';
 
-    grunt.loadNpmTasks('grunt-css');
-
     // Project configuration.
     grunt.initConfig({
         lint: {
@@ -32,8 +30,8 @@ module.exports = function (grunt) {
             }
         },
         watch: {
-            files: '<config:lint.files>',
-            tasks: 'lint'
+            files: ['<config:lint.files>', 'sass/**/*.scss'],
+            tasks: 'lint concat min compass:dev cssmin'
         },
         jshint: {
             options: {
@@ -51,9 +49,19 @@ module.exports = function (grunt) {
             },
             globals: {}
         },
-        uglify: {}
+        uglify: {},
+        compass: {
+            dev: {
+                bundleExec: true,
+                config: 'config.rb'
+            }
+        }
     });
 
     // Default task.
-    grunt.registerTask('default', 'lint concat min cssmin');
+    grunt.registerTask('default', 'lint concat min compass:dev cssmin');
+
+    // Plugin tasks.
+    grunt.loadNpmTasks('grunt-css');
+    grunt.loadNpmTasks('grunt-compass');
 };
