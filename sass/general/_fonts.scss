@@ -1,49 +1,49 @@
 // ----------------------------------------------------------------------------
-// CenturyOldStyle
+// Baskerville
 
 @include font-face(
-  'CenturyOldStyle',
+  'BaskervilleFS',
   font-files(
-    'CenturyOldStyle-Regular-webfont.woff',woff,
-    'CenturyOldStyle-Regular-webfont.ttf',truetype,
-    'CenturyOldStyle-Regular-webfont.svg#webfontSMxOInhK',svg
+    'Baskerville-Regular-webfont.woff',woff,
+    'Baskerville-Regular-webfont.ttf',truetype,
+    'Baskerville-Regular-webfont.svg#webfontSMxOInhK',svg
   ),
-  'CenturyOldStyle-Regular-webfont.eot',
+  'Baskerville-Regular-webfont.eot',
   normal,
   normal
 );
 @include font-face(
-  'CenturyOldStyle',
+  'BaskervilleFS',
   font-files(
-    'CenturyOldStyle-Italic-webfont.woff',woff,
-    'CenturyOldStyle-Italic-webfont.ttf',truetype,
-    'CenturyOldStyle-Italic-webfont.svg#webfontSMxOInhK',svg
+    'Baskerville-Italic-webfont.woff',woff,
+    'Baskerville-Italic-webfont.ttf',truetype,
+    'Baskerville-Italic-webfont.svg#webfontSMxOInhK',svg
   ),
-  'CenturyOldStyle-Italic-webfont.eot',
+  'Baskerville-Italic-webfont.eot',
   normal,
   italic
 );
 @include font-face(
-  'CenturyOldStyle',
+  'BaskervilleFS',
   font-files(
-    'CenturyOldStyle-Bold-webfont.woff',woff,
-    'CenturyOldStyle-Bold-webfont.ttf',truetype,
-    'CenturyOldStyle-Bold-webfont.svg#webfontSMxOInhK',svg
+    'Baskerville-Bold-webfont.woff',woff,
+    'Baskerville-Bold-webfont.ttf',truetype,
+    'Baskerville-Bold-webfont.svg#webfontSMxOInhK',svg
   ),
-  'CenturyOldStyle-Bold-webfont.eot',
+  'Baskerville-Bold-webfont.eot',
   bold,
   normal
 );
 @include font-face(
-  'CenturyOldStyleCaps',
+  'BaskervilleFS',
   font-files(
-    'CenturyOldStyleCaps-Regular-webfont.woff',woff,
-    'CenturyOldStyleCaps-Regular-webfont.ttf',truetype,
-    'CenturyOldStyleCaps-Regular-webfont.svg#webfontSMxOInhK',svg
+    'Baskerville-BoldItalic-webfont.woff',woff,
+    'Baskerville-BoldItalic-webfont.ttf',truetype,
+    'Baskerville-BoldItalic-webfont.svg#webfontSMxOInhK',svg
   ),
-  'CenturyOldStyleCaps-Regular-webfont.eot',
-  normal,
-  normal
+  'Baskerville-BoldItalic-webfont.eot',
+  bold,
+  italic
 );
 
 // ----------------------------------------------------------------------------
@@ -149,7 +149,7 @@
     'FranklinGothic-DemiCd-webfont.svg#webfontSMxOInhK',svg
   ),
   'FranklinGothic-DemiCd-webfont.eot',
-  500,
+  bold,
   normal
 );
 @include font-face(
@@ -160,7 +160,7 @@
     'FranklinGothic-DemiCdIt-webfont.svg#webfontSMxOInhK',svg
   ),
   'FranklinGothic-DemiCdIt-webfont.eot',
-  500,
+  bold,
   italic
 );
 
@@ -174,22 +174,8 @@ $mono-stack   : Consolas, Menlo, Monaco, "Lucida Console", "Liberation Mono", "D
 // ----------------------------------------------------------------------------
 // Font Mixins
 
-@mixin sans {
-  font-family: 'FranklinGothic',$sans-stack;
-}
-
-@mixin sanscond {
-  font-family: 'FranklinGothicCond',$sans-stack;
-}
-
-@mixin serif {
-  font-family: 'CenturyOldStyle',$serif-stack;
-}
-
-@mixin serifcaps {
-  font-family: 'CenturyOldStyleCaps',$serif-stack;
-}
-
-@mixin mono {
-  font-family: $mono-stack;
-}
+@mixin sans { font-family: 'FranklinGothic',$sans-stack; }
+@mixin sanscond { font-family: 'FranklinGothicCond',$sans-stack; }
+@mixin serif { font-family: 'BaskervilleFS',$serif-stack; }
+@mixin serifcaps { font-variant: small-caps; }
+@mixin mono { font-family: $mono-stack; }

@@ -24,11 +24,10 @@ $activenav: $blue-darker;
 
   a {
     @extend %padded-icon;
+    @include transition(background 300ms);
     display: block;
     padding: rhythm(.25) rhythm(.5);
-    @include breakpoint($break) {
-      background: rgba($activenav,.125);
-    }
+    @include breakpoint($break) { background: rgba($activenav,.125); }
   }
   [rel="home"] {
     @extend %icon-home;
