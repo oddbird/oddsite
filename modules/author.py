@@ -13,6 +13,7 @@ from werkzeug.contrib.atom import AtomFeed
 
 from rstblog.signals import (
     after_file_published, before_build_finished)
+from rstblog.utils import Pagination
 
 
 class Author(object):
@@ -85,14 +86,24 @@ def write_author_feed(builder, author):
 
 
 def write_author_page(builder, author):
+    use_pagination = builder.config.root_get('modules.blog.use_pagination', True)
+    per_page = builder.config.root_get('modules.blog.per_page', 10)
     entries = get_authored_entries(builder, author)
-    entries.sort(key=lambda x: (x.title or '').lower())
-    with builder.open_link_file('author', author=author.name) as f:
-        rv = builder.render_template('author.html', {
-            'author':      author,
-            'entries':  entries,
-        })
-        f.write(rv.encode('utf-8') + '\n')
+    entries.sort(key=lambda x: x.pub_date, reverse=True)
+    pagination = Pagination(
+        builder, entries, 1, per_page, 'author', {'author': author.name})
+    while True:
+        with builder.open_link_file(
+                'author', author=author.name, page=pagination.page) as f:
+            rv = builder.render_template('author.html', {
+                'author':           author,
+                'pagination':       pagination,
+                'show_pagination':  use_pagination,
+            })
+            f.write(rv.encode('utf-8') + '\n')
+            if not use_pagination or not pagination.has_next:
+                break
+            pagination = pagination.get_next()
 
 
 def write_author_files(builder):
@@ -107,17 +118,23 @@ def setup(builder):
     before_build_finished.connect(write_author_files)
     builder.register_url(
         'author',
-        config_key='modules.authors.author_url',
+        config_key='modules.author.author_url',
         config_default='/authors/<author>/',
+        defaults={'page': 1},
+        )
+    builder.register_url(
+        'author',
+        config_key='modules.author.paged_author_url',
+        config_default='/authors/<author>/page/<page>/',
         )
     builder.register_url(
         'authorfeed',
-        config_key='modules.authors.author_feed_url',
+        config_key='modules.author.author_feed_url',
         config_default='/authors/<author>/feed.atom',
         )
     builder.register_url(
         'authors',
-        config_key='modules.authors.authors_url',
+        config_key='modules.author.authors_url',
         config_default='/authors/',
         )
     builder.jinja_env.globals['get_authors'] = get_authors
