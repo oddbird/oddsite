@@ -48,8 +48,7 @@ the updated submodule.
 
 .. _Node.js: http://nodejs.org/
 
-.. _github.com/oddbird/oddbird.github.com:
-https://github.com/oddbird/oddbird.github.com
+.. _github.com/oddbird/oddbird.github.com: https://github.com/oddbird/oddbird.github.com
 
 .. _JSHint: http://www.jshint.com/
 
