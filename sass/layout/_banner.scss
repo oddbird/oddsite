@@ -7,7 +7,6 @@ $logo-rhythm  : floor(image-height($logo)/$base-font-size);
 [role="banner"] {
   @include bleed;
   @include background(linear-gradient(top, rgba($blue-dark,.125), rgba($blue-dark,0)));
-  @include trailer;
 }
 
 .logo {
