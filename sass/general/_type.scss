@@ -52,10 +52,11 @@ a {
 
   p, ul, ol, pre { @include trailer; }
 
-  pre {
+  .code {
     @include mono;
-    @include adjust-font-size-to($xsmallpx);
-    @include trailer(1,$xsmallpx);
+    @include adjust-font-size-to($xxsmallpx,.75);
+    @include trailer;
+    overflow: auto;
     padding: rhythm(.5) rhythm(.75);
     border-left: rhythm(.25) solid rgba($blue-darkest,.25);
   }
