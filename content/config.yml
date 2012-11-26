@@ -4,6 +4,7 @@ author: OddBird
 canonical_url: http://oddbird.net/
 output_folder: ../output
 template_path: ../templates
+rst_writer: html5writer
 modules:
   pygments:
     style: tango
