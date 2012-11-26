@@ -1,4 +1,6 @@
-git+git://github.com/carljm/rstblog/@oddbird
+--extra-index-url http://chishop.oddbird.net/simple
+
+rstblog==1.0.obc1
 PyYAML==3.10
 Babel==0.9.6
 blinker==1.2
