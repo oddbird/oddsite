@@ -5,8 +5,8 @@ module.exports = function (grunt) {
 
     var SRC_CSS = 'content/static/css/';
     var SRC_JS = 'content/static/js/';
-    var BUILD_CSS = 'content/static/dist/css/';
-    var BUILD_JS = 'content/static/dist/js/';
+    var BUILD_CSS = 'content/static/css-dist/';
+    var BUILD_JS = 'content/static/js-dist/';
 
     // Project configuration.
     grunt.initConfig({
@@ -28,15 +28,15 @@ module.exports = function (grunt) {
                 dest: BUILD_JS + 'all-js.min.js'
             }
         },
-        mincss: {
+        cssmin: {
             dist: {
                 src: SRC_CSS + 'screen.css',
                 dest: BUILD_CSS + 'screen.min.css'
             }
         },
         watch: {
-            files: ['<config:lint.files>', 'sass/**/*.scss'],
-            tasks: 'lint concat min compass mincss'
+            files: ['content/**/*', 'templates/**/*.html', 'sass/**/*.scss'],
+            tasks: 'lint concat min compass cssmin exec:clean exec:build'
         },
         jshint: {
             options: {
@@ -60,13 +60,30 @@ module.exports = function (grunt) {
                 bundleExec: true,
                 config: 'config.rb'
             }
+        },
+        exec: {
+            clean: {
+                command: 'find content -name *~ -delete && rm -rf output/*',
+                stdout: true
+            },
+            build: {
+                command: 'python run.py build content/'
+            },
+            serve: {
+                command: 'python run.py serve content/',
+                stdout: true
+            }
         }
     });
 
     // Default task.
-    grunt.registerTask('default', 'lint concat min compass mincss');
+    grunt.registerTask('default', 'lint concat min compass cssmin exec:clean exec:build');
+
+    // Run server.
+    grunt.registerTask('serve', 'lint concat min compass cssmin exec');
 
     // Plugin tasks.
-    grunt.loadNpmTasks('grunt-contrib-mincss');
+    grunt.loadNpmTasks('grunt-css');
     grunt.loadNpmTasks('grunt-compass');
+    grunt.loadNpmTasks('grunt-exec');
 };
