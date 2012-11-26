@@ -180,12 +180,12 @@ html {
 html {
   font-family: "BaskervilleFS", Baskerville, Palatino, Cambria, Georgia, serif;
   text-shadow: 0px 1px 0px rgba(229, 249, 255, 0.5);
-  background: #e5f9ff url('../images/noise.png?1349719008') fixed center;
-  background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, rgba(77, 210, 255, 0.25)), color-stop(75%, rgba(204, 242, 255, 0.25))), url('../images/noise.png?1349719008');
-  background-image: -webkit-linear-gradient(bottom, rgba(77, 210, 255, 0.25), rgba(204, 242, 255, 0.25) 75%), url('../images/noise.png?1349719008');
-  background-image: -moz-linear-gradient(bottom, rgba(77, 210, 255, 0.25), rgba(204, 242, 255, 0.25) 75%), url('../images/noise.png?1349719008');
-  background-image: -o-linear-gradient(bottom, rgba(77, 210, 255, 0.25), rgba(204, 242, 255, 0.25) 75%), url('../images/noise.png?1349719008');
-  background-image: linear-gradient(bottom, rgba(77, 210, 255, 0.25), rgba(204, 242, 255, 0.25) 75%), url('../images/noise.png?1349719008');
+  background: #e5f9ff url('../images/noise.png?1353950432') fixed center;
+  background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, rgba(77, 210, 255, 0.25)), color-stop(75%, rgba(204, 242, 255, 0.25))), url('../images/noise.png?1353950432');
+  background-image: -webkit-linear-gradient(bottom, rgba(77, 210, 255, 0.25), rgba(204, 242, 255, 0.25) 75%), url('../images/noise.png?1353950432');
+  background-image: -moz-linear-gradient(bottom, rgba(77, 210, 255, 0.25), rgba(204, 242, 255, 0.25) 75%), url('../images/noise.png?1353950432');
+  background-image: -o-linear-gradient(bottom, rgba(77, 210, 255, 0.25), rgba(204, 242, 255, 0.25) 75%), url('../images/noise.png?1353950432');
+  background-image: linear-gradient(bottom, rgba(77, 210, 255, 0.25), rgba(204, 242, 255, 0.25) 75%), url('../images/noise.png?1353950432');
   overflow-x: hidden;
   height: 100%;
   color: #595959;
@@ -306,7 +306,7 @@ body {
   position: relative;
   overflow-x: hidden;
   min-height: 100%;
-  background: url('../images/triangle.png?1353905138') no-repeat scroll top;
+  background: url('../images/triangle.png?1353950432') no-repeat scroll top;
 }
 body:after {
   content: "";
@@ -329,7 +329,7 @@ body:after {
   text-indent: -119988px;
   overflow: hidden;
   text-align: left;
-  background-image: url('../images/logo_d.png?1349719007');
+  background-image: url('../images/logo_d.png?1353950432');
   background-repeat: no-repeat;
   background-position: 50% 50%;
   -webkit-transition: all 300ms;
@@ -594,7 +594,7 @@ body:after {
 .people {
   padding-top: 176px;
   padding-top: 9.77778rem;
-  background: url('../images/oddpeople.png?1349719008') no-repeat scroll top;
+  background: url('../images/oddpeople.png?1353950432') no-repeat scroll top;
 }
 .people strong {
   font-variant: small-caps;
@@ -858,3 +858,381 @@ body:after {
 .sectionlist .entrycount:after {
   content: "]";
 }
+
+.hll {
+  background-color: #ffffcc;
+}
+
+.c {
+  color: #8f5902;
+  font-style: italic;
+}
+
+/* Comment */
+.err {
+  color: #a40000;
+  border: 1px solid #ef2929;
+}
+
+/* Error */
+.g {
+  color: #000000;
+}
+
+/* Generic */
+.k {
+  color: #204a87;
+  font-weight: bold;
+}
+
+/* Keyword */
+.l {
+  color: #000000;
+}
+
+/* Literal */
+.n {
+  color: #000000;
+}
+
+/* Name */
+.o {
+  color: #ce5c00;
+  font-weight: bold;
+}
+
+/* Operator */
+.x {
+  color: #000000;
+}
+
+/* Other */
+.p {
+  color: #000000;
+  font-weight: bold;
+}
+
+/* Punctuation */
+.cm {
+  color: #8f5902;
+  font-style: italic;
+}
+
+/* Comment.Multiline */
+.cp {
+  color: #8f5902;
+  font-style: italic;
+}
+
+/* Comment.Preproc */
+.c1 {
+  color: #8f5902;
+  font-style: italic;
+}
+
+/* Comment.Single */
+.cs {
+  color: #8f5902;
+  font-style: italic;
+}
+
+/* Comment.Special */
+.gd {
+  color: #a40000;
+}
+
+/* Generic.Deleted */
+.ge {
+  color: #000000;
+  font-style: italic;
+}
+
+/* Generic.Emph */
+.gr {
+  color: #ef2929;
+}
+
+/* Generic.Error */
+.gh {
+  color: #000080;
+  font-weight: bold;
+}
+
+/* Generic.Heading */
+.gi {
+  color: #00A000;
+}
+
+/* Generic.Inserted */
+.go {
+  color: #000000;
+  font-style: italic;
+}
+
+/* Generic.Output */
+.gp {
+  color: #8f5902;
+}
+
+/* Generic.Prompt */
+.gs {
+  color: #000000;
+  font-weight: bold;
+}
+
+/* Generic.Strong */
+.gu {
+  color: #800080;
+  font-weight: bold;
+}
+
+/* Generic.Subheading */
+.gt {
+  color: #a40000;
+  font-weight: bold;
+}
+
+/* Generic.Traceback */
+.kc {
+  color: #204a87;
+  font-weight: bold;
+}
+
+/* Keyword.Constant */
+.kd {
+  color: #204a87;
+  font-weight: bold;
+}
+
+/* Keyword.Declaration */
+.kn {
+  color: #204a87;
+  font-weight: bold;
+}
+
+/* Keyword.Namespace */
+.kp {
+  color: #204a87;
+  font-weight: bold;
+}
+
+/* Keyword.Pseudo */
+.kr {
+  color: #204a87;
+  font-weight: bold;
+}
+
+/* Keyword.Reserved */
+.kt {
+  color: #204a87;
+  font-weight: bold;
+}
+
+/* Keyword.Type */
+.ld {
+  color: #000000;
+}
+
+/* Literal.Date */
+.m {
+  color: #0000cf;
+  font-weight: bold;
+}
+
+/* Literal.Number */
+.s {
+  color: #4e9a06;
+}
+
+/* Literal.String */
+.na {
+  color: #c4a000;
+}
+
+/* Name.Attribute */
+.nb {
+  color: #204a87;
+}
+
+/* Name.Builtin */
+.nc {
+  color: #000000;
+}
+
+/* Name.Class */
+.no {
+  color: #000000;
+}
+
+/* Name.Constant */
+.nd {
+  color: #5c35cc;
+  font-weight: bold;
+}
+
+/* Name.Decorator */
+.ni {
+  color: #ce5c00;
+}
+
+/* Name.Entity */
+.ne {
+  color: #cc0000;
+  font-weight: bold;
+}
+
+/* Name.Exception */
+.nf {
+  color: #000000;
+}
+
+/* Name.Function */
+.nl {
+  color: #f57900;
+}
+
+/* Name.Label */
+.nn {
+  color: #000000;
+}
+
+/* Name.Namespace */
+.nx {
+  color: #000000;
+}
+
+/* Name.Other */
+.py {
+  color: #000000;
+}
+
+/* Name.Property */
+.nt {
+  color: #204a87;
+  font-weight: bold;
+}
+
+/* Name.Tag */
+.nv {
+  color: #000000;
+}
+
+/* Name.Variable */
+.ow {
+  color: #204a87;
+  font-weight: bold;
+}
+
+/* Operator.Word */
+.w {
+  color: #f8f8f8;
+  text-decoration: underline;
+}
+
+/* Text.Whitespace */
+.mf {
+  color: #0000cf;
+  font-weight: bold;
+}
+
+/* Literal.Number.Float */
+.mh {
+  color: #0000cf;
+  font-weight: bold;
+}
+
+/* Literal.Number.Hex */
+.mi {
+  color: #0000cf;
+  font-weight: bold;
+}
+
+/* Literal.Number.Integer */
+.mo {
+  color: #0000cf;
+  font-weight: bold;
+}
+
+/* Literal.Number.Oct */
+.sb {
+  color: #4e9a06;
+}
+
+/* Literal.String.Backtick */
+.sc {
+  color: #4e9a06;
+}
+
+/* Literal.String.Char */
+.sd {
+  color: #8f5902;
+  font-style: italic;
+}
+
+/* Literal.String.Doc */
+.s2 {
+  color: #4e9a06;
+}
+
+/* Literal.String.Double */
+.se {
+  color: #4e9a06;
+}
+
+/* Literal.String.Escape */
+.sh {
+  color: #4e9a06;
+}
+
+/* Literal.String.Heredoc */
+.si {
+  color: #4e9a06;
+}
+
+/* Literal.String.Interpol */
+.sx {
+  color: #4e9a06;
+}
+
+/* Literal.String.Other */
+.sr {
+  color: #4e9a06;
+}
+
+/* Literal.String.Regex */
+.s1 {
+  color: #4e9a06;
+}
+
+/* Literal.String.Single */
+.ss {
+  color: #4e9a06;
+}
+
+/* Literal.String.Symbol */
+.bp {
+  color: #3465a4;
+}
+
+/* Name.Builtin.Pseudo */
+.vc {
+  color: #000000;
+}
+
+/* Name.Variable.Class */
+.vg {
+  color: #000000;
+}
+
+/* Name.Variable.Global */
+.vi {
+  color: #000000;
+}
+
+/* Name.Variable.Instance */
+.il {
+  color: #0000cf;
+  font-weight: bold;
+}
+
+/* Literal.Number.Integer.Long */
