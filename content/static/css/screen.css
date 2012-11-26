@@ -320,6 +320,10 @@ body > div:after {
   background-image: url('../images/logo_d.png?1349719007');
   background-repeat: no-repeat;
   background-position: 50% 50%;
+  -webkit-transition: all 300ms;
+  -moz-transition: all 300ms;
+  -o-transition: all 300ms;
+  transition: all 300ms;
   min-height: 6.11111em;
   max-width: 206px;
   display: block;
@@ -329,11 +333,6 @@ body > div:after {
 
 .home [role="navigation"] [rel="home"], .blog [role="navigation"] [href*="blog"] {
   color: #007399;
-}
-@media (min-width: 30em) {
-  .home [role="navigation"] [rel="home"], .blog [role="navigation"] [href*="blog"] {
-    background: rgba(0, 115, 153, 0.25);
-  }
 }
 
 [role="navigation"] {
@@ -357,12 +356,13 @@ body > div:after {
   text-align: right;
 }
 [role="navigation"] a {
-  -webkit-transition: background 300ms;
-  -moz-transition: background 300ms;
-  -o-transition: background 300ms;
-  transition: background 300ms;
+  -webkit-transition: all 300ms;
+  -moz-transition: all 300ms;
+  -o-transition: all 300ms;
+  transition: all 300ms;
   display: block;
   padding: 0.30556em 0.61111em;
+  border-radius: .25em;
 }
 @media (min-width: 30em) {
   [role="navigation"] a {
@@ -372,12 +372,28 @@ body > div:after {
 [role="navigation"] [rel="home"] {
   margin-left: -2em;
   padding-left: 2em;
-  border-radius: .25em;
+}
+@media (min-width: 30em) {
+  [role="navigation"] [rel="home"]:focus, [role="navigation"] [rel="home"]:hover, [role="navigation"] [rel="home"]:active {
+    -webkit-transform: translateX(1em);
+    -moz-transform: translateX(1em);
+    -ms-transform: translateX(1em);
+    -o-transform: translateX(1em);
+    transform: translateX(1em);
+  }
 }
 [role="navigation"] [href*="blog"] {
   margin-right: -2em;
   padding-right: 2em;
-  border-radius: .25em;
+}
+@media (min-width: 30em) {
+  [role="navigation"] [href*="blog"]:focus, [role="navigation"] [href*="blog"]:hover, [role="navigation"] [href*="blog"]:active {
+    -webkit-transform: translateX(-1em);
+    -moz-transform: translateX(-1em);
+    -ms-transform: translateX(-1em);
+    -o-transform: translateX(-1em);
+    transform: translateX(-1em);
+  }
 }
 
 @media (min-width: 30em) {

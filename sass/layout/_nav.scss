@@ -5,10 +5,7 @@ $nav-columns: $total-columns/2 - 1;
 $nav-rhythm: $logo-rhythm/2;
 $activenav: $blue-darker;
 
-%activenav {
-  color: $activenav;
-  @include breakpoint($break) { background: rgba($activenav,.25); }
-}
+%activenav { color: $activenav; }
 
 [role="navigation"] {
   @include stretch-x;
@@ -24,21 +21,24 @@ $activenav: $blue-darker;
 
   a {
     @extend %padded-icon;
-    @include transition(background 300ms);
+    @include transition(all 300ms);
     display: block;
     padding: rhythm(.25) rhythm(.5);
+    border-radius: .25em;
     @include breakpoint($break) { background: rgba($activenav,.125); }
   }
   [rel="home"] {
     @extend %icon-home;
     @include bleed($grid-padding*2, left);
-    border-radius: .25em;
     .home & { @extend %activenav; }
+
+    @include breakpoint($break) { #{$focus} { @include translateX($grid-padding); } }
   }
   [href*="blog"] {
     @extend %icon-chat;
     @include bleed($grid-padding*2, right);
-    border-radius: .25em;
     .blog & { @extend %activenav; }
+
+    @include breakpoint($break) { #{$focus} { @include translateX(- $grid-padding); } }
   }
 }

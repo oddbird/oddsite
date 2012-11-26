@@ -13,6 +13,7 @@ $logo-rhythm  : floor(image-height($logo)/$base-font-size);
 .logo {
   a {
     @include replace-text($logo);
+    @include transition(all 300ms);
     min-height: rhythm($logo-rhythm);
     max-width: image-width($logo) + $largepx;
     display: block;
