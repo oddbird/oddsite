@@ -3,29 +3,43 @@ module.exports = function (grunt) {
 
     'use strict';
 
+    var SRC_CSS = 'content/static/css/';
+    var SRC_JS = 'content/static/js/';
+    var BUILD_CSS = 'content/static/css-dist/';
+    var BUILD_JS = 'content/static/js-dist/';
+
     // Project configuration.
     grunt.initConfig({
         lint: {
-            files: ['grunt.js', 'content/static/js/src/**/*.js', 'test/**/*.js']
+            files: ['grunt.js', SRC_JS + '**/*.js', 'test/**/*.js']
         },
         qunit: {
-            files: ['test/**/*.html']
+            files: 'test/**/*.html'
         },
         concat: {
             dist: {
-                src: ['content/static/js/src/**/*.js'],
-                dest: 'content/static/js/dist/concat.js'
+                src: SRC_JS + '**/*.js',
+                dest: BUILD_JS + 'all-js.js'
             }
         },
         min: {
             dist: {
-                src: ['<config:concat.dist.dest>'],
-                dest: 'content/static/js/dist/minified.min.js'
+                src: '<config:concat.dist.dest>',
+                dest: BUILD_JS + 'all-js.min.js'
+            }
+        },
+        cssmin: {
+            dist: {
+                src: SRC_CSS + 'screen.css',
+                dest: BUILD_CSS + 'screen.min.css'
             }
         },
         watch: {
-            files: '<config:lint.files>',
-            tasks: 'lint'
+            files: ['content/**/*', 'templates/**/*.html', 'sass/**/*.scss'],
+            tasks: 'default'
+        },
+        server: {
+            base: 'output/'
         },
         jshint: {
             options: {
@@ -43,10 +57,32 @@ module.exports = function (grunt) {
             },
             globals: {}
         },
-        uglify: {}
+        uglify: {},
+        compass: {
+            dev: {
+                bundleExec: true,
+                config: 'config.rb'
+            }
+        },
+        exec: {
+            clean: {
+                command: 'find content -name *~ -delete && rm -rf output/*',
+                stdout: true
+            },
+            build: {
+                command: 'python run.py build content/'
+            }
+        }
     });
 
     // Default task.
-    grunt.registerTask('default', 'lint concat min');
+    grunt.registerTask('default', 'lint concat min compass cssmin exec');
 
+    // Run server.
+    grunt.registerTask('serve', 'default server watch');
+
+    // Plugin tasks.
+    grunt.loadNpmTasks('grunt-css');
+    grunt.loadNpmTasks('grunt-compass');
+    grunt.loadNpmTasks('grunt-exec');
 };

@@ -54,11 +54,9 @@
 
   <!--[if gte IE 7]><!-->
   {% block styles %}
-  <link rel="stylesheet" href="/static/css/screen.css" />
+  <link rel="stylesheet" href="/static/css-dist/screen.min.css" />
   {% endblock styles %}
   <!--<![endif]-->
-
-  <link rel="stylesheet" href="/static/css/print.css" media="print" />
 
   <!-- Page-Specific Head -->
   {% block extrahead %}{% endblock %}
@@ -84,7 +82,7 @@
 {% block layout %}{% endblock layout %}
 
 <!-- JavaScript -->
-<script src="/static/js/dist/minified.min.js"></script>
+<script src="/static/js-dist/all-js.min.js"></script>
 
 </body>
 </html>
