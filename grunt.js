@@ -3,24 +3,32 @@ module.exports = function (grunt) {
 
     'use strict';
 
+    grunt.loadNpmTasks('grunt-css');
+
     // Project configuration.
     grunt.initConfig({
         lint: {
             files: ['grunt.js', 'content/static/js/src/**/*.js', 'test/**/*.js']
         },
         qunit: {
-            files: ['test/**/*.html']
+            files: 'test/**/*.html'
         },
         concat: {
             dist: {
-                src: ['content/static/js/src/**/*.js'],
+                src: 'content/static/js/src/**/*.js',
                 dest: 'content/static/js/dist/concat.js'
             }
         },
         min: {
             dist: {
-                src: ['<config:concat.dist.dest>'],
+                src: '<config:concat.dist.dest>',
                 dest: 'content/static/js/dist/minified.min.js'
+            }
+        },
+        cssmin: {
+            dist: {
+                src: 'content/static/css/screen.css',
+                dest: 'content/static/css/minified.min.css'
             }
         },
         watch: {
@@ -47,6 +55,5 @@ module.exports = function (grunt) {
     });
 
     // Default task.
-    grunt.registerTask('default', 'lint concat min');
-
+    grunt.registerTask('default', 'lint concat min cssmin');
 };
