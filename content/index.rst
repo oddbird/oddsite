@@ -7,19 +7,23 @@ template: layout.html
 Home
 ====
 
-.. container:: tagline
+.. wrap:: p
+  :class: tagline
 
-  Custom web tools for humans.
+  Custom web tools for humans
 
-.. container:: intro
+.. wrap:: div
+  :class: intro
 
   We love chasing ideas into existence.
   We could do that all night long,
   and sometimes we do.
 
-.. container:: projects
+.. wrap:: div
+  :class: projects
 
-  .. container:: wrap
+  .. wrap:: div
+    :class: wrap
 
       We created `Susy`_
       for web designers like ourselves,
@@ -31,7 +35,7 @@ Home
       and other open-source projects.
 
       We're currently working on `Portfoliyo`_
-      for teachers, students, and parents;
+      for teachers, students, |&| parents;
       and `Into the Green Green Mud`_,
       a multimedia novel.
       Recent projects include `MozTrap`_ for `Mozilla`_,
@@ -49,7 +53,12 @@ Home
 .. _The Providence Plan: http://provplan.org/
 .. _Into the Green Green Mud: http://greengreenmud.com/
 
-.. container:: people
+.. |&| raw:: html
+
+  <span class="amp">&amp;</span>
+
+.. wrap:: div
+  :class: people
 
   **OddBird**
   is three brothers
@@ -82,14 +91,18 @@ Home
 
 .. |Carl| raw:: html
 
-  <strong class="vcard"><a href="/authors/carl/" class="fn url">Carl</a></strong>
+  <strong class="vcard">
+    <a href="/authors/carl/" class="fn url">Carl</a>
+  </strong>
 
 .. _coder: http://github.com/carljm
 .. _Pythonista: http://www.python.org/
 
 .. |Eric| raw:: html
 
-  <strong class="vcard"><a href="/authors/eric/" class="fn url">Eric</a></strong>
+  <strong class="vcard">
+    <a href="/authors/eric/" class="fn url">Eric</a>
+  </strong>
 
 .. _multimedia artist: http://eric.andmeyer.com/
 .. _writing: http://vicioustrap.com/
@@ -99,12 +112,15 @@ Home
 
 .. |Jonny| raw:: html
 
-  <strong class="vcard"><a href="/authors/jonny/" class="fn url">Jonny</a></strong>
+  <strong class="vcard">
+    <a href="/authors/jonny/" class="fn url">Jonny</a>
+  </strong>
 
 .. _front-end developer: http://github.com/jgerigmeyer/
 .. _college philosophy professor: http://www.goshen.edu/jonam/
 
-.. container:: process
+.. wrap:: div
+  :class: process
 
   We use a **lean** process_,
   deploying and integrating new functionality frequently

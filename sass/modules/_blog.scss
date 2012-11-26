@@ -4,12 +4,14 @@
 .post {
   @include leader(1);
   @include trailer(2);
+  @include clearfix;
 }
 
 .byline {
+  @include adjust-font-size-to($smallpx);
   color: $mid;
   font-style: italic;
-  time {
+  time, a {
     @include serifcaps;
     font-style: normal;
   }
@@ -20,13 +22,19 @@
   &:after { content: "»"; }
 }
 
-@include at-breakpoint($break) {
-  .post { @include pie-clearfix; }
-  .byline {
-    @include span-columns(3 omega);
-    time { display: block; }
+@include breakpoint($break) {
+  .title, .body {
+    @include span-columns(9 omega);
+    @include suffix(1);
   }
-  .body { @include span-columns(8); }
+  .byline {
+    @include span-columns(3);
+    clear: right;
+    text-align: right;
+    .vcard, .tags {
+      display: block;
+    }
+  }
 }
 
 // ----------------------------------------------------------------------------
@@ -34,8 +42,8 @@
 
 .listtitle {
   @extend %padded-icon;
-  @include trailer(1,$h1size);
-  &:before { @include adjust-font-size-to($largepx,1,$h1size)}
+  @include trailer(1,$xlargepx);
+  &:before { @include adjust-font-size-to($largepx,1,$xlargepx)}
   &.tags { @extend %icon-tag; }
   &.year, &.month, &.archive { @extend %icon-chat; }
 }

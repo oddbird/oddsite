@@ -14,7 +14,7 @@
   </ul>
 </nav>
 
-<section role="main" class="{{ config.pageclasses }}">
+<section role="main" {% if config.pageclasses %}class="{{ config.pageclasses }}"{% endif %}>
 
   {% block body %}
     {%- if not config.hide_title %}

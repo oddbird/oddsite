@@ -17,18 +17,18 @@ a {
 // ----------------------------------------------------------------------------
 // Ampersand
 
-// .amp { @include amp; }
+.amp {
+  @include serif;
+  font-style: italic;
+}
 
 // ----------------------------------------------------------------------------
 // Type
 
-$h1size : $xxlargepx;
-$h2size : $xlargepx;
-
 %type {
 
   h1 {
-    @include adjust-font-size-to($h1size);
+    @include adjust-font-size-to($largepx);
     a {
       #{$link} { color: $orange-dark; }
       #{$focus} { color: $pink-dark; }
@@ -36,12 +36,11 @@ $h2size : $xlargepx;
   }
 
   h2 {
-    @include adjust-font-size-to($h2size);
-    @include trailer(.5,$h2size);
+    @include trailer(.5);
+    text-transform: uppercase;
   }
 
-  h3, h4, strong { font-weight: bolder; }
-
+  h3, h4, strong { font-weight: bold; }
   em { font-style: italic; }
 
   p, ul, ol, pre { @include trailer; }

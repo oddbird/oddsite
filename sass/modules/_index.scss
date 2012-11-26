@@ -7,17 +7,29 @@ $introlarge: $xxlargepx;
 @mixin dropcap {
   &:first-line { @include serifcaps; }
   &:first-letter {
-    @include adjust-font-size-to($medpx*2);
+    @include adjust-font-size-to($xxxlargepx);
     float: left;
     padding: .1em .1em 0 0;
   }
 }
 
+.tagline {
+  @include sanscond;
+  @include trailer;
+  color: rgba($blue-darker,.75);
+  font-weight: 500;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: .04em;
+}
+
 .intro {
+  @include transition(all 300ms);
   @include adjust-font-size-to($introsize);
   @include trailer(1,$introsize);
   color: $blue-darkest;
   font-style: italic;
+  @include at-breakpoint($total-columns) { text-align: center; }
 }
 
 .projects {
@@ -66,12 +78,12 @@ $process-post: rhythm(3);
   }
 }
 
-@include at-breakpoint($break) {
+@include breakpoint($break) {
   .intro {
-    // @include squish(1,1);
+    @include squish(1,1);
     @include adjust-font-size-to($introlarge);
-    @include trailer(1,$introlarge);
-    text-align: center;
+    @include leader(1.5,$introlarge);
+    @include trailer(2,$introlarge);
   }
 
   .projects {

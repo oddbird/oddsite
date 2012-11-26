@@ -1,16 +1,12 @@
 // ----------------------------------------------------------------------------
 // Grid
 
-$total-columns      : 8;
-$column-width       : 3em;
-$gutter-width       : 1em;
+$total-columns      : 12;
+$column-width       : 2.5em;
+$gutter-width       : 1.5em;
 $grid-padding       : 1em;
 
-$break-width        : 40em;
-$break-cols         : 12;
-$break              : $break-width $break-cols;
-
-$breakpoint-media-output  : true;
+$break: 30em;
 
 // ----------------------------------------------------------------------------
 // Background

@@ -1,13 +1,55 @@
 // ----------------------------------------------------------------------------
+// Mixins
+
+@mixin bleed($padding: $grid-padding, $sides: left right) {
+  @if $sides == 'all' {
+    margin: - $padding;
+    padding: $padding;
+  } @else {
+    @each $side in $sides {
+      margin-#{$side}: - $padding;
+      padding-#{$side}: $padding;
+    }
+  }
+}
+
+@mixin darker-block {
+  @include bleed;
+  background: rgba($blue-darkest,.125);
+
+  a {
+    #{$link} { color: $orange-dark; }
+    #{$focus} { color: $pink-dark; }
+  }
+}
+
+@mixin section($color: rgba($orange-light,.1)) {
+  position: relative;
+  &::before, &::after {
+    @include stretch-y;
+    content: " ";
+    left: - 100%;
+    right: - 100%;
+    padding: {
+      left: 100%;
+      right: 100%;
+    }
+    background: $color;
+    z-index: -1;
+  }
+  &::before { @include rotate(2deg); }
+  &::after { @include rotate(-2deg); }
+}
+
+// ----------------------------------------------------------------------------
 // Layout
 
 body > div {
-  @include container($total-columns, $break);
-  @include box-shadow(rgba($blue-darker,.25) 0 0 rhythm(1));
+  @include container;
   @include clearfix;
+  @include box-shadow(rgba($blue-darker,.25) 0 0 rhythm(.5));
+  background: image-url('triangle.png') no-repeat scroll top;
   position: relative;
-
-  * { @include box-sizing(border-box); }
 }
 
 // ----------------------------------------------------------------------------
@@ -15,4 +57,6 @@ body > div {
 
 @import "banner";
 @import "nav";
+@import "main";
 @import "contentinfo";
+

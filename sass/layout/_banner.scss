@@ -6,26 +6,17 @@ $logo-rhythm  : floor(image-height($logo)/$base-font-size);
 
 [role="banner"] {
   @include bleed;
-  @include padding-trailer(.5);
-  @include background(linear-gradient(top, rgba($blue-dark,.125), rgba($blue-dark,0)))
+  @include background(linear-gradient(top, rgba($blue-dark,.125), rgba($blue-dark,0)));
 }
 
 .logo {
   a {
     @include replace-text($logo);
+    @include transition(all 300ms);
     min-height: rhythm($logo-rhythm);
     max-width: image-width($logo) + $largepx;
     display: block;
     margin: 0 auto;
-    background-position: bottom;
+    background-position: center;
   }
-}
-
-.tagline {
-  @include sanscond;
-  color: rgba($blue-darkest,.5);
-  font-weight: 500;
-  text-transform: uppercase;
-  text-align: center;
-  letter-spacing: .04em;
 }

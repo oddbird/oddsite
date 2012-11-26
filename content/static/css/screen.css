@@ -55,35 +55,35 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 
 @font-face {
-  font-family: "CenturyOldStyle";
-  src: url('../fonts/CenturyOldStyle-Regular-webfont.eot');
-  src: url('../fonts/CenturyOldStyle-Regular-webfont.eot?#iefix') format('eot'), url('../fonts/CenturyOldStyle-Regular-webfont.woff') format('woff'), url('../fonts/CenturyOldStyle-Regular-webfont.ttf') format('truetype'), url('../fonts/CenturyOldStyle-Regular-webfont.svg#webfontSMxOInhK') format('svg');
+  font-family: "BaskervilleFS";
+  src: url('../fonts/Baskerville-Regular-webfont.eot');
+  src: url('../fonts/Baskerville-Regular-webfont.eot?#iefix') format('eot'), url('../fonts/Baskerville-Regular-webfont.woff') format('woff'), url('../fonts/Baskerville-Regular-webfont.ttf') format('truetype'), url('../fonts/Baskerville-Regular-webfont.svg#webfontSMxOInhK') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "CenturyOldStyle";
-  src: url('../fonts/CenturyOldStyle-Italic-webfont.eot');
-  src: url('../fonts/CenturyOldStyle-Italic-webfont.eot?#iefix') format('eot'), url('../fonts/CenturyOldStyle-Italic-webfont.woff') format('woff'), url('../fonts/CenturyOldStyle-Italic-webfont.ttf') format('truetype'), url('../fonts/CenturyOldStyle-Italic-webfont.svg#webfontSMxOInhK') format('svg');
+  font-family: "BaskervilleFS";
+  src: url('../fonts/Baskerville-Italic-webfont.eot');
+  src: url('../fonts/Baskerville-Italic-webfont.eot?#iefix') format('eot'), url('../fonts/Baskerville-Italic-webfont.woff') format('woff'), url('../fonts/Baskerville-Italic-webfont.ttf') format('truetype'), url('../fonts/Baskerville-Italic-webfont.svg#webfontSMxOInhK') format('svg');
   font-weight: normal;
   font-style: italic;
 }
 
 @font-face {
-  font-family: "CenturyOldStyle";
-  src: url('../fonts/CenturyOldStyle-Bold-webfont.eot');
-  src: url('../fonts/CenturyOldStyle-Bold-webfont.eot?#iefix') format('eot'), url('../fonts/CenturyOldStyle-Bold-webfont.woff') format('woff'), url('../fonts/CenturyOldStyle-Bold-webfont.ttf') format('truetype'), url('../fonts/CenturyOldStyle-Bold-webfont.svg#webfontSMxOInhK') format('svg');
+  font-family: "BaskervilleFS";
+  src: url('../fonts/Baskerville-Bold-webfont.eot');
+  src: url('../fonts/Baskerville-Bold-webfont.eot?#iefix') format('eot'), url('../fonts/Baskerville-Bold-webfont.woff') format('woff'), url('../fonts/Baskerville-Bold-webfont.ttf') format('truetype'), url('../fonts/Baskerville-Bold-webfont.svg#webfontSMxOInhK') format('svg');
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "CenturyOldStyleCaps";
-  src: url('../fonts/CenturyOldStyleCaps-Regular-webfont.eot');
-  src: url('../fonts/CenturyOldStyleCaps-Regular-webfont.eot?#iefix') format('eot'), url('../fonts/CenturyOldStyleCaps-Regular-webfont.woff') format('woff'), url('../fonts/CenturyOldStyleCaps-Regular-webfont.ttf') format('truetype'), url('../fonts/CenturyOldStyleCaps-Regular-webfont.svg#webfontSMxOInhK') format('svg');
-  font-weight: normal;
-  font-style: normal;
+  font-family: "BaskervilleFS";
+  src: url('../fonts/Baskerville-BoldItalic-webfont.eot');
+  src: url('../fonts/Baskerville-BoldItalic-webfont.eot?#iefix') format('eot'), url('../fonts/Baskerville-BoldItalic-webfont.woff') format('woff'), url('../fonts/Baskerville-BoldItalic-webfont.ttf') format('truetype'), url('../fonts/Baskerville-BoldItalic-webfont.svg#webfontSMxOInhK') format('svg');
+  font-weight: bold;
+  font-style: italic;
 }
 
 @font-face {
@@ -154,7 +154,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   font-family: "FranklinGothicCond";
   src: url('../fonts/FranklinGothic-DemiCd-webfont.eot');
   src: url('../fonts/FranklinGothic-DemiCd-webfont.eot?#iefix') format('eot'), url('../fonts/FranklinGothic-DemiCd-webfont.woff') format('woff'), url('../fonts/FranklinGothic-DemiCd-webfont.ttf') format('truetype'), url('../fonts/FranklinGothic-DemiCd-webfont.svg#webfontSMxOInhK') format('svg');
-  font-weight: 500;
+  font-weight: bold;
   font-style: normal;
 }
 
@@ -162,7 +162,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   font-family: "FranklinGothicCond";
   src: url('../fonts/FranklinGothic-DemiCdIt-webfont.eot');
   src: url('../fonts/FranklinGothic-DemiCdIt-webfont.eot?#iefix') format('eot'), url('../fonts/FranklinGothic-DemiCdIt-webfont.woff') format('woff'), url('../fonts/FranklinGothic-DemiCdIt-webfont.ttf') format('truetype'), url('../fonts/FranklinGothic-DemiCdIt-webfont.svg#webfontSMxOInhK') format('svg');
-  font-weight: 500;
+  font-weight: bold;
   font-style: italic;
 }
 
@@ -171,26 +171,22 @@ html {
   line-height: 1.22222em;
 }
 
-html {
-  font-family: "CenturyOldStyle", Baskerville, Palatino, Cambria, Georgia, serif;
-  text-shadow: 0px 1px 0px rgba(229, 249, 255, 0.5);
-  background: #e5f9ff url('../images/noise.png?1353889148') fixed center;
-  background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, rgba(77, 210, 255, 0.25)), color-stop(75%, rgba(204, 242, 255, 0.25))), url('../images/noise.png?1353889148');
-  background-image: -webkit-linear-gradient(bottom, rgba(77, 210, 255, 0.25), rgba(204, 242, 255, 0.25) 75%), url('../images/noise.png?1353889148');
-  background-image: -moz-linear-gradient(bottom, rgba(77, 210, 255, 0.25), rgba(204, 242, 255, 0.25) 75%), url('../images/noise.png?1353889148');
-  background-image: -o-linear-gradient(bottom, rgba(77, 210, 255, 0.25), rgba(204, 242, 255, 0.25) 75%), url('../images/noise.png?1353889148');
-  background-image: linear-gradient(bottom, rgba(77, 210, 255, 0.25), rgba(204, 242, 255, 0.25) 75%), url('../images/noise.png?1353889148');
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-@media (min-width: 45em) {
-  [role="main"] {
-    clear: both;
-  }
-  [role="main"]:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
+html {
+  font-family: "BaskervilleFS", Baskerville, Palatino, Cambria, Georgia, serif;
+  text-shadow: 0px 1px 0px rgba(229, 249, 255, 0.5);
+  background: #e5f9ff url('../images/noise.png?1353918467') fixed center;
+  background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, rgba(77, 210, 255, 0.25)), color-stop(75%, rgba(204, 242, 255, 0.25))), url('../images/noise.png?1353918467');
+  background-image: -webkit-linear-gradient(bottom, rgba(77, 210, 255, 0.25), rgba(204, 242, 255, 0.25) 75%), url('../images/noise.png?1353918467');
+  background-image: -moz-linear-gradient(bottom, rgba(77, 210, 255, 0.25), rgba(204, 242, 255, 0.25) 75%), url('../images/noise.png?1353918467');
+  background-image: -o-linear-gradient(bottom, rgba(77, 210, 255, 0.25), rgba(204, 242, 255, 0.25) 75%), url('../images/noise.png?1353918467');
+  background-image: linear-gradient(bottom, rgba(77, 210, 255, 0.25), rgba(204, 242, 255, 0.25) 75%), url('../images/noise.png?1353918467');
+  color: #595959;
 }
 
 a:hover, a:active {
@@ -204,9 +200,14 @@ a:focus, a:hover, a:active {
   color: #b30059;
 }
 
+.amp {
+  font-family: "BaskervilleFS", Baskerville, Palatino, Cambria, Georgia, serif;
+  font-style: italic;
+}
+
 [role="main"] h1 {
-  font-size: 2.05556em;
-  line-height: 1.18919em;
+  font-size: 1.44444em;
+  line-height: 1.26923em;
 }
 [role="main"] h1 a:link, [role="main"] h1 a:visited {
   color: #cc5200;
@@ -215,12 +216,11 @@ a:focus, a:hover, a:active {
   color: #b30059;
 }
 [role="main"] h2 {
-  font-size: 1.5em;
-  line-height: 1.22222em;
-  margin-bottom: 0.40741em;
+  margin-bottom: 0.61111em;
+  text-transform: uppercase;
 }
 [role="main"] h3, [role="main"] h4, [role="main"] strong {
-  font-weight: bolder;
+  font-weight: bold;
 }
 [role="main"] em {
   font-style: italic;
@@ -286,15 +286,16 @@ a:focus, a:hover, a:active {
 }
 
 body > div {
-  max-width: 31em;
+  max-width: 48.5em;
   padding-left: 1em;
   padding-right: 1em;
   margin-left: auto;
   margin-right: auto;
-  -webkit-box-shadow: rgba(0, 115, 153, 0.25) 0 0 1.22222em;
-  -moz-box-shadow: rgba(0, 115, 153, 0.25) 0 0 1.22222em;
-  box-shadow: rgba(0, 115, 153, 0.25) 0 0 1.22222em;
   overflow: hidden;
+  -webkit-box-shadow: rgba(0, 115, 153, 0.25) 0 0 0.61111em;
+  -moz-box-shadow: rgba(0, 115, 153, 0.25) 0 0 0.61111em;
+  box-shadow: rgba(0, 115, 153, 0.25) 0 0 0.61111em;
+  background: url('../images/triangle.png?1353922782') no-repeat scroll top;
   position: relative;
 }
 body > div:after {
@@ -302,23 +303,12 @@ body > div:after {
   display: table;
   clear: both;
 }
-@media (min-width: 45em) {
-  body > div {
-    max-width: 47em;
-  }
-}
-body > div * {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
 
 [role="banner"] {
   margin-left: -1em;
-  margin-right: -1em;
   padding-left: 1em;
+  margin-right: -1em;
   padding-right: 1em;
-  padding-bottom: 0.61111em;
   background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(0, 153, 204, 0.125)), color-stop(100%, rgba(0, 153, 204, 0)));
   background: -webkit-linear-gradient(top, rgba(0, 153, 204, 0.125), rgba(0, 153, 204, 0));
   background: -moz-linear-gradient(top, rgba(0, 153, 204, 0.125), rgba(0, 153, 204, 0));
@@ -330,45 +320,33 @@ body > div * {
   text-indent: -119988px;
   overflow: hidden;
   text-align: left;
-  background-image: url('../images/logo_d.png?1353889148');
+  background-image: url('../images/logo_d.png?1353918467');
   background-repeat: no-repeat;
   background-position: 50% 50%;
+  -webkit-transition: all 300ms;
+  -moz-transition: all 300ms;
+  -o-transition: all 300ms;
+  transition: all 300ms;
   min-height: 6.11111em;
   max-width: 206px;
   display: block;
   margin: 0 auto;
-  background-position: bottom;
+  background-position: center;
 }
 
-.tagline {
-  font-family: "FranklinGothicCond", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: rgba(0, 77, 102, 0.5);
-  font-weight: 500;
-  text-transform: uppercase;
-  text-align: center;
-  letter-spacing: .04em;
+.home [role="navigation"] [rel="home"], .blog [role="navigation"] [href*="blog"] {
+  color: #007399;
 }
 
 [role="navigation"] {
-  margin-top: 0em;
-  padding-top: 0.30556em;
-  padding-bottom: 0.30556em;
-  margin-bottom: 0em;
-  overflow: hidden;
-  margin-left: -1em;
-  margin-right: -1em;
-  padding-left: 1em;
-  padding-right: 1em;
-  background: rgba(0, 77, 102, 0.125);
-}
-[role="navigation"] a:link, [role="navigation"] a:visited {
-  color: #cc5200;
-}
-[role="navigation"] a:focus, [role="navigation"] a:hover, [role="navigation"] a:active {
-  color: #b30059;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 3.05556em;
+  height: 0;
 }
 [role="navigation"] li {
-  width: 48.3871%;
+  width: 39.78495%;
   float: left;
   margin-right: 3.22581%;
   text-transform: capitalize;
@@ -378,48 +356,61 @@ body > div * {
   margin-right: 0;
 }
 [role="navigation"] li:first-child {
-  text-align: left;
-}
-[role="navigation"] li:last-child {
   text-align: right;
 }
 [role="navigation"] a {
+  -webkit-transition: all 300ms;
+  -moz-transition: all 300ms;
+  -o-transition: all 300ms;
+  transition: all 300ms;
   display: block;
+  padding: 0.30556em 0.61111em;
+  border-radius: .25em;
 }
-.home [role="navigation"] [rel="home"] {
-  color: #007399;
-}
-.blog [role="navigation"] [href*="blog"] {
-  color: #007399;
-}
-@media (min-width: 45em) {
-  [role="navigation"] {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    margin: 0;
-    padding: 0 1em;
-    background: transparent;
-    text-align: right;
-  }
-  [role="navigation"] li {
-    float: none;
-    width: auto;
-    margin-right: auto;
-    display: inline-block;
-  }
+@media (min-width: 30em) {
   [role="navigation"] a {
-    padding: 0.30556em 1.22222em;
+    background: rgba(0, 115, 153, 0.125);
   }
-  .home [role="navigation"] [rel="home"], .blog [role="navigation"] [href*="blog"] {
-    -moz-border-radius-bottomleft: 0.125em;
-    -webkit-border-bottom-left-radius: 0.125em;
-    border-bottom-left-radius: 0.125em;
-    -moz-border-radius-bottomright: 0.125em;
-    -webkit-border-bottom-right-radius: 0.125em;
-    border-bottom-right-radius: 0.125em;
-    background: rgba(0, 77, 102, 0.125);
+}
+[role="navigation"] [rel="home"] {
+  margin-left: -2em;
+  padding-left: 2em;
+}
+@media (min-width: 30em) {
+  [role="navigation"] [rel="home"]:focus, [role="navigation"] [rel="home"]:hover, [role="navigation"] [rel="home"]:active {
+    -webkit-transform: translateX(1em);
+    -moz-transform: translateX(1em);
+    -ms-transform: translateX(1em);
+    -o-transform: translateX(1em);
+    transform: translateX(1em);
+  }
+}
+[role="navigation"] [href*="blog"] {
+  margin-right: -2em;
+  padding-right: 2em;
+}
+@media (min-width: 30em) {
+  [role="navigation"] [href*="blog"]:focus, [role="navigation"] [href*="blog"]:hover, [role="navigation"] [href*="blog"]:active {
+    -webkit-transform: translateX(-1em);
+    -moz-transform: translateX(-1em);
+    -ms-transform: translateX(-1em);
+    -o-transform: translateX(-1em);
+    transform: translateX(-1em);
+  }
+}
+
+@media (min-width: 30em) {
+  [role="main"] {
+    clear: both;
+  }
+  [role="main"]:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .blog [role="main"] {
+    padding-top: 1.83333em;
+    padding-bottom: 1.83333em;
   }
 }
 
@@ -431,8 +422,8 @@ body > div * {
   padding-bottom: 1.22222em;
   margin-bottom: 0em;
   margin-left: -1em;
-  margin-right: -1em;
   padding-left: 1em;
+  margin-right: -1em;
   padding-right: 1em;
   background: rgba(0, 77, 102, 0.125);
   clear: both;
@@ -443,16 +434,16 @@ body > div * {
 [role="contentinfo"] a:focus, [role="contentinfo"] a:hover, [role="contentinfo"] a:active {
   color: #b30059;
 }
-@media (min-width: 45em) {
+@media (min-width: 30em) {
   [role="contentinfo"] .archive, [role="contentinfo"] .colophon {
-    width: 57.44681%;
+    width: 56.98925%;
     float: right;
     margin-right: 0;
   }
   [role="contentinfo"] .contact, [role="contentinfo"] .copyright {
-    width: 40.42553%;
+    width: 39.78495%;
     float: left;
-    margin-right: 2.12766%;
+    margin-right: 3.22581%;
   }
   [role="contentinfo"] .colophon {
     clear: left;
@@ -490,12 +481,31 @@ body > div * {
   letter-spacing: .04em;
 }
 
+.tagline {
+  font-family: "FranklinGothicCond", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin-bottom: 1.22222em;
+  color: rgba(0, 115, 153, 0.75);
+  font-weight: 500;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: .04em;
+}
+
 .intro {
+  -webkit-transition: all 300ms;
+  -moz-transition: all 300ms;
+  -o-transition: all 300ms;
+  transition: all 300ms;
   font-size: 1.44444em;
   line-height: 1.26923em;
   margin-bottom: 0.84615em;
   color: #004d66;
   font-style: italic;
+}
+@media (min-width: 54.5625em) {
+  .intro {
+    text-align: center;
+  }
 }
 
 .projects {
@@ -532,28 +542,28 @@ body > div * {
   transform: rotate(-2deg);
 }
 .projects p:first-child:first-line {
-  font-family: "CenturyOldStyleCaps", Baskerville, Palatino, Cambria, Georgia, serif;
+  font-variant: small-caps;
 }
 .projects p:first-child:first-letter {
-  font-size: 2.44444em;
-  line-height: 1.25em;
+  font-size: 3em;
+  line-height: 1.22222em;
   float: left;
   padding: .1em .1em 0 0;
 }
 
 .people {
   padding-top: 9.77778em;
-  background: url('../images/oddpeople.png?1353889148') no-repeat scroll top;
+  background: url('../images/oddpeople.png?1353918467') no-repeat scroll top;
 }
 .people strong {
-  font-family: "CenturyOldStyleCaps", Baskerville, Palatino, Cambria, Georgia, serif;
+  font-variant: small-caps;
 }
 .people p:first-child:first-line {
-  font-family: "CenturyOldStyleCaps", Baskerville, Palatino, Cambria, Georgia, serif;
+  font-variant: small-caps;
 }
 .people p:first-child:first-letter {
-  font-size: 2.44444em;
-  line-height: 1.25em;
+  font-size: 3em;
+  line-height: 1.22222em;
   float: left;
   padding: .1em .1em 0 0;
 }
@@ -611,44 +621,46 @@ body > div * {
   color: rgba(0, 115, 153, 0.25);
 }
 .process strong {
-  font-family: "CenturyOldStyleCaps", Baskerville, Palatino, Cambria, Georgia, serif;
+  font-variant: small-caps;
   text-transform: uppercase;
 }
 
-@media (min-width: 45em) {
+@media (min-width: 30em) {
   .intro {
+    margin-left: 8.60215%;
+    margin-right: 8.60215%;
     font-size: 2.05556em;
     line-height: 1.18919em;
-    margin-bottom: 0.59459em;
-    text-align: center;
+    margin-top: 0.89189em;
+    margin-bottom: 1.18919em;
   }
 
   .projects .wrap {
     overflow: hidden;
   }
   .projects p {
-    width: 31.91489%;
+    width: 31.1828%;
     float: left;
-    margin-right: 2.12766%;
+    margin-right: 3.22581%;
   }
   .projects p:nth-child(even) {
     float: right;
     margin-right: 0;
   }
   .projects p:first-child {
-    margin-left: 17.02128%;
+    margin-left: 17.2043%;
   }
   .projects p:last-child {
-    margin-right: 17.02128%;
+    margin-right: 17.2043%;
   }
 
   .people {
     overflow: hidden;
   }
   .people p {
-    width: 31.91489%;
+    width: 31.1828%;
     float: left;
-    margin-right: 2.12766%;
+    margin-right: 3.22581%;
   }
   .people p:last-child {
     float: right;
@@ -658,13 +670,13 @@ body > div * {
     float: none;
     width: auto;
     margin-right: auto;
-    margin-left: 25.53191%;
-    margin-right: 25.53191%;
+    margin-left: 25.80645%;
+    margin-right: 25.80645%;
   }
 
   .process {
-    padding-left: 17.02128%;
-    padding-right: 17.02128%;
+    padding-left: 17.2043%;
+    padding-right: 17.2043%;
   }
   .process p {
     padding-left: 3.66667em;
@@ -673,14 +685,17 @@ body > div * {
 .post {
   margin-top: 1.22222em;
   margin-bottom: 2.44444em;
+  overflow: hidden;
 }
 
 .byline {
+  font-size: 0.83333em;
+  line-height: 1.46667em;
   color: gray;
   font-style: italic;
 }
-.byline time {
-  font-family: "CenturyOldStyleCaps", Baskerville, Palatino, Cambria, Georgia, serif;
+.byline time, .byline a {
+  font-variant: small-caps;
   font-style: normal;
 }
 
@@ -691,33 +706,30 @@ body > div * {
   content: "»";
 }
 
-@media (min-width: 45em) {
-  .post:after {
-    content: "";
-    display: table;
-    clear: both;
+@media (min-width: 30em) {
+  .title, .body {
+    width: 74.19355%;
+    float: right;
+    margin-right: 0;
+    padding-right: 8.60215%;
   }
 
   .byline {
-    width: 23.40426%;
-    float: right;
-    margin-right: 0;
-  }
-  .byline time {
-    display: block;
-  }
-
-  .body {
-    width: 65.95745%;
+    width: 22.58065%;
     float: left;
-    margin-right: 2.12766%;
+    margin-right: 3.22581%;
+    clear: right;
+    text-align: right;
+  }
+  .byline .vcard, .byline .tags {
+    display: block;
   }
 }
 .listtitle {
-  margin-bottom: 0.59459em;
+  margin-bottom: 0.81481em;
 }
 .listtitle:before {
-  font-size: 0.7027em;
+  font-size: 0.96296em;
   line-height: 0.84615em;
 }
 

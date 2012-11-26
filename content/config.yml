@@ -1,9 +1,10 @@
 ---
-active_modules: [pygments, tags, blog, author]
+active_modules: [pygments, tags, blog, author, wrap, typogrify]
 author: OddBird
 canonical_url: http://oddbird.net/
 output_folder: ../output
 template_path: ../templates
+rst_writer: html5writer
 modules:
   pygments:
     style: tango

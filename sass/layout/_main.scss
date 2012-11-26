@@ -1,0 +1,11 @@
+// ----------------------------------------------------------------------------
+// Main
+
+[role="main"] {
+  @extend %type;
+  @include breakpoint($break) {
+    @include pie-clearfix;
+    clear: both;
+    .blog & { @include rhythm-padding(1.5); }
+  }
+}

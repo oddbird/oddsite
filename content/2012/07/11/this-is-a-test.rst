@@ -5,8 +5,8 @@ summary: |
   This is my first blog entry
   how many lines?
 
-this is a test
-==============
+A test post
+===========
 
 Let's try this shit out and see what happens.
 
