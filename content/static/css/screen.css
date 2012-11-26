@@ -200,6 +200,11 @@ a:focus, a:hover, a:active {
   color: #b30059;
 }
 
+.amp {
+  font-family: "BaskervilleFS", Baskerville, Palatino, Cambria, Georgia, serif;
+  font-style: italic;
+}
+
 [role="main"] h1 {
   font-size: 2.05556em;
   line-height: 1.18919em;

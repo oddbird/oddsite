@@ -35,7 +35,7 @@ Home
       and other open-source projects.
 
       We're currently working on `Portfoliyo`_
-      for teachers, students, and parents;
+      for teachers, students, |&| parents;
       and `Into the Green Green Mud`_,
       a multimedia novel.
       Recent projects include `MozTrap`_ for `Mozilla`_,
@@ -52,6 +52,10 @@ Home
 .. _mapping tool: http://github.com/oddbird/mlt
 .. _The Providence Plan: http://provplan.org/
 .. _Into the Green Green Mud: http://greengreenmud.com/
+
+.. |&| raw:: html
+
+  <span class="amp">&amp;</span>
 
 .. wrap:: div
   :class: people
