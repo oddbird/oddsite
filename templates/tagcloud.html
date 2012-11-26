@@ -1,14 +1,14 @@
-{% extends "layout.html" %}
+{% extends "blog/archives.html" %}
 {% block title %}Tags{% endblock %}
-{% block bodyclasses %}blog archive{% endblock bodyclasses %}
+{% block archivetype %}taglist{% endblock archivetype %}
 
-{% block body %}
-  <h1 class="listtitle tags">Tags</h1>
-  <ul class="tagcloud">
+{% block archive %}
+  <h1 class="archivetitle">Tags</h1>
+  <ul class="archivelist">
   {%- for tag in get_tags(limit=50) %}
-    <li class="tagitem">
+    <li class="archiveentry">
       <a href="{{ link_to('tag', tag=tag.name) }}" rel="tag">{{ tag.name }}</a>
-      <b class="tagcount">{{ tag.count }}</b>
+      <b class="archivecount">{{ tag.count }}</b>
     </li>
   {%- endfor %}
   </ul>

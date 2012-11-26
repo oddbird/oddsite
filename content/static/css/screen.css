@@ -254,13 +254,13 @@ a:focus, a:hover, a:active {
 }
 
 /* Use the following CSS code if you want to have a class per icon */
-[role="navigation"] a:before, .foottitle:before, .listarchive .permalink:before, .contact [href*="twitter"]:before, .listtitle:before, .tagcloud [rel="tag"]:before, [data-icon]:before {
+[role="navigation"] a:before, .foottitle:before, .listarchive .permalink:before, .contact [href*="twitter"]:before, .archivetitle:before, .archiveentry [rel="bookmark"]:before, .archiveentry [rel="tag"]:before, [data-icon]:before {
   font-family: 'IcoMoon';
   font-style: normal;
   speak: none;
 }
 
-[role="navigation"] a:before, .foottitle:before, .listarchive .permalink:before, .contact [href*="twitter"]:before, .listtitle:before, .tagcloud [rel="tag"]:before {
+[role="navigation"] a:before, .foottitle:before, .listarchive .permalink:before, .contact [href*="twitter"]:before, .archivetitle:before, .archiveentry [rel="bookmark"]:before, .archiveentry [rel="tag"]:before {
   padding-right: .4em;
 }
 
@@ -281,15 +281,15 @@ a:focus, a:hover, a:active {
   content: "\e003";
 }
 
-.listarchive .permalink:before {
+.listarchive .permalink:before, .archiveentry [rel="bookmark"]:before {
   content: "\e004";
 }
 
-.listtitle.tags:before, .tagcloud [rel="tag"]:before {
+.taglist .archivetitle:before, .tag .archivetitle:before, .archiveentry [rel="tag"]:before {
   content: "\e005";
 }
 
-[role="navigation"] [href*="blog"]:before, .listarchive .foottitle:before, .listtitle.year:before, .listtitle.month:before, .listtitle.archivetitle:before {
+[role="navigation"] [href*="blog"]:before, .listarchive .foottitle:before, .year .archivetitle:before, .month .archivetitle:before, .main .archivetitle:before {
   content: "\e007";
 }
 
@@ -780,30 +780,22 @@ body:after {
     display: block;
   }
 }
-.listtitle {
+.archivetitle:before, .archiveentry [rel="bookmark"]:before, .archiveentry [rel="tag"]:before {
+  font-size: .75em;
+}
+
+.archivetitle {
   margin-bottom: 22px;
   margin-bottom: 1.22222rem;
 }
-.listtitle:before {
-  font-size: 18px;
-  font-size: 1rem;
-  line-height: 22px;
-  line-height: 1.22222rem;
-}
 @media (min-width: 30em) {
-  .listtitle {
+  .archivetitle {
     padding-left: 25.80645%;
     padding-right: 8.60215%;
   }
 }
 
-.tagarchive .archiveentry:after, .blog-archive .archiveentry:after, .tagcloud .tagitem:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-.tagarchive .archivecount, .tagarchive [pubdate], .blog-archive .archivecount, .blog-archive [pubdate], .tagcloud .tagcount {
+.archiveentry .archivecount, .archiveentry [pubdate] {
   font-size: 15px;
   font-size: 0.83333rem;
   line-height: 22px;
@@ -813,7 +805,7 @@ body:after {
   color: gray;
 }
 @media (min-width: 30em) {
-  .tagarchive .archivecount, .tagarchive [pubdate], .blog-archive .archivecount, .blog-archive [pubdate], .tagcloud .tagcount {
+  .archiveentry .archivecount, .archiveentry [pubdate] {
     width: 22.58065%;
     float: left;
     margin-right: 3.22581%;
@@ -822,7 +814,7 @@ body:after {
 }
 
 @media (min-width: 30em) {
-  .tagarchive .permalink, .blog-archive .permalink, .tagcloud [rel="tag"], .sectionlist {
+  .archiveentry [rel="bookmark"], .archiveentry [rel="tag"], .sectionlist {
     width: 74.19355%;
     float: right;
     margin-right: 0;
@@ -830,11 +822,10 @@ body:after {
   }
 }
 
-.tagcloud [rel="tag"]:before {
-  font-size: 13px;
-  font-size: 0.72222rem;
-  line-height: 22px;
-  line-height: 1.22222rem;
+.archiveentry:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 .archivesection {
@@ -852,7 +843,16 @@ body:after {
   }
 }
 
-.sectionlist {
-  list-style: disc;
-  padding-left: 1.5em;
+.sectionlist .entrycount {
+  font-size: 15px;
+  font-size: 0.83333rem;
+  line-height: 22px;
+  line-height: 1.22222rem;
+  margin-right: .5em;
+}
+.sectionlist .entrycount:before {
+  content: "[";
+}
+.sectionlist .entrycount:after {
+  content: "]";
 }

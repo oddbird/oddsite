@@ -38,16 +38,20 @@
 // ----------------------------------------------------------------------------
 // Lists
 
-.listtitle {
+%archive-icon {
   @extend %padded-icon;
-  @include trailer(1,$largepx);
-  &:before { @include adjust-font-size-to($normpx,1,$largepx)}
-  &.tags { @extend %icon-tag; }
-  &.year, &.month, &.archivetitle { @extend %icon-chat; }
-  @include breakpoint($break) { @include pad(3,1); }
+  &:before { font-size: .75em; }
 }
 
-%archiveentry { @include pie-clearfix; }
+.archivetitle {
+  @extend %archive-icon;
+  @include trailer(1);
+
+  .taglist &, .tag & { @extend %icon-tag; }
+  .year &, .month &, .main & { @extend %icon-chat; }
+
+  @include breakpoint($break) { @include pad(3,1); }
+}
 
 %archiveinfo {
   @include adjust-font-size-to($smallpx);
@@ -67,21 +71,15 @@
   }
 }
 
-.tagarchive, .blog-archive {
-  .archiveentry { @extend %archiveentry; }
+.archiveentry {
+  @include pie-clearfix;
   .archivecount, [pubdate] { @extend %archiveinfo; }
-  .permalink { @extend %archiveitem; }
-}
-
-.tagcloud {
-  .tagitem { @extend %archiveentry; }
-  .tagcount { @extend %archiveinfo; }
-  [rel="tag"] {
+  [rel="bookmark"], [rel="tag"] {
     @extend %archiveitem;
-    @extend %padded-icon;
-    @extend %icon-tag;
-    &:before { @include adjust-font-size-to($xsmallpx); }
+    @extend %archive-icon;
   }
+  [rel="bookmark"] { @extend %icon-bookmark; }
+  [rel="tag"] { @extend %icon-tag; }
 }
 
 .archivesection {
@@ -93,6 +91,9 @@
 }
 .sectionlist {
   @extend %archiveitem;
-  list-style: disc;
-  padding-left: 1.5em;
+  .entrycount {
+    @include adjust-font-size-to($smallpx);
+    @include wrap("[" "]");
+    margin-right: .5em;
+  }
 }

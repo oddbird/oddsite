@@ -25,8 +25,16 @@ a {
 // ----------------------------------------------------------------------------
 // Type
 
-%type {
+@mixin before($content) { &:before { content: $content; } }
+@mixin after($content) { &:after { content: $content; } }
 
+@mixin wrap($wrapper: "“" "”") {
+  $wrapper: if(length($wrapper) < 2, $wrapper $wrapper, $wrapper);
+  @include before(nth($wrapper,1));
+  @include after(nth($wrapper,2));
+}
+
+%type {
   h1 {
     @include adjust-font-size-to($largepx);
     a {

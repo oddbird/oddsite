@@ -1,10 +1,9 @@
-{% extends "layout.html" %}
+{% extends "blog/archives.html" %}
 {% block title %}Blog Archive for {{ entry.year }}{% endblock %}
-{% block bodyclasses %}blog{% endblock bodyclasses %}
+{% block archivetype %}year{% endblock archivetype %}
 
-{% block body %}
-
-  <h1 class="listtitle year">
+{% block archive %}
+  <h1 class="archivetitle">
     <a href="{{ link_to('blog_archive') }}">Blog Archive</a>:
     {{ entry.year }}
   </h1>
@@ -12,7 +11,7 @@
   <ul class="blog-archive">
     {%- for subentry in entry.months %}
       <li class="archiveentry">
-        <a href="{{ link_to('blog_archive', year=entry.year, month=subentry.month) }}" class="permalink">
+        <a href="{{ link_to('blog_archive', year=entry.year, month=subentry.month) }}" rel="bookmark">
           {{ subentry.month_name }}
         </a>
         <b class="archivecount">{{ subentry.count }}</b>
