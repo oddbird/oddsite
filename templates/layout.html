@@ -3,17 +3,16 @@
 {% block layout %}
 <div>
 
+<header role="banner">
+  <h1 class="logo"><a href="/" rel="home">OddBird</a></h1>
+</header>
+
 <nav role="navigation">
   <ul class="primary">
     <li><a href="/" rel="home">home</a></li>
     <li><a href="/blog/">blog</a></li>
   </ul>
 </nav>
-
-<header role="banner">
-  <h1 class="logo"><a href="/" rel="home">OddBird</a></h1>
-  <p class="tagline">Custom web tools for humans.</p>
-</header>
 
 <section role="main" class="{{ config.pageclasses }}">
 

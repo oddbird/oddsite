@@ -59,8 +59,6 @@ html {
 
 [role="main"] {
   @extend %type;
-  @include padding-leader(2);
-  background: image-url('headline.png') no-repeat top;
   @include at-breakpoint($break) {
     @include pie-clearfix;
     clear: both;

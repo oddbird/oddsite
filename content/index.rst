@@ -7,51 +7,42 @@ template: layout.html
 Home
 ====
 
+.. container:: tagline
+
+  Custom web tools for humans.
+
 .. container:: intro
 
   We love chasing ideas into existence.
   We could do that all night long,
   and sometimes we do.
 
-|projects|
+.. container:: projects
 
-.. |projects| raw:: html
+  .. container:: wrap
 
-  <div class="container projects">
-  <div class="wrap">
-    <p>
-      We created
-      <a href="http://susy.oddbird.net/">Susy</a>
+      We created `Susy`_
       for web designers like ourselves,
       and we are core contributors to
-      <a href="http://compass-style.org/">Compass</a>,
-      <a href="http://djangoproject.com/">Django</a>,
-      <a href="http://pip-installer.org/">pip</a>,
-      <a href="http://virtualenv.org/">virtualenv</a>
+      `Compass`_,
+      `Django`_,
+      `pip`_,
+      `virtualenv`_
       and other open-source projects.
-    </p>
-    <p>
-      We're currently working on
-      <a href="http://www.portfoliyo.org">Portfoliyo</a>
+
+      We're currently working on `Portfoliyo`_
       for teachers, students, and parents;
-      and <a href="http://greengreenmud.com/">Into the Green Green Mud</a>,
+      and `Into the Green Green Mud`_,
       a multimedia novel.
-      Recent projects include
-      <a href="http://moztrap.mozilla.org/">MozTrap</a>
-      for <a href="http://mozilla.org/">Mozilla</a>,
-      and a
-      <a href="http://github.com/oddbird/mlt">mapping tool</a>
-      for
-      <a href="http://provplan.org/">The Providence Plan</a>.
-    </p>
-  </div>
-  </div>
+      Recent projects include `MozTrap`_ for `Mozilla`_,
+      and a `mapping tool`_ for `The Providence Plan`_.
 
 .. _Susy: http://susy.oddbird.net/
 .. _Compass: http://compass-style.org/
 .. _Django: http://djangoproject.com/
 .. _pip: http://pip-installer.org/
 .. _virtualenv: http://virtualenv.org/
+.. _Portfoliyo: http://portfoliyo.org/
 .. _MozTrap: http://moztrap.mozilla.org/
 .. _Mozilla: http://mozilla.org/
 .. _mapping tool: http://github.com/oddbird/mlt
