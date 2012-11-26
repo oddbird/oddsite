@@ -1,49 +1,45 @@
 // ----------------------------------------------------------------------------
 // Nav
 
+$nav-columns: $total-columns/2 - 1;
+$nav-rhythm: $logo-rhythm/2;
 $activenav: $blue-darker;
 
+%activenav {
+  color: $activenav;
+  @include breakpoint($break) { background: rgba($activenav,.25); }
+}
+
 [role="navigation"] {
-  @include rhythm(0,.25,.25,0);
-  @include clearfix;
-  @include darker-block;
+  @include stretch-x;
+  top: rhythm($nav-rhythm);
+  height: 0;
 
   li {
-    @include span-columns($total-columns/2);
+    @include span-columns($nav-columns);
     @include nth-omega(even);
     text-transform: capitalize;
-    &:first-child { text-align: left; }
-    &:last-child { text-align: right; }
+    &:first-child { text-align: right; }
   }
 
   a {
     @extend %padded-icon;
     display: block;
+    padding: rhythm(.25) rhythm(.5);
+    @include breakpoint($break) {
+      background: rgba($activenav,.125);
+    }
   }
   [rel="home"] {
     @extend %icon-home;
-    .home & { color: $activenav; }
+    @include bleed($grid-padding*2, left);
+    border-radius: .25em;
+    .home & { @extend %activenav; }
   }
   [href*="blog"] {
     @extend %icon-chat;
-    .blog & { color: $activenav; }
-  }
-
-  @include at-breakpoint($break) {
-    @include stretch-x;
-    top: 0;
-    margin: 0;
-    padding: 0 $grid-padding;
-    background: transparent;
-    text-align: right;
-    li {
-      @include reset-columns;
-      display: inline-block;
-    }
-    a { padding: rhythm(.25) rhythm(1); }
-    .home & [rel="home"], .blog & [href*="blog"] {
-      @include border-bottom-radius;
-      background: rgba($blue-darkest,.125);
-    }
+    @include bleed($grid-padding*2, right);
+    border-radius: .25em;
+    .blog & { @extend %activenav; }
   }
 }

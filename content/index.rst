@@ -9,7 +9,7 @@ Home
 
 .. container:: tagline
 
-  Custom web tools for humans.
+  Custom web tools for humans
 
 .. container:: intro
 

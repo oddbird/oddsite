@@ -8,7 +8,7 @@
   @include darker-block;
   clear: both;
 
-  @include at-breakpoint($break) {
+  @include breakpoint($break) {
     .archive, .colophon {
       @include span-columns(7 omega);
     }

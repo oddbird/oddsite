@@ -20,7 +20,7 @@
   &:after { content: "»"; }
 }
 
-@include at-breakpoint($break) {
+@include breakpoint($break) {
   .post { @include pie-clearfix; }
   .byline {
     @include span-columns(3 omega);
