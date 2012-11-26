@@ -12,11 +12,11 @@
 
   <ul class="blog-archive">
     {%- for entry in entry.entries %}
-      <li>
-        <time datetime="{{ entry.pub_date.isoformat() }}">
+      <li class="archiveitem">
+        <time datetime="{{ entry.pub_date.isoformat() }}" pubdate="pubdate">
           {%- if entry.pub_date %}{{ entry.pub_date.strftime("%m/%d/%y") }}{% endif %}
         </time>
-        <a href="{{ link_to('page', slug=entry.slug) }}">{{ entry.title }}</a>
+        <a href="{{ link_to('page', slug=entry.slug) }}" class="permalink">{{ entry.title }}</a>
       </li>
     {%- endfor %}
   </ul>

@@ -3,6 +3,7 @@
 
 [role="main"] {
   @extend %type;
+  .archive & { @include rhythm-padding(1.5); }
   @include breakpoint($break) {
     @include pie-clearfix;
     clear: both;

@@ -9,11 +9,13 @@
     {{ entry.year }}
   </h1>
 
-  <ul class=blog-archive>
+  <ul class="blog-archive">
     {%- for subentry in entry.months %}
-      <li>
-        <a href="{{ link_to('blog_archive', year=entry.year, month=subentry.month) }}">{{ subentry.month_name }}</a>
-        [{{ subentry.count }}]
+      <li class="archiveentry">
+        <a href="{{ link_to('blog_archive', year=entry.year, month=subentry.month) }}" class="permalink">
+          {{ subentry.month_name }}
+        </a>
+        <b class="archivecount">{{ subentry.count }}</b>
       </li>
     {%- endfor %}
   </ul>

@@ -9,10 +9,10 @@
   <ul class="blog-archive">
   {%- for entry in archive %}
     <li>
-      <h2>
+      <h2 class="archivesection">
         <a href="{{ link_to('blog_archive', year=entry.year) }}">{{ entry.year }}</a>
       </h2>
-      <ul>
+      <ul class="sectionlist">
       {%- for subentry in entry.months %}
         <li>
           <a href="{{ link_to('blog_archive', year=entry.year, month=subentry.month) }}">{{ subentry.month_name }}</a>

@@ -246,13 +246,13 @@ a:focus, a:hover, a:active {
 }
 
 /* Use the following CSS code if you want to have a class per icon */
-[role="navigation"] a:before, .foottitle:before, .archive [href*="/20"]:before, .contact [href*="twitter"]:before, .listtitle:before, [data-icon]:before {
+[role="navigation"] a:before, .foottitle:before, .archive [href*="/20"]:before, .contact [href*="twitter"]:before, .listtitle:before, .tagcloud [rel="tag"]:before, [data-icon]:before {
   font-family: 'IcoMoon';
   font-style: normal;
   speak: none;
 }
 
-[role="navigation"] a:before, .foottitle:before, .archive [href*="/20"]:before, .contact [href*="twitter"]:before, .listtitle:before {
+[role="navigation"] a:before, .foottitle:before, .archive [href*="/20"]:before, .contact [href*="twitter"]:before, .listtitle:before, .tagcloud [rel="tag"]:before {
   padding-right: .4em;
 }
 
@@ -277,7 +277,7 @@ a:focus, a:hover, a:active {
   content: "\e004";
 }
 
-.listtitle.tags:before {
+.listtitle.tags:before, .tagcloud [rel="tag"]:before {
   content: "\e005";
 }
 
@@ -399,6 +399,10 @@ body > div:after {
   }
 }
 
+.archive [role="main"] {
+  padding-top: 1.83333em;
+  padding-bottom: 1.83333em;
+}
 @media (min-width: 30em) {
   [role="main"] {
     clear: both;
@@ -726,29 +730,69 @@ body > div:after {
   }
 }
 .listtitle {
-  margin-bottom: 0.81481em;
+  margin-bottom: 0.84615em;
 }
 .listtitle:before {
-  font-size: 0.96296em;
-  line-height: 0.84615em;
+  font-size: 0.69231em;
+  line-height: 1.22222em;
+}
+@media (min-width: 30em) {
+  .listtitle {
+    padding-left: 25.80645%;
+    padding-right: 8.60215%;
+  }
 }
 
-.blog-archive ul {
-  list-style: disc;
-  padding-left: 1em;
-}
-
-.tagcloud {
-  list-style-type: none;
-}
-.tagcloud, .tagcloud li {
-  margin: 0px;
-  padding: 0px;
-  display: inline;
-}
-.tagcloud li:after {
-  content: ", ";
-}
-.tagcloud li:last-child:after {
+.tagarchive .archiveentry:after, .blog-archive .archiveentry:after, .tagcloud .tagitem:after {
   content: "";
+  display: table;
+  clear: both;
+}
+
+.tagarchive .archivecount, .tagarchive [pubdate], .blog-archive .archivecount, .blog-archive [pubdate], .tagcloud .tagcount {
+  font-size: 0.83333em;
+  line-height: 1.46667em;
+  float: left;
+  margin-right: .4em;
+  color: gray;
+}
+@media (min-width: 30em) {
+  .tagarchive .archivecount, .tagarchive [pubdate], .blog-archive .archivecount, .blog-archive [pubdate], .tagcloud .tagcount {
+    width: 22.58065%;
+    float: left;
+    margin-right: 3.22581%;
+    text-align: right;
+  }
+}
+
+@media (min-width: 30em) {
+  .tagarchive .permalink, .blog-archive .permalink, .tagcloud [rel="tag"], .sectionlist {
+    width: 74.19355%;
+    float: right;
+    margin-right: 0;
+    padding-right: 8.60215%;
+  }
+}
+
+.tagcloud [rel="tag"]:before {
+  font-size: 0.72222em;
+  line-height: 1.69231em;
+}
+
+.archivesection {
+  font-size: 0.83333em;
+  line-height: 1.46667em;
+}
+@media (min-width: 30em) {
+  .archivesection {
+    width: 22.58065%;
+    float: left;
+    margin-right: 3.22581%;
+    text-align: right;
+  }
+}
+
+.sectionlist {
+  list-style: disc;
+  padding-left: 1.5em;
 }

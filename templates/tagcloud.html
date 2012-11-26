@@ -1,14 +1,14 @@
 {% extends "layout.html" %}
 {% block title %}Tags{% endblock %}
-{% block bodyclasses %}blog{% endblock bodyclasses %}
+{% block bodyclasses %}blog archive{% endblock bodyclasses %}
 
 {% block body %}
   <h1 class="listtitle tags">Tags</h1>
   <ul class="tagcloud">
   {%- for tag in get_tags(limit=50) %}
-    <li>
-      <a href="{{ link_to('tag', tag=tag.name) }}">{{ tag.name }}</a>
-      ({{ tag.count }})
+    <li class="tagitem">
+      <a href="{{ link_to('tag', tag=tag.name) }}" rel="tag">{{ tag.name }}</a>
+      <b class="tagcount">{{ tag.count }}</b>
     </li>
   {%- endfor %}
   </ul>

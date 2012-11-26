@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block title %}Entries by {{ author.name }}{% endblock %}
-{% block bodyclasses %}blog {{ author.name }}{% endblock %}
+{% block bodyclasses %}blog archive{% endblock %}
 
 {% block body %}
   {%- for ctx in entries %}
