@@ -8,6 +8,7 @@ var OBC = (function (OBC) {
             for (i = 0; i < triggers.length; i++) {
                 triggers[i].addEventListener('click', this.toggleListener);
             }
+            return triggers;
         },
         toggleListener: function (e) {
             e.preventDefault();
@@ -23,6 +24,7 @@ var OBC = (function (OBC) {
                 document.body.classList.toggle('show-right');
                 document.body.classList.remove('show-left');
             }
+            return document.body.getAttribute('class');
         }
     };
 

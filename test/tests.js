@@ -105,7 +105,7 @@
         );
     });
 
-    test('defuscate integration', 6, function () {
+    test('integration', 6, function () {
         var results = OBC.defuscate.init(this.elems);
         strictEqual(results[0].outerHTML, this.results[0].outerHTML);
         strictEqual(results[1].outerHTML, this.results[1].outerHTML);
@@ -113,6 +113,24 @@
         strictEqual(results[3].outerHTML, this.results[3].outerHTML);
         strictEqual(results[4].outerHTML, this.results[4].outerHTML);
         strictEqual(results[5].outerHTML, this.results[5].outerHTML);
+    });
+
+    module('susyOffCanvasToggle', {
+        setup: function () {
+            this.elems = [
+                $('<a href="#left" class="toggle">show left</a>').get(0),
+                $('<a href="#right" class="toggle">show right</a>').get(0)
+            ];
+        },
+        teardown: function () {
+            $('body').removeClass('show-left show-right');
+        }
+    });
+
+    test('toggle', 3, function () {
+        strictEqual(OBC.susyOffCanvasToggle.toggle(this.elems[0]), 'show-left');
+        strictEqual(OBC.susyOffCanvasToggle.toggle(this.elems[1]), 'show-right');
+        strictEqual(OBC.susyOffCanvasToggle.toggle(this.elems[1]), '');
     });
 
 }(OBC, jQuery));
