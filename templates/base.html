@@ -48,8 +48,8 @@
 
   <!-- Styles -->
   {% block styles %}
-  <link rel="stylesheet" href="/static/dist/{{ get_asset('screen.min.css') }}" media="screen" />
-  <link rel="stylesheet" href="/static/dist/{{ get_asset('print.min.css') }}" media="print" />
+  <link rel="stylesheet" href="{{ get_asset('/static/css/screen.css') }}" media="screen" />
+  <link rel="stylesheet" href="{{ get_asset('/static/css/print.css') }}" media="print" />
   {% endblock styles %}
 
   <!-- Modernizr -->
@@ -79,7 +79,7 @@
 {% block layout %}{% endblock layout %}
 
 <!-- JavaScript -->
-<script src="/static/dist/{{ get_asset('all-js.min.js') }}"></script>
+<script src="{{ get_asset('/static/dist/all-js.js') }}"></script>
 
 </body>
 </html>

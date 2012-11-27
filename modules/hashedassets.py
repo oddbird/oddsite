@@ -13,8 +13,12 @@ from rstblog import builder as builder_module
 
 
 @contextfunction
-def get_asset(context, fn):
-    return context.get('hashedassets', {}).get(fn, fn)
+def get_asset(context, fp):
+    if not context.get('minify', False):
+        return fp
+    fn = '%s.min%s' % os.path.splitext(os.path.basename(os.path.split(fp)[-1]))
+    fn = context.get('hashedassets', {}).get(fn, fn)
+    return '/static/dist/%s' % fn
 
 
 def monkeypatch_context():
@@ -39,4 +43,5 @@ def setup(builder):
         return
     with open(asset_map_path) as f:
         builder.jinja_env.globals['hashedassets'] = json.loads(f.read())
+    builder.jinja_env.globals['minify'] = True
     monkeypatch_context()
