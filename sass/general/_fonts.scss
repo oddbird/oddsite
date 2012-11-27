@@ -79,7 +79,7 @@
     'FranklinGothic-Demi-webfont.svg#webfontSMxOInhK',svg
   ),
   'FranklinGothic-Demi-webfont.eot',
-  500,
+  bold,
   normal
 );
 @include font-face(
@@ -90,28 +90,6 @@
     'FranklinGothic-DemiIt-webfont.svg#webfontSMxOInhK',svg
   ),
   'FranklinGothic-DemiIt-webfont.eot',
-  500,
-  italic
-);
-@include font-face(
-  'FranklinGothic',
-  font-files(
-    'FranklinGothic-Hvy-webfont.woff',woff,
-    'FranklinGothic-Hvy-webfont.ttf',truetype,
-    'FranklinGothic-Hvy-webfont.svg#webfontSMxOInhK',svg
-  ),
-  'FranklinGothic-Hvy-webfont.eot',
-  bold,
-  normal
-);
-@include font-face(
-  'FranklinGothic',
-  font-files(
-    'FranklinGothic-HvyIt-webfont.woff',woff,
-    'FranklinGothic-HvyIt-webfont.ttf',truetype,
-    'FranklinGothic-HvyIt-webfont.svg#webfontSMxOInhK',svg
-  ),
-  'FranklinGothic-HvyIt-webfont.eot',
   bold,
   italic
 );

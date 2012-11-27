@@ -13,7 +13,7 @@ Home
 
   Custom web tools for humans
 
-.. wrap:: div
+.. wrap:: p
   :class: intro
 
   We love chasing ideas into existence.
@@ -35,12 +35,12 @@ Home
       `virtualenv`_
       and other open-source projects.
 
-      We're currently working on `Portfoliyo`_
-      for teachers, students, |&| parents;
-      and `Into the Green Green Mud`_,
-      a multimedia novel.
-      Recent projects include `MozTrap`_ for `Mozilla`_,
+      Recent work includes `MozTrap`_ for `Mozilla`_,
       and a `mapping tool`_ for `The Providence Plan`_.
+      Now we're working on `Portfoliyo`_
+      for teachers, students, & parents;
+      and `Into the Green Green Mud`_,
+      a digital novel.
 
 .. _Susy: http://susy.oddbird.net/
 .. _Compass: http://compass-style.org/
@@ -54,19 +54,15 @@ Home
 .. _The Providence Plan: http://provplan.org/
 .. _Into the Green Green Mud: http://greengreenmud.com/
 
-.. |&| raw:: html
-
-  <span class="amp">&amp;</span>
-
 .. wrap:: div
   :class: people
 
   **OddBird**
   is three brothers
   who thrive on freely shared ideas
-  and playful collaboration,
+  & playful collaboration,
   crossing disciplines,
-  breaking boundaries
+  breaking boundaries,
   and eating our dessert with the soup spoon.
 
   |Carl|
@@ -78,9 +74,10 @@ Home
 
   |Eric|
   is a `multimedia artist`_
-  specializing in writing_, design_, and performance_.
-  He is also a specialist in the art of
-  user-interface creation and CSS-mangling_.
+  mixing words_, images_,
+  music_, code_, and performance_.
+  He's a sucker for new projects,
+  puzzles, and postprandial perambulations.
 
   |Jonny|
   is a `front-end developer`_,
@@ -106,10 +103,11 @@ Home
   </strong>
 
 .. _multimedia artist: http://eric.andmeyer.com/
-.. _writing: http://vicioustrap.com/
-.. _design: http://dribbble.com/ericam/
+.. _words: http://vicioustrap.com/
+.. _images: http://dribbble.com/ericam/
+.. _music: http://teacupgorilla.com/
+.. _code: http://github.com/ericam/
 .. _performance: http://teacupgorilla.com/
-.. _CSS-mangling: http://github.com/ericam/
 
 .. |Jonny| raw:: html
 
@@ -123,9 +121,9 @@ Home
 .. wrap:: div
   :class: process
 
-  We use a **lean** process_,
-  deploying and integrating new functionality frequently
-  and aiming to deliver usable product launches
+  We use a **lean** process_ to
+  deploy & integrate new functionality frequently,
+  aiming to deliver usable product launches
   as early and often as possible.
 
   We encourage clients to stay closely **connected** with the daily progress,
@@ -133,11 +131,11 @@ Home
   and re-prioritization
   via `Pivotal Tracker`_.
 
-  We work with the open web stack:
-  **accessible** semantic HTML5 markup,
+  We work with the **accessible** open web stack:
+  semantic HTML5 markup,
   unobtrusive Javascript,
   and advanced CSS3 styling.
-  On the server side we are a Python_ shop,
+  On the server side we use Python_,
   and have extensive Django_ experience.
 
 .. _process: /process/checklist/

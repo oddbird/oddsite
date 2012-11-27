@@ -6,9 +6,9 @@ $introlarge: $xxlargepx;
 @mixin dropcap {
   &:first-line { @include serifcaps; }
   &:first-letter {
-    @include adjust-font-size-to($xxxlargepx);
+    @include adjust-font-size-to($xxxlargepx,1.9);
     float: left;
-    padding: .1em .1em 0 0;
+    padding-right: .1em;
   }
 }
 
