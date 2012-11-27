@@ -7,6 +7,10 @@ module.exports = function (grunt) {
     var SRC_JS = 'content/static/js/';
     var DIST = 'content/static/dist/';
 
+    var ALL_JS = DIST + 'all-js.js';
+    var PRINT_CSS = SRC_CSS + 'print.css';
+    var SCREEN_CSS = SRC_CSS + 'screen.css';
+
     var MINIFIED_CSS = DIST + 'screen.min.css';
     var MINIFIED_PRINT_CSS = DIST + 'print.min.css';
     var MINIFIED_JS = DIST + 'all-js.min.js';
@@ -24,7 +28,7 @@ module.exports = function (grunt) {
         concat: {
             dist: {
                 src: SRC_JS + '*.js',
-                dest: DIST + 'all-js.js'
+                dest: ALL_JS
             }
         },
         min: {
@@ -35,11 +39,11 @@ module.exports = function (grunt) {
         },
         cssmin: {
             screen: {
-                src: SRC_CSS + 'screen.css',
+                src: SCREEN_CSS,
                 dest: MINIFIED_CSS
             },
             print: {
-                src: SRC_CSS + 'print.css',
+                src: PRINT_CSS,
                 dest: MINIFIED_PRINT_CSS
             }
         },
@@ -54,7 +58,7 @@ module.exports = function (grunt) {
                 tasks: 'qunit'
             },
             js: {
-                files: ['content/static/js/**/*.js'],
+                files: [SRC_JS + '**/*.js'],
                 tasks: 'lint dev-quick qunit'
             },
             build: {
@@ -117,14 +121,17 @@ module.exports = function (grunt) {
     grunt.registerTask('prod-build', 'exec:prod_build');
 
     // Prepare assets
-    grunt.registerTask('assets', 'compass concat min cssmin');
+    grunt.registerTask('assets', 'compass concat');
+
+    // Minify assets
+    grunt.registerTask('minify', 'min cssmin');
 
     // Full clean dev build
     grunt.registerTask('dev', 'dev-clean assets dev-build');
     // Quick dev build; no clean, no JS lint/tests
     grunt.registerTask('dev-quick', 'assets dev-build');
     // Full clean prod build
-    grunt.registerTask('prod', 'prod-clean assets hash prod-build');
+    grunt.registerTask('prod', 'prod-clean assets minify hash prod-build');
 
     // Run server.
     grunt.registerTask('serve', 'dev server watch');
