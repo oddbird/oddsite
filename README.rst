@@ -4,15 +4,17 @@ OddBird
 Development
 -----------
 
-If you want to run this project in a `virtualenv`_ to isolate it from other
-Python projects on your system, create a virtualenv and activate it.  Then run
-``pip install -r requirements.txt`` to install the dependencies for this
-project into your Python environment.
+Local development on this project requires `Python`_ 2.7, `Ruby`_, `Node.js`_
+and `PhantomJS`_.
 
-`Node.js`_ is required for local development, as are the Ruby gems for
-Compass/Sass development. To install the Ruby gems, first ``gem install
-bundler``, then ``bundle install``. Update the ``Gemfile`` if newer gems
-should be used.
+Node dependencies are pre-installed in the ``node_modules`` directory.
+
+To install the Python dependencies, run ``pip install -r requirements.txt``
+(you may want to run this in a `virtualenv`_ to isolate it from other Python
+projects on your system).
+
+To install the needed Ruby gems, first ``gem install bundler``, then ``bundle
+install``. Update the ``Gemfile`` if newer gems should be used.
 
 The ``output/`` directory is a git submodule (it is the repo
 `github.com/oddbird/oddbird.github.com`_, which is also the deployment on
@@ -34,6 +36,7 @@ and ``sass/`` directories:
 * minify JS with `UglifyJS`_
 * compile Sass to CSS
 * minify CSS
+* run the JS unit tests
 * regenerate the site as static HTML files under the ``output/`` directory
 
 To perform these tasks manually, run ``bin/grunt``. To watch for changes
@@ -44,18 +47,18 @@ changes, and if you're ready to deploy them, ``git push``.  Then change back
 into the outer repo and you can commit (and push) the changes there along with
 the updated submodule.
 
+.. _Python: http://www.python.org
+.. _Ruby: http://www.ruby-lang.org
 .. _virtualenv: http://www.virtualenv.org
-
-.. _Node.js: http://nodejs.org/
-
+.. _Node.js: http://nodejs.org
+.. _PhantomJS: http://phantomjs.org
 .. _github.com/oddbird/oddbird.github.com: https://github.com/oddbird/oddbird.github.com
-
-.. _JSHint: http://www.jshint.com/
-
+.. _JSHint: http://www.jshint.com
 .. _UglifyJS: https://github.com/mishoo/UglifyJS/
+
 
 Deployment
 ----------
 
 The site is deployed on Github Pages; ``git push`` the submodule under
-``output/`` to deploy the changes live.
+``output/`` (on master branch) to deploy changes live.
