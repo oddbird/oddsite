@@ -22,7 +22,7 @@ module.exports = function (grunt) {
         },
         concat: {
             dist: {
-                src: SRC_JS + '**/*.js',
+                src: SRC_JS + '*.js',
                 dest: DIST + 'all-js.js'
             }
         },
