@@ -15,7 +15,7 @@ module.exports = function (grunt) {
     // Project configuration.
     grunt.initConfig({
         lint: {
-            files: ['grunt.js', SRC_JS + '**/*.js', 'test/*.js']
+            files: ['grunt.js', SRC_JS + '*.js', 'test/*.js']
         },
         qunit: {
             files: 'test/tests.html'
