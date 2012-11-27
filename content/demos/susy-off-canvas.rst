@@ -10,9 +10,13 @@ Off-Canvas Susy Demo
 .. raw:: html
 
   <div class="container">
-    <header>header</header>
-    <div class="left">left</div>
+    <header>
+      <a href="#left" class="show-left">show-left</a>
+      <a href="#right" class="show-right">show-right</a>
+      header
+    </header>
+    <div class="left" id="left">left</div>
     <div class="main">main</div>
-    <div class="right">right</div>
+    <div class="right" id="right">right</div>
     <footer>footer</footer>
   </div>

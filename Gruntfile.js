@@ -129,7 +129,7 @@ module.exports = function (grunt) {
     grunt.registerTask('assets', ['compass', 'concat']);
 
     // Minify assets
-    grunt.registerTask('minify', ['uglify', 'cssmin']);
+    grunt.registerTask('minify', ['uglify', 'mincss']);
 
     // Full clean dev build
     grunt.registerTask('dev', ['dev-clean', 'assets', 'dev-build']);

@@ -26,25 +26,76 @@ body {
   padding: 0;
 }
 
-.logo { margin-bottom: 0px; }
-.tagline { font-style: italic; }
+[role="banner"] {
+  @include adjust-font-size-to($xxlargepx);
+  margin-bottom: 0px;
+}
 
-[role="navigation"], [role="contentinfo"] {
+[role="navigation"], [role="contentinfo"],
+.pagination, .readmore {
   display: none;
+}
+
+%section {
+  &:before {
+    @include rhythm-margins(1);
+    content: "* * *";
+    display: block;
+    text-align: center;
+  }
 }
 
 // ----------------------------------------------------------------------------
 // Type
 
-a:after { content: " [" attr(href) "] "; }
+a {
+  #{$link}, #{$focus} {
+    text-decoration: underline;
+  }
+}
+
+a:after {
+  @include sanscond;
+  @include adjust-font-size-to($smallpx);
+  content: " [" attr(href) "] ";
+}
 a[href^="/"]:after {
   content: " [http://oddbird.net" attr(href) "] ";
-  [role="banner"] & { display: none; }
+  [role="banner"] &, .byline & { display: none; }
+  .title & {
+    @include adjust-font-size-to($smallpx);
+    display: block;
+  }
 }
 
 h1, h2, h3 { page-break-after: avoid; }
+
+h2 { text-transform: none !important; }
 
 p, h1, h2, h3 {
   orphans: 3;
   widows: 3;
 }
+
+p { margin-top: 0; }
+
+// ----------------------------------------------------------------------------
+// Home
+
+.tagline {
+  @include sanscond;
+  text-transform: uppercase;
+}
+.intro {
+  @include adjust-font-size-to($largepx);
+  font-style: italic;
+}
+.projects, .people, .process { @extend %section; }
+
+// ----------------------------------------------------------------------------
+// Blog
+
+.post { @extend %section; }
+.title { margin: 0; }
+.byline { font-style: italic; }
+.code { border-left-color: #000 !important; }
