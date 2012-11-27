@@ -81,11 +81,11 @@ Home
 
   |Jonny|
   is a `front-end developer`_,
-  project manager,
+  ultimate frisbee D-line cutter,
   and occasional `college philosophy professor`_.
-  He likes his frisbees thrown deep,
-  his students smart-alecky,
-  and his scotch served neat.
+  He likes complicated board games,
+  homebrewed IPAs,
+  and hucking it deep.
 
 .. |Carl| raw:: html
 
