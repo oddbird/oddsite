@@ -54,7 +54,7 @@
 
   <!--[if gte IE 7]><!-->
   {% block styles %}
-  <link rel="stylesheet" href="/static/dist/screen.min.css" />
+  <link rel="stylesheet" href="/static/dist/{{ get_asset('screen.min.css') }}" />
   {% endblock styles %}
   <!--<![endif]-->
 
@@ -82,7 +82,7 @@
 {% block layout %}{% endblock layout %}
 
 <!-- JavaScript -->
-<script src="/static/dist/all-js.min.js"></script>
+<script src="/static/dist/{{ get_asset('all-js.min.js') }}"></script>
 
 </body>
 </html>
