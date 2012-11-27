@@ -62,7 +62,7 @@ module.exports = function (grunt) {
             }
         },
         server: {
-            base: 'output/'
+            base: 'dev-output/'
         },
         jshint: {
             options: {
@@ -109,12 +109,12 @@ module.exports = function (grunt) {
     // Prepare assets
     grunt.registerTask('assets', 'compass concat min cssmin');
 
-    // Full clean and dev build, with JS lint/tests
-    grunt.registerTask('dev', 'lint assets qunit clean dev-build');
+    // Full clean dev build
+    grunt.registerTask('dev', 'clean assets dev-build');
     // Quick dev build; no clean, no JS lint/tests
     grunt.registerTask('dev-quick', 'assets dev-build');
     // Full clean prod build
-    grunt.registerTask('prod', 'lint clean assets qunit hash prod-build');
+    grunt.registerTask('prod', 'clean assets hash prod-build');
 
     // Run server.
     grunt.registerTask('serve', 'dev server watch');
