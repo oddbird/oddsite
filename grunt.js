@@ -11,10 +11,10 @@ module.exports = function (grunt) {
     // Project configuration.
     grunt.initConfig({
         lint: {
-            files: ['grunt.js', SRC_JS + '**/*.js', 'test/**/*.js']
+            files: ['grunt.js', SRC_JS + '**/*.js', 'test/*.js']
         },
         qunit: {
-            files: 'test/**/*.html'
+            files: 'test/tests.html'
         },
         concat: {
             dist: {
@@ -35,7 +35,7 @@ module.exports = function (grunt) {
             }
         },
         watch: {
-            files: ['content/**/*', 'templates/**/*.html', 'sass/**/*.scss'],
+            files: ['content/**/*', 'templates/**/*.html', 'sass/**/*.scss', 'test/**/*'],
             tasks: 'default'
         },
         server: {
@@ -76,7 +76,7 @@ module.exports = function (grunt) {
     });
 
     // Default task.
-    grunt.registerTask('default', 'lint concat min compass cssmin exec');
+    grunt.registerTask('default', 'lint concat min qunit compass cssmin exec');
 
     // Run server.
     grunt.registerTask('serve', 'default server watch');
