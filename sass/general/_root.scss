@@ -7,6 +7,7 @@
 // ----------------------------------------------------------------------------
 // Root
 
+$bg     : rgba($blue-lightest,.25);
 $noise  : image-url('noise.png');
 $grad   : linear-gradient(bottom, rgba($blue-light,.25), rgba($blue-lightest,.25) 75%);
 
@@ -16,8 +17,9 @@ $grad   : linear-gradient(bottom, rgba($blue-light,.25), rgba($blue-lightest,.25
 html {
   @include serif;
   @include text-shadow;
-  @include background($blue-hint $noise fixed center);
-  @include background-image($grad, $noise);
+  @include background($blue-hint); // no-rgba, no-multiplebgs
+  @include background($bg, $noise); // no-gradients
+  @include background($bg $grad no-repeat, $noise repeat fixed);
   overflow-x: hidden;
   height: 100%;
   color: $base;

@@ -59,9 +59,9 @@ $process-post: rhythm(3);
   @include rhythm(0,1.5,.5,0);
   counter-reset: process;
   p {
+    @include rem(padding-left, $process-pre);
     counter-increment: process;
     position: relative;
-    padding-left: $process-pre;
     &:before {
       @include adjust-font-size-to($counter-size);
       content: counter(process) ".";

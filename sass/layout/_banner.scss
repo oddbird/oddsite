@@ -6,11 +6,11 @@ $logo-rhythm  : floor(image-height($logo)/$base-font-size);
 
 [role="banner"] {
   @include bleed;
-  @include background(linear-gradient(top, rgba($blue-dark,.125), rgba($blue-dark,0)));
+  @include background-image(linear-gradient(top, rgba($blue-dark,.125), rgba($blue-dark,0)));
   [rel="home"] {
     @include replace-text($logo);
     @include transition(all 300ms);
-    min-height: rhythm($logo-rhythm);
+    @include rem(min-height, rhythm($logo-rhythm));
     max-width: image-width($logo) + $largepx;
     display: block;
     margin: 0 auto;
