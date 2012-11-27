@@ -4,10 +4,13 @@
 // --------------------------------------------
 // settings
 
-$total-columns  : 12;
+$total-columns  : 6;
 $column-width   : 5em;
-$gutter-width   : 1em;
+$gutter-width   : 0;
 $grid-padding   : 0;
+
+$full-size      : 12;
+$container-width: container-outer-width($full-size);
 
 // --------------------------------------------
 // layout
@@ -17,40 +20,51 @@ $grid-padding   : 0;
 // because it will automatically remain full-width
 // at any smaller size.
 
+@include border-box-sizing;
+
 body { padding: 0; margin: 0; }
-* { @include box-sizing(border-box); }
 
 .container {
   @include container;
-  @include box-sizing(content-box);
   overflow: hidden;
 }
 
 header, footer { clear: both; }
 
 // --------------------------------------------
-// phone
-//
-// No need for Susy here -
-// we're not dealing with columns.
+// small
+
+$side-width: columns(5);
 
 .left, .right, .main {
-  @include transition(.2s all ease);
+  @include transition(.3s all ease);
   float: left;
   width: 100%;
 }
 
+.left, .right {
+  width: $side-width;
+}
+
 .left {
   margin-left: -100%;
+  .show-left & { margin-left: 0; }
+}
+
+.main {
+  margin-left: 0;
+  .show-left & { margin-right: -100%; }
+  .show-right & { margin-left: - $side-width; }
 }
 
 .right {
   float: right;
   margin-right: -100%;
+  .show-right & { margin-right: 0; }
 }
 
 // --------------------------------------------
-// tablet
+// medium
 //
 // You can set this to any min-width
 // and any column-count that you want for tablets.
@@ -61,45 +75,60 @@ header, footer { clear: both; }
 // so the column-count is just how you want to divide up
 // the 100% space that we have available.
 
-$tablet   : 30em;   // tablet min-width breakpoint
+$medium   : 30em;   // medium min-width breakpoint
 $columns  : 8;      // divide into as many columns as you want
-$main     : 6;      // main content uses most of them
+$main     : 5;      // main content uses most of them
 $side     : $columns - $main; // room for one sidebar at a time
 
-@include at-breakpoint($tablet $columns) {
-  .main {
-    @include span-columns($main);
-    margin-right: 0;
-  }
+@include at-breakpoint($medium $columns) {
+  [href="#left"] { visibility: hidden; }
+
+
   .left {
-    @include span-columns($side);
+    width: columns($side);
     margin-left: 0;
+    .show-right & { margin-left: - 100%; }
   }
+
+  .main {
+    width: columns($main);
+    .show-right & { margin-left: 0; }
+    .show-left & {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+
   .right {
-    @include span-columns($side omega);
-    margin-right: -100%;
+    width: columns($side);
+    .show-right & { margin-right: 0; }
   }
 }
 
 // --------------------------------------------
-// desktop
+// large
 //
 // Now we're just bringing things back to normal.
 
-$desktop    : 60em;           // desktop breakpoint
-$columns    : $total-columns; // use all the columns
+$large      : 60em;           // large breakpoint
+$columns    : $full-size;      // use all the columns
 $main       : 6;              // main uses some
 $side       : floor(($columns - $main)/2); // the rest are divided between sidebars
 
-@include at-breakpoint($desktop $columns) {
+@include at-breakpoint($large $columns) {
+  [href="#right"] { visibility: hidden; }
+
+  .left {
+    width: columns($side);
+    .show-right & { margin-left: 0; }
+  }
+
   .main {
-    @include span-columns($main);
+    width: columns($main);
   }
-  .left, .right {
-    @include span-columns($side);
-  }
+
   .right {
-    @include omega;
+    width: columns($side);
     margin-right: 0;
   }
 }
@@ -112,10 +141,16 @@ $side       : floor(($columns - $main)/2); // the rest are divided between sideb
   padding: 1em;
 }
 .left { background: #cff; }
+.main { background: #ddd; }
 .right { background: #ffc; }
 
 header, footer {
   height: 3em;
   padding: 1em;
   background: #fcf;
+  text-align: center;
 }
+
+[href="#left"] { float: left; }
+[href="#right"] { float: right; }
+
