@@ -2,6 +2,7 @@ public: yes
 hide_title: yes
 template: demo.html
 styles: pages/susy-off-canvas.css
+extrajs: pages/susy-off-canvas.js
 
 
 Off-Canvas Susy Demo
@@ -11,8 +12,8 @@ Off-Canvas Susy Demo
 
   <div class="container">
     <header>
-      <a href="#left" class="show-left">show-left</a>
-      <a href="#right" class="show-right">show-right</a>
+      <a href="#left" class="toggle">show-left</a>
+      <a href="#right" class="toggle">show-right</a>
       header
     </header>
     <div class="left" id="left">left</div>
