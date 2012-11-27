@@ -26,7 +26,7 @@
 
 .foottitle {
   @extend %padded-icon;
-  font-weight: 500;
+  font-weight: bold;
 
   a {
     #{$link} { color: $orange-darker; }
@@ -34,7 +34,7 @@
   }
 
   .listarchive & { @extend %icon-chat; }
-  .contact & { @extend %icon-email; }
+  .contact & { @extend %icon-envelope; }
 }
 
 .listarchive, .contact, .colophon { @include trailer; }

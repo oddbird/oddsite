@@ -106,7 +106,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   font-family: "FranklinGothic";
   src: url('../fonts/FranklinGothic-Demi-webfont.eot');
   src: url('../fonts/FranklinGothic-Demi-webfont.eot?#iefix') format('eot'), url('../fonts/FranklinGothic-Demi-webfont.woff') format('woff'), url('../fonts/FranklinGothic-Demi-webfont.ttf') format('truetype'), url('../fonts/FranklinGothic-Demi-webfont.svg#webfontSMxOInhK') format('svg');
-  font-weight: 500;
+  font-weight: bold;
   font-style: normal;
 }
 
@@ -114,22 +114,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   font-family: "FranklinGothic";
   src: url('../fonts/FranklinGothic-DemiIt-webfont.eot');
   src: url('../fonts/FranklinGothic-DemiIt-webfont.eot?#iefix') format('eot'), url('../fonts/FranklinGothic-DemiIt-webfont.woff') format('woff'), url('../fonts/FranklinGothic-DemiIt-webfont.ttf') format('truetype'), url('../fonts/FranklinGothic-DemiIt-webfont.svg#webfontSMxOInhK') format('svg');
-  font-weight: 500;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: "FranklinGothic";
-  src: url('../fonts/FranklinGothic-Hvy-webfont.eot');
-  src: url('../fonts/FranklinGothic-Hvy-webfont.eot?#iefix') format('eot'), url('../fonts/FranklinGothic-Hvy-webfont.woff') format('woff'), url('../fonts/FranklinGothic-Hvy-webfont.ttf') format('truetype'), url('../fonts/FranklinGothic-Hvy-webfont.svg#webfontSMxOInhK') format('svg');
-  font-weight: bold;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "FranklinGothic";
-  src: url('../fonts/FranklinGothic-HvyIt-webfont.eot');
-  src: url('../fonts/FranklinGothic-HvyIt-webfont.eot?#iefix') format('eot'), url('../fonts/FranklinGothic-HvyIt-webfont.woff') format('woff'), url('../fonts/FranklinGothic-HvyIt-webfont.ttf') format('truetype'), url('../fonts/FranklinGothic-HvyIt-webfont.svg#webfontSMxOInhK') format('svg');
   font-weight: bold;
   font-style: italic;
 }
@@ -249,8 +233,8 @@ a:focus, a:hover, a:active {
 
 @font-face {
   font-family: "IcoMoon";
-  src: url('../fonts/icons.eot');
-  src: url('../fonts/icons.eot?#iefix') format('eot'), url('../fonts/icons.svg#icons') format('svg'), url('../fonts/icons.woff') format('woff'), url('../fonts/icons.ttf') format('truetype');
+  src: url('../fonts/oddsite.eot');
+  src: url('../fonts/oddsite.eot?#iefix') format('eot'), url('../fonts/oddsite.svg#oddsite') format('svg'), url('../fonts/oddsite.woff') format('woff'), url('../fonts/oddsite.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -275,6 +259,10 @@ a:focus, a:hover, a:active {
   content: "\e000";
 }
 
+[role="navigation"] [href*="blog"]:before, .listarchive .foottitle:before, .year .archivetitle:before, .month .archivetitle:before, .main .archivetitle:before {
+  content: "\e001";
+}
+
 .contact .foottitle:before {
   content: "\e002";
 }
@@ -284,15 +272,7 @@ a:focus, a:hover, a:active {
 }
 
 [role="contentinfo"] [rel="bookmark"]:before, .archiveentry [rel="bookmark"]:before {
-  content: "\e004";
-}
-
-.taglist .archivetitle:before, .tag .archivetitle:before, .archiveentry [rel="tag"]:before {
   content: "\e005";
-}
-
-[role="navigation"] [href*="blog"]:before, .listarchive .foottitle:before, .year .archivetitle:before, .month .archivetitle:before, .main .archivetitle:before {
-  content: "\e007";
 }
 
 body {
@@ -457,7 +437,7 @@ body:after {
 }
 
 .foottitle {
-  font-weight: 500;
+  font-weight: bold;
 }
 .foottitle a:link, .foottitle a:visited {
   color: #993d00;
@@ -571,10 +551,10 @@ body:after {
 .projects p:first-child:first-letter {
   font-size: 54px;
   font-size: 3rem;
-  line-height: 66px;
-  line-height: 3.66667rem;
+  line-height: 42px;
+  line-height: 2.32222rem;
   float: left;
-  padding: .1em .1em 0 0;
+  padding-right: .1em;
 }
 
 .people {
@@ -591,10 +571,10 @@ body:after {
 .people p:first-child:first-letter {
   font-size: 54px;
   font-size: 3rem;
-  line-height: 66px;
-  line-height: 3.66667rem;
+  line-height: 42px;
+  line-height: 2.32222rem;
   float: left;
-  padding: .1em .1em 0 0;
+  padding-right: .1em;
 }
 .people p:first-child strong {
   font-weight: normal;
