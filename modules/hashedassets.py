@@ -2,11 +2,19 @@ import os
 import json
 
 from jinja2 import contextfunction
+from rstblog import builder as builder_module
 
 
 @contextfunction
 def get_asset(context, fn):
     return context.get('hashedassets', {}).get(fn, fn)
+
+
+def monkeypatch_context():
+    """With hashed assets, all RST (templated) contexts needs rebuilt always."""
+    builder_module.Context._orig_needs_build = builder_module.Context.needs_build
+    builder_module.Context.needs_build = property(
+        lambda self: self.program_name == 'rst' or self._orig_needs_build)
 
 
 def setup(builder):
@@ -21,3 +29,4 @@ def setup(builder):
         return
     with open(asset_map_path) as f:
         builder.jinja_env.globals['hashedassets'] = json.loads(f.read())
+    monkeypatch_context()

@@ -104,8 +104,8 @@ module.exports = function (grunt) {
     // Full clean & build, but don't lint JS or run JS tests.
     grunt.registerTask('build', 'compass concat min cssmin hash exec');
 
-    // Quick build (@@@ need to make this just build, not clean)
-    grunt.registerTask('quick-build', 'compass concat min cssmin hash exec');
+    // Quick build
+    grunt.registerTask('quick-build', 'compass concat min cssmin hash exec:build');
 
     // Run server.
     grunt.registerTask('serve', 'build server watch');
