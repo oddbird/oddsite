@@ -138,7 +138,7 @@ module.exports = function (grunt) {
     // Quick dev build; no clean, no JS lint/tests
     grunt.registerTask('dev-quick', ['assets', 'dev-build']);
     // Full clean prod build
-    grunt.registerTask('prod', ['prod-clean', 'assets', 'minify', 'hash', 'prod-build']);
+    grunt.registerTask('prod', ['prod-clean', 'assets', 'qunit', 'minify', 'hash', 'prod-build']);
 
     // Run server.
     grunt.registerTask('serve', ['dev', 'server', 'watch']);
