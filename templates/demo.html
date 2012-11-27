@@ -15,7 +15,5 @@
 {% block extrajs %}
   {% if config.extrajs %}
     <script src="/static/js/{{ config.extrajs }}"></script>
-  {% else %}
-    {{ super() }}
   {% endif %}
 {% endblock extrajs %}
