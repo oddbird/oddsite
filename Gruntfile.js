@@ -7,6 +7,10 @@ module.exports = function (grunt) {
     var SRC_JS = 'content/static/js/';
     var DIST = 'content/static/dist/';
 
+    var ALL_JS = DIST + 'all-js.js';
+    var PRINT_CSS = SRC_CSS + 'print.css';
+    var SCREEN_CSS = SRC_CSS + 'screen.css';
+
     var MINIFIED_CSS = DIST + 'screen.min.css';
     var MINIFIED_PRINT_CSS = DIST + 'print.min.css';
     var MINIFIED_JS = DIST + 'all-js.min.js';
@@ -15,31 +19,55 @@ module.exports = function (grunt) {
 
     // Project configuration.
     grunt.initConfig({
-        lint: {
-            files: ['grunt.js', SRC_JS + '*.js', 'test/*.js']
-        },
-        qunit: {
-            files: 'test/tests.html'
-        },
+        pkg: grunt.file.readJSON('package.json'),
         concat: {
             dist: {
-                src: SRC_JS + '*.js',
-                dest: DIST + 'all-js.js'
+                src: [SRC_JS + '*.js'],
+                dest: ALL_JS
             }
         },
-        min: {
+        uglify: {
             dist: {
-                src: '<config:concat.dist.dest>',
+                src: '<%= concat.dist.dest %>',
                 dest: MINIFIED_JS
             }
         },
-        cssmin: {
+        qunit: {
+            files: ['test/tests.html']
+        },
+        jshint: {
+            gruntfile: {
+                options: {
+                    jshintrc: '.jshintrc'
+                },
+                src: ['Gruntfile.js']
+            },
+            src: {
+                options: {
+                    jshintrc: '.jshintrc'
+                },
+                src: [SRC_JS + '*.js']
+            },
+            test: {
+                options: {
+                    jshintrc: 'test/.jshintrc'
+                },
+                src: ['test/*.js']
+            }
+        },
+        compass: {
+            dev: {
+                bundleExec: true,
+                config: 'config.rb'
+            }
+        },
+        mincss: {
             screen: {
-                src: SRC_CSS + 'screen.css',
+                src: SCREEN_CSS,
                 dest: MINIFIED_CSS
             },
             print: {
-                src: SRC_CSS + 'print.css',
+                src: PRINT_CSS,
                 dest: MINIFIED_PRINT_CSS
             }
         },
@@ -48,51 +76,7 @@ module.exports = function (grunt) {
             dest: DIST,
             mapping: ASSET_MAP
         },
-        watch: {
-            test: {
-                files: ['test/**/*'],
-                tasks: 'qunit'
-            },
-            js: {
-                files: ['content/**/*.js'],
-                tasks: 'lint dev-quick qunit'
-            },
-            build: {
-                files: ['templates/**/*.html'],
-                tasks: 'dev'
-            },
-            quick: {
-                files: ['content/**/!(*.js)', 'sass/**/*.scss'],
-                tasks: 'dev-quick'
-            }
-        },
-        server: {
-            base: 'dev-output/'
-        },
-        jshint: {
-            options: {
-                curly: true,
-                eqeqeq: true,
-                immed: true,
-                latedef: true,
-                newcap: true,
-                noarg: true,
-                sub: true,
-                undef: true,
-                boss: true,
-                eqnull: true,
-                browser: true
-            },
-            globals: {}
-        },
-        uglify: {},
-        compass: {
-            dev: {
-                bundleExec: true,
-                config: 'config.rb'
-            }
-        },
-        exec: {
+        shell: {
             dev_clean: {
                 command: 'rm -rf dev-output/* && rm -rf content/static/dist/*',
                 stdout: true
@@ -107,34 +91,62 @@ module.exports = function (grunt) {
             prod_build: {
                 command: 'python run.py prod'
             }
+        },
+        server: {
+            base: 'dev-output/'
+        },
+        watch: {
+            gruntfile: {
+                files: '<%= jshint.gruntfile.src %>',
+                tasks: ['jshint:gruntfile']
+            },
+            test: {
+                files: ['test/**/*'],
+                tasks: ['jshint:test', 'qunit']
+            },
+            js: {
+                files: [SRC_JS + '**/*.js'],
+                tasks: ['jshint:src', 'dev-quick', 'qunit']
+            },
+            build: {
+                files: ['templates/**/*.html'],
+                tasks: ['dev']
+            },
+            quick: {
+                files: ['content/**/!(*.js)', 'sass/**/*.scss'],
+                tasks: ['dev-quick']
+            }
         }
     });
 
-    // aliases for exec tasks
-    grunt.registerTask('dev-clean', 'exec:dev_clean');
-    grunt.registerTask('prod-clean', 'exec:prod_clean');
-    grunt.registerTask('dev-build', 'exec:dev_build');
-    grunt.registerTask('prod-build', 'exec:prod_build');
+    // aliases for shell tasks
+    grunt.registerTask('dev-clean', 'shell:dev_clean');
+    grunt.registerTask('prod-clean', 'shell:prod_clean');
+    grunt.registerTask('dev-build', 'shell:dev_build');
+    grunt.registerTask('prod-build', 'shell:prod_build');
 
     // Prepare assets
-    grunt.registerTask('assets', 'compass concat min cssmin');
+    grunt.registerTask('assets', ['compass', 'concat']);
+
+    // Minify assets
+    grunt.registerTask('minify', ['uglify', 'cssmin']);
 
     // Full clean dev build
-    grunt.registerTask('dev', 'dev-clean assets dev-build');
+    grunt.registerTask('dev', ['dev-clean', 'assets', 'dev-build']);
     // Quick dev build; no clean, no JS lint/tests
-    grunt.registerTask('dev-quick', 'assets dev-build');
+    grunt.registerTask('dev-quick', ['assets', 'dev-build']);
     // Full clean prod build
-    grunt.registerTask('prod', 'prod-clean assets hash prod-build');
+    grunt.registerTask('prod', ['prod-clean', 'assets', 'minify', 'hash', 'prod-build']);
 
     // Run server.
-    grunt.registerTask('serve', 'dev server watch');
+    grunt.registerTask('serve', ['dev', 'server', 'watch']);
 
     // Default task
     grunt.registerTask('default', 'dev');
 
     // Plugin tasks.
-    grunt.loadNpmTasks('grunt-css');
+    grunt.loadNpmTasks('grunt-contrib-mincss');
     grunt.loadNpmTasks('grunt-compass');
-    grunt.loadNpmTasks('grunt-exec');
+    grunt.loadNpmTasks('grunt-shell');
     grunt.loadNpmTasks('grunt-hash');
 };
