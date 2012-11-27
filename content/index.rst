@@ -26,21 +26,21 @@ Home
   .. wrap:: div
     :class: wrap
 
-      We created `Susy`_
-      for web designers like ourselves,
-      and we are core contributors to
-      `Compass`_,
-      `Django`_,
-      `pip`_,
-      `virtualenv`_
-      and other open-source projects.
+    We created `Susy`_
+    for web designers like ourselves,
+    and we are core contributors to
+    `Compass`_,
+    `Django`_,
+    `pip`_,
+    `virtualenv`_
+    and other open-source projects.
 
-      Recent work includes `MozTrap`_ for `Mozilla`_,
-      and a `mapping tool`_ for `The Providence Plan`_.
-      Now we're working on `Portfoliyo`_
-      for teachers, students, & parents;
-      and `Into the Green Green Mud`_,
-      a digital novel.
+    Recent work includes `MozTrap`_ for `Mozilla`_,
+    and a `mapping tool`_ for `The Providence Plan`_.
+    Now we're working on `Portfoliyo`_
+    for teachers, students, & parents;
+    and `Into the Green Green Mud`_,
+    a digital novel.
 
 .. _Susy: http://susy.oddbird.net/
 .. _Compass: http://compass-style.org/

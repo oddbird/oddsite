@@ -47,16 +47,10 @@
   <link rel="apple-touch-icon-precomposed" href="/static/images/favicons/apple-touch-icon-precomposed.png">
 
   <!-- Styles -->
-
-  <!--[if IE 6]>
-  <link href="http://universal-ie6-css.googlecode.com/files/ie6.1.0.css" media="screen, projection" />
-  <![endif]-->
-
-  <!--[if gte IE 7]><!-->
   {% block styles %}
-  <link rel="stylesheet" href="/static/dist/{{ get_asset('screen.min.css') }}" />
+  <link rel="stylesheet" href="/static/dist/{{ get_asset('screen.min.css') }}" media="screen" />
+  <link rel="stylesheet" href="/static/dist/{{ get_asset('print.min.css') }}" media="print" />
   {% endblock styles %}
-  <!--<![endif]-->
 
   <!-- Modernizr -->
   <script src="/static/js/plugins/modernizr.custom.41881.js"></script>
