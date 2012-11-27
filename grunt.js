@@ -54,7 +54,7 @@ module.exports = function (grunt) {
                 tasks: 'qunit'
             },
             js: {
-                files: ['content/**/*.js'],
+                files: ['content/static/js/**/*.js'],
                 tasks: 'lint dev-quick qunit'
             },
             build: {
