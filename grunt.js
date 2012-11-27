@@ -44,8 +44,22 @@ module.exports = function (grunt) {
             mapping: ASSET_MAP
         },
         watch: {
-            files: ['content/**/*', 'templates/**/*.html', 'sass/**/*.scss', 'test/**/*'],
-            tasks: 'default'
+            test: {
+                files: ['test/**/*'],
+                tasks: 'qunit'
+            },
+            js: {
+                files: ['content/**/*.js'],
+                tasks: 'lint quick-build qunit'
+            },
+            build: {
+                files: ['templates/**/*.html'],
+                tasks: 'build'
+            },
+            quick: {
+                files: ['content/**/!(*.js)', 'sass/**/*.scss'],
+                tasks: 'quick-build'
+            }
         },
         server: {
             base: 'output/'
@@ -87,8 +101,14 @@ module.exports = function (grunt) {
     // Default task.
     grunt.registerTask('default', 'lint compass concat min cssmin qunit hash exec');
 
+    // Full clean & build, but don't lint JS or run JS tests.
+    grunt.registerTask('build', 'compass concat min cssmin hash exec');
+
+    // Quick build (@@@ need to make this just build, not clean)
+    grunt.registerTask('quick-build', 'compass concat min cssmin hash exec');
+
     // Run server.
-    grunt.registerTask('serve', 'default server watch');
+    grunt.registerTask('serve', 'build server watch');
 
     // Plugin tasks.
     grunt.loadNpmTasks('grunt-css');
