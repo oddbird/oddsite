@@ -1,5 +1,6 @@
 TAGS
-collected-assets/
+content/static/dist/
+content/static/css/
 *.DS_Store
 *~
 *.pyc

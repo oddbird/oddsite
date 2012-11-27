@@ -3,12 +3,14 @@ module.exports = function (grunt) {
 
     'use strict';
 
-    var SRC_CSS = 'output/static/css/';
-    var SRC_JS = 'js/';
-    var DIST = 'output/static/dist/';
+    var SRC_CSS = 'content/static/css/';
+    var SRC_JS = 'content/static/js/';
+    var DIST = 'content/static/dist/';
 
     var MINIFIED_CSS = DIST + 'screen.min.css';
     var MINIFIED_JS = DIST + 'all-js.min.js';
+
+    var ASSET_MAP = DIST + 'assets.json';
 
     // Project configuration.
     grunt.initConfig({
@@ -38,7 +40,8 @@ module.exports = function (grunt) {
         },
         hash: {
             src: [MINIFIED_JS, MINIFIED_CSS],
-            dest: DIST
+            dest: DIST,
+            mapping: ASSET_MAP
         },
         watch: {
             files: ['content/**/*', 'templates/**/*.html', 'sass/**/*.scss'],
@@ -82,7 +85,7 @@ module.exports = function (grunt) {
     });
 
     // Default task.
-    grunt.registerTask('default', 'lint exec compass concat min cssmin hash');
+    grunt.registerTask('default', 'lint compass concat min cssmin hash exec');
 
     // Run server.
     grunt.registerTask('serve', 'default server watch');
