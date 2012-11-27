@@ -30,78 +30,78 @@
     module('defuscate', {
         setup: function () {
             this.elems = [
-                $('<a href="mailto:test1(which is \'at\' the)test.com" class="email">test1(which is "at" the)test.com</a>').get(0),
-                $('<a href="mailto:test2(at)test.eu" class="email">test2(at)test.eu</a>').get(0),
-                $('<a href="test.3(still at)test.info" class="email">contact me:test.3(still at)test.info</a>').get(0),
-                $('<span class="email">test1(which is /"at/" the)test.com</span>').get(0),
-                $('<span class="email">test2(at)test.eu</span>').get(0),
-                $('<span class="email">contact me:test.3(still at)test.info</span>').get(0)
+                $('<a href="mailto:test1(which is \'at\' the)test.com" class="email">test1(which is "at" the)test.com</a>'),
+                $('<a href="mailto:test2(at)test.eu" class="email">test2(at)test.eu</a>'),
+                $('<a href="test.3(still at)test.info" class="email">contact me:test.3(still at)test.info</a>'),
+                $('<span class="email">test1(which is /"at/" the)test.com</span>'),
+                $('<span class="email">test2(at)test.eu</span>'),
+                $('<span class="email">contact me:test.3(still at)test.info</span>')
             ];
             this.results = [
-                $('<a href="mailto:test1@test.com" class="email">test1@test.com</a>').get(0),
-                $('<a href="mailto:test2@test.eu" class="email">test2@test.eu</a>').get(0),
-                $('<a href="test.3@test.info" class="email">contact me:test.3@test.info</a>').get(0),
-                $('<span class="email"><a href="mailto:test1@test.com">test1@test.com</a></span>').get(0),
-                $('<span class="email"><a href="mailto:test2@test.eu">test2@test.eu</a></span>').get(0),
-                $('<span class="email">contact me:<a href="mailto:test.3@test.info">test.3@test.info</a></span>').get(0)
+                $('<a href="mailto:test1@test.com" class="email">test1@test.com</a>'),
+                $('<a href="mailto:test2@test.eu" class="email">test2@test.eu</a>'),
+                $('<a href="test.3@test.info" class="email">contact me:test.3@test.info</a>'),
+                $('<span class="email"><a href="mailto:test1@test.com">test1@test.com</a></span>'),
+                $('<span class="email"><a href="mailto:test2@test.eu">test2@test.eu</a></span>'),
+                $('<span class="email">contact me:<a href="mailto:test.3@test.info">test.3@test.info</a></span>')
             ];
         }
     });
 
     test('defuscateHref', 3, function () {
-        strictEqual(OBC.defuscate.defuscateHref(this.elems[0].getAttribute('href')), this.results[0].getAttribute('href'));
-        strictEqual(OBC.defuscate.defuscateHref(this.elems[1].getAttribute('href')), this.results[1].getAttribute('href'));
-        strictEqual(OBC.defuscate.defuscateHref(this.elems[2].getAttribute('href')), this.results[2].getAttribute('href'));
+        strictEqual(OBC.defuscate.defuscateHref(this.elems[0].attr('href')), this.results[0].attr('href'));
+        strictEqual(OBC.defuscate.defuscateHref(this.elems[1].attr('href')), this.results[1].attr('href'));
+        strictEqual(OBC.defuscate.defuscateHref(this.elems[2].attr('href')), this.results[2].attr('href'));
     });
 
     test('defuscateHtml', 6, function () {
-        strictEqual(OBC.defuscate.defuscateHtml(this.elems[0].innerHTML, true), this.results[0].innerHTML);
-        strictEqual(OBC.defuscate.defuscateHtml(this.elems[1].innerHTML, true), this.results[1].innerHTML);
-        strictEqual(OBC.defuscate.defuscateHtml(this.elems[2].innerHTML, true), this.results[2].innerHTML);
-        strictEqual(OBC.defuscate.defuscateHtml(this.elems[3].innerHTML, false), this.results[3].innerHTML);
-        strictEqual(OBC.defuscate.defuscateHtml(this.elems[4].innerHTML, false), this.results[4].innerHTML);
-        strictEqual(OBC.defuscate.defuscateHtml(this.elems[5].innerHTML, false), this.results[5].innerHTML);
+        strictEqual(OBC.defuscate.defuscateHtml(this.elems[0].html(), true), this.results[0].html());
+        strictEqual(OBC.defuscate.defuscateHtml(this.elems[1].html(), true), this.results[1].html());
+        strictEqual(OBC.defuscate.defuscateHtml(this.elems[2].html(), true), this.results[2].html());
+        strictEqual(OBC.defuscate.defuscateHtml(this.elems[3].html(), false), this.results[3].html());
+        strictEqual(OBC.defuscate.defuscateHtml(this.elems[4].html(), false), this.results[4].html());
+        strictEqual(OBC.defuscate.defuscateHtml(this.elems[5].html(), false), this.results[5].html());
     });
 
     test('updateHref', 3, function () {
         strictEqual(
-            OBC.defuscate.updateHref(this.elems[0], this.results[0].getAttribute('href')).getAttribute('href'),
-            this.results[0].getAttribute('href')
+            OBC.defuscate.updateHref(this.elems[0], this.results[0].attr('href')).attr('href'),
+            this.results[0].attr('href')
         );
         strictEqual(
-            OBC.defuscate.updateHref(this.elems[1], this.results[1].getAttribute('href')).getAttribute('href'),
-            this.results[1].getAttribute('href')
+            OBC.defuscate.updateHref(this.elems[1], this.results[1].attr('href')).attr('href'),
+            this.results[1].attr('href')
         );
         strictEqual(
-            OBC.defuscate.updateHref(this.elems[2], this.results[2].getAttribute('href')).getAttribute('href'),
-            this.results[2].getAttribute('href')
+            OBC.defuscate.updateHref(this.elems[2], this.results[2].attr('href')).attr('href'),
+            this.results[2].attr('href')
         );
     });
 
     test('updateHtml', 6, function () {
         strictEqual(
-            OBC.defuscate.updateHtml(this.elems[0], this.results[0].innerHTML).innerHTML,
-            this.results[0].innerHTML
+            OBC.defuscate.updateHtml(this.elems[0], this.results[0].html()).html(),
+            this.results[0].html()
         );
         strictEqual(
-            OBC.defuscate.updateHtml(this.elems[1], this.results[1].innerHTML).innerHTML,
-            this.results[1].innerHTML
+            OBC.defuscate.updateHtml(this.elems[1], this.results[1].html()).html(),
+            this.results[1].html()
         );
         strictEqual(
-            OBC.defuscate.updateHtml(this.elems[2], this.results[2].innerHTML).innerHTML,
-            this.results[2].innerHTML
+            OBC.defuscate.updateHtml(this.elems[2], this.results[2].html()).html(),
+            this.results[2].html()
         );
         strictEqual(
-            OBC.defuscate.updateHtml(this.elems[3], this.results[3].innerHTML).innerHTML,
-            this.results[3].innerHTML
+            OBC.defuscate.updateHtml(this.elems[3], this.results[3].html()).html(),
+            this.results[3].html()
         );
         strictEqual(
-            OBC.defuscate.updateHtml(this.elems[4], this.results[4].innerHTML).innerHTML,
-            this.results[4].innerHTML
+            OBC.defuscate.updateHtml(this.elems[4], this.results[4].html()).html(),
+            this.results[4].html()
         );
         strictEqual(
-            OBC.defuscate.updateHtml(this.elems[5], this.results[5].innerHTML).innerHTML,
-            this.results[5].innerHTML
+            OBC.defuscate.updateHtml(this.elems[5], this.results[5].html()).html(),
+            this.results[5].html()
         );
     });
 
@@ -118,8 +118,8 @@
     module('susyOffCanvasToggle', {
         setup: function () {
             this.elems = [
-                $('<a href="#left" class="toggle">show left</a>').get(0),
-                $('<a href="#right" class="toggle">show right</a>').get(0)
+                $('<a href="#left" class="toggle">show left</a>'),
+                $('<a href="#right" class="toggle">show right</a>')
             ];
         },
         teardown: function () {

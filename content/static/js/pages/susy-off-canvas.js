@@ -1,37 +1,31 @@
-var OBC = (function (OBC) {
+var OBC = (function (OBC, $) {
 
     'use strict';
 
     OBC.susyOffCanvasToggle = {
         init: function (triggers) {
-            var i;
-            for (i = 0; i < triggers.length; i++) {
-                triggers[i].addEventListener('click', this.toggleListener);
-            }
+            $(triggers).click(function (e) {
+                e.preventDefault();
+                OBC.susyOffCanvasToggle.toggle(this);
+            });
             return triggers;
         },
-        toggleListener: function (e) {
-            e.preventDefault();
-            OBC.susyOffCanvasToggle.toggle(this);
-        },
         toggle: function (el) {
-            var dir = el.getAttribute('href');
+            var dir = $(el).attr('href');
             if (dir === '#left') {
-                document.body.classList.toggle('show-left');
-                document.body.classList.remove('show-right');
+                $('body').toggleClass('show-left').removeClass('show-right');
             }
             if (dir === '#right') {
-                document.body.classList.toggle('show-right');
-                document.body.classList.remove('show-left');
+                $('body').toggleClass('show-right').removeClass('show-left');
             }
-            return document.body.getAttribute('class');
+            return $('body').attr('class');
         }
     };
 
-    window.onload = function () {
-        OBC.susyOffCanvasToggle.init(document.getElementsByClassName('toggle'));
-    };
+    $(function () {
+        OBC.susyOffCanvasToggle.init($('.toggle'));
+    });
 
     return OBC;
 
-}(OBC || {}));
+}(OBC || {}, jQuery));

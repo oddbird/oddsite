@@ -1,4 +1,4 @@
-var OBC = (function (OBC) {
+var OBC = (function (OBC, $) {
 
     'use strict';
 
@@ -7,20 +7,20 @@ var OBC = (function (OBC) {
             find: /\b([A-Z0-9._%\-]+)\([^)]+\)((?:[A-Z0-9\-]+\.)+[A-Z]{2,6})\b/gi,
             replace: '$1@$2'
         },
-        init: function (links) {
+        init: function (elems) {
             var i, el, newHref, newHtml, is_link;
-            for (i = 0; i < links.length; i++) {
-                el = links[i];
+            for (i = 0; i < elems.length; i++) {
+                el = $(elems[i]);
                 is_link = false;
-                if (el.hasAttribute('href')) {
+                if (el.is('a[href]')) {
                     is_link = true;
-                    newHref = this.defuscateHref(el.getAttribute('href'));
+                    newHref = this.defuscateHref(el.attr('href'));
                     this.updateHref(el, newHref);
                 }
-                newHtml = this.defuscateHtml(el.innerHTML, is_link);
+                newHtml = this.defuscateHtml(el.html(), is_link);
                 this.updateHtml(el, newHtml);
             }
-            return links;
+            return elems;
         },
         defuscateHref: function (href) {
             return href.replace(this.defaults.find, this.defaults.replace);
@@ -37,19 +37,19 @@ var OBC = (function (OBC) {
             return replacedHTML;
         },
         updateHref: function (el, newHref) {
-            el.setAttribute('href', newHref);
+            el.attr('href', newHref);
             return el;
         },
         updateHtml: function (el, newHtml) {
-            el.innerHTML = newHtml;
+            el.html(newHtml);
             return el;
         }
     };
 
-    window.onload = function () {
-        OBC.defuscate.init(document.getElementsByClassName('email'));
-    };
+    $(function () {
+        OBC.defuscate.init($('.email'));
+    });
 
     return OBC;
 
-}(OBC || {}));
+}(OBC || {}, jQuery));
