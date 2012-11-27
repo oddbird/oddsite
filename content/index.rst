@@ -90,7 +90,7 @@ Home
 .. |Carl| raw:: html
 
   <strong class="vcard">
-    <a href="/authors/carl/" class="fn url">Carl</a>
+    <!-- @@@ a href="/authors/carl/" class="fn url" -->Carl
   </strong>
 
 .. _coder: http://github.com/carljm
@@ -112,7 +112,7 @@ Home
 .. |Jonny| raw:: html
 
   <strong class="vcard">
-    <a href="/authors/jonny/" class="fn url">Jonny</a>
+    <!-- @@@ a href="/authors/jonny/" class="fn url" -->Jonny
   </strong>
 
 .. _front-end developer: http://github.com/jgerigmeyer/
