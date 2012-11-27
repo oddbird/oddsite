@@ -1,0 +1,50 @@
+// ----------------------------------------------------------------------------
+// Imports
+
+@import "base/settings";
+
+@import "general/fonts";
+@import "general/type";
+
+// ----------------------------------------------------------------------------
+// Layout
+
+@include establish-baseline;
+
+* {
+  background: transparent !important;
+  color: #000 !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+}
+
+body {
+  @extend %type;
+  @include serif;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.logo { margin-bottom: 0px; }
+.tagline { font-style: italic; }
+
+[role="navigation"], [role="contentinfo"] {
+  display: none;
+}
+
+// ----------------------------------------------------------------------------
+// Type
+
+a:after { content: " [" attr(href) "] "; }
+a[href^="/"]:after {
+  content: " [http://oddbird.net" attr(href) "] ";
+  [role="banner"] & { display: none; }
+}
+
+h1, h2, h3 { page-break-after: avoid; }
+
+p, h1, h2, h3 {
+  orphans: 3;
+  widows: 3;
+}

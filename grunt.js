@@ -8,6 +8,7 @@ module.exports = function (grunt) {
     var DIST = 'content/static/dist/';
 
     var MINIFIED_CSS = DIST + 'screen.min.css';
+    var MINIFIED_PRINT_CSS = DIST + 'print.min.css';
     var MINIFIED_JS = DIST + 'all-js.min.js';
 
     var ASSET_MAP = DIST + 'assets.json';
@@ -33,13 +34,17 @@ module.exports = function (grunt) {
             }
         },
         cssmin: {
-            dist: {
+            screen: {
                 src: SRC_CSS + 'screen.css',
                 dest: MINIFIED_CSS
+            },
+            print: {
+                src: SRC_CSS + 'print.css',
+                dest: MINIFIED_PRINT_CSS
             }
         },
         hash: {
-            src: [MINIFIED_JS, MINIFIED_CSS],
+            src: [MINIFIED_JS, MINIFIED_CSS, MINIFIED_PRINT_CSS],
             dest: DIST,
             mapping: ASSET_MAP
         },
@@ -88,7 +93,11 @@ module.exports = function (grunt) {
             }
         },
         exec: {
-            clean: {
+            dev_clean: {
+                command: 'rm -rf dev-output/* && rm -rf content/static/dist/*',
+                stdout: true
+            },
+            prod_clean: {
                 command: 'rm -rf output/* && rm -rf content/static/dist/*',
                 stdout: true
             },
@@ -102,7 +111,8 @@ module.exports = function (grunt) {
     });
 
     // aliases for exec tasks
-    grunt.registerTask('clean', 'exec:clean');
+    grunt.registerTask('dev-clean', 'exec:dev_clean');
+    grunt.registerTask('prod-clean', 'exec:prod_clean');
     grunt.registerTask('dev-build', 'exec:dev_build');
     grunt.registerTask('prod-build', 'exec:prod_build');
 
@@ -110,11 +120,11 @@ module.exports = function (grunt) {
     grunt.registerTask('assets', 'compass concat min cssmin');
 
     // Full clean dev build
-    grunt.registerTask('dev', 'clean assets dev-build');
+    grunt.registerTask('dev', 'dev-clean assets dev-build');
     // Quick dev build; no clean, no JS lint/tests
     grunt.registerTask('dev-quick', 'assets dev-build');
     // Full clean prod build
-    grunt.registerTask('prod', 'clean assets hash prod-build');
+    grunt.registerTask('prod', 'prod-clean assets hash prod-build');
 
     // Run server.
     grunt.registerTask('serve', 'dev server watch');
