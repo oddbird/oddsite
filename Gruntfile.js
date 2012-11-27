@@ -93,7 +93,9 @@ module.exports = function (grunt) {
             }
         },
         server: {
-            base: 'dev-output/'
+            options: {
+                base: 'dev-output/'
+            }
         },
         watch: {
             gruntfile: {
