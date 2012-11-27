@@ -27,6 +27,9 @@ def monkeypatch_context():
 def setup(builder):
     builder.jinja_env.globals['get_asset'] = get_asset
 
+    if builder.config.root_get('mode', 'dev') == 'dev':
+        return
+
     asset_map_path = builder.config.get('asset_map_path', None)
     if asset_map_path is None:
         return
