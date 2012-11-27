@@ -27,9 +27,9 @@ static files are in ``content/static/``.
 To view the site live locally, run ``bin/grunt serve`` and visit
 ``http://localhost:8000`` in your browser.
 
-This will also watch for changes and automatically perform the following tasks
-whenever changes are detected to files in the ``templates/``, ``content/``,
-and ``sass/`` directories:
+This will also watch for changes and automatically perform an appropriate
+selection of the following tasks whenever changes are detected to files in the
+``templates/``, ``content/``, and ``sass/`` directories:
 
 * validate JS with `JSHint`_
 * concatenate JS
@@ -37,15 +37,10 @@ and ``sass/`` directories:
 * compile Sass to CSS
 * minify CSS
 * run the JS unit tests
-* regenerate the site as static HTML files under the ``output/`` directory
+* regenerate the site as static HTML files under the ``dev-output/`` directory
 
 To perform these tasks manually, run ``bin/grunt``. To watch for changes
 without starting a local server, run ``bin/grunt watch``.
-
-After making changes, cd into the ``output/`` directory and commit the
-changes, and if you're ready to deploy them, ``git push``.  Then change back
-into the outer repo and you can commit (and push) the changes there along with
-the updated submodule.
 
 .. _Python: http://www.python.org
 .. _Ruby: http://www.ruby-lang.org
@@ -60,5 +55,8 @@ the updated submodule.
 Deployment
 ----------
 
-The site is deployed on Github Pages; ``git push`` the submodule under
-``output/`` (on master branch) to deploy changes live.
+The site is deployed on Github Pages. To deploy, run ``bin/grunt prod`` to
+build the site under ``output``; commit those changes to the submodule and then
+``git push`` the submodule to deploy it live.  Then change back into the outer
+repo and you can commit (and push) the changes there along with the updated
+submodule.

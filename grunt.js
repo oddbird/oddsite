@@ -50,15 +50,15 @@ module.exports = function (grunt) {
             },
             js: {
                 files: ['content/**/*.js'],
-                tasks: 'lint quick-build qunit'
+                tasks: 'lint dev-quick qunit'
             },
             build: {
                 files: ['templates/**/*.html'],
-                tasks: 'build'
+                tasks: 'dev'
             },
             quick: {
                 files: ['content/**/!(*.js)', 'sass/**/*.scss'],
-                tasks: 'quick-build'
+                tasks: 'dev-quick'
             }
         },
         server: {
@@ -89,26 +89,38 @@ module.exports = function (grunt) {
         },
         exec: {
             clean: {
-                command: 'find content -name *~ -delete && rm -rf output/*',
+                command: 'rm -rf output/* && rm -rf content/static/dist/*',
                 stdout: true
             },
-            build: {
-                command: 'python run.py build content/'
+            dev_build: {
+                command: 'python run.py dev'
+            },
+            prod_build: {
+                command: 'python run.py prod'
             }
         }
     });
 
-    // Default task.
-    grunt.registerTask('default', 'lint compass concat min cssmin qunit hash exec');
+    // aliases for exec tasks
+    grunt.registerTask('clean', 'exec:clean');
+    grunt.registerTask('dev-build', 'exec:dev_build');
+    grunt.registerTask('prod-build', 'exec:prod_build');
 
-    // Full clean & build, but don't lint JS or run JS tests.
-    grunt.registerTask('build', 'compass concat min cssmin hash exec');
+    // Prepare assets
+    grunt.registerTask('assets', 'compass concat min cssmin');
 
-    // Quick build
-    grunt.registerTask('quick-build', 'compass concat min cssmin hash exec:build');
+    // Full clean and dev build, with JS lint/tests
+    grunt.registerTask('dev', 'lint assets qunit clean dev-build');
+    // Quick dev build; no clean, no JS lint/tests
+    grunt.registerTask('dev-quick', 'assets dev-build');
+    // Full clean prod build
+    grunt.registerTask('prod', 'lint clean assets qunit hash prod-build');
 
     // Run server.
-    grunt.registerTask('serve', 'build server watch');
+    grunt.registerTask('serve', 'dev server watch');
+
+    // Default task
+    grunt.registerTask('default', 'dev');
 
     // Plugin tasks.
     grunt.loadNpmTasks('grunt-css');

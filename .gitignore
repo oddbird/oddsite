@@ -1,11 +1,9 @@
 TAGS
 content/static/dist/
 content/static/css/
+dev-output/
 *.DS_Store
 *~
 *.pyc
 .sass-cache/
-oddsite/settings/local.py
 .livereload
-htmlcov/
-djangodb.sqlite

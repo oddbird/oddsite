@@ -2,10 +2,10 @@
 active_modules: [pygments_simple, tags, blog, author, wrap, typogrify, hashedassets]
 author: OddBird
 canonical_url: http://oddbird.net/
-output_folder: ../output
 template_path: ../templates
 asset_map_path: static/dist/assets.json
 rst_writer: html5writer
+ignore_files: ['.*', '_*', 'config*.yml', 'Makefile', 'README', '*.conf', '*~']
 modules:
   pygments:
     style: tango

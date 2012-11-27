@@ -1,3 +1,10 @@
+"""
+Cache-busting for assets via hash in filename.
+
+Uses a JSON "asset map" output by grunt-hash, which maps a "plain" asset
+filename to the current hash filename.
+
+"""
 import os
 import json
 
