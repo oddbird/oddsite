@@ -74,22 +74,22 @@
 @include font-face(
   'FranklinGothic',
   font-files(
-    'FranklinGothic-Demi-webfont.woff',woff,
-    'FranklinGothic-Demi-webfont.ttf',truetype,
-    'FranklinGothic-Demi-webfont.svg#webfontSMxOInhK',svg
+    'FranklinGothic-Med-webfont.woff',woff,
+    'FranklinGothic-Med-webfont.ttf',truetype,
+    'FranklinGothic-Med-webfont.svg#webfontSMxOInhK',svg
   ),
-  'FranklinGothic-Demi-webfont.eot',
+  'FranklinGothic-Med-webfont.eot',
   bold,
   normal
 );
 @include font-face(
   'FranklinGothic',
   font-files(
-    'FranklinGothic-DemiIt-webfont.woff',woff,
-    'FranklinGothic-DemiIt-webfont.ttf',truetype,
-    'FranklinGothic-DemiIt-webfont.svg#webfontSMxOInhK',svg
+    'FranklinGothic-MedIt-webfont.woff',woff,
+    'FranklinGothic-MedIt-webfont.ttf',truetype,
+    'FranklinGothic-MedIt-webfont.svg#webfontSMxOInhK',svg
   ),
-  'FranklinGothic-DemiIt-webfont.eot',
+  'FranklinGothic-MedIt-webfont.eot',
   bold,
   italic
 );
@@ -122,22 +122,22 @@
 @include font-face(
   'FranklinGothicCond',
   font-files(
-    'FranklinGothic-DemiCd-webfont.woff',woff,
-    'FranklinGothic-DemiCd-webfont.ttf',truetype,
-    'FranklinGothic-DemiCd-webfont.svg#webfontSMxOInhK',svg
+    'FranklinGothic-MedCd-webfont.woff',woff,
+    'FranklinGothic-MedCd-webfont.ttf',truetype,
+    'FranklinGothic-MedCd-webfont.svg#webfontSMxOInhK',svg
   ),
-  'FranklinGothic-DemiCd-webfont.eot',
+  'FranklinGothic-MedCd-webfont.eot',
   bold,
   normal
 );
 @include font-face(
   'FranklinGothicCond',
   font-files(
-    'FranklinGothic-DemiCdIt-webfont.woff',woff,
-    'FranklinGothic-DemiCdIt-webfont.ttf',truetype,
-    'FranklinGothic-DemiCdIt-webfont.svg#webfontSMxOInhK',svg
+    'FranklinGothic-MedCdIt-webfont.woff',woff,
+    'FranklinGothic-MedCdIt-webfont.ttf',truetype,
+    'FranklinGothic-MedCdIt-webfont.svg#webfontSMxOInhK',svg
   ),
-  'FranklinGothic-DemiCdIt-webfont.eot',
+  'FranklinGothic-MedCdIt-webfont.eot',
   bold,
   italic
 );
