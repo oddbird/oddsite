@@ -5,7 +5,7 @@ Development
 -----------
 
 Local development on this project requires `Python`_ 2.7, `Ruby`_, `Node.js`_
-and `PhantomJS`_.
+>= 0.8.0 and `PhantomJS`_ >= 1.6.0.
 
 Node dependencies are pre-installed in the ``node_modules`` directory.
 
@@ -27,20 +27,22 @@ static files are in ``content/static/``.
 To view the site live locally, run ``bin/grunt serve`` and visit
 ``http://localhost:8000`` in your browser.
 
-This will also watch for changes and automatically perform an appropriate
-selection of the following tasks whenever changes are detected to files in the
-``templates/``, ``content/``, and ``sass/`` directories:
+``bin/grunt serve`` will also watch for changes to local files and
+automatically perform an appropriate selection of the following tasks whenever
+changes are detected to files in the ``templates/``, ``content/``, and
+``sass/`` directories:
 
 * validate JS with `JSHint`_
 * concatenate JS
 * minify JS with `UglifyJS`_
 * compile Sass to CSS
-* minify CSS
+* minify CSS with `clean-css`_
 * run the JS unit tests
 * regenerate the site as static HTML files under the ``dev-output/`` directory
 
 To perform these tasks manually, run ``bin/grunt``. To watch for changes
-without starting a local server, run ``bin/grunt watch``.
+without starting a local server, run ``bin/grunt watch``. Refer to the
+`Gruntfile.js source`_ and `Grunt`_ documentation for more info.
 
 .. _Python: http://www.python.org
 .. _Ruby: http://www.ruby-lang.org
@@ -49,14 +51,17 @@ without starting a local server, run ``bin/grunt watch``.
 .. _PhantomJS: http://phantomjs.org
 .. _github.com/oddbird/oddbird.github.com: https://github.com/oddbird/oddbird.github.com
 .. _JSHint: http://www.jshint.com
-.. _UglifyJS: https://github.com/mishoo/UglifyJS/
+.. _UglifyJS: https://github.com/mishoo/UglifyJS
+.. _clean-css: https://github.com/GoalSmashers/clean-css
+.. _Gruntfile.js source: https://github.com/oddbird/oddsite/blob/rstblog/Gruntfile.js
+.. _Grunt: http://gruntjs.com/
 
 
 Deployment
 ----------
 
 The site is deployed on Github Pages. To deploy, run ``bin/grunt prod`` to
-build the site under ``output``; commit those changes to the submodule and then
-``git push`` the submodule to deploy it live.  Then change back into the outer
-repo and you can commit (and push) the changes there along with the updated
-submodule.
+build the site under ``output``; commit those changes to the submodule and
+then ``git push`` the submodule to deploy it live.  Then change back into the
+outer repo and you can commit (and push) the changes there along with the
+updated submodule.
