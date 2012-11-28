@@ -53,7 +53,7 @@ without starting a local server, run ``bin/grunt watch``. Refer to the
 .. _JSHint: http://www.jshint.com
 .. _UglifyJS: https://github.com/mishoo/UglifyJS
 .. _clean-css: https://github.com/GoalSmashers/clean-css
-.. _Gruntfile.js source: https://github.com/oddbird/oddsite/blob/rstblog/Gruntfile.js
+.. _Gruntfile.js source: https://github.com/oddbird/oddsite/blob/master/Gruntfile.js
 .. _Grunt: http://gruntjs.com/
 
 
