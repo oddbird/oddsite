@@ -121,13 +121,13 @@ Home
 .. wrap:: div
   :class: process
 
-  We use a **lean** process_ to
+  We use a **lean** process to
   deploy & integrate new functionality frequently,
   aiming to deliver usable product launches
   as early and often as possible.
 
   We encourage clients to stay closely **connected** with the daily progress,
-  offering `frequent feedback`_
+  offering frequent feedback
   and re-prioritization
   via `Pivotal Tracker`_.
 
@@ -138,7 +138,5 @@ Home
   On the server side we use Python_,
   and have extensive Django_ experience.
 
-.. _process: /process/checklist/
-.. _frequent feedback: /process/feedback/
 .. _Pivotal Tracker: http://pivotaltracker.com/
 .. _Python: http://www.python.org/
