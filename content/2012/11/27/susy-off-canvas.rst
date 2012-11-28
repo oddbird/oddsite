@@ -9,11 +9,11 @@ summary: |
   how Susy might play along.
 
 
-Off-canvas design with Susy
+Off-canvas layout with Susy
 ===========================
 
-The `off-canvas`_ design pattern
-for creating responsive websites
+The `off-canvas`_ layout pattern
+for responsive websites
 has been getting all the attention lately,
 and I've had several people ask
 how Susy might play along.
@@ -21,17 +21,27 @@ how Susy might play along.
 .. _off-canvas: http://jasonweaver.name/lab/offcanvas/
 
 The truth is,
-off-canvas design is as easy with Susy
-as any other design.
+Susy handles off-canvas layout the same
+as any other layout.
 All you need to do
 is pull some of your columns off the screen.
 I'll show you how,
-following Jason's directions,
-and just adding in the Susy bits.
+following Jason's lead,
+and adding in the Susy bits.
 
-Check out the `demo`_.
+Check out the `demo`_,
+and make sure you understand
+`off-canvas`_ layouts
+before you go on.
+
+I've used a few shortcuts
+that require the `latest Susy release`_
+(1.0.5),
+but the concepts remain true
+in older versions as well.
 
 .. _demo: /demos/susy-off-canvas/
+.. _latest Susy release: http://rubygems.org/gems/susy
 
 Basic Markup:
 -------------
@@ -55,8 +65,8 @@ with header, footer,
 and three body columns:
 left, right, and main.
 Inside the header
-we have links that we'll hijack in JavaScript
-to toggle our active styles.
+we have links we can hijack in JavaScript
+to toggle state body-classes.
 
 Susy Settings:
 --------------
@@ -70,9 +80,8 @@ Susy Settings:
 
 Since this is a mobile-first design pattern,
 we'll start with settings for a
-standard mobile-first Susy grid.
-You can change those any way you like,
-that's the beauty of using Sass & Susy.
+typical mobile-first Susy grid.
+You can change those any way you like.
 
 I'm also going to establish my
 medium and large column settings right away:
@@ -123,9 +132,9 @@ sections to appear.
   $anchor : 1;
   $side   : $total-columns - $anchor;
 
-I've created an |code| $anchor |/code| setting
-to control how much of the main section
-remains visible while side-sections are displayed.
+I've created an |code| $anchor |/code| variable
+to control how many columns of the main section
+remain visible while side-sections are displayed.
 The |code| $side |/code| width of our left & right sections
 is based on the remaining space.
 
@@ -176,11 +185,11 @@ Medium Layout:
   $main : 5;
   $side : $medium-columns - $main;
 
-These settings simply establish
+These variables simply establish
 the widths we will use for our columns.
 You could, of course,
 set different right and left widths.
-I'll leave that as an excercise for the reader.
+I'll leave that as an exercise for the reader.
 
 .. code:: scss
 
@@ -226,7 +235,7 @@ Large Layout:
   $main : 6;
   $side : ($large-columns - $main)/2;
 
-Nothing new here, we're just dividing up the space
+Nothing new here; we're just dividing up the space
 into variables we can use.
 
 .. code:: scss
@@ -251,7 +260,7 @@ into variables we can use.
 At our largest breakpoint
 we are simply overriding everything
 to get ourselves back to a normal layout.
-No more off-canvas malarky here.
+No more off-canvas malarkey here.
 Hide the other toggle-link,
 make sure everything stays put
 even if we have leftover classes,
@@ -261,16 +270,23 @@ Final Tweaks
 ------------
 
 I've added a number of styles
-to make it obvious what is going on,
-and highlight the transitions.
+to make it obvious what's going on
+and highlight the transitions
+in our `demo`_.
 You also need a bit of JS
 to make the toggles work,
 but this is all you need for the Susy setup.
 
-Play around with all the numbers,
+Play around with all the numbers;
 it's amazingly flexible.
 It works the same as any other Susy grid:
 any reasonable settings should work.
+
+Feel free to peruse the full `sass`_
+and `js`_ source at your leisure.
+
+.. _sass: https://github.com/oddbird/oddsite/blob/master/sass/pages/susy-off-canvas.scss
+.. _js: https://github.com/oddbird/oddsite/blob/master/content/static/js/pages/susy-off-canvas.js
 
 .. |code| raw:: html
 

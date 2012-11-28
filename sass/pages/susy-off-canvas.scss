@@ -142,7 +142,17 @@ header, footer {
   }
 }
 
-.main { background: rgba(#eee,.75); }
+.main {
+  background: rgba(#eee,.75);
+  &:after {
+    @include leader;
+    content: " [adjust your browser width to see the demo in action]";
+    display: block;
+    text-align: center;
+    font-style: italic;
+    text-transform: none;
+  }
+}
 
 .right {
   background: rgba(#ffc,.75);
