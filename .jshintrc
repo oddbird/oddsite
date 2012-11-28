@@ -1,0 +1,20 @@
+{
+    "browser": true,
+    "jquery": true,
+
+    "bitwise": true,
+    "curly": true,
+    "eqeqeq": true,
+    "forin": true,
+    "immed": true,
+    "latedef": true,
+    "newcap": true,
+    "noarg": true,
+    "noempty": true,
+    "nonew": true,
+    "undef": true,
+    "strict": true,
+    "trailing": true,
+    "eqnull": true,
+    "white": true
+}
