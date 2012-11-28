@@ -6,4 +6,3 @@ dev-output/
 *~
 *.pyc
 .sass-cache/
-.livereload
