@@ -92,7 +92,7 @@ medium and large column settings right away:
   $large-columns    : 12;
 
 And I'll set Susy's
-|code| $container-width |/code|
+``$container-width``
 override to the largest layout width,
 so the container is fluid up to that point:
 
@@ -112,8 +112,7 @@ Establish the Container:
   }
 
 Besides establishing the usual Susy container,
-I also set |code| overflow |/code|
-to |code| hidden |/code|
+I also set ``overflow`` to ``hidden``
 so that our off-canvas elements
 don't trigger a horizontal scrollbar.
 
@@ -121,10 +120,10 @@ Small Layout:
 -------------
 
 For our smallest layout
-the |code| .main |/code| section is visible at all times,
+the ``.main`` section is visible at all times,
 full-width by default
 or pushed to one side to make room
-for the |code| .left |/code| or |code| .right |/code|
+for the ``.left`` or ``.right``
 sections to appear.
 
 .. code:: scss
@@ -132,10 +131,10 @@ sections to appear.
   $anchor : 1;
   $side   : $total-columns - $anchor;
 
-I've created an |code| $anchor |/code| variable
+I've created an ``$anchor`` variable
 to control how many columns of the main section
 remain visible while side-sections are displayed.
-The |code| $side |/code| width of our left & right sections
+The ``$side`` width of our left & right sections
 is based on the remaining space.
 
 .. code:: scss
@@ -159,23 +158,23 @@ is based on the remaining space.
     .show-right & { margin-right: 0; }
   }
 
-The |code| span-column |/code| mixins establish our spacing,
+The ``span-column`` mixins establish our spacing,
 just like any other Susy site.
 The main difference here is that our total columns-spanned
 is much larger than the number of columns available.
-A few |code| margin |/code| adjustments,
+A few ``margin`` adjustments,
 and we've pulled the left and right sections off the canvas.
-I also removed the |code| margin-right |/code| gutter
+I also removed the ``margin-right`` gutter
 on our main column, since it spans the full width.
 
-The |code| .show-left |/code| and |code| .show-right |/code|
+The ``.show-left`` and ``.show-right``
 selectors allow us to move everything around
 when we want to show and hide the sidebars.
-The |code| space() |/code| function is used to push
+The ``space()`` function is used to push
 our main section only as far as it needs to go:
-|code| space() |/code| represents the space taken by
-a given number of |code| columns() |/code|
-with the final |code| gutter() |/code| included.
+``space()`` represents the space taken by
+a given number of ``columns()``
+with the final ``gutter()`` included.
 
 Medium Layout:
 --------------
@@ -217,14 +216,14 @@ I'll leave that as an exercise for the reader.
 At our medium breakpoint,
 we change the styles to show both the
 left and main sections by default.
-I used |code| width: columns() |/code|
-instead of |code| span-columns |/code|
+I used ``width: columns()``
+instead of ``span-columns``
 on the main & right sections
 because only the width actually needs to change,
 while our left column needs the gutter adjusted as well.
 
 We also hide the left toggle
-( |code| [href="#left"] |/code| )
+( ``[href="#left"]`` )
 as it is no longer needed.
 
 Large Layout:
@@ -287,11 +286,3 @@ and `js`_ source at your leisure.
 
 .. _sass: https://github.com/oddbird/oddsite/blob/master/sass/pages/susy-off-canvas.scss
 .. _js: https://github.com/oddbird/oddsite/blob/master/content/static/js/pages/susy-off-canvas.js
-
-.. |code| raw:: html
-
-  <code>
-
-.. |/code| raw:: html
-
-  </code>

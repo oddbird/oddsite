@@ -43,6 +43,14 @@ class HTML5Translator(html4css1.HTMLTranslator):
         self.body.append(self.starttag(node, 'pre'))
 
 
+    def visit_literal(self, node):
+        self.body.append(self.starttag(node, 'code', suffix=''))
+
+
+    def depart_literal(self, node):
+        self.body.append('</code>')
+
+
     def visit_container(self, node):
         elem_name = getattr(node, 'element_name', 'div')
         self.body.append(self.starttag(node, elem_name))
