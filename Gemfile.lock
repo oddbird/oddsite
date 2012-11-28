@@ -10,7 +10,7 @@ GIT
 
 GIT
   remote: git://github.com/ericam/susy
-  revision: 282394f731160bd063e1b879c1d2c0c449f97ce3
+  revision: befb87b6cb770f64fdfa79aa87f7e8a6aa7abdf1
   branch: master
   specs:
     susy (1.0.5.alpha.0)
