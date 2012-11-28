@@ -2,11 +2,17 @@ public: yes
 tags: [susy, demo, rwd]
 author: eric
 summary: |
-  The off-canvas design pattern
-  for creating responsive websites
+  The `off-canvas`_ layout pattern
+  for responsive web design
   has been getting all the attention lately,
   and I've had several people ask
-  how Susy might play along.
+  how `Susy`_ might play along.
+  I'll show you how easy it is,
+  and how much flexibility Susy can add
+  along the way.
+
+  .. _off-canvas: http://jasonweaver.name/lab/offcanvas/
+  .. _Susy: http://susy.oddbird.net/
 
 
 Off-canvas layout with Susy
@@ -16,9 +22,10 @@ The `off-canvas`_ layout pattern
 for responsive websites
 has been getting all the attention lately,
 and I've had several people ask
-how Susy might play along.
+how `Susy`_ might play along.
 
 .. _off-canvas: http://jasonweaver.name/lab/offcanvas/
+.. _Susy: http://susy.oddbird.net/
 
 The truth is,
 Susy handles off-canvas layout the same
