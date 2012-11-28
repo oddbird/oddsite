@@ -105,7 +105,7 @@ module.exports = function (grunt) {
                 tasks: ['jshint:src', 'dev-quick', 'qunit']
             },
             build: {
-                files: ['templates/**/*.html'],
+                files: ['templates/**/*.html', 'lib/**/*.py', 'modules/**/*.py'],
                 tasks: ['dev']
             },
             quick: {
