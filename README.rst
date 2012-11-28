@@ -61,7 +61,7 @@ Deployment
 ----------
 
 The site is deployed on Github Pages. To deploy, run ``bin/grunt prod`` to
-build the site under ``output``; commit those changes to the submodule and
+build the site under ``output/``; commit those changes to the submodule and
 then ``git push`` the submodule to deploy it live.  Then change back into the
 outer repo and you can commit (and push) the changes there along with the
 updated submodule.
