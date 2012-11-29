@@ -127,10 +127,34 @@
         }
     });
 
-    test('toggle', 3, function () {
-        strictEqual(OBC.susyOffCanvasToggle.toggle(this.elems[0]), 'show-left');
-        strictEqual(OBC.susyOffCanvasToggle.toggle(this.elems[1]), 'show-right');
-        strictEqual(OBC.susyOffCanvasToggle.toggle(this.elems[1]), '');
+    test('toggleClasses', 3, function () {
+        strictEqual(OBC.susyOffCanvasToggle.toggleClasses(this.elems[0]), 'show-left');
+        strictEqual(OBC.susyOffCanvasToggle.toggleClasses(this.elems[1]), 'show-right');
+        strictEqual(OBC.susyOffCanvasToggle.toggleClasses(this.elems[1]), '');
+    });
+
+    test('toggleText', 6, function () {
+        var body = $('body');
+        $(this.elems).appendTo('#qunit-fixture');
+        var elems = $('#qunit-fixture .toggle');
+        body.addClass('show-left');
+
+        OBC.susyOffCanvasToggle.toggleText(elems);
+
+        strictEqual(elems.first().text(), 'hide left');
+        strictEqual(elems.last().text(), 'show right');
+
+        body.removeClass('show-left').addClass('show-right');
+        OBC.susyOffCanvasToggle.toggleText(elems);
+
+        strictEqual(elems.first().text(), 'show left');
+        strictEqual(elems.last().text(), 'hide right');
+
+        body.removeClass('show-left show-right');
+        OBC.susyOffCanvasToggle.toggleText(elems);
+
+        strictEqual(elems.first().text(), 'show left');
+        strictEqual(elems.last().text(), 'show right');
     });
 
 }(OBC, jQuery));
