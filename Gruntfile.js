@@ -71,6 +71,10 @@ module.exports = function (grunt) {
             mapping: ASSET_MAP
         },
         shell: {
+            _options: {
+                stderr: true,
+                failOnError: true
+            },
             dev_clean: {
                 command: 'rm -rf dev-output/* && rm -rf content/static/dist/*',
                 stdout: true
