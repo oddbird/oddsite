@@ -1,5 +1,5 @@
 public: yes
-tags: [susy, 2.0, layout, grids]
+tags: [susy, "2.0", layout, grids]
 author: eric
 
 
