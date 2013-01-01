@@ -2,6 +2,11 @@
 {% block title %}Entries tagged “{{ tag.name }}”{% endblock %}
 {% block archivetype %}tag{% endblock archivetype %}
 
+{% block feedlinks %}
+{{ super() }}
+<link href="feed.atom" rel="alternate" title="OddBird blog '{{ tag.name }}' posts" type="application/atom+xml">
+{% endblock %}
+
 {% block archive %}
   <h1 class="archivetitle">Entries <a href="{{ link_to('tagcloud') }}">tagged</a> “{{ tag.name }}”</h1>
   <ul class="archivelist">

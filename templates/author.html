@@ -2,3 +2,8 @@
 
 {% block title %}Entries by {{ author.name }}{% endblock %}
 {% block bodyclasses %}blog archive{% endblock %}
+
+{% block feedlinks %}
+{{ super() }}
+<link href="feed.atom" rel="alternate" title="OddBird blog posts by '{{ author.name }}'" type="application/atom+xml">
+{% endblock %}

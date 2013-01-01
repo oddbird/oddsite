@@ -16,7 +16,9 @@
   <meta name="keywords" content="custom web development, web tools, open source, python, django, sass, scss, susy, javascript, jquery, js" />
   <meta name="language" content="en-us" />
 
-  <link href="/feed.atom" rel="alternate" title="Feed" type="application/atom+xml">
+  {% block feedlinks %}
+  <link href="/feed.atom" rel="alternate" title="OddBird blog posts" type="application/atom+xml">
+  {% endblock %}
 
   {%- for link in links %}
     <link rel="{{ link.rel }}" href="{{ link.href }}"{% if link.media %} media="{{ link.media }}"{% endif %} type="{{ link.type }}">
