@@ -16,3 +16,9 @@ line_comments = false
 preferred_syntax = :scss
 output_style = :expanded
 relative_assets = true
+
+require 'digest/sha1'
+
+asset_cache_buster do |path, file|
+  Digest::SHA1.file(file.path).hexdigest
+end
