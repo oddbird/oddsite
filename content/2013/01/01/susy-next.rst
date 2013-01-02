@@ -1,6 +1,23 @@
 public: yes
 tags: [susy, "2.0", layout, grids]
 author: eric
+summary: |
+  The web is littered with grid systems and 'frameworks'
+  that force your code & design into narrowly defined patterns.
+  Even the most semantic of us
+  have had to push specialized techniques
+  in order to create a usable syntax.
+
+  But Sass has come a long way, and
+  I'm convinced that it's time for something new.
+
+  What if you had a layout system
+  that bends completely to the needs of your site?
+  What if you could use one unified syntax
+  for handling responsive layouts of any kind?
+  What if you had a modular system
+  that let you mix-and-match to customize for every site,
+  and change your output with simple extensions?
 
 
 Sass Layout in 2013 and the Future of Susy

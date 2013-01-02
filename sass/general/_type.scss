@@ -52,10 +52,6 @@ a {
 
   p, ul, ol, pre { @include trailer; }
 
-  ul { list-style-type: disc; }
-  ol { list-style-type: decimal; }
-  li { @include trailer(.5); }
-
   code, .code {
     @include mono;
     @include adjust-font-size-to($xxsmallpx,1);

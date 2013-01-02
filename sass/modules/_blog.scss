@@ -16,6 +16,12 @@
   }
 }
 
+.body {
+  ul { list-style-type: disc; }
+  ol { list-style-type: decimal; }
+  li { @include trailer(.5); }
+}
+
 .readmore {
   font-style: italic;
   &:after { content: "»"; }
