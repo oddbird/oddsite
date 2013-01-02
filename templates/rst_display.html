@@ -14,6 +14,17 @@
 
     {% if 'disqus' in config.active_modules %}
       {{ get_disqus() }}
+    {% else %}
+      <p>
+        Got a correction, addition, or feedback on this post?
+        Drop us a line on
+        <a href="https://twitter.com/{% if config.author == 'carl' %}carljm{% elif config.author == 'eric' %}eriiicam{% elif config.author == 'jonny' %}jgerigmeyer{% endif %}">Twitter</a>,
+        at <span class="email">birds(who are 'at' the)oddbird.net</span>,
+        or comment via
+        <a href="http://www.reddit.com/submit?url=http%3A//oddbird.net{{ link_to('page', slug=ctx.slug) }}">Reddit</a>
+        or
+        <a href="https://news.ycombinator.com/submitlink?u=http%3A//oddbird.net{{ link_to('page', slug=ctx.slug) }}">Hacker News</a>.
+      </p>
     {% endif %}
   </div>
 {% endblock %}
