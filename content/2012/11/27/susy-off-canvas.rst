@@ -1,5 +1,5 @@
 public: yes
-tags: [susy, demo, rwd]
+tags: [susy, demo, rwd, layout]
 author: eric
 summary: |
   The `off-canvas`_ layout pattern

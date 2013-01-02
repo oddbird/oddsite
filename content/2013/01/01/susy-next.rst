@@ -1,5 +1,5 @@
 public: yes
-tags: [susy, "2.0", layout, grids]
+tags: [susy, "2.0", layout, grids, rwd]
 author: eric
 summary: |
   The web is littered with grid systems and 'frameworks'
