@@ -135,7 +135,9 @@
 
     test('toggleText', 6, function () {
         var body = $('body');
-        $(this.elems).appendTo('#qunit-fixture');
+        $.each(this.elems, function () {
+            $(this).appendTo('#qunit-fixture');
+        });
         var elems = $('#qunit-fixture .toggle');
         body.addClass('show-left');
 
