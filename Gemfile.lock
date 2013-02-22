@@ -9,6 +9,14 @@ GIT
       sass (~> 3.2.0.alpha.93)
 
 GIT
+  remote: git://github.com/ericam/accoutrement
+  revision: 92b0099dd21f0a2238bea582c2559dc71cdddd82
+  branch: master
+  specs:
+    accoutrement (0.0.5)
+      compass (>= 0.12.2)
+
+GIT
   remote: git://github.com/ericam/susy
   revision: befb87b6cb770f64fdfa79aa87f7e8a6aa7abdf1
   branch: master
@@ -40,6 +48,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  accoutrement!
   animate (~> 0.2.beta.0)
   breakpoint (~> 1.3)
   chunky_png (~> 1.2.6)

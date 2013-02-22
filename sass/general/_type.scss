@@ -19,18 +19,6 @@ a {
 }
 
 // ----------------------------------------------------------------------------
-// Mixins
-
-@mixin before($content) { &:before { content: $content; } }
-@mixin after($content) { &:after { content: $content; } }
-
-@mixin wrap($wrapper: "“" "”") {
-  $wrapper: if(length($wrapper) < 2, $wrapper $wrapper, $wrapper);
-  @include before(nth($wrapper,1));
-  @include after(nth($wrapper,2));
-}
-
-// ----------------------------------------------------------------------------
 // Type
 
 %type {
@@ -46,6 +34,8 @@ a {
     @include trailer(.5);
     text-transform: uppercase;
   }
+
+  h3 { @include trailer(.5); }
 
   h3, h4, strong { font-weight: bold; }
   em { font-style: italic; }
