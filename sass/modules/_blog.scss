@@ -2,7 +2,6 @@
 // Posts
 
 .post {
-  @include trailer(2);
   @include clearfix;
 }
 
@@ -17,9 +16,23 @@
 }
 
 .body {
+  @include trailer(2);
   ul { list-style-type: disc; }
   ol { list-style-type: decimal; }
   li { @include trailer(.5); }
+}
+
+.comments {
+  @include adjust-font-size-to($smallpx);
+  @include serifcaps;
+  @include leading-border(1px,.5);
+  border-top: 1px dashed $blue;
+  clear: both;
+  a {
+    #{$link} {
+      text-transform: uppercase;
+    }
+  }
 }
 
 .readmore {
@@ -38,6 +51,7 @@
     text-align: right;
     .vcard, .tags { display: block; }
   }
+  .comments { @include squish(3,1); }
 }
 
 // ----------------------------------------------------------------------------
