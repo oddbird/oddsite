@@ -5,18 +5,6 @@
   @return mix(rgba($color,1), $background, percentage(alpha($color)));
 }
 
-@mixin bleed($padding: $grid-padding, $sides: left right) {
-  @if $sides == 'all' {
-    margin: - $padding;
-    padding: $padding;
-  } @else {
-    @each $side in $sides {
-      margin-#{$side}: - $padding;
-      padding-#{$side}: $padding;
-    }
-  }
-}
-
 @mixin darker-block {
   @include bleed;
   background: color-fallback(rgba($blue-darkest,.125));

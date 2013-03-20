@@ -11,9 +11,9 @@ $break: 30em;
 // ----------------------------------------------------------------------------
 // Background
 
-$grid-background-baseline-color   : rgba($lighter,.25);
+$grid-background-baseline-color   : rgba($light,.5);
 $grid-background-baseline-height  : $base-line-height;
-$grid-background-column-color     : rgba($blue-lightest,.25);
+$grid-background-column-color     : rgba($blue-light,.5);
 
 $show-column-grid-backgrounds     : true;
 $show-baseline-grid-backgrounds   : true;

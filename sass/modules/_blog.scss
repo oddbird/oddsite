@@ -2,7 +2,7 @@
 // Posts
 
 .post {
-  @include clearfix;
+  @include pie-clearfix;
 }
 
 .byline {
