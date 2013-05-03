@@ -119,6 +119,14 @@ Here are a few grids:
   $960-ish: 12 (60px 20px) inside static;
   $asymmetrical: (2 8 2) 1/3 isolate;
 
+  // set a grid globally
+  @include set-grid($susy-1-default);
+
+  // use a grid locally
+  @include use-grid($960-ish) {
+    /* This code will use the $960-ish grid... */
+  }
+
 You can use ``set-grid()`` to establish new grids anywhere you need,
 or ``use-grid() { ... }`` to use a new grid for one block of code.
 
