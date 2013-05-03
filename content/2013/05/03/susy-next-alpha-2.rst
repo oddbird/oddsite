@@ -57,11 +57,11 @@ and forget about grids entirely.
   // isolate an item in the last 3 columns of a 5-column row
   @include span(last 3 of 5 isolate);
 
-  // isolate in the 3rd of 12 columns
+  // isolate 2-col width, in the 3rd of 12 columns
   @include span(2 at 3 of 12);
 
-  // add an arbitrary gutter
-  @include span(30em gutters 20px inside);
+  // anything can be arbitrary: width (30em), gutter (20px), & location (30%)!
+  @include span(isolate 30em gutter 20px at 30%);
 
 You can also use various keywords to change your output from the defaults.
 Output ``static`` or ``fluid`` units;
@@ -73,13 +73,22 @@ Establishing Grids
 ------------------
 
 In Susy 2.0,
-an entire grid can be set in one argument:
+you still can set individual settings,
+but you can also contain an entire grid in a single argument.
+That allows us to change grids easily:
 
 .. code:: scss
 
+  $container: 80%;
+  $columns: 12;
+  $gutters: 1/4;
+  $gutter-placement: before;
+
+  // or:
+
   @include set-grid(80% 12 1/4 before);
 
-Let's disect that.
+Let's dissect that.
 
 - A grid starts with an optional container-width,
   similar to the Susy 1.0 ``$container-width`` setting —
