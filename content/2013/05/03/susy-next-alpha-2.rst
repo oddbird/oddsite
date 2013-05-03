@@ -161,8 +161,8 @@ for that particular container:
 
   @include container(show);
 
-Gallerys (formerly "isolate-grid")
-----------------------------------
+Galleries (formerly "isolate-grid")
+-----------------------------------
 
 You can now create a simple gallery layout
 using either isolation or basic float techniques.
