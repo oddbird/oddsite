@@ -51,8 +51,10 @@ module.exports = function (grunt) {
         },
         compass: {
             dev: {
-                bundleExec: true,
-                config: 'config.rb'
+                options: {
+                    bundleExec: true,
+                    config: 'config.rb'
+                }
             }
         },
         mincss: {
@@ -146,7 +148,7 @@ module.exports = function (grunt) {
 
     // Plugin tasks.
     grunt.loadNpmTasks('grunt-contrib-mincss');
-    grunt.loadNpmTasks('grunt-compass');
+    grunt.loadNpmTasks('grunt-contrib-compass');
     grunt.loadNpmTasks('grunt-shell');
     grunt.loadNpmTasks('grunt-hash');
 };
