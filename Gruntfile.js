@@ -57,7 +57,7 @@ module.exports = function (grunt) {
                 }
             }
         },
-        mincss: {
+        cssmin: {
             screen: {
                 src: SCREEN_CSS,
                 dest: MINIFIED_CSS
@@ -68,12 +68,16 @@ module.exports = function (grunt) {
             }
         },
         hash: {
-            src: [MINIFIED_JS, MINIFIED_CSS, MINIFIED_PRINT_CSS],
-            dest: DIST,
-            mapping: ASSET_MAP
+            options: {
+                mapping: ASSET_MAP
+            },
+            dist: {
+                src: [MINIFIED_JS, MINIFIED_CSS, MINIFIED_PRINT_CSS],
+                dest: DIST
+            }
         },
         shell: {
-            _options: {
+            options: {
                 stderr: true,
                 failOnError: true
             },
@@ -92,9 +96,11 @@ module.exports = function (grunt) {
                 command: 'python run.py prod'
             }
         },
-        server: {
-            options: {
-                base: 'dev-output/'
+        connect: {
+            server: {
+                options: {
+                    base: 'dev-output/'
+                }
             }
         },
         watch: {
@@ -131,7 +137,7 @@ module.exports = function (grunt) {
     grunt.registerTask('assets', ['compass', 'concat']);
 
     // Minify assets
-    grunt.registerTask('minify', ['uglify', 'mincss']);
+    grunt.registerTask('minify', ['uglify', 'cssmin']);
 
     // Full clean dev build
     grunt.registerTask('dev', ['dev-clean', 'assets', 'dev-build']);
@@ -141,14 +147,20 @@ module.exports = function (grunt) {
     grunt.registerTask('prod', ['prod-clean', 'assets', 'qunit', 'minify', 'hash', 'prod-build']);
 
     // Run server.
-    grunt.registerTask('serve', ['dev', 'server', 'watch']);
+    grunt.registerTask('serve', ['dev', 'connect', 'watch']);
 
     // Default task
     grunt.registerTask('default', 'dev');
 
     // Plugin tasks.
-    grunt.loadNpmTasks('grunt-contrib-mincss');
+    grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-compass');
     grunt.loadNpmTasks('grunt-shell');
     grunt.loadNpmTasks('grunt-hash');
+    grunt.loadNpmTasks('grunt-contrib-concat');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-contrib-qunit');
+    grunt.loadNpmTasks('grunt-contrib-jshint');
+    grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-contrib-connect');
 };
