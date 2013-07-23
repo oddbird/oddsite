@@ -39,8 +39,7 @@ $side   : $total-columns - $anchor;
 
 .main {
   @include span-columns($total-columns);
-  margin-right: 0;
-  .show-left & { margin-right: - space($side); }
+  margin-right: - 100%;
   .show-right & { margin-left: - space($side); }
 }
 
@@ -68,7 +67,6 @@ $side : $medium-columns - $main;
   .main {
     width: columns($main);
     .show-right & { margin-left: 0; }
-    .show-left & { margin-right: 0; }
   }
 
   .right {

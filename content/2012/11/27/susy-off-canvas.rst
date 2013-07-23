@@ -18,6 +18,15 @@ summary: |
 Off-canvas layout with Susy
 ===========================
 
+**UPDATE**:
+*I fixed a bug with show-left failing on small screens.
+The main area was dropping below the left sidebar,
+as floats sometimes do.
+The fix is actually simpler than the original code:
+just set and leave a 100% negative right-margin
+on the main area,
+removing all state changes to that margin.*
+
 The `off-canvas`_ layout pattern
 for responsive websites
 has been getting all the attention lately,
@@ -154,8 +163,7 @@ is based on the remaining space.
 
   .main {
     @include span-columns($total-columns);
-    margin-right: 0;
-    .show-left & { margin-right: - space($side); }
+    margin-right: -100%;
     .show-right & { margin-left: - space($side); }
   }
 
@@ -211,7 +219,6 @@ I'll leave that as an exercise for the reader.
     .main {
       width: columns($main);
       .show-right & { margin-left: 0; }
-      .show-left & { margin-right: 0; }
     }
 
     .right {
