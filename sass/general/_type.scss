@@ -52,6 +52,10 @@ a {
 
   p, ul, ol, pre { @include trailer; }
 
+  ul, ol {
+    ul, ol { padding-left: rhythm(1); }
+  }
+
   code, .code {
     @include mono;
     @include adjust-font-size-to($xxsmallpx,1);
