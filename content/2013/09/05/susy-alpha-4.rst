@@ -1,4 +1,4 @@
-public: no
+public: yes
 tags: [susy, "2.0", layout, grids, rwd]
 author: eric
 summary: |
@@ -26,18 +26,18 @@ In addition to the new features,
 we've added comprehensive unit test tests
 using `True`_,
 which we built for the occasion.
-We also have a set of "AG Tests"
+We also have a set of complex nesting tests
 that show how things work in practice.
 Right now,
 the `test folder`_
 provides the best documentation —
 with ``index.html`` showing the True results
-and ``ag.html`` showing several standard grids.
+and ``ag.html`` showing several standard grid-types.
 Explore, download, and play!
 
-.. _Susy Next alpha 4: http://rubygems.org/gems/susy/versions/2.0.0.alpha.2
+.. _Susy Next alpha 4: http://rubygems.org/gems/susy/versions/2.0.0.alpha.4
 .. _Susy Next Changelog: https://github.com/ericam/susy/blob/susy-next/CHANGELOG-NEXT.md
-.. _alpha 2: http://oddsite.hexxie.com:8000/2013/05/03/susy-next-alpha-2/
+.. _alpha 2: /2013/05/03/susy-next-alpha-2/
 .. _True: http://eric.andmeyer.com/true/
 .. _test folder: https://github.com/ericam/susy/blob/susy-next/test/
 
@@ -46,7 +46,7 @@ Alpha 3
 
 **New Features:**
 
-* Added ``gutters`` mixin adds gutters to an element.
+* Added ``gutters`` mixin to apply gutters as margin or padding on an element.
 * Added ``outer`` keyword to include gutters in any returned width.
   This replaces the Susy 1 ``space`` mixin.
 * Added ``container`` function to return a given container's width.
