@@ -103,6 +103,13 @@ both for grid-settings and for spans:
 
   @include span(3 $large);
 
+If you need access the current value of a setting,
+just use ``susy-get(setting-name)``:
+
+.. code:: scss
+
+  $current-columns: susy-get(columns);
+
 
 Split Gutters
 -------------
