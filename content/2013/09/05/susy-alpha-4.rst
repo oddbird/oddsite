@@ -4,7 +4,7 @@ author: eric
 summary: |
   `Susy Next alpha 4`_ is now available.
 
-  .. _Susy Next alpha 4: http://rubygems.org/gems/susy/versions/2.0.0.alpha.2
+  .. _Susy Next alpha 4: http://rubygems.org/gems/susy/versions/2.0.0.alpha.4
 
 
 Susy Next: Alpha 4
