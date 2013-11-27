@@ -92,7 +92,7 @@
   @extend %archive-icon;
   @include trailer(1);
 
-  .taglist &, .tag & { @extend %icon-tag; }
+  // .taglist &, .tag & { @extend %icon-tag; }
   .year &, .month &, .main & { @extend %icon-chat; }
 
   @include breakpoint($break) { @include pad(3,1); }
@@ -124,7 +124,7 @@
     @extend %archive-icon;
   }
   [rel="bookmark"] { @extend %icon-bookmark; }
-  [rel="tag"] { @extend %icon-tag; }
+  // [rel="tag"] { @extend %icon-tag; }
 }
 
 .archivesection {
