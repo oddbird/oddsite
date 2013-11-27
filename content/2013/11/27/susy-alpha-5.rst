@@ -2,7 +2,13 @@ public: yes
 tags: [susy, "2.0", layout, grids, rwd]
 author: eric
 summary: |
-  `Susy Next alpha 5`_ is out.
+  `Susy Next alpha 5`_ is out, and loaded with changes.
+  We now require Sass 3.3,
+  we no longer require Compass,
+  and there have been major syntax improvements.
+  We're getting real close to launch,
+  and we'd love to know what you think.
+  Play around, and let us know!
 
   .. _Susy Next alpha 5: http://rubygems.org/gems/susy/versions/2.0.0.alpha.5
 
