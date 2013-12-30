@@ -69,7 +69,7 @@ Home
   Pythonista_,
   and Django_ core developer.
   When he’s not chasing a more elegant algorithm,
-  he chases frisbees, hockey pucks, and a five-year-old son.
+  he chases frisbees, hockey pucks, and a six-year-old son.
 
   |Eric|
   is a `multimedia artist`_
