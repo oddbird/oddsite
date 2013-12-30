@@ -17,7 +17,7 @@ first-ever year-end retrospective. Here's 2013, OddBird style:
   and we're lucky to have them working with us.
 
 - We had a great time working on `Portfoliyo`_ with `The K Network`_
-  and collaborating on an new ed-tech project with `Junyo`_.
+  and collaborating on a new ed-tech project with `Junyo`_.
   We like solving problems that matter.
 
 - We're slowly developing Eric's `novel`_
@@ -28,8 +28,8 @@ first-ever year-end retrospective. Here's 2013, OddBird style:
   and the `Brakhage Center for the Media Arts`_.
   He'll appear again in 2014 at `The Mixin`_,
   `BlendConf`_, and others.
-  Carl delivered `a talk`_ at `PyCon`_,
-  is scheduled to speak at `ConFoo`_ and again at `PyCon`_ in 2014.
+  Carl delivered `a talk`_ at `PyCon`_
+  and will speak at `ConFoo`_ and again at `PyCon`_ in 2014.
 
 - `We <https://github.com/jgerigmeyer>`_ `released
   <https://github.com/carljm>`_ `code <https://github.com/ericam>`_
