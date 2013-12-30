@@ -7,28 +7,34 @@ summary: |
 2013
 ====
 
-As we wrap up our sixth year, it seems as good a time as any to share our
+As we wrap up our sixth year, it seems like a good time to share our
 first-ever year-end retrospective. Here's 2013, OddBird style:
 
-- `Rachel Nabors`_ and `Claudina Sarahe`_ joined the team! Growth for its own
-  sake isn't our thing (thus it's taken us six years), but Rachel and Claudina
-  kick ass and we're lucky to have them working with us.
+- `Rachel Nabors`_ and `Claudina Sarahe`_ joined the team!
+  We're not into growth for its own sake
+  (it's taken us six years),
+  but Rachel and Claudina kick ass
+  and we're lucky to have them working with us.
 
-- We had a great time working on `Portfoliyo`_ and collaborating on another
-  ed-tech project with `Junyo`_. We like solving problems that matter.
+- We had a great time working on `Portfoliyo`_ with `The K Network`_
+  and collaborating on an new ed-tech project with `Junyo`_.
+  We like solving problems that matter.
 
-- We're continuing to slowly develop Eric's `novel`_ (which has gotten some
-  `rave reviews`_), and working on a (still pre-alpha) collaborative authoring
-  tool.
+- We're slowly developing Eric's `novel`_
+  (which has gotten some `rave previews`_),
+  and working on a (still pre-alpha) collaborative authoring tool.
 
-- Eric spoke at `SassConf`_, the `New York Sass & Compass Meetup`_, and the
-  `Brakhage Center for the Media Arts`_ and Carl delivered `a talk`_ at
-  `PyCon`_. (In 2014 Carl is scheduled to speak at `ConFoo`_ and again at
-  `PyCon`_).
+- Eric `spoke`_ at `SassConf`_, the `New York Sass & Compass Meetup`_,
+  and the `Brakhage Center for the Media Arts`_.
+  He'll appear again in 2014 at `The Mixin`_,
+  `BlendConf`_, and others.
+  Carl delivered `a talk`_ at `PyCon`_,
+  is scheduled to speak at `ConFoo`_ and again at `PyCon`_ in 2014.
 
 - `We <https://github.com/jgerigmeyer>`_ `released
-  <https://github.com/carljm>`_ `code <https://github.com/ericam>`_ (and
-  usually even maintained it afterwards!) Because we like open-source software,
+  <https://github.com/carljm>`_ `code <https://github.com/ericam>`_
+  (and even maintained most of it afterwards!)
+  Because we like open-source software,
   and wouldn't be here without it.
 
 - We sponsored `SassConf`_ and are silver sponsors of `PyCon`_ 2014. It's one
@@ -40,17 +46,21 @@ first-ever year-end retrospective. Here's 2013, OddBird style:
 
 Thanks for a great year, everyone. See you around in 2014!
 
-\- the Odds Bird
+\— the Odds Bird
 
 .. _Rachel Nabors: http://rachelnabors.com/
 .. _Claudina Sarahe: http://itsmisscs.me/
 .. _Portfoliyo: https://www.portfoliyo.org/
+.. _The K Network: https://www.theknetwork.org/
 .. _Junyo: http://junyo.com/
 .. _novel: http://www.greengreenmud.com/
-.. _rave reviews: http://iloveepoetry.com/?p=2571
+.. _rave previews: http://iloveepoetry.com/?p=2571
+.. _spoke: http://eric.andmeyer.com/pres/
 .. _SassConf: http://sassconf.com/
 .. _New York Sass & Compass Meetup: http://www.meetup.com/nyc-sass/
 .. _Brakhage Center for the Media Arts: http://www.brakhagecenter.net/
+.. _The Mixin: https://twitter.com/theMixinSF
+.. _BlendConf: http://www.blendconf.com/
 .. _a talk: http://pyvideo.org/video/1674/getting-started-with-automated-testing
 .. _PyCon: https://us.pycon.org/
 .. _ConFoo: http://confoo.ca/
