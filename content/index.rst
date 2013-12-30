@@ -36,9 +36,8 @@ Home
     and other open-source projects.
 
     Recent work includes `MozTrap`_ for `Mozilla`_,
-    and a `mapping tool`_ for `The Providence Plan`_.
-    Now we're working on `Portfoliyo`_
-    for teachers, students, & parents;
+    `Portfoliyo`_ for teachers, students, & parents,
+    an ed-tech project with `Junyo`_,
     and `Into the Green Green Mud`_,
     a digital novel.
 
@@ -50,7 +49,7 @@ Home
 .. _Portfoliyo: http://portfoliyo.org/
 .. _MozTrap: http://moztrap.mozilla.org/
 .. _Mozilla: http://mozilla.org/
-.. _mapping tool: http://github.com/oddbird/mlt
+.. _Junyo: http://junyo.com/
 .. _The Providence Plan: http://provplan.org/
 .. _Into the Green Green Mud: http://greengreenmud.com/
 
