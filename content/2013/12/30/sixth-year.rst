@@ -26,8 +26,8 @@ first-ever year-end retrospective. Here's 2013, OddBird style:
 
 - Eric `spoke`_ at `SassConf`_, the `New York Sass & Compass Meetup`_,
   and the `Brakhage Center for the Media Arts`_.
-  He'll appear again in 2014 at `The Mixin`_,
-  `BlendConf`_, and others.
+  He'll appear again in 2014 at `The Mixin`_
+  and others TBA.
   Carl delivered `a talk`_ at `PyCon`_
   and will speak at `ConFoo`_ and again at `PyCon`_ in 2014.
 
@@ -60,7 +60,6 @@ Thanks for a great year, everyone. See you around in 2014!
 .. _New York Sass & Compass Meetup: http://www.meetup.com/nyc-sass/
 .. _Brakhage Center for the Media Arts: http://www.brakhagecenter.net/
 .. _The Mixin: https://twitter.com/theMixinSF
-.. _BlendConf: http://www.blendconf.com/
 .. _a talk: http://pyvideo.org/video/1674/getting-started-with-automated-testing
 .. _PyCon: https://us.pycon.org/
 .. _ConFoo: http://confoo.ca/
