@@ -78,7 +78,7 @@ Please welcome the Susy Next team:
   and a co-maintainer of `Breakpoint`_, `Sassy Math`_, `Singularity`_,
   and so on.
 - `Tsachi Shlidor`_ [`@shlidor`_]
-  is a Drupalist front-end developer and themer at `Linnovate`.
+  is a Drupalist front-end developer and themer.
   He created the `Sasson`_ Drupal theme,
   and the `Salsa`_ layout system.
 - `Mason Wendell`_ [`@codingdesigner`_]
@@ -128,7 +128,6 @@ Stay tuned!
 .. _@shlidor: http://twitter.com/shlidor
 .. _Sasson: http://drupal.org/project/sasson
 .. _Salsa: http://tsi.github.com/Salsa/
-.. _Linnovate: http://www.linnovate.net/
 
 .. _Mason Wendell: http://github.com/canarymason/
 .. _@codingdesigner: http://twitter.com/codingdesigner
