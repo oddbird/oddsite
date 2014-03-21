@@ -101,7 +101,7 @@ Home
     <a href="/authors/eric/" class="fn url">Eric</a>
   </strong>
 
-.. _multimedia artist: http://eric.andmeyer.com/
+.. _multimedia artist: http://ericsuzanne.com/
 .. _words: http://vicioustrap.com/
 .. _images: http://dribbble.com/ericam/
 .. _music: http://teacupgorilla.com/
