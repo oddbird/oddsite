@@ -4,13 +4,11 @@
 <h1 role="banner"><a href="/" rel="home">OddBird</a></h1>
 
 <nav role="navigation">
-  <ul class="primary">
-    <li><a href="/" rel="home">home</a></li>
-    <li><a href="/blog/">blog</a></li>
-  </ul>
+  <a href="/" rel="home">home</a>
+  <a href="/blog/">blog</a>
 </nav>
 
-<section role="main" {% if config.pageclasses %}class="{{ config.pageclasses }}"{% endif %}>
+<main role="main" {% if config.pageclasses %}class="{{ config.pageclasses }}"{% endif %}>
 
   {% block body %}
     {%- if not config.hide_title %}
@@ -20,7 +18,7 @@
     {{ rst.fragment }}
   {% endblock body %}
 
-</section>
+</main>
 
 <footer role="contentinfo">
 

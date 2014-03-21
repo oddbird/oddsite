@@ -1,0 +1,20 @@
+// Links
+// =====
+
+$link: '&:link, &:visited';
+$focus: '&:hover, &:focus, &:active';
+
+%link {
+  color: $alt;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+%link-focus {
+  color: color(darker $alt);
+}
+
+a {
+  #{$link} { @extend %link; }
+  #{$focus} { @extend %link-focus; }
+}

@@ -1,0 +1,61 @@
+// Buttons
+// =======
+
+@mixin button(
+  $bg: color(light),
+  $reset: true
+) {
+  $color: contrast($bg);
+
+  @if $reset {
+    @extend %button-reset;
+  }
+
+  background: $bg;
+  border-radius: rhythm(.125);
+  color: $color;
+
+  #{$focus} {
+    background: color(dark $bg);
+  }
+
+  &:disabled {
+    background: color(-100% $bg);
+    color: color($color, .5);
+    cursor: default;
+  }
+}
+
+
+// Reset
+// -----
+
+%button-reset {
+  @include reset-box-model;
+  width: auto;
+  background: none;
+  color: $base;
+  font: inherit;
+  cursor: pointer;
+  overflow: visible;
+  #{$focus} { outline: 0; }
+}
+
+
+// Defaults
+// --------
+
+%button {
+  @extend %button-reset;
+
+  &--default {
+    @include button($reset: false);
+  }
+  &--primary {
+    @include button($success, $reset: false);
+  }
+}
+
+button {
+  @extend %button;
+}

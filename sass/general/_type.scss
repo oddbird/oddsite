@@ -1,78 +1,48 @@
-// ----------------------------------------------------------------------------
-// Links
+// Typography
+// ==========
 
-a {
-  &:hover, &:active { outline: none; }
-  #{$link} {
-    color: $alt;
-    text-decoration: none;
+.is-hidden { @extend %is-hidden; }
+pre, code { @extend %mono; }
+
+
+// Headers
+// -------
+
+%h1 { @include font-size(large); }
+%h2 { @include font-size(medium); }
+
+%h3, %h4, %h5 { font-weight: bold; }
+
+%headers {
+  h1 { @extend %h1; }
+  h2 { @extend %h2; }
+  h3 { @extend %h3; }
+}
+
+
+// Body
+// ----
+
+%body {
+  p, ol, ul {
+    @include trailer;
   }
-  #{$focus} { color: $accent; }
-}
 
-// ----------------------------------------------------------------------------
-// Ampersand
-
-.amp {
-  @include serif;
-  font-style: italic;
-}
-
-// ----------------------------------------------------------------------------
-// Mixins
-
-@mixin before($content) { &:before { content: $content; } }
-@mixin after($content) { &:after { content: $content; } }
-
-@mixin wrap($wrapper: "“" "”") {
-  $wrapper: if(length($wrapper) < 2, $wrapper $wrapper, $wrapper);
-  @include before(nth($wrapper,1));
-  @include after(nth($wrapper,2));
-}
-
-// ----------------------------------------------------------------------------
-// Type
-
-%type {
-  h1 {
-    @include adjust-font-size-to($largepx);
-    a {
-      #{$link} { color: $orange-dark; }
-      #{$focus} { color: $pink-dark; }
+  ol, ul {
+    ol, ul {
+      margin-left: rhythm(1);
     }
   }
 
-  h2 {
-    @include trailer(.5);
-    text-transform: uppercase;
-  }
+  ol { list-style: decimal; }
+  ul { list-style: disc; }
+}
 
-  h3, h4, strong { font-weight: bold; }
-  em { font-style: italic; }
 
-  p, ul, ol, pre { @include trailer; }
+// Type
+// ----
 
-  ul, ol {
-    ul, ol { padding-left: rhythm(1); }
-  }
-
-  code, .code {
-    @include mono;
-    @include adjust-font-size-to($xxsmallpx,1);
-  }
-
-  code {
-    display: inline-block;
-    padding: 0 .5em;
-    background: rgba($blue-darker,.125);
-  }
-
-  .code {
-    @include adjust-leading-to(.75);
-    @include trailer;
-    @include box-shadow($base 0 0 .25em inset);
-    overflow: auto;
-    padding: rhythm(.5) rhythm(.75);
-    border-left: rhythm(.25) solid rgba($blue-darkest,.25);
-  }
+%type {
+  @extend %headers;
+  @extend %body;
 }

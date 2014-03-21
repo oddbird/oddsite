@@ -1,0 +1,30 @@
+// Scale
+// =====
+
+@include set(ratio, major-third);
+
+@include set(scale, (
+  xxxlarge  : 8,
+  xxlarge   : 6,
+  xlarge    : 4,
+  large     : 2,
+  medium    : 1.5,
+  normal    : 0,
+  small     : -.5,
+  xsmall    : -1,
+  xxsmall   : -3,
+  xxxsmall  : -6,
+));
+
+
+// Text & Units
+// ------------
+
+$base-font-size: 18px;
+$base-line-height: size(medium);
+
+$rhythm-unit: rem;
+$rem-with-px-fallback: false;
+
+$relative-font-sizing: true;
+$round-to-nearest-half-line: true;

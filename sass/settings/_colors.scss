@@ -1,0 +1,43 @@
+// Colors
+// ------
+
+$default-hue      : #839496;
+
+$blue             : hsl(195,85%,50%);
+$orange           : hsl(24,85%,50%);
+$yellow           : hsl(45,85%,50%);
+$green            : hsl(75,65%,50%);
+$pink             : hsl(330,85%,50%);
+$red              : hsl(0,85%,50%);
+
+
+// Keywords
+// --------
+
+@include set(color-keywords, (
+  lightest: 90%,
+  lighter: 50%,
+  light: 10%,
+  dark: -5%,
+  darker: -40%,
+  darkest: -80%,
+));
+
+
+// Guide
+// -----
+
+$base         : color(darker);
+$alt          : color(dark $blue);
+$accent       : color($orange);
+
+$bg           : color($blue 95%);
+$lowlight     : color(lighter);
+
+$info         : $alt;
+$success      : $green;
+$warning      : $red;
+$error        : $red;
+
+$contrasted-dark-default  : color(darker)     !default;
+$contrasted-light-default : color(lightest)     !default;
