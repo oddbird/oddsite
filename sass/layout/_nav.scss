@@ -1,0 +1,19 @@
+// Navigation
+// ==========
+
+[role="navigation"] {
+  @include font-size(xsmall);
+  @include gutters;
+  background: $banner-color;
+  position: absolute;
+  right: 0;
+}
+
+.nav-link {
+  #{$link} {
+    color: white;
+    display: inline-block;
+    padding: rhythm(.25) rhythm(.5);
+    text-transform: uppercase;
+  }
+}

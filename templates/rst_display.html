@@ -3,14 +3,22 @@
 {% block bodyclasses %}blog{% endblock bodyclasses %}
 
 {% block body %}
-  <div class="post">
+  <article class="post">
     {%- if not config.hide_title %}
-    {{ rst.html_title }}
+      {{ rst.html_title }}
     {%- endif %}
 
     {% include "_byline.html" %}
 
+    {%- for module in config.before -%}
+      {% include module.include %}
+    {%- endfor -%}
+
     <div class="body">{{ rst.fragment }}</div>
+
+    {%- for module in config.after -%}
+      {% include module.include %}
+    {%- endfor -%}
 
     {% if 'disqus' in config.active_modules %}
       {{ get_disqus() }}
@@ -26,5 +34,5 @@
         <a href="https://news.ycombinator.com/submitlink?u=http%3A//oddbird.net{{ link_to('page', slug=ctx.slug) }}">Hacker&nbsp;News</a>.
       </aside class="comments">
     {% endif %}
-  </div>
+  </article>
 {% endblock %}

@@ -1,0 +1,23 @@
+{% if config.birds %}
+<section class="birds">
+  {% for bird in config.birds %}
+  <article class="h-card{% if bird.company %} company{% endif %}">
+    <h3 class="fn{% if bird.company %} org{% endif %}">
+      {% if bird.email %}
+        <a href="mailto:birds(who are 'at' the)oddbird.net" class="email">
+          {{ bird.name }}
+        </a>
+      {% else %}
+        {{ bird.name }}
+      {% endif %}
+    </h3>
+
+    {% if bird.twitter %}
+      <a href="http://twitter.com/{{ bird.twitter }}" rel="me">@{{ bird.twitter }}</a>
+    {% endif %}
+
+    <p class="bio">{{ bird.bio|safe }}</p>
+  </article>
+  {% endfor %}
+</section>
+{% endif %}

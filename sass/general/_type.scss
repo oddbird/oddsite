@@ -3,13 +3,27 @@
 
 .is-hidden { @extend %is-hidden; }
 pre, code { @extend %mono; }
-
+.amp {
+  @extend %serif;
+  font-style: italic;
+}
 
 // Headers
 // -------
 
-%h1 { @include font-size(large); }
-%h2 { @include font-size(medium); }
+%h1, %h2, %h3, %h4, %h5 {
+  @extend %serif;
+}
+
+%h1 {
+  @include font-size(xlarge);
+  @include trailer;
+}
+
+%h2 {
+  @include font-size(medium, 1.25);
+  @include trailer;
+}
 
 %h3, %h4, %h5 { font-weight: bold; }
 

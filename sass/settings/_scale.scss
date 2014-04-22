@@ -8,20 +8,20 @@
   xxlarge   : 6,
   xlarge    : 4,
   large     : 2,
-  medium    : 1.5,
+  medium    : 1,
   normal    : 0,
   small     : -.5,
   xsmall    : -1,
-  xxsmall   : -3,
-  xxxsmall  : -6,
+  xxsmall   : -2,
+  xxxsmall  : -3,
 ));
 
 
 // Text & Units
 // ------------
 
-$base-font-size: 18px;
-$base-line-height: size(medium);
+$base-font-size: 21px;
+$base-line-height: size(large);
 
 $rhythm-unit: rem;
 $rem-with-px-fallback: false;

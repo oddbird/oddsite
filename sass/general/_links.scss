@@ -5,13 +5,13 @@ $link: '&:link, &:visited';
 $focus: '&:hover, &:focus, &:active';
 
 %link {
-  color: $alt;
+  color: $accent;
   text-decoration: none;
   cursor: pointer;
 }
 
 %link-focus {
-  color: color(darker $alt);
+  color: color(dark $pink);
 }
 
 a {

@@ -1,12 +1,12 @@
 {% extends "base.html" %}
 
 {% block layout %}
-<h1 role="banner"><a href="/" rel="home">OddBird</a></h1>
-
 <nav role="navigation">
-  <a href="/" rel="home">home</a>
-  <a href="/blog/">blog</a>
+  <a href="/" class="nav-link" data-active="home">About</a>
+  <a href="/blog/" class="nav-link" data-active="blog">Blog</a>
 </nav>
+
+<h1 role="banner"><a href="/" rel="home">OddBird</a></h1>
 
 <main role="main" {% if config.pageclasses %}class="{{ config.pageclasses }}"{% endif %}>
 
@@ -30,15 +30,6 @@
         <a href="{{ link_to('page', slug=entry.slug) }}"  rel="bookmark">{{ entry.title }}</a>
       </li>
       {%- endfor %}
-    </ul>
-  </div>
-
-  <div class="contact">
-    <h3 class="foottitle email">birds(who are 'at' the)oddbird.net</h3>
-    <ul>
-      <li><a href="http://twitter.com/carljm/">@carljm</a></li>
-      <li><a href="http://twitter.com/eriiicam/">@eriiicam</a></li>
-      <li><a href="http://twitter.com/jgerigmeyer/">@jgerigmeyer</a></li>
     </ul>
   </div>
 

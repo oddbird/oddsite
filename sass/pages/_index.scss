@@ -1,0 +1,34 @@
+// Index
+// =====
+
+.homepage {
+  @extend %type;
+
+  h1 {
+    font-style: italic;
+    text-align: center;
+  }
+}
+
+.birds {
+  .h-card {
+    @include trailer;
+    @include gutters;
+  }
+
+  .fn, .bio { display: inline; }
+
+  [rel="me"] {
+    @include wrap-content('[' ']') {
+      color: $base;
+    }
+  }
+
+  .company {
+    @extend %h2;
+    @include h-borders(2px, 1);
+    border-color: color(darker $alt, .25);
+    border-style: dashed;
+  }
+}
+

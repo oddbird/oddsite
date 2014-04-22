@@ -1,29 +1,35 @@
 // Banner
 // ======
 
+$banner-color: color(darker $alt);
+$logo-height: rhythm(4);
+$logo-ratio: 177 / 83;
+
 [role="banner"] {
-  @include padding-leader(.5);
-  background: color(darker $alt);
+  @include background(
+    linear-gradient(to top left,
+      $bg 50%,
+      color(darker, .25) 50%,
+      color(darker, 0) 55%
+    )
+    no-repeat scroll $banner-color
+  );
+  @include background-size(100% 60%);
+  @include rhythm-padding(.5);
+  background-position: bottom right;
   text-align: center;
 
   [rel="home"] {
-    @include trailer(-1.25);
     @include replace-text('logo.svg');
     @include background-size(contain);
     @include transition(all 150ms ease-in-out);
     @include transform-origin(top, center);
     display: inline-block;
-    min-width: rhythm(10);
-    min-height: rhythm(4);
+    height: $logo-height;
+    width: $logo-ratio * $logo-height;
 
     #{$focus} {
       @include scale3d(1.1, 1.1, 1.1);
     }
   }
-}
-
-
-[role="main"] {
-  @extend %type;
-  @include container(40em);
 }
