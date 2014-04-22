@@ -7,6 +7,7 @@
 @import "settings/icons";
 @import "settings/fonts";
 
+@import "general/links";
 @import "general/type";
 @import "general/root";
 
@@ -31,8 +32,8 @@ body {
 }
 
 [role="banner"] {
-  @include adjust-font-size-to($xxlargepx);
-  margin-bottom: 0px;
+  @include font-size(xxlarge);
+  @include trailer(0);
 }
 
 [role="navigation"], [role="contentinfo"],
@@ -59,15 +60,15 @@ a {
 }
 
 a:after {
-  @include sanscond;
-  @include adjust-font-size-to($smallpx);
+  @extend %sans;
+  @include font-size(small);
   content: " [" attr(href) "] ";
 }
 a[href^="/"]:after {
   content: " [http://oddbird.net" attr(href) "] ";
   [role="banner"] &, .byline & { display: none; }
   .title & {
-    @include adjust-font-size-to($smallpx);
+    @include font-size(small);
     display: block;
   }
 }
@@ -87,11 +88,11 @@ p { margin-top: 0; }
 // Home
 
 .tagline {
-  @include sanscond;
+  @extend %sans;
   text-transform: uppercase;
 }
 .intro {
-  @include adjust-font-size-to($largepx);
+  @include font-size(large);
   font-style: italic;
 }
 .projects, .people, .process { @extend %section; }
