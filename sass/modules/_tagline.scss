@@ -1,0 +1,12 @@
+// Tagline
+// =======
+
+[data-location="home"] {
+  .title {
+    @extend %h1;
+    @include gutters;
+    color: $banner-color;
+    font-style: italic;
+    text-align: center;
+  }
+}

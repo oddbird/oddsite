@@ -1,0 +1,54 @@
+// Base Styles
+// ===========
+
+@import "base/type";
+@import "base/buttons";
+
+
+// Icons
+// -----
+
+@include set(icon-font, 'oddsite');
+@include icon-placeholder;
+@include data-icons;
+
+
+// HTML
+// ----
+
+html {
+  @extend %sans;
+  background: $bg;
+  color: $base;
+}
+
+
+// Elements
+// --------
+
+a {
+  #{$link} { @extend %link; }
+  #{$focus} { @extend %link-focus; }
+}
+
+
+// Helpers
+// -------
+
+.is-hidden {
+  @extend %is-hidden;
+}
+
+pre,
+code {
+  @extend %mono;
+}
+
+.amp {
+  @extend %serif;
+  font-style: italic;
+}
+
+.btn {
+  @extend %button;
+}

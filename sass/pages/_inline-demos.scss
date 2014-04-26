@@ -1,17 +1,24 @@
-// ----------------------------------------------------------------------------
-// shared
+// Inline Demos
+// ============
+
+@import "susyone";
+
+
+// Shared
+// ------
 
 %demo-item {
-  @include mono;
-  @include adjust-font-size-to($xsmallpx);
+  @extend %mono;
+  @include font-size(xsmall);
   @include rhythm(.5,.5);
   background: rgba($base,.75);
-  color: $lightest;
+  color: color(lightest);
   text-shadow: $base 0 1px 0;
 }
 
-// ----------------------------------------------------------------------------
-// susy isolation demo
+
+// Susy Isolation Demo
+// -------------------
 
 .subpixel-demo {
   @include susy-grid-background;
@@ -46,8 +53,9 @@
 
 }
 
-// ----------------------------------------------------------------------------
-// susy bleed demo
+
+// Susy bleed demo
+// ---------------
 
 .bleed-demo {
   @extend %demo-item;

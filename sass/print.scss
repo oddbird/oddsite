@@ -1,18 +1,12 @@
-// ----------------------------------------------------------------------------
-// Imports
+// Print Styles
+// ============
 
-@import "settings/requirements";
-@import "settings/scale";
-@import "settings/colors";
-@import "settings/icons";
-@import "settings/fonts";
+@import "settings/manifest";
+@import "base/type";
 
-@import "general/links";
-@import "general/type";
-@import "general/root";
 
-// ----------------------------------------------------------------------------
 // Layout
+// ------
 
 @include establish-baseline;
 
@@ -50,8 +44,9 @@ body {
   }
 }
 
-// ----------------------------------------------------------------------------
+
 // Type
+// ----
 
 a {
   #{$link}, #{$focus} {
@@ -84,21 +79,9 @@ p, h1, h2, h3 {
 
 p { margin-top: 0; }
 
-// ----------------------------------------------------------------------------
-// Home
 
-.tagline {
-  @extend %sans;
-  text-transform: uppercase;
-}
-.intro {
-  @include font-size(large);
-  font-style: italic;
-}
-.projects, .people, .process { @extend %section; }
-
-// ----------------------------------------------------------------------------
 // Blog
+// ----
 
 .post { @extend %section; }
 .title { margin: 0; }

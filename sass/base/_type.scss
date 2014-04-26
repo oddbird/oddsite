@@ -1,0 +1,97 @@
+// Typography
+// ==========
+
+@include fonts;
+@include establish-baseline;
+
+
+// Links
+// -----
+
+$link: '&:link, &:visited';
+$focus: '&:hover, &:focus, &:active';
+
+%link {
+  color: $accent;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+%link-focus {
+  color: color(dark $pink);
+}
+
+
+// Headers
+// -------
+
+%h1,
+%h2,
+%h3,
+%h4,
+%h5 {
+  @extend %serif;
+}
+
+%h1 {
+  @include font-size(xlarge);
+  @include trailer;
+}
+
+%h2 {
+  @include font-size(medium, 1.25);
+  @include trailer;
+}
+
+%h3, %h4, %h5 { font-weight: bold; }
+
+%headers {
+  h1 {
+    @extend %h1;
+  }
+
+  h2 {
+    @extend %h2;
+  }
+
+  h3 {
+    @extend %h3;
+  }
+}
+
+
+// Body
+// ----
+
+%body {
+  p,
+  ol,
+  ul {
+    @include trailer;
+  }
+
+  ol,
+  ul {
+    ol,
+    ul {
+      margin-left: rhythm(1);
+    }
+  }
+
+  ol {
+    list-style: decimal;
+  }
+
+  ul {
+    list-style: disc;
+  }
+}
+
+
+// Type
+// ----
+
+%type {
+  @extend %headers;
+  @extend %body;
+}

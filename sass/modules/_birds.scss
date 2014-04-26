@@ -1,14 +1,5 @@
-// Index
+// Birds
 // =====
-
-.homepage {
-  @extend %type;
-
-  h1 {
-    font-style: italic;
-    text-align: center;
-  }
-}
 
 .birds {
   .h-card {
@@ -31,4 +22,3 @@
     border-style: dashed;
   }
 }
-

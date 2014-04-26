@@ -10,6 +10,12 @@ $green            : hsl(75,65%,50%);
 $pink             : hsl(330,85%,50%);
 $red              : hsl(0,85%,50%);
 
+@include set(colors, (
+  blue: $blue,
+  orange: $orange,
+  pink: $pink,
+));
+
 
 // Keywords
 // --------
@@ -17,7 +23,7 @@ $red              : hsl(0,85%,50%);
 @include set(color-keywords, (
   lightest: 90%,
   lighter: 50%,
-  light: 10%,
+  light: 20%,
   dark: -5%,
   darker: -35%,
   darkest: -65%,

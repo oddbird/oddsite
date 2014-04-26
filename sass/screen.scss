@@ -1,28 +1,9 @@
 // Screen
 // ======
 
+@import "settings/manifest";
+@import "base";
 
-// Settings
-@import "settings/requirements";
-@import "settings/scale";
-@import "settings/colors";
-@import "settings/icons";
-@import "settings/fonts";
-@import "settings/grid";
-
-
-// General
-@import "general/icons";
-@import "general/links";
-@import "general/type";
-@import "general/buttons";
-@import "general/root";
-
-
-// Layout
-@import "layout/banner";
-@import "layout/nav";
+@import "modules/manifest";
 @import "layout/main";
-
-// Pages
-@import "pages/index";
+@import "pages/inline-demos";

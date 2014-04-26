@@ -1,4 +1,6 @@
 ---
+location: blog
+
 birds:
   - name: OddBird
     company: true

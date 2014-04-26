@@ -38,6 +38,7 @@
   font: inherit;
   cursor: pointer;
   overflow: visible;
+
   #{$focus} { outline: 0; }
 }
 
@@ -51,11 +52,8 @@
   &--default {
     @include button($reset: false);
   }
+
   &--primary {
     @include button($success, $reset: false);
   }
-}
-
-button {
-  @extend %button;
 }

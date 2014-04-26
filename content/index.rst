@@ -1,6 +1,5 @@
 public: yes
-bodyclasses: home
-pageclasses: homepage
+location: home
 before:
   - include: 'modules/_bios.html.j2'
 

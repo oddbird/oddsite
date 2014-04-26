@@ -1,0 +1,30 @@
+// Navigation
+// ==========
+
+$locations: home, blog;
+
+[role="navigation"] {
+  @extend %serif;
+  @include font-size(xsmall);
+  @include gutters;
+}
+
+.nav-link {
+  #{$link} {
+    @include gutters;
+    color: $bg;
+    display: inline-block;
+    font-style: italic;
+    text-transform: lowercase;
+  }
+
+  #{$focus} {
+    border-top: 2px solid color($bg, .5);
+  }
+}
+
+@each $loc in $locations {
+  [data-location="#{$loc}"] [data-active="#{$loc}"] {
+    border-top: 2px solid color(lighter $accent);
+  }
+}

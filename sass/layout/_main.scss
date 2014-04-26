@@ -1,6 +1,13 @@
-// Main
-// ====
+// Main Layout
+// ===========
+
+[role="navigation"] {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
 
 [role="main"] {
   @include container;
 }
+

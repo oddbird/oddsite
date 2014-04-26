@@ -1,0 +1,57 @@
+// Banner
+// ======
+
+$banner-color: color(darker $alt);
+
+@include keyframes(banner) {
+  $colors: map-values(get(colors));
+  $length: length($colors);
+
+  @for $i from 1 through $length {
+    $pos: percentage(($i - 1) / $length);
+    $next: percentage($i / $length) - 3%;
+
+    $pos: if($pos == 0%, (0%, 100%, $next), ($pos, $next));
+    #{$pos} {
+      background-color: color(darker nth($colors, $i));
+    }
+  }
+}
+
+[role="banner"] {
+  @include animation(banner 240s infinite);
+  @include background(
+    linear-gradient(to top left,
+      $bg 50%,
+      color($bg, 0) 50%
+    ) no-repeat scroll,
+    linear-gradient(to top left,
+      color(darker, .5),
+      color(darker, 0) 62%
+    ) $banner-color
+  );
+  @include background-size(100% 60%, auto);
+  @include rhythm-padding(.5);
+  background-position: bottom right;
+  text-align: center;
+
+  [rel="home"] {
+    #{$link} {
+      @include font-size(xxxlarge);
+      @include transition(all 150ms ease-in-out);
+      @include transform-origin(top, center);
+      color: $bg;
+      display: inline-block;
+    }
+
+    #{$focus} {
+      @include scale3d(1.1, 1.1, 1.1);
+      color: color(light $orange);
+      text-shadow: 0 1px 0 $bg;
+    }
+  }
+
+  [data-icon="oddbird"] {
+    vertical-align: top;
+  }
+}
