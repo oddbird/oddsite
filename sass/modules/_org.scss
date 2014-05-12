@@ -1,0 +1,40 @@
+// Org
+// ===
+
+$org-border: (
+  width: 2px,
+  color: color(darker $alt, .25),
+  style: dashed,
+);
+
+
+.company {
+  @include background(image-url('birds.png') no-repeat scroll top center);
+  @include background-size(100% auto);
+  @include trailer;
+  padding-top: percentage(image-height('birds.png') / image-width('birds.png'));
+
+  .h-card {
+    @include display-flex;
+    @include flex-direction(column-reverse);
+    @include leader(-1);
+  }
+
+  .fn { font-weight: bold; }
+
+  .bio {
+    @extend %h2;
+    @include gutters;
+    @include h-borders(map-get($org-border, width), 1);
+    border: {
+      color: map-get($org-border, color);
+      style: map-get($org-border, style);
+    }
+    margin: 0;
+  }
+
+  .bio-links {
+    @include gutters;
+    text-align: center;
+  }
+}

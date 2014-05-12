@@ -1,18 +1,22 @@
 ---
 location: blog
 
-birds:
+company:
   - name: OddBird
-    company: true
-    email: birds@oddbird.net
+    type: org
+    email: birds(who are 'at' the)oddbird.net
+    twitter: oddestbirds
     bio: |
       thrives on freely shared ideas
       <span class="amp">&</span> playful collaboration,
       crossing disciplines, breaking boundaries,
       and eating our dessert with the soup&nbsp;spoon.
 
+
+birds:
   - name: Carl Meyer
     twitter: carljm
+    github: carljm
     bio: |
       is a <a href="http://github.com/carljm">coder</a>,
       <a href="http://www.python.org/">Pythonista</a>,
@@ -22,6 +26,7 @@ birds:
 
   - name: Eric M Suzanne
     twitter: ericmsuzanne
+    github: ericam
     bio: |
       is an artist <span class="amp">&</span> experience designer,
       mixing <a href="http://eric.ericsuzanne.com">words</a>,
@@ -29,11 +34,11 @@ birds:
       <a href="http://teacupgorilla.com/">music</a>,
       <a href="http://github.com/ericam/">code</a>,
       and <a href="http://vicioustrap.com/">performance</a>.
-      He’s a sucker for new projects, puzzels,
-      and collaborative processes.
+      He’s a sucker for new projects, puzzels, and processes.
 
   - name: Jonny Gerig Meyer
     twitter: jgerigmeyer
+    github: jgerigmeyer
     bio: |
       is a
       <a href="http://github.com/jgerigmeyer/">front-end developer</a>,
@@ -44,6 +49,7 @@ birds:
 
   - name: Claudina Sarahe
     twitter: itsmisscs
+    github: misscs
     bio: |
       is a front-end developer, pattern wrangler,
       and etc etc.

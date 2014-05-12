@@ -7,18 +7,20 @@
     @include gutters;
   }
 
-  .fn, .bio { display: inline; }
-
-  [rel="me"] {
-    @include wrap-content('[' ']') {
-      color: $base;
-    }
+  .bio {
+    @include trailer(.25);
   }
+}
 
-  .company {
-    @extend %h2;
-    @include h-borders(2px, 1);
-    border-color: color(darker $alt, .25);
-    border-style: dashed;
-  }
+.bio-links {
+  @extend %serif;
+  @include font-size(xsmall);
+  font-style: italic;
+}
+
+.bio-link {
+  @include gutters(before);
+  display: inline-block;
+
+  &:first-child { margin-left: 0; }
 }

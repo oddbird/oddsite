@@ -3,12 +3,12 @@
 
 $default-hue      : #839496;
 
-$blue             : hsl(195,85%,50%);
-$orange           : hsl(24,85%,50%);
-$yellow           : hsl(45,85%,50%);
-$green            : hsl(75,65%,50%);
-$pink             : hsl(330,85%,50%);
-$red              : hsl(0,85%,50%);
+$blue             : hsl(195, 85%, 62%);
+$orange           : hsl(24, 100%, 62%);
+$yellow           : hsl(45, 85%, 62%);
+$green            : hsl(75, 65%, 62%);
+$pink             : hsl(330, 85%, 62%);
+$red              : hsl(0, 85%, 62%);
 
 @include set(colors, (
   blue: $blue,

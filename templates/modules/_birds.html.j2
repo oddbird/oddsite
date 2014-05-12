@@ -1,0 +1,7 @@
+{% if config.birds %}
+<article class="birds">
+  {% for bird in config.birds %}
+  {% include "modules/_bio.html.j2" %}
+  {% endfor %}
+</article>
+{% endif %}

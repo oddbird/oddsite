@@ -7,6 +7,15 @@ $locations: home, blog;
   @extend %serif;
   @include font-size(xsmall);
   @include gutters;
+  background: $banner-color;
+  text-align: center;
+
+  @include breakpoint(40em) {
+    background: transparent;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
 }
 
 .nav-link {
@@ -25,6 +34,6 @@ $locations: home, blog;
 
 @each $loc in $locations {
   [data-location="#{$loc}"] [data-active="#{$loc}"] {
-    border-top: 2px solid color(lighter $accent);
+    border-top: 2px solid $accent;
   }
 }

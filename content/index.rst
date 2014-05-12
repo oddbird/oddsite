@@ -1,7 +1,7 @@
 public: yes
 location: home
 before:
-  - include: 'modules/_bios.html.j2'
+  - include: 'modules/_org.html.j2'
 
 
 Custom web tools for humans

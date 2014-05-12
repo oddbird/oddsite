@@ -44,11 +44,7 @@ $banner-color: color(darker $alt);
       display: inline-block;
     }
 
-    #{$focus} {
-      @include scale3d(1.1, 1.1, 1.1);
-      color: color(light $orange);
-      text-shadow: 0 1px 0 $bg;
-    }
+    #{$focus} { @include scale3d(1.25, 1.25, 1.25); }
   }
 
   [data-icon="oddbird"] {

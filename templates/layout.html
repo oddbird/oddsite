@@ -2,23 +2,23 @@
 {% import "utility.macros.html.j2" as utility %}
 
 {% block layout %}
-<h1 role="banner">
-  <a href="/" rel="home">
-    {{ utility.icon("oddbird") }}
-    {{ utility.is_hidden("OddBird") }}
-  </a>
-</h1>
-
 <nav role="navigation">
   <a href="/" class="nav-link" data-active="home">
     {{ utility.icon("home") }}
-    About
+    Home
   </a>
   <a href="/blog/" class="nav-link" data-active="blog">
     {{ utility.icon("bubbles") }}
     Blog
   </a>
 </nav>
+
+<h1 role="banner">
+  <a href="/" rel="home">
+    {{ utility.icon("oddbird") }}
+    {{ utility.is_hidden("OddBird") }}
+  </a>
+</h1>
 
 <main role="main" {% if config.pageclasses %}class="{{ config.pageclasses }}"{% endif %}>
 

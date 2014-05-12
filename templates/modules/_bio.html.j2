@@ -1,0 +1,37 @@
+{% import "utility.macros.html.j2" as utility %}
+
+<div class="h-card">
+  <p class="bio">
+    <strong class="fn{% if bird.type %} {{ bird.type }}{% endif %}">
+      {{ bird.name }}
+    </strong>
+
+    {{ bird.bio|safe }}
+  </p>
+
+  {% if bird.email or bird.twitter or bird.github %}
+  <div class="bio-links">
+    {% if bird.email %}
+      <a href="mailto:{{ bird.email }}" class="email bio-link">
+        {{ utility.icon('mail') }}
+        {{ bird.email }}
+      </a>
+    {% endif %}
+
+    {% if bird.twitter %}
+      <a href="http://twitter.com/{{ bird.twitter }}" class="bio-link" rel="me">
+        {{ utility.icon('twitter') }}
+        @{{ bird.twitter }}
+      </a>
+    {% endif %}
+
+    {% if bird.github %}
+      <a href="http://github.com/{{ bird.github }}" class="bio-link" rel="me">
+        {{ utility.icon('github') }}
+        {{ bird.github }}
+      </a>
+    {% endif %}
+  </div>
+  {% endif %}
+
+</div>
