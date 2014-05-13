@@ -21,30 +21,10 @@
 </h1>
 
 <main role="main" {% if config.pageclasses %}class="{{ config.pageclasses }}"{% endif %}>
-
-  {% block body %}
-    {%- if not config.hide_title %}
-      <h1>{{ ctx.title }}</h1>
-    {%- endif %}
-
-    {{ rst.fragment }}
-  {% endblock body %}
-
+  {% block body %}{% endblock body %}
 </main>
 
 <footer role="contentinfo">
-
-  <div class="listarchive">
-    <h3 class="foottitle"><a href="/archive/" rel="archive">Blog Archive</a></h3>
-    <ul>
-      {%- for entry in get_recent_blog_entries() %}
-      <li>
-        <a href="{{ link_to('page', slug=entry.slug) }}"  rel="bookmark">{{ entry.title }}</a>
-      </li>
-      {%- endfor %}
-    </ul>
-  </div>
-
   <p class="colophon">
     This site is built on plain old semantic <a href="http://www.w3.org/TR/html5/">HTML5</a>,
     powered by
@@ -62,8 +42,12 @@
     and <a href="http://sass-lang.com/">Sass</a>.
   </p>
 
-  <p class="copyright vcard">copyright &copy; 2009-2013
-    <a href="http://oddbird.net/" class="fn org url">OddBird</a>
-  </p>
+  <div class="legal">
+    <div class="copyright h-card">
+      Copyright &copy; {{ config.copyright }}
+      <a href="http://oddbird.net" class="fn org url">OddBird</a>
+    </div>
+    <div class="est">Established in 2009 by Three (née) Meyer Brothers.</div>
+  </div>
 </footer>
 {% endblock layout %}

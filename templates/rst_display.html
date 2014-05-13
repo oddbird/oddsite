@@ -3,36 +3,23 @@
 {% block bodyclasses %}blog{% endblock bodyclasses %}
 
 {% block body %}
-  <article class="post">
-    {%- if not config.hide_title %}
-      {{ rst.html_title }}
-    {%- endif %}
+  {%- if not config.hide_title %}
+    {{ rst.html_title }}
+  {%- endif %}
 
-    {% include "_byline.html" %}
+  {% include "_byline.html.j2" %}
 
-    {%- for module in config.before -%}
-      {% include module.include %}
-    {%- endfor -%}
+  {%- for module in config.before -%}
+    {% include module.include %}
+  {%- endfor -%}
 
-    <div class="body">{{ rst.fragment }}</div>
+  <div class="body">{{ rst.fragment }}</div>
 
-    {%- for module in config.after -%}
-      {% include module.include %}
-    {%- endfor -%}
+  {%- for module in config.after -%}
+    {% include module.include %}
+  {%- endfor -%}
 
-    {% if 'disqus' in config.active_modules %}
-      {{ get_disqus() }}
-    {% else %}
-      <aside class="comments">
-        Have a correction, addition, or feedback on this post?
-        Talk to us on
-        <a href="https://twitter.com/{% if config.author == 'carl' %}carljm{% elif config.author == 'eric' %}eriiicam{% elif config.author == 'jonny' %}jgerigmeyer{% endif %}">Twitter</a>,
-        email <span class="email">birds(who are 'at' the)oddbird.net</span>,
-        or comment on
-        <a href="http://www.reddit.com/submit?url=http%3A//oddbird.net{{ link_to('page', slug=ctx.slug) }}">Reddit</a>
-        or
-        <a href="https://news.ycombinator.com/submitlink?u=http%3A//oddbird.net{{ link_to('page', slug=ctx.slug) }}">Hacker&nbsp;News</a>.
-      </aside class="comments">
-    {% endif %}
-  </article>
+  {% if config.comments %}
+    {% include "_comments.html.j2" %}
+  {% endif %}
 {% endblock %}

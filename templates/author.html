@@ -5,5 +5,9 @@
 
 {% block feedlinks %}
 {{ super() }}
-<link href="feed.atom" rel="alternate" title="OddBird blog posts by '{{ author.name }}'" type="application/atom+xml">
+<link href="feed.atom" rel="alternate" title="OddBird posts by '{{ author.name }}'" type="application/atom+xml">
 {% endblock %}
+
+{% block list_title %}
+  <h1 class="title">Posts by <strong>{{ author.name }}</strong></h1>
+{% endblock list_title %}

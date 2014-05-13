@@ -17,7 +17,7 @@ $org-border: (
   .h-card {
     @include display-flex;
     @include flex-direction(column-reverse);
-    @include leader(-1);
+    @include leader(-.5);
   }
 
   .fn { font-weight: bold; }

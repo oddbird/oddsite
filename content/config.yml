@@ -15,6 +15,7 @@ company:
 
 birds:
   - name: Carl Meyer
+    author: carl
     twitter: carljm
     github: carljm
     bio: |
@@ -25,6 +26,7 @@ birds:
       he chases frisbees, hockey pucks, and a six-year-old son.
 
   - name: Eric M Suzanne
+    author: eric
     twitter: ericmsuzanne
     github: ericam
     bio: |
@@ -37,6 +39,7 @@ birds:
       He’s a sucker for new projects, puzzels, and processes.
 
   - name: Jonny Gerig Meyer
+    author: jonny
     twitter: jgerigmeyer
     github: jgerigmeyer
     bio: |
@@ -48,6 +51,7 @@ birds:
       He likes complicated board games, homebrewed IPAs, and hucking it deep.
 
   - name: Claudina Sarahe
+    author: claudina
     twitter: itsmisscs
     github: misscs
     bio: |
@@ -58,9 +62,10 @@ birds:
       AmIRight?
 
 
-# Copyright
-copyright: 'Copyright © 2009-2014 <b>OddBird</b>'
-
+# Settings
+copyright: 2014
+author: OddBird
+comments: True
 
 # rstBlog Setup
 active_modules: [
@@ -72,7 +77,6 @@ active_modules: [
   typogrify,
   hashedassets
   ]
-author: OddBird
 canonical_url: http://oddbird.net/
 template_path: ../templates
 asset_map_path: static/dist/assets.json

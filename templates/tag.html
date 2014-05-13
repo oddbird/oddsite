@@ -5,20 +5,14 @@
 {% block feedlinks %}
 {{ super() }}
 <link href="feed.atom" rel="alternate" title="OddBird blog '{{ tag.name }}' posts" type="application/atom+xml">
-{% endblock %}
+{% endblock feedlinks %}
+
+{% block list_title %}
+  <h1 class="title">Posts tagged <strong>{{ tag.name }}</strong></h1>
+{% endblock list_title %}
 
 {% block archive %}
-  <h1 class="archivetitle">Entries <a href="{{ link_to('tagcloud') }}">tagged</a> “{{ tag.name }}”</h1>
-  <ul class="archivelist">
-  {%- for entry in entries %}
-    <li class="archiveentry">
-      {%- if entry.pub_date %}
-        <time datetime="{{ entry.pub_date.isoformat() }}" pubdate="pubdate">
-          {{ entry.pub_date.strftime("%m/%d/%y") }}
-        </time>
-      {% endif %}
-      <a href="{{ link_to('page', slug=entry.slug) }}" rel="bookmark">{{ entry.title }}</a>
-    </li>
+  {%- for rst in entries %}
+    {% include "blog/_post--list.html.j2" %}
   {%- endfor %}
-  </ul>
-{% endblock %}
+{% endblock archive %}

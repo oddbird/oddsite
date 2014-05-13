@@ -2,7 +2,8 @@
 {% block bodyclasses %}blog{% endblock bodyclasses %}
 
 {% block body %}
-<section class="archive {% block archivetype %}{% endblock archivetype %}">
-  {% block archive %}{% endblock archive %}
-</section>
+
+{% block list_title %}{% endblock list_title %}
+{% block archive %}{% endblock archive %}
+
 {% endblock body %}
