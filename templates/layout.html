@@ -25,29 +25,29 @@
 </main>
 
 <footer role="contentinfo">
+<div class="footer-wrap">
+
+  <p class="copyright h-card">
+    Copyright &copy; {{ config.copyright }}
+    <a href="http://oddbird.net" class="fn org url">OddBird</a>
+  </p>
+
+  <p class="history">Established in 2009 by Three (née) Meyer Brothers.</p>
+
   <p class="colophon">
-    This site is built on plain old semantic <a href="http://www.w3.org/TR/html5/">HTML5</a>,
-    powered by
-    the <a href="https://github.com/mitsuhiko/rstblog/">rstblog</a> static site generator
-    for <a href="http://www.python.org">Python</a>,
-    and styled using <a href="http://www.w3.org/TR/css-2010/">CSS3</a>,
-    with help from
-    <a href="http://subtlepatterns.com/">Subtle Patterns</a>,
+    Built with
+    <a href="http://www.w3.org/TR/html5/">HTML5</a>,
+    <a href="https://github.com/mitsuhiko/rstblog/">rstBlog</a>,
+    <a href="http://www.python.org">Python</a>,
+    <a href="http://www.w3.org/TR/css-2010/">CSS3</a>,
     <a href="http://www.jquery.com/">jQuery</a>,
-    <a href="http://www.modernizr.com/">Modernizr</a>,
     <a href="http://gruntjs.com/">Grunt</a>,
     <a href="http://keyamoon.com/icomoon/">IcoMoon</a>,
     <a href="http://susy.oddbird.net/">Susy</a>,
     <a href="http://compass-style.org/">Compass</a>,
-    and <a href="http://sass-lang.com/">Sass</a>.
+    and&nbsp;<a href="http://sass-lang.com/">Sass</a>.
   </p>
 
-  <div class="legal">
-    <div class="copyright h-card">
-      Copyright &copy; {{ config.copyright }}
-      <a href="http://oddbird.net" class="fn org url">OddBird</a>
-    </div>
-    <div class="est">Established in 2009 by Three (née) Meyer Brothers.</div>
-  </div>
+</div>
 </footer>
 {% endblock layout %}

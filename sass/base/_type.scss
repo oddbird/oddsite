@@ -18,7 +18,7 @@ $focus: '&:hover, &:focus, &:active';
 }
 
 %link-focus {
-  color: color(dark $pink);
+  text-decoration: underline;
 }
 
 

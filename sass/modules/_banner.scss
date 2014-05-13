@@ -1,20 +1,32 @@
 // Banner
 // ======
 
-[role="banner"] {
+$angle: (
+  size: rhythm(3.5),
+  color: color(darker $alt),
+);
+
+@mixin angle(
+  $v: top,
+  $h: left
+) {
   @include background(
-    linear-gradient(to top left,
+    linear-gradient(to $v $h,
       $bg 50%,
       color($bg, 0) 50%
     ) no-repeat scroll,
-    linear-gradient(to top left,
+    linear-gradient(to $v $h,
       color(darker, .5),
       color(darker, 0) 62%
-    ) color(darker $alt)
+    ) map-get($angle, color)
   );
-  @include background-size(100% 60%, auto);
+  @include background-size(100% map-get($angle, size), auto);
+  background-position: opposite-position($v) opposite-position($h);
+}
+
+[role="banner"] {
+  @include angle(top, left);
   @include rhythm-padding(.5);
-  background-position: bottom right;
   text-align: center;
 
   [rel="home"] {
