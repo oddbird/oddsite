@@ -1,25 +1,7 @@
 // Banner
 // ======
 
-$banner-color: color(darker $alt);
-
-@include keyframes(banner) {
-  $colors: map-values(get(colors));
-  $length: length($colors);
-
-  @for $i from 1 through $length {
-    $pos: percentage(($i - 1) / $length);
-    $next: percentage($i / $length) - 3%;
-
-    $pos: if($pos == 0%, (0%, 100%, $next), ($pos, $next));
-    #{$pos} {
-      background-color: color(darker nth($colors, $i));
-    }
-  }
-}
-
 [role="banner"] {
-  @include animation(banner 240s infinite);
   @include background(
     linear-gradient(to top left,
       $bg 50%,
@@ -28,7 +10,7 @@ $banner-color: color(darker $alt);
     linear-gradient(to top left,
       color(darker, .5),
       color(darker, 0) 62%
-    ) $banner-color
+    ) color(darker $alt)
   );
   @include background-size(100% 60%, auto);
   @include rhythm-padding(.5);

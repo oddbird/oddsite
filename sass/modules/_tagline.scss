@@ -5,7 +5,7 @@
   .title {
     @extend %h1;
     @include gutters;
-    color: $banner-color;
+    color: color(darker $alt);
     font-style: italic;
     text-align: center;
   }
