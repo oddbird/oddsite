@@ -3,6 +3,9 @@ location: home
 comments: False
 before:
   - include: 'modules/_org.html.j2'
+after:
+  - include: 'modules/_talk-summary.html.j2'
+    count: 5
 
 
 Custom web tools for humans

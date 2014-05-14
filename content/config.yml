@@ -1,5 +1,84 @@
 ---
-location: blog
+talks_future: false
+
+
+talks_past:
+  - title: "Your Own Damn [Susy] System"
+    author: eric
+    date: April 24
+    year: 2014
+    forum: Bmore Sass
+    forum_url: http://bmore-sass.com/
+    slides: http://ericsuzanne.com/pres/susy2/
+    video: http://vimeo.com/ericsuzanne/susy-2-system
+
+  - title: "Show Your Work <i class='amp'>&</i> Share Your Toys"
+    author: eric
+    date: April 19th
+    year: 2014
+    forum: Camp Sass
+    forum_url: http://campsass.com/2014/
+    slides: http://ericsuzanne.com/pres/show-yr-work/index.html
+
+  - title: "Set Your Code Free"
+    author: carl
+    date: April 13
+    year: 2014
+    forum: PyCon
+    forum_url: https://us.pycon.org/2014/
+    slides: http://oddbird.net/set-your-code-free-preso/
+    video: http://pyvideo.org/video/2637/set-your-code-free-releasing-and-maintaining-an
+
+  - title: "Susy Grids 2.0"
+    author: eric
+    date: March 13
+    year: 2014
+    forum: Sass Bites
+    forum_url: https://www.youtube.com/user/sassbites
+    video: https://www.youtube.com/watch?v=m7k-vBzebPg
+
+  - title: "Python Testing Tools"
+    author: carl
+    date: February 28
+    year: 2014
+    forum: ConFoo
+    forum_url: http://confoo.ca/
+    slides: http://oddbird.net/python-testing-tools-preso/
+
+  - title: "Advanced Python"
+    author: carl
+    date: February 27
+    year: 2014
+    forum: ConFoo
+    forum_url: http://confoo.ca/
+    slides: http://oddbird.net/advanced-python-preso/
+
+  - title: "Organizing Sass Partials"
+    author: eric
+    date: November 19
+    year: 2013
+    forum: NYCSass Meetup
+    forum_url: http://www.meetup.com/nyc-sass/events/146898452/
+    slides: http://ericsuzanne.com/pres/sass-partials/
+
+  - title: "Show Your Work <i class='amp'>&</i> Share Your Toys"
+    author: eric
+    date: October 12
+    year: 2013
+    forum: SassConf
+    forum_url: http://sassconf.com/2013/
+    slides: http://ericsuzanne.com/pres/show-yr-work/index.html
+    video: https://vimeo.com/channels/sassconf2013/86306775
+
+  - title: "Getting Started with Automated Testing"
+    author: carl
+    date: March 16
+    year: 2013
+    forum: PyCon
+    forum_url: https://us.pycon.org/2013/
+    slides: http://oddbird.net/start-testing-preso/
+    video: http://pyvideo.org/video/1674/getting-started-with-automated-testing
+
 
 company:
   - name: OddBird
@@ -8,7 +87,7 @@ company:
     twitter: oddestbirds
     bio: |
       thrives on freely shared ideas
-      <span class="amp">&</span> playful collaboration,
+      <i class="amp">&</i> playful collaboration,
       crossing disciplines, breaking boundaries,
       and eating our dessert with the soup&nbsp;spoon.
 
@@ -66,6 +145,7 @@ birds:
 copyright: 2014
 author: OddBird
 comments: True
+location: blog
 
 # rstBlog Setup
 active_modules: [
