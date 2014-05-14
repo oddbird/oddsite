@@ -29,6 +29,7 @@ $locations: home, blog;
 
   #{$focus} {
     border-top: 2px solid color($bg, .5);
+    text-decoration: none;
   }
 }
 

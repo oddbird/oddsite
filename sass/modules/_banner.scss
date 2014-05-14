@@ -38,7 +38,10 @@ $angle: (
       display: inline-block;
     }
 
-    #{$focus} { @include scale3d(1.25, 1.25, 1.25); }
+    #{$focus} {
+      @include scale3d(1.25, 1.25, 1.25);
+      text-decoration: none;
+    }
   }
 
   [data-icon="oddbird"] {
