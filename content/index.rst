@@ -6,6 +6,7 @@ before:
 after:
   - include: 'modules/_talk-summary.html.j2'
     count: 5
+  - include: 'modules/_recent-posts.html.j2'
 
 
 Custom web tools for humans
