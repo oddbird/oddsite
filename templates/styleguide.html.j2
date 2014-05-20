@@ -1,0 +1,10 @@
+{% extends 'layout.html' %}
+{% block title %}{{ rst.title }}{% endblock %}
+
+{% block styles %}
+  <link rel="stylesheet" href="{{ get_asset('/static/css/styleguide.css') }}" media="screen" />
+{% endblock %}
+
+{% block body %}
+  {% include "_rst.html.j2" %}
+{% endblock %}

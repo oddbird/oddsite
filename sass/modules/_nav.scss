@@ -5,9 +5,9 @@ $locations: home, blog;
 
 [role="navigation"] {
   @extend %serif;
-  @include font-size(xsmall);
+  @include font-size(small);
   @include gutters;
-  background: color(darkest $alt);
+  background: color(banner);
   text-align: center;
 
   @include breakpoint(40em) {
@@ -21,20 +21,20 @@ $locations: home, blog;
 .nav-link {
   #{$link} {
     @include gutters;
-    color: $bg;
+    color: color(back);
     display: inline-block;
     font-style: italic;
     text-transform: lowercase;
   }
 
   #{$focus} {
-    border-top: 2px solid color($bg, .5);
+    border-top: 2px solid rgba(color(back), .5);
     text-decoration: none;
   }
 }
 
 @each $loc in $locations {
   [data-location="#{$loc}"] [data-active="#{$loc}"] {
-    border-top: 2px solid $accent;
+    border-top: 2px solid color(action);
   }
 }

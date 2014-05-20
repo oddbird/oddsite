@@ -1,0 +1,44 @@
+// Color Swatch Config
+// ===================
+
+@function render-hsla(
+  $color
+) {
+  $hsla: round(hue($color)), round(saturation($color)), round(lightness($color));
+  $hsla: if(alpha($color) != 1, append($hsla, alpha($color)), $hsla);
+
+  @return 'hsla(#{$hsla})'
+}
+
+@mixin swatch(
+  $name
+) {
+  [data-name='#{$name}'] {
+    .color-name {
+      background: color($name);
+      color: contrast-color(color($name), color('black'), color('white'));
+    }
+
+    .color-output {
+      @include before('output: ') {
+        font-weight: bold;
+      }
+
+      @include after('#{color($name)}');
+    }
+
+    .color-hsla {
+      @include before('hsla: ') {
+        font-weight: bold;
+      }
+
+      @include after('#{render-hsla(color($name))}');
+    }
+  }
+}
+
+@mixin swatches($colors) {
+  @each $name, $color in $colors {
+    @include swatch($name);
+  }
+}

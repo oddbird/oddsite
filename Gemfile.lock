@@ -1,13 +1,13 @@
 GEM
   remote: http://rubygems.org/
   specs:
-    accoutrement (0.1.9)
+    accoutrement (1.0.0.beta.1)
       compass (~> 1.0.0.alpha.17)
-      sass (~> 3.3.0.rc.1)
+      sass (~> 3.3)
     breakpoint (2.4.2)
       sass (~> 3.3.0)
       sassy-maps (< 1.0.0)
-    chunky_png (1.3.0)
+    chunky_png (1.3.1)
     compass (1.0.0.alpha.19)
       chunky_png (~> 1.2)
       compass-core (~> 1.0.0.alpha.19)
@@ -26,24 +26,24 @@ GEM
       rb-fsevent (>= 0.9.3)
       rb-inotify (>= 0.9)
       rb-kqueue (>= 0.2)
-    multi_json (1.9.2)
+    multi_json (1.10.1)
     rb-fsevent (0.9.4)
-    rb-inotify (0.9.3)
+    rb-inotify (0.9.4)
       ffi (>= 0.5.0)
     rb-kqueue (0.2.2)
       ffi (>= 0.5.0)
-    sass (3.3.3)
+    sass (3.3.7)
     sassy-maps (0.3.2)
       compass (~> 1.0.0.alpha.13)
       sass (~> 3.3.0.rc.2)
-    susy (2.1.1)
+    susy (2.1.2)
       sass (~> 3.3.0)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
-  accoutrement (~> 0.1.9)
+  accoutrement (~> 1.0.0.beta.1)
   breakpoint (~> 2.4.2)
   compass (~> 1.0.0.alpha.19)
   sass (~> 3.3.3)

@@ -1,0 +1,9 @@
+// Grid
+// ====
+
+$susy: (
+  columns: 6,
+  gutters: size(medium)/size(largest),
+  column-width: size(largest),
+  gutter-position: inside-static,
+);

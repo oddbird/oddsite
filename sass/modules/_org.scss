@@ -3,7 +3,7 @@
 
 $org-border: (
   width: 2px,
-  color: color(darker $alt, .25),
+  color: rgba(color(banner), .25),
   style: dashed,
 );
 
@@ -11,13 +11,12 @@ $org-border: (
 .company {
   @include background(image-url('birds.png') no-repeat scroll top center);
   @include background-size(100% auto);
-  @include trailer;
-  padding-top: percentage(image-height('birds.png') / image-width('birds.png'));
+  padding-top: percentage((image-height('birds.png') - size(medium, px)) / image-width('birds.png'));
+  margin-bottom: size(normal);
 
   .h-card {
     @include display-flex;
     @include flex-direction(column-reverse);
-    @include leader(-.5);
   }
 
   .fn { font-weight: bold; }

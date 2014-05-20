@@ -1,9 +1,13 @@
 // Banner
 // ======
 
+@include colors((
+  banner: 'blue' (shade: 55%),
+));
+
 $angle: (
-  size: rhythm(3.5),
-  color: color(darker $alt),
+  size: size(logo),
+  color: color(banner),
 );
 
 @mixin angle(
@@ -12,12 +16,12 @@ $angle: (
 ) {
   @include background(
     linear-gradient(to $v $h,
-      $bg 50%,
-      color($bg, 0) 50%
+      color(back) 50%,
+      rgba(color(back), 0) 50%
     ) no-repeat scroll,
     linear-gradient(to $v $h,
-      color(darker, .5),
-      color(darker, 0) 62%
+      rgba(color('black'), .5),
+      rgba(color('black'), 0) 62%
     ) map-get($angle, color)
   );
   @include background-size(100% map-get($angle, size), auto);
@@ -26,15 +30,15 @@ $angle: (
 
 [role="banner"] {
   @include angle(top, left);
-  @include rhythm-padding(.5);
+  padding: size(normal);
   text-align: center;
 
   [rel="home"] {
     #{$link} {
-      @include font-size(xxxlarge);
+      @include font-size(logo);
       @include transition(all 150ms ease-in-out);
       @include transform-origin(top, center);
-      color: $bg;
+      color: color(back);
       display: inline-block;
     }
 

@@ -1,0 +1,18 @@
+{% macro swatch(name, color) %}
+  <div class="swatch" data-name="{{ name }}">
+    <div class="color-name">{{ name }}</div>
+    <ul class="color-info">
+      <li class="color-input"><b>input:</b> {{ color }}</li>
+      <li class="color-output"></li>
+      <li class="color-hsla"></li>
+    </ul>
+  </div>
+{% endmacro %}
+
+{% macro show(colors) %}
+  <div class="swatches">
+    {% for color in colors %}
+      {{ swatch(color.name, color.color) }}
+    {% endfor %}
+  </div>
+{% endmacro %}

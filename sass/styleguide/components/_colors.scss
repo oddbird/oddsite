@@ -1,0 +1,39 @@
+// Color Guide
+// ===========
+
+[class^="colors--"] {
+  @include susy-clearfix;
+  margin-bottom: size(large);
+
+  .swatch {
+    @include gallery(4 of 8 before);
+    background: color(callout);
+    border: 1px solid color(border);
+    margin-bottom: size(normal);
+  }
+
+  .color-name {
+    @include font-size(medium);
+    border-bottom: 1px solid color(border);
+    padding: size(larger);
+    text-align: center;
+  }
+
+  .color-info {
+    @extend %mono;
+    @include font-size(smaller, .75);
+    list-style: none;
+    margin: 0;
+    padding: size(smallest);
+
+    b { font-weight: bold; }
+  }
+}
+
+.colors--base {
+  @include swatches($base-colors);
+}
+
+.colors--guide {
+  @include swatches($colors);
+}

@@ -2,7 +2,7 @@
 // ===========
 
 [role="main"] {
-  @extend %body;
+  @extend %block;
   @include container;
 }
 

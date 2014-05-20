@@ -1,0 +1,37 @@
+// Colors
+// ------
+
+$base-colors: (
+  'black': #333,
+  'white': #fff,
+
+  'blue': hsl(195, 85%, 62%),
+  'orange': hsl(24, 100%, 62%),
+  'yellow': hsl(45, 85%, 62%),
+  'green': hsl(75, 65%, 62%),
+  'pink': hsl(330, 85%, 62%),
+  'red': hsl(0, 85%, 62%),
+);
+
+
+// Guide
+// -----
+
+$colors: (
+  text: 'black',
+  back: 'blue' (tint: 95%),
+  border: 'text' (tint: 60%),
+  callout: 'blue' (tint: 85%),
+
+  action: 'orange',
+  focus: 'orange' (shade: 15%),
+
+  accent: 'blue',
+);
+
+
+// Contrast
+// --------
+
+$contrasted-dark-default  : color('black');
+$contrasted-light-default : color('back');

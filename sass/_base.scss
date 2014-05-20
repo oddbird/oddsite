@@ -1,14 +1,8 @@
-// Base Styles
-// ===========
+// Base
+// ====
 
-@import "base/type";
-@import "base/buttons";
-
-
-// Icons
-// -----
-
-@include set(icon-font, 'oddsite');
+@include fonts;
+@include establish-baseline;
 @include icon-placeholder;
 @include data-icons;
 
@@ -18,8 +12,8 @@
 
 html {
   @extend %sans;
-  background: $bg;
-  color: $base;
+  background: color(back);
+  color: color(text);
 }
 
 

@@ -1,0 +1,11 @@
+{% import "styleguide/color.macros.j2" as color %}
+
+<div class="colors--base">
+  <h2>Base Colors</h2>
+  {{ color.show(config.base_colors) }}
+</div>
+
+<div class="colors--guide">
+  <h2>Color Guide</h2>
+  {{ color.show(config.colors) }}
+</div>

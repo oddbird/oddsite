@@ -1,15 +1,19 @@
 // Content Info
 
+@include colors((
+  light action: action (tint: 25%),
+));
+
 [role="contentinfo"] {
   @include angle(bottom, right);
   @include font-size(small);
-  @include padding-trailer(1.5);
-  color: $bg;
+  color: color(back);
+  padding-bottom: size(large);
   padding-top: map-get($angle, size);
-  text-shadow: 0 -1px 0 color($base, .5);
+  text-shadow: 0 -1px 0 rgba(color(text), .5);
 
   a {
-    #{$link} { color: color(light $accent); }
+    #{$link} { color: color(light action); }
   }
 }
 
@@ -18,7 +22,7 @@
 }
 
 .copyright {
-  @include font-size(xsmall);
+  @include font-size(smaller);
   text-align: center;
   text-transform: uppercase;
 
@@ -26,21 +30,21 @@
 }
 
 .history {
-  @include trailer(.5);
+  margin-bottom: size(smaller);
 }
 
 .history,
 .colophon {
   @extend %serif;
-  @include gutters(rhythm(4));
+  @include gutters();
   font-style: italic;
   margin-left: auto;
   margin-right: auto;
-  max-width: rhythm(14);
+  max-width: span(4);
   text-align: center;
 }
 
 .colophon {
-  @include leading-border(2px, .5);
-  border-top: 2px color($bg, .5) dashed;
+  border-top: 2px rgba(color(back), .5) dashed;
+  padding-top: size(smaller);
 }

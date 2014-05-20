@@ -3,18 +3,18 @@
 
 .birds {
   .h-card {
-    @include trailer;
     @include gutters;
+    margin-bottom: size(normal);
   }
 
   .bio {
-    @include trailer(.25);
+    margin-bottom: size(smaller);
   }
 }
 
 .bio-links {
   @extend %serif;
-  @include font-size(xsmall);
+  @include font-size(small);
   font-style: italic;
 }
 

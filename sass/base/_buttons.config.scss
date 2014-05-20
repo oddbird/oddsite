@@ -2,26 +2,26 @@
 // =======
 
 @mixin button(
-  $bg: color(light),
+  $bg: color(back),
   $reset: true
 ) {
-  $color: contrast($bg);
+  $color: contrast-color($bg);
 
   @if $reset {
     @extend %button-reset;
   }
 
   background: $bg;
-  border-radius: rhythm(.125);
+  border-radius: size(smallest);
   color: $color;
 
   #{$focus} {
-    background: color(dark $bg);
+    background: shade($bg, 15%);
   }
 
   &:disabled {
-    background: color(-100% $bg);
-    color: color($color, .5);
+    background: desaturate($bg, 100%);
+    color: rgba($color, .5);
     cursor: default;
   }
 }
@@ -34,7 +34,7 @@
   @include reset-box-model;
   width: auto;
   background: none;
-  color: $base;
+  color: color(text);
   font: inherit;
   cursor: pointer;
   overflow: visible;
@@ -54,6 +54,6 @@
   }
 
   &--primary {
-    @include button($success, $reset: false);
+    @include button(color(action), $reset: false);
   }
 }

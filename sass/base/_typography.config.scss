@@ -1,0 +1,136 @@
+// Typography
+// ==========
+
+$base-line-height: size(large);
+
+$rhythm-unit: rem;
+$rem-with-px-fallback: false;
+
+$relative-font-sizing: true;
+$round-to-nearest-half-line: true;
+
+
+// Fonts
+// -----
+
+$fonts: (
+  serif: (
+    name: BaskervilleFS,
+    type: serif,
+    path: 'serif/baskerville-%s%s-webfont',
+    styles: (regular, italic, bold, bold italic),
+    stack: (Baskerville, Palatino, Cambria, Georgia),
+  ),
+
+  sans: (
+    name: SourceSansPro,
+    type: sans-serif,
+    path: 'sans/sourcesanspro-%s%s-webfont',
+    styles: (regular, italic, bold, bold italic),
+    stack: ('Helvetica Neue', Helvetica, Arial),
+  ),
+
+  mono: (
+    name: SourceCodePro,
+    type: monospace,
+    path: 'code/sourcecodepro-%s%s-webfont',
+    styles: (regular, bold),
+    stack: (Consolas, Menlo, Monaco, 'Lucida Console', 'Liberation Mono', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Courier New'),
+  ),
+
+  oddsite: (
+    files: (normal: 'icons/oddsite'),
+  )
+);
+
+
+// Links
+// -----
+
+$link: '&:link, &:visited';
+$focus: '&:hover, &:focus, &:active';
+
+%link {
+  color: color(action);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+%link-focus {
+  text-decoration: underline;
+}
+
+
+// Headers
+// -------
+
+%h1,
+%h2,
+%h3,
+%h4,
+%h5 {
+  @extend %serif;
+}
+
+%h1 {
+  @include font-size(larger);
+  @include trailer;
+}
+
+%h2 {
+  @include font-size(medium, 1.25);
+  @include trailer;
+}
+
+%h3, %h4, %h5 { font-weight: bold; }
+
+%headers {
+  h1 {
+    @extend %h1;
+  }
+
+  h2 {
+    @extend %h2;
+  }
+
+  h3 {
+    @extend %h3;
+  }
+}
+
+
+// Body
+// ----
+
+%block {
+  p,
+  ol,
+  ul {
+    margin-bottom: size(normal);
+  }
+
+  ol,
+  ul {
+    ol,
+    ul {
+      margin-left: size(normal);
+    }
+  }
+
+  ol {
+    list-style: decimal;
+  }
+
+  ul {
+    list-style: disc;
+  }
+}
+
+
+// Type
+// ----
+
+%type {
+  @extend %headers;
+  @extend %block;
+}

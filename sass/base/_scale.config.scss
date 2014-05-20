@@ -1,0 +1,18 @@
+// Scale
+// =====
+
+$base-font-size: 21px;
+
+$ratio: major-third;
+
+$sizes: (
+  logo      : scale(8),
+  largest   : scale(6),
+  larger    : scale(4),
+  large     : scale(2),
+  medium    : scale(1),
+  normal    : scale(0),
+  small     : scale(-1),
+  smaller   : scale(-2),
+  smallest  : scale(-3),
+);

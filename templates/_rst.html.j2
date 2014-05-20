@@ -1,0 +1,19 @@
+{%- if not config.hide_title %}
+  {{ rst.html_title }}
+{%- endif %}
+
+{% include "_byline.html.j2" %}
+
+{%- for module in config.before -%}
+  {% include module.include %}
+{%- endfor -%}
+
+<div class="body">{{ rst.fragment }}</div>
+
+{%- for module in config.after -%}
+  {% include module.include %}
+{%- endfor -%}
+
+{% if config.comments %}
+  {% include "_comments.html.j2" %}
+{% endif %}
