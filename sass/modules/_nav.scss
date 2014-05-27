@@ -21,6 +21,7 @@ $locations: home, blog;
 .nav-link {
   #{$link} {
     @include gutters;
+    border-top: 2px solid transparent;
     color: color(back);
     display: inline-block;
     font-style: italic;
@@ -28,7 +29,7 @@ $locations: home, blog;
   }
 
   #{$focus} {
-    border-top: 2px solid rgba(color(back), .5);
+    border-color: rgba(color(back), .5);
     text-decoration: none;
   }
 }

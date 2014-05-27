@@ -3,9 +3,15 @@ location: home
 comments: False
 before:
   - include: 'modules/_org.html.j2'
+  - include: 'modules/_talks.html.j2'
+    time: future
+    title: Future
+    count: 6
+  - include: 'modules/_talks.html.j2'
+    time: past
+    title: Past
+    count: 6
 after:
-  - include: 'modules/_talk-summary.html.j2'
-    count: 5
   - include: 'modules/_recent-posts.html.j2'
 
 
@@ -16,15 +22,16 @@ Custom web tools for humans
 Odd Projects
 ------------
 
-From open-source tools like `Django`_, `Compass`_, and `Susy`_,
+We love molding ideas into experiences,
+and tools that people can use —
+from open-source projects like `Django`_, `Compass`_, and `Susy`_,
 to web applications for `Mozilla`_, `The K Network`_,
-`Providence Plan`_, `Junyo`_, and others,
-to our ongoing experiments in `digital storytelling`_ —
-we love molding ideas into experiences that people can use.
+`Providence Plan`_, `Junyo`_,
+and our ongoing experiments in `digital storytelling`_.
 
 .. _Django: https://www.djangoproject.com/
-.. _Compass: #
-.. _Susy: #
+.. _Compass: http://compass-style.org/
+.. _Susy: http://susy.oddbird.net/
 .. _Mozilla: #
 .. _The K Network: #
 .. _Providence Plan: #

@@ -1,8 +1,28 @@
 ---
-talks_future: false
+talks_future:
+  - title: "The Post-Obsolete Book"
+    author: eric
+    date: June 19
+    year: 2014
+    forum: ELO Conference
+    forum_url: http://conference.eliterature.org/
 
+  - title: "Notes Towards a Queer Web"
+    author: eric
+    date: September 12
+    year: 2014
+    forum: BlendConf
+    forum_url: http://www.blendconf.com/
 
 talks_past:
+  - title: "Sass Bites #37"
+    author: claudina
+    date: May 13
+    year: 2014
+    forum: Sass Bites
+    forum_url: https://www.youtube.com/user/sassbites
+    video: https://www.youtube.com/watch?v=BtWaFDpyDCI
+
   - title: "Your Own Damn [Susy] System"
     author: eric
     date: April 24
