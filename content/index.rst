@@ -3,6 +3,7 @@ location: home
 comments: False
 before:
   - include: 'modules/_org.html.j2'
+  - include: 'modules/_birds.html.j2'
   - include: 'modules/_talks.html.j2'
     time: future
     title: Future
