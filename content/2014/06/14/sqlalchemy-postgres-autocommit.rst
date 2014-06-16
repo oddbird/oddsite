@@ -12,11 +12,10 @@ summary: |
 PostgreSQL, transactions, and SQLAlchemy
 ========================================
 
-SQLAlchemy (following Python's DBAPI) defaults to implicitly opening a new
-transaction when you query the database. If you prefer to work in autocommit
-mode by default and start all your transactions explicitly, SQLAlchemy doesn't
-currently offer a great deal of help. Here I've documented my explorations
-towards getting that to work.
+SQLAlchemy defaults to implicitly opening a new transaction on your first
+database query. If you prefer to start your transactions explicitly instead,
+SQLAlchemy doesn't currently offer a great deal of help. I've documented here
+my explorations in getting that to work.
 
 There are several different layers at play, so let's review from the top:
 
@@ -55,8 +54,8 @@ adapters (e.g. `psycopg2`_) have to emulate it themselves in order to be PEP
 psycopg2 will prefix it with a ``BEGIN`` on your behalf.
 
 In order to get psycopg2 to stop sending these automatic ``BEGIN`` statements
-and to behave like Postgres natively does, you set the ``autocommit``
-property of your connection object to ``True``:
+and to behave like Postgres natively does, you set the `autocommit property`_
+of your connection object to ``True``:
 
 .. code:: python
 
@@ -66,6 +65,7 @@ property of your connection object to ``True``:
 
 .. _PEP 249: http://legacy.python.org/dev/peps/pep-0249/
 .. _psycopg2: http://initd.org/psycopg/docs/
+.. _autocommit property: http://initd.org/psycopg/docs/connection.html#connection.autocommit
 
 
 Postgres has it right
@@ -153,29 +153,27 @@ rely on PEP 249 consistency across the board rather than implementing custom
 code for native-autocommit mode in all its many supported databases.
 
 But I'm using Postgres, I know how its native autocommit mode works, and that's
-the behavior I want to use with SQLAlchemy. Can I make that work?
+the behavior I want with SQLAlchemy. Can I make that work?
 
 
 SQLAlchemy's autocommit mode -- not what you think
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-At this point we'll likely find `autocommit mode`_ in SQLAlchemy's
-documentation, and we might think we have our answer -- but we'd be
-wrong. SQLAlchemy's autocommit mode is roughly parallel to the "autocommit" in
-Django pre-1.6 (albeit smarter): it emulates autocommit over top of
-non-autocommit database adapters by automatically committing the implicit
-transaction after you send queries that change the database. It doesn't put the
-database connections into true autocommit mode, so it doesn't avoid the
-problems with implicit transactions.
+I soon found `autocommit mode`_ in SQLAlchemy's documentation, and thought I
+had my answer -- but no such luck. SQLAlchemy's autocommit mode is roughly
+parallel to the "autocommit" in Django pre-1.6 (albeit smarter): it emulates
+autocommit over top of non-autocommit database adapters by automatically
+committing the implicit transaction after you send queries that change the
+database. It doesn't put the database connections into true autocommit mode.
 
 
 Turning on real autocommit
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Happily, setting all of SQLAlchemy's psycopg2 connections to ``autocommit =
-True`` became quite easy in SQLAlchemy 0.8.2: SQLAlchemy's psycopg2 "dialect"
-now exposes an ``AUTOCOMMIT`` transaction isolation level, and selecting it
-sets ``autocommit=True`` on all the psycopg2 connections.
+Happily, setting all of SQLAlchemy's psycopg2 connections into real autocommit
+became quite easy in SQLAlchemy 0.8.2: SQLAlchemy's psycopg2 "dialect" now
+exposes an ``AUTOCOMMIT`` transaction isolation level, and selecting it sets
+``autocommit=True`` on all the psycopg2 connections.
 
 .. code:: python
 
@@ -205,13 +203,13 @@ need. SQLAlchemy would happily hum along thinking it has a transaction but
 actually not having one at all (just like it does for databases that don't
 support transactions).
 
-But we do want to use transactions, and that means we need a way to start
-one. The natural API for this already exists in SQLAlchemy:
-``session.begin()``. Since SQLAlchemy assumes that its database adapter will
-automatically start sessions, ``session.begin()`` never actually issues a
-``BEGIN`` to the database. But we don't actually need to issue ``BEGIN``
-ourselves either - we just need to turn off the ``autocommit`` property on our
-connection, and then ``psycopg2`` will issue the ``BEGIN`` for us.
+But we do want to use transactions, so we need a way to start one. The natural
+API for this already exists in SQLAlchemy: ``session.begin()``. Since
+SQLAlchemy assumes that its database adapter will automatically start sessions,
+``session.begin()`` never actually issues a ``BEGIN`` to the database. But we
+don't actually need to issue ``BEGIN`` ourselves either - we just need to turn
+off the ``autocommit`` property on our connection, and then ``psycopg2`` will
+issue the ``BEGIN`` for us.
 
 SQLAlchemy gives us a way to hook into the ``begin()`` call: the
 ``after_begin`` event, which sends along the relevant database connection. We
@@ -240,15 +238,16 @@ The ``session.begin()`` API can also be used to initiate "nested transactions"
 using savepoints. In this case autocommit should already have been turned off
 on the connection by the outer "real" transaction, so we don't need to do
 anything. We add in a couple asserts to validate our assumptions about what the
-autocommit state should be in each case, and then in the non-nested case we
-turn autocommit off.
+autocommit state should be in each case, and in the non-nested case we turn
+autocommit off.
 
-We also passed ``autocommit=True`` to the ``Session``; this turns on
-SQLAlchemy's autocommit mode that we discussed above. This is necessary to
-prevent SQLAlchemy from automatically starting a transaction (and thus
-triggering our ``after_begin`` listener) on the first query it gets. This is
-the part of the solution that I'm least happy with, as it means we have to
-worry about what is meant by the `vague warnings`_ in the documentation that
+We also pass ``autocommit=True`` to the ``Session``; this turns on SQLAlchemy's
+autocommit mode (mentioned above). This is necessary to prevent SQLAlchemy from
+automatically starting a transaction (and thus triggering our ``after_begin``
+listener) on the first query.
+
+This is the piece that I'm least happy with, as it means we have to worry about
+what is meant by the `vague warnings`_ in the documentation that Session
 autocommit is a "legacy mode of usage" that "can in some cases lead to
 concurrent connection checkouts" and that we should turn off the Session's
 autoflush and autoexpire features. So far I haven't done the latter; waiting to
@@ -310,9 +309,10 @@ A transaction context manager
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 I mentioned above that I like context managers and decorators (such as Django's
-`transaction.atomic`_) as an API for transactions. Here's an example of how a
-rough equivalent to `transaction.atomic`_ can be implemented for SQLAlchemy now
-that we have an explicit-transactions mode of operation:
+`transaction.atomic`_) as an API for transactions. Now that we have autocommit
+mode working, here's an example of a rough equivalent to `transaction.atomic`_
+for SQLAlchemy (unlike `transaction.atomic`_ this doesn't work as a decorator,
+but adding that is just a matter of some boilerplate):
 
 .. code:: python
 
@@ -368,13 +368,22 @@ autocommit & explicit transactions.
 Conclusion
 ----------
 
-Is this all worth it? Perhaps not; depends on how serious in practice the
-problems SQLAlchemy's docs warn about are.
+Is this all worth it? Perhaps not; it's possible to work around the problems
+with implicit transactions by being careful. And I'm not yet clear on the costs
+of this approach -- just how bad are the problems SQLAlchemy's docs warn about
+with its autocommit mode?
 
-While I understand why SQLAlchemy is best advised to follow PEP 249 for its
-default behavior, I would love if it had (scary-warning-free) support for an
-"autocommit and explicit transactions" mode on those database dialects which
-can support it without too much trouble.
+In any case, while I understand why SQLAlchemy is well-advised to generally
+follow PEP 249 for its default behavior, I would love if it had
+(scary-warning-free) support for an "autocommit and explicit transactions" mode
+on those databases/adapters with good support for it.
+
+The code from this post is pulled together in `a gist`_. I also have tests for
+it, but they are currently integrated with the project where I'm using this. If
+there's enough interest (and it works well on this project) I might be
+convinced to package it up and release it properly.
+
+.. _a gist: https://gist.github.com/carljm/57bfb8616f11bceaf865
 
 
 Acknowledgments
