@@ -2,20 +2,17 @@ public: yes
 author: carl
 tags: ["python", "sqlalchemy", "postgresql", "transactions", "django"]
 summary: |
-  SQLAlchemy (following Python's DBAPI) defaults to implicitly opening a new
-  transaction when you query the database. If you prefer to work in autocommit
-  mode by default and start all your transactions explicitly, SQLAlchemy
-  doesn't currently offer a great deal of help. I show some (not yet
-  battle-tested) code that seems to get this working.
+  SQLAlchemy defaults to implicitly opening a new transaction on your first
+  database query. If you prefer to start your transactions explicitly instead,
+  I've documented here my explorations in getting that to work.
 
 
 PostgreSQL transactions and SQLAlchemy
 ========================================
 
-SQLAlchemy defaults to implicitly opening a new transaction on your first
+`SQLAlchemy`_ defaults to implicitly opening a new transaction on your first
 database query. If you prefer to start your transactions explicitly instead,
-SQLAlchemy doesn't currently offer a great deal of help. I've documented here
-my explorations in getting that to work.
+I've documented here my explorations in getting that to work.
 
 There are several different layers at play, so let's review from the top:
 
