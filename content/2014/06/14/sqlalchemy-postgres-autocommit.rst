@@ -1,4 +1,4 @@
-public: no
+public: yes
 author: carl
 tags: ["python", "sqlalchemy", "postgresql", "transactions", "django"]
 summary: |
