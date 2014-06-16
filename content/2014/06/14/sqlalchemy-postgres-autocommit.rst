@@ -9,7 +9,7 @@ summary: |
   battle-tested) code that seems to get this working.
 
 
-PostgreSQL, transactions, and SQLAlchemy
+PostgreSQL transactions and SQLAlchemy
 ========================================
 
 SQLAlchemy defaults to implicitly opening a new transaction on your first
