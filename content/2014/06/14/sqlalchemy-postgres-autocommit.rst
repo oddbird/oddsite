@@ -163,8 +163,9 @@ I soon found `autocommit mode`_ in SQLAlchemy's documentation, and thought I
 had my answer -- but no such luck. SQLAlchemy's autocommit mode is roughly
 parallel to the "autocommit" in Django pre-1.6 (albeit smarter): it emulates
 autocommit over top of non-autocommit database adapters by automatically
-committing the implicit transaction after you send queries that change the
-database. It doesn't put the database connections into true autocommit mode.
+committing an implicit transaction after you send queries that change the
+database. It doesn't put the database connections into true autocommit mode, so
+it still wraps reads in unnecessary transactions.
 
 
 Turning on real autocommit
