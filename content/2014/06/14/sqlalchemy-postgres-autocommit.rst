@@ -390,10 +390,10 @@ convinced to package it up and release it properly.
 Acknowledgments
 ---------------
 
-Thanks to `Mike Bayer`_ (author of SQLAlchemy) for pointing me towards the
-``AUTOCOMMIT`` "isolation level" setting. Thanks to `Christophe Pettus`_ for my
-initial education in Postgres' transaction behavior, and `Aymeric Augustin`_
-for the excellent implementation in Django 1.6+.
+Thanks to `Mike Bayer`_ for writing SQLAlchemy(!) and for pointing me towards
+the ``AUTOCOMMIT`` "isolation level" setting. Thanks to `Christophe Pettus`_
+for my initial education in Postgres' transaction behavior, and `Aymeric
+Augustin`_ for the excellent implementation in Django 1.6+.
 
 .. _autocommit mode: http://docs.sqlalchemy.org/en/rel_0_9/orm/session.html#autocommit-mode
 .. _SQLAlchemy: http://www.sqlalchemy.org/
