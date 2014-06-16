@@ -42,12 +42,12 @@ Transactions in PEP 249
 making it easier to write cross-database-compatible code. Almost all the
 popular Python database adapters are (or claim or try to be) PEP 249 compliant.
 
-The PEP 249 API specifies implicit transactions rather than autocommit. There
-isn't even a way to explicitly start a transaction in the PEP 249 API; no
-``begin()`` or similar. Instead, you are always in a transaction; one is
-automatically started the first time you send a query to the database after
-opening a connection, and the first time you send a new query after ending the
-previous transaction.
+The PEP 249 API specifies a different behavior, which I will call "implicit
+transactions." There isn't even a way to explicitly start a transaction in the
+PEP 249 API; no ``begin()`` or similar. Instead, you are always in a
+transaction; one is automatically started the first time you send a query to
+the database after opening a connection, and the first time you send a new
+query after ending the previous transaction with a rollback or commit.
 
 Because Postgres doesn't offer this behavior natively, the Postgres Python
 adapters (e.g. `psycopg2`_) have to emulate it themselves in order to be PEP
@@ -71,26 +71,25 @@ property of your connection object to ``True``:
 Postgres has it right
 ----------------------
 
-I like the 'autocommit' model. It's simple, explicit, and unsurprising. Queries
-are never grouped together into a transaction unless you ask for one. If you
-issue a ``COMMIT`` or ``ROLLBACK``, there is never any doubt about which or how
-many queries you are committing or rolling back, because you explicitly issued
-the ``BEGIN`` to start the transaction.
+I prefer the 'autocommit' model. It's simple, explicit, and
+unsurprising. Queries are never grouped together into a transaction unless you
+ask for one. If you issue a ``COMMIT`` or ``ROLLBACK``, there is never any
+doubt about which queries you are committing or rolling back, because you
+explicitly issued the ``BEGIN`` to start the transaction.
 
 I can see some advantage to the implicit-transaction model for
 interactive-shell use (you can always roll back your changes if you screw
-something up, even if you forgot to ``BEGIN``), but I think it has some
-problems for code. Its failure mode lends itself to mysterious action at a
-distance: if you save a change to the database in one place but forget to
-commit, that change will automatically be wrapped up in the same transaction
-with later, possibly completely unrelated changes, and may get blindly rolled
-back along with them. It wraps read-only ``SELECT`` statements in useless
-transactions. And for long-running processes, since even a simple ``SELECT``
-implicitly opens a transaction (and you wouldn't intuitively think you'd need
-to commit or rollback after a ``SELECT``), it's very easy to unintentionally
-end up with connections in the "idle in transaction" state, where they are
-doing nothing but still may be holding locks and preventing Postgres from
-compacting tables.
+something up, even if you forgot to ``BEGIN``), but for general use I think
+it's more error-prone. If you save a change to the database in one place but
+forget to commit, that change will automatically be wrapped up in the same
+transaction with later, possibly completely unrelated changes, and may get
+blindly rolled back along with them. It wraps read-only ``SELECT`` statements
+in useless transactions. And for long-running processes, since even a simple
+``SELECT`` implicitly opens a transaction (and you wouldn't intuitively think
+you'd need to commit or rollback after a ``SELECT``), it's very easy to
+unintentionally end up with connections in the "idle in transaction" state,
+where they are doing nothing but still may be holding locks and preventing
+Postgres from compacting tables.
 
 The explicit-transactions (autocommit) model lends itself naturally to Python
 idioms like decorators or context managers for handling transactions. These
@@ -149,9 +148,9 @@ using the database adapter -- ``psycopg2`` in our case -- in its default
 PEP-249-compliant mode), and you can commit that transaction with
 ``session.commit()`` or roll it back with ``session.rollback()``.
 
-(Although I don't prefer this mode, it's a reasonable choice for SQLAlchemy to
+Although I don't prefer this mode, it's a reasonable choice for SQLAlchemy to
 rely on PEP 249 consistency across the board rather than implementing custom
-code for native-autocommit mode in all its many supported databases.)
+code for native-autocommit mode in all its many supported databases.
 
 But I'm using Postgres, I know how its native autocommit mode works, and that's
 the behavior I want to use with SQLAlchemy. Can I make that work?
@@ -165,16 +164,16 @@ documentation, and we might think we have our answer -- but we'd be
 wrong. SQLAlchemy's autocommit mode is roughly parallel to the "autocommit" in
 Django pre-1.6 (albeit smarter): it emulates autocommit over top of
 non-autocommit database adapters by automatically committing the implicit
-transaction after you send queries that change the database. It doesn't
-actually put the database connections into true autocommit mode, so it doesn't
-really avoid the problems with implicit transactions.
+transaction after you send queries that change the database. It doesn't put the
+database connections into true autocommit mode, so it doesn't avoid the
+problems with implicit transactions.
 
 
 Turning on real autocommit
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Happily, setting all of SQLAlchemy's psycopg2 connections to `autocommit =
-True` became quite easy in SQLAlchemy 0.8.2: SQLAlchemy's psycopg2 "dialect"
+Happily, setting all of SQLAlchemy's psycopg2 connections to ``autocommit =
+True`` became quite easy in SQLAlchemy 0.8.2: SQLAlchemy's psycopg2 "dialect"
 now exposes an ``AUTOCOMMIT`` transaction isolation level, and selecting it
 sets ``autocommit=True`` on all the psycopg2 connections.
 
@@ -214,10 +213,10 @@ automatically start sessions, ``session.begin()`` never actually issues a
 ourselves either - we just need to turn off the ``autocommit`` property on our
 connection, and then ``psycopg2`` will issue the ``BEGIN`` for us.
 
-SQLAlchemy gives us a way to hook into the ``begin`` call: the ``after_begin``
-event, which sends along the relevant database connection. We have to dig
-through a few layers of connection-wrapping to get down to the actual psycopg2
-connection object, but that's not hard:
+SQLAlchemy gives us a way to hook into the ``begin()`` call: the
+``after_begin`` event, which sends along the relevant database connection. We
+have to dig through a few layers of connection-wrapping to get down to the
+actual psycopg2 connection object, but that's not hard:
 
 .. code:: python
 
@@ -250,10 +249,10 @@ prevent SQLAlchemy from automatically starting a transaction (and thus
 triggering our ``after_begin`` listener) on the first query it gets. This is
 the part of the solution that I'm least happy with, as it means we have to
 worry about what is meant by the `vague warnings`_ in the documentation that
-executing queries outside a transaction is a "legacy mode of usage" that "can
-in some cases lead to concurrent connection checkouts" and that we should turn
-off the Session's autoflush and autoexpire features. So far I haven't done the
-latter; waiting to see what (if any) problems ensue in practice.
+autocommit is a "legacy mode of usage" that "can in some cases lead to
+concurrent connection checkouts" and that we should turn off the Session's
+autoflush and autoexpire features. So far I haven't done the latter; waiting to
+see what (if any) problems ensue in practice.
 
 
 Back to autocommit when the transaction ends
@@ -311,9 +310,9 @@ A transaction context manager
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 I mentioned above that I like context managers and decorators (such as Django's
-``transaction.atomic``) as an API for transactions. Here's an example of how a
-rough equivalent to ``transaction.atomic`` can be implemented for SQLAlchemy
-now that we have an explicit-transactions mode of operation:
+`transaction.atomic`_) as an API for transactions. Here's an example of how a
+rough equivalent to `transaction.atomic`_ can be implemented for SQLAlchemy now
+that we have an explicit-transactions mode of operation:
 
 .. code:: python
 
@@ -363,6 +362,8 @@ raise an error or implicitly commit the existing transaction -- but neither of
 these solutions are appealing compared to the conceptual simplicity of
 autocommit & explicit transactions.
 
+.. _transaction.atomic: https://docs.djangoproject.com/en/1.6/topics/db/transactions/#django.db.transaction.atomic
+
 
 Conclusion
 ----------
@@ -380,9 +381,9 @@ Acknowledgments
 ---------------
 
 Thanks to `Mike Bayer`_ (author of SQLAlchemy) for pointing me towards the
-``AUTOCOMMIT`` "isolation level" setting. Thanks to Christophe Pettus for my
-initial education in Postgres' transaction behavior, and `Aymeric Augustin` for
-the excellent implementation in Django 1.6+.
+``AUTOCOMMIT`` "isolation level" setting. Thanks to `Christophe Pettus`_ for my
+initial education in Postgres' transaction behavior, and `Aymeric Augustin`_
+for the excellent implementation in Django 1.6+.
 
 .. _autocommit mode: http://docs.sqlalchemy.org/en/rel_0_9/orm/session.html#autocommit-mode
 .. _SQLAlchemy: http://www.sqlalchemy.org/
@@ -390,3 +391,4 @@ the excellent implementation in Django 1.6+.
 .. _and psycopg2: http://initd.org/psycopg/docs/extensions.html#psycopg2.extensions.ISOLATION_LEVEL_AUTOCOMMIT
 .. _vague warnings: http://docs.sqlalchemy.org/en/rel_0_9/orm/session.html#autocommit-mode
 .. _Mike Bayer: https://twitter.com/zzzeek
+.. _Christophe Pettus: http://thebuild.com/blog/
