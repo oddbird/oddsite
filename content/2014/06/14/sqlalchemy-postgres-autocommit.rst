@@ -203,11 +203,11 @@ support transactions).
 
 But we do want to use transactions, so we need a way to start one. The natural
 API for this already exists in SQLAlchemy: ``session.begin()``. Since
-SQLAlchemy assumes that its database adapter will automatically start sessions,
-``session.begin()`` never actually issues a ``BEGIN`` to the database. But we
-don't actually need to issue ``BEGIN`` ourselves either - we just need to turn
-off the ``autocommit`` property on our connection, and then ``psycopg2`` will
-issue the ``BEGIN`` for us.
+SQLAlchemy assumes that its database adapter will automatically start
+transactions, ``session.begin()`` never actually issues a ``BEGIN`` to the
+database. But we don't actually need to issue ``BEGIN`` ourselves either - we
+just need to turn off the ``autocommit`` property on our connection, and then
+``psycopg2`` will issue the ``BEGIN`` for us.
 
 SQLAlchemy gives us a way to hook into the ``begin()`` call: the
 ``after_begin`` event, which sends along the relevant database connection. We
@@ -306,11 +306,10 @@ autocommit on all the appropriate connections:
 A transaction context manager
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-I mentioned above that I like context managers and decorators (such as Django's
-`transaction.atomic`_) as an API for transactions. Now that we have autocommit
-mode working, here's an example of a rough equivalent to `transaction.atomic`_
-for SQLAlchemy (unlike `transaction.atomic`_ this doesn't work as a decorator,
-but adding that is just a matter of some boilerplate):
+Now that we have autocommit mode working, here's an example of a rough
+equivalent to `transaction.atomic`_ for SQLAlchemy (unlike
+`transaction.atomic`_ this doesn't work as a decorator, but adding that is just
+a matter of some boilerplate):
 
 .. code:: python
 
