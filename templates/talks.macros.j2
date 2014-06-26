@@ -37,19 +37,17 @@
   </article>
 {% endmacro %}
 
+{% macro list(title, talks, time, count=none) %}
+  <section class="talks--{{ time }}">
+    <h2 class="talks-header">{{ title }}</h2>
 
-{% set talks=config.talks_future if module.time == "future" else config.talks_past %}
+    {% for talk in talks %}
+    {% if not count or loop.index <= count %}
 
-{% if talks %}
-<section class="talks--{{ module.time }}">
-  <h2 class="talks-header">{{ module.title }}</h2>
+    {{ show(talk, time) }}
 
-  {% for talk in talks %}
-  {% if not module.count or loop.index <= module.count %}
+    {% endif %}
+    {% endfor %}
+  </section>
+{% endmacro %}
 
-  {{ show(talk, module.time) }}
-
-  {% endif %}
-  {% endfor %}
-</section>
-{% endif %}

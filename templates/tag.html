@@ -1,5 +1,8 @@
 {% extends "blog/archives.html" %}
-{% block title %}Entries tagged “{{ tag.name }}”{% endblock %}
+
+{% import "blog/macros.j2" as blog %}
+
+{% block title %}{{ tag.name }} | {{ super() }}{% endblock %}
 {% block archivetype %}tag{% endblock archivetype %}
 
 {% block feedlinks %}
@@ -7,12 +10,12 @@
 <link href="feed.atom" rel="alternate" title="OddBird blog '{{ tag.name }}' posts" type="application/atom+xml">
 {% endblock feedlinks %}
 
-{% block list_title %}
+{% block list_intro %}
   <h1 class="title">Posts tagged <strong>{{ tag.name }}</strong></h1>
-{% endblock list_title %}
+{% endblock list_intro %}
 
 {% block archive %}
-  {%- for rst in entries %}
-    {% include "blog/_post--list.html.j2" %}
+  {%- for post in entries %}
+    {{ blog.list(post) }}
   {%- endfor %}
 {% endblock archive %}

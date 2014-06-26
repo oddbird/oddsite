@@ -1,5 +1,7 @@
 {% extends "blog/archives.html" %}
 
+{% import "blog/macros.j2" as blog %}
+
 {% block title %}Blog{% endblock %}
 {% block bodyclasses %}blog{% endblock %}
 
@@ -8,8 +10,8 @@
     {{ pagination }}
   {% endif %}
 
-  {%- for rst in pagination.get_slice() %}
-    {% include "blog/_post--list.html.j2" %}
+  {%- for post in pagination.get_slice() %}
+    {{ blog.list(post) }}
   {%- endfor %}
 
   {% if show_pagination and pagination.pages > 1 %}

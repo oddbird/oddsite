@@ -3,16 +3,6 @@ location: home
 comments: False
 before:
   - include: 'modules/_org.html.j2'
-after:
-  - include: 'modules/_talks.html.j2'
-    time: future
-    title: Future
-    count: 6
-  - include: 'modules/_talks.html.j2'
-    time: past
-    title: Past
-    count: 6
-  - include: 'modules/_recent-posts.html.j2'
 
 
 Custom web tools for humans
