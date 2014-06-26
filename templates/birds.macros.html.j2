@@ -1,5 +1,14 @@
 {% import "utility.macros.html.j2" as utility %}
 
+{% macro get_card(author, config) %}
+  {% for bird in config.birds %}
+    {% if bird.author == author %}
+      {{ card(bird) }}
+    {% endif %}
+  {% endfor %}
+{% endmacro %}
+
+{% macro card(bird) %}
 <div class="h-card">
   <p class="bio">
     <strong class="fn{% if bird.type %} {{ bird.type }}{% endif %}">
@@ -9,6 +18,11 @@
     {{ bird.bio|safe }}
   </p>
 
+  {{ links(bird) }}
+</div>
+{% endmacro %}
+
+{% macro links(bird) %}
   {% if bird.email or bird.twitter or bird.github %}
   <div class="bio-links">
     {% if bird.email %}
@@ -33,5 +47,4 @@
     {% endif %}
   </div>
   {% endif %}
-
-</div>
+{% endmacro %}

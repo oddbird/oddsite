@@ -1,7 +1,9 @@
+{% import "birds.macros.html.j2" as birds %}
+
 {% if config.company %}
 <article class="company">
   {% for bird in config.company %}
-  {% include "modules/_bio.html.j2" %}
+    {{ birds.card(bird) }}
   {% endfor %}
 </article>
 {% endif %}

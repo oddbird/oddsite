@@ -3,7 +3,7 @@ location: home
 comments: False
 before:
   - include: 'modules/_org.html.j2'
-  - include: 'modules/_birds.html.j2'
+after:
   - include: 'modules/_talks.html.j2'
     time: future
     title: Future
@@ -12,7 +12,6 @@ before:
     time: past
     title: Past
     count: 6
-after:
   - include: 'modules/_recent-posts.html.j2'
 
 

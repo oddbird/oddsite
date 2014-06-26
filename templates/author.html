@@ -1,5 +1,7 @@
 {% extends "blog/index.html" %}
 
+{% import "birds.macros.html.j2" as birds %}
+
 {% block title %}Entries by {{ author.name }}{% endblock %}
 {% block bodyclasses %}blog archive{% endblock %}
 
@@ -8,6 +10,6 @@
 <link href="feed.atom" rel="alternate" title="OddBird posts by '{{ author.name }}'" type="application/atom+xml">
 {% endblock %}
 
-{% block list_title %}
-  <h1 class="title">Posts by <strong>{{ author.name }}</strong></h1>
-{% endblock list_title %}
+{% block list_intro %}
+  {{ birds.get_card(author.name, config) }}
+{% endblock list_intro %}
