@@ -1,0 +1,56 @@
+// ----------------------------------------------------------------------------
+// Pages
+
+.page {
+  [role="main"] {
+    h1 { @include trailer; }
+    .postscript {
+      @include trailer;
+      font-style: italic;
+    }
+    @include at-breakpoint($break) { @include pad(1,1); }
+  }
+}
+
+// ----------------------------------------------------------------------------
+// Process
+
+.process-page {
+  counter-reset: step;
+  h2 {
+    counter-increment: step;
+    counter-reset: part;
+    @include before("Step " counter(step) ". ") { font-weight: bold; }
+  }
+  h3 {
+    position: relative;
+    counter-increment: part;
+    @include before(counter(step) "." counter(part) " ") {
+      color: $light;
+      @include at-breakpoint($break) {
+        position: absolute;
+        right: 100%;
+        margin-right: .4em;
+      }
+    }
+  }
+}
+
+// ----------------------------------------------------------------------------
+// Feedback
+
+.feedback-page {
+  counter-reset: suggestions;
+  h2 {
+    position: relative;
+    counter-increment: suggestions;
+    @include before(counter(suggestions) ". ") {
+      color: $light;
+      @include at-breakpoint($break) {
+        position: absolute;
+        right: 100%;
+        margin-right: .4em;
+      }
+    }
+  }
+}

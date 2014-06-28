@@ -62,7 +62,7 @@
   text-align: center;
   &:first-child { @include leader(-1.5); }
   .location {
-    @include wrap(" • ");
+    @include wrap-content(" • ");
     margin: 0 1em;
   }
   .now, .context {
@@ -138,7 +138,7 @@
   @extend %archiveitem;
   .entrycount {
     @include adjust-font-size-to($smallpx);
-    @include wrap("[" "]");
+    @include wrap-content("[" "]");
     margin-right: .5em;
   }
 }
