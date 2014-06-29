@@ -1,0 +1,14 @@
+// Fat Footer
+// ==========
+
+.fatfooter {
+  @include background-image(linear-gradient(to bottom, color(callout), rgba(color(callout), 0) rhythm(6)));
+  @include font-size(small);
+  border-top: 2px solid color(border);
+  padding-top: rhythm(1);
+  margin-bottom: rhythm(-1);
+}
+
+.fat-wrap {
+  @include container;
+}

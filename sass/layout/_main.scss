@@ -4,5 +4,6 @@
 [role="main"] {
   @extend %block;
   @include container;
+  margin-bottom: rhythm(1);
 }
 
