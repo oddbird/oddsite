@@ -24,6 +24,7 @@
 {% endmacro %}
 
 {% macro byline(post) %}
+{% if post.pub_date or post.author or post.tags %}
 <p class="byline">
   {% if post.pub_date %}
   <time datetime="{{ post.pub_date.isoformat() }}" pubdate="pubdate">
@@ -47,4 +48,5 @@
     </span>
   {% endif %}
 </p>
+{% endif %}
 {% endmacro %}

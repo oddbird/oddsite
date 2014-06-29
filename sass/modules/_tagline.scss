@@ -1,12 +1,14 @@
 // Tagline
 // =======
 
+%tagline {
+  @extend %h1;
+  @include gutters;
+  color: color(banner);
+  font-style: italic;
+  text-align: center;
+}
+
 [data-location="home"] {
-  .title {
-    @extend %h1;
-    @include gutters;
-    color: color(banner);
-    font-style: italic;
-    text-align: center;
-  }
+  .title { @extend %tagline; }
 }

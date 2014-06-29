@@ -1,18 +1,49 @@
 // Birds
 // =====
 
+
+// H-Cards
+// -------
+
+.p-name { font-weight: bold; }
+
+.bio-links {
+  @extend %serif;
+  @include font-size(small);
+  font-style: italic;
+}
+
+.bio-link {
+  @include gutters(before);
+  display: inline-block;
+
+  &:first-child { margin-left: 0; }
+}
+
+
+// Birds
+// -----
+
 $birds: carl, jonny, eric, claudina;
+
+[data-location="birds"] {
+  .title { @extend %tagline; }
+}
 
 .bird {
   @include gutters;
   @include background(no-repeat scroll center rhythm(1));
   @include background-size(rhythm(5));
-  border-bottom: 2px dashed color(border);
   padding-bottom: size(normal);
   padding-top: rhythm(6);
 
-  &:last-child {
-    border-bottom: 0;
+  .birds & {
+    border-top: 2px dashed color(border);
+  }
+
+  .archive & {
+    border-bottom: 2px dashed color(border);
+    margin-bottom: rhythm(1);
   }
 
   @include breakpoint(30em) {
@@ -38,23 +69,3 @@ $birds: carl, jonny, eric, claudina;
     margin-bottom: size(smaller);
   }
 }
-
-
-// H-Cards
-// -------
-
-.p-name { font-weight: bold; }
-
-.bio-links {
-  @extend %serif;
-  @include font-size(small);
-  font-style: italic;
-}
-
-.bio-link {
-  @include gutters(before);
-  display: inline-block;
-
-  &:first-child { margin-left: 0; }
-}
-

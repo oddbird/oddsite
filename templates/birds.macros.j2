@@ -11,10 +11,7 @@
 {% macro card(bird, is_org=false) %}
 <div class="h-card {% if bird.author %}bird {{ bird.author }}{% endif %}">
   <p class="bio">
-    <strong class="p-name">
-      {{ bird.name }}
-    </strong>
-
+    {{ name(bird) }}
     {{ bird.bio|safe }}
   </p>
 
@@ -31,6 +28,18 @@
       {% if site == 'github' %}{{ github(user) }}{% endif %}
     {% endfor %}
   </div>
+  {% endif %}
+{% endmacro %}
+
+{% macro name(bird) %}
+  {% if bird.author %}
+    <a href="{{ link_to('author', author=bird.author) }}" class="p-name">
+      {{ bird.name }}
+    </a>
+  {% else %}
+    <strong class="p-name">
+      {{ bird.name }}
+    </strong>
   {% endif %}
 {% endmacro %}
 
