@@ -1,4 +1,20 @@
 ---
+# Navigation
+# ----------
+nav:
+  - text: home
+    icon: home
+    url: /
+  - text: birds
+    icon: twitter
+    url: /birds/
+  - text: blog
+    icon: bubbles
+    url: /blog/
+
+
+# Future Talks
+# ------------
 talks_future:
   - title: "The Post-Obsolete Book"
     author: eric
@@ -14,6 +30,9 @@ talks_future:
     forum: BlendConf
     forum_url: http://www.blendconf.com/
 
+
+# Past Talks
+# ----------
 talks_past:
   - title: "Sass Bites #37"
     author: claudina
@@ -100,6 +119,8 @@ talks_past:
     video: http://pyvideo.org/video/1674/getting-started-with-automated-testing
 
 
+# Company
+# -------
 company:
   - name: OddBird
     type: org
@@ -112,6 +133,8 @@ company:
       and eating our dessert with the soup&nbsp;spoon.
 
 
+# Birds
+# -----
 birds:
   - name: Carl Meyer
     author: carl
@@ -122,7 +145,7 @@ birds:
       <a href="http://www.python.org/">Pythonista</a>,
       and <a href="http://djangoproject.com/">Django</a> core developer.
       When he’s not chasing a more elegant algorithm,
-      he chases frisbees, hockey pucks, and a six-year-old son.
+      he chases frisbees, hockey pucks, and a six-year-old&nbsp;son.
 
   - name: Eric M Suzanne
     author: eric
@@ -135,7 +158,7 @@ birds:
       <a href="http://teacupgorilla.com/">music</a>,
       <a href="http://github.com/ericam/">code</a>,
       and <a href="http://vicioustrap.com/">performance</a>.
-      He’s a sucker for new projects, puzzels, and processes.
+      He’s a sucker for new projects, puzzels, and&nbsp;processes.
 
   - name: Jonny Gerig Meyer
     author: jonny
@@ -147,7 +170,7 @@ birds:
       ultimate frisbee D-line cutter,
       and occasional
       <a href="http://www.goshen.edu/jonam/">college philosophy professor</a>.
-      He likes complicated board games, homebrewed IPAs, and hucking it deep.
+      He likes complex board games, homebrewed IPAs, and hucking it&nbsp;deep.
 
   - name: Claudina Sarahe
     author: claudina

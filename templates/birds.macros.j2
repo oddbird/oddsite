@@ -8,8 +8,8 @@
   {% endfor %}
 {% endmacro %}
 
-{% macro card(bird) %}
-<div class="h-card">
+{% macro card(bird, is_org=false) %}
+<div class="h-card {% if bird.author %}{{ bird.author }}{% endif %}">
   <p class="bio">
     <strong class="fn{% if bird.type %} {{ bird.type }}{% endif %}">
       {{ bird.name }}

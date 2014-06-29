@@ -1,10 +1,33 @@
 // Birds
 // =====
 
+$birds: carl, jonny, eric, claudina;
+
 .birds {
   .h-card {
     @include gutters;
-    margin-bottom: size(normal);
+    @include background(no-repeat scroll center rhythm(1));
+    @include background-size(rhythm(5));
+    border-bottom: 2px dashed color(border);
+    padding-bottom: size(normal);
+    padding-top: rhythm(6);
+
+    &:last-child {
+      border-bottom: 0;
+    }
+
+    @include breakpoint(30em) {
+      @include background-size(span(1.75) auto);
+      background-position: left center;
+      padding-left: span(1.75 wide);
+      padding-top: rhythm(1);
+
+      &:nth-child(even) {
+        background-position: right center;
+        padding-left: gutter();
+        padding-right: span(1.75);
+      }
+    }
   }
 
   .bio {
@@ -23,4 +46,10 @@
   display: inline-block;
 
   &:first-child { margin-left: 0; }
+}
+
+@each $bird in $birds {
+  .h-card.#{$bird} {
+    background-image: image-url('#{$bird}.png');
+  }
 }

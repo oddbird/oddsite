@@ -5,14 +5,12 @@
 
 {% block layout %}
 <nav role="navigation">
-  <a href="/" class="nav-link" data-active="home">
-    {{ utility.icon("home") }}
-    Home
-  </a>
-  <a href="/blog/" class="nav-link" data-active="blog">
-    {{ utility.icon("bubbles") }}
-    Blog
-  </a>
+  {% for link in config.nav %}
+    <a href="{{ link.url }}" class="nav-link" data-active="{{ link.text }}">
+      {{ utility.icon(link.icon) }}
+      {{ link.text }}
+    </a>
+  {% endfor %}
 </nav>
 
 <h1 role="banner">
