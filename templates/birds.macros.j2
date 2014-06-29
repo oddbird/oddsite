@@ -9,9 +9,9 @@
 {% endmacro %}
 
 {% macro card(bird, is_org=false) %}
-<div class="h-card {% if bird.author %}{{ bird.author }}{% endif %}">
+<div class="h-card {% if bird.author %}bird {{ bird.author }}{% endif %}">
   <p class="bio">
-    <strong class="fn{% if bird.type %} {{ bird.type }}{% endif %}">
+    <strong class="p-name">
       {{ bird.name }}
     </strong>
 
@@ -23,28 +23,34 @@
 {% endmacro %}
 
 {% macro links(bird) %}
-  {% if bird.email or bird.twitter or bird.github %}
+  {% if bird.links %}
   <div class="bio-links">
-    {% if bird.email %}
-      <a href="mailto:{{ bird.email }}" class="email bio-link">
-        {{ utility.icon('mail') }}
-        {{ bird.email }}
-      </a>
-    {% endif %}
-
-    {% if bird.twitter %}
-      <a href="http://twitter.com/{{ bird.twitter }}" class="bio-link" rel="me">
-        {{ utility.icon('twitter') }}
-        @{{ bird.twitter }}
-      </a>
-    {% endif %}
-
-    {% if bird.github %}
-      <a href="http://github.com/{{ bird.github }}" class="bio-link" rel="me">
-        {{ utility.icon('github') }}
-        {{ bird.github }}
-      </a>
-    {% endif %}
+    {% for site, user in bird.links %}
+      {% if site == 'email' %}{{ email(user) }}{% endif %}
+      {% if site == 'twitter' %}{{ twitter(user) }}{% endif %}
+      {% if site == 'github' %}{{ github(user) }}{% endif %}
+    {% endfor %}
   </div>
   {% endif %}
+{% endmacro %}
+
+{% macro email(email) %}
+  <a href="mailto:{{ email }}" class="email bio-link">
+    {{ utility.icon('mail') }}
+    {{ email }}
+  </a>
+{% endmacro %}
+
+{% macro twitter(user) %}
+  <a href="http://twitter.com/{{ user }}" class="bio-link" rel="me">
+    {{ utility.icon('twitter') }}
+    @{{ user }}
+  </a>
+{% endmacro %}
+
+{% macro github(user) %}
+  <a href="http://github.com/{{ user }}" class="bio-link" rel="me">
+    {{ utility.icon('github') }}
+    {{ user }}
+  </a>
 {% endmacro %}

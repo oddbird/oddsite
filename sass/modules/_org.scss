@@ -19,8 +19,6 @@ $org-border: (
     @include flex-direction(column-reverse);
   }
 
-  .fn { font-weight: bold; }
-
   .bio {
     @extend %h2;
     @include gutters;

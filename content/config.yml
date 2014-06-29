@@ -123,14 +123,14 @@ talks_past:
 # -------
 company:
   - name: OddBird
-    type: org
-    email: birds(who are 'at' the)oddbird.net
-    twitter: oddestbirds
     bio: |
       thrives on freely shared ideas
       <i class="amp">&</i> playful collaboration,
       crossing disciplines, breaking boundaries,
       and eating our dessert with the soup&nbsp;spoon.
+    links:
+      - [email, birds(who are 'at' the)oddbird.net]
+      - [twitter, oddestbirds]
 
 
 # Birds
@@ -138,19 +138,18 @@ company:
 birds:
   - name: Carl Meyer
     author: carl
-    twitter: carljm
-    github: carljm
     bio: |
       is a <a href="http://github.com/carljm">coder</a>,
       <a href="http://www.python.org/">Pythonista</a>,
       and <a href="http://djangoproject.com/">Django</a> core developer.
       When he’s not chasing a more elegant algorithm,
       he chases frisbees, hockey pucks, and a six-year-old&nbsp;son.
+    links:
+      - [twitter, carljm]
+      - [github, carljm]
 
   - name: Eric M Suzanne
     author: eric
-    twitter: ericmsuzanne
-    github: ericam
     bio: |
       is an artist <span class="amp">&</span> experience designer,
       mixing <a href="http://eric.ericsuzanne.com">words</a>,
@@ -159,11 +158,12 @@ birds:
       <a href="http://github.com/ericam/">code</a>,
       and <a href="http://vicioustrap.com/">performance</a>.
       He’s a sucker for new projects, puzzels, and&nbsp;processes.
+    links:
+      - [twitter, ericmsuzanne]
+      - [github, ericam]
 
   - name: Jonny Gerig Meyer
     author: jonny
-    twitter: jgerigmeyer
-    github: jgerigmeyer
     bio: |
       is a
       <a href="http://github.com/jgerigmeyer/">front-end developer</a>,
@@ -171,17 +171,21 @@ birds:
       and occasional
       <a href="http://www.goshen.edu/jonam/">college philosophy professor</a>.
       He likes complex board games, homebrewed IPAs, and hucking it&nbsp;deep.
+    links:
+      - [twitter, jgerigmeyer]
+      - [github, jgerigmeyer]
 
   - name: Claudina Sarahe
     author: claudina
-    twitter: itsmisscs
-    github: misscs
     bio: |
       is a front-end developer, pattern wrangler,
       and etc etc.
       She does all sort of cool etc,
       like writing her own damn bio.
       AmIRight?
+    links:
+      - [twitter, itsmisscs]
+      - [github, misscs]
 
 
 # Settings
