@@ -6,7 +6,7 @@ nav:
     icon: home
     url: /
   - text: birds
-    icon: twitter
+    icon: egg
     url: /birds/
   - text: blog
     icon: bubbles
