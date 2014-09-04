@@ -45,11 +45,7 @@ $org-border: (
 [id="odd-projects"] {
   @extend %odd-intro;
   @include gutters;
-  margin-bottom: size(shim);
-
-  @include breakpoint(35em) {
-    @include squish(.5);
-  }
+  margin-bottom: size(gutter);
 }
 
 [id="odd-process"] {
