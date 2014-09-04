@@ -6,9 +6,22 @@
   @include font-size(small);
   border-top: 2px solid color(border);
   padding-top: size(gutter);
-  margin-bottom: 0 - size(gutter);
+  margin-bottom: 0 - size(gutter)*2;
 }
 
 .fat-wrap {
   @include container;
+}
+
+
+// Recent Posts
+// ------------
+
+.recent-posts {
+  @include gutters;
+  @extend %block;
+}
+
+.rp-title {
+  text-transform: uppercase;
 }

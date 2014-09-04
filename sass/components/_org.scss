@@ -35,3 +35,43 @@ $org-border: (
     text-align: center;
   }
 }
+
+%odd-intro {
+  @include font-size(small);
+
+  h2 { @extend %is-hidden; }
+}
+
+[id="odd-projects"] {
+  @extend %odd-intro;
+  @include gutters;
+  margin-bottom: size(shim);
+
+  @include breakpoint(35em) {
+    @include squish(.5);
+  }
+}
+
+[id="odd-process"] {
+  @extend %odd-intro;
+  counter-reset: process;
+
+  li {
+    @include gutters;
+    counter-increment: process;
+    margin-bottom: size(shim);
+
+    @include before(counter(process, decimal-leading-zero) '. ') {
+      color: color(fade);
+    }
+
+    strong {
+      text-transform: uppercase;
+    }
+
+    @include breakpoint(35em) {
+      @include gallery(2);
+    }
+  }
+}
+

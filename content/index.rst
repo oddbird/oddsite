@@ -12,12 +12,11 @@ Custom web tools for humans
 Odd Projects
 ------------
 
-We love molding ideas into experiences,
-and tools that people can use —
-from open-source projects like `Django`_, `Compass`_, and `Susy`_,
-to web applications for `Mozilla`_, `The K Network`_,
-`Providence Plan`_, `Junyo`_,
-and our ongoing experiments in `digital storytelling`_.
+From working on open-source tools like `Django`_, `Compass`_, and `Susy`_,
+to building web applications for `Mozilla`_, `The K Network`_,
+`Providence Plan`_, `Junyo`_, or `ORCAS`_ —
+and our own experiments in `digital storytelling`_ —
+we love molding ideas into experiences that people can use.
 
 .. _Django: https://www.djangoproject.com/
 .. _Compass: http://compass-style.org/
@@ -26,6 +25,7 @@ and our ongoing experiments in `digital storytelling`_.
 .. _The K Network: #
 .. _Providence Plan: #
 .. _Junyo: #
+.. _ORCAS: #
 .. _digital storytelling: #
 
 
@@ -42,12 +42,12 @@ Odd Process
    and re-prioritization
    via `Pivotal Tracker`_.
 
-3. We work with the **accessible** open web stack:
-   semantic HTML5 markup,
+3. We use the **accessible** open web stack:
+   semantic HTML5,
    unobtrusive Javascript,
-   and advanced CSS3 styling.
-   On the server side we use Python_,
-   and have extensive Django_ experience.
+   and advanced CSS —
+   backed by Python_
+   & Django_ on the server.
 
 .. _Pivotal Tracker: http://pivotaltracker.com/
 .. _Python: http://www.python.org/
