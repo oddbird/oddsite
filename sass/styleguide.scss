@@ -1,7 +1,6 @@
 // Style Guide
 // ===========
 
-
 @import "compass/reset";
 
 @import "base/requirements.config";
@@ -13,15 +12,15 @@
 @import "base/buttons.config";
 
 @import 'base';
+@import "base/layout";
 
 
-// Modules
-// -------
+// Components
+// ----------
 
-@import 'modules/banner';
-@import 'modules/nav';
-@import 'modules/contentinfo';
-@import 'layout/main';
+@import 'components/banner';
+@import 'components/nav';
+@import 'components/contentinfo';
 
 
 // Styleguide Components

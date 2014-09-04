@@ -24,7 +24,7 @@
 // Birds
 // -----
 
-$birds: carl, jonny, eric, claudina;
+$birds: carl, jonny, eric, claudina, sondra;
 
 [data-location="birds"] {
   .title { @extend %tagline; }
@@ -34,6 +34,7 @@ $birds: carl, jonny, eric, claudina;
   @include gutters;
   @include background(no-repeat scroll center rhythm(1));
   @include background-size(rhythm(5));
+  min-height: rhythm(5);
   padding-bottom: size(normal);
   padding-top: rhythm(6);
 

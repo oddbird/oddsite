@@ -178,14 +178,15 @@ birds:
   - name: Claudina Sarahe
     author: claudina
     bio: |
-      is a front-end developer, pattern wrangler,
-      and etc etc.
-      She does all sort of cool etc,
-      like writing her own damn bio.
-      AmIRight?
+      is a front-end developer, pattern wrangler, etc.
     links:
       - [twitter, itsmisscs]
       - [github, misscs]
+
+  - name: Sondra E.
+    author: sondra
+    bio: |
+      is an artist, musician, designer, etc.
 
 
 # Settings
