@@ -74,15 +74,17 @@ $focus: '&:hover, &:focus, &:active';
 
 %h1 {
   @include font-size(larger);
-  @include trailer;
 }
 
 %h2 {
-  @include font-size(medium, 1.25);
-  @include trailer;
+  @include font-size(large);
 }
 
-%h3, %h4, %h5 { font-weight: bold; }
+%h3 {
+  @include font-size(medium, 1.25);
+}
+
+%h4, %h5 { font-weight: bold; }
 
 %headers {
   h1 {
@@ -123,6 +125,25 @@ $focus: '&:hover, &:focus, &:active';
 
   ul {
     list-style: disc;
+  }
+
+  li { margin-bottom: size(shim); }
+
+  tt, code, pre {
+    @extend %mono;
+    @include font-size(small);
+  }
+
+  tt, code {
+    font-weight: bold;
+  }
+
+  pre {
+    border-left: 3px solid color(border);
+    margin-bottom: size(gutter);
+    margin-left: 0 - size(shim);
+    padding: size(shim);
+    white-space: pre-wrap;
   }
 }
 

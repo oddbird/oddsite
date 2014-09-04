@@ -1,6 +1,7 @@
 public: yes
 location: home
 comments: False
+default_styles: False
 before:
   - include: 'modules/_org.html.j2'
 

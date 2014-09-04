@@ -1,0 +1,81 @@
+// Pygments
+// ========
+
+@include colors((
+  pyg comment: 'fade',
+  pyg light: text (tint: 25%),
+  pyg name: 'orange',
+  pyg decorator: pyg name (shade: 25%),
+  pyg literal: 'blue',
+  pyg variable: pyg literal (shade: 25%),
+));
+
+
+.c { color: color(pyg comment); } /* Comment */
+.err { color: color(pyg comment); } /* Error */
+.g { color: color(pyg light); } /* Generic */
+.k { color: color(pyg name); font-weight: bold; } /* Keyword */
+.l { color: color(pyg light); } /* Literal */
+.n { color: color(pyg light); } /* Name */
+.o { color: color(text); } /* Operator */
+.x { color: color(pyg name); } /* Other */
+.p { color: color(text); } /* Punctuation */
+.cm { color: color(pyg comment); } /* Comment.Multiline */
+.cp { color: color(text); } /* Comment.Preproc */
+.c1 { color: color(pyg comment); } /* Comment.Single */
+.cs { color: color(text); } /* Comment.Special */
+.gd { color: color(pyg literal); } /* Generic.Deleted */
+.ge { color: color(pyg comment); font-style: italic; } /* Generic.Emph */
+.gr { color: color(pyg name); } /* Generic.Error */
+.gh { color: color(pyg name); } /* Generic.Heading */
+.gi { color: color(text); } /* Generic.Inserted */
+.go { color: color(pyg comment); } /* Generic.Output */
+.gp { color: color(pyg comment); } /* Generic.Prompt */
+.gs { color: color(pyg comment); font-weight: bold; } /* Generic.Strong */
+.gu { color: color(pyg name); } /* Generic.Subheading */
+.gt { color: color(pyg comment); } /* Generic.Traceback */
+.kc { color: color(pyg name); } /* Keyword.Constant */
+.kd { color: color(pyg name); } /* Keyword.Declaration */
+.kn { color: color(text); } /* Keyword.Namespace */
+.kp { color: color(text); } /* Keyword.Pseudo */
+.kr { color: color(pyg name); } /* Keyword.Reserved */
+.kt { color: color(pyg name); } /* Keyword.Type */
+.ld { color: color(pyg comment); } /* Literal.Date */
+.m { color: color(pyg literal); } /* Literal.Number */
+.s { color: color(pyg literal); } /* Literal.String */
+.na { color: color(pyg name); } /* Name.Attribute */
+.nb { color: color(pyg name); } /* Name.Builtin */
+.nc { color: color(pyg literal); } /* Name.Class */
+.no { color: color(pyg light); } /* Name.Constant */
+.nd { color: color(pyg decorator); } /* Name.Decorator */
+.ni { color: color(pyg name); } /* Name.Entity */
+.ne { color: color(pyg name); } /* Name.Exception */
+.nf { color: color(pyg name); } /* Name.Function */
+.nl { color: color(pyg comment); } /* Name.Label */
+.nn { color: color(pyg literal); } /* Name.Namespace */
+.nx { color: color(pyg comment); } /* Name.Other */
+.py { color: color(pyg comment); } /* Name.Property */
+.nt { color: color(pyg variable); } /* Name.Tag */
+.nv { color: color(pyg variable); } /* Name.Variable */
+.ow { color: color(text); } /* Operator.Word */
+.w { color: color(pyg comment); } /* Text.Whitespace */
+.mf { color: color(pyg literal); } /* Literal.Number.Float */
+.mh { color: color(pyg literal); } /* Literal.Number.Hex */
+.mi { color: color(pyg literal); } /* Literal.Number.Integer */
+.mo { color: color(pyg literal); } /* Literal.Number.Oct */
+.sb { color: color(pyg comment); } /* Literal.String.Backtick */
+.sc { color: color(pyg literal); } /* Literal.String.Char */
+.sd { color: color(pyg comment); } /* Literal.String.Doc */
+.s2 { color: color(pyg literal); } /* Literal.String.Double */
+.se { color: color(pyg name); } /* Literal.String.Escape */
+.sh { color: color(pyg comment); } /* Literal.String.Heredoc */
+.si { color: color(pyg literal); } /* Literal.String.Interpol */
+.sx { color: color(pyg literal); } /* Literal.String.Other */
+.sr { color: color(pyg name); } /* Literal.String.Regex */
+.s1 { color: color(pyg literal); } /* Literal.String.Single */
+.ss { color: color(pyg literal); } /* Literal.String.Symbol */
+.bp { color: color(pyg name); } /* Name.Builtin.Pseudo */
+.vc { color: color(pyg name); } /* Name.Variable.Class */
+.vg { color: color(pyg name); } /* Name.Variable.Global */
+.vi { color: color(pyg name); } /* Name.Variable.Instance */
+.il { color: color(pyg literal); } /* Literal.Number.Integer.Long */

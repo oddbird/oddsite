@@ -20,6 +20,8 @@
 .recent-posts {
   @include gutters;
   @extend %block;
+
+  li { margin: 0; }
 }
 
 .rp-title {

@@ -20,7 +20,7 @@ $org-border: (
   }
 
   .bio {
-    @extend %h2;
+    @extend %h3;
     @include gutters;
     @include h-borders(map-get($org-border, width), 1);
     border: {

@@ -33,11 +33,6 @@ a {
   @extend %is-hidden;
 }
 
-pre,
-code {
-  @extend %mono;
-}
-
 .amp {
   @extend %serif;
   font-style: italic;

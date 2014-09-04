@@ -3,7 +3,11 @@
 {% import "blog/macros.j2" as blog %}
 
 {% block title %}Blog{% endblock %}
-{% block bodyclasses %}blog{% endblock %}
+{% block bodyclasses %}blog blog-index{% endblock %}
+
+{% block list_intro %}
+  <h1 class="title">The Words</h1>
+{% endblock list_intro %}
 
 {% block archive %}
   {% if show_pagination and pagination.pages > 1 %}

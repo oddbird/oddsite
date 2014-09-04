@@ -1,0 +1,41 @@
+// Blog Styles
+// ===========
+
+[data-default-styles] {
+  @extend %type;
+}
+
+.blog-index {
+  .title { @extend %tagline; }
+}
+
+.post--list {
+  @include after('+ + +') {
+    color: color(fade);
+    display: block;
+    margin: size(gutter);
+    text-align: center;
+  }
+}
+
+.byline {
+  @include font-size(small);
+  color: color(fade);
+  margin-bottom: size(gutter);
+
+}
+
+.more-link {
+  @extend %serif;
+  @include after(' »');
+  font-style: italic;
+}
+
+.comments {
+  @include font-size(small);
+  border-top: 2px dashed color(border);
+  color: color(fade);
+  margin-top: size(spacer);
+  padding: size(shim);
+  text-align: center;
+}

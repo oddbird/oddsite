@@ -5,6 +5,7 @@
   @extend %h1;
   @include gutters;
   color: color(banner);
+  margin-bottom: size(gutter);
   font-style: italic;
   text-align: center;
 }

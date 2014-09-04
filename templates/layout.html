@@ -20,7 +20,7 @@
   </a>
 </h1>
 
-<main role="main" {% if config.pageclasses %}class="{{ config.pageclasses }}"{% endif %}>
+<main role="main" {% if config.pageclasses %}class="{{ config.pageclasses }}"{% endif %} {% if config.default_styles %}data-default-styles="1"{% endif %}>
   {% block body %}{% endblock body %}
 </main>
 

@@ -1,23 +1,24 @@
+{% import "birds.macros.j2" as birds %}
 
-{% macro twitter(author, birds) %}
+{% macro twitter(author, birds) -%}
   {%- if author -%}
     {%- for bird in birds -%}
       {%- if author == bird.author -%}
-        {{ bird.twitter }}
+        {%- for site, user in bird.links -%}
+          {%- if site == 'twitter' -%}{{ user }}{%- endif -%}
+        {%- endfor -%}
       {%- endif -%}
     {%- endfor -%}
   {%- else -%}
-    {{ company.first.twitter }}
+    {%- for site, user in company.first.links -%}
+      {%- if site == 'twitter' -%}{{ user }}{%- endif -%}
+    {%- endfor -%}
   {%- endif -%}
-{% endmacro %}
+{% endmacro -%}
 
 <aside class="comments">
-  Have a correction, addition, or feedback on this post?
+  Have feedback on this post?
   Talk to us on
   <a href="https://twitter.com/{{ twitter(config.author, config.birds) }}">Twitter</a>,
-  email <span class="email">birds(who are 'at' the)oddbird.net</span>,
-  or comment on
-  <a href="http://www.reddit.com/submit?url=http%3A//oddbird.net{{ link_to('page', slug=ctx.slug) }}">Reddit</a>
-  or
-  <a href="https://news.ycombinator.com/submitlink?u=http%3A//oddbird.net{{ link_to('page', slug=ctx.slug) }}">Hacker&nbsp;News</a>.
+  or email <span class="email">birds(who are 'at' the)oddbird.net</span>.
 </aside class="comments">

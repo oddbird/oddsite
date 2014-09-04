@@ -194,6 +194,8 @@ copyright: 2014
 author: OddBird
 comments: True
 location: blog
+default_styles: True
+
 
 # rstBlog Setup
 active_modules: [
