@@ -2,11 +2,11 @@
 // ==========
 
 .fatfooter {
-  @include background-image(linear-gradient(to bottom, color(callout), rgba(color(callout), 0) rhythm(6)));
+  @include background-image(linear-gradient(to bottom, color(callout), rgba(color(callout), 0) 50%));
   @include font-size(small);
   border-top: 2px solid color(border);
-  padding-top: rhythm(1);
-  margin-bottom: rhythm(-1);
+  padding-top: size(gutter);
+  margin-bottom: 0 - size(gutter);
 }
 
 .fat-wrap {

@@ -32,11 +32,10 @@ $birds: carl, jonny, eric, claudina, sondra;
 
 .bird {
   @include gutters;
-  @include background(no-repeat scroll center rhythm(1));
-  @include background-size(rhythm(5));
-  min-height: rhythm(5);
-  padding-bottom: size(normal);
-  padding-top: rhythm(6);
+  @include background(no-repeat scroll center size(gutter));
+  @include background-size(size(face));
+  padding-bottom: size(gutter);
+  padding-top: size(face) + size(gutter);
 
   .birds & {
     border-top: 2px dashed color(border);
@@ -44,14 +43,15 @@ $birds: carl, jonny, eric, claudina, sondra;
 
   .archive & {
     border-bottom: 2px dashed color(border);
-    margin-bottom: rhythm(1);
+    margin-bottom: size(gutter);
   }
 
   @include breakpoint(30em) {
     @include background-size(span(1.75) auto);
     background-position: left center;
+    min-height: span(1.75 static);
     padding-left: span(1.75 wide);
-    padding-top: rhythm(1);
+    padding-top: size(gutter);
 
     &:nth-child(even) {
       background-position: right center;
@@ -67,6 +67,6 @@ $birds: carl, jonny, eric, claudina, sondra;
   }
 
   .bio {
-    margin-bottom: size(smaller);
+    margin-bottom: size(shim);
   }
 }

@@ -11,8 +11,8 @@ $org-border: (
 .company {
   @include background(image-url('birds.png') no-repeat scroll top center);
   @include background-size(100% auto);
-  padding-top: percentage((image-height('birds.png') - size(medium, px)) / image-width('birds.png'));
-  margin-bottom: size(normal);
+  padding-top: percentage((image-height('birds.png') - size(gutter, px)) / image-width('birds.png'));
+  margin-bottom: size(gutter);
 
   .h-card {
     @include display-flex;

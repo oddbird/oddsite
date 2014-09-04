@@ -1,7 +1,7 @@
 // Typography
 // ==========
 
-$base-line-height: size(large);
+$base-line-height: font-size(large);
 
 $rhythm-unit: rem;
 $rem-with-px-fallback: false;
@@ -106,14 +106,14 @@ $focus: '&:hover, &:focus, &:active';
   p,
   ol,
   ul {
-    margin-bottom: size(normal);
+    margin-bottom: size(gutter);
   }
 
   ol,
   ul {
     ol,
     ul {
-      margin-left: size(normal);
+      margin-left: size(gutter);
     }
   }
 

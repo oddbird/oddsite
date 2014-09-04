@@ -5,14 +5,25 @@ $base-font-size: 21px;
 
 $ratio: major-third;
 
+$font-sizes: (
+  largest   : make-size(6),
+  larger    : make-size(4),
+  large     : make-size(2),
+  medium    : make-size(1),
+  normal    : make-size(0),
+  small     : make-size(-1),
+  smaller   : make-size(-2),
+  smallest  : make-size(-3),
+);
+
 $sizes: (
-  logo      : scale(8),
-  largest   : scale(6),
-  larger    : scale(4),
-  large     : scale(2),
-  medium    : scale(1),
-  normal    : scale(0),
-  small     : scale(-1),
-  smaller   : scale(-2),
-  smallest  : scale(-3),
+  column: make-size(6),
+  gutter: make-size(2),
+  spacer: make-size(4),
+  shim: make-size(-2),
+
+  logo: make-size(8),
+  face: make-size(10),
+
+  radius: maek-size(-3),
 );

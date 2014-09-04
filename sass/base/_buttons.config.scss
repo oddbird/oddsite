@@ -12,7 +12,7 @@
   }
 
   background: $bg;
-  border-radius: size(smallest);
+  border-radius: size(radius);
   color: $color;
 
   #{$focus} {

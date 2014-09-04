@@ -3,7 +3,7 @@
 
 $susy: (
   columns: 6,
-  gutters: size(medium)/size(largest),
-  column-width: size(largest),
+  gutters: size(gutter)/size(column),
+  column-width: size(column),
   gutter-position: inside-static,
 );

@@ -8,7 +8,7 @@
   @include angle(bottom, right);
   @include font-size(small);
   color: color(back);
-  padding-bottom: size(large);
+  padding-bottom: size(spacer);
   padding-top: map-get($angle, size);
   text-shadow: 0 -1px 0 rgba(color(text), .5);
 
@@ -30,7 +30,7 @@
 }
 
 .history {
-  margin-bottom: size(smaller);
+  margin-bottom: size(shim);
 }
 
 .history,
@@ -46,5 +46,5 @@
 
 .colophon {
   border-top: 2px rgba(color(back), .5) dashed;
-  padding-top: size(smaller);
+  padding-top: size(shim);
 }
