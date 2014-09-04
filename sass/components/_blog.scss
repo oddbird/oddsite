@@ -10,11 +10,13 @@
 }
 
 .post--list {
-  @include after('+ + +') {
-    color: color(fade);
-    display: block;
-    margin: size(gutter);
-    text-align: center;
+  & + & {
+    @include before('+ + +') {
+      color: color(fade);
+      display: block;
+      margin: size(gutter);
+      text-align: center;
+    }
   }
 }
 
