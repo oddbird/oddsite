@@ -164,6 +164,7 @@ birds:
 
   - name: Jonny Gerig Meyer
     author: jonny
+    no_posts: True
     bio: |
       is a
       <a href="http://github.com/jgerigmeyer/">front-end developer</a>,
@@ -177,16 +178,23 @@ birds:
 
   - name: Claudina Sarahe
     author: claudina
+    no_posts: True
     bio: |
-      is a front-end developer, pattern wrangler, etc.
+      is a front-end developer, pattern wrangler, teacher,
+      and <a href="http://sassconf.com/">conference organizer</a>.
     links:
       - [twitter, itsmisscs]
       - [github, misscs]
 
-  - name: Sondra E.
+  - name: Sondra E
     author: sondra
+    no_posts: True
     bio: |
-      is an artist, musician, designer, etc.
+      is an product designer, writer, entrepeneur,
+      and <a href="http://teacupgorilla.com/">musician</a>.
+      She likes alliteration,
+      awkward conversation,
+      and chocolate chip cookies.
 
 
 # Settings

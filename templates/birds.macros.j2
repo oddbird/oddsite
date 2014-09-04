@@ -32,7 +32,7 @@
 {% endmacro %}
 
 {% macro name(bird) %}
-  {% if bird.author %}
+  {% if bird.author and not bird.no_posts %}
     <a href="{{ link_to('author', author=bird.author) }}" class="p-name">
       {{ bird.name }}
     </a>
