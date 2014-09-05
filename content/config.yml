@@ -16,16 +16,16 @@ nav:
 # Future Talks
 # ------------
 talks_future:
-  - title: "The Post-Obsolete Book"
-    author: eric
-    date: June 19
-    year: 2014
-    forum: ELO Conference
-    forum_url: http://conference.eliterature.org/
-
-  - title: "Notes Towards a Queer Web"
+  - title: "Magic with Sass Maps"
     author: eric
     date: September 12
+    year: 2014
+    forum: BlendConf
+    forum_url: http://www.blendconf.com/
+
+  - title: "Getting to know Sass"
+    author: claudina
+    date: September 11
     year: 2014
     forum: BlendConf
     forum_url: http://www.blendconf.com/
@@ -34,6 +34,13 @@ talks_future:
 # Past Talks
 # ----------
 talks_past:
+  - title: "The Post-Obsolete Book"
+    author: eric
+    date: June 19
+    year: 2014
+    forum: ELO Conference
+    forum_url: http://conference.eliterature.org/
+
   - title: "Sass Bites #37"
     author: claudina
     date: May 13
