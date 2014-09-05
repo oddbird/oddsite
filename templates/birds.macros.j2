@@ -22,16 +22,8 @@
 {% macro links(bird) %}
   {% if bird.links %}
   <div class="bio-links">
-    {% for site, user in bird.links %}
-      {% if site == 'email' %}
-        {{ email(user) }}
-      {% elif site == 'twitter' %}
-        {{ twitter(user) }}
-      {% elif site == 'github' %}
-        {{ github(user) }}
-      {% else %}
-        {{ local(site, user) }}
-      {% endif %}
+    {% for type, target in bird.links %}
+      {{ bio_link(type, target) }}
     {% endfor %}
   </div>
   {% endif %}
@@ -49,29 +41,27 @@
   {% endif %}
 {% endmacro %}
 
-{% macro email(email) %}
-  <a href="mailto:{{ email }}" class="email" bio-link="email" rel="me">
-    {{ utility.icon('mail') }}
-    {{ email }}
-  </a>
-{% endmacro %}
+{% set bio_links = {
+  'email' : 'mailto:',
+  'twitter' : 'http://twitter.com/',
+  'github' : 'http://github.com/'
+} %}
 
-{% macro twitter(user) %}
-  <a href="http://twitter.com/{{ user }}" bio-link="twitter" rel="me">
-    {{ utility.icon('twitter') }}
-    @{{ user }}
-  </a>
-{% endmacro %}
+{% macro bio_link(type, target) %}
+  {% if bio_links[type] %}
+    {% set url = '%s%s'|format(bio_links[type], target) %}
 
-{% macro github(user) %}
-  <a href="http://github.com/{{ user }}" bio-link="github" rel="me">
-    {{ utility.icon('github') }}
-    {{ user }}
-  </a>
-{% endmacro %}
-
-{% macro local(name, url) %}
-  <a href="{{ url }}" bio-link="{{ name }}" rel="me">
-    {{ name }}
-  </a>
+    <a href="{{ url }}" {% if type == 'email' %}class="email" {% endif %}bio-link="{{ type }}" rel="me">
+      {{ utility.icon(type) }}
+      <span class="bl-title">
+        {% if type == 'twitter' %}@{% endif %}{{ target }}
+      </span>
+    </a>
+  {% else %}
+    <a href="{{ target }}" class="{{ classes }}" bio-link="{{ type }}" rel="me">
+      <span class="bl-title">
+        {{ type }}
+      </span>
+    </a>
+  {% endif %}
 {% endmacro %}

@@ -14,8 +14,18 @@
 }
 
 [bio-link] {
-  @include gutters(before);
-  display: inline-block;
+  #{$link} {
+    @include gutters(before);
+    display: inline-block;
+  }
+
+  #{$focus} {
+    text-decoration: none;
+
+    .bl-title {
+      text-decoration: underline;
+    }
+  }
 
   &:first-child { margin-left: 0; }
 }
