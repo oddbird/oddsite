@@ -9,14 +9,14 @@
 {% endmacro %}
 
 {% macro card(bird) %}
-<div class="h-card {% if bird.author %}bird {{ bird.author }}{% endif %}">
-  <p class="bio">
-    {{ name(bird) }}
-    {{ bird.bio|safe }}
-  </p>
+  <div class="h-card {% if bird.author %}bird {{ bird.author }}{% endif %}">
+    <p class="bio">
+      {{ name(bird) }}
+      {{ bird.bio|safe }}
+    </p>
 
-  {{ links(bird) }}
-</div>
+    {{ links(bird) }}
+  </div>
 {% endmacro %}
 
 {% macro links(bird) %}
@@ -41,13 +41,13 @@
   {% endif %}
 {% endmacro %}
 
-{% set bio_links = {
-  'email' : 'mailto:',
-  'twitter' : 'http://twitter.com/',
-  'github' : 'http://github.com/'
-} %}
-
 {% macro bio_link(type, target) %}
+  {% set bio_links = {
+    'email' : 'mailto:',
+    'twitter' : 'http://twitter.com/',
+    'github' : 'http://github.com/'
+  } %}
+
   {% if bio_links[type] %}
     {% set url = '%s%s'|format(bio_links[type], target) %}
 
