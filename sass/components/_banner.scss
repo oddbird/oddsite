@@ -40,6 +40,7 @@ $angle: (
       @include transform-origin(top, center);
       color: color(back);
       display: inline-block;
+      height: size(logo) + size(gutter);
     }
 
     #{$focus} {
