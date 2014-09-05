@@ -8,7 +8,7 @@
   {% endfor %}
 {% endmacro %}
 
-{% macro card(bird, is_org=false) %}
+{% macro card(bird) %}
 <div class="h-card {% if bird.author %}bird {{ bird.author }}{% endif %}">
   <p class="bio">
     {{ name(bird) }}
@@ -23,9 +23,15 @@
   {% if bird.links %}
   <div class="bio-links">
     {% for site, user in bird.links %}
-      {% if site == 'email' %}{{ email(user) }}{% endif %}
-      {% if site == 'twitter' %}{{ twitter(user) }}{% endif %}
-      {% if site == 'github' %}{{ github(user) }}{% endif %}
+      {% if site == 'email' %}
+        {{ email(user) }}
+      {% elif site == 'twitter' %}
+        {{ twitter(user) }}
+      {% elif site == 'github' %}
+        {{ github(user) }}
+      {% else %}
+        {{ local(site, user) }}
+      {% endif %}
     {% endfor %}
   </div>
   {% endif %}
@@ -44,22 +50,28 @@
 {% endmacro %}
 
 {% macro email(email) %}
-  <a href="mailto:{{ email }}" class="email bio-link">
+  <a href="mailto:{{ email }}" class="email" bio-link="email" rel="me">
     {{ utility.icon('mail') }}
     {{ email }}
   </a>
 {% endmacro %}
 
 {% macro twitter(user) %}
-  <a href="http://twitter.com/{{ user }}" class="bio-link" rel="me">
+  <a href="http://twitter.com/{{ user }}" bio-link="twitter" rel="me">
     {{ utility.icon('twitter') }}
     @{{ user }}
   </a>
 {% endmacro %}
 
 {% macro github(user) %}
-  <a href="http://github.com/{{ user }}" class="bio-link" rel="me">
+  <a href="http://github.com/{{ user }}" bio-link="github" rel="me">
     {{ utility.icon('github') }}
     {{ user }}
+  </a>
+{% endmacro %}
+
+{% macro local(name, url) %}
+  <a href="{{ url }}" bio-link="{{ name }}" rel="me">
+    {{ name }}
   </a>
 {% endmacro %}

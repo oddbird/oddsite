@@ -13,7 +13,7 @@
   font-style: italic;
 }
 
-.bio-link {
+[bio-link] {
   @include gutters(before);
   display: inline-block;
 

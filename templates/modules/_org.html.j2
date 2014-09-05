@@ -2,8 +2,6 @@
 
 {% if config.company %}
 <article class="company">
-  {% for bird in config.company %}
-    {{ birds.card(bird) }}
-  {% endfor %}
+  {{ birds.card(config.company[0]) }}
 </article>
 {% endif %}

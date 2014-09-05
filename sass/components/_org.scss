@@ -9,9 +9,6 @@ $org-border: (
 
 
 .company {
-  @include background(image-url('birds.png') no-repeat scroll top center);
-  @include background-size(100% auto);
-  padding-top: percentage((image-height('birds.png') - size(gutter, px)) / image-width('birds.png'));
   margin-bottom: size(gutter);
 
   .h-card {
@@ -33,6 +30,17 @@ $org-border: (
   .bio-links {
     @include gutters;
     text-align: center;
+  }
+
+  [bio-link='birds'] {
+    @include background(image-url('birds.png') no-repeat scroll center);
+    @include background-size(100% auto);
+    display: block;
+    height: 0;
+    margin-bottom: 0 - size(gutter);
+    padding-top: percentage(image-height('birds.png') / image-width('birds.png'));
+    text-indent: -9999px;
+    width: 100%;
   }
 }
 
