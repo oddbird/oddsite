@@ -168,11 +168,15 @@ birds:
     no_posts: True
     bio: |
       is a
-      <a href="http://github.com/jgerigmeyer/">front-end developer</a>,
-      ultimate frisbee D-line cutter,
-      and occasional
-      <a href="http://www.goshen.edu/jonam/">college philosophy professor</a>.
-      He likes complex board games, homebrewed IPAs, and hucking it&nbsp;deep.
+      <a href="http://github.com/jgerigmeyer/">front-end developer</a>
+      and author of
+      <a href="http://github.com/jgerigmeyer/jquery-django-messages-ui">numerous</a>
+      <a href="http://jgerigmeyer.github.io/jquery-loading-overlay/">jQuery</a>
+      <a href="http://jgerigmeyer.github.io/jquery-django-superformset/">plugins</a>.
+      He gets excited about
+      <a href="https://untappd.com/brewery/81493">homebrewing</a>,
+      <a href="http://www.goshenultimate.com/">ultimate frisbee</a>,
+      and his daughter&nbsp;Gracie.
     links:
       - [twitter, jgerigmeyer]
       - [github, jgerigmeyer]
