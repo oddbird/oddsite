@@ -33,12 +33,13 @@ body {
 }
 
 [role="banner"] {
-  @include font-size(largest);
+  @include font-size(larger);
   margin-bottom: 0;
 }
 
 [role="navigation"], [role="contentinfo"],
-.pagination, .readmore {
+.pagination, .readmore,
+.fatfooter {
   display: none;
 }
 
@@ -54,12 +55,6 @@ body {
 
 // Type
 // ----
-
-a {
-  #{$link}, #{$focus} {
-    text-decoration: underline;
-  }
-}
 
 a:after {
   @extend %sans;
