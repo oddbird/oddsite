@@ -37,7 +37,7 @@ $org-border: (
     @include background-size(100% auto);
     display: block;
     height: 0;
-    margin-bottom: 0 - size(gutter);
+    margin-bottom: 0 - size(shim);
     padding-top: percentage(image-height('birds.png') / image-width('birds.png'));
     text-indent: -9999px;
     width: 100%;

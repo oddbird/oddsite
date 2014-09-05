@@ -1,24 +1,14 @@
 {% import "birds.macros.j2" as birds %}
 
-{% macro twitter(author, birds) -%}
-  {%- if author -%}
-    {%- for bird in birds -%}
-      {%- if author == bird.author -%}
-        {%- for site, user in bird.links -%}
-          {%- if site == 'twitter' -%}{{ user }}{%- endif -%}
-        {%- endfor -%}
-      {%- endif -%}
-    {%- endfor -%}
-  {%- else -%}
-    {%- for site, user in company.first.links -%}
-      {%- if site == 'twitter' -%}{{ user }}{%- endif -%}
-    {%- endfor -%}
-  {%- endif -%}
-{% endmacro -%}
+{%- macro link(org, link) -%}
+  {%- for site, target in org.links -%}
+    {%- if site == link -%}{{ target }}{%- endif -%}
+  {%- endfor -%}
+{%- endmacro -%}
 
 <aside class="comments">
   Have feedback on this post?
   Talk to us on
-  <a href="https://twitter.com/{{ twitter(config.author, config.birds) }}">Twitter</a>,
-  or email <span class="email">birds(who are 'at' the)oddbird.net</span>.
+  <a href="https://twitter.com/{{ link(config.company[0], 'twitter') }}">Twitter</a>,
+  or email <span class="email">{{ link(config.company[0], 'email') }}</span>.
 </aside class="comments">
