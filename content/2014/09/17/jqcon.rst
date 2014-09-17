@@ -24,7 +24,7 @@ Web Workers
 -----------
 
 `Web Workers`_ are here and ready for primetime (or at least
-`close enough to ready`_)! It would be nice to get some abstractions to make
+`close enough to ready`_). It would be nice to get some abstractions to make
 them easier to work with (and it'll be great when `SharedWorkers`_ and
 `ServiceWorkers`_ get to the same level of `support`_), but I'm not waiting
 around.
@@ -89,10 +89,10 @@ that got me started.
 .. _@potch: http://twitter.com/potch
 
 
-ECMAScript6
------------
+ECMAScript 6
+------------
 
-You know what else is here, and (mostly) ready for primetime? `ECMAScript 6`_!
+You know what else is here, and (mostly) ready for primetime? `ECMAScript 6`_.
 Some of the new features I'm most excited about:
 
 - ``String.prototype.contains()`` instead of ``indexOf()``
