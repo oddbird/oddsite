@@ -8,7 +8,7 @@ summary: |
 
 
 PostgreSQL transactions and SQLAlchemy
-========================================
+======================================
 
 `SQLAlchemy`_ defaults to implicitly opening a new transaction on your first
 database query. If you prefer to start your transactions explicitly instead,
@@ -66,7 +66,7 @@ of your connection object to ``True``:
 
 
 Postgres has it right
-----------------------
+---------------------
 
 I prefer the 'autocommit' model. It's simple, explicit, and
 unsurprising. Queries are never grouped together into a transaction unless you
