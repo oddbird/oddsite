@@ -173,7 +173,6 @@ birds:
 
   - name: Jonny Gerig Meyer
     author: jonny
-    no_posts: True
     bio: |
       is a
       <a href="http://github.com/jgerigmeyer/">front-end developer</a>

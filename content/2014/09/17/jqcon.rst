@@ -198,7 +198,7 @@ HT: `Ralph Holzmann`_ for his helpful
 Debugging by Proxy
 ------------------
 
-`Brian Arnold`_ `demoed`_ how to use proxy toolsfor development and debugging.
+`Brian Arnold`_ `demoed`_ how to use proxy tools for development and debugging.
 
 `Charles`_ is a really powerful tool for anything from Ajax debugging and
 bandwidth throttling to DNS spoofing and local/remote resource mapping. I can
