@@ -6,8 +6,8 @@ summary: |
   2014.
 
 
-jQuery Chicago 2014 Takeaways
-=============================
+jQuery Chicago 2014
+===================
 
 After attending conferences, I find it helpful to synthesize a few practical
 takeaways that I can immediately begin working into my code. Some of them are
@@ -35,7 +35,7 @@ have access to the ``window`` object or the DOM, but they can pass data back
 and forth from the main client script.
 
 Keep the UI responsive, and let Workers do difficult tasks in the background.
-(Aside: This is so helpful! Why isn't everyone using it already?)
+(Aside: This is awesome. Why isn't everyone using it already?)
 
 .. code:: js
 
@@ -73,8 +73,7 @@ So when might I actually use Workers? From this helpful `HTML5 Rocks article`_:
   - Image filtering in <canvas>
   - Updating many rows of a local web database
 
-Do you already use Web Workers, or have additional suggestions or warnings? Let
-me know!
+Do you already use Web Workers, or have additional suggestions or warnings?
 
 HT: `@potch`_ for the `talk <http://potch.github.io/workers-talk/>`__
 that got me started.
@@ -141,8 +140,7 @@ encouraging devs to use ES6 now.
 Throw More Errors
 -----------------
 
-`Error objects`_ have been around forever, and we all know roughly how to use
-them:
+`Error objects`_ have been around forever, and aren't difficult to use:
 
 .. code:: js
 
