@@ -1,29 +1,36 @@
 // Scale
 // =====
 
-$base-font-size: 21px;
-
+$base-size: 21px;
 $ratio: major-third;
 
-$font-sizes: (
-  largest   : make-size(6),
-  larger    : make-size(4),
-  large     : make-size(2),
-  medium    : make-size(1),
-  normal    : make-size(0),
-  small     : make-size(-1),
-  smaller   : make-size(-2),
-  smallest  : make-size(-3),
-);
-
 $sizes: (
-  column: make-size(6),
-  gutter: make-size(1),
-  spacer: make-size(4),
-  shim: make-size(-2),
+  largest   : 6,
+  larger    : 4,
+  large     : 2,
+  medium    : 1,
+  normal    : 0,
+  small     : -1,
+  smaller   : -2,
+  smallest  : -3,
 
-  logo: make-size(8),
-  face: make-size(10),
+  column: 6,
+  gutter: medium,
+  rhythm: large,
+  spacer: larger,
+  shim: smaller,
 
-  radius: maek-size(-3),
+  logo: 8,
+  face: 10,
+
+  radius: smallest,
 );
+
+$base-font-size: $base-size;
+$base-line-height: size(rhythm, px);
+
+$rhythm-unit: rem;
+$rem-with-px-fallback: false;
+
+$relative-font-sizing: true;
+$round-to-nearest-half-line: true;

@@ -1,7 +1,7 @@
 // Colors
 // ------
 
-$base-colors: (
+$colors: (
   'black': #333,
   'white': #fff,
 
@@ -11,21 +11,17 @@ $base-colors: (
   'green': hsl(75, 65%, 62%),
   'pink': hsl(330, 85%, 62%),
   'red': hsl(0, 85%, 62%),
-);
 
-
-// Guide
-// -----
-
-$colors: (
   text: 'black',
   back: 'blue' (tint: 95%),
   border: 'text' (tint: 60%),
   callout: 'blue' (tint: 85%),
-  fade: text (alpha: .5),
+  fade: text (rgba: .5),
 
   action: 'orange',
   focus: 'orange' (shade: 15%),
+
+  light-action: action (tint: 25%),
 
   accent: 'blue',
 );

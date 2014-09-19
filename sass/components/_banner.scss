@@ -35,7 +35,7 @@ $angle: (
 
   [rel="home"] {
     #{$link} {
-      @include font-size(size(logo));
+      @include font-size(logo);
       @include transition(all 150ms ease-in-out);
       @include transform-origin(top, center);
       color: color(back);
