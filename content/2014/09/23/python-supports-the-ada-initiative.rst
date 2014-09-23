@@ -43,7 +43,7 @@ gave a **full third** of the talks at PyCon 2014.
 |Miko|
 
 I have two sons, a seven-year-old and a four-month-old (yep, that's him). With
-the second just arrived, I think a lot these days about the work I do; I want
+the second just arrived, I think a lot these days about the work I do. I want
 it to be work that will make them proud, that I will be happy to tell them
 about.
 
@@ -61,7 +61,7 @@ easy setting`_: paid more and presumed competent because of my gender, skin
 color, cultural similarity to those in positions of power, and other attributes
 that I did nothing to earn.
 
-But I also believe all that can change. I'm proud to be a part of the Python
+But I know we can change our industry. I'm proud to be a part of the Python
 community when I see it `leading`_ the `way`_ in working towards being
 welcoming to people who don't all look, talk, and act like me. I'm happy to be
 in the Python community (and humbled by all the hard work it took to get here)
