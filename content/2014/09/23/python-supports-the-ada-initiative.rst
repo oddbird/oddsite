@@ -122,4 +122,4 @@ Carl
 
 .. |Miko| raw:: html
 
-    <a href="https://supportada.org/?campaign=python"><img width="250" style="float: right; border: gray 10px; margin: 12px;" src="/static/images/miko.jpg"></a>
+    <a href="https://supportada.org/?campaign=python"><img width="200" style="float: left; margin: 12px;" src="/static/images/miko.jpg"></a>
