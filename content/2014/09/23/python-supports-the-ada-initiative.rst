@@ -68,8 +68,8 @@ when I see this:
 |PyConTweet|
 
 I'm proud to be part of the Django community when we adopt a strong `Code of
-Conduct`_ (based on `an Ada Initiative example`_!), and when `"that time I
-wasn't harassed at a conference"`_ is a description of DjangoCon.
+Conduct`_ (in consultation with Ada Initiative!), and when `"that time I wasn't
+harassed at a conference"`_ is a description of DjangoCon.
 
 That's the community that I want to be a part of, and the Ada Initiative is
 `working every day`_ to `make it a reality`_. If that's the community you want
@@ -98,7 +98,6 @@ Carl
 .. _any number of other women: http://geekfeminism.wikia.com/wiki/Timeline_of_incidents
 .. _playing on the easy setting: http://whatever.scalzi.com/2012/05/15/straight-white-male-the-lowest-difficulty-setting-there-is/
 .. _Code of Conduct: https://www.djangoproject.com/conduct/
-.. _an Ada Initiative example: http://geekfeminism.wikia.com/index.php?title=Conference_anti-harassment_policy
 .. _"that time I wasn't harassed at a conference": http://geekfeminism.org/2013/08/15/that-time-i-wasnt-harassed-at-a-conference/
 .. _first PyCon talk: http://pyvideo.org/video/389/pycon-2011--reverse-engineering-ian-bicking--39-s
 .. _PyLadies: http://www.pyladies.com/
