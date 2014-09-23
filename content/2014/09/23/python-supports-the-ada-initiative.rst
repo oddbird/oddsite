@@ -1,4 +1,4 @@
-public: no
+public: yes
 author: carl
 tags: ["python", "diversity", "ada initiative"]
 title: Python for Ada
@@ -58,8 +58,8 @@ harassment`_ and sexism at tech conferences, in the workplace, and at meetups.
 I want to be able to wholeheartedly celebrate my successes and recommend
 open-source software communities, but I know that I've been `playing on the
 easy setting`_: paid more and presumed competent because of my gender, skin
-color, cultural similarity to those in positions of power, and other attributes
-that I did nothing to earn.
+color, cultural similarity to those in positions of power, and `other
+attributes that I did nothing to earn`_.
 
 But I know we can change our industry. I'm proud to be a part of the Python
 community when I see it `leading`_ the `way`_ in working towards being
@@ -105,6 +105,7 @@ Carl
 .. _PyLadies: http://www.pyladies.com/
 .. _working every day: http://adainitiative.org/what-we-do/workshops-and-training/
 .. _make it a reality: http://adacamp.org/
+.. _other attributes that I did nothing to earn: http://www.confreaks.com/videos/4454-DjangoCon2014-all-you-need-is-l
 
 .. |DonationLink| raw:: html
 
