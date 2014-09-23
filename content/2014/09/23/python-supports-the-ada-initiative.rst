@@ -38,9 +38,12 @@ gave a **full third** of the talks at PyCon 2014.
 
 --------
 
-I have two sons, a seven-year-old and a four-month-old. With the second just
-recently arrived, I think a lot these days about the work I do; I want it to be
-work that will make them proud, that I will be happy to tell them about.
+|Miko|
+
+I have two sons, a seven-year-old and a four-month-old (yep, that's him). With
+the second just arrived, I think a lot these days about the work I do; I want
+it to be work that will make them proud, that I will be happy to tell them
+about.
 
 I am ashamed to admit to being part of this industry when I see Kathy Sierra or
 Adria Richards or Anita Sarkeesian or `Zoe Quinn`_ or `any number of other
@@ -116,3 +119,7 @@ Carl
 .. |AdaSticker| raw:: html
 
     <a href="https://supportada.org/?campaign=python"><img style="float: right;" src="/static/images/Ada-Initiative-color-sticker-208x300.png"></a>
+
+.. |Miko| raw:: html
+
+    <a href="https://supportada.org/?campaign=python"><img width="250" style="float: right; border: gray 10px; margin: 12px;" src="/static/images/miko.jpg"></a>
