@@ -14,14 +14,18 @@ summary: |
 Python for Ada
 ==============
 
+.. role:: strike
+    :class: strike
+
 |DonationLink|_
 
 |AdaSticker|
 
-`Donate`_ to the `Ada Initiative`_ today to support women in
-open technology and culture. If we hit $7500 by Friday, `Jacob`_ and `Alex`_
-and I will match your donations to make it a nice round $15k. Life is short, go
-`donate now`_!
+`Donate`_ to the `Ada Initiative`_ today to support women in open technology
+and culture. If we hit :strike:`$7500` **$10,000** by Friday, `Jacob`_ and
+`Alex`_ and I will match your donations to make it a nice round :strike:`$15k`
+**$20k** (**Update**: `Jim Meyer`_ just `pitched in`_ to raise the match amount
+to $10,000!). Life is short, go `donate now`_!
 
 I've spent most of my working life with Python and open technology. Python and
 open source have been good to me. They've helped me `start a company`_, `become
@@ -106,6 +110,8 @@ Carl
 .. _working every day: http://adainitiative.org/what-we-do/workshops-and-training/
 .. _make it a reality: http://adacamp.org/
 .. _other attributes that I did nothing to earn: http://www.confreaks.com/videos/4454-DjangoCon2014-all-you-need-is-l
+.. _Jim Meyer: http://blog.geekdaily.org
+.. _pitched in: https://twitter.com/purp/status/514453504253886464
 
 .. |DonationLink| raw:: html
 
