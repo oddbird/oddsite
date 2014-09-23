@@ -69,8 +69,8 @@ Conduct`_ (based on `an Ada Initiative example`_!), and when `"that time I
 wasn't harassed at a conference"`_ is a description of DjangoCon.
 
 That's the community that I want to be a part of, and the Ada Initiative is
-working every day to make it a reality. If that's the community you want too,
-join me and `donate today`_!
+`working every day`_ to `make it a reality`_. If that's the community you want
+too, join me and `donate today`_!
 
 |DonationLink|_
 
@@ -99,6 +99,8 @@ Carl
 .. _"that time I wasn't harassed at a conference": http://geekfeminism.org/2013/08/15/that-time-i-wasnt-harassed-at-a-conference/
 .. _first PyCon talk: http://pyvideo.org/video/389/pycon-2011--reverse-engineering-ian-bicking--39-s
 .. _PyLadies: http://www.pyladies.com/
+.. _working every day: http://adainitiative.org/what-we-do/workshops-and-training/
+.. _make it a reality: http://adacamp.org/
 
 .. |DonationLink| raw:: html
 
