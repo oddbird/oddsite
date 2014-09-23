@@ -237,3 +237,4 @@ modules:
     style: tango
   blog:
     index_url: /blog/
+    per_page: 12
