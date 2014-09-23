@@ -2,37 +2,41 @@ public: no
 author: carl
 tags: ["python", "diversity", "ada initiative"]
 summary: |
-    The Ada Initiative is helping make the Python community better; let's give
-    them our support.
+    `Donate`_ to the `Ada Initiative`_ today to support women in open
+    technology and culture. If we hit $7500 by Friday, `Jacob`_ and `Alex`_ and
+    I will match your donations to make it a nice round $15k. Life is short, go
+    `donate now`_!
+
 
 
 Python for Ada
 ==============
 
+|DonationLink|_
+
 |AdaSticker|
 
-Short version: `donate`_ to the `Ada Initiative`_ today to support women in
+`Donate`_ to the `Ada Initiative`_ today to support women in
 open technology and culture. If we hit $7500 by Friday, `Jacob`_ and `Alex`_
 and I will match your donations to make it a nice round $15k. Life is short, go
 `donate now`_!
 
-|DonationLink|_
-
 I've spent most of my working life with Python and open technology. Python and
-open source have been very good to me. They've helped me `start a company`_,
-`become a public speaker`_, be `recognized for my contributions`_, and make
-friends all over the world.
+open source have been good to me. They've helped me `start a company`_, `become
+a public speaker`_, be `recognized for my contributions`_, and make friends all
+over the world.
 
 I attended my first PyCon in 2008, and I've been to every one since. I gave my
-`first PyCon talk`_ in 2011. That year, 1% of the talks at PyCon were by women;
-ninety-five out of ninety-six by men. I was one of the ninety-five; being one
-of those ninety-five helped me to launch a career in open-source
-software. Ninety or so other men got that same opportunity that year (some gave
-multiple talks); one woman did.
+`first PyCon talk`_ in 2011. That year, 1% of the talks were by women;
+ninety-five out of ninety-six by men. Being one of those ninety-five helped me
+to launch a career in open-source software. Ninety-odd other men got that same
+opportunity that year; one woman did.
 
 Three years later, thanks to the incredible outreach efforts of Jessica
-McKellar, the amazing `PyLadies`_, the Ada Initiative, and many others, a full
-third of the talks at PyCon 2014 were by women.
+McKellar, the amazing `PyLadies`_, the Ada Initiative, and many others, women
+gave a **full third** of the talks at PyCon 2014.
+
+--------
 
 I have two sons, a seven-year-old and a four-month-old. With the second just
 recently arrived, I think a lot these days about the work I do; I want it to be
@@ -48,15 +52,15 @@ harassment`_ and sexism at tech conferences, in the workplace, and at meetups.
 
 I want to be able to wholeheartedly celebrate my successes and recommend
 open-source software communities, but I know that I've been `playing on the
-easy setting`_: paid more, given the benefit of the doubt, presumed competent,
-because of my gender, skin color, cultural similarity to those in positions of
-power, and other attributes that I did nothing to earn.
+easy setting`_: paid more and presumed competent because of my gender, skin
+color, cultural similarity to those in positions of power, and other attributes
+that I did nothing to earn.
 
 But I also believe all that can change. I'm proud to be a part of the Python
-community when I see it `leading`_ the `way`_ in working towards becoming a
-welcoming space for people who don't all look, talk, and act like me. I'm happy
-to be in the Python community (and humbled by all the hard work it took to get
-here) when I see this:
+community when I see it `leading`_ the `way`_ in working towards being
+welcoming to people who don't all look, talk, and act like me. I'm happy to be
+in the Python community (and humbled by all the hard work it took to get here)
+when I see this:
 
 |PyConTweet|
 
@@ -98,7 +102,7 @@ Carl
 
 .. |DonationLink| raw:: html
 
-    <img width="400" align="center" src="https://adainitiative.org/counters/2014counter-python.svg">
+    <img width="600" height="175" src="https://adainitiative.org/counters/2014counter-python.svg">
 
 .. _DonationLink: https://supportada.org/?campaign=python
 
@@ -109,4 +113,4 @@ Carl
 
 .. |AdaSticker| raw:: html
 
-    <a href="https://supportada.org/?campaign=python"><img height="300" style="float: right;" src="/static/images/Ada-Initiative-color-sticker-208x300.png"></a>
+    <a href="https://supportada.org/?campaign=python"><img style="float: right;" src="/static/images/Ada-Initiative-color-sticker-208x300.png"></a>
