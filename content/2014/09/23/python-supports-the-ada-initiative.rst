@@ -1,11 +1,13 @@
 public: no
 author: carl
 tags: ["python", "diversity", "ada initiative"]
+title: Python for Ada
 summary: |
-    `Donate`_ to the `Ada Initiative`_ today to support women in open
-    technology and culture. If we hit $7500 by Friday, `Jacob`_ and `Alex`_ and
-    I will match your donations to make it a nice round $15k. Life is short, go
-    `donate now`_!
+    `Donate <https://supportada.org/?campaign=python>`_ to the Ada Initiative
+    today to support women in open technology and culture. If we hit $7500 by
+    Friday, `Jacob <jacobian.org>`_ and `Alex <alexgaynor.net>`_ and I will
+    match your donations to make it a nice round $15k. Life is short, go
+    `donate now <https://supportada.org/?campaign=python>`_!
 
 
 
