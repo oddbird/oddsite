@@ -1,13 +1,15 @@
 public: yes
 author: carl
-tags: ["python", "diversity", "ada initiative"]
+tags: ["python", "diversity", "ada-initiative"]
 title: Python for Ada
 summary: |
     `Donate <https://supportada.org/?campaign=python>`_ to the Ada Initiative
     today to support women in open technology and culture. If we hit $7500 by
     Friday, `Jacob <jacobian.org>`_ and `Alex <alexgaynor.net>`_ and I will
     match your donations to make it a nice round $15k. Life is short, go
-    `donate now <https://supportada.org/?campaign=python>`_!
+    `donate now <https://supportada.org/?campaign=python>`_! (**Update**: `Jim
+    Meyer <http://blog.geekdaily.org>`_ just raised the match amount to
+    $10,000!)
 
 
 
