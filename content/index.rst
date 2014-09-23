@@ -16,7 +16,7 @@ Odd Projects
 From working on open-source tools like `Django`_, `Compass`_, and `Susy`_,
 to building web applications for `Mozilla`_, `The K Network`_,
 `Providence Plan`_, `Junyo`_, or `ORCAS`_ —
-and our own experiments in digital storytelling —
+and our own `experiments in digital storytelling`_ —
 we love molding ideas into experiences that people use.
 
 .. _Django: https://www.djangoproject.com/
@@ -27,6 +27,7 @@ we love molding ideas into experiences that people use.
 .. _Providence Plan: http://provplan.org/
 .. _Junyo: http://junyo.com/
 .. _ORCAS: http://orcasinc.com/
+.. _experiments in digital storytelling: http://greengreenmud.com/
 
 
 Odd Process
