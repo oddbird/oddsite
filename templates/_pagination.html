@@ -1,8 +1,8 @@
 <nav class="pagination">
   {% if pagination.has_prev -%}
-    <a href="{{ link_to(pagination.url_key, page=pagination.page - 1, **pagination.url_extra) }}" class="prev">previous</a>
+    <a href="{{ link_to(pagination.url_key, page=pagination.page - 1, **pagination.url_extra) }}" class="prev">« newer</a>
   {%- else -%}
-    <span class="prev disabled">previous</span>
+    <span class="prev disabled">« newer</span>
   {%- endif %}
 
     <span class="location">
@@ -12,8 +12,8 @@
     </span>
 
   {% if pagination.has_next -%}
-    <a href="{{ link_to(pagination.url_key, page=pagination.page + 1, **pagination.url_extra) }}" class="next">next</a>
+    <a href="{{ link_to(pagination.url_key, page=pagination.page + 1, **pagination.url_extra) }}" class="next">older »</a>
   {%- else -%}
-    <span class="next disabled">next</span>
+    <span class="next disabled">older »</span>
   {%- endif %}
 </nav>

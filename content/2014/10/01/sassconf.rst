@@ -1,4 +1,4 @@
-public: no
+public: yes
 author: eric
 tags: ["conferences", "sass", "sassconf"]
 
@@ -10,7 +10,7 @@ SassConf 2014
 at the Scholastic Auditorium in New York!
 We're damn proud to be sponsoring such a great event,
 and even more proud this year to have
-`one of the organizers`_ on our Team.
+`one of the organizers`_ on our team.
 
 |clear| But who cares about pride,
 I have a flight to catch!

@@ -9,10 +9,6 @@
 {% endblock list_intro %}
 
 {% block archive %}
-  {% if show_pagination and pagination.pages > 1 %}
-    {{ pagination }}
-  {% endif %}
-
   {%- for post in pagination.get_slice() %}
     {{ blog.list(post) }}
   {%- endfor %}

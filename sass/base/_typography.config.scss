@@ -69,11 +69,11 @@ $focus: '&:hover, &:focus, &:active';
 }
 
 %h2 {
-  @include font-size(large);
+  @include font-size(large, 1.5);
 }
 
 %h3 {
-  @include font-size(medium, 1.25);
+  @include font-size(medium, 1);
 }
 
 %h4, %h5 { font-weight: bold; }

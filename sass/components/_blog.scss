@@ -6,7 +6,9 @@
 }
 
 .blog-index {
-  .title { @extend %tagline; }
+  .title {
+    @extend %tagline;
+  }
 }
 
 .post--list {
@@ -40,4 +42,46 @@
   margin-top: size(spacer);
   padding: size(shim);
   text-align: center;
+}
+
+.pagination {
+  @extend %serif;
+  @include font-size(small);
+  color: color(fade);
+  font-style: italic;
+  text-align: center;
+
+  .prev,
+  .next {
+    padding: 0 size(shim);
+
+    #{$link} {
+      color: color(action);
+    }
+
+    #{$focus} {
+      color: color(focus);
+    }
+  }
+
+  .location {
+    @include wrap-content(' • ');
+  }
+
+  .now,
+  .context {
+    color: color(text);
+    display: inline-block;
+    font-style: normal;
+    margin: 0 size(shim);
+    vertical-align: middle;
+  }
+
+  .now {
+    @include font-size(largest);
+  }
+
+  .context {
+    @include font-size(larger);
+  }
 }
