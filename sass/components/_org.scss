@@ -1,6 +1,7 @@
 // Org
 // ===
 
+$birds-ratio: image-height('birds.png') / image-width('birds.png');
 $org-border: (
   width: 2px,
   color: rgba(color(banner), .25),
@@ -30,6 +31,10 @@ $org-border: (
   .bio-links {
     @include gutters;
     text-align: center;
+
+    @include breakpoint(45em) {
+      margin: 0 0 - span(1);
+    }
   }
 
   [bio-link='birds'] {
@@ -38,15 +43,12 @@ $org-border: (
     display: block;
     height: 0;
     margin-bottom: 0 - size(shim);
-    padding-top: percentage(image-height('birds.png') / image-width('birds.png'));
+    padding-top: percentage($birds-ratio);
     text-indent: -9999px;
-    width: 100%;
   }
 }
 
 %odd-intro {
-  @include font-size(small);
-
   h2 { @extend %is-hidden; }
 }
 
@@ -58,6 +60,7 @@ $org-border: (
 
 [id="odd-process"] {
   @extend %odd-intro;
+  @include font-size(small);
   counter-reset: process;
 
   li {
