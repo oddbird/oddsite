@@ -131,8 +131,8 @@ Carl
 
 .. |AdaSticker| raw:: html
 
-    <a href="https://supportada.org/?campaign=python"><img style="float: right;" src="/static/images/Ada-Initiative-color-sticker-208x300.png"></a>
+    <a href="https://supportada.org/?campaign=python"><img style="float: right;" src="/static/images/blog/Ada-Initiative-color-sticker-208x300.png"></a>
 
 .. |Miko| raw:: html
 
-    <a href="https://supportada.org/?campaign=python"><img width="200" style="float: left; margin: 12px;" src="/static/images/miko.jpg"></a>
+    <a href="https://supportada.org/?campaign=python"><img width="200" style="float: left; margin: 12px;" src="/static/images/blog/miko.jpg"></a>

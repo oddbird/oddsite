@@ -9,7 +9,7 @@
 {% endmacro %}
 
 {% macro card(bird) %}
-  <div class="h-card {% if bird.author %}bird {{ bird.author }}{% endif %}">
+  <div class="h-card {% if bird.author %}bird {{ bird.author }}{% endif %}" id="bio--{{ bird.author or 'org' }}">
     <p class="bio">
       {{ name(bird) }}
       {{ bird.bio|safe }}
