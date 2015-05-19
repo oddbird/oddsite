@@ -69,7 +69,8 @@ module.exports = function (grunt) {
         },
         hash: {
             options: {
-                mapping: ASSET_MAP
+                mapping: ASSET_MAP,
+                flatten: true
             },
             dist: {
                 src: [MINIFIED_JS, MINIFIED_CSS, MINIFIED_PRINT_CSS],
