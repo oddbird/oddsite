@@ -15,7 +15,12 @@ nav:
 
 # Future Talks
 # ------------
-talks_future:
+talks_future: false
+
+
+# Past Talks
+# ----------
+talks_past:
   - title: "Magic with Sass Maps"
     author: eric
     date: September 12
@@ -30,10 +35,6 @@ talks_future:
     forum: BlendConf
     forum_url: http://www.blendconf.com/
 
-
-# Past Talks
-# ----------
-talks_past:
   - title: "The Post-Obsolete Book"
     author: eric
     date: June 19
@@ -210,11 +211,11 @@ birds:
 
 
 # Settings
-copyright: 2014
+copyright: 2015
 author: OddBird
-comments: True
+comments: true
 location: blog
-default_styles: True
+default_styles: true
 
 
 # rstBlog Setup

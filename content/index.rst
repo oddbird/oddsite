@@ -27,7 +27,7 @@ we love molding ideas into experiences that people use.
 .. _Providence Plan: http://provplan.org/
 .. _Junyo: http://junyo.com/
 .. _ORCAS: http://orcasinc.com/
-.. _experiments in digital storytelling: http://greengreenmud.com/
+.. _experiments in digital storytelling: http://oddbooksapp.com/
 
 
 Odd Process
