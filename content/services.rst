@@ -11,7 +11,8 @@ Web Application Development
 ---------------------------
 
 We can guide you through the full process
-of creating your custom-built web application,
+of creating your custom-built web application
+and online computer software systems,
 from identifying requirements to design and development.
 We’re passionate about writing clean, documented, fully-tested code
 that doesn’t give you a headache to maintain over the long haul.
@@ -32,6 +33,6 @@ Consulting & Training
 
 Our team includes core developers on the Django web framework,
 Compass stylesheet authoring framework, and the Susy grid system.
-We are experts in test-driven development,
-and can help your team work more effectively with their tools
-to improve their productivity and their code.
+Bring us on board to consult on your web application development.
+We can analyze, improve and maintain your site codebase,
+and help your developers work more effectively with their tools.
