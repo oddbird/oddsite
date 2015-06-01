@@ -52,3 +52,11 @@ Odd Process
 
 .. _Pivotal Tracker: http://pivotaltracker.com/
 .. _Python: http://www.python.org/
+
+
+Odd Services
+------------
+
+Read more about the `services we provide`_.
+
+.. _services we provide: /services/
