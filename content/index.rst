@@ -57,6 +57,6 @@ Odd Process
 Odd Services
 ------------
 
-Read more about the `services we provide`_.
+Read more about `the services we provide »`_
 
-.. _services we provide: /services/
+.. _`the services we provide »`: /services/

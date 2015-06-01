@@ -61,6 +61,7 @@ $org-border: (
 [id="odd-process"] {
   @extend %odd-intro;
   @include font-size(small);
+  @include susy-clearfix;
   counter-reset: process;
 
   li {
@@ -82,3 +83,9 @@ $org-border: (
   }
 }
 
+[id='odd-services'] {
+  @extend %odd-intro;
+  @include font-size(small);
+  @include gutters;
+  font-style: italic;
+}
