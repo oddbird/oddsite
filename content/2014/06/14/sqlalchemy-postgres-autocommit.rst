@@ -279,11 +279,11 @@ autocommit on all the appropriate connections:
     engine = create_engine('postgresql://test', isolation_level="AUTOCOMMIT")
     Session = sessionmaker(bind=engine, autocommit=True)
 
-    dconns_by_transaction = {}
+    dconns_by_trans = {}
 
     @event.listens_for(Session, 'after_begin')
     def receive_after_begin(session, transaction, connection):
-        """When a (non-nested) transaction begins, turn autocommit off."""
+        """When a transaction begins, turn autocommit off."""
         dbapi_connection = connection.connection.connection
         if transaction.nested:
             assert not dbapi_connection.autocommit
@@ -295,7 +295,7 @@ autocommit on all the appropriate connections:
 
     @event.listens_for(Session, 'after_transaction_end')
     def receive_after_transaction_end(session, transaction):
-        """Restore autocommit anywhere this transaction turned it off."""
+        """Restore autocommit where this transaction turned it off."""
         if transaction in dconns_by_trans:
             for dbapi_connection in dconns_by_trans[transaction]:
                 assert not dbapi_connection.autocommit
@@ -313,6 +313,7 @@ a matter of some boilerplate):
 
 .. code:: python
 
+    from contextlib import contextmanager
     from sqlalchemy.orm import Session as BaseSession
 
 
@@ -325,8 +326,8 @@ a matter of some boilerplate):
         def atomic(self):
             """Transaction context manager.
 
-            Will commit the transaction on successful completion of the
-            block, or roll it back on error.
+            Will commit the transaction on successful completion
+            of the block, or roll it back on error.
 
             Supports nested usage (via savepoints).
 
