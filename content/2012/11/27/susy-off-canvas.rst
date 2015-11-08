@@ -1,6 +1,6 @@
 public: yes
 tags: [susy, demo, rwd, layout]
-author: eric
+author: miriam
 summary: |
   The `off-canvas`_ layout pattern
   for responsive web design

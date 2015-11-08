@@ -1,5 +1,5 @@
 public: yes
-author: eric
+author: miriam
 tags: ["conferences", "sass", "sassconf"]
 
 

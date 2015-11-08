@@ -1,6 +1,6 @@
 public: yes
 tags: [susy, "2.0", layout, grids, rwd]
-author: eric
+author: miriam
 summary: |
   `Susy Next alpha 4`_ is now available.
 
@@ -38,7 +38,7 @@ Explore, download, and play!
 .. _Susy Next alpha 4: http://rubygems.org/gems/susy/versions/2.0.0.alpha.4
 .. _Susy Next Changelog: https://github.com/ericam/susy/blob/susy-next/CHANGELOG-NEXT.md
 .. _alpha 2: /2013/05/03/susy-next-alpha-2/
-.. _True: http://eric.andmeyer.com/true/
+.. _True: http://miriamsuzanne.com/true/
 .. _test folder: https://github.com/ericam/susy/blob/susy-next/test/
 
 Alpha 3

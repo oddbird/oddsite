@@ -1,6 +1,6 @@
 public: yes
 tags: [susy, "2.0", layout, grids, rwd]
-author: eric
+author: miriam
 summary: |
   The web is littered with grid systems and 'frameworks'
   that force your code & design into narrowly defined patterns.

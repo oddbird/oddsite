@@ -1,6 +1,6 @@
 public: yes
 tags: [susy, "2.0", layout, grids, rwd]
-author: eric
+author: miriam
 
 
 Susy Next: The first alpha

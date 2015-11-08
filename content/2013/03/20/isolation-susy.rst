@@ -1,6 +1,6 @@
 public: yes
 tags: [susy, layout, grids, rwd, "sub-pixel rounding"]
-author: eric
+author: miriam
 summary: |
   A few new features have landed in Susy 1.0.7,
   even as we work on more integrated syntaxes for 2.0.

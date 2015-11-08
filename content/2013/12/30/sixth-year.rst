@@ -20,11 +20,11 @@ first-ever year-end retrospective. Here's 2013, OddBird style:
   and collaborating on a new ed-tech project with `Junyo`_.
   We like solving problems that matter.
 
-- We're slowly developing Eric's `novel`_
+- We're slowly developing Miriam's `novel`_
   (which has gotten some `rave previews`_),
   and working on a (still pre-alpha) collaborative authoring tool.
 
-- Eric `spoke`_ at `SassConf`_, the `New York Sass & Compass Meetup`_,
+- Miriam `spoke`_ at `SassConf`_, the `New York Sass & Compass Meetup`_,
   and the `Brakhage Center for the Media Arts`_.
   He'll appear again in 2014 at `The Mixin`_
   and others TBA.
@@ -55,7 +55,7 @@ Thanks for a great year, everyone. See you around in 2014!
 .. _Junyo: http://junyo.com/
 .. _novel: http://www.greengreenmud.com/
 .. _rave previews: http://iloveepoetry.com/?p=2571
-.. _spoke: http://eric.andmeyer.com/pres/
+.. _spoke: http://miriamsuzanne.com/pres/
 .. _SassConf: http://sassconf.com/
 .. _New York Sass & Compass Meetup: http://www.meetup.com/nyc-sass/
 .. _Brakhage Center for the Media Arts: http://www.brakhagecenter.net/

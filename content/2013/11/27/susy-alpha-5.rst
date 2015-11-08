@@ -1,6 +1,6 @@
 public: yes
 tags: [susy, "2.0", layout, grids, rwd]
-author: eric
+author: miriam
 summary: |
   `Susy Next alpha 5`_ is out, and loaded with changes.
   We now require Sass 3.3,

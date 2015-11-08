@@ -1,6 +1,6 @@
 public: yes
 tags: [sass, maps, code]
-author: eric
+author: miriam
 
 
 Map-Set vs. Map-Merge
