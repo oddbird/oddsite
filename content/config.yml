@@ -21,28 +21,28 @@ talks_future: false
 # Past Talks
 # ----------
 talks_past:
-  - title: "Magic with Sass Maps"
+  - title: 'Magic with Sass Maps'
     author: miriam
     date: September 12
     year: 2014
     forum: BlendConf
     forum_url: http://www.blendconf.com/
 
-  - title: "Getting to know Sass"
+  - title: 'Getting to know Sass'
     author: claudina
     date: September 11
     year: 2014
     forum: BlendConf
     forum_url: http://www.blendconf.com/
 
-  - title: "The Post-Obsolete Book"
+  - title: 'The Post-Obsolete Book'
     author: miriam
     date: June 19
     year: 2014
     forum: ELO Conference
     forum_url: http://conference.eliterature.org/
 
-  - title: "Sass Bites #37"
+  - title: 'Sass Bites #37'
     author: claudina
     date: May 13
     year: 2014
@@ -50,7 +50,7 @@ talks_past:
     forum_url: https://www.youtube.com/user/sassbites
     video: https://www.youtube.com/watch?v=BtWaFDpyDCI
 
-  - title: "Your Own Damn [Susy] System"
+  - title: 'Your Own Damn [Susy] System'
     author: miriam
     date: April 24
     year: 2014
@@ -59,7 +59,7 @@ talks_past:
     slides: http://miriamsuzanne.com/pres/susy2/
     video: http://vimeo.com/miriamsuzanne/susy-2-system
 
-  - title: "Show Your Work <i class='amp'>&</i> Share Your Toys"
+  - title: 'Show Your Work <i class="amp">&</i> Share Your Toys'
     author: miriam
     date: April 19th
     year: 2014
@@ -67,7 +67,7 @@ talks_past:
     forum_url: http://campsass.com/2014/
     slides: http://miriamsuzanne.com/pres/show-yr-work/index.html
 
-  - title: "Set Your Code Free"
+  - title: 'Set Your Code Free'
     author: carl
     date: April 13
     year: 2014
@@ -76,7 +76,7 @@ talks_past:
     slides: http://oddbird.net/set-your-code-free-preso/
     video: http://pyvideo.org/video/2637/set-your-code-free-releasing-and-maintaining-an
 
-  - title: "Susy Grids 2.0"
+  - title: 'Susy Grids 2.0'
     author: miriam
     date: March 13
     year: 2014
@@ -84,7 +84,7 @@ talks_past:
     forum_url: https://www.youtube.com/user/sassbites
     video: https://www.youtube.com/watch?v=m7k-vBzebPg
 
-  - title: "Python Testing Tools"
+  - title: 'Python Testing Tools'
     author: carl
     date: February 28
     year: 2014
@@ -92,7 +92,7 @@ talks_past:
     forum_url: http://confoo.ca/
     slides: http://oddbird.net/python-testing-tools-preso/
 
-  - title: "Advanced Python"
+  - title: 'Advanced Python'
     author: carl
     date: February 27
     year: 2014
@@ -100,7 +100,7 @@ talks_past:
     forum_url: http://confoo.ca/
     slides: http://oddbird.net/advanced-python-preso/
 
-  - title: "Organizing Sass Partials"
+  - title: 'Organizing Sass Partials'
     author: miriam
     date: November 19
     year: 2013
@@ -108,7 +108,7 @@ talks_past:
     forum_url: http://www.meetup.com/nyc-sass/events/146898452/
     slides: http://miriamsuzanne.com/pres/sass-partials/
 
-  - title: "Show Your Work <i class='amp'>&</i> Share Your Toys"
+  - title: 'Show Your Work <i class="amp">&</i> Share Your Toys'
     author: miriam
     date: October 12
     year: 2013
@@ -117,7 +117,7 @@ talks_past:
     slides: http://miriamsuzanne.com/pres/show-yr-work/index.html
     video: https://vimeo.com/channels/sassconf2013/86306775
 
-  - title: "Getting Started with Automated Testing"
+  - title: 'Getting Started with Automated Testing'
     author: carl
     date: March 16
     year: 2013
@@ -157,7 +157,7 @@ birds:
       - [twitter, carljm]
       - [github, carljm]
 
-  - name: Miriam Suzanne
+  - name: Miriam Eric Suzanne
     author: miriam
     bio: |
       is an artist <span class="amp">&</span> experience designer,
@@ -166,7 +166,7 @@ birds:
       <a href="http://teacupgorilla.com/">music</a>,
       <a href="http://github.com/ericam/">code</a>,
       and <a href="http://vicioustrap.com/">performance</a>.
-      Miriam's a sucker for new projects, puzzles,
+      She's a sucker for new projects, puzzles,
       and postprandial perambulations.
     links:
       - [twitter, mirisuzanne]
