@@ -36,10 +36,10 @@ and ``ag.html`` showing several standard grid-types.
 Explore, download, and play!
 
 .. _Susy Next alpha 4: http://rubygems.org/gems/susy/versions/2.0.0.alpha.4
-.. _Susy Next Changelog: https://github.com/ericam/susy/blob/susy-next/CHANGELOG-NEXT.md
+.. _Susy Next Changelog: https://github.com/oddbird/susy/blob/susy-next/CHANGELOG-NEXT.md
 .. _alpha 2: /2013/05/03/susy-next-alpha-2/
 .. _True: http://miriamsuzanne.com/true/
-.. _test folder: https://github.com/ericam/susy/blob/susy-next/test/
+.. _test folder: https://github.com/oddbird/susy/blob/susy-next/test/
 
 Alpha 3
 -------
@@ -77,7 +77,7 @@ Alpha 3
   Fluid is used for both Susy 1 ``fluid`` and ``magic`` styles,
   depending on the presence of a ``$column-width`` setting.
 
-.. _small issue: https://github.com/ericam/susy/issues/204
+.. _small issue: https://github.com/oddbird/susy/issues/204
 
 Alpha 4
 -------

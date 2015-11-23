@@ -202,4 +202,4 @@ and give it a coat of polish before it lands.
 Any help or feedback is appreciated,
 just file an issue on `GitHub`_, and we'll talk.
 
-.. _GitHub: https://github.com/ericam/susy/issues?milestone=4&state=open
+.. _GitHub: https://github.com/oddbird/susy/issues?milestone=4&state=open

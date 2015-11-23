@@ -34,4 +34,4 @@ Check out the `susy-next branch on GitHub`_.
 
 .. _alpha build: http://rubygems.org/gems/susy/versions/2.0.0.alpha.1
 .. _Susy Next: /2013/01/01/susy-next/
-.. _susy-next branch on GitHub: https://github.com/ericam/susy/tree/susy-next
+.. _susy-next branch on GitHub: https://github.com/oddbird/susy/tree/susy-next
