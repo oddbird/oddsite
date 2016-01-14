@@ -157,20 +157,20 @@ birds:
       - [twitter, carljm]
       - [github, carljm]
 
-  - name: Miriam Eric Suzanne
+  - name: Miriam Suzanne
     author: miriam
     bio: |
       is an artist <span class="amp">&</span> experience designer,
       mixing <a href="http://miriamsuzanne.com">words</a>,
       <a href="http://dribbble.com/miriamsuzanne/">images</a>,
       <a href="http://teacupgorilla.com/">music</a>,
-      <a href="http://github.com/ericam/">code</a>,
+      <a href="http://github.com/mirisuzanne/">code</a>,
       and <a href="http://vicioustrap.com/">performance</a>.
       She's a sucker for new projects, puzzles,
       and postprandial perambulations.
     links:
       - [twitter, mirisuzanne]
-      - [github, ericam]
+      - [github, mirisuzanne]
 
   - name: Jonny Gerig Meyer
     author: jonny
