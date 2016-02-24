@@ -42,7 +42,7 @@ or integrated for extra power.
 
 .. _Color: http://oddbird.net/accoutrement-color/sassdoc/
 .. _WCAG: https://www.w3.org/WAI/intro/wcag
-.. _Type: http://oddbird.net/accoutrement-fonts/sassdoc/
+.. _Type: http://oddbird.net/accoutrement-type/sassdoc/
 .. Init: http://oddbird.net/accoutrement-init/sassdoc/
 .. Layout: http://oddbird.net/accoutrement-layout/sassdoc/
 .. _Scale: http://oddbird.net/accoutrement-scale/sassdoc/
