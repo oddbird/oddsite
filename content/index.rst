@@ -13,15 +13,17 @@ Custom web tools for humans
 Odd Projects
 ------------
 
-From working on open-source tools like `Django`_, `Compass`_, and `Susy`_,
+From working on open-source tools like `Django`_,
+`Susy`_, `True`_, and `Sass Accoutrement`_,
 to building web applications for `Mozilla`_, `The K Network`_,
 `Providence Plan`_, `Junyo`_, or `ORCAS`_ —
 and our own `experiments in digital storytelling`_ —
 we love molding ideas into experiences that people use.
 
 .. _Django: https://www.djangoproject.com/
-.. _Compass: http://compass-style.org/
 .. _Susy: http://susy.oddbird.net/
+.. _True: /true/
+.. _Sass Accoutrement: /accoutrement/
 .. _Mozilla: http://mozilla.org/
 .. _The K Network: https://www.theknetwork.org/
 .. _Providence Plan: http://provplan.org/
