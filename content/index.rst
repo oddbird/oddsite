@@ -15,7 +15,7 @@ Odd Projects
 
 From working on open-source tools like `Django`_,
 `Susy`_, `True`_, and `Sass Accoutrement`_,
-to building web applications for `Mozilla`_, `The K Network`_,
+to building web applications for `Mozilla`_,
 `Providence Plan`_, `Junyo`_, or `ORCAS`_ —
 and our own `experiments in digital storytelling`_ —
 we love molding ideas into experiences that people use.
@@ -25,7 +25,6 @@ we love molding ideas into experiences that people use.
 .. _True: /true/
 .. _Sass Accoutrement: /accoutrement/
 .. _Mozilla: http://mozilla.org/
-.. _The K Network: https://www.theknetwork.org/
 .. _Providence Plan: http://provplan.org/
 .. _Junyo: http://junyo.com/
 .. _ORCAS: http://orcasinc.com/

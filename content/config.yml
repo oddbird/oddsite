@@ -167,7 +167,7 @@ birds:
       <a href="http://github.com/mirisuzanne/">code</a>,
       and <a href="http://vicioustrap.com/">performance</a>.
       She's a sucker for new projects, puzzles,
-      and postprandial perambulations.
+      and postprandial&nbsp;perambulations.
     links:
       - [twitter, mirisuzanne]
       - [github, mirisuzanne]
@@ -177,14 +177,12 @@ birds:
     bio: |
       is a
       <a href="http://github.com/jgerigmeyer/">front-end developer</a>
-      and author of
-      <a href="http://github.com/jgerigmeyer/jquery-django-messages-ui">numerous</a>
-      <a href="http://jgerigmeyer.github.io/jquery-loading-overlay/">jQuery</a>
-      <a href="http://jgerigmeyer.github.io/jquery-django-superformset/">plugins</a>.
+      who enjoys writing clean, well-tested JavaScript web applications
+      and experimenting with the framework-of-the-month.
       He’s excited about
       <a href="http://untappd.com/brewery/81493">homebrewing</a>,
       <a href="http://www.goshenultimate.com/">ultimate frisbee</a>,
-      and his daughter&nbsp;Gracie.
+      and trying to keep up with his two-year-old&nbsp;daughter.
     links:
       - [twitter, jgerigmeyer]
       - [github, jgerigmeyer]
@@ -194,7 +192,7 @@ birds:
     no_posts: True
     bio: |
       is a front-end developer, pattern wrangler, teacher,
-      and <a href="http://sassconf.com/">conference organizer</a>.
+      and <a href="http://sassconf.com/">conference&nbsp;organizer</a>.
     links:
       - [twitter, itsmisscs]
       - [github, misscs]
