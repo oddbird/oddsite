@@ -51,7 +51,8 @@ Interested?
 
 Let's talk!
 Tell us about yourself and your work.
-Contact |birds| to start the conversation.
+Contact |birds| by April 2, 2016, to start the conversation.
+
 
 .. |birds| raw:: html
 
