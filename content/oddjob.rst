@@ -16,7 +16,8 @@ OddBirds:
 - enjoy working collaboratively on complex problems
 - write tests (100% coverage everywhere, always) and do code reviews
 - have lives & interests outside our work
-- set our own hours, and work from anywhere
+- set our own hours, and work from anywhere (strong preference for timezones
+  from -0400 to -0900)
 - get 10% paid time to work on open-source software
 - listen to users, and enjoy having our assumptions challenged/tested
 - care about diversity in the tech community
