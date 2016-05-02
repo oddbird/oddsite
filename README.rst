@@ -4,17 +4,14 @@ OddBird
 Development
 -----------
 
-Local development on this project requires `Python`_ 2.7, `Ruby`_, and
-`Node.js`_ >= 0.8.0. To install the necessary Node dependencies, first
-``npm install -g grunt-cli`` (once per system), then ``npm install`` (whenever
-``package.json`` changes).
+Local development on this project requires `Python`_ 2.7 and `Node.js`_ >=
+0.10.0. To install the necessary Node dependencies, first ``npm install -g
+grunt-cli`` (once per system), then ``npm install`` (whenever ``package.json``
+changes).
 
 To install the Python dependencies, run ``pip install -r requirements.txt``
 (you may want to run this in a `virtualenv`_ to isolate it from other Python
 projects on your system).
-
-To install the needed Ruby gems, first ``gem install bundler``, then ``bundle
-install``. Update the ``Gemfile`` if newer gems should be used.
 
 The ``output/`` directory is a git submodule (it is the repo
 `github.com/oddbird/oddbird.github.com`_, which is also the deployment on
@@ -45,7 +42,6 @@ starting a local server, run ``grunt watch``. Refer to the `Gruntfile.js
 source`_ and `Grunt`_ documentation for more info.
 
 .. _Python: http://www.python.org
-.. _Ruby: http://www.ruby-lang.org
 .. _virtualenv: http://www.virtualenv.org
 .. _Node.js: http://nodejs.org
 .. _github.com/oddbird/oddbird.github.com: https://github.com/oddbird/oddbird.github.com

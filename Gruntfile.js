@@ -3,6 +3,7 @@ module.exports = function (grunt) {
 
     'use strict';
 
+    var SRC_SASS = 'sass/';
     var SRC_CSS = 'content/static/css/';
     var SRC_JS = 'content/static/js/';
     var DIST = 'content/static/dist/';
@@ -49,12 +50,22 @@ module.exports = function (grunt) {
                 src: ['test/*.js']
             }
         },
-        compass: {
+        sass: {
             dev: {
-                options: {
-                    bundleExec: true,
-                    config: 'config.rb'
-                }
+                files: [
+                    {
+                        src: SRC_SASS + 'screen.scss',
+                        dest: SRC_CSS + 'screen.css'
+                    },
+                    {
+                        src: SRC_SASS + 'print.scss',
+                        dest: SRC_CSS + 'print.css'
+                    },
+                    {
+                        src: SRC_SASS + 'styleguide.scss',
+                        dest: SRC_CSS + 'styleguide.css'
+                    }
+                ]
             }
         },
         cssmin: {
@@ -135,7 +146,7 @@ module.exports = function (grunt) {
     grunt.registerTask('prod-build', 'shell:prod_build');
 
     // Prepare assets
-    grunt.registerTask('assets', ['compass', 'concat']);
+    grunt.registerTask('assets', ['sass', 'concat']);
 
     // Minify assets
     grunt.registerTask('minify', ['uglify', 'cssmin']);
@@ -154,14 +165,14 @@ module.exports = function (grunt) {
     grunt.registerTask('default', 'dev');
 
     // Plugin tasks.
-    grunt.loadNpmTasks('grunt-contrib-cssmin');
-    grunt.loadNpmTasks('grunt-contrib-compass');
-    grunt.loadNpmTasks('grunt-shell');
-    grunt.loadNpmTasks('grunt-hash');
     grunt.loadNpmTasks('grunt-contrib-concat');
-    grunt.loadNpmTasks('grunt-contrib-uglify');
-    grunt.loadNpmTasks('grunt-contrib-qunit');
-    grunt.loadNpmTasks('grunt-contrib-jshint');
-    grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-connect');
+    grunt.loadNpmTasks('grunt-contrib-cssmin');
+    grunt.loadNpmTasks('grunt-contrib-jshint');
+    grunt.loadNpmTasks('grunt-contrib-qunit');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-hash');
+    grunt.loadNpmTasks('grunt-sass');
+    grunt.loadNpmTasks('grunt-shell');
 };

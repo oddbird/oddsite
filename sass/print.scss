@@ -1,21 +1,21 @@
-// Print Styles
-// ============
+// // Print Styles
+// // ============
 
-@import "base/requirements.config";
-@import "base/scale.config";
-@import "base/colors.config";
-@import "base/layout.config";
-@import "base/icons.config";
-@import "base/typography.config";
-@import "base/buttons.config";
+// @import "base/requirements.config";
+// @import "base/scale.config";
+// @import "base/colors.config";
+// @import "base/layout.config";
+// @import "base/icons.config";
+// @import "base/typography.config";
+// @import "base/buttons.config";
 
-@import "base";
+// @import "base";
 
 
-// Layout
-// ------
+// // Layout
+// // ------
 
-@include establish-baseline;
+// @include establish-baseline;
 
 * {
   background: transparent !important;
@@ -24,68 +24,68 @@
   text-shadow: none !important;
 }
 
-body {
-  @extend %type;
-  @extend %serif;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-}
+// body {
+//   @extend %type;
+//   @extend %serif;
+//   width: 100%;
+//   margin: 0;
+//   padding: 0;
+// }
 
-[role="banner"] {
-  @include font-size(larger);
-  margin-bottom: 0;
-}
+// [role="banner"] {
+//   @include font-size(larger);
+//   margin-bottom: 0;
+// }
 
-[role="navigation"], [role="contentinfo"],
-.pagination, .readmore,
-.fatfooter {
-  display: none;
-}
+// [role="navigation"], [role="contentinfo"],
+// .pagination, .readmore,
+// .fatfooter {
+//   display: none;
+// }
 
-%section {
-  &:before {
-    margin: size(normal) 0;
-    content: "* * *";
-    display: block;
-    text-align: center;
-  }
-}
-
-
-// Type
-// ----
-
-a:after {
-  @extend %sans;
-  @include font-size(small);
-  content: " [" attr(href) "] ";
-}
-a[href^="/"]:after {
-  content: " [http://oddbird.net" attr(href) "] ";
-  [role="banner"] &, .byline & { display: none; }
-  .title & {
-    @include font-size(small);
-    display: block;
-  }
-}
-
-h1, h2, h3 { page-break-after: avoid; }
-
-h2 { text-transform: none !important; }
-
-p, h1, h2, h3 {
-  orphans: 3;
-  widows: 3;
-}
-
-p { margin-top: 0; }
+// %section {
+//   &:before {
+//     margin: size(normal) 0;
+//     content: "* * *";
+//     display: block;
+//     text-align: center;
+//   }
+// }
 
 
-// Blog
-// ----
+// // Type
+// // ----
 
-.post { @extend %section; }
-.title { margin: 0; }
-.byline { font-style: italic; }
-.code { border-left-color: #000 !important; }
+// a:after {
+//   @extend %sans;
+//   @include font-size(small);
+//   content: " [" attr(href) "] ";
+// }
+// a[href^="/"]:after {
+//   content: " [http://oddbird.net" attr(href) "] ";
+//   [role="banner"] &, .byline & { display: none; }
+//   .title & {
+//     @include font-size(small);
+//     display: block;
+//   }
+// }
+
+// h1, h2, h3 { page-break-after: avoid; }
+
+// h2 { text-transform: none !important; }
+
+// p, h1, h2, h3 {
+//   orphans: 3;
+//   widows: 3;
+// }
+
+// p { margin-top: 0; }
+
+
+// // Blog
+// // ----
+
+// .post { @extend %section; }
+// .title { margin: 0; }
+// .byline { font-style: italic; }
+// .code { border-left-color: #000 !important; }

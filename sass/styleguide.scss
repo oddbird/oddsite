@@ -1,32 +1,37 @@
-// Style Guide
-// ===========
+// // Style Guide
+// // ===========
 
-@import "compass/reset";
+// @import "compass/reset";
 
-@import "base/requirements.config";
-@import "base/scale.config";
-@import "base/colors.config";
-@import "base/layout.config";
-@import "base/icons.config";
-@import "base/typography.config";
-@import "base/buttons.config";
+// @import "base/requirements.config";
+// @import "base/scale.config";
+// @import "base/colors.config";
+// @import "base/layout.config";
+// @import "base/icons.config";
+// @import "base/typography.config";
+// @import "base/buttons.config";
 
-@import 'base';
-@import "base/layout";
-
-
-// Components
-// ----------
-
-@import 'components/banner';
-@import 'components/nav';
-@import 'components/contentinfo';
+// @import 'base';
+// @import "base/layout";
 
 
-// Styleguide Components
-// ---------------------
+// // Components
+// // ----------
 
-// @import 'styleguide/components/colors.config';
-// @import 'styleguide/components/colors';
-// @import 'styleguide/components/typography.config';
-// @import 'styleguide/components/typography';
+// @import 'components/banner';
+// @import 'components/nav';
+// @import 'components/contentinfo';
+
+
+// // Styleguide Components
+// // ---------------------
+
+// // @import 'styleguide/components/colors.config';
+// // @import 'styleguide/components/colors';
+// // @import 'styleguide/components/typography.config';
+// // @import 'styleguide/components/typography';
+
+// @@@
+body {
+  background: transparent !important;
+}

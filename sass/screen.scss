@@ -1,17 +1,22 @@
-// Screen
-// ======
+// // Screen
+// // ======
 
-@import "compass/reset";
+// @import "compass/reset";
 
-@import "base/requirements.config";
-@import "base/scale.config";
-@import "base/colors.config";
-@import "base/layout.config";
-@import "base/icons.config";
-@import "base/typography.config";
-@import "base/buttons.config";
+// @import "base/requirements.config";
+// @import "base/scale.config";
+// @import "base/colors.config";
+// @import "base/layout.config";
+// @import "base/icons.config";
+// @import "base/typography.config";
+// @import "base/buttons.config";
 
-@import "base";
-@import "base/layout";
+// @import "base";
+// @import "base/layout";
 
-@import "components/manifest";
+// @import "components/manifest";
+
+// @@@
+body {
+  background: transparent !important;
+}
