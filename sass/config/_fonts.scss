@@ -1,0 +1,35 @@
+// Fonts Config
+// ============
+
+@import '../../node_modules/accoutrement-type/sass/type';
+
+$title-font: (
+  'name': 'BaskervilleFS',
+  'stack': (Baskerville, Palatino, Cambria, Georgia, serif),
+  'regular': 'serif/baskerville-regular-webfont',
+  'italic': 'serif/baskerville-italic-webfont',
+  'bold': 'serif/baskerville-bold-webfont',
+  'bold' 'italic': 'serif/baskerville-bolditalic-webfont',
+);
+
+$body-font: (
+  'name': 'SourceSansPro',
+  'stack': ('Helvetica Neue', Helvetica, Arial, sans-serif),
+  'regular': 'sans/sourcesanspro-regular-webfont',
+  'italic': 'sans/sourcesanspro-italic-webfont',
+  'bold': 'sans/sourcesanspro-bold-webfont',
+  'bold' 'italic': 'sans/sourcesanspro-bolditalic-webfont',
+);
+
+$code-font: (
+  'name': 'SourceCodePro',
+  'stack': (Consolas, Menlo, Monaco, 'Lucida Console', 'Liberation Mono', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Courier New', monospace),
+  'regular': 'code/sourcecodepro-regular-webfont',
+  'bold': 'code/sourcecodepro-bold-webfont',
+);
+
+$fonts: (
+  'title': $title-font,
+  'body': $body-font,
+  'code': $code-font,
+);

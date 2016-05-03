@@ -1,22 +1,77 @@
-// // Screen
-// // ======
+// Screen
+// ======
 
-// @import "compass/reset";
+@import 'config/manifest';
 
-// @import "base/requirements.config";
-// @import "base/scale.config";
-// @import "base/colors.config";
-// @import "base/layout.config";
-// @import "base/icons.config";
-// @import "base/typography.config";
-// @import "base/buttons.config";
 
-// @import "base";
-// @import "base/layout";
+// Styles
+// ------
 
-// @import "components/manifest";
+@include import-webfonts;
 
-// @@@
+:root {
+  @include contrasted('background');
+  @include font-family('body');
+  font-size: calc(100% + .3vw);
+}
+
+
+// Type
+// ----
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @include font-family('title');
+}
+
+pre,
+code {
+  @include font-family('code');
+}
+
+a {
+  &:link,
+  &:visited {
+    color: color('action');
+    text-decoration: none;
+  }
+
+  &:hover,
+  &:focus,
+  &:visited {
+    text-decoration: underline;
+  }
+}
+
+
+// Layout
+// ------
+
 body {
-  background: transparent !important;
+  margin: 0 auto;
+  max-width: 35rem;
+  padding: 1rem;
+}
+
+main {
+  border: 2px dotted color('border');
+  border-width: 2px 0;
+  margin: 2rem 0;
+  padding: 2rem 0;
+}
+
+.nav-link {
+  margin-right: 0.5rem;
+}
+
+footer {
+  font-size: smaller;
+
+  p {
+    margin: 0;
+  }
 }

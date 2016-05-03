@@ -3,13 +3,10 @@
 # ----------
 nav:
   - text: home
-    icon: home
     url: /
   - text: birds
-    icon: egg
     url: /birds/
   - text: blog
-    icon: bubbles
     url: /blog/
 
 
@@ -213,7 +210,6 @@ copyright: 2009–2016
 author: OddBird
 comments: true
 location: blog
-default_styles: true
 
 
 # rstBlog Setup
