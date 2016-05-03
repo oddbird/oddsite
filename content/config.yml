@@ -6,8 +6,17 @@ nav:
     url: /
   - text: birds
     url: /birds/
+  - text: work
+    url: /work/
+  - text: process
+    url: /process/
   - text: blog
     url: /blog/
+  - text: in the community
+    url: /community/
+  - text: contact
+    url: /contact/
+
 
 
 # Future Talks
