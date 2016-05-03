@@ -2,12 +2,7 @@ public: yes
 location: home
 comments: False
 default_styles: False
-before:
-  - include: 'modules/_org.html.j2'
 
 
 Custom web tools for humans
 ===========================
-
-
-Sondra was here.
