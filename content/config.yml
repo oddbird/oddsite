@@ -8,10 +8,8 @@ nav:
     url: /birds/
   - text: work
     url: /work/
-  - text: process
-    url: /process/
   - text: blog
-    url: /blog/
+    url: /blogtemplate/
   - text: in the community
     url: /community/
   - text: contact

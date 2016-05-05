@@ -3,10 +3,10 @@ location: home
 comments: False
 
 
-We develop custom web tools for humans
-======================================
+We create custom web apps that people use
+=========================================
 
-From building web apps for companies like `Mozilla and ORCAS`_, to working on open-source tools like `Django and Susy`_ — OddBird thrives on molding big ideas into experiences that people use, playful collaboration, breaking boundaries, and eating our dessert with the soup spoon.
+Whether building web apps for companies like `Mozilla and ORCAS`_, or working on open-source tools like `Django and Susy`_ — OddBird thrives on molding big ideas into experiences that people use and eating our dessert with the soup spoon.
 
 .. _Mozilla and ORCAS: /work/
 .. _Django and Susy: /community/
