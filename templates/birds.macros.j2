@@ -52,7 +52,6 @@
     {% set url = '%s%s'|format(bio_links[type], target) %}
 
     <a href="{{ url }}" {% if type == 'email' %}class="email" {% endif %}bio-link="{{ type }}" rel="me">
-      {{ utility.icon(type) }}
       <span class="bl-title">
         {% if type == 'twitter' %}@{% endif %}{{ target }}
       </span>

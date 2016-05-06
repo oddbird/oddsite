@@ -1,6 +1,7 @@
 public: yes
 author: miriam
 tags: ["conferences", "sass", "sassconf"]
+summary: 'SassConf is right around the corner, and Claudina has been working hard to make it happen!'
 
 
 SassConf 2014

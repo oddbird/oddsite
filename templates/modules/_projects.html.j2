@@ -1,0 +1,51 @@
+{% import 'utility.macros.j2' as utility %}
+
+{% set show_open_source = true if (module.filter != 'clients') else false %}
+{% set show_clients = true if (module.filter != 'open-source') else false %}
+
+{% macro project_summary(project) %}
+  <article class="project-summary">
+    <div class="project-name">
+      {{ project.name }}
+    </div>
+    <h3 class="project-title">
+      {{ project.summary }}
+    </h3>
+
+    {% if project.client != 'open-source' %}
+      <div class="project-client">
+        <i>for</i>
+        <span class="client-name">{{ project.client }}</span>
+      </div>
+    {% elif project.birds %}
+      <div class="project-birds">
+        <i>by</i>
+        <span class="client-name">{{ project.birds }}</span>
+      </div>
+    {% endif %}
+
+    {% if project.quote %}
+      {{ pullquote(project.quote) }}
+    {% endif %}
+  </article>
+{% endmacro %}
+
+{% macro pullquote(quote) %}
+  <blockquote class="project-quote">
+    <div class="quote-text">“{{ quote.text }}”</div>
+    <cite class="quote-credit">—{{ quote.credit }}</cite>
+  </blockquote>
+{% endmacro %}
+
+<section data-module="projects" data-projects="{{ module.filter }}">
+  <h2 class="module-title">
+    {{ utility.link_if(module.title or 'Projects', module.title_url) }}
+  </h2>
+
+  {% for project in config.projects %}
+    {% if (project.client == 'open-source' and show_open_source) or (project.client != 'open-source' and show_clients) %}
+      {{ project_summary(project) }}
+    {% endif %}
+  {% endfor %}
+  </div>
+</section>

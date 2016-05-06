@@ -2,8 +2,8 @@ public: yes
 author: jonny
 tags: ["javascript", "conferences", "code", "jquery"]
 summary: |
-  Five practical JavaScript coding takeaways from jQuery Conference Chicago
-  2014.
+  Five practical JavaScript coding takeaways
+  from jQuery Conference Chicago 2014.
 
 
 jQuery Chicago 2014

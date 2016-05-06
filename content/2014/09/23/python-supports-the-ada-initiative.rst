@@ -3,15 +3,10 @@ author: carl
 tags: ["python", "diversity", "ada-initiative"]
 title: Python for Ada
 summary: |
-    `Donate <https://supportada.org/?campaign=python>`_ to the Ada Initiative
-    today to support women in open technology and culture. If we hit $10000 by
-    Friday, `Jacob <jacobian.org>`_ and `Alex <alexgaynor.net>`_ and `Jim Meyer
-    <http://blog.geekdaily.org>`_ and I will match your donations to make it a
-    nice round $20k. Life is short, go `donate now
-    <https://supportada.org/?campaign=python>`_!  (**Update**: `Jim Meyer
-    <http://blog.geekdaily.org>`_ has raised the match amount from $7500 to
-    $10,000!)
-
+    Donate to the Ada Initiative today
+    to support women in open technology and culture.
+    If we hit $10000 by Friday,
+    Jacob and Alex and Jim and Carl will match your donations!
 
 
 Python for Ada

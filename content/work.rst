@@ -9,9 +9,14 @@ The Work
 
 **Do you have an idea for a web app?** We specialize in helping entrepreneurs of all sorts shape complex ideas into high quality tools that people are excited to use.
 
-`Start the conversation about your project.`_
+|get-started|
 
-.. _Start the conversation about your project.: /contact/
+.. |get-started| raw:: html
+
+  <a href="/contact/" data-btn="cta">
+    Start a conversation about your project »
+  </a>
+
 
 CoachHub Web App & Brand for ORCAS
 ----------------------------------
@@ -20,7 +25,10 @@ ORCAS already provided a suite of self monitoring wellness apps and wanted an ap
 “OddBird really changed my thinking about how successful outsourcing software development can be.”
 - Sara Staillon, ORCAS
 
-**We have collaborated with**
+
+We have collaborated with
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
 - E-Commerce Startups
 - Educators
 - Hipaa Compliant Wellness Providers
@@ -29,7 +37,10 @@ ORCAS already provided a suite of self monitoring wellness apps and wanted an ap
 - Software Companies
 - Theaters, Writers and Artists
 
-**We provide**
+
+We provide
+~~~~~~~~~~
+
 - Content Strategy
 - Marketing & Crowdfunding Consultation
 - User Testing
@@ -38,21 +49,26 @@ ORCAS already provided a suite of self monitoring wellness apps and wanted an ap
 - Brand Design
 - Mobile Development
 
-**Our process is**
+Our process is
+~~~~~~~~~~~~~~
 
-**1. Lean & Agile**
-We use a lean and agile process to deploy & integrate new functionality frequently, aiming to deliver usable product launches as early and often as possible.
+1. **Lean & Agile** |br|
+   We use a lean and agile process to deploy & integrate
+   new functionality frequently, aiming to deliver usable product
+   launches as early and often as possible.
 
-**2. Connected**
-We encourage clients to stay closely connected with the daily progress, offering frequent feedback and re-prioritization via Pivotal Tracker.
+2. **Connected** |br|
+   We encourage clients to stay closely connected
+   with the daily progress,
+   offering frequent feedback and re-prioritization via Pivotal Tracker.
 
-**3. Accessible**
-We use the accessible open web stack: semantic HTML5, unobtrusive Javascript, and advanced CSS — backed by Python & Django on the server.
+3. **Accessible** |br|
+   We use the accessible open web stack:
+   semantic HTML5, unobtrusive Javascript, and advanced CSS —
+   backed by Python & Django on the server.
 
-+++
 
-**Start a conversation** with OddBird about your project.
+.. |br| raw:: html
 
-Fill out our `odd contact form`_ or message us @OddBird.
+  <br />
 
-.. _odd contact form: /contact/

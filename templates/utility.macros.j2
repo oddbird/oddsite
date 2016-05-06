@@ -1,5 +1,17 @@
-{% macro icon(icon) %}
-  <span data-icon="{{ icon }}"></span>
+{% macro attr_if(attr, value=none) %}
+  {%- if value == true -%}
+    {{ attr }}
+  {%- elif value -%}
+    {{ attr }}="{{ value }}"
+  {%- endif -%}
+{% endmacro %}
+
+{% macro link_if(content, url=none, class=none) %}
+  {% if url %}
+    <a href="{{ url }}" attr_if('class', class)>{{ content }}</a>
+  {% else %}
+    <span attr_if('class', class)>{{ content }}</span>
+  {% endif %}
 {% endmacro %}
 
 {% macro is_hidden(text) %}

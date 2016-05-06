@@ -28,12 +28,21 @@ h6 {
   @include font-family('title');
 }
 
+h2 {
+  border-top: 2px dotted color('border');
+  padding-top: 1rem;
+}
+
 pre,
 code {
   @include font-family('code');
 }
 
-a {
+img {
+  max-width: 100%;
+}
+
+a:not([data-btn]) {
   &:link,
   &:visited {
     color: color('action');
@@ -74,4 +83,78 @@ footer {
   p {
     margin: 0;
   }
+}
+
+hr {
+  border-top: 2px solid color('border');
+  margin: 0;
+  padding: 0;
+}
+
+
+// Call to Action
+// --------------
+
+[data-btn='cta'] {
+  @include contrasted('action');
+  display: inline-block;
+  margin: 0.5rem 0;
+  padding: 1rem 2rem;
+  text-decoration: none;
+}
+
+[data-region='contact-cta'] {
+  border-bottom: 2px dotted color('border');
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+}
+
+.cta-title {
+  border: 0;
+  margin: 0;
+}
+
+
+// Projects
+// --------
+
+.project-summary {
+  @include contrasted('callout');
+  padding: 3rem;
+
+  + .project-summary {
+    margin-top: 2px;
+  }
+}
+
+.project-name,
+.project-title,
+.project-summary {
+  @include font-family('title');
+}
+
+.project-title {
+  font-size: 2rem;
+  font-weight: normal;
+  margin: 0;
+}
+
+.client-name {
+  text-transform: uppercase;
+}
+
+
+// Blog
+// ----
+
+[data-blog="summary"] {
+  margin: 2rem 0;
+}
+
+.summary-title {
+  margin: 0;
+}
+
+.read-more {
+  font-style: italic;
 }
