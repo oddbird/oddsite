@@ -1,7 +1,6 @@
 public: yes
 location: home
-comments: False
-default_styles: False
+hide_contact: true
 
 
 Contact the Birds

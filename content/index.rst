@@ -1,7 +1,5 @@
 public: yes
 location: home
-comments: False
-
 projects:
   - name: CoachHub
     summary: Integrated Health Coaching

@@ -1,7 +1,5 @@
 public: yes
 location: home
-comments: False
-default_styles: False
 
 
 In the Community
@@ -59,6 +57,7 @@ Conference Talks
 
 May 12 - 14, 2016 |br|
 **SassConf**
+
 - A Pretend Location
 - Birds Speaking: `Miriam Suzanne`_, `Stacy Kvernmo`_
 
@@ -70,6 +69,7 @@ Meetups
 
 May 10, 2016 | 6p - 9p |br|
 **Develop Happy Hour**
+
 - Location TBD
 - Birds Attending: `Miriam Suzanne`_, `Sondra Eby`_
 
@@ -78,6 +78,7 @@ May 10, 2016 | 6p - 9p |br|
 
 May 11, 2016 | 6:30p |br|
 **Refresh Denver**
+
 - Galvanize
 - 1062 Delaware Street, Denver, CO
 - Birds Attending: `Sondra Eby`_
