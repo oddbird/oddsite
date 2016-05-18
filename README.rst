@@ -44,14 +44,14 @@ To perform these tasks manually, run ``grunt``. To watch for changes without
 starting a local server, run ``grunt watch``. Refer to the `Gruntfile.js
 source`_ and `Grunt`_ documentation for more info.
 
-.. _Python: http://www.python.org
-.. _Ruby: http://www.ruby-lang.org
+.. _Python: https://www.python.org/
+.. _Ruby: https://www.ruby-lang.org/
 .. _virtualenv: http://www.virtualenv.org
 .. _Node.js: http://nodejs.org
 .. _github.com/oddbird/oddbird.github.com: https://github.com/oddbird/oddbird.github.com
-.. _JSHint: http://www.jshint.com
+.. _JSHint: http://jshint.com/
 .. _UglifyJS: https://github.com/mishoo/UglifyJS
-.. _clean-css: https://github.com/GoalSmashers/clean-css
+.. _clean-css: https://github.com/jakubpawlowicz/clean-css
 .. _Gruntfile.js source: https://github.com/oddbird/oddsite/blob/master/Gruntfile.js
 .. _Grunt: http://gruntjs.com/
 
