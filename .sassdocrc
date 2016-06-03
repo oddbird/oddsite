@@ -1,5 +1,6 @@
-theme: 'herman'
-dest: 'content/styleguide'
+theme: herman
+dest: ./content/styleguide
+description: An Odd Site
 
 display:
   access:
