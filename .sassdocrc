@@ -1,0 +1,6 @@
+theme: 'herman'
+dest: 'content/styleguide'
+
+display:
+  access:
+    - public

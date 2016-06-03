@@ -1,31 +1,73 @@
 // Color Configuration
 // ===================
 
+
+
+// Dependencies
+// ------------
+
 @import '../../node_modules/accoutrement-color/sass/color';
 @import '../../node_modules/mathsass/dist/math';
 
-$brand-colors: (
-  'black': #333,
-  'white': #fff,
 
-  'blue': hsl(195, 85%, 62%),
-  'orange': hsl(24, 100%, 62%),
-  'yellow': hsl(45, 85%, 62%),
-  'green': hsl(75, 65%, 62%),
-  'pink': hsl(330, 85%, 62%),
-  'red': hsl(0, 85%, 62%),
+
+// Brand Colors
+// ------------
+/// hello, brand colors!
+$brand-colors: (
+  'brand-blue': hsl(195, 85%, 62%),
+  'brand-orange': hsl(24, 100%, 62%),
 );
+
+
+
+// UI Colors
+// ---------
+
+$ui-colors: (
+  'contrast-light': 'brand-blue' ('tint': 90%),
+  'contrast-dark': 'brand-blue' ('shade': 75%),
+);
+
+
+
+// Theme Colors
+// ------------
 
 $theme-colors: (
-  'text': 'black',
-  'background': 'blue' ('tint': 95%),
+  'text': 'contrast-dark',
+  'background': 'contrast-light',
   'border': 'text' ('tint': 60%),
-  'action': 'orange' ('darken': 25%),
+  'action': 'brand-orange' ('darken': 25%),
 
   'callout': 'background' ('shade': 10%),
-
-  'contrast-light': 'white',
-  'contrast-dark': 'black',
 );
 
-$colors: map-merge($brand-colors, $theme-colors);
+
+
+// Color Palette
+// -------------
+
+@function color-palette(
+  $maps...
+) {
+  $return: ();
+
+  @each $map in $maps {
+    $return: map-merge($return, $map);
+  }
+
+  @return $return;
+}
+
+@mixin color-palette (
+  $maps...
+) {
+  $colors: color-palette($maps...) !global;
+}
+
+@include color-palette(
+  $brand-colors,
+  $ui-colors,
+  $theme-colors
+  );

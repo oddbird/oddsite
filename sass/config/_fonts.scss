@@ -1,7 +1,17 @@
 // Fonts Config
 // ============
 
+
+
+// Dependencies
+// ------------
+
 @import '../../node_modules/accoutrement-type/sass/type';
+
+
+
+// Title Font
+// ----------
 
 $title-font: (
   'name': 'BaskervilleFS',
@@ -12,6 +22,11 @@ $title-font: (
   'bold' 'italic': 'serif/baskerville-bolditalic-webfont',
 );
 
+
+
+// Body Font
+// ---------
+
 $body-font: (
   'name': 'SourceSansPro',
   'stack': ('Helvetica Neue', Helvetica, Arial, sans-serif),
@@ -21,12 +36,22 @@ $body-font: (
   'bold' 'italic': 'sans/sourcesanspro-bolditalic-webfont',
 );
 
+
+
+// Code Font
+// ---------
+
 $code-font: (
   'name': 'SourceCodePro',
   'stack': (Consolas, Menlo, Monaco, 'Lucida Console', 'Liberation Mono', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Courier New', monospace),
   'regular': 'code/sourcecodepro-regular-webfont',
   'bold': 'code/sourcecodepro-bold-webfont',
 );
+
+
+
+// Font Palette
+// ------------
 
 $fonts: (
   'title': $title-font,
