@@ -74,14 +74,14 @@
   {% endblock htmlhead %}
 </head>
 
-<body id="oddsite" class="{% block bodyclasses %}{{ config.bodyclasses }}{% endblock %}" data-location="{% block location %}{{ config.location }}{% endblock %}">
+<body id="oddsite" data-location="{{ config.location }}">
+  {% include '_icons.min.svg' %}
 
-{% block layout %}{% endblock layout %}
+  {% block layout %}{% endblock layout %}
 
-<!-- JavaScript -->
-<script src="/static/js/libs/jquery-1.11.3.min.js"></script>
-<script src="{{ get_asset('/static/dist/all-js.js') }}"></script>
-{% block extrajs %}{% endblock extrajs %}
-
+  <!-- JavaScript -->
+  <script src="/static/js/libs/jquery-1.11.3.min.js"></script>
+  <script src="{{ get_asset('/static/dist/all-js.js') }}"></script>
+  {% block extrajs %}{% endblock extrajs %}
 </body>
 </html>

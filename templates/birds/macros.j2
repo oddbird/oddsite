@@ -1,0 +1,131 @@
+{% import "utility.macros.j2" as utility %}
+
+
+{% macro card(bird, posts=none) %}
+  <div data-bird="{{ bird.author }}" class="h-card" id="bird--{{ bird.author }}">
+    {{ utility.icon(bird.author, size='face') }}
+
+    <header class="bird-header">
+      {{ title(bird.name, bird.author, bird.no_posts) }}
+      {{ link_list(bird.links[0]) }}
+    </header>
+
+    <p class="bird-bio">{{ bird.bio|safe }}</p>
+
+    {{ oss_list(bird.oss) }}
+    {{ publication_list(bird.publications) }}
+    {{ blog_list(posts) }}
+  </div>
+{% endmacro %}
+
+
+{% macro get_card(author, config) %}
+  {% for bird in config.birds %}
+    {% if bird.author == author %}
+      {{ card(bird) }}
+    {% endif %}
+  {% endfor %}
+{% endmacro %}
+
+
+{% macro title(name, author, no_posts=none) %}
+  <h2 class="bird-title">
+    {% if no_posts %}
+      {{ name }}
+    {% else %}
+      <a href="{{ link_to('author', author=author) }}" class="u-url">
+        {{ name }}
+      </a>
+    {% endif %}
+  </h2>
+{% endmacro %}
+
+
+{% macro link_list(links) %}
+  {% if links %}
+  <div class="bird-links">
+    {% for link in links %}
+      {{ get_link(link, links[link]) }}
+    {% endfor %}
+  </div>
+  {% endif %}
+{% endmacro %}
+
+
+{% macro get_link(name, user) %}
+  {% set locations = {
+    'twitter': 'https://twitter.com/%s/',
+    'github': 'https://github.com/%s/',
+    'lanyrd': 'https://lanyrd.com/profile/%s/',
+    'stackoverflow': 'https://stackoverflow.com/users/%s/',
+    'dribbble': 'https://dribbble.com/%s/'
+  } %}
+
+  {% set displays = {
+    'twitter': '@%s',
+    'github': '%s',
+    'dribbble': '%s'
+  } %}
+
+  {% set url = locations[name]|format(user) if locations[name] else none %}
+  {% set username = displays[name]|format(user) if displays[name] else name %}
+
+  <a href="{{ url }}" class="bird-link" rel="me">
+    {{ utility.icon(name) }}
+    {{ username or user }}
+  </a>
+{% endmacro %}
+
+
+{% macro list_wrapper(title, slug, list) %}
+  {% if list %}
+    <div class="bird-{{ slug }}">
+      <h3 class="subtite">{{ title }}</h3>
+      <ul class="bird-list">
+        {{ caller() }}
+      </ul>
+    </div>
+  {% endif %}
+{% endmacro %}
+
+
+{% macro list_item(name, url, extra=none) %}
+  <li>
+    {{ utility.link_if(name, url) }}
+    {% if exrta %}
+      [{{ extra }}]
+    {% endif %}
+  </li>
+{% endmacro %}
+
+
+{% macro blog_list(posts) %}
+  {% call list_wrapper('Blog Posts', 'blog', posts) %}
+    {% for entry in posts %}
+      {% if loop.index < 4 %}
+        {{ list_item(
+          name=entry.title,
+          url=link_to('page', slug=entry.slug)
+        ) }}
+      {% endif %}
+    {% endfor %}
+  {% endcall %}
+{% endmacro %}
+
+
+{% macro publication_list(publications) %}
+  {% call list_wrapper('Publications', 'publications', publications) %}
+    {% for item in publications %}
+      {{ list_item(item.name, item.url) }}
+    {% endfor %}
+  {% endcall %}
+{% endmacro %}
+
+
+{% macro oss_list(oss) %}
+  {% call list_wrapper('Open-Source', 'oss', oss) %}
+    {% for item in oss %}
+      {{ list_item(item.name, item.url, item.role) }}
+    {% endfor %}
+  {% endcall %}
+{% endmacro %}

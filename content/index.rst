@@ -44,17 +44,18 @@ after:
     count: 3
 
 
-We create custom web apps that people use
-=========================================
+Your Partner for Web Software
+=============================
 
-Whether `designing and building web apps`_
-for companies like Mozilla and ORCAS,
-or `working on open-source tools`_ like Django and Susy —
-OddBird thrives on playful collaboration,
-molding great ideas into experiences that people love.
+process, branding, design, and development
+------------------------------------------
 
-.. _designing and building web apps: /work/
-.. _working on open-source tools: /community/
+You need to solve real problems for real people,
+and we're here to help.
+We'll work closely with you
+to develop every aspect of your online product —
+from branding and code,
+to the tools and processes to keep you growing.
 
 |get-started|
 

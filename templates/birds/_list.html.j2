@@ -1,0 +1,14 @@
+{% import "birds/macros.j2" as birds %}
+
+
+{% if config.birds %}
+<section data-module="birds">
+  {% set all_posts = get_recent_blog_entries(1000) %}
+
+  {% for bird in config.birds %}
+    {% set posts = all_posts|selectattr('author', 'equalto', bird.author)|list %}
+
+    {{ birds.card(bird, posts) }}
+  {% endfor %}
+</section>
+{% endif %}

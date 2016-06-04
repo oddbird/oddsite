@@ -17,3 +17,12 @@
 {% macro is_hidden(text) %}
   <span class="is-hidden">{{ text }}</span>
 {% endmacro %}
+
+{% macro icon(name, alt=none, size=none, class=none) %}
+  <svg data-icon="{{ name }}" {{ attr_if('data-size', size) }} {{ attr_if('class', class) }}>
+    {%- if alt -%}
+      <title>{{ alt }}</title>
+    {%- endif -%}
+    <use xlink:href="#icon-{{ name }}" />
+  </svg>
+ {% endmacro %}

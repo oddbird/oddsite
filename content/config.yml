@@ -27,195 +27,314 @@ talks_future: false
 talks_past:
   - title: 'Magic with Sass Maps'
     author: miriam
-    date: September 12
-    year: 2014
-    forum: BlendConf
-    forum_url: http://www.blendconf.com/
+    date: [09, 12, 2014]
+    venue:
+      name: BlendConf
+      url: http://www.blendconf.com/
 
   - title: 'Getting to know Sass'
     author: claudina
-    date: September 11
-    year: 2014
-    forum: BlendConf
-    forum_url: http://www.blendconf.com/
+    date: [09, 11, 2014]
+    venue:
+      name: BlendConf
+      url: http://www.blendconf.com/
 
   - title: 'The Post-Obsolete Book'
     author: miriam
-    date: June 19
-    year: 2014
-    forum: ELO Conference
-    forum_url: http://conference.eliterature.org/
+    date: [06, 19, 2014]
+    venue:
+      name: ELO Conference
+      url: http://conference.eliterature.org/
 
   - title: 'Sass Bites #37'
     author: claudina
-    date: May 13
-    year: 2014
-    forum: Sass Bites
-    forum_url: https://www.youtube.com/user/sassbites
+    date: [05, 13, 2014]
+    venue:
+      name: Sass Bites
+      url: https://www.youtube.com/user/sassbites
     video: https://www.youtube.com/watch?v=BtWaFDpyDCI
 
   - title: 'Your Own Damn [Susy] System'
     author: miriam
-    date: April 24
-    year: 2014
-    forum: Bmore Sass
-    forum_url: http://bmore-sass.com/
+    date: [04, 24, 2014]
+    venue:
+      name: Bmore Sass
+      url: http://bmore-sass.com/
     slides: http://miriamsuzanne.com/pres/susy2/
     video: http://vimeo.com/miriamsuzanne/susy-2-system
 
   - title: 'Show Your Work <i class="amp">&</i> Share Your Toys'
     author: miriam
-    date: April 19th
-    year: 2014
-    forum: Camp Sass
-    forum_url: http://campsass.com/2014/
+    date: [04, 19, 2014]
+    venue:
+      name: Camp Sass
+      url: http://campsass.com/2014/
     slides: http://miriamsuzanne.com/pres/show-yr-work/index.html
 
   - title: 'Set Your Code Free'
     author: carl
-    date: April 13
-    year: 2014
-    forum: PyCon
-    forum_url: https://us.pycon.org/2014/
+    date: [04, 13, 2014]
+    venue:
+      name: PyCon
+      url: https://us.pycon.org/2014/
     slides: http://oddbird.net/set-your-code-free-preso/
     video: http://pyvideo.org/video/2637/set-your-code-free-releasing-and-maintaining-an
 
   - title: 'Susy Grids 2.0'
     author: miriam
-    date: March 13
-    year: 2014
-    forum: Sass Bites
-    forum_url: https://www.youtube.com/user/sassbites
+    date: [03, 13, 2014]
+    venue:
+      name: Sass Bites
+      url: https://www.youtube.com/user/sassbites
     video: https://www.youtube.com/watch?v=m7k-vBzebPg
 
   - title: 'Python Testing Tools'
     author: carl
-    date: February 28
-    year: 2014
-    forum: ConFoo
-    forum_url: http://confoo.ca/
+    date: [02, 28, 2014]
+    venue:
+      name: ConFoo
+      url: http://confoo.ca/
     slides: http://oddbird.net/python-testing-tools-preso/
 
   - title: 'Advanced Python'
     author: carl
-    date: February 27
-    year: 2014
-    forum: ConFoo
-    forum_url: http://confoo.ca/
+    date: [02, 27, 2014]
+    venue:
+      name: ConFoo
+      url: http://confoo.ca/
     slides: http://oddbird.net/advanced-python-preso/
 
   - title: 'Organizing Sass Partials'
     author: miriam
-    date: November 19
-    year: 2013
-    forum: NYCSass Meetup
-    forum_url: http://www.meetup.com/nyc-sass/events/146898452/
+    date: [11, 19, 2013]
+    venue:
+      name: NYCSass Meetup
+      url: http://www.meetup.com/nyc-sass/events/146898452/
     slides: http://miriamsuzanne.com/pres/sass-partials/
 
   - title: 'Show Your Work <i class="amp">&</i> Share Your Toys'
     author: miriam
-    date: October 12
-    year: 2013
-    forum: SassConf
-    forum_url: http://sassconf.com/2013/
+    date: [10, 12, 2013]
+    venue:
+      name: SassConf
+      url: http://sassconf.com/2013/
     slides: http://miriamsuzanne.com/pres/show-yr-work/index.html
     video: https://vimeo.com/channels/sassconf2013/86306775
 
   - title: 'Getting Started with Automated Testing'
     author: carl
-    date: March 16
-    year: 2013
-    forum: PyCon
-    forum_url: https://us.pycon.org/2013/
+    date: [03, 16, 2013]
+    venue:
+      name: PyCon
+      url: https://us.pycon.org/2013/
     slides: http://oddbird.net/start-testing-preso/
     video: http://pyvideo.org/video/1674/getting-started-with-automated-testing
-
-
-# Company
-# -------
-company:
-  - name: OddBird
-    bio: |
-      thrives on freely shared ideas
-      <i class="amp">&</i> playful collaboration,
-      crossing disciplines, breaking boundaries,
-      and eating our dessert with the soup&nbsp;spoon.
-    links:
-      - [birds, /birds/]
-      - [email, birds(who are 'at' the)oddbird.net]
-      - [twitter, oddbird]
 
 
 # Birds
 # -----
 birds:
-  - name: Carl Meyer
-    author: carl
+  - name: 'Miriam Suzanne'
+    author: 'miriam'
+    adr:
+      city: 'Denver'
+      state: 'CO'
     bio: |
-      is a <a href="http://github.com/carljm">coder</a>,
-      <a href="http://www.python.org/">Pythonista</a>,
-      and <a href="http://djangoproject.com/">Django</a> core developer.
-      When he’s not chasing a more elegant algorithm,
-      he chases frisbees, hockey pucks, and a pair of&nbsp;sons.
+      Miriam leads the creative process,
+      working with clients and users to organize priorities,
+      and find solutions to their unique problems.
+      She is a pioneer of modern CSS techniques
+      and open-source Sass tools —
+      including the popular Susy responsive-grid toolkit,
+      and True unit-testing library.
+      She is the co-author of
+      SitePoint’s Jump Start Sass,
+      a well-known speaker at front-end conferences,
+      and a multi-media artist
+      with extensive experience in theatre,
+      writing, music, and visual art.
+    oss:
+      - name: 'Susy'
+        url: 'http://susy.oddbird.net'
+        role: 'creator'
+      - name: 'True'
+        url: 'http://oddbird.net/true'
+        role: 'creator'
+      - name: 'Accoutrement'
+        url: 'http://oddbird.net/accoutrement'
+        role: 'creator'
+      - name: 'Compass'
+        url: 'http://compass-style.org'
+        role: 'core developer'
+    publications:
+      - name: 'Jump Start Sass'
+        url: 'https://www.sitepoint.com/premium/books/jump-start-sass'
+      - name: 'Riding SideSaddle*'
+        url: 'http://ridingsidesaddle.com'
     links:
-      - [twitter, carljm]
-      - [github, carljm]
+      - twitter: 'mirisuzanne'
+        github: 'mirisuzanne'
+        dribbble: 'miriamsuzanne'
+        lanyrd: 'miriamsuzanne'
+        stackoverflow: '1930386'
 
-  - name: Miriam Suzanne
-    author: miriam
+  - name: 'Jonny Gerig Meyer'
+    author: 'jonny'
+    adr:
+      city: 'Goshen'
+      state: 'IN'
     bio: |
-      is an artist <span class="amp">&</span> experience designer,
-      mixing <a href="http://miriamsuzanne.com">words</a>,
-      <a href="http://dribbble.com/miriamsuzanne/">images</a>,
-      <a href="http://teacupgorilla.com/">music</a>,
-      <a href="http://github.com/mirisuzanne/">code</a>,
-      and <a href="http://vicioustrap.com/">performance</a>.
-      She's a sucker for new projects, puzzles,
-      and postprandial&nbsp;perambulations.
+      Jonny leads the front-end development process,
+      turning your ideas into functional interactions.
+      He has been writing clean,
+      well-tested JavaScript web applications
+      for over seven years.
+      He has authored or contributed to
+      numerous open-source projects,
+      and is an active member in the JavaScript community.
+      Jonny also gets excited about homebrewing,
+      ultimate frisbee,
+      and trying to keep up with his two-year-old daughter.
     links:
-      - [twitter, mirisuzanne]
-      - [github, mirisuzanne]
+      - twitter: 'jgerigmeyer'
+        github: 'jgerigmeyer'
+        stackoverflow: '854407'
 
-  - name: Jonny Gerig Meyer
-    author: jonny
+  - name: 'Carl Meyer'
+    author: 'carl'
+    adr:
+      city: 'Rapid City'
+      state: 'SD'
     bio: |
-      is a
-      <a href="http://github.com/jgerigmeyer/">front-end developer</a>
-      who enjoys writing clean, well-tested JavaScript web applications
-      and experimenting with the framework-of-the-month.
-      He’s excited about
-      <a href="http://untappd.com/brewery/81493">homebrewing</a>,
-      <a href="http://www.goshenultimate.com/">ultimate frisbee</a>,
-      and trying to keep up with his two-year-old&nbsp;daughter.
+      Carl is an active owner and developer-emeritus,
+      providing regular oversight and counsel
+      to the development team.
+      He is a core developer of the Django Python web framework,
+      an elected member of the inaugural Django technical board,
+      maintainer of the widely-used pip and virtualenv
+      package management tools,
+      co-author of multiple accepted
+      enhancements to the Python language and ecosystem,
+      and a Fellow of the Python Software Foundation.
+      He is also a well-known speaker
+      at the annual Python and Django community conferences.
+    oss:
+      - name: 'Django'
+        url: 'https://www.djangoproject.com/'
+        role: 'core developer'
+      - name: 'pip'
+        url: '@@@'
+        role: 'maintainer'
+      - name: 'virtualenv'
+        url: '@@@'
+        role: 'maintainer'
     links:
-      - [twitter, jgerigmeyer]
-      - [github, jgerigmeyer]
+      - twitter: 'carljm'
+        github: 'carljm'
+        lanyrd: 'carljm'
+        stackoverflow: '3207'
 
-  - name: Claudina Sarahe
-    author: claudina
+  - name: 'Sondra Eby'
+    author: 'sondra'
+    adr:
+      city: 'Denver'
+      state: 'CO'
     no_posts: True
     bio: |
-      is a front-end developer, pattern wrangler, teacher,
-      and <a href="http://sassconf.com/">conference&nbsp;organizer</a>.
+      Sondra spearheads the design process
+      through user testing, brand development, and interface design.
+      She has been creating custom brands
+      and integrated web graphics for over eleven years.
+      She has lead the marketing teams
+      for a variety of small businesses,
+      and acted as co-founder and Chief Marketing Officer
+      of a personal care products manufacturing startup
+      where she coordinated multiple crowdfunding campaigns
+      that reached over 200% of their goal.
+      Sondra is also a multi-media artist, author, and musician —
+      bringing a unique perspective
+      to audience engagement and interaction.
     links:
-      - [twitter, itsmisscs]
-      - [github, misscs]
+      - twitter: 'sondraeby'
+        github: 'sondrae'
+        dribbble: 'sondraeby'
 
-  - name: Sondra E
-    author: sondra
+  - name: 'Stacy Kvernmo'
+    author: 'stacy'
+    adr:
+      city: 'Chicago'
+      state: 'IL'
     no_posts: True
     bio: |
-      is a product designer, writer, entrepreneur,
-      and <a href="http://teacupgorilla.com/">musician</a>.
-      She likes alliteration,
-      awkward conversation,
-      and chocolate chip&nbsp;cookies.
+      Stacy takes the lead on interface development,
+      architecting accessible and maintainable
+      HTML, CSS, and Sass that users will interact with directly
+      across different browsers and devices.
+      Balancing her love of design and code,
+      She is constantly experimenting with new front-end web techniques,
+      creating efficient workflows,
+      increasing performance,
+      and contributing to open source projects.
+      She has presented for many
+      front-end conferences and podcasts,
+      and also enjoys teaching and writing
+      about design and development.
+    links:
+      - twitter: 'stacykvernmo'
+        github: 'stacyk'
+        lanyrd: 'stacy'
+
+  - name: 'David Glick'
+    author: 'david'
+    adr:
+      city: 'Seattle'
+      state: 'WA'
+    no_posts: True
+    bio: |
+      David is co-leads our server-side development,
+      managing code architecture,
+      database design,
+      and deployment.
+      He has been building
+      web-based software in Python for over a decade.
+      He has been an active contributor to
+      the Plone web content management system,
+      and a member of the Plone Framework and Security Teams.
+    links:
+      - twitter: 'davisagli'
+        github: 'davisagli'
+        lanyrd: 'davisagli'
+        stackoverflow: '212493'
+
+  - name: 'Kit La Touche'
+    author: 'kit'
+    adr:
+      city: 'Boulder'
+      state: 'CO'
+    no_posts: True
+    bio: |
+      Kit co-leads our server-side development,
+      managing code architecture,
+      database design,
+      and deployment.
+      He is a web developer,
+      computational linguist,
+      Linux system administrator,
+      and game designer.
+      He’s been active in
+      Python & Django web development since 2007,
+      and also acts as a process consultant for businesses —
+      helping teams find the flow of communication
+      that works best for them.
+    links:
+      - twitter: 'wlonk'
+        github: 'wlonk'
 
 
 # Settings
 copyright: 2009–2016
-author: OddBird
-comments: true
+author: oddbird
+comments: false
 location: blog
 
 
