@@ -1,138 +1,135 @@
 ---
-# Navigation
-# ----------
-nav:
-  - text: home
-    url: /
-  - text: birds
-    url: /birds/
-  - text: work
-    url: /work/
-  - text: blog
-    url: /blogtemplate/
-  - text: community
-    url: /community/
-  - text: contact
-    url: /contact/
-
-
 
 # Future Talks
 # ------------
-talks_future: false
+events:
+
+  - venue: 'CSS Summit'
+    url: 'http://environmentsforhumans.com/2016/css-summit/'
+    date: ['07', '26', '2016']
+    talks:
+      - title: 'Code Patterns for Pattern-Making'
+        author: 'miriam'
+
+  - venue: 'CascadiaFest'
+    url: 'http://2016.cascadiafest.org/'
+    date: ['08', '03', '2016']
+    talks:
+      - title: 'Code Patterns for Pattern-Making'
+        author: 'miriam'
 
 
-# Past Talks
-# ----------
-talks_past:
-  - title: 'Magic with Sass Maps'
-    author: miriam
-    date: [09, 12, 2014]
-    venue:
-      name: BlendConf
-      url: http://www.blendconf.com/
 
-  - title: 'Getting to know Sass'
-    author: claudina
-    date: [09, 11, 2014]
-    venue:
-      name: BlendConf
-      url: http://www.blendconf.com/
+# Open Source Contributions
+# -------------------------
 
-  - title: 'The Post-Obsolete Book'
-    author: miriam
-    date: [06, 19, 2014]
-    venue:
-      name: ELO Conference
-      url: http://conference.eliterature.org/
+oss:
+  - name: 'Susy'
+    url: 'http://susy.oddbird.net'
+    blog: 'susy'
+    tagline: 'Web layout power tools.'
+    description: |
+      In a world of agile development and super-tablet-multi-magic-laptop-phones,
+      the best layouts can’t be contained in a single framework or technique.
+      CSS Libraries are a bloated mess of opinions about how to do your job.
+      Why let the table-saw tell you where to put the kitchen?
+    who:
+      - name: 'miriam'
+        role: 'creator'
 
-  - title: 'Sass Bites #37'
-    author: claudina
-    date: [05, 13, 2014]
-    venue:
-      name: Sass Bites
-      url: https://www.youtube.com/user/sassbites
-    video: https://www.youtube.com/watch?v=BtWaFDpyDCI
+  - name: 'Django'
+    url: 'https://www.djangoproject.com/'
+    blog: 'django'
+    tagline: 'The web framework for perfectionists with deadlines.'
+    description: |
+      Django is a high-level Python Web framework
+      that encourages rapid development and clean, pragmatic design.
+      Built by experienced developers,
+      it takes care of much of the hassle of Web development,
+      so you can focus on writing your app
+      without needing to reinvent the wheel.
+    who:
+      - name: 'carl'
+        role: 'core-developer'
 
-  - title: 'Your Own Damn [Susy] System'
-    author: miriam
-    date: [04, 24, 2014]
-    venue:
-      name: Bmore Sass
-      url: http://bmore-sass.com/
-    slides: http://miriamsuzanne.com/pres/susy2/
-    video: http://vimeo.com/miriamsuzanne/susy-2-system
-
-  - title: 'Show Your Work <i class="amp">&</i> Share Your Toys'
-    author: miriam
-    date: [04, 19, 2014]
-    venue:
-      name: Camp Sass
-      url: http://campsass.com/2014/
-    slides: http://miriamsuzanne.com/pres/show-yr-work/index.html
-
-  - title: 'Set Your Code Free'
-    author: carl
-    date: [04, 13, 2014]
-    venue:
-      name: PyCon
-      url: https://us.pycon.org/2014/
-    slides: http://oddbird.net/set-your-code-free-preso/
-    video: http://pyvideo.org/video/2637/set-your-code-free-releasing-and-maintaining-an
-
-  - title: 'Susy Grids 2.0'
-    author: miriam
-    date: [03, 13, 2014]
-    venue:
-      name: Sass Bites
-      url: https://www.youtube.com/user/sassbites
-    video: https://www.youtube.com/watch?v=m7k-vBzebPg
-
-  - title: 'Python Testing Tools'
-    author: carl
-    date: [02, 28, 2014]
-    venue:
-      name: ConFoo
-      url: http://confoo.ca/
-    slides: http://oddbird.net/python-testing-tools-preso/
-
-  - title: 'Advanced Python'
-    author: carl
-    date: [02, 27, 2014]
-    venue:
-      name: ConFoo
-      url: http://confoo.ca/
-    slides: http://oddbird.net/advanced-python-preso/
-
-  - title: 'Organizing Sass Partials'
-    author: miriam
-    date: [11, 19, 2013]
-    venue:
-      name: NYCSass Meetup
-      url: http://www.meetup.com/nyc-sass/events/146898452/
-    slides: http://miriamsuzanne.com/pres/sass-partials/
-
-  - title: 'Show Your Work <i class="amp">&</i> Share Your Toys'
-    author: miriam
-    date: [10, 12, 2013]
-    venue:
-      name: SassConf
-      url: http://sassconf.com/2013/
-    slides: http://miriamsuzanne.com/pres/show-yr-work/index.html
-    video: https://vimeo.com/channels/sassconf2013/86306775
-
-  - title: 'Getting Started with Automated Testing'
-    author: carl
-    date: [03, 16, 2013]
-    venue:
-      name: PyCon
-      url: https://us.pycon.org/2013/
-    slides: http://oddbird.net/start-testing-preso/
-    video: http://pyvideo.org/video/1674/getting-started-with-automated-testing
+  - name: 'True'
+    url: 'http://oddbird.net/true'
+    blog: 'sass-true'
+    tagline: 'Powerful unit-testing for Sass.'
+    description: |
+      True is a full-featured unit-testing library for Sass developers.
+      The core functionality is written in pure SassScript,
+      so it can be used anywhere Sass is compiled.
+      Advanced features are available in Node
+      with our Mocha test-runner integration,
+      and in Ruby using our command-line tools.
+    who:
+      - name: 'miriam'
+        role: 'creator'
 
 
-# Birds
-# -----
+
+# Giving
+# ------
+
+giving:
+  - name: 'Django Girls'
+    url: 'https://djangogirls.org/'
+    type: 'donations'
+    description: |
+      is a non-profit organization
+      and a community that empowers and helps women to organize free,
+      one-day programming workshops by providing tools,
+      resources and support.
+  - name: 'Black Girls CODE'
+    url: 'http://blackgirlscode.com/'
+    type: 'donations'
+    description: |
+      has set out to prove to the world
+      that girls of every color have the skills
+      to become the programmers of tomorrow.
+      By promoting classes and programs
+      they help to grow the number of women of color
+      working in technology,
+      and give underprivileged girls a chance
+      to become the masters of their technological worlds.
+  - name: 'PyLadies'
+    url: 'http://www.pyladies.com/'
+    type: 'donations'
+    description: |
+      is an international mentorship group
+      with a focus on helping more women become active participants
+      and leaders in the Python open-source community.
+  - name: 'SassConf'
+    url: 'http://sassconf.com/'
+    type: 'sponsorships'
+    description: |
+      is a yearly event that brings together
+      a far-flung community of front-end developers,
+      designers, architects, and web enthusiasts
+      who dream of building a better web.
+      Originally born out of NYC’s GothamSass meetup,
+      SassConf has grown from a language-specific conference
+      to an event on the cutting edge of front-end technology.
+  - name: 'DjangoCon'
+    url: 'https://djangocon.us/'
+    type: 'sponsorships'
+    description: |
+      is an international Django-community conference,
+      for the community, and by the community.
+  - name: 'PyCon'
+    url: 'https://us.pycon.org/'
+    type: 'sponsorships'
+    description: |
+      is the largest annual gathering
+      for the people who use and develop
+      the open-source Python programming language.
+
+
+
+# OddBirds
+# --------
+
 birds:
   - name: 'Miriam Suzanne'
     author: 'miriam'
@@ -337,8 +334,37 @@ birds:
       - twitter: 'wlonk'
         github: 'wlonk'
 
+birds_former:
+  - name: 'Claudina Sarahe'
+    url: 'https://twitter.com/itsmisscs'
+  - name: 'Rachel Nabors'
+    url: 'https://twitter.com/rachelnabors'
+  - name: 'Una Kravets'
+    url: 'https://twitter.com/Una'
 
-# Settings
+
+# Navigation
+# ----------
+
+nav:
+  - text: 'home'
+    url: '/'
+  - text: 'birds'
+    url: '/birds/'
+  - text: 'work'
+    url: '/work/'
+  - text: 'blog'
+    url: '/blogtemplate/'
+  - text: 'community'
+    url: '/community/'
+  - text: 'contact'
+    url: '/contact/'
+
+
+
+# Site Settings
+# -------------
+
 copyright: '2009–2016'
 author: 'oddbird'
 comments: false
@@ -346,7 +372,10 @@ location: 'blog'
 email: 'birds@oddbird.net'
 
 
+
 # rstBlog Setup
+# -------------
+
 active_modules: [
   pygments_simple,
   tags,
@@ -367,3 +396,102 @@ modules:
   blog:
     index_url: /blog/
     per_page: 10
+
+
+
+# Past Talks
+# ----------
+
+talks_past:
+
+  - title: 'Magic with Sass Maps'
+    author: 'miriam'
+    date: ['09', '12', '2014']
+    venue: 'BlendConf'
+    url: 'http://www.blendconf.com/'
+
+  - title: 'Getting to know Sass'
+    author: 'claudina'
+    date: ['09', '11', '2014']
+    venue: 'BlendConf'
+    url: 'http://www.blendconf.com/'
+
+  - title: 'The Post-Obsolete Book'
+    author: 'miriam'
+    date: ['06', '19', '2014']
+    venue: 'ELO Conference'
+    url: 'http://conference.eliterature.org/'
+
+  - title: 'Sass Bites #37'
+    author: 'claudina'
+    date: ['05', '13', '2014']
+    video: 'https://www.youtube.com/watch?v=BtWaFDpyDCI'
+    venue: 'Sass Bites'
+    url: 'https://www.youtube.com/user/sassbites'
+
+  - title: 'Your Own Damn [Susy] System'
+    author: 'miriam'
+    date: ['04', '24', '2014']
+    slides: 'http://miriamsuzanne.com/pres/susy2/'
+    video: 'http://vimeo.com/miriamsuzanne/susy-2-system'
+    venue: 'Bmore Sass'
+    url: 'http://bmore-sass.com/'
+
+  - title: 'Show Your Work <i>&</i> Share Your Toys'
+    author: 'miriam'
+    date: ['04', '19', '2014']
+    slides: 'http://miriamsuzanne.com/pres/show-yr-work/index.html'
+    venue: 'Camp Sass'
+    url: 'http://campsass.com/2014/'
+
+  - title: 'Set Your Code Free'
+    author: 'carl'
+    date: ['04', '13', '2014']
+    slides: 'http://oddbird.net/set-your-code-free-preso/'
+    video: 'http://pyvideo.org/video/2637/set-your-code-free-releasing-and-maintaining-an'
+    venue: 'PyCon'
+    url: 'https://us.pycon.org/2014/'
+
+  - title: 'Susy Grids 2.0'
+    author: 'miriam'
+    date: ['03', '13', '2014']
+    video: 'https://www.youtube.com/watch?v=m7k-vBzebPg'
+    venue: 'Sass Bites'
+    url: 'https://www.youtube.com/user/sassbites'
+
+  - title: 'Python Testing Tools'
+    author: 'carl'
+    date: ['02', '28', '2014']
+    slides: 'http://oddbird.net/python-testing-tools-preso/'
+    venue: 'ConFoo'
+    url: 'http://confoo.ca/'
+
+  - title: 'Advanced Python'
+    author: 'carl'
+    date: ['02', '27', '2014']
+    slides: 'http://oddbird.net/advanced-python-preso/'
+    venue: 'ConFoo'
+    url: 'http://confoo.ca/'
+
+  - title: 'Organizing Sass Partials'
+    author: 'miriam'
+    date: ['11', '19', '2013']
+    slides: 'http://miriamsuzanne.com/pres/sass-partials/'
+    venue: 'NYCSass Meetup'
+    url: 'http://www.meetup.com/nyc-sass/events/146898452/'
+
+  - title: 'Show Your Work <i>&</i> Share Your Toys'
+    author: 'miriam'
+    date: ['10', '12', '2013']
+    slides: 'http://miriamsuzanne.com/pres/show-yr-work/index.html'
+    video: 'https://vimeo.com/channels/sassconf2013/86306775'
+    venue: 'SassConf'
+    url: 'http://sassconf.com/2013/'
+
+  - title: 'Getting Started with Automated Testing'
+    author: 'carl'
+    date: ['03', '16', '2013']
+    slides: 'http://oddbird.net/start-testing-preso/'
+    video: 'http://pyvideo.org/video/1674/getting-started-with-automated-testing'
+    venue: 'PyCon'
+    url: 'https://us.pycon.org/2013/'

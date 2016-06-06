@@ -1,0 +1,27 @@
+{% import 'utility.macros.j2' as utility %}
+
+<section data-module="conferences" {{ utility.attr_if('id', module.id) }}>
+  <h2 class="section-title">
+    {{ module.title or 'Conferences and Events' }}
+  </h2>
+
+  {% for event in config.events %}
+    <div class="event">
+      <h3 class="subtitle">
+        {{ utility.link_if(event.venue, event.url) }}
+      </h3>
+
+      {{ event.date|join('/') }}
+
+      <ul>
+        {% for talk in event.talks %}
+          {% set bird_list = config.birds|selectattr('author', 'equalto', talk.author)|list %}
+          {% set bird = bird_list[0] %}
+
+          {{ utility.link_if(bird.name, ['/birds/#bird', talk.author]|join('--')) }}:
+          {{ talk.title }}
+        {% endfor %}
+      </ul>
+    </div>
+  {% endfor %}
+</section>

@@ -1,3 +1,4 @@
+{% import 'utility.macros.j2' as utility %}
 {% import "birds/macros.j2" as birds %}
 
 
@@ -10,5 +11,15 @@
 
     {{ birds.card(bird, posts) }}
   {% endfor %}
+
+  {% if config.birds_former and module.show_former %}
+    <h3 class="subtitle">Birds Emeritus</h3>
+    <ul>
+      {% for bird in config.birds_former %}
+        {% set bird_url = link_to('author', author=bird.author) if bird.author else bird.url %}
+        <li>{{ utility.link_if(bird.name, bird_url) }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
 </section>
 {% endif %}

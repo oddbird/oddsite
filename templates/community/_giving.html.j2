@@ -1,0 +1,31 @@
+{% import 'utility.macros.j2' as utility %}
+
+
+{% macro show_project(project) %}
+  <li>
+    {{ utility.link_if(project.name, project.url) }}
+    {{ project.description or '' }}
+  </li>
+{% endmacro %}
+
+
+<section data-module="giving" {{ utility.attr_if('id', module.id) }}>
+  <h2 class="setion-title">
+    {{ module.title|safe or 'Giving' }}
+  </h2>
+
+  {% if module.intro %}
+    <div class="section-intro">
+      {{ module.intro|safe }}
+    </div>
+  {% endif %}
+
+  {% for group in config.giving|groupby('type') %}
+    <h3>{{ group.grouper }}</h3>
+    <ul>
+      {% for project in group.list %}
+        {{ show_project(project) }}
+      {% endfor %}
+    </ul>
+  {% endfor %}
+</section>
