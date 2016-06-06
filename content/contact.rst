@@ -3,7 +3,7 @@ location: home
 hide_contact: true
 after:
   - include: 'contact/_form.html.j2'
-    contact: 'jonny'
+    contact: 'miriam'
     intro: |
       We're commited to keeping our team small and personal,
       so the people you meet at the beginning of the process
