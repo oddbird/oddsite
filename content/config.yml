@@ -136,6 +136,7 @@ talks_past:
 birds:
   - name: 'Miriam Suzanne'
     author: 'miriam'
+    role: 'co-founder and creative director'
     adr:
       city: 'Denver'
       state: 'CO'
@@ -180,6 +181,7 @@ birds:
 
   - name: 'Jonny Gerig Meyer'
     author: 'jonny'
+    role: 'co-founder and front-end developer'
     adr:
       city: 'Goshen'
       state: 'IN'
@@ -202,6 +204,7 @@ birds:
 
   - name: 'Carl Meyer'
     author: 'carl'
+    role: 'co-founder'
     adr:
       city: 'Rapid City'
       state: 'SD'
@@ -236,6 +239,7 @@ birds:
 
   - name: 'Sondra Eby'
     author: 'sondra'
+    role: 'user-experience designer'
     adr:
       city: 'Denver'
       state: 'CO'
@@ -261,6 +265,7 @@ birds:
 
   - name: 'Stacy Kvernmo'
     author: 'stacy'
+    role: 'user-experience developer'
     adr:
       city: 'Chicago'
       state: 'IL'
@@ -286,6 +291,7 @@ birds:
 
   - name: 'David Glick'
     author: 'david'
+    role: 'server-side developer'
     adr:
       city: 'Seattle'
       state: 'WA'
@@ -308,6 +314,7 @@ birds:
 
   - name: 'Kit La Touche'
     author: 'kit'
+    role: 'server-side developer'
     adr:
       city: 'Boulder'
       state: 'CO'
@@ -332,10 +339,11 @@ birds:
 
 
 # Settings
-copyright: 2009–2016
-author: oddbird
+copyright: '2009–2016'
+author: 'oddbird'
 comments: false
-location: blog
+location: 'blog'
+email: 'birds@oddbird.net'
 
 
 # rstBlog Setup

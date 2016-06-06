@@ -7,11 +7,11 @@
 {% endmacro %}
 
 {% macro link_if(content, url=none, class=none) %}
-  {% if url %}
+  {%- if url -%}
     <a href="{{ url }}" attr_if('class', class)>{{ content }}</a>
-  {% else %}
+  {%- else -%}
     <span attr_if('class', class)>{{ content }}</span>
-  {% endif %}
+  {%- endif -%}
 {% endmacro %}
 
 {% macro is_hidden(text) %}
