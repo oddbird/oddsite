@@ -1,16 +1,16 @@
 {% import "utility.macros.j2" as utility %}
 
 
-{% macro card(bird, posts=none) %}
-  <div data-bird="{{ bird.author }}" class="h-card" id="bird--{{ bird.author }}">
+{% macro section(bird, posts=none) %}
+  <div data-module='bird' class="h-card" id="bird-{{ bird.author }}">
     {{ utility.icon(bird.author, size='face') }}
 
-    <header class="bird-header">
+    <header>
       {{ title(bird.name, bird.author, bird.no_posts) }}
       {{ link_list(bird.links[0]) }}
     </header>
 
-    <p class="bird-bio">{{ bird.bio|safe }}</p>
+    <p>{{ bird.bio|safe }}</p>
 
     {{ oss_list(bird.oss) }}
     {{ publication_list(bird.publications) }}
@@ -19,17 +19,45 @@
 {% endmacro %}
 
 
-{% macro get_card(author, config) %}
-  {% for bird in config.birds %}
-    {% if bird.author == author %}
-      {{ card(bird) }}
-    {% endif %}
-  {% endfor %}
+{% macro card(bird, details=false) %}
+  {% set bird_title = utility.link_if(bird.name, link_to('author', author=bird.author), class='u-url') %}
+
+  {% if details %}
+    {% set short = bird.short if bird.short else bird.bio|truncate(200) %}
+
+    <div class="h-card">
+      {{ utility.icon(bird.author, size='face') }}
+
+      <p>
+        {{ bird_title }}
+        {{ short }}
+      </p>
+
+      <ul>
+        {% for link in bird.links[0] %}
+          {% if link in ['twitter', 'github'] %}
+            {{ get_link(link, bird.links[0][link]) }}
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </div>
+  {% else %}
+    <span class="h-card">
+      {{ bird_title }}
+    </span>
+  {% endif %}
+{% endmacro %}
+
+
+{% macro get_card(author, config, details=false) %}
+  {% set bird_list = config.birds|selectattr('author', 'equalto', author)|list %}
+  {% set bird = bird_list[0] %}
+  {{ card(bird, details=details) }}
 {% endmacro %}
 
 
 {% macro title(name, author, no_posts=none) %}
-  <h2 class="bird-title">
+  <h2>
     {% if no_posts %}
       {{ name }}
     {% else %}
@@ -43,7 +71,7 @@
 
 {% macro link_list(links) %}
   {% if links %}
-  <div class="bird-links">
+  <div>
     {% for link in links %}
       {{ get_link(link, links[link]) }}
     {% endfor %}
@@ -70,7 +98,7 @@
   {% set url = locations[name]|format(user) if locations[name] else none %}
   {% set username = displays[name]|format(user) if displays[name] else name %}
 
-  <a href="{{ url }}" class="bird-link" rel="me">
+  <a href="{{ url }}" rel="me">
     {{ utility.icon(name) }}
     {{ username or user }}
   </a>
@@ -79,9 +107,9 @@
 
 {% macro list_wrapper(title, slug, list) %}
   {% if list %}
-    <div class="bird-{{ slug }}">
-      <h3 class="subtite">{{ title }}</h3>
-      <ul class="bird-list">
+    <div>
+      <h3>{{ title }}</h3>
+      <ul>
         {{ caller() }}
       </ul>
     </div>

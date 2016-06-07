@@ -32,8 +32,7 @@ h5 {
 }
 
 h1,
-h2,
-h3 {
+h2 {
   margin: 1.5rem 0 0.75rem;
 }
 
@@ -47,6 +46,7 @@ h2 {
 
 h3 {
   font-size: calc(1rem + 0.5vw);
+  margin-top: 1.5rem;
 }
 
 a {

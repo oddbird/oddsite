@@ -1,26 +1,12 @@
 {% import 'utility.macros.j2' as utility %}
+{% import 'blog/macros.j2' as blog %}
 
 <section data-module="recent-posts">
-  <h2 class="module-title">
+  <h2>
     {{ utility.link_if(module.title or 'Recent Posts', module.title_url) }}
   </h2>
 
-  <div data-blog="list">
-    {%- for entry in get_recent_blog_entries(module.count or 5) %}
-    <article data-blog="summary">
-      <img src="http://placekitten.com/g/1000/400" alt="kittens!" class="summary-image">
-      <h3 class="summary-title">
-        <a href="{{ link_to('page', slug=entry.slug) }}" rel="bookmark">
-          {{ entry.title }}
-        </a>
-      </h3>
-      <div class="summary-body">
-        {{ entry.summary|safe }}
-        <a href="{{ link_to('page', slug=entry.slug) }}" class="read-more" rel="bookmark">
-          Read More »
-        </a>
-      </div>
-    </article>
-    {%- endfor %}
-  </div>
+  {%- for entry in get_recent_blog_entries(module.count or 5) %}
+    {{ blog.list(entry, config, section=false) }}
+  {%- endfor %}
 </section>

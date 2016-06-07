@@ -1,13 +1,13 @@
 {% import 'utility.macros.j2' as utility %}
 
 <section data-module="oss-projects" {{ utility.attr_if('id', module.id) }}>
-  <h2 class="section-title">
+  <h2>
     {{ module.title or 'Open Source Software'}}
   </h2>
 
   {% for project in config.oss %}
-    <div class="oss-project">
-      <h3 class="subtitle">
+    <div>
+      <h3>
         {{ utility.link_if(project.name, project.url) }}
       </h3>
 
@@ -15,7 +15,7 @@
         {% set bird_list = config.birds|selectattr('author', 'equalto', bird_rel.name)|list %}
         {% set bird = bird_list[0] %}
 
-        {{ utility.link_if(bird.name, ['/birds/#bird', bird_rel.name]|join('--')) }},
+        {{ utility.link_if(bird.name, ['/birds/#bird', bird.author]|join('-')) }},
         {{ bird_rel.role }}
       {% endfor %}
 

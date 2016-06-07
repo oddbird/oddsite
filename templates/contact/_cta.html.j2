@@ -1,15 +1,10 @@
 {% if not config.hide_contact %}
-<section data-region="contact-cta">
-  <h2 class="cta-title">
-    Start a conversation
-    with OddBird
-    about your project!
+<section data-module="contact-cta">
+  <h2>
+    {{ config.contact[0].title }}
   </h2>
-  <div class="cta-body">
-    Fill out our
-    <a href="/contact/">contact form</a>
-    or find us on twitter
-    <a href="http://twitter.com/oddbird">@oddbird</a>.
-  </div>
+  <p>
+    {{ config.contact[0].content|safe }}
+  </p>
 </section>
 {% endif %}

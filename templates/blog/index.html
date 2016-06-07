@@ -5,12 +5,12 @@
 {% block title %}Blog{% endblock %}
 
 {% block list_intro %}
-  <h1 class="title">The Words</h1>
+  <h1 class="title">{{ config.blog_title }}</h1>
 {% endblock list_intro %}
 
 {% block archive %}
   {%- for post in pagination.get_slice() %}
-    {{ blog.list(post) }}
+    {{ blog.list(post, config) }}
   {%- endfor %}
 
   {% if show_pagination and pagination.pages > 1 %}

@@ -1,0 +1,12 @@
+<section data-module='process'>
+  <h2>{{ module.title or 'Process' }}</h2>
+
+  <ol>
+    {% for feature in config.process %}
+      <li>
+        <h3>{{ feature.title|safe }}</h3>
+        <p>{{ feature.body|safe }}</p>
+      </li>
+    {% endfor %}
+  </ol>
+</section>

@@ -1,52 +1,51 @@
-{% macro list(post) %}
-<article class="post--list">
-  {% if post.title %}
-    <h2 class="post-title">
-      <a href="{{ link_to('page', slug=post.slug) }}">
+{% import 'utility.macros.j2' as utility %}
+{% import 'birds/macros.j2' as birds %}
+
+{% macro list(post, config, section='blog-post') %}
+  <article {{ utility.attr_if('data-module', section) }}>
+    {% set heading = 'h2' if section else 'h3' %}
+    <{{ heading }}>
+      <a href="{{ link_to('page', slug=post.slug) }}" rel="bookmark">
         {{ post.title }}
       </a>
-    </h2>
-  {% endif %}
+    </{{ heading }}>
 
-  {{ byline(post) }}
+    {{ byline(post, config) }}
 
-  <div class="post-body">
-    {% if post.summary %}
-      {{ post.render_summary() }}
-      <a href="{{ link_to('page', slug=post.slug) }}" class="more-link">
-        read more
-      </a>
-    {% else %}
-      {{ post.render_contents() }}
-    {% endif %}
-  </div>
-</article>
+    <img src="{{ config.image[0].src }}" alt="{{ config.image[0].alt or '' }}">
+
+    <p>{{ post.summary|safe }}</p>
+
+    <a href="{{ link_to('page', slug=post.slug) }}" rel="bookmark">
+      Read More »
+    </a>
+
+    {{ birds.get_card(post.author, config=config, details=true) }}
+  </article>
 {% endmacro %}
 
-{% macro byline(post) %}
-{% if post.pub_date or post.author or post.tags %}
-<div class="byline">
-  {% if post.pub_date %}
-  <time datetime="{{ post.pub_date.isoformat() }}" pubdate="pubdate">
-    {{ post.pub_date.strftime("%B %d, %Y") }}
-  </time>
-  {% endif %}
 
-  {% if post.author %}
-  <span class="vcard">
-    by <a href="{{ link_to('author', author=post.author) }}" class="fn">{{ post.author }}</a>
-  </span>
-  {% endif %}
+{% macro byline(post, config) %}
+  <div>
+    {% if post.author %}
+      by
+      {{ birds.get_card(post.author, config=config) }} |
+    {% endif %}
 
-  {% if post.tags %}
-    <span class="tags">
-      in
-      {% for tag in post.tags|sort(case_sensitive=true) %}
-        {%- if not loop.first %}, {% endif -%}
-        <a href="{{ link_to('tag', tag=tag) }}" rel="tag">{{ tag }}</a>
-      {%- endfor %}.
-    </span>
-  {% endif %}
-</div>
-{% endif %}
+    {% if post.pub_date %}
+    <time datetime="{{ post.pub_date.isoformat() }}" pubdate="pubdate">
+      {{ post.pub_date.strftime("%B %d, %Y") }}
+    </time>
+    {% endif %}
+
+    {% if post.tags %}
+      <span>
+        in
+        {% for tag in post.tags|sort(case_sensitive=true) %}
+          {%- if not loop.first %}, {% endif -%}
+          <a href="{{ link_to('tag', tag=tag) }}" rel="tag">{{ tag }}</a>
+        {%- endfor %}.
+      </span>
+    {% endif %}
+  </div>
 {% endmacro %}

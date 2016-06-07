@@ -1,13 +1,22 @@
 {% import 'utility.macros.j2' as utility %}
 
+{% macro show_talk(talk) %}
+  {% set bird_list = config.birds|selectattr('author', 'equalto', talk.author)|list %}
+  {% set bird = bird_list[0] %}
+  <li>
+    {{ utility.link_if(bird.name, ['/birds/#bird', talk.author]|join('-')) }}:
+    {{ talk.title }}
+  </li>
+{% endmacro %}
+
 <section data-module="conferences" {{ utility.attr_if('id', module.id) }}>
-  <h2 class="section-title">
+  <h2>
     {{ module.title or 'Conferences and Events' }}
   </h2>
 
   {% for event in config.events %}
-    <div class="event">
-      <h3 class="subtitle">
+    <div>
+      <h3>
         {{ utility.link_if(event.venue, event.url) }}
       </h3>
 
@@ -15,11 +24,7 @@
 
       <ul>
         {% for talk in event.talks %}
-          {% set bird_list = config.birds|selectattr('author', 'equalto', talk.author)|list %}
-          {% set bird = bird_list[0] %}
-
-          {{ utility.link_if(bird.name, ['/birds/#bird', talk.author]|join('--')) }}:
-          {{ talk.title }}
+          {{ show_talk(talk) }}
         {% endfor %}
       </ul>
     </div>

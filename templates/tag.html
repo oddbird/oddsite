@@ -16,6 +16,6 @@
 
 {% block archive %}
   {%- for post in entries %}
-    {{ blog.list(post) }}
+    {{ blog.list(post, config) }}
   {%- endfor %}
 {% endblock archive %}

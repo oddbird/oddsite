@@ -1,7 +1,7 @@
 public: yes
 location: community
 after:
-  - include: 'projects/_oss.html.j2'
+  - include: 'community/_oss.html.j2'
     title: 'Open-Source Leadership'
     id: 'community-oss'
   - include: 'community/_talks.html.j2'
@@ -16,8 +16,8 @@ after:
       about conference sponsorship and donation opportunities.
 
 
-In the Community
-================
+Community Involvement
+=====================
 
 **We love being involved**
 in the web design, development,

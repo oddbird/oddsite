@@ -1,72 +1,70 @@
 public: yes
-location: home
+location: work
+after:
+  - include: 'projects/_list.html.j2'
+    title: 'Client Work'
+    data: 'clients'
+  - include: 'projects/_list.html.j2'
+    title: 'Open Source Contributions'
+    data: 'oss'
+  - include: 'projects/_process.html.j2'
+    title: 'The OddBird Process is...'
+  - include: 'projects/_services.html.j2'
+process:
+  - title: 'Lean <i>&</i> Agile'
+    body: |
+      We use a lean and agile process to deploy & integrate
+      new functionality frequently, aiming to deliver usable product
+      launches as early and often as possible.
+  - title: 'Transparent <i>&</i> Interactive'
+    body: |
+      We encourage clients to stay closely connected
+      with the daily progress,
+      offering frequent feedback and re-prioritization via Pivotal Tracker.
+  - title: 'Accessible <i>&</i> Responsive'
+    body: |
+      We use the accessible open web stack:
+      semantic HTML5, unobtrusive Javascript, and advanced CSS —
+      backed by Python & Django on the server.
+services:
+  - title: 'We have collaborated with'
+    data:
+      - 'E-Commerce Startups'
+      - 'Educators'
+      - 'Hipaa Compliant Wellness Providers'
+      - 'Non-Profits (ask about special rates!)'
+      - 'Professional Gear Manufacturers'
+      - 'Software Companies'
+      - 'Theaters, Writers, and Artists'
+  - title: 'We provide'
+    data:
+      - Content Strategy
+      - Marketing & Crowdfunding Consultation
+      - User Testing
+      - Responsive Design and Development
+      - User Experience Design
+      - Brand Design
+      - Mobile Development
 
 
-The Work
-========
+Custom Web Software
+===================
 
-**Do you have an idea for a web app?** We specialize in helping entrepreneurs of all sorts shape complex ideas into high quality tools that people are excited to use.
+**Do you have a web application you want to build?**
+OddBird provides extensive experience in product development,
+branding, application design,
+and user testing — 
+with a strong commitment to well-tested,
+carefully architected,
+documented, and maintainable code.
+All our applications are built with open-web technology,
+for responsive accessibility across devices,
+browsers, and user (dis)abilities.
 
 |get-started|
 
 .. |get-started| raw:: html
 
-  <a href="/contact/" data-btn="cta">
+  <a href="/contact/" class="btn">
     Start a conversation about your project »
   </a>
-
-
-CoachHub Web App & Brand for ORCAS
-----------------------------------
-ORCAS already provided a suite of self monitoring wellness apps and wanted an app to connect professional coaches with people already using their other apps as well as an expanded audience. We rocked at development in some revolutionary way.
-
-“OddBird really changed my thinking about how successful outsourcing software development can be.”
-- Sara Staillon, ORCAS
-
-
-We have collaborated with
-~~~~~~~~~~~~~~~~~~~~~~~~~
-
-- E-Commerce Startups
-- Educators
-- Hipaa Compliant Wellness Providers
-- Non-Profits (ask about special rates!)
-- Professional Gear Manufacturers
-- Software Companies
-- Theaters, Writers and Artists
-
-
-We provide
-~~~~~~~~~~
-
-- Content Strategy
-- Marketing & Crowdfunding Consultation
-- User Testing
-- Responsive Design and Development
-- User Experience Design
-- Brand Design
-- Mobile Development
-
-Our process is
-~~~~~~~~~~~~~~
-
-1. **Lean & Agile** |br|
-   We use a lean and agile process to deploy & integrate
-   new functionality frequently, aiming to deliver usable product
-   launches as early and often as possible.
-
-2. **Connected** |br|
-   We encourage clients to stay closely connected
-   with the daily progress,
-   offering frequent feedback and re-prioritization via Pivotal Tracker.
-
-3. **Accessible** |br|
-   We use the accessible open web stack:
-   semantic HTML5, unobtrusive Javascript, and advanced CSS —
-   backed by Python & Django on the server.
-
-
-.. |br| raw:: html
-
-  <br />
-

@@ -20,12 +20,166 @@ events:
 
 
 
+# Client Projects
+# ---------------
+
+clients:
+  - name: 'Quarq Race Intelligence'
+    url: 'http://quarqrace.com'
+    years: [2015, 2016]
+    feature: true
+    blog: 'quarqrace'
+    tagline: 'Real-Time Race Analytics'
+    description: |
+      Quarq Race Intelligence captures and interprets
+      race performance and state-of-play information,
+      and delivers that data in real time to spectators,
+      commentators, race officials,
+      third-party analysis software and visualization tools.
+      Integrating with Quarq’s telemetry and reporting hardware,
+      the app shows racers’ positions, direction, speed, heart-rate,
+      and a number of other statistics in real time.
+      Our mobile-optimized web interface has been used for bicycle races,
+      triathlons, and non-competitive events,
+      including regular IronMan and Enduro races.
+    client:
+      name: 'SRAM'
+      url: 'http://sram.com/'
+
+  - name: 'QuarqNet'
+    url: 'http://quarqnet.com'
+    years: [2015, 2016]
+    blog: 'quarqnet'
+    tagline: 'Real-Time Telemetry for Athletes'
+    description: |
+      QuarqNet allows athletes to track and analyze their activities,
+      sharing their location and statistics
+      with friends, family, coaches, and colleagues in real time.
+      QuarqNet also integrates with
+      Quarq’s telemetry and reporting hardware,
+      and third-party services
+      like Strava, Training Peaks, Dropbox, and Today’s Plan.
+    client:
+      name: 'SRAM'
+      url: 'http://sram.com/'
+
+  - name: 'CoachHub'
+    url: 'http://www.orcasinc.com/products/coachhub/'
+    years: [2014, 2016]
+    blog: 'coachhub'
+    feature: true
+    tagline: 'Integrated Health Coaching'
+    description: |
+      Our mobile coaching platform for ORCAS
+      integrates with their suite of self-management tools,
+      as well as other vetted third-party apps —
+      providing users with anywhere,
+      anytime access to varying levels of support via video chat,
+      in-app messaging, public Q&A, webinars, and support groups.
+      Users browse coaches, send messages, request appointments,
+      post questions, and grant permissions
+      for coaches to view their progress.
+      Coaches create a profile, manage daily tasks,
+      make appointments, post answers to questions,
+      view user progress, and set alerts
+      for relapse prevention and escalation of care.
+      The product is currently being used
+      by the US Military and Coast Guard as an employee health benefit.
+    client:
+      name: 'ORCAS'
+      url: 'http://orcasinc.com'
+    quote:
+      text: 'OddBird really changed my thinking about how successful outsourcing software development can be.'
+      credit: 'Sara Taillon'
+
+  - name: 'Streams'
+    url: 'http://junyo.com/streams/'
+    years: [2013, 2014]
+    blog: 'junyo-streams'
+    tagline: 'Personalize Student Learning'
+    client:
+      name: 'Junyo'
+      url: 'http://junyo.com/'
+
+  - name: 'Portfoliyo'
+    years: [2012, 2013]
+    blog: 'portfoliyo'
+    source: 'https://github.com/oddbird/portfoliyo'
+    tagline: 'Real-Time Communication for Parents, Teachers, and Students'
+    client:
+      name: 'The K Network'
+
+  - name: 'Master Lookup Table'
+    years: [2011]
+    blog: 'mlt'
+    feature: true
+    source: 'https://github.com/oddbird/mlt'
+    tagline: 'Parcel Mapping for Urban Planning'
+    description: |
+      With custom interactive in-browser maps,
+      MLT streamlines the Providence Plan staff's task
+      of mapping street addresses to deeded land parcels.
+      In addition to allowing batch imports
+      of large numbers of addresses from CSV files
+      recording user-selected associations between addresses and parcels,
+      MLT records an audit trail of all data changes
+      and allows one-click rollback of any change.
+      We worked closely with ProvPlan staff
+      to ensure the tool was easy to understand,
+      efficient, beautiful, and a pleasure to work with.
+      MLT also includes a RESTful JSON API
+      for querying address mapping data.
+    client:
+      name: 'The Providence Plan'
+      url: 'http://provplan.org/'
+
+  - name: 'MozTrap'
+    url: 'http://moztrap.mozilla.org'
+    years: [2011, 2012]
+    blog: 'moztrap'
+    feature: true
+    source: 'https://github.com/mozilla/moztrap'
+    tagline: 'Quality Assurance Tools'
+    description: |
+      Mozilla's next-generation test case management system,
+      MozTrap manages extensive test suites
+      for all of Mozilla's software products
+      (including Firefox, Thunderbird, Firefox OS, and others),
+      and allows community testers from around the world
+      to run tests on their system and report results back to Mozilla,
+      which MozTrap aggregates into reports for product managers.
+      MozTrap also includes a RESTful JSON API
+      to allow automated tools to run tests and report results.
+    client:
+      name: 'Mozilla'
+      url: 'https://www.mozilla.org/'
+
+  - name: 'Craftisan'
+    years: [2010, 2011]
+    client:
+      name: 'Craftisan'
+      url: 'http://craftisan.in/'
+
+  - name: 'The Steel Wheels'
+    years: [2010]
+    client:
+      name: 'The Steel Wheels'
+      url: 'http://www.thesteelwheels.com/'
+
+  - name: 'The Carrot Project'
+    years: [2009, 2010]
+    client:
+      name: 'Jake de Grazia'
+
+
 # Open Source Contributions
 # -------------------------
 
 oss:
   - name: 'Susy'
     url: 'http://susy.oddbird.net'
+    years: [2009, 2016]
+    feature: true
     blog: 'susy'
     tagline: 'Web layout power tools.'
     description: |
@@ -54,8 +208,9 @@ oss:
 
   - name: 'True'
     url: 'http://oddbird.net/true'
+    feature: true
     blog: 'sass-true'
-    tagline: 'Powerful unit-testing for Sass.'
+    tagline: 'Unit-testing for Sass developers.'
     description: |
       True is a full-featured unit-testing library for Sass developers.
       The core functionality is written in pure SassScript,
@@ -137,6 +292,13 @@ birds:
     adr:
       city: 'Denver'
       state: 'CO'
+    short: |
+      a process manager,
+      user-experience designer,
+      and front-end architect,
+      and co-founder of OddBird.
+      She is the creator of Susy,
+      and co-author of SitePoint’s Jump Start Sass.
     bio: |
       Miriam leads the creative process,
       working with clients and users to organize priorities,
@@ -354,7 +516,7 @@ nav:
   - text: 'work'
     url: '/work/'
   - text: 'blog'
-    url: '/blogtemplate/'
+    url: '/blog/'
   - text: 'community'
     url: '/community/'
   - text: 'contact'
@@ -366,11 +528,25 @@ nav:
 # -------------
 
 copyright: '2009–2016'
-author: 'oddbird'
-comments: false
-location: 'blog'
 email: 'birds@oddbird.net'
 
+location: 'blog'
+author: 'oddbird'
+comments: false
+
+blog_title: 'Our Odd Thoughts...'
+image:
+  - src: 'http://placekitten.com/g/1000/400'
+
+contact:
+  - title: 'Let’s Build Something Together!'
+    content: |
+      <strong>We want to hear all about your software ideas.</strong>
+      Fill out our
+      <a href="/contact/">contact form</a>
+      or find us on twitter
+      <a href="http://twitter.com/oddbird">@oddbird</a>
+      to start the conversation.
 
 
 # rstBlog Setup

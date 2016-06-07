@@ -15,9 +15,8 @@
 
 <main {% if config.pageclasses %}class="{{ config.pageclasses }}"{% endif %}>
   {% block body %}{% endblock body %}
+  {% include 'contact/_cta.html.j2' %}
 </main>
-
-{% include 'contact/_cta.html.j2' %}
 
 <footer>
   <p class="copyright h-card">

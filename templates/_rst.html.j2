@@ -1,18 +1,24 @@
 {% import "blog/macros.j2" as blog %}
+{% import 'birds/macros.j2' as birds %}
 
 {%- if not config.hide_title %}
   {{ rst.html_title }}
 {%- endif %}
 
-{{ blog.byline(ctx) }}
+{{ blog.byline(ctx, config) }}
 
 {%- for module in config.before -%}
   {% include module.include %}
 {%- endfor -%}
 
-<div class="body">
+<div data-module="rst-body">
   {{ rst.fragment }}
+
+  {% if ctx.author %}
+    {{ birds.get_card(ctx.author, config, details=true) }}
+  {% endif %}
 </div>
+
 
 {%- for module in config.after -%}
   {% include module.include %}
