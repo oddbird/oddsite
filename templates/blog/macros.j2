@@ -11,8 +11,7 @@
     </{{ heading }}>
 
     {{ byline(post, config) }}
-
-    <img src="{{ config.image[0].src }}" alt="{{ config.image[0].alt or '' }}">
+    {{ header_image(post) }}
 
     <p>{{ post.summary|safe }}</p>
 
@@ -48,4 +47,9 @@
       </span>
     {% endif %}
   </div>
+{% endmacro %}
+
+
+{% macro header_image(post) %}
+  <img src="/static/images/blog/{{ post.config.image[0].src }}">
 {% endmacro %}

@@ -6,6 +6,7 @@
 {%- endif %}
 
 {{ blog.byline(ctx, config) }}
+{{ blog.header_image(ctx) }}
 
 {%- for module in config.before -%}
   {% include module.include %}

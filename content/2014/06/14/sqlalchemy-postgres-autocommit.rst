@@ -2,7 +2,7 @@ public: yes
 author: carl
 tags: ["python", "sqlalchemy", "postgresql", "transactions", "django"]
 image:
- - src: 'sqlalchemy.jpg'
+  - src: 'sqlalchemy.jpg'
 summary: |
   SQLAlchemy defaults to implicitly opening a new transaction on your first
   database query. If you prefer to start your transactions explicitly instead,
