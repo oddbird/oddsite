@@ -509,8 +509,6 @@ birds_former:
 # ----------
 
 nav:
-  - text: 'home'
-    url: '/'
   - text: 'birds'
     url: '/birds/'
   - text: 'work'

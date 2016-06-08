@@ -27,7 +27,7 @@ process:
       semantic HTML5, unobtrusive Javascript, and advanced CSS —
       backed by Python & Django on the server.
 services:
-  - title: 'We have collaborated with'
+  - title: 'We have partnered with'
     data:
       - 'E-Commerce Startups'
       - 'Educators'
