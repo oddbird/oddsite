@@ -1,6 +1,8 @@
 public: yes
 author: carl
 tags: ["python", "diversity", "ada-initiative"]
+image:
+ - src: 'adainitiative.jpg'
 title: Python for Ada
 summary: |
     Donate to the Ada Initiative today
