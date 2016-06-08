@@ -1,6 +1,12 @@
 {% extends "base.html" %}
 
 {% block layout %}
+{% if config.show_site_message %}
+  <aside data-region="site-message">
+    <p>{{ config.site_message[0][config.show_site_message]|safe }}</p>
+  </aside>
+{% endif %}
+
 <h1>
   <a href="/" rel="home">
     OddBird
