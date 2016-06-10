@@ -11,15 +11,19 @@
         {{ utility.link_if(project.name, project.url) }}
       </h3>
 
-      {% for bird_rel in project.who %}
-        {% set bird_list = config.birds|selectattr('author', 'equalto', bird_rel.name)|list %}
-        {% set bird = bird_list[0] %}
-
-        {{ utility.link_if(bird.name, ['/birds/#bird', bird.author]|join('-')) }},
-        {{ bird_rel.role }}
-      {% endfor %}
-
       <p>{{ project.tagline }}</p>
+
+      <ul>
+        {% for bird_rel in project.who %}
+          {% set bird_list = config.birds|selectattr('author', 'equalto', bird_rel.name)|list %}
+          {% set bird = bird_list[0] %}
+
+          <li>
+            {{ utility.link_if(bird.name, ['/birds/#bird', bird.author]|join('-')) }}
+            [{{ bird_rel.role }}]
+          </li>
+        {% endfor %}
+      </ul>
     </div>
   {% endfor %}
 </section>

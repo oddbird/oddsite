@@ -1,11 +1,14 @@
 {% import 'utility.macros.j2' as utility %}
 
-{% macro show_talk(talk) %}
-  {% set bird_list = config.birds|selectattr('author', 'equalto', talk.author)|list %}
+{% macro show_talk(who) %}
+  {% set bird_list = config.birds|selectattr('author', 'equalto', who.author)|list %}
   {% set bird = bird_list[0] %}
   <li>
-    {{ utility.link_if(bird.name, ['/birds/#bird', talk.author]|join('-')) }}:
-    {{ talk.title }}
+    {{ utility.link_if(bird.name, ['/birds/#bird', who.author]|join('-')) }}
+    {% if who.role %}[{{ who.role }}]{% endif %}
+    {% if who.talk %}
+      <div>{{ utility.link_if(who.talk, who.url) }}</div>
+    {% endif %}
   </li>
 {% endmacro %}
 
@@ -23,8 +26,8 @@
       {{ event.date|join('/') }}
 
       <ul>
-        {% for talk in event.talks %}
-          {{ show_talk(talk) }}
+        {% for who in event.who %}
+          {{ show_talk(who) }}
         {% endfor %}
       </ul>
     </div>
