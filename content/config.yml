@@ -6,21 +6,17 @@
 show_site_message: 'short'
 site_message:
   - long: |
-      Our website was getting old,
-      so we’re
-      <a href="">re-building it in the open</a>,
-      and <a href="">sharing our process</a> along the way.
+      <strong>We’re re-building our website in the open</strong>,
+      and writing about our process along the way.
       What you see below is up-to-date,
       but mostly unstyled.
-      We hope you'll
-      <a href="">follow along</a>
-      and even <a href="">get involved</a>!
+      We hope you'll follow along
+      and even get involved!
     short: |
-      We’re re-designing our site
-      <a href="">in the open</a>.
-      Find out more <a href="">on our blog</a>,
-      follow along,
-      and <a href="">get involved</a>!
+      <strong>We’re re-designing our website in the open</strong>,
+      and writing about our process along the way.
+    action: Find out more!
+    url: '#@@@'
 
 
 # Future Talks

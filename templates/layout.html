@@ -1,34 +1,31 @@
 {% extends "base.html" %}
 
+
 {% block layout %}
-{% if config.show_site_message %}
-  <aside data-region="site-message">
-    <p>{{ config.site_message[0][config.show_site_message]|safe }}</p>
-  </aside>
-{% endif %}
+  {% include 'layout/_site-message.html.j2' %}
 
-<h1>
-  <a href="/" rel="home">
-    OddBird
-  </a>
-</h1>
+  <h1 data-region="banner">
+    <a href="/" rel="home">
+      OddBird
+    </a>
+  </h1>
 
-<nav>
-  {% for link in config.nav %}
-    <a href="{{ link.url }}" class="nav-link" data-active="{{ link.text }}">{{ link.text }}</a>
-  {% endfor %}
-</nav>
+  <nav data-region="nav">
+    {% for link in config.nav %}
+      <a href="{{ link.url }}" class="nav-link" data-active="{{ link.text }}">{{ link.text }}</a>
+    {% endfor %}
+  </nav>
 
-<main {% if config.pageclasses %}class="{{ config.pageclasses }}"{% endif %}>
-  {% block body %}{% endblock body %}
-  {% include 'contact/_cta.html.j2' %}
-</main>
+  <main data-region="main" {% if config.pageclasses %}class="{{ config.pageclasses }}"{% endif %}>
+    {% block body %}{% endblock body %}
+    {% include 'contact/_cta.html.j2' %}
+  </main>
 
-<footer>
-  <p class="copyright h-card">
-    Copyright &copy; {{ config.copyright }}
-    <a href="http://oddbird.net" class="fn org url">OddBird</a>
-  </p>
-  <p class="history">Established in 2008 by three odd siblings.</p>
-</footer>
+  <footer data-region="footer">
+    <p class="copyright h-card">
+      Copyright &copy; {{ config.copyright }}
+      <a href="http://oddbird.net" class="fn org url">OddBird</a>
+    </p>
+    <p class="history">Established in 2008 by three odd siblings.</p>
+  </footer>
 {% endblock %}

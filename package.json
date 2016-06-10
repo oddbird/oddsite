@@ -17,6 +17,7 @@
   "dependencies": {
     "accoutrement-color": "^2.0.1",
     "accoutrement-init": "^1.1.0",
+    "accoutrement-layout": "^2.1.0",
     "accoutrement-scale": "^2.0.0",
     "accoutrement-type": "^2.0.0",
     "mathsass": "^0.9.5",

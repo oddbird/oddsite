@@ -40,7 +40,8 @@ $theme-colors: (
   'border': 'text' ('tint': 60%),
   'action': 'brand-orange' ('darken': 25%),
 
-  'callout': 'background' ('shade': 10%),
+  'callout': 'brand-blue' ('tint': 70%),
+  'invert': 'brand-blue' ('shade': 50%),
 );
 
 

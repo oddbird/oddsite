@@ -1,6 +1,38 @@
 {% extends "layout.html" %}
+
+{% import "blog/macros.j2" as blog %}
+{% import 'birds/macros.j2' as birds %}
+
 {% block title %}{{ rst.title }}{% endblock %}
 
 {% block body %}
-  {% include "_rst.html.j2" %}
+  {%- if not config.hide_title %}
+    {{ rst.html_title }}
+  {%- endif %}
+
+  {% if ctx.pub_date %}
+    {{ blog.byline(ctx, config) }}
+    {{ blog.header_image(ctx) }}
+  {% endif %}
+
+  {%- for module in config.before -%}
+    {% include module.include %}
+  {%- endfor -%}
+
+  <div data-module="rst-body">
+    {{ rst.fragment }}
+
+    {% if ctx.author %}
+      {{ birds.get_card(ctx.author, config, details=true) }}
+    {% endif %}
+  </div>
+
+
+  {%- for module in config.after -%}
+    {% include module.include %}
+  {%- endfor -%}
+
+  {% if config.comments %}
+    {% include "_comments.html.j2" %}
+  {% endif %}
 {% endblock %}
