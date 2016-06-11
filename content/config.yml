@@ -515,15 +515,20 @@ birds:
       state: 'WA'
     no_posts: True
     bio: |
-      David is co-leads our server-side development,
+      David co-leads our server-side development,
       managing code architecture,
       database design,
       and deployment.
-      He has been building
-      web-based software in Python for over a decade.
-      He has been an active contributor to
-      the Plone web content management system,
-      and a member of the Plone Framework and Security Teams.
+      He has been building web-based software
+      in Python and Javascript for over a decade.
+      He has been a prolific contributor
+      to the Plone web content management system,
+      and enjoys learning new tools–most
+      recently React, elasticsearch,
+      and the Pyramid web framework.
+      When he's not coding,
+      David can be found experimenting in the kitchen
+      or singing in the Seattle Bach Choir.
     links:
       - twitter: 'davisagli'
         github: 'davisagli'
