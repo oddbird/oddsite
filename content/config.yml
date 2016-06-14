@@ -223,10 +223,12 @@ clients:
 oss:
   - name: 'Susy'
     url: 'http://susy.oddbird.net'
-    years: [2009, 2016]
+    source: 'https://github.com/oddbird/susy'
+    years: [2009, 'present']
     feature: true
     blog: 'susy'
-    status: 'active'
+    status: 'public'
+    priority: 'creator'
     tagline: 'Web layout power tools.'
     description: |
       In a world of agile development and super-tablet-multi-magic-laptop-phones,
@@ -239,9 +241,12 @@ oss:
 
   - name: 'Django'
     url: 'https://www.djangoproject.com/'
-    years: [2010, 2016]
+    source: 'https://github.com/django/django'
+    years: [2010, 'present']
+    feature: true
     blog: 'django'
-    status: 'active'
+    status: 'public'
+    priority: 'core'
     tagline: 'The web framework for perfectionists with deadlines.'
     description: |
       Django is a high-level Python Web framework
@@ -256,10 +261,12 @@ oss:
 
   - name: 'True'
     url: 'http://oddbird.net/true'
-    years: [2013, 2016]
+    source: 'https://github.com/oddbird/true'
+    years: [2013, 'present']
     feature: true
     blog: 'sass-true'
-    status: 'active'
+    status: 'public'
+    priority: 'creator'
     tagline: 'Unit-testing for Sass developers.'
     description: |
       True is a full-featured unit-testing library for Sass developers.
@@ -276,9 +283,11 @@ oss:
 
   - name: 'Sass Accoutrement'
     url: 'http://oddbird.net/accoutrement'
-    years: [2015, 2016]
+    source: 'https://github.com/oddbird/?utf8=%E2%9C%93&query=+only%3Apublic+accoutrement'
+    years: [2015, 'present']
     blog: 'accoutrement'
-    status: 'active'
+    status: 'public'
+    priority: 'creator'
     tagline: 'Modular theme-configuration libraries.'
     description: |
       A set of related theme-configuration libraries
@@ -292,11 +301,45 @@ oss:
       - name: 'miriam'
         role: 'creator'
 
+  - name: 'Herman'
+    source: 'https://github.com/oddbird/sassdoc-theme-herman'
+    years: [2015, 'present']
+    blog: 'herman'
+    status: 'public'
+    priority: 'creator'
+    tagline: 'Automated Style Guides'
+    description: |
+      An automatic style-guide generator,
+      built on top of SassDoc,
+      and designed to integrate with OddBird's
+      Sass Accoutrement libraries
+      for quick theme configuration,
+      color palettes, font specimens, icon libraries,
+      and documentation of UI patterns
+      in both Sass and Nunjucks.
+
+  - name: 'Sass Spec'
+    source: 'https://github.com/sass/sass-spec'
+    years: [2015, 'present']
+    blog: 'sass-spec'
+    status: 'public'
+    priority: 'core'
+    tagline: 'Sass language specification'
+    description: |
+      Now that the Sass language has multiple iplementations,
+      it is important that they all share a
+      standard specification and test suite.
+    who:
+      - name: 'miriam'
+        role: 'core developer'
+
   - name: 'Compass'
     url: 'http://compass-style.org'
+    source: 'http://github.com/compass/compass'
     years: [2010, 2016]
     blog: 'compass'
-    status: 'end of life'
+    status: 'public'
+    priority: 'core'
     tagline: 'CSS-authoring framework and Sass library.'
     description: |
       An open-source CSS authoring framework
@@ -309,18 +352,47 @@ oss:
       that changed the landscape for designers developers.
     who:
       - name: 'miriam'
-        role: 'core-developer'
+        role: 'core developer'
 
   - name: 'Warehouse'
     url: 'https://warehouse.readthedocs.io/'
+    source: 'https://github.com/pypa/warehouse'
+    years: [2015, 2016]
+    status: 'public'
+    blog: 'warehouse'
+    priority: 'contributor'
     tagline: 'Next Generation Python Package Repository'
+    description: |
+      A new code base that implements a Python package repository,
+      with plans to eventually replace the current code powering PyPI.
+      The goal is to improve PyPI by making it more user-friendly,
+      with a modern look, additional features,
+      and a more maintainable code-base,
+      with full test coverage and documentation.
     who:
       - name: 'kit'
         role: 'contributor'
 
   - name: 'Helium'
     url: 'http://heliumfloats.com/'
+    source: 'https://github.com/JadenGeller/Helium'
+    years: [2015]
+    blog: 'helium'
+    priority: 'contributor'
     tagline: 'A floating browser window for OS X'
+    status: 'public'
+    description: |
+      Helium is a floating browser window
+      that allows you to watch media,
+      browse the web,
+      and do much more while you stay productive.
+      Your content will never fall behind your other windows
+      even as you switch tasks.
+      Helium supports a customizable translucency mode
+      that allows you to simultaneously see your content and your work,
+      without intercepting mouse clicks when it's translucent.
+      You have the ability to click, drag,
+      and scroll behind your floating content.
     who:
       - name: 'kit'
         role: 'contributor'
