@@ -227,7 +227,6 @@ oss:
     years: [2009, 'present']
     feature: true
     blog: 'susy'
-    status: 'public'
     priority: 'creator'
     tagline: 'Web layout power tools.'
     description: |
@@ -245,7 +244,6 @@ oss:
     years: [2010, 'present']
     feature: true
     blog: 'django'
-    status: 'public'
     priority: 'core'
     tagline: 'The web framework for perfectionists with deadlines.'
     description: |
@@ -265,7 +263,6 @@ oss:
     years: [2013, 'present']
     feature: true
     blog: 'sass-true'
-    status: 'public'
     priority: 'creator'
     tagline: 'Unit-testing for Sass developers.'
     description: |
@@ -286,7 +283,6 @@ oss:
     source: 'https://github.com/oddbird/?utf8=%E2%9C%93&query=+only%3Apublic+accoutrement'
     years: [2015, 'present']
     blog: 'accoutrement'
-    status: 'public'
     priority: 'creator'
     tagline: 'Modular theme-configuration libraries.'
     description: |
@@ -305,7 +301,6 @@ oss:
     source: 'https://github.com/oddbird/sassdoc-theme-herman'
     years: [2015, 'present']
     blog: 'herman'
-    status: 'public'
     priority: 'creator'
     tagline: 'Automated Style Guides'
     description: |
@@ -322,7 +317,6 @@ oss:
     source: 'https://github.com/sass/sass-spec'
     years: [2015, 'present']
     blog: 'sass-spec'
-    status: 'public'
     priority: 'core'
     tagline: 'Sass language specification'
     description: |
@@ -332,6 +326,31 @@ oss:
     who:
       - name: 'miriam'
         role: 'core developer'
+
+  - name: 'pip'
+    url: 'https://pip.pypa.io/'
+    source: 'https://github.com/pypa/pip/'
+    blog: 'pip'
+    priority: 'core'
+    tagline: 'Python package installer.'
+    description: |
+      The PyPA recommended tool for installing Python packages.
+    who:
+      - name: 'carl'
+        role: 'maintainer'
+
+  - name: 'virtualenv'
+    url: 'https://virtualenv.pypa.io/'
+    source: 'https://github.com/pypa/virtualenv'
+    blog: 'virtualenv'
+    priority: 'core'
+    tagline: 'Virtual Python Environment builder'
+    description: |
+      A tool for creating isolated 'virtual' python environments.
+    who:
+      - name: 'carl'
+        role: 'maintainer'
+
 
   - name: 'Compass'
     url: 'http://compass-style.org'
@@ -547,16 +566,6 @@ birds:
       and a Fellow of the Python Software Foundation.
       He is also a well-known speaker
       at the annual Python and Django community conferences.
-    oss:
-      - name: 'Django'
-        url: 'https://www.djangoproject.com/'
-        role: 'core developer'
-      - name: 'pip'
-        url: '@@@'
-        role: 'maintainer'
-      - name: 'virtualenv'
-        url: '@@@'
-        role: 'maintainer'
     links:
       - twitter: 'carljm'
         github: 'carljm'

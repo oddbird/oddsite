@@ -8,7 +8,7 @@
   {% for bird in config.birds %}
     {% set posts = all_posts|selectattr('author', 'equalto', bird.author)|list %}
 
-    {{ birds.section(bird, posts) }}
+    {{ birds.section(bird, config.oss, posts) }}
   {% endfor %}
 {% endif %}
 
