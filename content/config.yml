@@ -289,6 +289,20 @@ oss:
       - name: 'miriam'
         role: 'core-developer'
 
+  - name: 'Warehouse'
+    url: 'https://warehouse.readthedocs.io/'
+    tagline: 'Next Generation Python Package Repository'
+    who:
+      - name: 'kit'
+        role: 'contributor'
+
+  - name: 'Helium'
+    url: 'http://heliumfloats.com/'
+    tagline: 'A floating browser window for OS X'
+    who:
+      - name: 'kit'
+        role: 'contributor'
+
 
 # Giving
 # ------
