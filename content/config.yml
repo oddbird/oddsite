@@ -51,6 +51,7 @@ clients:
     url: 'http://quarqrace.com'
     years: [2015, 2016]
     feature: true
+    status: 'public'
     blog: 'quarqrace'
     tagline: 'Real-Time Race Analytics'
     description: |
@@ -72,6 +73,7 @@ clients:
   - name: 'QuarqNet'
     url: 'http://quarqnet.com'
     years: [2015, 2016]
+    status: 'public'
     blog: 'quarqnet'
     tagline: 'Real-Time Telemetry for Athletes'
     description: |
@@ -91,6 +93,7 @@ clients:
     years: [2014, 2016]
     blog: 'coachhub'
     feature: true
+    status: 'private'
     tagline: 'Integrated Health Coaching'
     description: |
       Our mobile coaching platform for ORCAS
@@ -115,28 +118,43 @@ clients:
       text: 'OddBird really changed my thinking about how successful outsourcing software development can be.'
       credit: 'Sara Taillon'
 
-  - name: 'Streams'
+  - name: 'Streams Resource Library'
     url: 'http://junyo.com/streams/'
     years: [2013, 2014]
     blog: 'junyo-streams'
-    tagline: 'Personalize Student Learning'
+    status: 'updated'
+    tagline: 'Curration Tools for Teachers'
+    description: |
+      We worked with Junyo to develop
+      an early version of their Streams Resource Library —
+      a community-currated directory of teaching materials.
+      Teachers can collect and access
+      all of their open and licensed digital resources in one library.
+      Search by curriculum, student need,
+      use case, content efficacy, users’ rankings,
+      standards, and other criteria,
+      to create custom learning streams.
+      OddBird built the initial curation and search tools
+      used to populate, annotate, and sort resources.
     client:
       name: 'Junyo'
       url: 'http://junyo.com/'
 
   - name: 'Portfoliyo'
+    source: 'https://github.com/oddbird/portfoliyo'
     years: [2012, 2013]
     blog: 'portfoliyo'
-    source: 'https://github.com/oddbird/portfoliyo'
+    status: 'removed'
     tagline: 'Real-Time Communication for Parents, Teachers, and Students'
     client:
       name: 'The K Network'
 
   - name: 'Master Lookup Table'
+    source: 'https://github.com/oddbird/mlt'
     years: [2011]
     blog: 'mlt'
     feature: true
-    source: 'https://github.com/oddbird/mlt'
+    status: 'private'
     tagline: 'Parcel Mapping for Urban Planning'
     description: |
       With custom interactive in-browser maps,
@@ -157,11 +175,12 @@ clients:
       url: 'http://provplan.org/'
 
   - name: 'MozTrap'
+    source: 'https://github.com/mozilla/moztrap'
     url: 'http://moztrap.mozilla.org'
     years: [2011, 2012]
     blog: 'moztrap'
     feature: true
-    source: 'https://github.com/mozilla/moztrap'
+    status: 'public'
     tagline: 'Quality Assurance Tools'
     description: |
       Mozilla's next-generation test case management system,
@@ -179,18 +198,21 @@ clients:
 
   - name: 'Craftisan'
     years: [2010, 2011]
+    status: 'updated'
     client:
       name: 'Craftisan'
       url: 'http://craftisan.in/'
 
   - name: 'The Steel Wheels'
     years: [2010]
+    status: 'updated'
     client:
       name: 'The Steel Wheels'
       url: 'http://www.thesteelwheels.com/'
 
   - name: 'The Carrot Project'
     years: [2009, 2010]
+    status: 'removed'
     client:
       name: 'Jake de Grazia'
 
