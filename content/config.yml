@@ -706,11 +706,21 @@ birds:
     author: 'sam'
     role: 'web development intern'
     adr:
-      city: '@@@'
-      state: '@@@'
+      city: 'Waterloo'
+      state: 'ON'
     no_posts: True
     bio: |
-      Sam is studying... @@@
+      Sam is studying Computer Science at the
+      University of Waterloo.
+      He loves to learn new things and eagerly contributes
+      to any part of the design process.
+      Sam has over three years of experience programming
+      in as many languages as he can get his hands on.
+      Aside from talking to computers, he also enjoys
+      stimulating conversation with humans,
+      coaxing music out of his guitar,
+      and looking up.
+
     links:
       - github: 'samwisemr'
 
