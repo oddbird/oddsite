@@ -51,5 +51,10 @@
 
 
 {% macro header_image(post) %}
-  <img src="/static/images/blog/{{ post.config.image[0].src }}">
+  {% set image = post.config.image[0].src %}
+  {% if 'http://' in image %}
+    <img src="{{ image }}">
+  {% else %}
+    <img src="/static/images/blog/{{ image }}">
+  {% endif %}
 {% endmacro %}

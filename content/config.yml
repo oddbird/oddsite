@@ -523,6 +523,7 @@ birds:
         dribbble: 'miriamsuzanne'
         lanyrd: 'miriamsuzanne'
         stackoverflow: '1930386'
+        codepen: 'mirisuzanne'
 
   - name: 'Jonny Gerig Meyer'
     author: 'jonny'
@@ -606,18 +607,18 @@ birds:
       state: 'IL'
     no_posts: True
     bio: |
-      With over 14 years of experience, 
-      Stacy takes the lead on interface development, 
+      With over 14 years of experience,
+      Stacy takes the lead on interface development,
       architecting accessible and maintainable
       HTML, CSS, and Sass.
       Balancing a love of design and code,
       she enjoys experimenting with new design processes and tools
       as well as new web technologies like CSS Grid Layout.
-      Stacy is enthusiastic about teaching and speaking 
+      Stacy is enthusiastic about teaching and speaking
       at design and front-end development conferences.
       She is a co-host of the WordPress Naperville meetup group
       and is a superfan of far too many podcasts.
-      
+
     links:
       - twitter: 'stacykvernmo'
         github: 'stacyk'
@@ -825,7 +826,7 @@ events_past:
       - author: 'stacy'
         title: 'No Pain No Gain; CSS Code Reviews'
         slides: 'http://www.slideshare.net/Funstacy/no-pain-no-gain-css-code-reviews-ftw'
- 
+
   - venue: 'Sass Bites'
     url: 'https://www.youtube.com/user/sassbites'
     date: ['09', '24', '2015']
