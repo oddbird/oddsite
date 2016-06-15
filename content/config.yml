@@ -606,23 +606,23 @@ birds:
       state: 'IL'
     no_posts: True
     bio: |
-      Stacy takes the lead on interface development,
+      With over 14 years of experience, 
+      Stacy takes the lead on interface development, 
       architecting accessible and maintainable
-      HTML, CSS, and Sass that users will interact with directly
-      across different browsers and devices.
-      Balancing her love of design and code,
-      She is constantly experimenting with new front-end web techniques,
-      creating efficient workflows,
-      increasing performance,
-      and contributing to open source projects.
-      She has presented for many
-      front-end conferences and podcasts,
-      and also enjoys teaching and writing
-      about design and development.
+      HTML, CSS, and Sass.
+      Balancing a love of design and code,
+      she enjoys experimenting with new design processes and tools
+      as well as new web technologies like CSS Grid Layout.
+      Stacy is enthusiastic about teaching and speaking 
+      at design and front-end development conferences.
+      She is a co-host of the WordPress Naperville meetup group
+      and is a superfan of far too many podcasts.
+      
     links:
       - twitter: 'stacykvernmo'
         github: 'stacyk'
         lanyrd: 'stacy'
+        codepen: 'stacy'
 
   - name: 'David Glick'
     author: 'david'
@@ -771,6 +771,34 @@ modules:
 
 events_past:
 
+  - venue: 'WordCamp Chicago'
+    url: https://2016.chicago.wordcamp.org/'
+    date: ['05', '01', '2016']
+    who:
+      - author: 'stacy'
+        title: 'Curing Design Complacency'
+
+  - venue: 'UX Camp'
+    url: http://chicagocamps.org/events/2016/ux-camp/'
+    date: ['04', '30', '2016']
+    who:
+      - author: 'stacy'
+        title: 'Curing Design Complacency'
+
+ - venue: 'SassConf'
+    url: 'http://sassconf.com'
+    date: ['11', '12', '2015']
+    who:
+      - author: 'stacy'
+        title: 'Code Reviews: Turn Humiliation into Greatness'
+
+ - venue: 'CSS Dev Conf'
+    url: 'http://2015.cssdevconf.com'
+    date: ['10', '27', '2015']
+    who:
+      - author: 'stacy'
+        title: 'No Pain No Gain; CSS Code Reviews'
+
   - venue: 'BlendConf'
     url: 'http://www.blendconf.com/'
     date: ['09', '12', '2014']
@@ -784,6 +812,20 @@ events_past:
     who:
       - author: 'claudina'
         title: 'Getting to know Sass'
+
+  - venue: 'WordCamp Milwaukee'
+    url: 'https://2014.milwaukee.wordcamp.org'
+    date: ['07', '27', '2014']
+    who:
+      - author: 'stacy'
+        title: 'Evolving the Design Process'
+
+  - venue: 'WordCamp Chicago'
+    url: 'https://2014.chicago.wordcamp.org'
+    date: ['06', '15', '2014']
+    who:
+      - author: 'stacy'
+        title: 'Evolving the Design Process'
 
   - venue: 'ELO Conference'
     url: 'http://conference.eliterature.org/'
