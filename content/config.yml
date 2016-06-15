@@ -41,6 +41,12 @@ events:
         talk: 'Code Patterns for Pattern-Making'
         url: 'http://2016.cascadiafest.org/speakers/miriam-suzanne/'
 
+  - venue: 'Plone Digital Experience Conference'
+    url: 'http://2016.ploneconf.org/'
+    date: ['10', '19', '2016']
+    who:
+      - author: 'david'
+        role: 'speaking'
 
 
 # Client Projects
@@ -351,7 +357,6 @@ oss:
       - name: 'carl'
         role: 'maintainer'
 
-
   - name: 'Compass'
     url: 'http://compass-style.org'
     source: 'http://github.com/compass/compass'
@@ -416,6 +421,25 @@ oss:
       - name: 'kit'
         role: 'contributor'
 
+  - name: 'Plone'
+    url: 'http://plone.org/'
+    source: 'https://github.com/plone/Products.CMFPlone'
+    years: [2008, 'present']
+    blog: 'plone'
+    priority: 'contributor'
+    tagline: 'An open-source enterprise web content management system'
+    status: 'public'
+    description: |
+      Plone is a mature content management platform
+      written in Python
+      and developed by an international open source community.
+      It has particular strengths
+      in user experience for content editors,
+      flexible theming,
+      and customizability by developers.
+    who:
+      - name: 'david'
+        role: 'contributor'
 
 # Giving
 # ------
