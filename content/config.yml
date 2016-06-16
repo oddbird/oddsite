@@ -779,6 +779,7 @@ contact:
 # -------------
 
 active_modules: [
+  denormalize_config,
   pygments_simple,
   tags,
   blog,
