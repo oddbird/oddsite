@@ -1,6 +1,8 @@
 public: yes
 tags: [susy, "2.0", layout, grids, rwd]
 author: miriam
+image:
+  - src: 'susy.jpg'
 summary: |
   I've just released the `second alpha`_ of Susy Next.
   Go download and play with it!

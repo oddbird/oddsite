@@ -1,6 +1,8 @@
 public: yes
 tags: [susy, "2.0", layout, grids, rwd]
 author: miriam
+image:
+  - src: 'susy.jpg'
 
 
 Susy Next: The first alpha
