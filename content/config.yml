@@ -28,25 +28,21 @@ events:
     date: ['07', '26', '2016']
     who:
       - author: 'miriam'
-        role: 'speaking'
-        talk: 'Code Patterns for Pattern-Making'
-
+        title: 'Code Patterns for Pattern-Making'
 
   - venue: 'CascadiaFest'
     url: 'http://2016.cascadiafest.org/'
     date: ['08', '03', '2016']
     who:
       - author: 'miriam'
-        role: 'speaking'
-        talk: 'Code Patterns for Pattern-Making'
-        url: 'http://2016.cascadiafest.org/speakers/miriam-suzanne/'
+        title: 'Code Patterns for Pattern-Making'
 
   - venue: 'Plone Digital Experience Conference'
     url: 'http://2016.ploneconf.org/'
     date: ['10', '19', '2016']
     who:
       - author: 'david'
-        role: 'speaking'
+        title: 'Integration*5'
 
 
 # Client Projects
@@ -807,6 +803,14 @@ modules:
 
 events_past:
 
+  - venue: 'DublinCSS'
+    url: 'http://www.meetup.com/DublinCSS/events/230011902/'
+    date: ['05', '19', '2016']
+    who:
+      - author: 'miriam'
+        title: 'Pattern-Making in Sass'
+        slides: 'http://oddbooksapp.com/book/sass-patterns'
+
   - venue: 'WordCamp Chicago'
     url: 'https://2016.chicago.wordcamp.org/'
     date: ['05', '01', '2016']
@@ -823,6 +827,14 @@ events_past:
         title: 'Curing Design Complacency'
         slides: 'http://www.slideshare.net/Funstacy/curing-design-complacency-61550889'
 
+  - venue: 'Clarity Conference'
+    url: 'http://clarityconf.com/'
+    date: ['03', '31', '2016']
+    who:
+      - author: 'miriam'
+        title: 'Code Patterns for Pattern-Making'
+        slides: 'http://oddbooksapp.com/book/pattern-making'
+
   - venue: 'Parent Programming'
     url: 'http://parentprogramming.libsyn.com/'
     date: ['03', '16', '2016']
@@ -830,13 +842,6 @@ events_past:
       - author: 'stacy'
         title: 'A conversation with Kevin Lamping'
         audio: 'http://parentprogramming.libsyn.com/stacy-kvernmo'
-
-  - venue: 'WordPress Naperville'
-    url: 'http://www.meetup.com/WordPress-Naperville'
-    date: ['02', '16', '2015']
-    who:
-      - author: 'stacy'
-        title: 'It is a Mobile-First World'
 
   - venue: 'Shop Talk Show'
     url: 'http://shoptalkshow.com/'
@@ -846,13 +851,16 @@ events_past:
         title: 'A conversation with Chris Coyier and Dave Rupert'
         audio: 'http://shoptalkshow.com/episodes/197-with-stacy-kvernmo/'
 
-  - venue: 'SassConf'
+  - venue: 'SassConf 2015'
     url: 'http://sassconf.com'
-    date: ['11', '12', '2015']
+    date: ['11', '11', '2015']
     who:
       - author: 'stacy'
         title: 'Code Reviews: Turn Humiliation into Greatness'
         slides: 'http://www.slideshare.net/Funstacy/sass-code-reviews-how-one-code-review-changed-my-life-sassconf2015'
+      - author: 'miriam'
+        title: 'User UnFriendly [Notes Towards a Queer Web]'
+        slides: 'http://oddbooksapp.com/book/user-unfriendly'
 
   - venue: 'CSS Dev Conf'
     url: 'http://2015.cssdevconf.com'
@@ -870,6 +878,45 @@ events_past:
         title: 'Sass Bites #91'
         video: 'https://www.youtube.com/watch?v=9uTZJJ-DQQM'
 
+  - venue: 'Frontend Conference Zurich'
+    url: 'http://frontendconf.ch'
+    date: ['08', '28', '2015']
+    who:
+      - author: 'miriam'
+        title: 'Sassy Toolkits'
+        slides: 'http://oddbooksapp.com/book/sassy-toolkits'
+        video: 'https://www.youtube.com/watch?v=9w0pgUTYy5k'
+
+  - venue: 'CSS Summit'
+    url: 'http://environmentsforhumans.com/2015/css-summit/'
+    date: ['07', '07', '2015']
+    who:
+      - author: 'miriam'
+        title: 'Sass Map Magic'
+        url: 'http://oddbooksapp.com/book/sass-map-magic'
+
+  - venue: 'WordCamp Denver'
+    url: 'http://denver.wordcamp.org/2015/'
+    date: ['06', '13', '2015']
+    who:
+      - author: 'miriam'
+        title: 'Sassy Toolkits'
+        slides: 'http://oddbooksapp.com/book/sassy-toolkits'
+
+  - venue: 'Future Insights Live'
+    date: ['06', '02', '2015']
+    who:
+      - author: 'miriam'
+        title: 'Sass Map Magic'
+        url: 'http://oddbooksapp.com/book/sass-map-magic'
+
+  - venue: 'WordPress Naperville'
+    url: 'http://www.meetup.com/WordPress-Naperville'
+    date: ['02', '16', '2015']
+    who:
+      - author: 'stacy'
+        title: 'It is a Mobile-First World'
+
   - venue: 'WordPress Naperville'
     url: 'http://www.meetup.com/WordPress-Naperville'
     date: ['01', '20', '2015']
@@ -877,17 +924,21 @@ events_past:
       - author: 'stacy'
         title: 'What NOT to Do With WordPress'
 
+  - venue: 'SassConf 2014 [Unconference Day]'
+    url: 'http://sassconf.com'
+    date: ['10', '02', '2014']
+    who:
+      - author: 'miriam'
+        title: 'Sass Map Magic'
+        url: 'http://oddbooksapp.com/book/sass-map-magic'
+
   - venue: 'BlendConf'
     url: 'http://www.blendconf.com/'
     date: ['09', '12', '2014']
     who:
       - author: 'miriam'
         talk: 'Magic with Sass Maps'
-
-  - venue: 'BlendConf'
-    url: 'http://www.blendconf.com/'
-    date: ['09', '11', '2014']
-    who:
+        video: 'http://teamtreehouse.com/library/sass-map-magic'
       - author: 'claudina'
         title: 'Getting to know Sass'
 
@@ -940,6 +991,14 @@ events_past:
         title: 'Show Your Work <i>&</i> Share Your Toys'
         slides: 'http://miriamsuzanne.com/pres/show-yr-work/index.html'
 
+  - venue: 'The Mixin'
+    url: 'https://themixin.eventbrite.com/'
+    date: ['04', '16', '2014']
+    who:
+      - author: 'miriam'
+        title: 'Your Own Damn [Susy] System'
+        slides: 'http://miriamsuzanne.com/pres/susy2/'
+
   - venue: 'PyCon'
     url: 'https://us.pycon.org/2014/'
     date: ['04', '13', '2014']
@@ -981,14 +1040,22 @@ events_past:
         title: 'Organizing Sass Partials'
         slides: 'http://miriamsuzanne.com/pres/sass-partials/'
 
-  - venue: 'SassConf'
+  - venue: 'SassConf 2013'
     url: 'http://sassconf.com/2013/'
     date: ['10', '12', '2013']
     who:
       - author: 'miriam'
         title: 'Show Your Work <i>&</i> Share Your Toys'
-        slides: 'http://miriamsuzanne.com/pres/show-yr-work/index.html'
+        slides: 'http://miriamsuzanne.com/pres/show-yr-work/'
         video: 'https://vimeo.com/channels/sassconf2013/86306775'
+
+  - venue: 'Brakhage Center Media Arts'
+    url: 'http://www.colorado.edu/brakhagecenter/2013/08/10/bc-luncheon-series-welcomes-eric-meyer-october-7th'
+    date: ['10', '07', '2013']
+    who:
+      - author: 'miriam'
+        title: 'Art is for People'
+        slides: 'http://miriamsuzanne.com/art-is-for-people/'
 
   - venue: 'WordPress Naperville'
     url: 'http://www.meetup.com/WordPress-Naperville'
