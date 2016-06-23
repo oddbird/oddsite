@@ -1,10 +1,6 @@
 public: yes
 location: community
 after:
-  - include: 'community/_oss.html.j2'
-    title: 'Open-Source Leadership'
-    id: 'community-oss'
-  - include: 'community/_talks.html.j2'
   - include: 'community/_giving.html.j2'
     title: 'Sponsoring <i>&</i> Donations'
     id: 'community-giving'
