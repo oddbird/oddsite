@@ -1,0 +1,27 @@
+#!/bin/bash
+
+pushd node
+
+config=`../bin/config.guess`
+if [[ $config == *linux* ]]; then
+    platform=linux
+elif [[ $config == *darwin* ]]; then
+    platform=darwin
+else
+    echo "Unknown platform ${config}!"
+    exit 1
+fi
+
+if [[ $config == *darwin* || $config == x86_64* ]]; then
+    arch=x64
+else
+    arch=x86
+fi
+
+nodefile="../requirements/node-v6.2.2-${platform}-${arch}.tar.xz"
+
+tar --strip-components=1 -Jxf ${nodefile}
+
+PATH=`pwd`/bin:$PATH ./bin/npm install -g npm@3.10.2
+
+popd

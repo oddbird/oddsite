@@ -1,0 +1,16 @@
+// Sections Pattern
+// ================
+
+[data-module] {
+  border-bottom: 2px dotted color('action');
+  padding-bottom: 2rem;
+
+  & + & {
+    padding-top: 2rem;
+  }
+}
+
+.title {
+  font-style: italic;
+  padding: 2rem 0 1rem;
+}

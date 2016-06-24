@@ -300,5 +300,5 @@ any reasonable settings should work.
 Feel free to peruse the full `sass`_
 and `js`_ source at your leisure.
 
-.. _sass: https://github.com/oddbird/oddsite/blob/master/sass/pages/susy-off-canvas.scss
+.. _sass: https://github.com/oddbird/oddsite/blob/master/content/static/sass/pages/susy-off-canvas.scss
 .. _js: https://github.com/oddbird/oddsite/blob/master/content/static/js/pages/susy-off-canvas.js

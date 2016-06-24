@@ -1,7 +1,0 @@
-theme: herman
-dest: ./content/styleguide
-description: An Odd Site
-
-display:
-  access:
-    - public
