@@ -1,55 +1,8 @@
 {% import 'utility.macros.j2' as utility %}
+{% import 'projects/macros.j2' as work %}
 
 
 {% set projects = config[module.data] or config.clients %}
-
-
-{% macro feature(project) %}
-  <article>
-    <h3>
-      {{ utility.link_if(project.name, project.url) }}
-    </h3>
-    <h4>
-      {{ project.tagline }}
-    </h4>
-
-    {% if project.client %}
-      <div>
-        <i>for</i>
-        {{ utility.link_if(
-          project.client.name,
-          project.client.url
-        ) }}
-      </div>
-    {% elif project.who %}
-      <div>
-        <i>by</i>
-        {% for contributor in project.who %}
-          {% set bird_list = config.birds|selectattr('author', 'equalto', contributor.name)|list %}
-          {% set bird = bird_list[0] %}
-
-          {{ utility.link_if(
-            bird.name,
-            ['/birds/#bird', bird.author]|join('-')
-          ) }}
-          [{{ contributor.role }}]
-        {% endfor %}
-      </div>
-    {% endif %}
-
-    {% if project.quote %}
-      {{ pullquote(project.quote) }}
-    {% endif %}
-  </article>
-{% endmacro %}
-
-{% macro pullquote(quote) %}
-  <blockquote>
-    <p>“{{ quote.text }}”</p>
-    <cite>—{{ quote.credit }}</cite>
-  </blockquote>
-{% endmacro %}
-
 
 <section data-module="feature-projects" data-projects="{{ module.data or 'clients' }}">
   <h2>
@@ -57,7 +10,7 @@
   </h2>
 
   {% for project in projects|selectattr('feature') %}
-    {{ feature(project) }}
+    {{ work.feature(project, config) }}
   {% endfor %}
   </div>
 </section>

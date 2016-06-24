@@ -4,5 +4,8 @@ after:
   - include: 'community/_talks.html.j2'
 
 
-Places we'll be...
-==================
+Public Speaking
+===============
+
+@@@ Something about our participation in events
+as public speakers...

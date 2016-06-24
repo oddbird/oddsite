@@ -16,17 +16,12 @@ Community Involvement
 =====================
 
 **We love being involved**
-in the web design, development,
-and open-source software communities.
-We are thankful to the wonderful people
+in the web design and development communities.
+We're thankful to the wonderful people
 that helped us get started,
 and enjoy giving back in myriad ways,
-including:
+from `open-source software`_ and `public speaking`_
+to charitable giving.
 
-- `Open-Source Leadership`_
-- `Conferences and Events`_
-- `Sponsoring and Donations`_
-
-.. _`Open-Source Leadership`: #community-oss
-.. _`Conferences and Events`: #community-events
-.. _`Sponsoring and Donations`: #community-giving
+.. _`open-source software`: /open-source/
+.. _`public speaking`: /speaking/

@@ -1,0 +1,78 @@
+{% import 'utility.macros.j2' as utility %}
+
+
+{% macro list(project, config) %}
+<article>
+  <h3>
+    {{ utility.link_if(project.name, project.url) }}
+  </h3>
+
+  {% if project.client %}
+    <h4>
+      {{ utility.link_if(project.client.name, project.client.url) }}
+    </h4>
+  {% else %}
+    {{ who(project.who, config) }}
+  {% endif %}
+
+  <p>{{ project.description }}</p>
+</article>
+{% endmacro %}
+
+
+{% macro feature(project, config) %}
+  <article>
+    <h3>
+      {{ utility.link_if(project.name, project.url) }}
+    </h3>
+    <h4>
+      {{ project.tagline }}
+    </h4>
+
+    {% if project.client %}
+      <div>
+        <i>for</i>
+        {{ utility.link_if(
+          project.client.name,
+          project.client.url
+        ) }}
+      </div>
+    {% else %}
+      {{ who(project.who, config) }}
+    {% endif %}
+
+    {{ pullquote(project.quote) }}
+  </article>
+{% endmacro %}
+
+
+{% macro pullquote(quote) %}
+  {% if quote %}
+    <blockquote>
+      <p>“{{ quote.text }}”</p>
+      <cite>—{{ quote.credit }}</cite>
+    </blockquote>
+  {% endif %}
+{% endmacro %}
+
+
+{% macro who(contributors, config) %}
+  {% if contributors %}
+    <ul>
+      {% for contributor in contributors %}
+        {% set bird_list = config.birds|selectattr('author', 'equalto', contributor.author)|list %}
+        {% set bird = bird_list[0] %}
+
+        {% if bird %}
+          <li>
+            {{ utility.link_if(
+              bird.name,
+              ['/birds/#bird', bird.author]|join('-')
+            ) }}
+            [{{ contributor.role }}]{% if not loop.last %},{% endif %}
+          </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  {% endif %}
+{% endmacro %}

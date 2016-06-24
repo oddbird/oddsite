@@ -6,12 +6,13 @@ after:
     title: Client Work
     title_url: /work/
     data: clients
+  - include: 'community/_talks.html.j2'
   - include: 'projects/_feature.html.j2'
     title: Open-Source Software
-    title_url: /community/
+    title_url: /open-source/
     data: oss
   - include: 'blog/_recent-posts.html.j2'
-    title: OddBlog
+    title: Recent Articles
     title_url: /blog/
     count: 3
 

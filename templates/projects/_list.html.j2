@@ -1,27 +1,16 @@
 {% import 'utility.macros.j2' as utility %}
+{% import 'projects/macros.j2' as work %}
 
-{% macro list(project) %}
-<article>
-  <h3>
-    {{ utility.link_if(project.name, project.url) }}
-  </h3>
-
-  {% if project.client %}
-    <h4>
-      {{ utility.link_if(project.client.name, project.client.url) }}
-    </h4>
-  {% endif %}
-
-  <p>{{ project.description }}</p>
-</article>
-{% endmacro %}
 
 <section data-module="project-history" {{ utility.attr_if('id', module.id) }}>
   <h2>
     {{ module.title or 'Project History'}}
   </h2>
 
-  {% for project in config[module.data]|selectattr('description') %}
-    {{ list(project) }}
+  {% set valid_projects = config[module.data]|selectattr('description') %}
+  {% set projects = valid_projects|selectattr('priority', 'equalto', module.priority) if module.priority else valid_projects %}
+
+  {% for project in projects %}
+    {{ work.list(project, config) }}
   {% endfor %}
 </section>

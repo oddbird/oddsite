@@ -13,6 +13,6 @@ def setup(builder):
     for project in config['oss']:
         if 'who' in project:
             for author in project['who']:
-                author_projects[author['name']].append(project)
+                author_projects[author['author']].append(project)
 
     builder.config.stack[-1]['oss_by_author'] = author_projects

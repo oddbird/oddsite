@@ -226,7 +226,6 @@ oss:
   - name: 'Susy'
     url: 'http://susy.oddbird.net'
     source: 'https://github.com/oddbird/susy'
-    years: [2009, 'present']
     feature: true
     blog: 'susy'
     priority: 'creator'
@@ -237,13 +236,12 @@ oss:
       CSS Libraries are a bloated mess of opinions about how to do your job.
       Why let the table-saw tell you where to put the kitchen?
     who:
-      - name: 'miriam'
+      - author: 'miriam'
         role: 'creator'
 
   - name: 'Django'
     url: 'https://www.djangoproject.com/'
     source: 'https://github.com/django/django'
-    years: [2010, 'present']
     feature: true
     blog: 'django'
     priority: 'core'
@@ -256,13 +254,12 @@ oss:
       so you can focus on writing your app
       without needing to reinvent the wheel.
     who:
-      - name: 'carl'
+      - author: 'carl'
         role: 'core developer'
 
   - name: 'True'
     url: 'http://oddbird.net/true'
     source: 'https://github.com/oddbird/true'
-    years: [2013, 'present']
     feature: true
     blog: 'sass-true'
     priority: 'creator'
@@ -275,15 +272,12 @@ oss:
       with our Mocha test-runner integration,
       and in Ruby using our command-line tools.
     who:
-      - name: 'miriam'
+      - author: 'miriam'
         role: 'creator'
-      - name: 'carl'
-        role: 'core developer'
 
   - name: 'Sass Accoutrement'
     url: 'http://oddbird.net/accoutrement'
     source: 'https://github.com/oddbird/?utf8=%E2%9C%93&query=+only%3Apublic+accoutrement'
-    years: [2015, 'present']
     blog: 'accoutrement'
     priority: 'creator'
     tagline: 'Modular theme-configuration libraries.'
@@ -296,12 +290,11 @@ oss:
       webfonts and typography, modular scales,
       and responsive layouts.
     who:
-      - name: 'miriam'
+      - author: 'miriam'
         role: 'creator'
 
   - name: 'Herman'
     source: 'https://github.com/oddbird/sassdoc-theme-herman'
-    years: [2015, 'present']
     blog: 'herman'
     priority: 'creator'
     tagline: 'Automated Style Guides'
@@ -317,17 +310,16 @@ oss:
 
   - name: 'Sass Spec'
     source: 'https://github.com/sass/sass-spec'
-    years: [2015, 'present']
     blog: 'sass-spec'
-    priority: 'core'
+    priority: 'contributor'
     tagline: 'Sass language specification'
     description: |
       Now that the Sass language has multiple iplementations,
       it is important that they all share a
       standard specification and test suite.
     who:
-      - name: 'miriam'
-        role: 'core developer'
+      - author: 'miriam'
+        role: 'contributor'
 
   - name: 'pip'
     url: 'https://pip.pypa.io/'
@@ -338,8 +330,8 @@ oss:
     description: |
       The PyPA recommended tool for installing Python packages.
     who:
-      - name: 'carl'
-        role: 'maintainer'
+      - author: 'carl'
+        role: 'core developer, @@@years'
 
   - name: 'virtualenv'
     url: 'https://virtualenv.pypa.io/'
@@ -350,13 +342,12 @@ oss:
     description: |
       A tool for creating isolated 'virtual' python environments.
     who:
-      - name: 'carl'
-        role: 'maintainer'
+      - author: 'carl'
+        role: 'core developer, @@@years'
 
   - name: 'Compass'
     url: 'http://compass-style.org'
     source: 'http://github.com/compass/compass'
-    years: [2010, 2016]
     blog: 'compass'
     status: 'public'
     priority: 'core'
@@ -371,13 +362,12 @@ oss:
       and offering powerful browser-compatability tools
       that changed the landscape for designers developers.
     who:
-      - name: 'miriam'
-        role: 'core developer'
+      - author: 'miriam'
+        role: 'core developer, 2010—2016'
 
   - name: 'Warehouse'
     url: 'https://warehouse.readthedocs.io/'
     source: 'https://github.com/pypa/warehouse'
-    years: [2015, 2016]
     status: 'public'
     blog: 'warehouse'
     priority: 'contributor'
@@ -390,13 +380,12 @@ oss:
       and a more maintainable code-base,
       with full test coverage and documentation.
     who:
-      - name: 'kit'
+      - author: 'kit'
         role: 'contributor'
 
   - name: 'Helium'
     url: 'http://heliumfloats.com/'
     source: 'https://github.com/JadenGeller/Helium'
-    years: [2015]
     blog: 'helium'
     priority: 'contributor'
     tagline: 'A floating browser window for OS X'
@@ -414,15 +403,14 @@ oss:
       You have the ability to click, drag,
       and scroll behind your floating content.
     who:
-      - name: 'kit'
+      - author: 'kit'
         role: 'contributor'
 
   - name: 'Plone'
     url: 'http://plone.org/'
     source: 'https://github.com/plone/Products.CMFPlone'
-    years: [2008, 'present']
     blog: 'plone'
-    priority: 'contributor'
+    priority: 'core'
     tagline: 'An open-source enterprise web content management system'
     status: 'public'
     description: |
@@ -434,8 +422,9 @@ oss:
       flexible theming,
       and customizability by developers.
     who:
-      - name: 'david'
-        role: 'contributor'
+      - author: 'david'
+        role: 'core developer, 2008—2014'
+
 
 # Giving
 # ------
