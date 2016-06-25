@@ -1,5 +1,6 @@
 #!/bin/bash
 
+mkdir -p node
 pushd node
 
 config=`../bin/config.guess`
