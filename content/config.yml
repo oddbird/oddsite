@@ -331,7 +331,7 @@ oss:
       The PyPA recommended tool for installing Python packages.
     who:
       - author: 'carl'
-        role: 'core developer, @@@years'
+        role: 'maintainer, 2010-2012'
 
   - name: 'virtualenv'
     url: 'https://virtualenv.pypa.io/'
@@ -343,7 +343,7 @@ oss:
       A tool for creating isolated 'virtual' python environments.
     who:
       - author: 'carl'
-        role: 'core developer, @@@years'
+        role: 'maintainer, 2010-2012'
 
   - name: 'Compass'
     url: 'http://compass-style.org'
@@ -424,6 +424,24 @@ oss:
     who:
       - author: 'david'
         role: 'core developer, 2008—2014'
+
+  - name: 'Nunjucks'
+    url: 'http://mozilla.github.io/nunjucks/'
+    source: 'https://github.com/mozilla/nunjucks/'
+    blog: 'nunjucks'
+    priority: 'core'
+    tagline: "You've been looking for a more sophisticated templating engine for JavaScript. Here it is."
+    status: 'public'
+    description: |
+      Rich - Powerful language with block inheritance, autoescaping, macros,
+      asynchronous control, and more. Heavily inspired by Jinja2.  Fast & Lean
+      - High-performant. Small 8K gzipped runtime with precompiled templates in
+      the browser. Crazy extensible with custom filters and
+      extensions. Available in node and all modern web browsers, with thorough
+      precompilation options.
+    who:
+      - author: 'carl'
+        role: 'maintainer'
 
 
 # Giving
@@ -565,17 +583,19 @@ birds:
       state: 'SD'
     bio: |
       Carl is an active owner and developer-emeritus,
-      providing regular oversight and counsel
+      providing oversight and counsel
       to the development team.
       He is a core developer of the Django Python web framework,
       an elected member of the inaugural Django technical board,
-      maintainer of the widely-used pip and virtualenv
+      ex-maintainer of the widely-used pip and virtualenv
       package management tools,
       co-author of multiple accepted
       enhancements to the Python language and ecosystem,
       and a Fellow of the Python Software Foundation.
-      He is also a well-known speaker
+      He is also a regular speaker
       at the annual Python and Django community conferences.
+      When not chasing a more elegant algorithm,
+      he chases frisbees, hockey pucks, and a pair of sons.
     links:
       - twitter: 'carljm'
         github: 'carljm'
@@ -1065,3 +1085,27 @@ events_past:
         title: 'Getting Started with Automated Testing'
         slides: 'http://oddbird.net/start-testing-preso/'
         video: 'http://pyvideo.org/video/1674/getting-started-with-automated-testing'
+
+  - venue: 'DjangoCon'
+    url: 'https://djangocon.us'
+    date: ['09', '07', '2016']
+    who:
+      - author: 'carl'
+        title: "Taming dependencies with pip"
+        video: 'http://pyvideo.org/video/69/djangocon-2011--taming-dependencies-with-pip'
+
+  - venue: 'PyCon'
+    url: 'https://us.pycon.org/2012/'
+    date: ['03', '10', '2012']
+    who:
+      - author: 'carl'
+        title: 'Testing and Django'
+        video: 'http://pyvideo.org/video/699/testing-and-django'
+
+  - venue: 'PyCon'
+    url: 'https://us.pycon.org/2011/'
+    date: ['03', '12', '2011']
+    who:
+      - author: 'carl'
+        title: "Reverse-engineering Ian Bicking's brain: inside pip and virtualenv"
+        video: 'http://pyvideo.org/video/389/pycon-2011--reverse-engineering-ian-bicking--39-s'
