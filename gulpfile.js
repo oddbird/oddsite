@@ -28,7 +28,7 @@ const paths = {
   SRC_JS_DIR: 'content/static/js/',
   SASS_DIR: 'content/static/sass/',
   ICONS_DIR: 'templates/icons/',
-  DIST_DIR: 'output/',
+  DIST_DIR: 'dev-output/',
   IGNORE: [
     '!**/.#*',
     '!**/flycheck_*'
