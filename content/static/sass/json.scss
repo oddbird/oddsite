@@ -1,0 +1,7 @@
+// Json Export
+// ===========
+
+@import '~sass-json-export/stylesheets/sass-json-export';
+@import 'config/manifest';
+
+@include json-encode($json, comment);

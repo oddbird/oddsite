@@ -12,7 +12,8 @@
 
 // Title Font
 // ----------
-
+/// hello title font...
+/// @preview font-specimen; key: title
 $title-font: (
   'name': 'BaskervilleFS',
   'stack': (Baskerville, Palatino, Cambria, Georgia, serif),
@@ -26,7 +27,8 @@ $title-font: (
 
 // Body Font
 // ---------
-
+/// hello body font...
+/// @preview font-specimen; key: body
 $body-font: (
   'name': 'SourceSansPro',
   'stack': ('Helvetica Neue', Helvetica, Arial, sans-serif),
@@ -40,7 +42,8 @@ $body-font: (
 
 // Code Font
 // ---------
-
+/// hello code font...
+/// @preview font-specimen; key: code
 $code-font: (
   'name': 'SourceCodePro',
   'stack': (Consolas, Menlo, Monaco, 'Lucida Console', 'Liberation Mono', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Courier New', monospace),
@@ -53,8 +56,10 @@ $code-font: (
 // Font Palette
 // ------------
 
-$fonts: (
-  'title': $title-font,
-  'body': $body-font,
-  'code': $code-font,
+@include set-fonts(
+  (
+    'title': $title-font,
+    'body': $body-font,
+    'code': $code-font,
+  )
 );

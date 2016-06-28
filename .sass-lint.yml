@@ -1,6 +1,9 @@
 # See https://github.com/sasstools/sass-lint/tree/develop/docs/rules
 # ------------------------------------------------------------------
 
+files:
+  ignore: '**/susy-off-canvas.scss'
+
 rules:
   # Extends
   extends-before-declarations: 2

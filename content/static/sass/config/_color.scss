@@ -14,6 +14,7 @@
 // Brand Colors
 // ------------
 /// hello, brand colors!
+/// @preview color-palette
 $brand-colors: (
   'brand-blue': hsl(195, 85%, 62%),
   'brand-orange': hsl(24, 100%, 62%),
@@ -23,7 +24,8 @@ $brand-colors: (
 
 // UI Colors
 // ---------
-
+/// hello, ui colors!
+/// @preview color-palette
 $ui-colors: (
   'contrast-light': 'brand-blue' ('tint': 90%),
   'contrast-dark': 'brand-blue' ('shade': 75%),
@@ -33,7 +35,8 @@ $ui-colors: (
 
 // Theme Colors
 // ------------
-
+/// hello, theme colors!
+/// @preview color-palette
 $theme-colors: (
   'text': 'contrast-dark',
   'background': 'contrast-light',
@@ -49,26 +52,10 @@ $theme-colors: (
 // Color Palette
 // -------------
 
-@function color-palette(
-  $maps...
-) {
-  $return: ();
-
-  @each $map in $maps {
-    $return: map-merge($return, $map);
-  }
-
-  @return $return;
-}
-
-@mixin color-palette (
-  $maps...
-) {
-  $colors: color-palette($maps...) !global;
-}
-
-@include color-palette(
-  $brand-colors,
-  $ui-colors,
-  $theme-colors
-  );
+@include set-colors(
+  (
+    'brand-colors': $brand-colors,
+    'ui-colors': $ui-colors,
+    'theme-colors': $theme-colors,
+  )
+);
