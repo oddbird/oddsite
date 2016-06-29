@@ -216,11 +216,12 @@ clients:
 
 project_status:
   -
-    pre-release: 'This software is not yet available to the public.'
+    pre-release: 'This software is has not yet been released publically.'
     private: 'This software is not available to the public.'
     removed: 'This software is no longer in use.'
     updated: 'This software has changed substantially since we worked on it.'
     consult: 'We provided consultation, but did not build this software.'
+    end-of-life: 'This software is no longer needed, or actively maintained.'
 
 
 # Open Source Contributions
@@ -301,6 +302,7 @@ oss:
     source: 'https://github.com/oddbird/sassdoc-theme-herman'
     blog: 'herman'
     priority: 'creator'
+    status: 'pre-release'
     tagline: 'Automated Style Guides'
     description: |
       An automatic style-guide generator,
@@ -354,6 +356,7 @@ oss:
     source: 'http://github.com/compass/compass'
     blog: 'compass'
     priority: 'core'
+    status: 'end-of-life'
     tagline: 'CSS-authoring framework and Sass library.'
     description: |
       An open-source CSS authoring framework
@@ -366,7 +369,7 @@ oss:
       that changed the landscape for designers developers.
     who:
       - author: 'miriam'
-        role: 'core developer, 2010—2016'
+        role: 'core developer, 2010-2016'
 
   - name: 'Warehouse'
     url: 'https://warehouse.readthedocs.io/'
@@ -423,7 +426,7 @@ oss:
       and customizability by developers.
     who:
       - author: 'david'
-        role: 'core developer, 2008—2014'
+        role: 'core developer, 2008-2014'
 
   - name: 'Nunjucks'
     url: 'http://mozilla.github.io/nunjucks/'

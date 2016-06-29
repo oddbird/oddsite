@@ -6,7 +6,7 @@ after:
     data: 'oss'
     priority: creator
   - include: 'projects/_list.html.j2'
-    title: 'Software We Help Maintain'
+    title: 'Software We Maintained'
     data: 'oss'
     priority: core
   - include: 'projects/_list.html.j2'
