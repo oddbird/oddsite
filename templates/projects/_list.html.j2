@@ -7,7 +7,7 @@
     {{ module.title or 'Project History'}}
   </h2>
 
-  {% set valid_projects = config[module.data]|selectattr('description') %}
+  {% set valid_projects = config[module.data] %}
   {% set projects = valid_projects|selectattr('priority', 'equalto', module.priority) if module.priority else valid_projects %}
 
   {% for project in projects %}

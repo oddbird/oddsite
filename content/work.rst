@@ -2,8 +2,13 @@ public: yes
 location: work
 after:
   - include: 'projects/_list.html.j2'
-    title: 'Client Work'
+    title: 'Live Client Projects'
     data: 'clients'
+    priority: 'live'
+  - include: 'projects/_list.html.j2'
+    title: 'Other Client Work'
+    data: 'clients'
+    priority: 'other'
   - include: 'projects/_process.html.j2'
     title: 'The OddBird Process is...'
   - include: 'projects/_services.html.j2'

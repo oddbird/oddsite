@@ -47,10 +47,9 @@ events:
 clients:
   - name: 'Quarq Race Intelligence'
     url: 'http://quarqrace.com'
-    years: [2015, 2016]
+    years: '2015-2016'
     feature: true
-    status: 'public'
-    blog: 'quarqrace'
+    priority: 'live'
     tagline: 'Real-Time Race Analytics'
     description: |
       Quarq Race Intelligence captures and interprets
@@ -70,9 +69,8 @@ clients:
 
   - name: 'QuarqNet'
     url: 'http://quarqnet.com'
-    years: [2015, 2016]
-    status: 'public'
-    blog: 'quarqnet'
+    years: '2015-2016'
+    priority: 'live'
     tagline: 'Real-Time Telemetry for Athletes'
     description: |
       QuarqNet allows athletes to track and analyze their activities,
@@ -88,10 +86,9 @@ clients:
 
   - name: 'CoachHub'
     url: 'http://www.orcasinc.com/products/coachhub/'
-    years: [2014, 2016]
-    blog: 'coachhub'
+    years: '2014-2016'
     feature: true
-    status: 'private'
+    priority: 'live'
     tagline: 'Integrated Health Coaching'
     description: |
       Our mobile coaching platform for ORCAS
@@ -118,9 +115,8 @@ clients:
 
   - name: 'Streams Resource Library'
     url: 'http://junyo.com/streams/'
-    years: [2013, 2014]
-    blog: 'junyo-streams'
-    status: 'updated'
+    years: '2013-2014'
+    priority: 'other'
     tagline: 'Curration Tools for Teachers'
     description: |
       We worked with Junyo to develop
@@ -140,20 +136,18 @@ clients:
 
   - name: 'Portfoliyo'
     source: 'https://github.com/oddbird/portfoliyo'
-    years: [2012, 2013]
-    blog: 'portfoliyo'
-    status: 'removed'
+    years: '2012-2013'
+    priority: 'other'
     tagline: 'Real-Time Communication for Parents, Teachers, and Students'
     client:
       name: 'The K Network'
 
   - name: 'Master Lookup Table'
     source: 'https://github.com/oddbird/mlt'
-    years: [2011]
-    blog: 'mlt'
+    years: '2011'
     feature: true
-    status: 'private'
-    tagline: 'Parcel Mapping for Urban Planning'
+    priority: 'live'
+    tagline: 'Parcel Mapping for Urban Development'
     description: |
       With custom interactive in-browser maps,
       MLT streamlines the Providence Plan staff's task
@@ -175,11 +169,10 @@ clients:
   - name: 'MozTrap'
     source: 'https://github.com/mozilla/moztrap'
     url: 'http://moztrap.mozilla.org'
-    years: [2011, 2012]
-    blog: 'moztrap'
+    years: '2011-2012'
     feature: true
-    status: 'public'
-    tagline: 'Quality Assurance Tools'
+    priority: 'live'
+    tagline: 'Ditributed Quality Assurance Tools'
     description: |
       Mozilla's next-generation test case management system,
       MozTrap manages extensive test suites
@@ -195,22 +188,22 @@ clients:
       url: 'https://www.mozilla.org/'
 
   - name: 'Craftisan'
-    years: [2010, 2011]
-    status: 'updated'
+    years: '2010-2011'
+    priority: 'other'
     client:
       name: 'Craftisan'
       url: 'http://craftisan.in/'
 
   - name: 'The Steel Wheels'
-    years: [2010]
-    status: 'updated'
+    years: '2010'
+    priority: 'other'
     client:
       name: 'The Steel Wheels'
       url: 'http://www.thesteelwheels.com/'
 
   - name: 'The Carrot Project'
-    years: [2009, 2010]
-    status: 'removed'
+    years: '2009-2010'
+    priority: 'other'
     client:
       name: 'Jake de Grazia'
 
@@ -345,7 +338,6 @@ oss:
     url: 'http://compass-style.org'
     source: 'http://github.com/compass/compass'
     blog: 'compass'
-    status: 'public'
     priority: 'core'
     tagline: 'CSS-authoring framework and Sass library.'
     description: |
@@ -364,7 +356,6 @@ oss:
   - name: 'Warehouse'
     url: 'https://warehouse.readthedocs.io/'
     source: 'https://github.com/pypa/warehouse'
-    status: 'public'
     blog: 'warehouse'
     priority: 'contributor'
     tagline: 'Next Generation Python Package Repository'
@@ -385,7 +376,6 @@ oss:
     blog: 'helium'
     priority: 'contributor'
     tagline: 'A floating browser window for OS X'
-    status: 'public'
     description: |
       Helium is a floating browser window
       that allows you to watch media,
@@ -408,7 +398,6 @@ oss:
     blog: 'plone'
     priority: 'core'
     tagline: 'An open-source enterprise web content management system'
-    status: 'public'
     description: |
       Plone is a mature content management platform
       written in Python
@@ -427,7 +416,6 @@ oss:
     blog: 'nunjucks'
     priority: 'core'
     tagline: "You've been looking for a more sophisticated templating engine for JavaScript. Here it is."
-    status: 'public'
     description: |
       Rich - Powerful language with block inheritance, autoescaping, macros,
       asynchronous control, and more. Heavily inspired by Jinja2.  Fast & Lean

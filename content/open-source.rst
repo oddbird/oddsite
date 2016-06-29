@@ -10,7 +10,7 @@ after:
     data: 'oss'
     priority: core
   - include: 'projects/_list.html.j2'
-    title: 'Software We Love'
+    title: 'Other Contributions'
     data: 'oss'
     priority: contributor
 
