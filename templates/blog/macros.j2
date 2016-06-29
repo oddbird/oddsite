@@ -13,7 +13,11 @@
     {{ byline(post, config) }}
     {{ header_image(post) }}
 
-    <p>{{ post.summary|safe }}</p>
+    {% if post.summary %}
+      <p>
+        {{ post.render_summary() }}
+      </p>
+    {% endif %}
 
     <a href="{{ link_to('page', slug=post.slug) }}" rel="bookmark">
       Read More »
@@ -25,7 +29,7 @@
 
 
 {% macro byline(post, config) %}
-  <div>
+  <p>
     {% if post.author %}
       by
       {{ birds.get_card(post.author, config=config) }} |
@@ -46,7 +50,7 @@
         {%- endfor %}.
       </span>
     {% endif %}
-  </div>
+  </p>
 {% endmacro %}
 
 

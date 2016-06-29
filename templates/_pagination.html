@@ -1,4 +1,4 @@
-<nav class="pagination">
+<nav data-module="pagination">
   {% if pagination.has_prev -%}
     <a href="{{ link_to(pagination.url_key, page=pagination.page - 1, **pagination.url_extra) }}" class="prev">« newer</a>
   {%- else -%}
