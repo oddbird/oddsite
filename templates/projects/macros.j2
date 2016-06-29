@@ -4,7 +4,10 @@
 {% macro list(project, config) %}
 <article>
   <h3>
-    {{ utility.link_if(project.name, project.url or project.source) }}
+    {{ utility.link_if(project.name, project.url) }}
+    {% if project.source %}
+      ({{ utility.link_if('source code', project.source) }})
+    {% endif %}
   </h3>
 
   {% if project.tagline %}
@@ -17,8 +20,15 @@
     {{ who(project.who, config) }}
   {% endif %}
 
-  {% if project.description %}
-    <p>{{ project.description }}</p>
+  {% if project.description or project.status %}
+    <p>
+      {{ project.description }}
+
+      {% if project.status %}
+        {% set named_states = config.project_status[0] %}
+        <em>{{ named_states[project.status] or project.status }}</em>
+      {% endif %}
+    </p>
   {% endif %}
 </article>
 {% endmacro %}
@@ -55,7 +65,7 @@
 
 
 {% macro for(client, years) %}
-  <span>
+  <div>
     <i>for</i>
     {{ utility.link_if(
       client.name,
@@ -64,7 +74,7 @@
     {% if years %}
       [{{ years }}]
     {% endif %}
-  </span>
+  </div>
 {% endmacro %}
 
 {% macro who(contributors, config) %}

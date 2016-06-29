@@ -71,6 +71,7 @@ clients:
     url: 'http://quarqnet.com'
     years: '2015-2016'
     priority: 'live'
+    status: 'pre-release'
     tagline: 'Real-Time Telemetry for Athletes'
     description: |
       QuarqNet allows athletes to track and analyze their activities,
@@ -117,6 +118,7 @@ clients:
     url: 'http://junyo.com/streams/'
     years: '2013-2014'
     priority: 'other'
+    status: 'updated'
     tagline: 'Curration Tools for Teachers'
     description: |
       We worked with Junyo to develop
@@ -138,6 +140,7 @@ clients:
     source: 'https://github.com/oddbird/portfoliyo'
     years: '2012-2013'
     priority: 'other'
+    status: 'removed'
     tagline: 'Real-Time Communication for Parents, Teachers, and Students'
     client:
       name: 'The K Network'
@@ -190,6 +193,7 @@ clients:
   - name: 'Craftisan'
     years: '2010-2011'
     priority: 'other'
+    status: 'updated'
     client:
       name: 'Craftisan'
       url: 'http://craftisan.in/'
@@ -197,6 +201,7 @@ clients:
   - name: 'The Steel Wheels'
     years: '2010'
     priority: 'other'
+    status: 'updated'
     client:
       name: 'The Steel Wheels'
       url: 'http://www.thesteelwheels.com/'
@@ -204,8 +209,18 @@ clients:
   - name: 'The Carrot Project'
     years: '2009-2010'
     priority: 'other'
+    status: 'removed'
     client:
       name: 'Jake de Grazia'
+
+
+project_status:
+  -
+    pre-release: 'This software is not yet available to the public.'
+    private: 'This software is not available to the public.'
+    removed: 'This software is no longer in use.'
+    updated: 'This software has changed substantially since we worked on it.'
+    consult: 'We provided consultation, but did not build this software.'
 
 
 # Open Source Contributions
