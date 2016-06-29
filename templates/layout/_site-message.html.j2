@@ -2,10 +2,10 @@
 
 
 {% set site_message = config.site_message[0] %}
-{% if config.show_site_message %}
+{% if site_message.body %}
   <aside data-region="site-message">
     <p class="message-body">
-      {{ site_message[config.show_site_message]|safe }}
+      {{ site_message.body|safe }}
     </p>
     <div class="message-action">
       {{ utility.link_if(site_message.action, site_message.url, class="btn") }}

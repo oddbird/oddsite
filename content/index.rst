@@ -1,6 +1,5 @@
 public: yes
 location: home
-show_site_message: long
 after:
   - include: 'projects/_feature.html.j2'
     title: Client Work

@@ -3,18 +3,14 @@
 # Site-Wide Messages
 # ------------------
 
-show_site_message: 'short'
 site_message:
-  - long: |
+  - body: |
       <strong>We’re re-building our website in the open</strong>,
       and writing about our process along the way.
       What you see below is up-to-date,
       but mostly unstyled.
       We hope you'll follow along
       and even get involved!
-    short: |
-      <strong>We’re re-designing our website in the open</strong>,
-      and writing about our process along the way.
     action: Find out more!
     url: '#@@@'
 
