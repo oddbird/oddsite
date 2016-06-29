@@ -234,7 +234,7 @@ oss:
     feature: true
     blog: 'susy'
     priority: 'creator'
-    tagline: 'Web layout power tools.'
+    tagline: 'Web layout power tools'
     description: |
       In a world of agile development and super-tablet-multi-magic-laptop-phones,
       the best layouts can’t be contained in a single framework or technique.
@@ -250,7 +250,7 @@ oss:
     feature: true
     blog: 'django'
     priority: 'core'
-    tagline: 'The web framework for perfectionists with deadlines.'
+    tagline: 'The web framework for perfectionists with deadlines'
     description: |
       Django is a high-level Python Web framework
       that encourages rapid development and clean, pragmatic design.
@@ -268,7 +268,7 @@ oss:
     feature: true
     blog: 'sass-true'
     priority: 'creator'
-    tagline: 'Unit-testing for Sass developers.'
+    tagline: 'Unit-testing for Sass developers'
     description: |
       True is a full-featured unit-testing library for Sass developers.
       The core functionality is written in pure SassScript,
@@ -285,7 +285,7 @@ oss:
     source: 'https://github.com/oddbird/?utf8=%E2%9C%93&query=+only%3Apublic+accoutrement'
     blog: 'accoutrement'
     priority: 'creator'
-    tagline: 'Modular theme-configuration libraries.'
+    tagline: 'Modular theme-configuration libraries'
     description: |
       A set of related theme-configuration libraries
       for building and documenting style patterns
@@ -314,6 +314,23 @@ oss:
       and documentation of UI patterns
       in both Sass and Nunjucks.
 
+  - name: 'Nunjucks'
+    url: 'http://mozilla.github.io/nunjucks/'
+    source: 'https://github.com/mozilla/nunjucks/'
+    blog: 'nunjucks'
+    priority: 'core'
+    tagline: "Sophisticated templating for JavaScript"
+    description: |
+      Rich - Powerful language with block inheritance, autoescaping, macros,
+      asynchronous control, and more. Heavily inspired by Jinja2.  Fast & Lean
+      - High-performant. Small 8K gzipped runtime with precompiled templates in
+      the browser. Crazy extensible with custom filters and
+      extensions. Available in node and all modern web browsers, with thorough
+      precompilation options.
+    who:
+      - author: 'carl'
+        role: 'maintainer'
+
   - name: 'Sass Spec'
     source: 'https://github.com/sass/sass-spec'
     blog: 'sass-spec'
@@ -327,12 +344,30 @@ oss:
       - author: 'miriam'
         role: 'contributor'
 
+  - name: 'Plone'
+    url: 'http://plone.org/'
+    source: 'https://github.com/plone/Products.CMFPlone'
+    blog: 'plone'
+    priority: 'core'
+    tagline: 'Enterprise web content management system'
+    description: |
+      Plone is a mature content management platform
+      written in Python
+      and developed by an international open source community.
+      It has particular strengths
+      in user experience for content editors,
+      flexible theming,
+      and customizability by developers.
+    who:
+      - author: 'david'
+        role: 'core developer, 2008-2014'
+
   - name: 'pip'
     url: 'https://pip.pypa.io/'
     source: 'https://github.com/pypa/pip/'
     blog: 'pip'
     priority: 'core'
-    tagline: 'Python package installer.'
+    tagline: 'Python package installer'
     description: |
       The PyPA recommended tool for installing Python packages.
     who:
@@ -357,7 +392,7 @@ oss:
     blog: 'compass'
     priority: 'core'
     status: 'end-of-life'
-    tagline: 'CSS-authoring framework and Sass library.'
+    tagline: 'CSS-authoring framework and Sass library'
     description: |
       An open-source CSS authoring framework
       which uses the Sass language
@@ -409,41 +444,6 @@ oss:
     who:
       - author: 'kit'
         role: 'contributor'
-
-  - name: 'Plone'
-    url: 'http://plone.org/'
-    source: 'https://github.com/plone/Products.CMFPlone'
-    blog: 'plone'
-    priority: 'core'
-    tagline: 'An open-source enterprise web content management system'
-    description: |
-      Plone is a mature content management platform
-      written in Python
-      and developed by an international open source community.
-      It has particular strengths
-      in user experience for content editors,
-      flexible theming,
-      and customizability by developers.
-    who:
-      - author: 'david'
-        role: 'core developer, 2008-2014'
-
-  - name: 'Nunjucks'
-    url: 'http://mozilla.github.io/nunjucks/'
-    source: 'https://github.com/mozilla/nunjucks/'
-    blog: 'nunjucks'
-    priority: 'core'
-    tagline: "You've been looking for a more sophisticated templating engine for JavaScript. Here it is."
-    description: |
-      Rich - Powerful language with block inheritance, autoescaping, macros,
-      asynchronous control, and more. Heavily inspired by Jinja2.  Fast & Lean
-      - High-performant. Small 8K gzipped runtime with precompiled templates in
-      the browser. Crazy extensible with custom filters and
-      extensions. Available in node and all modern web browsers, with thorough
-      precompilation options.
-    who:
-      - author: 'carl'
-        role: 'maintainer'
 
 
 # Giving
