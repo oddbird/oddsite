@@ -1,7 +1,7 @@
 {% import 'utility.macros.j2' as utility %}
 {% import 'birds/macros.j2' as birds %}
 
-{% macro list(post, config, section='blog-post') %}
+{% macro list(post, section='blog-post') %}
   <article {{ utility.attr_if('data-module', section) }}>
     {% set heading = 'h2' if section else 'h3' %}
     <{{ heading }}>
@@ -15,7 +15,7 @@
       {{ tags(post.tags) }}
     </p>
 
-    {{ birds.get_card(post.author, config=config, details=true) }}
+    {{ birds.get_card(post.author, config=post.config, details=true) }}
     {{ header_image(post) }}
 
     {% if post.summary %}
@@ -31,7 +31,7 @@
 {% endmacro %}
 
 
-{% macro link(post, config) %}
+{% macro link(post) %}
   {{ pubdate(post.pub_date) }} »
   <a href="{{ link_to('page', slug=post.slug) }}" rel="bookmark">
     {{ post.title }}
@@ -39,9 +39,9 @@
 {% endmacro %}
 
 
-{% macro byline(post, config) %}
+{% macro byline(post) %}
 <p>
-  by {{ birds.get_card(post.author, config=config) }} |
+  by {{ birds.get_card(post.author, config=post.config) }} |
   {{ pubdate(post.pub_date) }}
   {{ tags(post.tags) }}
 </p>
@@ -62,11 +62,14 @@
 
 
 {% macro header_image(post) %}
-  {% set image = post.config.image[0].src %}
-  {% if 'http://' in image %}
-    <img src="{{ image }}">
-  {% else %}
-    <img src="/static/images/blog/{{ image }}">
+  {% set image = post.config.image[0].src if post.config.image else none %}
+
+  {% if image %}
+    {% if 'http://' in image %}
+      <img src="{{ image }}">
+    {% else %}
+      <img src="/static/images/blog/{{ image }}">
+    {% endif %}
   {% endif %}
 {% endmacro %}
 

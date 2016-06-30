@@ -10,7 +10,7 @@
 
 {% block archive %}
   {%- for post in pagination.get_slice() %}
-    {{ blog.list(post, config) }}
+    {{ blog.list(post) }}
   {%- endfor %}
 
   {% if show_pagination and pagination.pages > 1 %}

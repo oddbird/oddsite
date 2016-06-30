@@ -7,5 +7,3 @@ after:
 Public Speaking
 ===============
 
-@@@ Something about our participation in events
-as public speakers...
