@@ -1,6 +1,12 @@
 public: yes
 author: miriam
 tags: [oddsite, open-design]
+image:
+  - src: 'oddsite.jpg'
+summary: |
+  We’re re-building our website in the open,
+  and writing about our process along the way.
+  We hope you'll follow along and even get involved!
 after:
   - include: 'blog/_tag-module.html.j2'
     title: 'Articles about the OddSite re-design'

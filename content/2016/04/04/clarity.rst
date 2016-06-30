@@ -1,6 +1,14 @@
 public: yes
 author: miriam
 tags: [conferences]
+image:
+  - src: 'clarity.jpg'
+summary: |
+  It was an honor to be part of the first ever
+  Clarity Conference in San Francisco —
+  a beautiful event
+  organized by Jina,
+  and completely focussed on Style Guides.
 
 
 Clarity Conference
@@ -22,7 +30,8 @@ especially in our front-end Sass,
 HTML (Jinja?),
 and Javascript code.
 
-.. _Clarity Conference: #@@@
-.. _Chris Coyier: #@@@
-.. _Brad Frost: #@@@
-.. _code patterns: '/2016/04/02/code-patterns/'
+.. _Clarity Conference: http://clarityconf.com/
+.. _Jina: https://github.com/sushiandrobots
+.. _Chris Coyier: http://codepen.io/chriscoyier/post/clarity-2016-wrapup
+.. _Brad Frost: http://bradfrost.com/blog/post/clarity-conf-code-patterns-for-pattern-making/
+.. _code patterns: 'http://oddbooksapp.com/books/pattern-making/'

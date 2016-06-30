@@ -6,8 +6,8 @@ summary: |
   A brief review of 2013: OddBird, year six.
 
 
-2013
-====
+2013 Wrap-up
+============
 
 As we wrap up our sixth year, it seems like a good time to share our
 first-ever year-end retrospective. Here's 2013, OddBird style:
