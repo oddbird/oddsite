@@ -330,6 +330,8 @@ oss:
     who:
       - author: 'carl'
         role: 'maintainer'
+      - author: 'jonny'
+        role: 'contributor'
 
   - name: 'Sass Spec'
     source: 'https://github.com/sass/sass-spec'
@@ -556,7 +558,7 @@ birds:
 
   - name: 'Jonny Gerig Meyer'
     author: 'jonny'
-    role: 'co-founder and front-end developer'
+    role: 'co-founder and front-end lead'
     adr:
       city: 'Goshen'
       state: 'IN'
@@ -569,8 +571,8 @@ birds:
       He has authored or contributed to
       numerous open-source projects,
       and is an active member in the JavaScript community.
-      Jonny also gets excited about homebrewing,
-      ultimate frisbee,
+      Jonny gets distracted by ultimate frisbee,
+      homebrewing delicious IPAs and stouts,
       and trying to keep up with his two-year-old daughter.
     links:
       - twitter: 'jgerigmeyer'
@@ -649,7 +651,6 @@ birds:
       at design and front-end development conferences.
       She is a co-host of the WordPress Naperville meetup group
       and is a superfan of far too many podcasts.
-
     links:
       - twitter: 'stacykvernmo'
         github: 'stacyk'
@@ -727,7 +728,6 @@ birds:
       stimulating conversation with humans,
       coaxing music out of his guitar,
       and looking up.
-
     links:
       - github: 'samwisemr'
 
