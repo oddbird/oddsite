@@ -8,13 +8,12 @@ const sassdoc = require('sassdoc');
 const webpack = require('webpack');
 const WebpackShellPlugin = require('webpack-shell-plugin');
 
-const outputPath = path.join(__dirname, 'content', 'static', 'dist', 'assets');
-const sassdocPath = path.join(
-  __dirname, 'content', 'static', 'dist', 'styleguide');
+const outputPath = path.join(__dirname, 'content', 'static', 'assets');
+const sassdocPath = path.join(__dirname, 'content', 'styleguide');
+const assetsJsonPath = path.join(__dirname, 'content', 'static');
 let jsOutput = '[name].bundle.js';
 let styleOutput = '[name].bundle.css';
 let mediaOutput = '[name].[ext]';
-let assetsJsonPath = path.join(__dirname, 'content', 'static', 'dist');
 let devtool = 'cheap-module-inline-source-map';
 let buildScript = 'python run.py dev';
 let cleanScript = 'rm -rf dev-output/*';
@@ -24,7 +23,6 @@ if (process.env.prod === 'true') {
   jsOutput = '[name].bundle.[chunkhash].min.js';
   styleOutput = '[name].bundle.[chunkhash].min.css';
   mediaOutput = '[name].[hash].[ext]';
-  assetsJsonPath = path.join(__dirname, 'content', 'static', 'dist');
   devtool = 'source-map';
   buildScript = 'python run.py prod';
   cleanScript = 'rm -rf output/*';
@@ -49,7 +47,7 @@ SassdocPlugin.prototype.apply = (compiler) => {
     const json = getCSS(statsJSON.assetsByChunkName.sass_json);
     const cssPath = css ? path.join(outputPath, css) : undefined;
     const jsonPath = json ? path.join(outputPath, json) : undefined;
-    sassdoc('./content/static/sass/**/*.scss', {
+    sassdoc('./static/sass/**/*.scss', {
       dest: sassdocPath,
       theme: 'herman',
       customCSS: cssPath,
@@ -77,25 +75,24 @@ SassdocPlugin.prototype.apply = (compiler) => {
 
 module.exports = {
   // context for entry points
-  context: path.join(__dirname, 'content', 'static', 'js'),
+  context: path.join(__dirname, 'static', 'js'),
   // define all the entry point bundles
   entry: {
     app: './init.js',
     susy_off_canvas: './pages/susy-off-canvas.js',
     app_styles: ['screen.scss'],
-    susy_off_canvas_styles: ['pages/susy-off-canvas.scss']
-    // styleguide: ['styleguide.scss'],
-    // sass_json: ['json.scss']
+    susy_off_canvas_styles: ['pages/susy-off-canvas.scss'],
+    sass_json: ['json.scss']
   },
   output: {
     path: outputPath,
-    publicPath: '/static/dist/assets/',
+    publicPath: '/static/assets/',
     filename: jsOutput
   },
   resolve: {
     // where to look for "required" modules
     modulesDirectories: [
-      'js',
+      'static/js',
       'templates',
       'sass',
       'static',
@@ -138,7 +135,7 @@ module.exports = {
   module: {
     loaders: [
       {
-        test: /content\/static\/js\/.*\.js$/,
+        test: /static\/js\/.*\.js$/,
         exclude: /(node_modules|vendor)/,
         loader: 'babel',
         query: { cacheDirectory: process.env.prod !== 'true' }

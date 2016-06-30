@@ -25,8 +25,8 @@ if (process.version !== expectedNodeVersion) {
 
 const paths = {
   SRC_TEMPLATES_DIR: 'templates/',
-  SRC_JS_DIR: 'content/static/js/',
-  SASS_DIR: 'content/static/sass/',
+  SRC_JS_DIR: 'static/js/',
+  SASS_DIR: 'static/sass/',
   ICONS_DIR: 'templates/icons/',
   DIST_DIR: 'dev-output/',
   IGNORE: [
@@ -162,10 +162,7 @@ gulp.task('runserver', ['browser-sync']);
 
 gulp.task('browser-sync', (cb) => {
   browserSync.init({
-    server: {
-      baseDir: paths.DIST_DIR,
-      routes: { '/styleguide': `${paths.DIST_DIR}static/dist/styleguide` }
-    },
+    server: { baseDir: paths.DIST_DIR },
     open: false,
     logLevel: 'info',
     logPrefix: 'oddsite',

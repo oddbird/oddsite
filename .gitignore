@@ -1,6 +1,8 @@
 syntax: glob
 TAGS
-content/static/dist/
+content/static/assets/
+content/static/assets.json
+content/styleguide/
 dev-output/
 node_modules/
 *.DS_Store

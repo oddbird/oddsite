@@ -64,7 +64,7 @@ Directory Structure
 ~~~~~~~~~~~~~~~~~~~
 
 The site templates are in ``templates/``, content is in ``content/``, and
-static files are in ``content/static/``.
+static files are in ``static/``.
 
 To view the site live locally, run ``gulp serve`` and visit
 ``http://localhost:3000`` in your browser.
