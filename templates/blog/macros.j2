@@ -10,7 +10,12 @@
       </a>
     </{{ heading }}>
 
-    {{ byline(post, config) }}
+    <p>
+      {{ pubdate(post.pub_date) }}
+      {{ tags(post.tags) }}
+    </p>
+
+    {{ birds.get_card(post.author, config=config, details=true) }}
     {{ header_image(post) }}
 
     {% if post.summary %}
@@ -22,35 +27,37 @@
     <a href="{{ link_to('page', slug=post.slug) }}" rel="bookmark">
       Read More »
     </a>
-
-    {{ birds.get_card(post.author, config=config, details=true) }}
   </article>
 {% endmacro %}
 
 
+{% macro link(post, config) %}
+  {{ pubdate(post.pub_date) }} »
+  <a href="{{ link_to('page', slug=post.slug) }}" rel="bookmark">
+    {{ post.title }}
+  </a>
+{% endmacro %}
+
+
 {% macro byline(post, config) %}
-  <p>
-    {% if post.author %}
-      by
-      {{ birds.get_card(post.author, config=config) }} |
-    {% endif %}
+<p>
+  by {{ birds.get_card(post.author, config=config) }} |
+  {{ pubdate(post.pub_date) }}
+  {{ tags(post.tags) }}
+</p>
+{% endmacro %}
 
-    {% if post.pub_date %}
-    <time datetime="{{ post.pub_date.isoformat() }}" pubdate="pubdate">
-      {{ post.pub_date.strftime("%B %d, %Y") }}
-    </time>
-    {% endif %}
 
-    {% if post.tags %}
-      <span>
-        in
-        {% for tag in post.tags|sort(case_sensitive=true) %}
-          {%- if not loop.first %}, {% endif -%}
-          <a href="{{ link_to('tag', tag=tag) }}" rel="tag">{{ tag }}</a>
-        {%- endfor %}.
-      </span>
-    {% endif %}
-  </p>
+{% macro tags(taglist) %}
+  {% if taglist %}
+    <span>
+      in
+      {% for tag in taglist|sort(case_sensitive=true) %}
+        {%- if not loop.first %}, {% endif -%}
+        <a href="{{ link_to('tag', tag=tag) }}" rel="tag">{{ tag }}</a>
+      {%- endfor %}.
+    </span>
+  {% endif %}
 {% endmacro %}
 
 
@@ -60,5 +67,14 @@
     <img src="{{ image }}">
   {% else %}
     <img src="/static/images/blog/{{ image }}">
+  {% endif %}
+{% endmacro %}
+
+
+{% macro pubdate(date) %}
+  {% if date %}
+    <time datetime="{{ date.isoformat() }}" pubdate="pubdate">
+      {{ date.strftime("%B %d, %Y") }}
+    </time>
   {% endif %}
 {% endmacro %}

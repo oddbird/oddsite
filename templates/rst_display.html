@@ -11,9 +11,17 @@
   {%- endif %}
 
   {% if ctx.pub_date %}
-    {{ blog.byline(ctx, config) }}
-    {{ blog.header_image(ctx) }}
+    <p>
+      {{ blog.pubdate(ctx.pub_date) }}
+      {{ blog.tags(ctx.tags) }}
+    </p>
   {% endif %}
+
+  {% if ctx.author %}
+    {{ birds.get_card(ctx.author, config, details=true) }}
+  {% endif %}
+
+  {{ blog.header_image(ctx) }}
 
   {%- for module in config.before -%}
     {% include module.include %}
@@ -21,10 +29,6 @@
 
   <div data-module="rst-body">
     {{ rst.fragment }}
-
-    {% if ctx.author %}
-      {{ birds.get_card(ctx.author, config, details=true) }}
-    {% endif %}
   </div>
 
 

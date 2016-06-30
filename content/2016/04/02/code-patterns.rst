@@ -9,7 +9,7 @@ tags: [speaking]
     events:
       - venue: 'Clarity Conference'
         date: ['04', '01', '2016']
-        video: '@@@'
+        video: 'https://www.sitepoint.com/premium/courses/clarity-conference-2016-2925/lesson/4/step/1'
 
 
 Code Patterns for Pattern Making
