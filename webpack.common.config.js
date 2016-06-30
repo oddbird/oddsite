@@ -129,7 +129,7 @@ module.exports = {
     }),
     new SassdocPlugin(),
     new WebpackShellPlugin({
-      onBuildEnd: [ buildScript ],
+      onBuildEnd: [buildScript],
       dev: false
     })
   ],
