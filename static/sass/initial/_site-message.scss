@@ -9,7 +9,7 @@
   max-width: 100%;
   padding: 0;
 
-  @media screen and (min-width: 40em) {
+  @media screen and (min-width: 36em) {
     flex-direction: row;
   }
 }
@@ -17,41 +17,46 @@
 .message-body-wrapper {
   @include contrasted('invert');
 
-  @media screen and (min-width: 30em) {
+  @media screen and (min-width: 36em) {
     margin-left: -10vmin;
     padding-right: 6vmin;
     transform: skew(-30deg);
+  }
+
+  &:after {
+    background-image: linear-gradient(177deg, #266478, #266478 50%, #edf9fe 51%, #edf9fe);
+    content: '';
+    display: block;
+    height: 40px;
+    width: 100%;
+
+    @media screen and (min-width: 36em) {
+      display: none;
+    }
   }
 }
 
 .message-body {
   margin: 0;
-  padding: 2vmin;
+  padding: 2vmin 2vmin 4vmin 2vmin;
 
-  @media screen and (min-width: 30em) {
+  @media screen and (min-width: 36em) {
     flex: 1 1 auto;
     padding: 3vmin 3vmin 3vmin 20vmin;
     transform: skew(30deg);
   }
-
-  &:after {
-    
-    height: 0;
-    border-style: solid;
-    border-width: 100% 230px 0 0;
-    border-color: #4d749e transparent transparent transparent;
-    width: 0;
-    height: 20px;
-    width: 100%;
-  }
 }
 
 .message-action {
+  align-self: flex-end;
+  margin-top: -3rem;
   padding: 2vmin;
   text-align: center;
 
-  @media screen and (min-width: 30em) {
+  @media screen and (min-width: 36em) {
+    align-self: center;
     flex: 1 0 auto;
-    padding: 0 10vmin 0 6vmin;
+    margin-top: 0;
+    padding: 0 10vmin 0 10vmin;
   }
 }
