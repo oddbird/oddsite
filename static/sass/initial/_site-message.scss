@@ -14,25 +14,44 @@
   }
 }
 
-.message-body {
+.message-body-wrapper {
   @include contrasted('invert');
-  margin: 0;
-  padding: 3vmin 3vmin 6vmin 3vmin;
 
-  @media screen and (min-width: 40em) {
-    clip-path: polygon(0 100%, 75% 300%, 100% 0, 0 0);
+  @media screen and (min-width: 30em) {
+    margin-left: -10vmin;
+    padding-right: 6vmin;
+    transform: skew(-30deg);
+  }
+}
+
+.message-body {
+  margin: 0;
+  padding: 2vmin;
+
+  @media screen and (min-width: 30em) {
     flex: 1 1 auto;
-    padding: 2vmin 11vmin 2vmin 6vmin;
+    padding: 3vmin 3vmin 3vmin 20vmin;
+    transform: skew(30deg);
+  }
+
+  &:after {
+    
+    height: 0;
+    border-style: solid;
+    border-width: 100% 230px 0 0;
+    border-color: #4d749e transparent transparent transparent;
+    width: 0;
+    height: 20px;
+    width: 100%;
   }
 }
 
 .message-action {
-  margin-top: -1rem;
-  padding: 0 6vmin 0 3vmin;
+  padding: 2vmin;
   text-align: center;
 
-  @media screen and (min-width: 40em) {
+  @media screen and (min-width: 30em) {
     flex: 1 0 auto;
-    margin-top: 0;
+    padding: 0 10vmin 0 6vmin;
   }
 }
