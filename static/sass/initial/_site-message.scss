@@ -11,10 +11,11 @@
 
 .message-body {
   @include contrasted('invert');
+  clip-path: polygon(0 100%, 75% 300%, 100% 0, 0 0);
   flex: 1 1 auto;
   margin: 0;
   order: 1;
-  padding: 3vmin;
+  padding: 5vmin 11vmin;
 }
 
 .message-action {
