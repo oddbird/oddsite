@@ -16,7 +16,6 @@ let styleOutput = '[name].bundle.css';
 let mediaOutput = '[name].[ext]';
 let devtool = 'cheap-module-inline-source-map';
 let buildScript = 'python run.py dev';
-let cleanScript = 'rm -rf dev-output/*';
 
 // Override settings if running in production
 if (process.env.prod === 'true') {
@@ -25,7 +24,6 @@ if (process.env.prod === 'true') {
   mediaOutput = '[name].[hash].[ext]';
   devtool = 'source-map';
   buildScript = 'python run.py prod';
-  cleanScript = 'rm -rf output/*';
 }
 
 const SassdocPlugin = function () {
@@ -130,7 +128,10 @@ module.exports = {
       prettyPrint: true
     }),
     new SassdocPlugin(),
-    new WebpackShellPlugin({ onBuildEnd: [ cleanScript, buildScript ] })
+    new WebpackShellPlugin({
+      onBuildEnd: [ buildScript ],
+      dev: false
+    })
   ],
   module: {
     loaders: [
