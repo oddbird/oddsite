@@ -154,7 +154,7 @@
 {% macro oss_list(author, oss) %}
   {% call list_wrapper('Open-Source', 'oss', oss) %}
     {% for item in oss %}
-      {% set oss_author = item.who|selectattr('name', 'equalto', author)|list %}
+      {% set oss_author = item.who|selectattr('author', 'equalto', author)|list %}
 
       {% if oss_author|length > 0 %}
         {% set oss_author = oss_author[0] %}

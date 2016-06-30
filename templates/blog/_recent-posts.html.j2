@@ -7,6 +7,6 @@
   </h2>
 
   {%- for entry in get_recent_blog_entries(module.count or 5) %}
-    {{ blog.list(entry, config, section=false) }}
+    {{ blog.list(entry, section=false) }}
   {%- endfor %}
 </section>

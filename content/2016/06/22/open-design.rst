@@ -26,12 +26,15 @@ talking about our choices while we work.
 
 You can get involved in several ways:
 
-- Join our `public Slack channel`_ for front-row access to the process,
-  ask us questions, and provide feedback along the way.
-- Talk with us on `Twitter`_.
+- Join our `public Slack channel`_ for front-row access to the process.
+  Ask us questions, provide feedback,
+  and chat with us along the way.
+- Follow our progress on `Github`_.
+- Talk to us on `Twitter`_.
 - Check back here for regular updates and `articles`_ as we work.
   We'll add everything to the timelines below:
 
 .. _public Slack channel: #@@@
+.. _Github: https://github.com/oddbird/oddsite/
 .. _Twitter: http://twitter.com/oddbird
 .. _articles: #open-design-articles
