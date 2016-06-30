@@ -38,7 +38,7 @@
 
 .message-body {
   margin: 0;
-  padding: 2vmin 2vmin 4vmin 2vmin;
+  padding: 2vmin 2vmin 4vmin;
 
   @media screen and (min-width: 36em) {
     flex: 1 1 auto;
@@ -57,6 +57,6 @@
     align-self: center;
     flex: 1 0 auto;
     margin-top: 0;
-    padding: 0 10vmin 0 10vmin;
+    padding: 0 10vmin;
   }
 }
