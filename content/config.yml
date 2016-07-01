@@ -793,10 +793,13 @@ birds:
 
 birds_former:
   - name: 'Claudina Sarahe'
+    author: 'claudina'
     url: 'https://twitter.com/itsmisscs'
   - name: 'Rachel Nabors'
+    author: 'rachel'
     url: 'https://twitter.com/rachelnabors'
   - name: 'Una Kravets'
+    author: 'una'
     url: 'https://twitter.com/Una'
 
 
@@ -1118,7 +1121,7 @@ events_past:
     date: ['10', '12', '2013']
     who:
       - author: 'miriam'
-        title: 'Show Your Work <i>&</i> Share Your Toys'
+        title: 'Show Your Work & Share Your Toys'
         slides: 'http://miriamsuzanne.com/pres/show-yr-work/'
         video: 'https://vimeo.com/channels/sassconf2013/86306775'
 

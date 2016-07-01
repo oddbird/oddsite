@@ -1,7 +1,12 @@
 public: yes
 location: speaking
 after:
-  - include: 'community/_talks.html.j2'
+  - include: 'community/_events.html.j2'
+    title: 'Upcoming Events'
+    data: 'events'
+  - include: 'community/_events.html.j2'
+    title: 'Speaking History'
+    data: 'events_past'
 
 
 Public Speaking

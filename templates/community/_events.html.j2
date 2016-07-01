@@ -1,13 +1,17 @@
 {% import 'utility.macros.j2' as utility %}
 
 {% macro show_talk(who) %}
-  {% set bird_list = config.birds|selectattr('author', 'equalto', who.author)|list %}
-  {% set bird = bird_list[0] %}
+  {% set bird_list = config.birds|selectattr('author', 'equalto', who.author)|list or config.birds_former|selectattr('author', 'equalto', who.author)|list %}
+  {% set bird = bird_list[0] if bird_list else who.author %}
+
   <li>
     {{ utility.link_if(bird.name, ['/birds/#bird', who.author]|join('-')) }}
     {% if who.role %}[{{ who.role }}]{% endif %}
-    {% if who.talk %}
-      <div>{{ utility.link_if(who.talk, who.url) }}</div>
+    {% if who.title or who.slides %}
+      » {{ utility.link_if(who.title|safe or 'slides', who.slides or who.video) }}
+    {% endif %}
+    {% if who.slides and who.video %}
+      ({{ utility.link_if('video', who.video) }})
     {% endif %}
   </li>
 {% endmacro %}
@@ -17,7 +21,7 @@
     {{ module.title or 'Conferences and Events' }}
   </h2>
 
-  {% for event in config.events %}
+  {% for event in config[module.data or 'events'] %}
     <div>
       <h3>
         {{ utility.link_if(event.venue, event.url) }}
