@@ -26,6 +26,9 @@ organizations that increase diversity in the community —
 from race and gender, to identity and sexuality —
 and events that bring the whole community together
 in thoughful and inclusive ways.
+And then, on occasion,
+we also sponsor the communities and events
+that keep us entertained and fulfilled outside of work.
 
 .. _`open-source software`: /open-source/
 .. _`public speaking`: /speaking/

@@ -236,7 +236,8 @@ oss:
     priority: 'creator'
     tagline: 'Web layout power tools'
     description: |
-      In a world of agile development and super-tablet-multi-magic-laptop-phones,
+      In a world of agile development
+      and super-tablet-multi-magic-laptop-phones,
       the best layouts can’t be contained in a single framework or technique.
       CSS Libraries are a bloated mess of opinions about how to do your job.
       Why let the table-saw tell you where to put the kitchen?
@@ -452,19 +453,51 @@ oss:
 # ------
 
 giving:
-
-  - name: 'Django Girls'
-    url: 'https://djangogirls.org/'
+  - name: 'Django Software Foundation'
+    url: 'https://www.djangoproject.com/foundation/'
     type: 'donations'
+    years: '2015, 2016'
     description: |
-      is a non-profit organization
-      and a community that empowers and helps women to organize free,
-      one-day programming workshops by providing tools,
-      resources and support.
+      is an independent non-profit foundation
+      established to to promote, support, and advance the Django Web framework.
+      As active users and contributors to the Django community,
+      we're proud to support the continued development of the project.
+
+  - name: 'Goshen Ultimate Summer League'
+    url: 'http://goshenultimate.com/'
+    type: 'donations'
+    years: '2014-2016'
+    description: |
+      provides opportunities to learn, play,
+      and teach spirited Ultimate in Goshen, IN and surrounding areas.
+      We're just glad they keep Jonny out of trouble
+      when he's not busy writing JavaScript.
+
+  - name: 'Django Under the Hood'
+    url: 'https://www.djangounderthehood.com/'
+    type: 'sponsorships'
+    years: '2015'
+    description: |
+       is an exciting Django conference full of deep,
+       detailed talks and amazing opportunities
+       to shape the future of Django.
+
+  - name: 'SassConf'
+    url: 'http://sassconf.com/'
+    type: 'sponsorships'
+    years: '2013-2015'
+    description: |
+      brings together a far-flung community of front-end developers,
+      designers, architects, and web enthusiasts
+      who dream of building a better web.
+      Besides being active participants in the Sass community,
+      we love the thoughtfulness and dedication to diversity
+      that the SassConf organizers bring to the community.
 
   - name: 'Black Girls CODE'
     url: 'http://blackgirlscode.com/'
     type: 'donations'
+    years: '2013-2015'
     description: |
       has set out to prove to the world
       that girls of every color have the skills
@@ -475,41 +508,68 @@ giving:
       and give underprivileged girls a chance
       to become the masters of their technological worlds.
 
+  - name: 'Thunder Valley Community Development Corporation'
+    url: 'http://thundervalley.org/'
+    type: 'donations'
+    years: '2014, 2015'
+    description: |
+      is a Lakota-run, grassroots Community Development Corporation
+      that is building a community for systemic change
+      on the Pine Ridge Reservation in South Dakota.
+
   - name: 'PyLadies'
     url: 'http://www.pyladies.com/'
     type: 'donations'
+    years: '2012, 2014, 2015'
     description: |
       is an international mentorship group
       with a focus on helping more women become active participants
       and leaders in the Python open-source community.
 
-  - name: 'SassConf'
-    url: 'http://sassconf.com/'
-    type: 'sponsorships'
+  - name: 'Django Girls'
+    url: 'https://djangogirls.org/'
+    type: 'donations'
+    years: '2015'
     description: |
-      is a yearly event that brings together
-      a far-flung community of front-end developers,
-      designers, architects, and web enthusiasts
-      who dream of building a better web.
-      Originally born out of NYC’s GothamSass meetup,
-      SassConf has grown from a language-specific conference
-      to an event on the cutting edge of front-end technology.
-
-  - name: 'DjangoCon'
-    url: 'https://djangocon.us/'
-    type: 'sponsorships'
-    description: |
-      is an international Django-community conference,
-      for the community, and by the community.
+      is a non-profit organization
+      and a community that empowers and helps women to organize free,
+      one-day programming workshops by providing tools,
+      resources and support.
 
   - name: 'PyCon'
     url: 'https://us.pycon.org/'
     type: 'sponsorships'
+    years: '2013, 2014'
     description: |
       is the largest annual gathering
       for the people who use and develop
       the open-source Python programming language.
 
+  - name: 'The Mixin'
+    url: 'http://themixinsf.com/'
+    type: 'sponsorships'
+    years: '2015'
+    description: |
+      is a San Francisco Sass front-end meetup.
+
+  - name: 'COSOLA-MACILE'
+    type: 'donations'
+    years: '2013, 2014'
+    description: |
+      is a non-profit organization
+      focused on K-12 STEM education
+      in less advantaged communities.
+
+  - name: 'Ada Initiative'
+    url: 'https://adainitiative.org/'
+    type: 'donations'
+    years: '2012, 2013'
+    description: |
+      supported women in open technology and culture
+      through activities such as producing codes of conduct
+      and anti-harassment policies,
+      advocating for gender diversity,
+      and teaching ally skills.
 
 
 # OddBirds
