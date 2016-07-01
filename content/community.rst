@@ -15,13 +15,17 @@ after:
 Community Involvement
 =====================
 
-**We love being involved**
-in the web design and development communities.
-We're thankful to the wonderful people
-that helped us get started,
-and enjoy giving back in myriad ways,
-from `open-source software`_ and `public speaking`_
-to charitable giving.
+We love being part of
+a vibrant web design and development community.
+We benifit daily from the generous contributions of others,
+and believe that a diverse network of shared experiences and ideas
+makes all of our work stronger.
+In addition to our `open-source software`_ and `public speaking`_,
+we are proud to sponsor
+organizations that increase diversity in the community —
+from race and gender, to identity and sexuality —
+and events that bring the whole community together
+in thoughful and inclusive ways.
 
 .. _`open-source software`: /open-source/
 .. _`public speaking`: /speaking/
