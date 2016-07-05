@@ -37,19 +37,19 @@
 
 .message-body {
   margin: 0;
-  padding: 2vmin 2vmin 4vmin;
+  padding: 1rem 1rem 2rem;
 
   @include above(36em) {
     flex: 1 1 auto;
-    padding: 3vmin 3vmin 3vmin 20vmin;
+    padding: 1.5rem 1.5rem 1.5rem 20vmin;
     transform: skew(30deg);
   }
 }
 
 .message-action {
   align-self: flex-end;
-  margin-top: -3rem;
-  padding: 2vmin;
+  margin-top: -3.5rem;
+  padding: 1rem;
   text-align: center;
 
   @include above(36em) {
