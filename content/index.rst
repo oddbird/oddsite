@@ -5,9 +5,12 @@ after:
     title: Client Work
     title_url: /work/
     data: clients
-  - include: 'community/_talks.html.j2'
+  - include: 'community/_events.html.j2'
+    title: 'Upcoming Talks <i>&</i> Events'
+    title_url: '/speaking/'
+    data: 'events'
   - include: 'projects/_feature.html.j2'
-    title: Open-Source Software
+    title: Open-Source Contributions
     title_url: /open-source/
     data: oss
   - include: 'blog/_recent-posts.html.j2'

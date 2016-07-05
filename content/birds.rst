@@ -8,14 +8,20 @@ after:
 The People You’ll Work With
 ===========================
 
-If you work with OddBird,
-you will get to know our small, tightly-knit
-team on a fisrt-name basis.
-You'll have direct access to the team,
-and we'll all take the time to learn what makes your company special,
-so we're all working together with a shared understanding
+You'll get to know our small,
+tightly-knit team
+on a first-name basis —
+with direct access to everyone involved.
+We'll all learn what makes your company special,
+and discuss features as a team,
+so we can work together with a shared understanding
 of the project and goals.
 
-Feel free to start a conversation with one of us online,
-through our various social networks —
-or in person at a meetup or conference.
+Feel free to start a conversation with one of us
+through the social networks listed,
+in our `public Slack chat`_,
+or `in person`_ at a meetup or conference.
+
+
+.. _public Slack chat: http://friends.oddbird.net
+.. _in person: /speaking/

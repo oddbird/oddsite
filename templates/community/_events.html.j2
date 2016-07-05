@@ -18,7 +18,8 @@
 
 <section data-module="conferences" {{ utility.attr_if('id', module.id) }}>
   <h2>
-    {{ module.title or 'Conferences and Events' }}
+    {% set title = module.title or 'Conferences and Events' %}
+    {{ utility.link_if(title|safe, module.title_url) }}
   </h2>
 
   {% for event in config[module.data or 'events'] %}

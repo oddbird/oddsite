@@ -19,22 +19,22 @@ Open Design for OddBird.net
 
 It's time for a major overhaul of the OddBird website,
 (referred to internally as "OddSite").
-It's more than we can do in one pass,
+There's more than we can do in one pass,
 so we're going to take things slow
 and re-design our site in the open —
 talking about our choices while we work.
 
 You can get involved in several ways:
 
-- Join our `public Slack channel`_ for front-row access to the process.
+- Join our `public Slack chat`_ for front-row access to the process.
   Ask us questions, provide feedback,
-  and chat with us along the way.
+  and hang-out with us along the way.
 - Follow our progress on `Github`_.
 - Talk to us on `Twitter`_.
 - Check back here for regular updates and `articles`_ as we work.
   We'll add everything to the timelines below:
 
-.. _public Slack channel: #@@@
+.. _public Slack chat: http://friends.oddbird.net
 .. _Github: https://github.com/oddbird/oddsite/
 .. _Twitter: http://twitter.com/oddbird
 .. _articles: #open-design-articles

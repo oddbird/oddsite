@@ -12,13 +12,12 @@ after:
 Public Speaking
 ===============
 
-We've learned a lot over the years
-from the freely-shared inspiration and mentoring of others,
-through blogs, podcasts, and conference talks.
-Now we hope to pass that generosity along,
-to help keep the community vibrant and collaborative.
-We love tinkering with new ideas and challenging our assumptions,
-exploring tools and practices that can
-increase our speed and improve our services.
-We're excited to share what we're playing with,
-and what we've learned along the way.
+We're constantly learning
+from the freely-shared inspiration and mentoring of others —
+through blogs, podcasts, and conference talks —
+so we'd like to pass that generosity along:
+talking and writing
+about the tools and practices
+that have helped improve our work,
+how we think and experiment,
+and everything we've learned along the way.

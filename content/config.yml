@@ -841,8 +841,10 @@ contact:
     content: |
       <strong>We want to hear all about your software ideas.</strong>
       Fill out our
-      <a href="/contact/">contact form</a>
-      or find us on twitter
+      <a href="/contact/">contact form</a>,
+      join our
+      <a href="http://friends.oddbird.net">public Slack chat</a>,
+      or tweet
       <a href="http://twitter.com/oddbird">@oddbird</a>
       to start the conversation.
 
