@@ -23,6 +23,6 @@ nodefile="../requirements/node-v6.2.2-${platform}-${arch}.tar.xz"
 
 tar --strip-components=1 -Jxf ${nodefile}
 
-PATH=`pwd`/bin:$PATH ./bin/npm install -g npm@3.10.2
+PATH=`pwd`/bin:$PATH ./bin/npm install -g npm@3.10.3
 
 popd
