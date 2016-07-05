@@ -24,7 +24,7 @@
   }
 
   @include after('') {
-    background-image: linear-gradient(177deg, color('invert') 50%, color('background') 50%);
+    background-image: linear-gradient(177deg, color('invert') 50%, color('background') 51%);
     display: block;
     height: 40px;
     width: 100%;
