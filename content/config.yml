@@ -221,7 +221,7 @@ project_status:
     removed: 'This software is no longer in use.'
     updated: 'This software has changed substantially since we worked on it.'
     consult: 'We provided consultation, but did not build this software.'
-    end-of-life: 'This software is no longer needed, or actively maintained.'
+    end-of-life: 'This software is no longer actively maintained.'
 
 
 # Open Source Contributions
@@ -322,12 +322,12 @@ oss:
     priority: 'core'
     tagline: "Sophisticated templating for JavaScript"
     description: |
-      Rich - Powerful language with block inheritance, autoescaping, macros,
-      asynchronous control, and more. Heavily inspired by Jinja2.  Fast & Lean
-      - High-performant. Small 8K gzipped runtime with precompiled templates in
-      the browser. Crazy extensible with custom filters and
-      extensions. Available in node and all modern web browsers, with thorough
-      precompilation options.
+      A powerful markup templating language
+      with block inheritance, autoescaping, macros,
+      asynchronous control, and more.
+      Heavily inspired by Jinja2,
+      Nunjucks is fast, lean, highly performant,
+      and extensible.
     who:
       - author: 'carl'
         role: 'maintainer'

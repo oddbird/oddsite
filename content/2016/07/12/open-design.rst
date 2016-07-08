@@ -18,33 +18,40 @@ Open Design for OddBird.net
 ===========================
 
 It's time for a major overhaul of the OddBird website,
-(referred to internally as "OddSite").
-There's more than we can do in one pass,
+referred to internally as our **OddSite**.
+This will be more work than we can handle in one pass,
 so we're going to take things slow
 and re-design our site in the open —
-talking about our choices while we work.
+sharing our thoughts while we work.
 
-**You can get involved in several ways:**
 
-- Join our `public Slack chat`_ for front-row access to the process.
+You can get involved in several ways:
+-------------------------------------
+
+- **Feedback and Conversation:**
+  Join our `open Slack channel`_
+  for front-row access to the process.
   Ask us questions, provide feedback,
   and hang-out with us along the way.
-- Follow our progress on `Github`_.
-- Talk to us on `Twitter`_.
-- Check back here for regular updates and `articles`_ as we work.
-  We'll add each blog post to the timeline below:
+  You can also
+  talk to us on `Twitter`_.
+- **Live Site and Open Code:**
+  Follow our progress here and on `Github`_.
+- **Articles and Artifacts**
+  Check back here for regular posts as we work.
+  We'll update the `timeline`_ at the bottom of this page.
 
-.. _public Slack chat: http://friends.oddbird.net
+.. _open Slack channel: http://friends.oddbird.net
 .. _Github: https://github.com/oddbird/oddsite/
 .. _Twitter: http://twitter.com/oddbird
-.. _articles: #open-design-articles
+.. _timeline: #open-design-articles
 
 
-What to Expect
---------------
+What is open design?
+--------------------
 
 At OddBird, we are very familiar
-with open-source collaboration,
+with `open-source collaboration`_,
 and daily client feedback,
 but designing a site in the open is new to us.
 Luckily, `we're not the first to do it`_.
@@ -53,35 +60,44 @@ so we'll mix-and-match to see what works for us.
 
 We decided to re-design our live site,
 rather than starting from scratch
-on a staging server somewhere else.
+on a private staging server.
 That means we'll be taking live traffic while we work,
-and using continuous integration
+and using `continuous integration`_
 to make updates on a regular basis.
-It also means we needed a usable draft to start from.
+It also means we needed a usable first draft,
+so the site would work publically from day one.
 We'll post more about that drafting process
 in the next week or two.
 
-In addition to the public conversation channels listed above,
-we'll be posting regular updates on our blog,
-showing the process we go through,
-the decisions we've made,
-and the tools we used to get it done.
+You'll be able to see the site live as it develops,
+but we'll also post articles along the way —
+capturing screen shots of the site at different stages,
+sharing artifacts from the design process
+(such as sketches and planning documents),
+and telling stories about our process and decision making.
+We also have our `source code`_ available on GitHub,
+and will talk about the open-source tools we use,
+and share any tools we build.
 
+.. _open-source collaboration: /open-source/
 .. _we're not the first to do it: http://bradfrost.com/blog/post/designing-in-the-open/
+.. _continuous integration: https://en.wikipedia.org/wiki/Continuous_integration
+.. _source code: https://github.com/oddbird/oddsite/
 
 
-Odd Process
------------
+Our process from here...
+------------------------
 
 These are the rough stages we expect to go through:
 
 1. **Planning and Rough Drafts** —
-   You're looking at a first rough sketch
+   You're looking at a first rough outline
    of the site contents and organization.
-   Miriam and Sondra put together this draft
+   `Miriam`_ and `Sondra`_ put together this draft
    based on conversations with the team,
    as a proposal to discuss.
    At this point everything is still up for debate.
+
 2. **Information Architecture** —
    Before we dive into the fun design work,
    we want to make sure that all our content is in place,
@@ -89,8 +105,9 @@ These are the rough stages we expect to go through:
    and we're telling the story we want to tell.
    We need to spend some time looking at it,
    playing with it,
-   and sorting out exactly what user stories are most important,
-   and how those stories can best be achieved.
+   sorting out exactly what user stories are most important,
+   and planning how those stories can be achieved.
+
 3. **Code Architecture** — 
    With a better view of our own content,
    we'll spend some time improving
@@ -98,17 +115,18 @@ These are the rough stages we expect to go through:
    that drive the site.
    We're using `rstBlog`_ —
    a powerful but poorly-documented Python static-site generator —
-   so it will take some customization,
-   and a lot of documentation,
-   to make sure we have a maintainable system going forward.
-   We want to encourage our team to update the site regularly,
-   so it's important that we get the development experience right.
+   so it will take some customization
+   and a lot of documentation
+   to make sure we have a maintainable site going forward.
+   We want to encourage regular updates,
+   so it's important that we get the development flow right.
+
 4. **Design and Interaction** —
-   In a flip from the traditional waterfall model,
-   we save most of our graphic design work for the end of the process.
+   We save most of our graphic design work for the end of the process.
    In reality,
-   our designers are involved at every stage of the process.
-   Sondra made a few photoshop sketches
+   our designers are involved at every stage,
+   guiding the planning and architecture from the start.
+   `Sondra`_ made a few photoshop sketches
    to get us started on this first draft,
    and we'll generate more sketches
    to help us understand the architecture and flow
@@ -118,10 +136,12 @@ These are the rough stages we expect to go through:
    about the final visual details.
 
 .. _rstBlog: https://github.com/mitsuhiko/rstblog
+.. _Miriam: /birds/#bird-miriam
+.. _Sondra: /birds/#bird-sondra
 
 
-Rinse and Repeat
-----------------
+Rinse and repeat...
+-------------------
 
 The steps can be listed like a numbered waterfall,
 but that's not how it will happen in practice.

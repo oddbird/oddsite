@@ -90,7 +90,7 @@
               bird.name,
               ['/birds/#bird', bird.author]|join('-')
             ) }}
-            [{{ contributor.role }}]{% if not loop.last %},{% endif %}
+            [{{ contributor.role }}]
           </li>
         {% endif %}
       {% endfor %}
