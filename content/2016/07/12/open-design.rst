@@ -9,7 +9,7 @@ summary: |
   We hope you'll follow along and even get involved!
 after:
   - include: 'blog/_tag-module.html.j2'
-    title: 'Articles about the OddSite re-design'
+    title: 'OddSite Re-design Timeline'
     tag: open-design
     id: 'open-design-articles'
 
@@ -24,7 +24,7 @@ so we're going to take things slow
 and re-design our site in the open —
 talking about our choices while we work.
 
-You can get involved in several ways:
+**You can get involved in several ways:**
 
 - Join our `public Slack chat`_ for front-row access to the process.
   Ask us questions, provide feedback,
@@ -32,7 +32,7 @@ You can get involved in several ways:
 - Follow our progress on `Github`_.
 - Talk to us on `Twitter`_.
 - Check back here for regular updates and `articles`_ as we work.
-  We'll add everything to the timelines below:
+  We'll add each blog post to the timeline below:
 
 .. _public Slack chat: http://friends.oddbird.net
 .. _Github: https://github.com/oddbird/oddsite/
@@ -48,7 +48,7 @@ with open-source collaboration,
 and daily client feedback,
 but designing a site in the open is new to us.
 Luckily, `we're not the first to do it`_.
-There's a broad range of oen-design practices,
+There's a broad range of open-design practices,
 so we'll mix-and-match to see what works for us.
 
 We decided to re-design our live site,
@@ -67,20 +67,22 @@ showing the process we go through,
 the decisions we've made,
 and the tools we used to get it done.
 
+.. _we're not the first to do it: http://bradfrost.com/blog/post/designing-in-the-open/
+
 
 Odd Process
 -----------
 
 These are the rough stages we expect to go through:
 
-1. *Planning and Rough Drafts* —
+1. **Planning and Rough Drafts** —
    You're looking at a first rough sketch
    of the site contents and organization.
    Miriam and Sondra put together this draft
    based on conversations with the team,
    as a proposal to discuss.
    At this point everything is still up for debate.
-2. *Information Architecture* —
+2. **Information Architecture** —
    Before we dive into the fun design work,
    we want to make sure that all our content is in place,
    visitors can find the information they need,
@@ -89,7 +91,7 @@ These are the rough stages we expect to go through:
    playing with it,
    and sorting out exactly what user stories are most important,
    and how those stories can best be achieved.
-3. *Code Architecture* — 
+3. **Code Architecture** — 
    With a better view of our own content,
    we'll spend some time improving
    the data structures, views, and templates
@@ -101,7 +103,7 @@ These are the rough stages we expect to go through:
    to make sure we have a maintainable system going forward.
    We want to encourage our team to update the site regularly,
    so it's important that we get the development experience right.
-4. *Design and Interaction* —
+4. **Design and Interaction** —
    In a flip from the traditional waterfall model,
    we save most of our graphic design work for the end of the process.
    In reality,
@@ -114,6 +116,8 @@ These are the rough stages we expect to go through:
    But once everything is in place,
    we will be able to make much more clear and informed decisions
    about the final visual details.
+
+.. _rstBlog: https://github.com/mitsuhiko/rstblog
 
 
 Rinse and Repeat
