@@ -5,13 +5,13 @@ after:
     title: 'Live Client Projects'
     data: 'clients'
     priority: 'live'
+  - include: 'projects/_process.html.j2'
+    title: 'The OddBird Process is...'
+  - include: 'projects/_services.html.j2'
   - include: 'projects/_list.html.j2'
     title: 'Other Client Work'
     data: 'clients'
     priority: 'other'
-  - include: 'projects/_process.html.j2'
-    title: 'The OddBird Process is...'
-  - include: 'projects/_services.html.j2'
 process:
   - title: 'Lean <i>&</i> Agile'
     body: |
@@ -31,22 +31,26 @@ process:
 services:
   - title: 'We have partnered with'
     data:
-      - 'E-Commerce Startups'
       - 'Educators'
-      - 'Hipaa Compliant Wellness Providers'
-      - 'Non-Profits (ask about special rates!)'
-      - 'Professional Gear Manufacturers'
-      - 'Software Companies'
-      - 'Theaters, Writers, and Artists'
+      - 'Hipaa-compliant wellness providers'
+      - 'Non-profits and community organizations'
+      - 'Professional gear manufacturers'
+      - 'E-commerce startups'
+      - 'Software companies'
+      - 'Urbarn planners'
+      - 'Data analysts'
+      - 'Theaters, writers, and other artists'
   - title: 'We provide'
     data:
-      - Content Strategy
-      - Marketing & Crowdfunding Consultation
-      - User Testing
-      - Responsive Design and Development
-      - User Experience Design
-      - Brand Design
-      - Mobile Development
+      - Custom web software design and development
+      - Web best-practice, code architecture, and team process development
+      - Marketing and crowdfunding consultation
+      - Content strategy and information architecture
+      - User testing and continuous integration
+      - Responsive design and development
+      - User experience and interface design
+      - Automated, living style guides
+      - Brand design and documentation
 
 
 Custom Web Software
