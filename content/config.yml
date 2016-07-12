@@ -70,7 +70,7 @@ clients:
   - name: 'QuarqNet'
     url: 'http://quarqnet.com'
     years: '2015-2016'
-    priority: 'live'
+    priority: 'pre-release'
     status: 'pre-release'
     tagline: 'Real-Time Telemetry for Athletes'
     description: |
