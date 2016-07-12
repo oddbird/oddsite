@@ -27,10 +27,11 @@
     {% include module.include %}
   {%- endfor -%}
 
-  <div data-module="rst-body">
-    {{ rst.fragment }}
-  </div>
-
+  {% if rst.fragment %}
+    <div data-module="rst-body">
+      {{ rst.fragment }}
+    </div>
+  {% endif %}
 
   {%- for module in config.after -%}
     {% include module.include %}

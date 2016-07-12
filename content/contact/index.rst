@@ -1,6 +1,5 @@
 public: yes
-location: home
-hide_contact: true
+location: contact
 after:
   - include: 'contact/_form.html.j2'
     contact: 'miriam'
@@ -13,15 +12,21 @@ after:
       and %s, our %s,
       will be in touch with you soon.
     submit: 'Send!'
-    next: 'thanks/'
+    next: '/contact/thanks/'
 
 
 Let's Get to Know Each Other
 ============================
 
-We'd love to hear about your project!
-Start a conversation
-by filling out our contact form,
-or contact `@OddBird`_ on Twitter.
+There are many ways to start a conversation with us,
+so feel free to pick the one that is most comfortable to you.
+There's a contact form on this page,
+or you can find us elsewhere:
 
-.. _`@OddBird`: http://twitter.com/oddbird
+- `@OddBird`_ on Twitter
+- `OddBird Friends`_ public Slack chat
+- `birds@oddbird.net`_ by email
+
+.. _@OddBird: http://twitter.com/oddbird
+.. _OddBird Friends: http://friends.oddbird.net/
+.. _birds@oddbird.net: mailto:birds@oddbird.net
