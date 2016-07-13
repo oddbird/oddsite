@@ -1,11 +1,13 @@
 public: yes
 author: carl
+image:
+  - src: '2013.jpg'
 summary: |
   A brief review of 2013: OddBird, year six.
 
 
-2013
-====
+2013 Wrap-up
+============
 
 As we wrap up our sixth year, it seems like a good time to share our
 first-ever year-end retrospective. Here's 2013, OddBird style:
@@ -26,7 +28,7 @@ first-ever year-end retrospective. Here's 2013, OddBird style:
 
 - Miriam `spoke`_ at `SassConf`_, the `New York Sass & Compass Meetup`_,
   and the `Brakhage Center for the Media Arts`_.
-  He'll appear again in 2014 at `The Mixin`_
+  She'll appear again in 2014 at `The Mixin`_
   and others TBA.
   Carl delivered `a talk`_ at `PyCon`_
   and will speak at `ConFoo`_ and again at `PyCon`_ in 2014.

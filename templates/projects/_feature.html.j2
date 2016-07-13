@@ -1,0 +1,16 @@
+{% import 'utility.macros.j2' as utility %}
+{% import 'projects/macros.j2' as work %}
+
+
+{% set projects = config[module.data] or config.clients %}
+
+<section data-module="feature-projects" data-projects="{{ module.data or 'clients' }}">
+  <h2>
+    {{ utility.link_if(module.title or 'Projects', module.title_url) }}
+  </h2>
+
+  {% for project in projects|selectattr('feature') %}
+    {{ work.feature(project, config) }}
+  {% endfor %}
+  </div>
+</section>

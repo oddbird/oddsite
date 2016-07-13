@@ -1,0 +1,23 @@
+{% import 'utility.macros.j2' as utility %}
+{% import 'blog/macros.j2' as blog %}
+
+{# @@@ Need blog_entries_by_tag() function #}
+{% set entries = get_recent_blog_entries(module.count or 100) %}
+
+{% if entries %}
+  <section data-module="recent-posts" {{ utility.attr_if('id', module.id) }}>
+    <h2>
+      {{ module.title or ['Articles about', module.tag]|join(' ') }}
+    </h2>
+
+    <ul>
+      {% for entry in entries %}
+        {% if module.tag in entry.tags %}
+          <li>
+            {{ blog.link(entry) }}
+          </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </section>
+{% endif %}

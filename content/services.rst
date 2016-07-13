@@ -1,6 +1,5 @@
 public: yes
 location: none
-comments: false
 hide_title: true
 
 

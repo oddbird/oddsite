@@ -5,7 +5,7 @@ PyYAML==3.10
 Babel==0.9.6
 blinker==1.2
 docutils==0.9.1
-Jinja2==2.6
+Jinja2==2.8
 Werkzeug==0.8.3
 Pygments==2.0.2
 smartypants==1.6.0.3

@@ -1,6 +1,11 @@
 public: yes
 tags: [sass, maps, code]
 author: miriam
+image:
+  - src: 'sass33.jpg'
+summary: |
+  The difference between map-set and map-merge? Almost
+  nothing.
 
 
 Map-Set vs. Map-Merge

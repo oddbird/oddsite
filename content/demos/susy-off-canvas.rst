@@ -1,8 +1,8 @@
 public: yes
 hide_title: yes
 template: demo.html
-styles: pages/susy-off-canvas.css
-extrajs: pages/susy-off-canvas.js
+styles: susy_off_canvas_styles
+extrajs: susy_off_canvas
 
 
 Off-Canvas Susy Demo

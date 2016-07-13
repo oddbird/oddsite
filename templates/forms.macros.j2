@@ -1,0 +1,43 @@
+{% import 'utility.macros.j2' as utility %}
+
+
+{% macro label(text) %}
+  <span class="form-label">{{ text }}</span>
+{% endmacro %}
+
+{% macro field(id, required=none) %}
+  <label for="{{ id }}" data-form-field="{{ id }}" data-field-state="{{ 'required' if required else 'optional'}}">
+    {{ caller() }}
+  </label>
+{% endmacro %}
+
+{% macro input(text, id, name=none, type='text', placeholder=none, required=none) %}
+  {% set input_types = {
+    'text': 'default',
+    'password': 'default',
+    'search': 'default',
+    'email': 'default',
+    'url': 'default',
+    'tel': 'default',
+    'number': 'default',
+    'date': 'default',
+    'month': 'default',
+    'week': 'default',
+    'time': 'default',
+    'datetime': 'default',
+    'datetime-local': 'default',
+    'color': 'default'
+  } %}
+
+  {% call field(id, required) %}
+    {{ label(text) }}
+    <input type="{{ type }}" id="{{ id }}" name="{{ name or id }}" data-input-type="{{ input_types[type] or type }}" {{ utility.attr_if('required', required) }} {{ utility.attr_if('placeholder', placeholder) }} />
+  {% endcall %}
+{% endmacro %}
+
+{% macro textarea(text, id, name=none, placeholder=none, required=none) %}
+  {% call field(id, required) %}
+    {{ label(text) }}
+    <textarea id="{{ id }}" name="{{ name or id }}" data-input-type="textarea" {{ utility.attr_if('required', required) }} {{ utility.attr_if('placeholder', placeholder) }}></textarea>
+  {% endcall %}
+{% endmacro %}

@@ -1,9 +1,17 @@
+syntax: glob
 TAGS
-content/static/dist/
-content/static/css/
+content/static/assets/
+content/static/assets.json
+content/styleguide/
 dev-output/
 node_modules/
 *.DS_Store
 *~
 *.pyc
 .sass-cache/
+output/
+.livereload
+*.orig
+.cache/
+node/
+npm-debug.log

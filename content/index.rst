@@ -1,63 +1,41 @@
 public: yes
 location: home
-comments: False
-default_styles: False
-before:
-  - include: 'modules/_org.html.j2'
+after:
+  - include: 'projects/_feature.html.j2'
+    title: Client Work
+    title_url: /work/
+    data: clients
+  - include: 'community/_events.html.j2'
+    title: 'Upcoming Talks <i>&</i> Events'
+    title_url: '/speaking/'
+    data: 'events'
+  - include: 'projects/_feature.html.j2'
+    title: Open-Source Contributions
+    title_url: /open-source/
+    data: oss
+  - include: 'blog/_recent-posts.html.j2'
+    title: Recent Articles
+    title_url: /blog/
+    count: 3
 
 
-Custom web tools for humans
-===========================
+Your Partner for Web Software
+=============================
 
+process, branding, design, and development
+------------------------------------------
 
-Odd Projects
-------------
+**You need to solve real problems for real people**,
+and we're here to help.
+We'll work closely with you
+to develop every aspect of your online product —
+from branding and code,
+to the tools and processes to keep you growing.
 
-From working on open-source tools like `Django`_,
-`Susy`_, `True`_, and `Sass Accoutrement`_,
-to building web applications for `Mozilla`_,
-`Providence Plan`_, `Junyo`_, or `ORCAS`_ —
-and our own `experiments in digital storytelling`_ —
-we love molding ideas into experiences that people use.
+|get-started|
 
-.. _Django: https://www.djangoproject.com/
-.. _Susy: http://susy.oddbird.net/
-.. _True: /true/
-.. _Sass Accoutrement: /accoutrement/
-.. _Mozilla: http://mozilla.org/
-.. _Providence Plan: http://provplan.org/
-.. _Junyo: http://junyo.com/
-.. _ORCAS: http://orcasinc.com/
-.. _experiments in digital storytelling: http://oddbooksapp.com/
+.. |get-started| raw:: html
 
-
-Odd Process
------------
-
-1. We use a **lean** process to
-   deploy & integrate new functionality frequently,
-   aiming to deliver usable product launches
-   as early and often as possible.
-
-2. We encourage clients to stay closely **connected** with the daily progress,
-   offering frequent feedback
-   and re-prioritization
-   via `Pivotal Tracker`_.
-
-3. We use the **accessible** open web stack:
-   semantic HTML5,
-   unobtrusive Javascript,
-   and advanced CSS —
-   backed by Python_
-   & Django_ on the server.
-
-.. _Pivotal Tracker: http://pivotaltracker.com/
-.. _Python: http://www.python.org/
-
-
-Odd Services
-------------
-
-Read more about `the services we provide »`_
-
-.. _`the services we provide »`: /services/
+  <a href="/contact/" class="btn">
+    Start a conversation about your project »
+  </a>

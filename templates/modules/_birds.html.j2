@@ -1,9 +1,0 @@
-{% import "birds.macros.j2" as birds %}
-
-{% if config.birds %}
-<article class="birds">
-  {% for bird in config.birds %}
-    {{ birds.card(bird) }}
-  {% endfor %}
-</article>
-{% endif %}

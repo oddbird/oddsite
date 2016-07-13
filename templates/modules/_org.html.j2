@@ -1,7 +1,0 @@
-{% import "birds.macros.j2" as birds %}
-
-{% if config.company %}
-<article class="company">
-  {{ birds.card(config.company[0]) }}
-</article>
-{% endif %}

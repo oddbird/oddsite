@@ -1,14 +1,5 @@
-{% import "birds.macros.j2" as birds %}
-
-{%- macro link(org, link) -%}
-  {%- for site, target in org.links -%}
-    {%- if site == link -%}{{ target }}{%- endif -%}
-  {%- endfor -%}
-{%- endmacro -%}
-
 <aside class="comments">
   Have feedback on this post?
-  Talk to us on
-  <a href="https://twitter.com/{{ link(config.company[0], 'twitter') }}">Twitter</a>,
-  or email <span class="email">{{ link(config.company[0], 'email') }}</span>.
+  Talk to us about it
+  <a href="https://twitter.com/oddbird">@OddBird</a>.
 </aside class="comments">

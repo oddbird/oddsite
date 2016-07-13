@@ -3,7 +3,7 @@
 
 {% block styles %}
   {% if config.styles %}
-    <link rel="stylesheet" href="/static/css/{{ config.styles }}">
+    <link rel="stylesheet" href="{{ get_asset(config.styles) }}">
   {% else %}
     {{ super() }}
   {% endif %}
@@ -15,6 +15,6 @@
 
 {% block extrajs %}
   {% if config.extrajs %}
-    <script src="/static/js/{{ config.extrajs }}"></script>
+    <script src="{{ get_asset(config.extrajs) }}"></script>
   {% endif %}
 {% endblock extrajs %}

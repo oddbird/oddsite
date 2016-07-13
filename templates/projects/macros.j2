@@ -1,0 +1,99 @@
+{% import 'utility.macros.j2' as utility %}
+
+
+{% macro list(project, config) %}
+<article>
+  <h3>
+    {{ utility.link_if(project.name, project.url) }}
+    {% if project.source %}
+      ({{ utility.link_if('source code', project.source) }})
+    {% endif %}
+  </h3>
+
+  {% if project.tagline %}
+    <h4>{{ project.tagline }}</h4>
+  {% endif %}
+
+  {% if project.client %}
+    {{ for(project.client, project.years) }}
+  {% else %}
+    {{ who(project.who, config) }}
+  {% endif %}
+
+  {% if project.description or project.status %}
+    <p>
+      {{ project.description }}
+
+      {% if project.status %}
+        {% set named_states = config.project_status[0] %}
+        <em>{{ named_states[project.status] or project.status }}</em>
+      {% endif %}
+    </p>
+  {% endif %}
+</article>
+{% endmacro %}
+
+
+{% macro feature(project, config) %}
+  <article>
+    <h3>
+      {{ utility.link_if(project.name, project.url) }}
+    </h3>
+    <h4>
+      {{ project.tagline }}
+    </h4>
+
+    {% if project.client %}
+      {{ for(project.client) }}
+    {% else %}
+      {{ who(project.who, config) }}
+    {% endif %}
+
+    {{ pullquote(project.quote) }}
+  </article>
+{% endmacro %}
+
+
+{% macro pullquote(quote) %}
+  {% if quote %}
+    <blockquote>
+      <p>“{{ quote.text }}”</p>
+      <cite>—{{ quote.credit }}</cite>
+    </blockquote>
+  {% endif %}
+{% endmacro %}
+
+
+{% macro for(client, years) %}
+  <div>
+    <i>for</i>
+    {{ utility.link_if(
+      client.name,
+      client.url
+    ) }}
+    {% if years %}
+      [{{ years }}]
+    {% endif %}
+  </div>
+{% endmacro %}
+
+{% macro who(contributors, config) %}
+  {% if contributors %}
+    <ul>
+      {% for contributor in contributors %}
+        {% set bird_list = config.birds|selectattr('author', 'equalto', contributor.author)|list %}
+        {% set bird = bird_list[0] %}
+
+        {% if bird %}
+          <li>
+            {{ utility.link_if(
+              bird.name,
+              ['/birds/#bird', bird.author]|join('-')
+            ) }}
+            [{{ contributor.role }}]
+          </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  {% endif %}
+{% endmacro %}

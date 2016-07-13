@@ -1,0 +1,28 @@
+{% import 'utility.macros.j2' as utility %}
+{% import "birds/macros.j2" as birds %}
+
+
+{% if config.birds %}
+  {% set all_posts = get_recent_blog_entries(1000) %}
+
+  {% for bird in config.birds %}
+    {% set posts = all_posts|selectattr('author', 'equalto', bird.author)|list %}
+    {% set oss = config.oss_by_author[bird.author] %}
+
+    {{ birds.section(bird, oss, posts) }}
+  {% endfor %}
+{% endif %}
+
+{% if config.birds_former and module.show_former %}
+  <section data-module="birds-emeritus">
+    <h3>Birds Emeritus</h3>
+    <ul>
+      {% for bird in config.birds_former %}
+        {% set bird_url = link_to('author', author=bird.author) if bird.posts else bird.url %}
+        <li id="bird-{{ bird.author }}">
+          {{ utility.link_if(bird.name, bird_url) }}
+        </li>
+      {% endfor %}
+    </ul>
+  </section>
+{% endif %}

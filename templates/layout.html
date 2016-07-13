@@ -1,62 +1,31 @@
 {% extends "base.html" %}
 
-{% import "utility.macros.j2" as utility %}
-{% import "talks.macros.j2" as talks %}
 
 {% block layout %}
-<nav role="navigation">
-  {% for link in config.nav %}
-    <a href="{{ link.url }}" class="nav-link" data-active="{{ link.text }}">
-      {{ utility.icon(link.icon) }}
-      {{ link.text }}
+  {% include 'layout/_site-message.html.j2' %}
+
+  <h1 data-region="banner">
+    <a href="/" rel="home">
+      OddBird
     </a>
-  {% endfor %}
-</nav>
+  </h1>
 
-<h1 role="banner">
-  <a href="/" rel="home">
-    {{ utility.icon("oddbird") }}
-    {{ utility.is_hidden("OddBird") }}
-  </a>
-</h1>
+  <nav data-region="nav">
+    {% for link in config.nav %}
+      <a href="{{ link.url }}" class="nav-link" data-active="{{ link.text }}">{{ link.text }}</a>
+    {% endfor %}
+  </nav>
 
-<main role="main" {% if config.pageclasses %}class="{{ config.pageclasses }}"{% endif %} {% if config.default_styles %}data-default-styles="1"{% endif %}>
-  {% block body %}{% endblock body %}
-</main>
+  <main data-region="main" {% if config.pageclasses %}class="{{ config.pageclasses }}"{% endif %}>
+    {% block body %}{% endblock body %}
+    {% include 'contact/_cta.html.j2' %}
+  </main>
 
-<aside class="fatfooter">
-<div class="fat-wrap">
-  {% include "blog/_recent-posts.html.j2" %}
-  {# talks.list('Upcoming talks', config.talks_future, 'future', 5) #}
-  {# talks.list('Recent talks', config.talks_past, 'past', 5) #}
-</div>
-</aside>
-
-<footer role="contentinfo">
-<div class="footer-wrap">
-
-  <p class="copyright h-card">
-    Copyright &copy; {{ config.copyright }}
-    <a href="http://oddbird.net" class="fn org url">OddBird</a>
-  </p>
-
-  <p class="history">Established in 2008 by three odd siblings.</p>
-
-  <p class="colophon">
-    Built with
-    <a href="http://www.w3.org/TR/html5/">HTML5</a>,
-    <a href="https://github.com/mitsuhiko/rstblog/">rstBlog</a>,
-    <a href="http://www.python.org">Python</a>,
-    <a href="http://www.w3.org/TR/css-2010/">CSS3</a>,
-    <a href="http://www.jquery.com/">jQuery</a>,
-    <a href="http://gruntjs.com/">Grunt</a>,
-    <a href="http://keyamoon.com/icomoon/">IcoMoon</a>,
-    <a href="http://susy.oddbird.net/">Susy</a>,
-    <a href="http://compass-style.org/">Compass</a>,
-    <a href="http://breakpoint-sass.com/">Breakpoint</a>,
-    and&nbsp;<a href="http://sass-lang.com/">Sass</a>.
-  </p>
-
-</div>
-</footer>
-{% endblock layout %}
+  <footer data-region="footer">
+    <p class="copyright h-card">
+      Copyright &copy; {{ config.copyright }}
+      <a href="http://oddbird.net" class="fn org url">OddBird</a>
+    </p>
+    <p class="history">Established in 2008 by three odd siblings.</p>
+  </footer>
+{% endblock %}

@@ -1,0 +1,13 @@
+machine:
+  node:
+    version: 6.3.0
+
+dependencies:
+  override:
+    - npm install -g npm@3.10.6
+    - npm install
+
+test:
+  override:
+    - ./node_modules/.bin/gulp eslint
+    - ./node_modules/.bin/gulp sasslint

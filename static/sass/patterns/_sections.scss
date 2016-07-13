@@ -1,0 +1,31 @@
+// Sections Pattern
+// ================
+
+[data-module] {
+  border-bottom: 2px dotted color('action');
+  padding-bottom: 2rem;
+
+  & + & {
+    padding-top: 2rem;
+  }
+}
+
+.title {
+  font-style: italic;
+  padding: 2rem 0 1rem;
+}
+
+
+// @@@ TEMPORARY
+// -------------
+
+[data-region='nav'] {
+  [href] {
+    display: inline-block;
+    padding-right: 0.5rem;
+  }
+}
+
+[data-module='pagination'] {
+  text-align: center;
+}

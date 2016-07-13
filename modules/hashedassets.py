@@ -1,8 +1,8 @@
 """
 Cache-busting for assets via hash in filename.
 
-Uses a JSON "asset map" output by grunt-hash, which maps a "plain" asset
-filename to the current hash filename.
+Uses a JSON "asset map" output by assets-webpack-plugin, which maps a "plain"
+asset filename to the current hash filename.
 
 """
 import os
@@ -13,12 +13,9 @@ from rstblog import builder as builder_module
 
 
 @contextfunction
-def get_asset(context, fp):
-    if not context.get('minify', False):
-        return fp
-    fn = '%s.min%s' % os.path.splitext(os.path.basename(os.path.split(fp)[-1]))
-    fn = context.get('hashedassets', {}).get(fn, fn)
-    return '/static/dist/%s' % fn
+def get_asset(context, fn):
+    ext = 'css' if fn.endswith('_styles') else 'js'
+    return context.get('hashedassets', {}).get(fn, {}).get(ext, '/%s' % fn)
 
 
 def monkeypatch_context():
@@ -30,10 +27,6 @@ def monkeypatch_context():
 
 def setup(builder):
     builder.jinja_env.globals['get_asset'] = get_asset
-
-    if builder.config.root_get('mode', 'dev') == 'dev':
-        return
-
     asset_map_path = builder.config.get('asset_map_path', None)
     if asset_map_path is None:
         return

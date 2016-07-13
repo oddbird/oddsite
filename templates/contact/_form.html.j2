@@ -1,0 +1,56 @@
+{% import 'forms.macros.j2' as form %}
+{% import 'utility.macros.j2' as utility %}
+
+
+<section data-module="contact-form">
+  {% if module.intro %}
+    <div>
+      {% if module.contact %}
+        {{ utility.icon(module.contact, size='face') }}
+        {% set contact_list = config.birds|selectattr('author', 'equalto', module.contact)|list %}
+        {% set contact = contact_list[0] %}
+        {% set contact_name = utility.link_if(contact.name, ['/birds/#bird', contact.author]|join('-')) %}
+
+        <p>{{ module.intro|safe|format(contact_name, contact.role) }}</p>
+      {% else %}
+        <p>{{ module.intro|safe }}</p>
+      {% endif %}
+    </div>
+  {% endif %}
+
+  <form data-form="contact" action="https://formspree.io/{{ config.email }}" method="POST">
+    <input type="hidden" name="_next" value="{{ [config.canonical_url, module.next]|join('') }}" />
+    <input type="text" name="_gotcha" style="display:none" />
+
+    {{ form.input(
+      text='Name',
+      id='contact-name',
+      required=true
+    ) }}
+
+    {{ form.input(
+      text='Email Address',
+      id='contact-email',
+      name='_replyto',
+      type='email',
+      required=true
+    ) }}
+
+    {{ form.textarea(
+      text='Message',
+      id='contact-message',
+      required=true
+    ) }}
+
+    {{ form.input(
+      text='How did you find OddBird?',
+      id='contact-source'
+    ) }}
+
+    <div class="form-actions">
+      <button type="submit" class="btn">
+        {{ module.submit or 'submit' }}
+      </button>
+    </div>
+  </form>
+</section>

@@ -1,0 +1,10 @@
+{% if not config.hide_contact %}
+<section data-module="contact-cta">
+  <h2>
+    {{ config.contact[0].title }}
+  </h2>
+  <p>
+    {{ config.contact[0].content|safe }}
+  </p>
+</section>
+{% endif %}

@@ -1,6 +1,17 @@
 public: yes
 tags: [susy, "2.0", layout, grids, rwd]
 author: miriam
+image:
+  - src: 'susy.jpg'
+summary: |
+  Last night we released
+  the very first alpha build of Susy Next.
+  This release is extremely sparse.
+  What we have built is a background 'engine'
+  for calculating grid math.
+  There are some rough first steps towards api and syntax,
+  but they are more "proof of concept" experimentation
+  than usable interface.
 
 
 Susy Next: The first alpha
