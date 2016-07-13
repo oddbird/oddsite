@@ -5,7 +5,7 @@ after:
     title: 'Sponsoring <i>&</i> Donations'
     id: 'community-giving'
     intro: |
-      Oddbird is commited to supporting
+      OddBird is commited to supporting
       the communities that make our work possible,
       and encouraging diversity in the tech industry.
       <a href="/contact/">Contact us</a>
@@ -25,7 +25,7 @@ we are proud to sponsor
 organizations that increase diversity in the community —
 from race and gender, to identity and sexuality —
 and events that bring the whole community together
-in thoughful and inclusive ways.
+in thoughtful and inclusive ways.
 And then, on occasion,
 we also sponsor the communities and events
 that keep us entertained and fulfilled outside of work.

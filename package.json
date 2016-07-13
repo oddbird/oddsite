@@ -2,8 +2,8 @@
   "name": "oddsite",
   "version": "3.0.0",
   "engines": {
-    "node": "6.2.2",
-    "npm": "3.10.3"
+    "node": "6.3.0",
+    "npm": "3.10.6"
   },
   "devDependencies": {
     "accoutrement-color": "2.0.1",
@@ -21,7 +21,7 @@
     "core-js": "2.4.0",
     "css-loader": "0.23.1",
     "del": "2.2.1",
-    "eslint": "3.0.0",
+    "eslint": "3.0.1",
     "extend": "3.0.0",
     "extract-text-webpack-plugin": "1.0.1",
     "file-loader": "0.9.0",
@@ -33,7 +33,7 @@
     "gulp-svg-symbols": "1.0.0",
     "gulp-svgmin": "1.2.2",
     "gulp-util": "3.0.7",
-    "jquery": "3.0.0",
+    "jquery": "3.1.0",
     "mathsass": "0.9.5",
     "node-sass": "3.8.0",
     "postcss-loader": "0.9.1",

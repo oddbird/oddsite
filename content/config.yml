@@ -193,10 +193,9 @@ clients:
   - name: 'Craftisan'
     years: '2010-2011'
     priority: 'other'
-    status: 'updated'
+    status: 'removed'
     client:
       name: 'Craftisan'
-      url: 'http://craftisan.in/'
 
   - name: 'The Steel Wheels'
     years: '2010'
@@ -216,7 +215,7 @@ clients:
 
 project_status:
   -
-    pre-release: 'This software is has not yet been released publically.'
+    pre-release: 'This software has not yet been released publically.'
     private: 'This software is not available to the public.'
     removed: 'This software is no longer in use.'
     updated: 'This software has changed substantially since we worked on it.'
@@ -628,16 +627,15 @@ birds:
       He has been writing clean,
       well-tested JavaScript web applications
       for over seven years.
-      He has authored or contributed to
-      numerous open-source projects,
-      and is an active member in the JavaScript community.
-      Jonny gets distracted by ultimate frisbee,
+      An active member in the JavaScript community,
+      Jonny has authored or contributed to
+      numerous open-source projects.
+      He's easily distracted by a game of ultimate frisbee,
       homebrewing delicious IPAs and stouts,
       and trying to keep up with his two-year-old daughter.
     links:
       - twitter: 'jgerigmeyer'
         github: 'jgerigmeyer'
-        stackoverflow: '854407'
 
   - name: 'Carl Meyer'
     author: 'carl'

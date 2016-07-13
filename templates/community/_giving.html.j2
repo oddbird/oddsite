@@ -21,7 +21,7 @@
   {% endif %}
 
   {% for group in config.giving|groupby('type') %}
-    <h3>{{ group.grouper }}</h3>
+    <h3>{{ group.grouper|capitalize }}</h3>
     <ul>
       {% for project in group.list %}
         {{ show_project(project) }}
