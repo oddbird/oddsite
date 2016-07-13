@@ -2,6 +2,7 @@
 
 const AssetsPlugin = require('assets-webpack-plugin');
 const autoprefixer = require('autoprefixer');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const path = require('path');
 const sassdoc = require('sassdoc');
@@ -131,6 +132,10 @@ module.exports = {
     new WebpackShellPlugin({
       onBuildEnd: [buildScript],
       dev: false
+    }),
+    new CleanWebpackPlugin([outputPath], {
+      root: __dirname,
+      verbose: true
     })
   ],
   module: {
