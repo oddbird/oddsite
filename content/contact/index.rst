@@ -12,7 +12,7 @@ after:
       and %s, our %s,
       will be in touch with you soon.
     submit: 'Send!'
-    next: '/contact/thanks/'
+    next: 'contact/thanks/'
 
 
 Let's Get to Know Each Other

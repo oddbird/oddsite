@@ -30,7 +30,7 @@ const paths = {
   SASS_DIR: 'static/sass/',
   ICONS_DIR: 'templates/icons/',
   DIST_DIR: 'dev-output/',
-  PROD_DIST_DIR: 'output/',
+  PROD_DIST_DIR: 'output/*',
   IGNORE: [
     '!**/.#*',
     '!**/flycheck_*'
