@@ -28,10 +28,10 @@ I talked about the `code patterns`_ we use
 to represent design patterns,
 especially in our front-end Sass,
 HTML (Jinja?),
-and Javascript code.
+and JavaScript code.
 
 .. _Clarity Conference: http://clarityconf.com/
 .. _Jina: https://github.com/sushiandrobots
 .. _Chris Coyier: http://codepen.io/chriscoyier/post/clarity-2016-wrapup
 .. _Brad Frost: http://bradfrost.com/blog/post/clarity-conf-code-patterns-for-pattern-making/
-.. _code patterns: 'http://oddbooksapp.com/books/pattern-making/'
+.. _code patterns: http://oddbooksapp.com/book/pattern-making

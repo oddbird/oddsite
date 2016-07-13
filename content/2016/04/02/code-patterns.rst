@@ -20,7 +20,7 @@ Among other things:
 - We use the cascade and pattern-specificity
   as our primary guide for organizing Sass/CSS,
   moving from the most general to the most specific.
-- We use Jinja in Python, and Nunjucks in Javascript
+- We use Jinja in Python, and Nunjucks in JavaScript
   to write HTML templates that are less repetative and more meaningful.
   I recommend strong template logic that can be rendered
   on either the server or the client side,

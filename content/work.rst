@@ -26,7 +26,7 @@ process:
   - title: 'Accessible <i>&</i> Responsive'
     body: |
       We use the accessible open web stack:
-      semantic HTML5, unobtrusive Javascript, and advanced CSS —
+      semantic HTML5, unobtrusive JavaScript, and advanced CSS —
       backed by Python & Django on the server.
 services:
   - title: 'We have partnered with'

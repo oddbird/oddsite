@@ -319,7 +319,7 @@ oss:
     source: 'https://github.com/mozilla/nunjucks/'
     blog: 'nunjucks'
     priority: 'core'
-    tagline: "Sophisticated templating for JavaScript"
+    tagline: 'Sophisticated templating for JavaScript'
     description: |
       A powerful markup templating language
       with block inheritance, autoescaping, macros,
@@ -728,7 +728,7 @@ birds:
       database design,
       and deployment.
       He has been building web-based software
-      in Python and Javascript for over a decade.
+      in Python and JavaScript for over a decade.
       He has been a prolific contributor
       to the Plone web content management system,
       and enjoys learning new tools–most
@@ -802,79 +802,6 @@ birds_former:
     author: 'una'
     posts: False
     url: 'https://twitter.com/Una'
-
-
-# Navigation
-# ----------
-
-nav:
-  - text: 'birds'
-    url: '/birds/'
-  - text: 'work'
-    url: '/work/'
-  - text: 'speaking'
-    url: '/speaking/'
-  - text: 'open-source'
-    url: '/open-source/'
-  - text: 'blog'
-    url: '/blog/'
-  - text: 'community'
-    url: '/community/'
-  - text: 'contact'
-    url: '/contact/'
-
-
-
-# Site Settings
-# -------------
-
-copyright: '2009–2016'
-email: 'birds@oddbird.net'
-
-location: 'blog'
-author: 'oddbird'
-comments: false
-
-blog_title: 'Our Odd Thoughts...'
-
-contact:
-  - title: 'Let’s Build Something Together!'
-    content: |
-      <strong>We want to hear all about your software ideas.</strong>
-      Fill out our
-      <a href="/contact/">contact form</a>,
-      join our
-      <a href="http://friends.oddbird.net">public Slack chat</a>,
-      or tweet
-      <a href="http://twitter.com/oddbird">@oddbird</a>
-      to start the conversation.
-
-
-# rstBlog Setup
-# -------------
-
-active_modules: [
-  denormalize_config,
-  pygments_simple,
-  tags,
-  blog,
-  author,
-  wrap,
-  typogrify,
-  hashedassets
-  ]
-canonical_url: http://oddbird.net/
-template_path: ../templates
-asset_map_path: static/assets.json
-rst_writer: html5writer
-ignore_files: ['.*', '_*', 'config*.yml', 'Makefile', 'README', '*.conf', '*~']
-modules:
-  pygments:
-    style: tango
-  blog:
-    index_url: /blog/
-    per_page: 10
-
 
 
 # Past Talks
@@ -1157,7 +1084,7 @@ events_past:
     date: ['09', '07', '2016']
     who:
       - author: 'carl'
-        title: "Taming dependencies with pip"
+        title: 'Taming dependencies with pip'
         video: 'http://pyvideo.org/video/69/djangocon-2011--taming-dependencies-with-pip'
 
   - venue: 'PyCon'
@@ -1175,3 +1102,74 @@ events_past:
       - author: 'carl'
         title: "Reverse-engineering Ian Bicking's brain: inside pip and virtualenv"
         video: 'http://pyvideo.org/video/389/pycon-2011--reverse-engineering-ian-bicking--39-s'
+
+
+# Navigation
+# ----------
+
+nav:
+  - text: 'birds'
+    url: '/birds/'
+  - text: 'work'
+    url: '/work/'
+  - text: 'speaking'
+    url: '/speaking/'
+  - text: 'open-source'
+    url: '/open-source/'
+  - text: 'blog'
+    url: '/blog/'
+  - text: 'community'
+    url: '/community/'
+  - text: 'contact'
+    url: '/contact/'
+
+
+# Site Settings
+# -------------
+
+copyright: '2009–2016'
+email: 'birds@oddbird.net'
+
+location: 'blog'
+author: 'oddbird'
+comments: false
+
+blog_title: 'Our Odd Thoughts...'
+
+contact:
+  - title: 'Let’s Build Something Together!'
+    content: |
+      <strong>We want to hear all about your software ideas.</strong>
+      Fill out our
+      <a href="/contact/">contact form</a>,
+      join our
+      <a href="http://friends.oddbird.net">public Slack chat</a>,
+      or tweet
+      <a href="http://twitter.com/oddbird">@oddbird</a>
+      to start the conversation.
+
+
+# rstBlog Setup
+# -------------
+
+active_modules: [
+  denormalize_config,
+  pygments_simple,
+  tags,
+  blog,
+  author,
+  wrap,
+  typogrify,
+  hashedassets
+  ]
+canonical_url: http://oddbird.net/
+template_path: ../templates
+asset_map_path: static/assets.json
+rst_writer: html5writer
+ignore_files: ['.*', '_*', 'config*.yml', 'Makefile', 'README', '*.conf', '*~']
+modules:
+  pygments:
+    style: tango
+  blog:
+    index_url: /blog/
+    per_page: 10
