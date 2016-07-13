@@ -37,7 +37,7 @@ You can get involved in several ways:
   talk to us on `Twitter`_.
 - **Live Site and Open Code:**
   Follow our progress here and on `Github`_.
-- **Articles and Artifacts**
+- **Articles and Artifacts:**
   Check back here for regular posts as we work.
   We'll update the `timeline`_ at the bottom of this page.
 
