@@ -18,7 +18,7 @@ Community Involvement
 We love being part of
 a vibrant web design and development community.
 We benifit daily from the generous contributions of others,
-and believe that a diverse network of shared experiences and ideas
+and believe that a `diverse network`_ of shared experiences and ideas
 makes all of our work stronger.
 In addition to our `open-source software`_ and `public speaking`_,
 we are proud to sponsor
@@ -30,5 +30,6 @@ And then, on occasion,
 we also sponsor the communities and events
 that keep us entertained and fulfilled outside of work.
 
+.. _`diverse network`: /conduct/
 .. _`open-source software`: /open-source/
 .. _`public speaking`: /speaking/
