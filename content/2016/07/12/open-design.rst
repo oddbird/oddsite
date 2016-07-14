@@ -37,6 +37,9 @@ You can get involved in several ways:
   talk to us on `Twitter`_.
 - **Live Site and Open Code:**
   Follow our progress here and on `Github`_.
+- **Open Plans:**
+  Find our to-do list,
+  and watch our process on `Pivotal Tracker`_.
 - **Articles and Artifacts:**
   Check back here for regular posts as we work.
   We'll update the `timeline`_ at the bottom of this page.
@@ -44,6 +47,7 @@ You can get involved in several ways:
 .. _open Slack channel: http://friends.oddbird.net
 .. _Github: https://github.com/oddbird/oddsite/
 .. _Twitter: http://twitter.com/oddbird
+.. _Pivotal Tracker: https://www.pivotaltracker.com/projects/22378
 .. _timeline: #open-design-articles
 
 
