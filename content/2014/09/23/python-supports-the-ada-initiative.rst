@@ -17,8 +17,6 @@ Python for Ada
 .. role:: strike
     :class: strike
 
-|DonationLink|_
-
 |AdaSticker|
 
 `Donate`_ to the `Ada Initiative`_ today to support women in open technology
@@ -46,7 +44,11 @@ gave a **full third** of the talks at PyCon 2014.
 
 --------
 
-|Miko|
+.. image:: /static/images/blog/miko.jpg
+   :target: https://supportada.org/?campaign=python
+   :class: align-left size-quarter
+   :alt: Miko smiling while playing outside
+
 
 I have two sons, a seven-year-old and a four-month-old (yep, that's him). With
 the second just arrived, I think a lot these days about the work I do. I want
@@ -81,9 +83,7 @@ harassed at a conference"`_ is a description of DjangoCon.
 
 That's the community that I want to be a part of, and the Ada Initiative is
 `working every day`_ to `make it a reality`_. If that's the community you want
-too, join me and `donate today`_!
-
-|DonationLink|_
+too, join me and donate today!
 
 Thanks for listening,
 
@@ -95,7 +95,6 @@ Carl
 .. _Ada Initiative: http://adainitiative.org/
 .. _donate: https://supportada.org/?campaign=python
 .. _donate now: https://supportada.org/?campaign=python
-.. _donate today: https://supportada.org/?campaign=python
 .. _Alex: http://alexgaynor.net/
 .. _Jacob: http://jacobian.org/
 .. _start a company: http://oddbird.net/2013/12/30/sixth-year/
@@ -115,11 +114,6 @@ Carl
 .. _Jim Meyer: http://blog.geekdaily.org
 .. _pitched in: https://twitter.com/purp/status/514453504253886464
 
-.. |DonationLink| raw:: html
-
-    <img width="600" height="175" src="https://adainitiative.org/counters/2014counter-python.svg">
-
-.. _DonationLink: https://supportada.org/?campaign=python
 
 .. |PyConTweet| raw:: html
 
@@ -129,7 +123,3 @@ Carl
 .. |AdaSticker| raw:: html
 
     <a href="https://supportada.org/?campaign=python"><img style="float: right;" src="/static/images/blog/Ada-Initiative-color-sticker-208x300.png"></a>
-
-.. |Miko| raw:: html
-
-    <a href="https://supportada.org/?campaign=python"><img width="200" style="float: left; margin: 12px;" src="/static/images/blog/miko.jpg"></a>
