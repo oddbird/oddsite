@@ -1,0 +1,20 @@
+// Alignment Patterns
+// ==================
+
+.align-left {
+  float: left;
+  margin: 0 1rem 1rem 0;
+}
+
+.align-right {
+  float: right;
+  margin: 0 0 1rem 1rem;
+}
+
+.align-center {
+  margin: 0 auto 1rem;
+}
+
+.align-none {
+  margin-bottom: 1rem;
+}

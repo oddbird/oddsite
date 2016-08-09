@@ -1,0 +1,33 @@
+// Scale Settings
+// ==============
+
+// Dependencies
+// ------------
+
+@import '~accoutrement-scale/sass/scale';
+
+$ratios: (
+  'multiple': 'linear',
+);
+
+
+$component-sizes: (
+  'full-content': 40rem,
+);
+
+
+@function merge-sizes(
+  $maps...
+) {
+  $new: $sizes;
+
+  @each $map in $maps {
+    $new: map-merge($new, $map);
+  }
+
+  @return $new;
+}
+
+$sizes: merge-sizes(
+  $component-sizes
+);
