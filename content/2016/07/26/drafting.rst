@@ -10,8 +10,8 @@ after:
     id: 'open-design-articles'
 
 
-Shitty Firt Drafts
-==================
+Shitty First Drafts
+===================
 
 Before I found my accidental career in web development,
 I studied theater and writing.
@@ -28,13 +28,13 @@ each feeding off the other.
 As a process geek,
 I find that especially true
 in the ways creative inspiration
-and prodution are handled.
+and production are handled.
 Original ensemble "devised" theater
 is a great way to learn project management
 and the basics of open-source collaboration.
 The same is true in reverse.
 My art is better for
-an understanding of user testing,
+an understanding of usability testing,
 and inspiration-on-deadline,
 but my work is better for
 a willingness to invite the audience somewhere new.
@@ -64,12 +64,12 @@ I think in five stages,
 borrowed from Don Fry’s Writing Your Way:
 
 1. **Define**: What’s the seed idea, question, or hypothesis?
-2. **Explore**: Reasearch, gather, and create the materials.
+2. **Explore**: Research, gather, and create the materials.
 3. **Organize**: Outline the structure, or impose one.
 4. **Draft**: Compile a complete, shitty first draft.
 5. **Revise**: Consider, critique, edit, and iterate as needed.
 
-The goal is never to follow these five stages in a srict order,
+The goal is never to follow these five stages in a strict order,
 but to pay attention to where you are,
 moving between different mindsets as needed.
 Exploration is an expansive act,
