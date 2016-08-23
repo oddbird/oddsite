@@ -1,4 +1,4 @@
-public: no
+public: yes
 author: sondra
 tags: [oddsite, open-design]
 image:
@@ -66,14 +66,16 @@ of the OddBird brand*.
 Site Map
 --------
 
+.. image:: /static/images/blog/sitemap.jpg
+   :alt: oddsite site map
+
+
 The site outline I created next —
 showing the flow of users through the website —
 pivots around our core value: people.
 Each section of content on the new OddSite
 will seek to introduce and highlight
-the tight-knit and highly skilled team of individuals
-that have made OddBird a delight to work with
-for so many clients.
+our tight-knit team of individuals.
 No matter where a user enters our website
 we want to make it easy to get to know us and,
 most importantly,
@@ -82,7 +84,7 @@ to start a conversation.
 We’re process geeks at OddBird,
 always trying to understand
 *what we’re even doing anyway*
-and make it better.
+and do it better.
 That’s another core value,
 and part of why designing our new site in the
 open appealed to us.
@@ -91,21 +93,22 @@ the team left one question unresolved
 with the intention of exploring it during development:
 should we weave our design and development process
 into case studies of work for past clients
-or give process a page of its own?
+or give *process* a page of its own?
 We haven’t settled on an answer yet,
 and we’d love to `hear what you think`_.
 
 .. _hear what you think: /contact/
 
-.. image:: /static/images/blog/sitemap.jpg
-   :alt: oddsite site map
-
 
 User Profiles
 -------------
 
+.. image:: /static/images/blog/userprofiles.jpg
+   :alt: oddsite user profiles
+
+
 I created user profiles next —
-an audit of the goals, usage, and behavior
+an audit of the goals, usage and behavior
 of each user type —
 to focus our content around their specific needs.
 Many of our past clients have come to us via referral
@@ -150,25 +153,22 @@ Another type of user we’d like to reach
 is the individual or company
 that has an exciting business idea
 and needs a development agency
-to build the web tools that make that idea happen.
+to build the web tools to make that idea happen.
 Imagining a day in the life of this user —
 fast-paced, focused, creative, mobile —
 helped me identify key elements to include on OddSite.
-Through transparency about our process,
-quotes from past customers,
-easy-to-access case studies,
-and responsive design
-that looks beautiful on a wide variety of devices,
-we aim to communicate clearly on OddSite
-what new clients will get with us:
-a trustworthy, experienced, and creative partner.
-
-.. image:: /static/images/blog/userprofiles.jpg
-   :alt: oddsite user profiles
+On OddSite we aim to be transparent about our process
+and make it easy to find
+case studies and quotes from past clients
+so new clients know what to expect.
 
 
 User Stories
 ------------
+
+.. image:: /static/images/blog/pivotal.jpg
+   :alt: user stories in pivotal tracker
+
 
 User tasks,
 or stories,
@@ -185,12 +185,13 @@ are top priority user stories for the OddSite project.
 
 .. _Pivotal Tracker: https://www.pivotaltracker.com/n/projects/22378
 
-.. image:: /static/images/blog/pivotal.jpg
-   :alt: user stories in pivotal tracker
-
 
 Visual Design
 -------------
+
+.. image:: /static/images/blog/navdraft.jpg
+   :alt: draft mockup of navigation for mobile
+
 
 To give ourselves a basic structure
 for the open design process
@@ -212,12 +213,13 @@ to the interactive and responsive web.
 .. _Stacy: /birds/#bird-stacy
 .. _Miriam: /birds/#bird-miriam
 
-.. image:: /static/images/blog/navdraft.jpg
-   :alt: draft mockup of navigation for mobile
-
 
 Banner
 ------
+
+.. image:: /static/images/blog/mobilebannerdraft.jpg
+   :alt: draft mockup of banner for mobile
+
 
 My final task
 before launching our draft
@@ -228,7 +230,7 @@ It turned out to be a bigger challenge than I anticipated
 to make the angled design look great across devices,
 a challenge Stacy was more than up to,
 but I’ll let her tell that story.
-
-.. image:: /static/images/blog/mobilebannerdraft.jpg
-   :alt: draft mockup of banner for mobile
+And I'll be writing more detailed posts
+in the weeks to come
+about each stage of the process outlined here.
 
