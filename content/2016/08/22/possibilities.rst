@@ -4,7 +4,7 @@ tags: [oddsite, open-design]
 image:
   - src: 'bwdraft.jpg'
 summary: |
-  OddBird met for a work retreat in April. On the Oddgenda: grow the company and redesign OddSite. I came home from retreat tasked with reviewing OddBird’s web presence and proposing ways to improve communication about our process and service in order to attract new clients.
+  OddBird met for a work retreat in April. On the Oddgenda: grow the company and redesign OddSite. I came home from retreat tasked with reviewing OddBird’s web presence and proposing ways to improve communication about our process and services in order to attract new clients.
 after:
   - include: 'blog/_tag-module.html.j2'
     title: 'OddSite Re-design Timeline'
@@ -41,7 +41,7 @@ Marketing! Woo!
 Research
 --------
 
-I started with a Google search
+I started with a Google search,
 as many people do
 when looking to hire a web development company.
 Drawing inspiration from the websites of similar development agencies,
@@ -57,7 +57,7 @@ and “Should I buy a cappuccino or a latte at this cafe?”
 Relying on this research and my past experiences,
 I drafted a proposal for the team to review.
 This feedback stage confirmed the proposed direction
-and helped to clarify a core OddBird value for me —
+and helped to clarify a core OddBird value —
 *the people that make up our team
 are the defining characteristic
 of the OddBird brand*.
@@ -157,7 +157,7 @@ to build the web tools to make that idea happen.
 Imagining a day in the life of this user —
 fast-paced, focused, creative, mobile —
 helped me identify key elements to include on OddSite.
-On OddSite we aim to be transparent about our process
+We aim to be transparent about our process
 and make it easy to find
 case studies and quotes from past clients
 so new clients know what to expect.
