@@ -19,26 +19,35 @@ site_message:
 # ------------
 events:
 
-  - venue: 'CSS Summit'
-    url: 'http://environmentsforhumans.com/2016/css-summit/'
-    date: ['07', '26', '2016']
-    who:
-      - author: 'miriam'
-        title: 'Code Patterns for Pattern-Making'
-
-  - venue: 'CascadiaFest'
+  - venue: 'CSSConf 2016'
     url: 'http://2016.cascadiafest.org/'
-    date: ['08', '03', '2016']
+    date: ['09', '26', '2016']
+    adr:
+      city: 'Boston'
+      state: 'MA'
     who:
       - author: 'miriam'
-        title: 'Code Patterns for Pattern-Making'
+        title: 'Sass Map Magic'
 
   - venue: 'Plone Digital Experience Conference'
     url: 'http://2016.ploneconf.org/'
     date: ['10', '19', '2016']
+    adr:
+      city: 'Boston'
+      state: 'MA'
     who:
       - author: 'david'
         title: 'Integration*5'
+
+  - venue: 'CSSDay.io'
+    url: 'http://cssday.io/'
+    date: ['12', '03', '2016']
+    adr:
+      city: 'Chandler'
+      state: 'AZ'
+    who:
+      - author: 'miriam'
+        title: 'Code Patterns for Pattern-Making'
 
 
 # Client Projects
@@ -808,6 +817,22 @@ birds_former:
 # ----------
 
 events_past:
+
+  - venue: 'CascadiaFest'
+    url: 'http://2016.cascadiafest.org/'
+    date: ['08', '03', '2016']
+    who:
+      - author: 'miriam'
+        title: 'Code Patterns for Pattern-Making'
+        slides: 'http://oddbooksapp.com/book/pattern-making'
+
+  - venue: 'CSS Summit'
+    url: 'http://environmentsforhumans.com/2016/css-summit/'
+    date: ['07', '26', '2016']
+    who:
+      - author: 'miriam'
+        title: 'Code Patterns for Pattern-Making'
+        slides: 'http://oddbooksapp.com/book/pattern-making'
 
   - venue: 'DublinCSS'
     url: 'http://www.meetup.com/DublinCSS/events/230011902/'
