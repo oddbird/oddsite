@@ -32,12 +32,12 @@
 }
 
 .chart-text {
-  font-size: .65rem;
+  font-size: 0.65rem;
 }
 
 .chart-dashed {
   fill: none;
   stroke: color('brand-orange');
+  stroke-dasharray: 6, 3;
   stroke-miterlimit: 10;
-  stroke-dasharray: 6,3;
 }
