@@ -19,21 +19,21 @@ Will CSS Grid Layout Enable Creative Design?
 
 I couldn’t be more excited about CSS grid layout. For far too many years we’ve been dealing with CSS solutions that were never made for the layouts we have been creating. Working with tables then floats and positioning have conditioned us to avoid anything outside of these standard patterns we’ve come to settle upon. But designers and CSS developers can soon rejoice when the CSS Grid Layout Module hits browsers.
 
-In the meantime, Flexbox has been a great addition to our CSS Toolbox, giving us a way to lay content out easier than before. Remember when vertical centering used to be a huge ordeal? There are a number of issues that are “Solved by Flexbox” but it is still not a complete grid solution.
+In the meantime, Flexbox has been a great addition to our CSS Toolbox, giving us a way to lay content out easier than before. Remember when vertical centering used to be a huge ordeal? There are a number of issues that are “Solved by Flexbox,” but it is still not a complete grid solution.
 
-If you haven’t used flexbox yet, I highly suggest studying this CodePen demo:
+If you haven’t used Flexbox yet, I highly suggest studying this CodePen demo:
 
 .. raw:: html
 
    <p data-height="688" data-theme-id="21914" data-slug-hash="adLPwv" data-default-tab="result" data-user="enxaneta" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/enxaneta/pen/adLPwv/">Flexbox playground</a> by Gabi (<a href="http://codepen.io/enxaneta">@enxaneta</a>) on <a href="http://codepen.io">CodePen</a>.</p><script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 
 
-Flexbox is great for single direction elements but lacks the ability to create structure on both x and y axis’. A container with `display: flex;` can either go horizontally or vertically as selected by the flex-direction property. So, we marched on, still in search of creating an easier way to create grids on the web.
+Flexbox is great for single direction elements but lacks the ability to create structure on both x and y axis’. A container with `display: flex;` can either go horizontally or vertically as selected by the flex-direction property. *(I don't think you need the following sentence because the header of the next section is a better transition.) So, we marched on, still in search of creating an easier way to create grids on the web.*
 
 CSS Grid Layout to the rescue
 -----------------------------
 
-Well, CSS Grid Layout is in the far distant future. It doesn’t have much browser support at the moment so if you wanted to start using it on a production site you’ll want to wrap it in an ``@supports`` conditional.
+Well, CSS Grid Layout is in the far distant future. It doesn’t have much browser support at the moment so if you want to start using it on a production site you’ll want to wrap it in an ``@supports`` conditional.
 
 .. code:: scss
 
