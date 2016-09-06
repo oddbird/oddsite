@@ -58,6 +58,7 @@ Currently, Feature Queries are supported in most browsers except Internet Explor
 Grid introduces new vocabulary
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+
 **Grid line**
   The lines that create the grid, separating the grid cells.
 
