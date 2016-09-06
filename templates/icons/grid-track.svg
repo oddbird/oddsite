@@ -1,0 +1,14 @@
+<svg id="grid-tracks" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 573.39 393.32">
+  <title>grid-track</title>
+  <rect class="chart-highlight" x="0.5" y="152.82" width="500" height="120"/>
+  <rect class="chart-highlight" x="7.98" y="150.33" width="360" height="124.98" transform="translate(400.8 24.85) rotate(90)"/>
+  <polygon class="chart-triangle" points="193.35 24.88 188.43 20.61 183.5 16.35 193.35 16.35 203.19 16.35 198.27 20.61 193.35 24.88"/>
+  <text class="chart-text" transform="translate(167.9 10.28)">Grid track</text>
+  <polygon class="chart-triangle" points="508.5 212.82 512.76 217.74 517.02 222.67 517.02 212.82 517.02 202.98 512.76 207.9 508.5 212.82"/>
+  <text class="chart-text" transform="translate(521.39 216.9)">Grid track</text>
+  <line class="chart-line" x1="125.48" y1="32.82" x2="125.48" y2="392.82"/>
+  <rect class="chart-line" x="0.5" y="272.82" width="500" height="120"/>
+  <rect class="chart-line" x="257.95" y="150.33" width="360" height="124.98" transform="translate(650.77 -225.12) rotate(90)"/>
+  <rect class="chart-line" x="0.5" y="32.82" width="500" height="120"/>
+  <rect class="chart-line" x="132.96" y="150.33" width="360" height="124.98" transform="translate(525.78 -100.14) rotate(90)"/>
+</svg>

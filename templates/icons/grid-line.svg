@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 559.3 393.32">
+  <title>grid-line</title>
+  <g id="grid-lines">
+    <polygon class="chart-triangle" points="125.48 27.39 120.56 23.13 115.64 18.86 125.48 18.86 135.33 18.86 130.41 23.13 125.48 27.39"/>
+    <polygon class="chart-triangle" points="250.47 27.39 245.55 23.13 240.63 18.86 250.47 18.86 260.31 18.86 255.39 23.13 250.47 27.39"/>
+    <polygon class="chart-triangle" points="375.45 27.39 370.53 23.13 365.61 18.86 375.45 18.86 385.3 18.86 380.38 23.13 375.45 27.39"/>
+    <polygon class="chart-triangle" points="500.44 27.39 495.52 23.13 490.59 18.86 500.44 18.86 510.28 18.86 505.36 23.13 500.44 27.39"/>
+    <polygon class="chart-triangle" points="0.35 18.86 0.04 18.86 0.04 27.12 0.35 27.39 5.28 23.13 10.2 18.86 0.35 18.86"/>
+    <polygon class="chart-triangle" points="504.67 32.82 508.93 37.74 513.19 42.67 513.19 32.82 513.19 22.98 508.93 27.9 504.67 32.82"/>
+    <polygon class="chart-triangle" points="504.67 152.82 508.93 157.74 513.19 162.67 513.19 152.82 513.19 142.98 508.93 147.9 504.67 152.82"/>
+    <polygon class="chart-triangle" points="504.67 272.82 508.93 277.74 513.19 282.67 513.19 272.82 513.19 262.98 508.93 267.9 504.67 272.82"/>
+    <polygon class="chart-triangle" points="512.77 383.4 508.51 388.32 504.71 392.71 512.77 392.71 512.77 383.4"/>
+    <text class="chart-text" transform="translate(104.37 14.37)">Grid line</text>
+    <text class="chart-text" transform="translate(517.07 156.9)">Grid line</text>
+    <rect class="chart-line" x="0.5" y="32.82" width="500" height="120"/>
+    <rect class="chart-line" x="-117.01" y="150.33" width="360" height="124.98" transform="translate(275.81 149.83) rotate(90)"/>
+    <rect class="chart-line" x="0.5" y="272.82" width="500" height="120"/>
+    <rect class="chart-line" x="257.95" y="150.33" width="360" height="124.98" transform="translate(650.77 -225.12) rotate(90)"/>
+    <rect class="chart-line" x="132.96" y="150.33" width="360" height="124.98" transform="translate(525.78 -100.14) rotate(90)"/>
+    <line class="chart-line" x1="0.5" y1="152.82" x2="3.5" y2="152.82"/>
+    <line class="chart-dashed" x1="6.48" y1="152.82" x2="496.01" y2="152.82"/>
+    <line class="chart-line" x1="497.5" y1="152.82" x2="500.5" y2="152.82"/>
+    <line class="chart-line" x1="125.48" y1="32.82" x2="125.48" y2="35.82"/>
+    <line class="chart-dashed" x1="125.48" y1="38.82" x2="125.48" y2="388.32"/>
+    <line class="chart-line" x1="125.48" y1="389.82" x2="125.48" y2="392.82"/>
+</g></svg>

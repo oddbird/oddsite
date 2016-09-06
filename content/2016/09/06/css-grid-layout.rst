@@ -5,8 +5,7 @@ image:
   - src: 'cssgriddemo.jpg'
 summary: |
   CSS Grid Layout is shaping up to be the layout tool we've always wanted
-  on the web. How can we use it to start creating interesting layouts that
-  since we've been restricted in our past?
+  on the web. How can we use it to start creating interesting layouts?
 after:
   - include: 'blog/_tag-module.html.j2'
     title: 'Posts about CSS Grid Layout'
@@ -19,7 +18,9 @@ Will CSS Grid Layout Enable Creative Design?
 
 I couldn’t be more excited about CSS grid layout. For far too many years we’ve been dealing with CSS solutions that were never made for the layouts we have been creating. Working with tables then floats and positioning have conditioned us to avoid anything outside of these standard patterns we’ve come to settle upon. But designers and CSS developers can soon rejoice when the CSS Grid Layout Module hits browsers.
 
-In the meantime, Flexbox has been a great addition to our CSS Toolbox, giving us a way to lay content out easier than before. Remember when vertical centering used to be a huge ordeal? There are a number of issues that are “Solved by Flexbox” but it is still not a complete grid solution.
+In the meantime, Flexbox has been a great addition to our CSS Toolbox, giving us a way to lay content out easier than before. Remember when vertical centering used to be a huge ordeal? There are a number of issues that are `“Solved by Flexbox”`_ but it is still not a complete grid solution.
+
+.. _“Solved by Flexbox”: https://philipwalton.github.io/solved-by-flexbox/
 
 If you haven’t used flexbox yet, I highly suggest studying this CodePen demo:
 
@@ -33,7 +34,7 @@ Flexbox is great for single direction elements but lacks the ability to create s
 CSS Grid Layout to the rescue
 -----------------------------
 
-Well, CSS Grid Layout is in the far distant future. It doesn’t have much browser support at the moment so if you wanted to start using it on a production site you’ll want to wrap it in an ``@supports`` conditional.
+Well, CSS Grid Layout is in the far distant future. It doesn’t have much browser support at the moment so if you want to use it on a production site you may want to use Feature Queries. By wrapping your code in an ``@supports`` conditional, it will check to see if the browser has support for the property/value pair in the parentheses, and if so, will use what is inside the @supports brackets. If the browser doesn't have support for `display: grid` or if the browser doesn't even know what Feature Queries are, then it ignores the block of code.
 
 .. code:: scss
 
@@ -45,11 +46,13 @@ Well, CSS Grid Layout is in the far distant future. It doesn’t have much brows
     }
   }
 
-You can see a few fallbacks in this CodePen demo:
+Currently, Feature Queries are supported in most browsers except Internet Explorer and Opera Mini:
 
-.. raw:: html
+.. image:: /static/images/blog/feature-queries.jpg
+   :target: http://caniuse.com/#feat=css-featurequeries
+   :class: align-center
+   :alt: Feature Queries support in browsers looks good
 
-  <p data-height="642" data-theme-id="21914" data-slug-hash="vXBvNE" data-default-tab="css,result" data-user="stacy" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/stacy/pen/vXBvNE/">CSS Grid Layout with float and flexbox fallbacks</a> by Stacy (<a href="http://codepen.io/stacy">@stacy</a>) on <a href="http://codepen.io">CodePen</a>.</p><script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 
 
 Grid introduces new vocabulary and CSS properties
@@ -57,19 +60,45 @@ Grid introduces new vocabulary and CSS properties
 
 New grid terminology includes:
 
-.. line-block::
 
   **Grid line**
-  The lines that create the grid, separating the grid cells.
+    The lines that create the grid, separating the grid cells.
+
+    .. raw:: html
+
+      <svg data-icon="grid-line" data-size="chart">
+        <use xlink:href="#icon-grid-line"></use>
+      </svg>
+
 
   **Grid track**
-  The horizontal or vertical space between two grid lines, often spanning multiple grid cells.
+    The horizontal or vertical space between two grid lines, often spanning multiple grid cells.
+
+    .. raw:: html
+
+      <svg data-icon="grid-track" data-size="chart">
+        <use xlink:href="#icon-grid-track"></use>
+      </svg>
+
 
   **Grid cell**
-  A single unit of the grid made from the space between four grid lines.
+    A single unit of the grid made from the space between four grid lines.
+
+    .. raw:: html
+
+      <svg data-icon="grid-cell" data-size="chart">
+        <use xlink:href="#icon-grid-cell"></use>
+      </svg>
+
 
   **Grid area**
-  A group of space between four grid lines, often containing a group of grid cells. Grid areas can be named in CSS.
+    A group of space between four grid lines, often containing a group of grid cells. Grid areas can be named in CSS.
+
+    .. raw:: html
+
+      <svg data-icon="grid-area" data-size="chart">
+        <use xlink:href="#icon-grid-area"></use>
+      </svg>
 
 
 CSS Grid Layout Properties you would use on a grid container:
@@ -114,10 +143,16 @@ CSS Grid Layout Properties you would use on a grid container:
 
 I’ve been creating a few demos in CodePen using Grid and it has been exciting to see the flexibility we will have once this rolls out. I encourage you to start experimenting on your own as well.
 
-
 .. raw:: html
 
   <p data-height="568" data-theme-id="21914" data-slug-hash="rLyErg" data-default-tab="result" data-user="stacy" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/stacy/pen/rLyErg/">CSS Grid Layout Demo</a> by Stacy (<a href="http://codepen.io/stacy">@stacy</a>) on <a href="http://codepen.io">CodePen</a>.</p><script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+
+
+In the CodePen demo below, you'll see we start with floats then wrap everything else in ``@supports ( display: flex ) {}`` or ``@supports ( display: grid ) {}``. Within the first Flexbox conditional, we over-write the float, max-width, and clearing properties we defined for the older browsers.
+
+.. raw:: html
+
+  <p data-height="642" data-theme-id="21914" data-slug-hash="vXBvNE" data-default-tab="css,result" data-user="stacy" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/stacy/pen/vXBvNE/">CSS Grid Layout with float and flexbox fallbacks</a> by Stacy (<a href="http://codepen.io/stacy">@stacy</a>) on <a href="http://codepen.io">CodePen</a>.</p><script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 
 
 What types of layouts can we create with this more flexible system? I would love for some very experimental design to start taking place. I can hear the sighs from usability experts everywhere so let me be clear, I am not saying that we need to create crazy, chaotic designs with unpredictable navigation patterns. I am only asking how we can explore and create new ways to layout out content that are still intuitive but perhaps different from what we've always done in the past.

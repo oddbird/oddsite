@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 501 393.32">
+<title>grid area</title>
+<g id="grid-area">
+  <rect class="chart-highlight" x="250.47" y="32.82" width="250.03" height="240"/>
+  <polygon class="chart-triangle" points="375.49 24.88 370.56 20.62 365.64 16.35 375.49 16.35 385.33 16.35 380.41 20.62 375.49 24.88"/>
+  <text class="chart-text" transform="translate(351.8 10.28)">Grid area</text>
+  <rect class="chart-line" x="-117.01" y="150.33" width="360" height="124.98" transform="translate(275.81 149.83) rotate(90)"/>
+  <rect class="chart-line" x="0.5" y="272.82" width="500" height="120"/>
+  <rect class="chart-line" x="0.5" y="32.82" width="500" height="120"/>
+  <rect class="chart-line" x="132.96" y="150.33" width="360" height="124.98" transform="translate(525.78 -100.14) rotate(90)"/>
+</g>
+</svg>

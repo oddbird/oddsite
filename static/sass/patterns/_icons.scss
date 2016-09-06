@@ -13,3 +13,31 @@
   margin-right: 0.5rem;
   width: 6rem;
 }
+
+[data-size='chart'] {
+  height: 20rem;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  width: 100%;
+}
+
+.chart-line {
+  fill: none;
+  stroke: #bcbec0;
+}
+
+.chart-highlight {
+  fill: color('brand-orange');
+  stroke: color('brand-orange');
+}
+
+.chart-text {
+  font-size: .65rem;
+}
+
+.chart-dashed {
+  fill: none;
+  stroke: color('brand-orange');
+  stroke-miterlimit: 10;
+  stroke-dasharray: 6,3;
+}
