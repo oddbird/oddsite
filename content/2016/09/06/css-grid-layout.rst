@@ -55,54 +55,56 @@ Currently, Feature Queries are supported in most browsers except Internet Explor
 
 
 
-Grid introduces new vocabulary and CSS properties
--------------------------------------------------
+Grid introduces new vocabulary
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-New grid terminology includes:
+**Grid line**
+  The lines that create the grid, separating the grid cells.
 
+  .. raw:: html
 
-  **Grid line**
-    The lines that create the grid, separating the grid cells.
-
-    .. raw:: html
-
-      <svg data-icon="grid-line" data-size="chart">
-        <use xlink:href="#icon-grid-line"></use>
-      </svg>
+    <svg data-icon="grid-line" data-size="chart">
+      <use xlink:href="#icon-grid-line"></use>
+    </svg>
 
 
-  **Grid track**
-    The horizontal or vertical space between two grid lines, often spanning multiple grid cells.
+**Grid track**
+  The horizontal or vertical space between two grid lines, often spanning multiple grid cells.
 
-    .. raw:: html
+  .. raw:: html
 
-      <svg data-icon="grid-track" data-size="chart">
-        <use xlink:href="#icon-grid-track"></use>
-      </svg>
-
-
-  **Grid cell**
-    A single unit of the grid made from the space between four grid lines.
-
-    .. raw:: html
-
-      <svg data-icon="grid-cell" data-size="chart">
-        <use xlink:href="#icon-grid-cell"></use>
-      </svg>
+    <svg data-icon="grid-track" data-size="chart">
+      <use xlink:href="#icon-grid-track"></use>
+    </svg>
 
 
-  **Grid area**
-    A group of space between four grid lines, often containing a group of grid cells. Grid areas can be named in CSS.
+**Grid cell**
+  A single unit of the grid made from the space between four grid lines.
 
-    .. raw:: html
+  .. raw:: html
 
-      <svg data-icon="grid-area" data-size="chart">
-        <use xlink:href="#icon-grid-area"></use>
-      </svg>
+    <svg data-icon="grid-cell" data-size="chart">
+      <use xlink:href="#icon-grid-cell"></use>
+    </svg>
 
+
+**Grid area**
+  A group of space between four grid lines, often containing a group of grid cells. Grid areas can be named in CSS.
+
+  .. raw:: html
+
+    <svg data-icon="grid-area" data-size="chart">
+      <use xlink:href="#icon-grid-area"></use>
+    </svg>
+
+
+Grid-specific CSS Properties
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Over the next few months we will be writing more about CSS Grid Layout. In the meantime, `CSS-Tricks posted a guide`_ from Chris House `Chris House`_ that explains each of the below properties in great detail.
 
 CSS Grid Layout Properties you would use on a grid container:
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*************************************************************
 
   - display
   - grid-template-columns
@@ -121,8 +123,8 @@ CSS Grid Layout Properties you would use on a grid container:
   - grid
 
 
-**CSS Grid Layout Properties you would use on a grid item:**
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+CSS Grid Layout Properties you would use on a grid item:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
   - grid-column-start
   - grid-column-end
@@ -134,8 +136,6 @@ CSS Grid Layout Properties you would use on a grid container:
   - justify-self
   - align-self
 
-
-`CSS-Tricks posted a guide`_ from Chris House `Chris House`_ that goes in depth into each of these properties.
 
 .. _CSS-Tricks posted a guide: https://css-tricks.com/snippets/css/complete-guide-grid
 .. _Chris House: http://chris.house/blog/a-complete-guide-css-grid-layout/
@@ -187,17 +187,21 @@ CSS Grid Layout
   - `Should I Use Grid or Flexbox`_
   - `Get Ready for CSS Grid Layout`_
   - `CSS Grid Layout`_
+  - `CSS Grid Layout CodePen Collection`_
 
 .. _Grid by Example: http://gridbyexample.com/
 .. _Jen Simmons Labs: http://labs.jensimmons.com/
 .. _Should I Use Grid or Flexbox: https://www.rachelandrew.co.uk/archives/2016/03/30/should-i-use-grid-or-flexbox/
 .. _Get Ready for CSS Grid Layout: https://abookapart.com/products/get-ready-for-css-grid-layout
 .. _CSS Grid Layout: https://blogs.igalia.com/mrego/tag/css-grid-layout/
+.. _CSS Grid Layout CodePen Collection: http://codepen.io/collection/XRRJGq/
 .. _Stacy’s CSS Grid Layout Bookmark Collection: https://raindrop.io/collection/1295293
 
 
 Related Conference Talks
 ~~~~~~~~~~~~~~~~~~~~~~~~
+
+There have been some great conference presentations demonstrating the *how*, *why* and *what* is possible when it comes to CSS Grid Layout.
 
 .. raw:: html
 
