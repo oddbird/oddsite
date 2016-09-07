@@ -202,16 +202,20 @@ CSS Grid Layout
 Related Conference Talks
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-There have been a number of wonderful conference talks from CSS Grid advocates including Rachel Andrew, Christopher Wright and Jen Simmons demonstrating the *how*, *why* and *what* is possible when it comes to CSS Grid Layout. If you have any resources to share with us, we'd love to hear from you, too!
+There have been some great conference presentations demonstrating the *how*, *why* and *what* is possible when it comes to CSS Grid Layout.
+
+.. raw:: html
+
+  <iframe src="https://player.vimeo.com/video/160593669?title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+
+
 
 .. raw:: html
 
   <iframe width="640" height="360" src="https://www.youtube.com/embed/QsjXSU2pflg" frameborder="0" allowfullscreen></iframe>
 
 
-.. raw:: html
-
-  <iframe src="https://player.vimeo.com/video/160593669?title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 
 .. raw:: html
