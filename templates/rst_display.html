@@ -5,14 +5,6 @@
 
 {% block title %}{{ rst.title }}{% endblock %}
 
-{% block robots %}
-  {% if ctx.public %}
-    {{ super() }}
-  {% else %}
-    <meta name="robots" content="noindex, nofollow" />
-  {% endif %}
-{% endblock %}
-
 {% block body %}
   {%- if not config.hide_title %}
     {{ rst.html_title }}

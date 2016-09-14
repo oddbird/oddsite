@@ -11,7 +11,7 @@
   <meta name="description" content="{% block description %}Custom-built web tools for humans{% endblock description %}" />
 
   <!-- Site Info -->
-  {% block robots %}<meta name="robots" content="index, follow" />{% endblock %}
+  {% block robots %}<meta name="robots" content="{{ 'noindex, nofollow' if config.public == false else 'index, follow' }}" />{% endblock %}
   <meta name="author" content="OddBird" />
   <meta name="keywords" content="custom web development, web tools, open source, python, django, sass, scss, susy, javascript, jquery, js" />
   <meta name="language" content="en-us" />
