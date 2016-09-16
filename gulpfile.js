@@ -3,6 +3,7 @@ const chalk = require('chalk');
 const chmod = require('gulp-chmod');
 const del = require('del');
 const eslint = require('gulp-eslint');
+const exec = require('child_process').exec;
 const gulp = require('gulp');
 const gutil = require('gulp-util');
 const path = require('path');
@@ -30,7 +31,7 @@ const paths = {
   SASS_DIR: 'static/sass/',
   ICONS_DIR: 'templates/icons/',
   DIST_DIR: 'dev-output/',
-  PROD_DIST_DIR: 'output/*',
+  PROD_DIST: 'output/*',
   IGNORE: [
     '!**/.#*',
     '!**/flycheck_*'
@@ -71,6 +72,16 @@ const spawnTask = function (command, args, cb) {
       })
       .on('exit', cb)
   );
+};
+
+// Execute a command, logging output after process completes
+const execTask = function (command, cb) {
+  exec(command, (err, stdout, stderr) => {
+    if (stdout) { gutil.log(chalk.blue(stdout)); }
+    if (stderr) { gutil.log(chalk.red(stderr)); }
+    if (err) { gutil.beep(); }
+    return cb(err);
+  });
 };
 
 const eslintTask = (src, failOnError, log) => {
@@ -232,7 +243,7 @@ gulp.task('dev-clean', (cb) => {
 });
 
 gulp.task('prod-clean', (cb) => {
-  spawnTask('rm', [ '-rf', paths.PROD_DIST_DIR ], cb);
+  execTask(`rm -rf ${paths.PROD_DIST}`, cb);
 });
 
 gulp.task('dev-build', (cb) => {
