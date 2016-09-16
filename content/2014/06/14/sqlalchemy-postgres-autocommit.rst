@@ -130,10 +130,10 @@ database work (it can also be nested, using a stack of `savepoints`_ to achieve
 the effect of nested transactions).
 
 .. _Django: http://www.djangoproject.com
-.. _transactions API: https://docs.djangoproject.com/en/1.6/topics/db/transactions/#transactions-upgrading-from-1-5
+.. _transactions API: https://docs.djangoproject.com/en/stable/topics/db/transactions/#transactions-upgrading-from-1-5
 .. _Aymeric Augustin: https://myks.org/en/
 .. _prior work by Christophe Pettus: https://github.com/Xof/xact
-.. _transactions.atomic: https://docs.djangoproject.com/en/1.6/topics/db/transactions/#django.db.transaction.atomic
+.. _transactions.atomic: https://docs.djangoproject.com/en/stable/topics/db/transactions/#django.db.transaction.atomic
 .. _savepoints: http://www.postgresql.org/docs/9.2/static/sql-savepoint.html
 
 
@@ -362,7 +362,7 @@ raise an error or implicitly commit the existing transaction -- but neither of
 these solutions are appealing compared to the conceptual simplicity of
 autocommit & explicit transactions.
 
-.. _transaction.atomic: https://docs.djangoproject.com/en/1.6/topics/db/transactions/#django.db.transaction.atomic
+.. _transaction.atomic: https://docs.djangoproject.com/en/stable/topics/db/transactions/#django.db.transaction.atomic
 
 
 Conclusion
