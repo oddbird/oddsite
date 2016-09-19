@@ -164,12 +164,12 @@ Flexbox and CSS Grid Layout Resources
 Flexbox
 ~~~~~~~
 
-  - `Stacy’s Flexbox Bookmark Collection`_
-  - `Codrops CSS Flexbox Reference`_
-  - `CSS-Tricks Guide to Flexbox`_
-  - `Flexbox Froggy`_
-  - `Flexbox Defense`_
-  - `Flexbox Patterns`_
+- `Stacy’s Flexbox Bookmark Collection`_
+- `Codrops CSS Flexbox Reference`_
+- `CSS-Tricks Guide to Flexbox`_
+- `Flexbox Froggy`_
+- `Flexbox Defense`_
+- `Flexbox Patterns`_
 
 .. _CSS-Tricks Guide to Flexbox: https://css-tricks.com/snippets/css/a-guide-to-flexbox/
 .. _Flexbox Patterns: http://www.flexboxpatterns.com/home
@@ -182,19 +182,21 @@ Flexbox
 CSS Grid Layout
 ~~~~~~~~~~~~~~~
 
-  - `Stacy’s CSS Grid Layout Bookmark Collection`_
-  - `Grid by Example`_
-  - `Jen Simmons Labs`_
-  - `Should I Use Grid or Flexbox`_
-  - `Get Ready for CSS Grid Layout`_
-  - `CSS Grid Layout`_
-  - `CSS Grid Layout CodePen Collection`_
+- `Stacy’s CSS Grid Layout Bookmark Collection`_
+- `Grid by Example`_
+- `Jen Simmons Labs`_
+- `Should I Use Grid or Flexbox`_
+- `Get Ready for CSS Grid Layout`_
+- `CSS Grid Layout`_
+- `Where Things Are at in the CSS Grid Layout Working Draft`_
+- `CSS Grid Layout CodePen Collection`_
 
 .. _Grid by Example: http://gridbyexample.com/
 .. _Jen Simmons Labs: http://labs.jensimmons.com/
 .. _Should I Use Grid or Flexbox: https://www.rachelandrew.co.uk/archives/2016/03/30/should-i-use-grid-or-flexbox/
 .. _Get Ready for CSS Grid Layout: https://abookapart.com/products/get-ready-for-css-grid-layout
 .. _CSS Grid Layout: https://blogs.igalia.com/mrego/tag/css-grid-layout/
+.. _Where Things Are at in the CSS Grid Layout Working Draft: https://www.sitepoint.com/where-things-are-at-in-the-css-grid-layout-working-draft/
 .. _CSS Grid Layout CodePen Collection: http://codepen.io/collection/XRRJGq/
 .. _Stacy’s CSS Grid Layout Bookmark Collection: https://raindrop.io/collection/1295293
 
