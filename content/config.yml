@@ -679,7 +679,6 @@ birds:
     adr:
       city: 'Denver'
       state: 'CO'
-    no_posts: True
     bio: |
       Sondra spearheads the design process
       through user testing, brand development, and interface design.
@@ -705,7 +704,6 @@ birds:
     adr:
       city: 'Chicago'
       state: 'IL'
-    no_posts: True
     bio: |
       With over 14 years of experience,
       Stacy takes the lead on interface development,
