@@ -28,7 +28,20 @@
         {{ utility.link_if(event.venue, event.url) }}
       </h3>
 
-      {{ event.date|join('/') }}
+      <time class="dt-start" datetime="{{ [event.date[2], event.date[0], event.date[1]]|join('-') }}">
+        {{ event.date|join('/') }}
+      </time>
+
+      {% if event.adr %} —
+        <span class="h-adr">
+          {% if event.adr.city %}
+            <span class="p-locality">{{ event.adr.city }}{% if event.adr.state %},{% endif %}</span>
+          {% endif %}
+          {% if event.adr.state %}
+            <span class="p-region">{{ event.adr.state }}</span>
+          {% endif %}
+        </span>
+      {% endif %}
 
       <ul>
         {% for who in event.who %}

@@ -4,7 +4,7 @@ after:
   - include: 'contact/_form.html.j2'
     contact: 'miriam'
     intro: |
-      We're commited to keeping our team small and personal,
+      We're committed to keeping our team small and personal,
       so the people you meet at the beginning of the process
       are the same people who help you design, build,
       and launch your application.
