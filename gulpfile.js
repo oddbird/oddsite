@@ -31,7 +31,7 @@ const paths = {
   SASS_DIR: 'static/sass/',
   ICONS_DIR: 'templates/icons/',
   DIST_DIR: 'dev-output/',
-  PROD_DIST: 'output/*',
+  PROD_DIST_DIR: 'output/',
   IGNORE: [
     '!**/.#*',
     '!**/flycheck_*'
@@ -197,16 +197,22 @@ gulp.task('sprites', ['sprites-clean'], () =>
 
 gulp.task('runserver', ['browser-sync']);
 
+const getServeOpts = (dir) => ({
+  server: { baseDir: dir },
+  open: false,
+  logLevel: 'info',
+  logPrefix: 'oddsite',
+  notify: false,
+  files: [`${dir}**/*`],
+  reloadDebounce: 200
+});
+
 gulp.task('browser-sync', (cb) => {
-  browserSync.init({
-    server: { baseDir: paths.DIST_DIR },
-    open: false,
-    logLevel: 'info',
-    logPrefix: 'oddsite',
-    notify: false,
-    files: [`${paths.DIST_DIR}**/*`],
-    reloadDebounce: 200
-  }, cb);
+  browserSync.init(getServeOpts(paths.DIST_DIR), cb);
+});
+
+gulp.task('prod-serve', (cb) => {
+  browserSync.init(getServeOpts(paths.PROD_DIST_DIR), cb);
 });
 
 const webpackOnBuild = (done) => (err, stats) => {
@@ -243,7 +249,7 @@ gulp.task('dev-clean', (cb) => {
 });
 
 gulp.task('prod-clean', (cb) => {
-  execTask(`rm -rf ${paths.PROD_DIST}`, cb);
+  execTask(`rm -rf ${paths.PROD_DIST_DIR}*`, cb);
 });
 
 gulp.task('dev-build', (cb) => {

@@ -98,11 +98,17 @@ Deployment
 
 The site is deployed on Github Pages. The ``output/`` directory (which is git-
 ignored) should be its own git repo (`github.com/oddbird/oddbird.github.com`_,
-which is also the deployment on Github Pages). To deploy, first be sure that
-the ``output/`` directory contains the correct git repo; if not, run
-``git clone git@github.com:oddbird/oddbird.github.com output`` to set it up.
-Then run ``gulp prod`` to build the site under ``output/``; ``cd`` into that
-directory, commit those changes and then ``git push`` to deploy it live.
+which is also the deployment on Github Pages).
+
+To deploy, first be sure that the ``output/`` directory contains the correct
+git repo; if not, run ``git clone git@github.com:oddbird/oddbird.github.com
+output`` to set it up.
+
+Before deploying, ``cd output/`` and ``git pull`` to be sure you have the
+latest code. Then, back in the parent directory, run ``gulp prod`` to build the
+site under ``output/``. Run ``gulp prod-serve`` to view your changes to the
+production code before committing. When satisfied, ``cd output/``, commit those
+changes and then ``git push`` to deploy it live.
 
 .. _github.com/oddbird/oddbird.github.com: https://github.com/oddbird/oddbird.github.com
 
