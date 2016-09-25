@@ -48,6 +48,8 @@ events:
     who:
       - author: 'miriam'
         title: 'Code Patterns for Pattern-Making'
+      - author: 'stacy'
+        title: 'Make Web Design Great Again'
 
 
 # Client Projects
