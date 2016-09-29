@@ -19,16 +19,6 @@ site_message:
 # ------------
 events:
 
-  - venue: 'CSSConf 2016'
-    url: 'http://2016.cascadiafest.org/'
-    date: ['09', '26', '2016']
-    adr:
-      city: 'Boston'
-      state: 'MA'
-    who:
-      - author: 'miriam'
-        title: 'Sass Map Magic'
-
   - venue: 'Plone Digital Experience Conference'
     url: 'http://2016.ploneconf.org/'
     date: ['10', '19', '2016']
@@ -817,6 +807,15 @@ birds_former:
 # ----------
 
 events_past:
+  - venue: 'CSSConf 2016'
+    url: 'http://2016.cascadiafest.org/'
+    date: ['09', '26', '2016']
+    adr:
+      city: 'Boston'
+      state: 'MA'
+    who:
+      - author: 'miriam'
+        title: 'Sass Map Magic'
 
   - venue: 'CascadiaFest'
     url: 'http://2016.cascadiafest.org/'
