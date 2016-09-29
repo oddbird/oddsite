@@ -312,9 +312,9 @@ instead of ``px``,
 for sizing on the web.
 
 Interesting metaphor to "kick" it off:
-when runners where softer shoes,
+when runners wear softer shoes,
 they instinctively step harder —
-negating any medial benefits.
+negating any medical benefits.
 Keith suggests that we often do the same
 with relative units —
 trying to reverse-engineer pixel values,
