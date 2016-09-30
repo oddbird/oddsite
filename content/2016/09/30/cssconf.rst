@@ -799,7 +799,7 @@ A few take-aways:
 I would have taken better notes,
 but I was too busy applauding.
 This was a great way to end the conference.
-You should watch the video,
+You should `watch the video`_,
 and I should find my local
 `Black Girls Code`_
 (or similar)
@@ -808,6 +808,7 @@ to volunteer.
 |ar-links|
 
 .. _Alisha Ramos: http://twitter.com/alishalisha
+.. _watch the video: https://www.youtube.com/watch?v=PtKOzKNJF-s
 .. _Black Girls Code: http://www.blackgirlscode.com/
 
 .. |ar-links| raw:: html
