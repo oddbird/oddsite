@@ -23,6 +23,10 @@
 // Defaults
 // --------
 
+.is-hidden {
+  @include is-hidden;
+}
+
 h1,
 h2,
 h3,

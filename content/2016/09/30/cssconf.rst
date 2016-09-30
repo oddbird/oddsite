@@ -82,8 +82,21 @@ to the beautiful demonstrantions Sarah included.
 Check out her `CodePen`_ page
 for a whole load of amazing and beuatiful samples.
 
+|sd-links|
+
 .. _Sarah Drasner: http://twitter.com/sarah_edo
 .. _CodePen: http://codepen.io/sdras/
+
+.. |sd-links| raw:: html
+
+  <a href="http://slides.com/sdrasner/creativity-programming#/" class="btn">
+    <span class="is-hidden">Sarah Drasner</span>
+    Slides »
+  </a>
+  <a href="https://youtu.be/HVtYasAhsY0" class="btn">
+    <span class="is-hidden">Sarah Drasner</span>
+    Video »
+  </a>
 
 
 No Bugs in Sight
@@ -109,9 +122,22 @@ but there were a few philisophical points that stood out:
   to review and clean up your tests —
   otherwise you will run into bloat and compile-time issues
 
+|bj-links|
+
 .. _Brian Jordan: http://twitter.com/bcjordan
 .. _PhantomJS: http://phantomjs.org/
 .. _`code.org`: http://code.org
+
+.. |bj-links| raw:: html
+
+  <a href="https://speakerdeck.com/bcjordan/no-bugs-in-sight-continuous-visual-testing-at-code-dot-org-cssconf-2016" class="btn">
+    <span class="is-hidden">Brian Jordan</span>
+    Slides »
+  </a>
+  <a href="https://youtu.be/8nSUIAFpNhE" class="btn">
+    <span class="is-hidden">Brian Jordan</span>
+    Video »
+  </a>
 
 
 Nativize Is the New Normalize
@@ -139,8 +165,17 @@ she advised disabling
 `cursor: pointer`
 and "rubber-band" scrolling.
 
+|jl-links|
+
 .. _Jessica Lord: http://twitter.com/jllord
 .. _Electron: http://electron.atom.io/
+
+.. |jl-links| raw:: html
+
+  <a href="https://youtu.be/H6IDoraEpO0" class="btn">
+    <span class="is-hidden">Jessica Lord</span>
+    Video »
+  </a>
 
 
 Component-Based Style Reuse
@@ -188,10 +223,19 @@ that have to be solved by the JS processor:
 - Server rendering is difficult,
   maybe Webpack can provide a solution?
 
+|ph-links|
+
 .. _Pete Hunt: http://twitter.com/floydophone
 .. _React: https://facebook.github.io/react/
 .. _JSX: https://facebook.github.io/react/docs/jsx-in-depth.html
 .. _JSX Style: https://github.com/smyte/jsxstyle
+
+.. |ph-links| raw:: html
+
+  <a href="https://youtu.be/_70Yp8KPXH8" class="btn">
+    <span class="is-hidden">Pete Hunt</span>
+    Video »
+  </a>
 
 
 CSS4 Grid: True Layout Finally Arrives
@@ -237,9 +281,22 @@ to explore the new possibilities —
 but it will be some time
 before we can use it in production.
 
+|jk-links|
+
 .. _Jen Kramer: http://twitter.com/jen4web
 .. _CSS Grid: https://css-tricks.com/snippets/css/complete-guide-grid/
 .. _implementations are sparse: http://caniuse.com/#feat=css-grid
+
+.. |jk-links| raw:: html
+
+  <a href="http://www.slideshare.net/jen4web/css-grid-true-layout-finally-arrives" class="btn">
+    <span class="is-hidden">Jen Kramer</span>
+    Slides »
+  </a>
+  <a href="https://youtu.be/jl164y-Vb5E" class="btn">
+    <span class="is-hidden">Jen Kramer</span>
+    Video »
+  </a>
 
 
 Silky Smooth Animation with CSS
@@ -303,8 +360,16 @@ to achieve affects
 you might initially try to achieve
 with other properties.
 
+|wb-links|
 
 .. _Will Boyd: http://twitter.com/lonekorean
+
+.. |wb-links| raw:: html
+
+  <a href="https://youtu.be/bEoLCZzWZX8" class="btn">
+    <span class="is-hidden">Will Boyd</span>
+    Video »
+  </a>
 
 
 Stop Thinking in Pixels
@@ -375,7 +440,20 @@ for your root font-size.
 Hint: they work great inside ``calc()``,
 but provide terrible results on their own.
 
+|kj-links|
+
 .. _`Keith J. Grant`: http://twitter.com/keithjgrant
+
+.. |kj-links| raw:: html
+
+  <a href="http://keithjgrant.com/talks/stop-thinking-in-pixels/" class="btn">
+    <span class="is-hidden">Keith J. Grant</span>
+    Slides »
+  </a>
+  <a href="https://youtu.be/XanhwddQ-PM" class="btn">
+    <span class="is-hidden">Keith J. Grant</span>
+    Video »
+  </a>
 
 
 CSS Variables: var(--subtitle)
@@ -535,7 +613,20 @@ Sites like Twitter
 convert your animated gif into mp4 format
 for display.
 
+|hh-links|
+
 .. _Henri Helvetica: http://twitter.com/HenriHelvetica
+
+.. |hh-links| raw:: html
+
+  <a href="http://www.afast.site/2016/09/27/hello-css-conf-2016/" class="btn">
+    <span class="is-hidden">Henri Helvetica</span>
+    Slides »
+  </a>
+  <a href="https://youtu.be/7zd3veCXNgA" class="btn">
+    <span class="is-hidden">Henri Helvetica</span>
+    Video »
+  </a>
 
 
 Sass Map Magic
@@ -552,7 +643,20 @@ All the
 `slides <https://oddbooksapp.com/book/sass-map-magic>`_
 are online.
 
+|ms-links|
+
 .. _Miriam Suzanne: http://twitter.com/mirisuzanne
+
+.. |ms-links| raw:: html
+
+  <a href="https://oddbooksapp.com/book/sass-map-magic" class="btn">
+    <span class="is-hidden">Miriam Suzanne</span>
+    Slides »
+  </a>
+  <a href="https://youtu.be/MdwtoFt2LOI" class="btn">
+    <span class="is-hidden">Miriam Suzanne</span>
+    Video »
+  </a>
 
 
 Webpack and CSS
@@ -565,8 +669,17 @@ walked us through his `Webpack`_ setup.
 I missed most of this,
 recovering from my own talk.
 
+|zg-links|
+
 .. _Zach Green: http://twitter.com/zgreen_
 .. _Webpack: https://webpack.github.io/
+
+.. |zg-links| raw:: html
+
+  <a href="https://youtu.be/UmP9WcBzZvU" class="btn">
+    <span class="is-hidden">Zach Green</span>
+    Video »
+  </a>
 
 
 It's Time To Ditch The Grid System
@@ -587,7 +700,16 @@ If you need a refresher
 on the *how* and *why* of flexbox,
 this is a great place to start.
 
+|eh-links|
+
 .. _Emily Hayman: http://twitter.com/eehayman
+
+.. |eh-links| raw:: html
+
+  <a href="https://youtu.be/5N9RkIs31Ok" class="btn">
+    <span class="is-hidden">Emily Hayman</span>
+    Video »
+  </a>
 
 
 Bauhaus in the Browser
@@ -605,8 +727,21 @@ that includes a demonstration of
 (also known as the "vertigo effect")
 in CSS.
 
+|jm-links|
+
 .. _Justin McDowell: http://twitter.com/revoltpuppy
 .. _Bauhaus: https://en.wikipedia.org/wiki/Bauhaus
+
+.. |jm-links| raw:: html
+
+  <a href="https://www.dropbox.com/s/8fr5amxfafpwnxq/bauhaus-cssconf.pdf" class="btn">
+    <span class="is-hidden">Justin McDowell</span>
+    Slides »
+  </a>
+  <a href="https://youtu.be/BaQl84nDBNY" class="btn">
+    <span class="is-hidden">Justin McDowell</span>
+    Video »
+  </a>
 
 
 The Great SVG RetCon
@@ -621,8 +756,21 @@ along with a history of SVG.
 This talk is packed full of useful information,
 if you are using SVG in any way.
 
+|ab-links|
+
 .. _`Amelia Bellamy-Royds`: http://twitter.com/AmeliasBrain
 .. _SVG2: https://www.w3.org/TR/SVG2/
+
+.. |ab-links| raw:: html
+
+  <a href="https://ameliabr.github.io/great-svg-retcon/" class="btn">
+    <span class="is-hidden">Amelia Bellamy-Royds</span>
+    Slides »
+  </a>
+  <a href="https://youtu.be/qnGIw7CK7pQ" class="btn">
+    <span class="is-hidden">Amelia Bellamy-Royds</span>
+    Video »
+  </a>
 
 
 Coding is a Privilege
@@ -657,5 +805,18 @@ and I should find my local
 (or similar)
 to volunteer.
 
+|ar-links|
+
 .. _Alisha Ramos: http://twitter.com/alishalisha
 .. _Black Girls Code: http://www.blackgirlscode.com/
+
+.. |ar-links| raw:: html
+
+  <a href="https://speakerdeck.com/alishalisha/coding-is-a-privilege" class="btn">
+    <span class="is-hidden">Alisha Ramos</span>
+    Slides »
+  </a>
+  <a href="https://youtu.be/PtKOzKNJF-s" class="btn">
+    <span class="is-hidden">Alisha Ramos</span>
+    Video »
+  </a>
