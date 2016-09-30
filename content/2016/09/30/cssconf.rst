@@ -6,7 +6,16 @@ image:
 summary: |
   It was a pleasure speaking at
   CSSConf 2016 in Boston!
-  Here are some of my notes from the event.
+  Here are some of my notes from the event —
+  coverig everything from
+  creativity and the Bauhaus movement
+  to SVG 2 internals,
+  React styles,
+  CSS grid layouts,
+  and custom properties
+  (e.g. CSS-native variables).
+  I included links to slides and video
+  whenever possible.
 
 
 CSSConf 2016 Recap
@@ -16,7 +25,7 @@ It was a pleasure speaking at
 CSSConf 2016 in Boston!
 Thanks to `Nicole Sullivan`_ for founding the series,
 `Bocoup`_ for hosting the event,
-(OddBird alum) `Claudina Sarahe`_ for her amazing emcee-ing,
+`Claudina Sarahe`_ (an OddBird alum) for her amazing emcee-ing,
 all the other speakers for their inspiring talks,
 and everyone else for attending!
 It was a great atmosphere,
@@ -26,8 +35,8 @@ My talk was called **Sass Map Magic** —
 a major update to a talk I had given
 several years back
 at BlendConf (may it rest in peace).
-The `slides`_ are all online,
-and video will be available soon.
+The `slides`_ and `video`_
+are both available online.
 
 I took extensive notes on day one,
 but lost my focus on day two,
@@ -40,6 +49,7 @@ if you have a chance to watch the videos.
 .. _Bocoup: https://twitter.com/bocoup
 .. _Claudina Sarahe: http://twitter.com/itsmisscs
 .. _slides: https://oddbooksapp.com/book/sass-map-magic
+.. _video: https://youtu.be/MdwtoFt2LOI
 
 
 Creativity in Programming for Fun and Profit
@@ -89,7 +99,7 @@ a non-profit working to increase student access
 to computer science curriculum
 across demographics.
 
-I didn't get good notes on his overview of PhantomJS,
+I didn't take thorough notes on his overview of PhantomJS,
 but there were a few philisophical points that stood out:
 
 - Test everything
@@ -110,10 +120,7 @@ Nativize Is the New Normalize
 .. image:: /static/images/blog/cssconf-2016/jl.jpg
 
 `Jessica Lord`_
-gave one of my favorite talks
-that I didn't understand.
-She covered a lot of ground,
-showing us how to use `Electron`_
+showed us how to use `Electron`_
 to build native (Mac, Windows, Linux) desktop applications
 using Node, HTML, and CSS —
 with simplified access to native APIs.
@@ -496,8 +503,8 @@ I highly recommend watching the video.
 .. _Lea Verou: http://twitter.com/leaverou
 
 
-(I'm not sure about the title)
-------------------------------
+Creative Solutions for Creative Design Challenges with CSS and SVG
+------------------------------------------------------------------
 
 .. image:: /static/images/blog/cssconf-2016/ss.jpg
 
@@ -507,12 +514,11 @@ but talked instead about hacks
 that she has learned to appreciate
 while working on the redesign
 of a major site.
-I didn't catch the new title,
-and found it hard to take notes —
+I found it hard to take good notes —
 but this talk is well worth the watch.
 So much good material in here!
 
-.. _Sara Soueidan: http://twitter.com/jen4web
+.. _Sara Soueidan: https://twitter.com/sarasoueidan
 
 
 The Hateful Weight
