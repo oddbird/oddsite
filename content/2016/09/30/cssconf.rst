@@ -578,7 +578,20 @@ Some custom-property gotchas:
 There's so much more!
 I highly recommend watching the video.
 
+|lv-links|
+
 .. _Lea Verou: http://twitter.com/leaverou
+
+.. |lv-links| raw:: html
+
+  <a href="http://leaverou.github.io/css-variables" class="btn">
+    <span class="is-hidden">Lea Verou</span>
+    Slides »
+  </a>
+  <a href="https://youtu.be/2an6-WVPuJU" class="btn">
+    <span class="is-hidden">Lea Verou</span>
+    Video »
+  </a>
 
 
 Creative Solutions for Creative Design Challenges with CSS and SVG
