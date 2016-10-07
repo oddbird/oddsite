@@ -2,7 +2,7 @@ public: yes
 author: miriam
 tags: [conference, front-end]
 image:
-  - src: 'cssconf-2016/ns.jpg'
+  - src: '2016/cssconf/ns.jpg'
 summary: |
   It was a pleasure speaking at
   CSSConf 2016 in Boston!
@@ -55,7 +55,7 @@ if you have a chance to watch the videos.
 Creativity in Programming for Fun and Profit
 --------------------------------------------
 
-.. image:: /static/images/blog/cssconf-2016/sd.jpg
+.. image:: /static/images/blog/2016/cssconf/sd.jpg
 
 `Sarah Drasner`_
 talked about programming as a creative act.
@@ -102,7 +102,7 @@ for a whole load of amazing and beuatiful samples.
 No Bugs in Sight
 ----------------
 
-.. image:: /static/images/blog/cssconf-2016/bj.jpg
+.. image:: /static/images/blog/2016/cssconf/bj.jpg
 
 `Brian Jordan`_
 talked about automated front-end testing,
@@ -143,7 +143,7 @@ but there were a few philisophical points that stood out:
 Nativize Is the New Normalize
 -----------------------------
 
-.. image:: /static/images/blog/cssconf-2016/jl.jpg
+.. image:: /static/images/blog/2016/cssconf/jl.jpg
 
 `Jessica Lord`_
 showed us how to use `Electron`_
@@ -181,7 +181,7 @@ and "rubber-band" scrolling.
 Component-Based Style Reuse
 ---------------------------
 
-.. image:: /static/images/blog/cssconf-2016/ph.jpg
+.. image:: /static/images/blog/2016/cssconf/ph.jpg
 
 `Pete Hunt`_
 gave the most controversial talk of the conference,
@@ -241,7 +241,7 @@ that have to be solved by the JS processor:
 CSS4 Grid: True Layout Finally Arrives
 --------------------------------------
 
-.. image:: /static/images/blog/cssconf-2016/jk.jpg
+.. image:: /static/images/blog/2016/cssconf/jk.jpg
 
 `Jen Kramer`_
 provided an overview of
@@ -302,7 +302,7 @@ before we can use it in production.
 Silky Smooth Animation with CSS
 -------------------------------
 
-.. image:: /static/images/blog/cssconf-2016/wb.jpg
+.. image:: /static/images/blog/2016/cssconf/wb.jpg
 
 `Will Boyd`_
 provided guidelines
@@ -375,7 +375,7 @@ with other properties.
 Stop Thinking in Pixels
 -----------------------
 
-.. image:: /static/images/blog/cssconf-2016/kg.jpg
+.. image:: /static/images/blog/2016/cssconf/kg.jpg
 
 `Keith J. Grant`_
 argued for using
@@ -459,7 +459,7 @@ but provide terrible results on their own.
 CSS Variables: var(--subtitle)
 ------------------------------
 
-.. image:: /static/images/blog/cssconf-2016/lv.jpg
+.. image:: /static/images/blog/2016/cssconf/lv.jpg
 
 `Lea Verou`_
 demonstrated various ways to use
@@ -597,7 +597,7 @@ I highly recommend watching the video.
 Creative Solutions for Creative Design Challenges with CSS and SVG
 ------------------------------------------------------------------
 
-.. image:: /static/images/blog/cssconf-2016/ss.jpg
+.. image:: /static/images/blog/2016/cssconf/ss.jpg
 
 `Sara Soueidan`_
 was scheduled to talk about SVG,
@@ -615,7 +615,7 @@ So much good material in here!
 The Hateful Weight
 ------------------
 
-.. image:: /static/images/blog/cssconf-2016/hh.jpg
+.. image:: /static/images/blog/2016/cssconf/hh.jpg
 
 `Henri Helvetica`_
 talked about optimizing page and image sizes
@@ -645,7 +645,7 @@ for display.
 Sass Map Magic
 --------------
 
-.. image:: /static/images/blog/cssconf-2016/mia.jpg
+.. image:: /static/images/blog/2016/cssconf/mia.jpg
 
 I showed a wide range of uses
 for the underused Sass "map" data type —
@@ -675,7 +675,7 @@ are online.
 Webpack and CSS
 ---------------
 
-.. image:: /static/images/blog/cssconf-2016/zg.jpg
+.. image:: /static/images/blog/2016/cssconf/zg.jpg
 
 `Zach Green`_
 walked us through his `Webpack`_ setup.
@@ -698,7 +698,7 @@ recovering from my own talk.
 It's Time To Ditch The Grid System
 ----------------------------------
 
-.. image:: /static/images/blog/cssconf-2016/eh.jpg
+.. image:: /static/images/blog/2016/cssconf/eh.jpg
 
 `Emily Hayman`_
 demonstrated the ins and outs
@@ -728,7 +728,7 @@ this is a great place to start.
 Bauhaus in the Browser
 ----------------------
 
-.. image:: /static/images/blog/cssconf-2016/jm.jpg
+.. image:: /static/images/blog/2016/cssconf/jm.jpg
 
 `Justin McDowell`_
 used CSS transforms, grids, and more
@@ -760,7 +760,7 @@ in CSS.
 The Great SVG RetCon
 --------------------
 
-.. image:: /static/images/blog/cssconf-2016/ab.jpg
+.. image:: /static/images/blog/2016/cssconf/ab.jpg
 
 `Amelia Bellamy-Royds`_
 gave us a full overview of changes
@@ -789,7 +789,7 @@ if you are using SVG in any way.
 Coding is a Privilege
 ---------------------
 
-.. image:: /static/images/blog/cssconf-2016/ar.jpg
+.. image:: /static/images/blog/2016/cssconf/ar.jpg
 
 `Alisha Ramos`_
 closed out the conference
