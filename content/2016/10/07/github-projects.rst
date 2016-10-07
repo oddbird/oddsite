@@ -22,7 +22,7 @@ Auditioning Github Projects
 `Github`_ recently released
 a set of new `project-management features`_,
 including improved code-reviews
-and `kanban`_-style "project" boards —
+and `kanban`_-style "project" boards
 for prioritizing issues,
 and visualizing progress.
 
@@ -34,7 +34,7 @@ for our `OddSite Open-Design`_ process.
 
 My first impressions are mixed.
 There's a lot to like about these new features,
-and the ability to finally organize issues —
+and the ability to organize issues —
 but the flow doesn't feel well-integrated yet.
 We'll write about the experience
 in more detail
@@ -44,4 +44,5 @@ to live with it.
 .. _Github: https://github.com/
 .. _project-management features: https://github.com/blog/2256-a-whole-new-github-universe-announcing-new-tools-forums-and-features
 .. _kanban: https://www.atlassian.com/agile/kanban
+.. _Pivotal Tracker: https://www.pivotaltracker.com/n/projects/22378
 .. _OddSite Open-Design: https://github.com/oddbird/oddsite/projects/1
