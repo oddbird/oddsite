@@ -130,7 +130,7 @@ but there were a few philisophical points that stood out:
 
 .. |bj-links| raw:: html
 
-  <a href="https://speakerdeck.com/bcjordan/no-bugs-in-sight-continuous-visual-testing-at-code-dot-org-2016"cssconf/ class="btn">
+  <a href="https://speakerdeck.com/bcjordan/no-bugs-in-sight-continuous-visual-testing-at-code-dot-org-cssconf-2016" class="btn">
     <span class="is-hidden">Brian Jordan</span>
     Slides »
   </a>
