@@ -4,7 +4,7 @@ tags: ['interview', 'sitepoint', 'podcast']
 image:
   - src: '2016/versioning.png'
 summary: |
-  I joined Tim and David
+  I joined `Tim Evko`_ and `M. David Green`_
   for their great new `SitePoint`_ podcast —
   `The Versioning Show`_.
   We discussed going from lurker to speaker,
@@ -13,6 +13,8 @@ summary: |
   approaching new projects,
   and unit testing in Sass.
 
+  .. _Tim Evko: https://www.sitepoint.com/author/tevko/
+  .. _`M. David Green`: https://www.sitepoint.com/author/mdavidgreen/
   .. _SitePoint: https://www.sitepoint.com/
   .. _The Versioning Show: https://www.sitepoint.com/versioning-show-episode-8-miriam-suzanne/
 
@@ -20,7 +22,7 @@ summary: |
 Versioning Show Ep.8: Miriam Suzanne
 ====================================
 
-I joined Tim and David
+I joined `Tim Evko`_ and `M. David Green`_
 for their great new `SitePoint`_ podcast —
 `The Versioning Show`_.
 We discussed going from lurker to speaker,
@@ -34,6 +36,8 @@ and unit testing in Sass.
 Check out all the `other great episodes`_,
 with people like `Jen Simmons`_ and `Chris Coyier`_!
 
+.. _Tim Evko: https://www.sitepoint.com/author/tevko/
+.. _`M. David Green`: https://www.sitepoint.com/author/mdavidgreen/
 .. _SitePoint: https://www.sitepoint.com/
 .. _The Versioning Show: https://www.sitepoint.com/versioning-show-episode-8-miriam-suzanne/
 .. _other great episodes: https://www.sitepoint.com/tag/versioning-show-episodes/
