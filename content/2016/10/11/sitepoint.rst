@@ -1,4 +1,4 @@
-public: no
+public: yes
 author: miriam
 tags: ['q&a', 'sitepoint']
 image:
