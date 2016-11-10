@@ -15,15 +15,15 @@ after:
 Behind the Scene: OddSite Brand Process
 =======================================
 
-What follows is an in-depth look at our brand design process thus far as we work towards a new look and feel for this, our OddSite. Details. Confessions. What worked. What flopped. And why.
+What follows is an in-depth look at our brand design process thus far as we work towards a new look and feel for this, our OddSite. Details, confessions, what worked, what flopped, and why.
 
-And if you make it all the way through to the end, we’re hoping you’ll give us your opinions on an important question. (Go ahead. Scroll to the end. We’ll wait here.)
+If you make it all the way through to the end, we’re hoping you’ll give us your opinions on an important question. (Go ahead. Scroll to the end. We’ll wait here.)
 
 
 Where We Began
 --------------
 
-In the spring of this year at our bi-annual work retreat, OddBird decided to grow our company. In order to grow, we needed a website that would more clearly articulate our design process and development services to potential clients. After `Defining Goals and Exploring Possibilities`_ we identified the people we’d like to reach with OddSite—entrepreneurs with new software ideas and other web developers in our community—and decided that an open website redesign process would be one way to inspire and engage those users. In reality we’ve been moving slowly, distracted by client work, and struggling to keep the process consistent and interactive. We’ll keep giving it as much attention as we can!
+In the spring of this year at our bi-annual work retreat, OddBird decided to grow our company to six people. In order to grow, we needed a website that would more clearly articulate our design process and development services to potential clients. After `Defining Goals and Exploring Possibilities`_ we identified the people we’d like to reach with OddSite—entrepreneurs with new software ideas and other web developers in our community—and decided that an open website redesign process would be one way to inspire and engage those users. In reality we’ve been moving slowly, distracted by client work, and struggling to keep the process consistent and interactive. We’ll keep giving it as much attention as we can!
 
 First, we mapped out a content flow, so Miriam and Stacy could build the basic site architecture that you see now. Next, we needed a brand. Little did we know the struggles we would encounter, the rag-clad wizards who would point the way out of the thicket, or the new tools we would gain for our questing satchels... (I’m in the middle of writing a fantasy novel. My apologies.)
 
@@ -142,7 +142,7 @@ The design team struggled with which technique would be most useful for our inte
 
 *Element Collage*
 
-Sometimes tools that worked before, don't work on a new team or project. Fortunately, we each had enough experience with creative work to realize that getting stuck isn't a failure, in fact, it is an expected and valuable part of the process. The goal isn’t to stop getting stuck, but to recognize it quickly and know how to get unstuck. It’s a clue that you need to step back, look around, and try something new.
+Sometimes tools that worked before don't work for a new team or project. Fortunately, we remembered that getting stuck isn't a failure. In fact, it is an expected and valuable part of the process. The goal isn’t to stop getting stuck, but to get better at recognizing the situation for what it is and know how to get unstuck. It’s a clue that you need to step back, look around, and try something new.
 
 So we looked to our community for inspiration. Stacy posted a fantastic article from `Vox Product`_ detailing their brand design process. When their design team got to the step we reached, they wisely picked a single element to focus on: typography.
 
@@ -183,4 +183,6 @@ Baskerville are know for communicating trustworthiness.
 
 *Freight Sans, Freight Text*
 
-And this is where you come in. We’re having a conversation on our OddFriends Slack channel, and we want to hear from you. There are other design elements, but we are only interested here in choosing the new OddSite typeface. Please weigh in with your opinions and thoughts and things you’ve learned the hard way. If we didn’t know it before, this OddSite brand design process has proven how dependent we are on each other to do this business of web design to the best of our abilities. Thanks!
+And this is where you come in. We’re having a conversation on our `OddFriends Slack channel`_, and we want to hear from you. There are other design elements, but we are only interested here in choosing the new OddSite typeface. Please weigh in with your opinions and thoughts and things you’ve learned the hard way. If we didn’t know it before, this OddSite brand design process has proven how dependent we are on each other to do this business of web design to the best of our abilities. Thanks!
+
+.. _Vox Product: http://friends.oddbird.net/
