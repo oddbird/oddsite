@@ -13,7 +13,7 @@ after:
 
 
 Behind the Scenes: OddSite Brand Process
-=======================================
+========================================
 
 What follows is an in-depth look at our brand design process thus far as we work towards a new look and feel for this, our OddSite. Details, confessions, what worked, what flopped, and why.
 
