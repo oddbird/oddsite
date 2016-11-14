@@ -142,7 +142,7 @@ The design team struggled with which technique would be most useful for our inte
 
 *Element Collage*
 
-Sometimes tools that worked before don't work for a new team or project. Fortunately, we remembered that getting stuck isn't a failure. In fact, it is an expected and valuable part of the process. The goal isn’t to stop getting stuck, but to get better at recognizing the situation for what it is and know how to get unstuck. It’s a clue that you need to step back, look around, and try something new.
+Sometimes tools that worked before don't work for a new team or project. Fortunately, we remembered that getting stuck isn't a failure. Good process doesn't mean ideas always flow smoothly, without ever going down the wrong path. Our goal isn't to foresee and avoid every problem, but to recognize when we're getting stuck, and have the tools available to try a different approach.
 
 So we looked to our community for inspiration. Stacy posted a fantastic article from `Vox Product`_ detailing their brand design process. When their design team got to the step we reached, they wisely picked a single element to focus on: typography.
 
