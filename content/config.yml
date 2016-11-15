@@ -71,8 +71,8 @@ clients:
   - name: 'QuarqNet'
     url: 'http://quarqnet.com'
     years: '2015-2016'
-    priority: 'pre-release'
-    status: 'pre-release'
+    feature: true
+    priority: 'live'
     tagline: 'Real-Time Telemetry for Athletes'
     description: |
       QuarqNet allows athletes to track and analyze their activities,
