@@ -2,13 +2,13 @@ public: yes
 author: sondra
 tags: [case-study]
 image:
-  - src: '2016/brand/type-header.jpg'
+  - src: '2016/brand/profile.jpg'
 summary: |
   An in depth look at OddBird's design and development process on the CoachHub mobile-responsive web application. Including logo and user experience design, accessibility and usability testing, site architecture and information design.
 
 
-A Responsive Web App for Wellness Coaching
-==========================================
+CoachHub: A Responsive Web App for Wellness Coaching
+====================================================
 
 
 What They Needed
