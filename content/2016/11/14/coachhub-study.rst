@@ -43,6 +43,10 @@ In order to get the whole team using the same language, we started by creating a
 
 By mapping our glossary relationships onto the User Stories, we were able to lay out possible user-flows for any given situation. For each step in the flow we asked how did the user get here, what did they need to achieve, and where were they going next? Putting it all together, we created an interactive web of Content Templates — a living draft of the site architecture. Interacting with the content templates helped us find patterns. We replaced the browse-coaches page, and the my-coaches page with an ever-present sidebar giving you one-click access to coaches. Several pages stood out as important starting-points for a number of flows, and those pages moved into the site navigation.
 
+.. image:: /static/images/blog/2016/coachhub/browse-coach-sitemap.jpg
+
+*Early content template for browsing coaches, with just enough design to make it readable.*
+
 Before starting to build features, we already had a live, interactive, and testable prototype of the information architecture and user-experience flows.
 
 
@@ -53,9 +57,25 @@ We worked with ORCAS to pinpoint the emotions and associations they wanted the C
 
 We started with three basic brand colors and derived a full color palette from those. The visually compelling and extensive color palette gave us the wide range of colors we needed to create a vibrant garden throughout the app.
 
+.. image:: /static/images/blog/2016/coachhub/color-palette.jpg
+
 The leaf logo, with its rounded edges and playful curl, evokes feelings of friendliness and movement as well as the ideas of new life, change, and hope: turning over a new leaf.
 
+.. image:: /static/images/blog/2016/coachhub/logo-drafts2.jpg
+
+*Early logo draft sketches*
+
+.. image:: /static/images/blog/2016/coachhub/logo-drafts1.jpg
+
+*Designed logo drafts*
+
+.. image:: /static/images/blog/2016/coachhub/logo.jpg
+
+*Final logo*
+
 We then created hundreds of unique avatar designs from just a few unique leaf graphics dynamically rendered using light and dark contrasts of our colors and rotation of the leaves. Because each of ORCAS’s partners will have the option to re-brand, we designed CoachHub to easily accommodate alternate logos and color palettes.
+
+.. image:: /static/images/blog/2016/coachhub/avatars.jpg
 
 
 Responsive & Interactive UX Design
@@ -63,9 +83,29 @@ Responsive & Interactive UX Design
 
 User experience design guides feature development. For ORCAS, we sketched rough digital mockups of features and, with approval along the way, moved on to fleshed out mockup designs and finally implementation. Using this technique we moved quickly and efficiently, minimizing the chances of wasting time and money implementing the wrong features.
 
+.. image:: /static/images/blog/2016/coachhub/browse-coach-sketch.jpg
+
+*Early UX sketch for Browse Coaches*
+
+.. image:: /static/images/blog/2016/coachhub/browse-coach-final.jpg
+
+*Final design for Browse Coaches*
+
 We designed wireframes and mockups for mobile devices first. Starting with designs for the smallest, most restricted screen sizes helped further clarify top priority and relevant information for each user at each stage of navigation through the content. Our earlier conversation with ORCAS about which users would be using which devices informed our decisions about what content to display and highlight on various devices.
 
+.. image:: /static/images/blog/2016/coachhub/profile-mobile.jpg
+
+*Mobile view of coach profile with side bar closed (L) and open (R)*
+
+.. image:: /static/images/blog/2016/coachhub/profile-desktop.jpg
+
+*Desktop view of coach profile*
+
 CoachHub has many interactive features including the appointment calendar that allows coaches to set availability and clients to request appointments based on that availability. There are side panels that slide in to request appointments, take wellness tests, and set preferences. CoachHub offers realtime chat and notifications that fly in at the top of the screen. Interaction can become distracting if implemented for its own sake. In CoachHub these interactive features serve the needs of the user, highlighting particular features or important information.
+
+.. image:: /static/images/blog/2016/coachhub/interactive.jpg
+
+*A sidebar with dynamic content slides in when a user clicks an appointment time*
 
 
 Usability Testing
@@ -73,9 +113,17 @@ Usability Testing
 
 ORCAS lead usability testing at several stages throughout the development process with one or more OddBird team members observing. Usability testing guided ORCAS in prioritizing feature development ensuring that CoachHub would be a useful and relevant product to their users and partners. This step also proved vital to the UX design of complex and interactive elements such as the appointment calendar. As we watched users navigate the app, it became clear that the appointment calendar needed one view and set of interactions for coaches and another for clients.
 
+.. image:: /static/images/blog/2016/coachhub/calendar-client.jpg
+
+*Client Calendar View*
+
+.. image:: /static/images/blog/2016/coachhub/calendar-coach.jpg
+
+*Coach Calendar View*
+
 
 Accessibilty
------------------
+------------
 
 Accessibility is built into the core technologies and techniques we use on every project: accessible HTML5, unobtrusive Javascript, and mobile-responsive CSS styles. We make it a priority from the beginning of each project—using progressive enhancement and responsive design to support a broad range of users, devices, and browsers. For CoachHub we also used Github's Contrast Ratio tool to select colors for text that passed WCAG AA level at small sizes.
 
@@ -84,6 +132,14 @@ Landing Pages
 -------------
 
 We designed several different landing pages based on user type and status with unique calls-to-action to motivate engagement and highlight next steps. In conversation with ORCAS’s internal team, we designed graphics, recommended and edited text, and identified CTAs to create a relevant and compelling marketing message.
+
+.. image:: /static/images/blog/2016/coachhub/splash-draft.jpg
+
+*Early wireframe of layout, design, and text*
+
+.. image:: /static/images/blog/2016/coachhub/splash-final.jpg
+
+*Final design and text*
 
 
 On-Going Design
