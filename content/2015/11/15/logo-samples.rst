@@ -35,6 +35,10 @@ Here are a few of our favorites...
 
    *The Carrot Project: Social and environmental impact reviews*
 
+.. figure:: /static/images/blog/2016/logos/oddbooks.jpg
+
+   *OddBooks: Collaborative writing for multimedia artists*
+
 .. figure:: /static/images/blog/2016/logos/teacupgorilla.jpg
 
    *Teacup Gorilla: indie rock artist website*
