@@ -2,7 +2,7 @@ public: yes
 author: sondra
 tags: [case-study]
 image:
-  - src: '2016/coachhub/profile.jpg'
+  - src: '2016/coachhub/feature.jpg'
 summary: |
   An in depth look at OddBird's design and development process
   on the CoachHub mobile-responsive web application —
@@ -136,6 +136,13 @@ That glossary defined a shared basis
 for both database design
 and user-facing information architecture.
 
+.. figure:: /static/images/blog/2016/coachhub/browse-coach-sitemap.jpg
+   :figwidth: 20em
+   :align: left
+
+   *Early content template for browsing coaches,
+   with just enough design to make it readable.*
+
 Mapping our glossary relationships onto the User Stories,
 we were able to lay out possible user-flows for any given situation.
 For each step in the flow we asked
@@ -154,11 +161,6 @@ as important starting-points,
 and those pages moved into the site navigation.
 We also added a dashboard
 to give a quick overview of activity on the site.
-
-.. image:: /static/images/blog/2016/coachhub/browse-coach-sitemap.jpg
-
-*Early content template for browsing coaches,
-with just enough design to make it readable.*
 
 Before developing any real functionality,
 we already had a live,
@@ -192,17 +194,17 @@ evokes feelings of friendliness and movement
 as well as the ideas of new life, change, and hope:
 turning over a new leaf.
 
-.. image:: /static/images/blog/2016/coachhub/logo-drafts2.jpg
+.. figure:: /static/images/blog/2016/coachhub/logo-drafts2.jpg
 
-*Early logo draft sketches*
+   *Early logo draft sketches*
 
-.. image:: /static/images/blog/2016/coachhub/logo-drafts1.jpg
+.. figure:: /static/images/blog/2016/coachhub/logo-drafts1.jpg
 
-*Designed logo drafts*
+   *Designed logo drafts*
 
-.. image:: /static/images/blog/2016/coachhub/logo.jpg
+.. figure:: /static/images/blog/2016/coachhub/logo.jpg
 
-*Final logo*
+   *Final logo*
 
 We then created hundreds of unique avatar designs
 from just a few unique leaf graphics
@@ -231,13 +233,13 @@ Integrating design and implementation
 helps us minimize any wasted time and money
 implementing poorly-considered features.
 
-.. image:: /static/images/blog/2016/coachhub/browse-coach-sketch.jpg
+.. figure:: /static/images/blog/2016/coachhub/browse-coach-sketch.jpg
 
-*Early UX sketch for Browse Coaches*
+   *Early UX sketch for Browse Coaches*
 
-.. image:: /static/images/blog/2016/coachhub/browse-coach-final.jpg
+.. figure:: /static/images/blog/2016/coachhub/browse-coach-final.jpg
 
-*Final design for Browse Coaches*
+   *Final design for Browse Coaches*
 
 We designed wireframes and mockups
 for mobile devices first.
@@ -246,12 +248,16 @@ most restricted screen sizes helped further clarify
 and prioritize relevant information for each user.
 
 .. image:: /static/images/blog/2016/coachhub/profile-mobile.jpg
+   :width: 50%
+   :align: left
 
-*Mobile view of coach profile with side bar closed (L) and open (R)*
+.. image:: /static/images/blog/2016/coachhub/browse-mobile.jpg
+   :width: 50%
+   :align: right
 
-.. image:: /static/images/blog/2016/coachhub/profile-desktop.jpg
+.. figure:: /static/images/blog/2016/coachhub/profile-desktop.jpg
 
-*Desktop view of coach profile*
+   *Views of coach profile*
 
 CoachHub has many interactive features
 including the appointment calendar
@@ -266,10 +272,10 @@ Interaction can become distracting if implemented for its own sake.
 In CoachHub these interactive features serve the needs of the user,
 highlighting particular features or important information.
 
-.. image:: /static/images/blog/2016/coachhub/interactive.jpg
+.. figure:: /static/images/blog/2016/coachhub/interactive.jpg
 
-*A sidebar with dynamic content
-slides in when a user clicks an appointment time*
+   *A sidebar with dynamic content
+   slides in when a user clicks an appointment time*
 
 
 Usability Testing
@@ -291,13 +297,9 @@ As we watched users navigate the app,
 it became clear that the appointment calendar needed
 different views and interactions for coaches and clients.
 
-.. image:: /static/images/blog/2016/coachhub/calendar-client.jpg
+.. figure:: /static/images/blog/2016/coachhub/calendar-coach.jpg
 
-*Client Calendar View*
-
-.. image:: /static/images/blog/2016/coachhub/calendar-coach.jpg
-
-*Coach Calendar View*
+   *Basic Calendar View*
 
 
 Accessibilty
@@ -333,13 +335,13 @@ recommended and edited text,
 and identified important "call to action" steps
 to create a relevant and compelling marketing message.
 
-.. image:: /static/images/blog/2016/coachhub/splash-draft.jpg
+.. figure:: /static/images/blog/2016/coachhub/splash-draft.jpg
 
-*Early wireframe of layout, design, and text*
+   *Early wireframe of layout, design, and text*
 
-.. image:: /static/images/blog/2016/coachhub/splash-final.jpg
+.. figure:: /static/images/blog/2016/coachhub/splash-final-2.jpg
 
-*Final design and text*
+   *Final design and text*
 
 
 On-Going Design
