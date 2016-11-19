@@ -299,7 +299,11 @@ different views and interactions for coaches and clients.
 
 .. figure:: /static/images/blog/2016/coachhub/calendar-coach.jpg
 
-   *Basic Calendar View*
+   *Coach office hours calendar view*
+
+   .. figure:: /static/images/blog/2016/coachhub/calendar-client.jpg
+
+   *Client appointment schedule calendar view*
 
 
 Accessibilty
