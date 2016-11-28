@@ -104,9 +104,9 @@ The Birds: Design Team
 
 `Miriam`_, `Sondra`_, and `Stacy`_ are the OddBird design team. Each of us brought years of varied experience, methods, tools, and questions. This would be Miriam’s and Sondra’s first time working on brand design with Stacy, and we were all excited to get started!
 
-.. _Miriam: http://localhost:3000/authors/miriam/
-.. _Sondra: http://localhost:3000/authors/sondra/
-.. _Stacy: http://localhost:3000/authors/stacy/
+.. _Miriam: /birds/#bird-miriam
+.. _Sondra: /birds/#bird-sondra
+.. _Stacy: /birds/#bird-stacy
 
 
 Element Collages, Moodboards, and Style Tiles? Oh my!
