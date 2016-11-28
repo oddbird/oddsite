@@ -105,10 +105,10 @@ git repo; if not, run ``git clone git@github.com:oddbird/oddbird.github.com
 output`` to set it up.
 
 Before deploying, ``cd output/`` and ``git pull`` to be sure you have the
-latest code. Then, back in the parent directory ``cd ..``, run ``gulp prod`` to build the
-site under ``output/``. Run ``gulp prod-serve`` to view your changes to the
-production code before committing. When satisfied, ``cd output/``, commit those
-changes and then ``git push`` to deploy it live.
+latest code. Then, back in the parent directory (``cd ..``), run ``gulp prod``
+to build the site under ``output/``. Run ``gulp prod-serve`` to view your
+changes to the production code before committing. When satisfied, ``cd
+output/``, commit those changes and then ``git push`` to deploy it live.
 
 .. _github.com/oddbird/oddbird.github.com: https://github.com/oddbird/oddbird.github.com
 
