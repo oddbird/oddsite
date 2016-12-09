@@ -1,7 +1,8 @@
 /* eslint-disable no-sync */
 
+process.env.BROWSERSLIST_CONFIG = './browserslist';
+
 const AssetsPlugin = require('assets-webpack-plugin');
-const autoprefixer = require('autoprefixer');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const path = require('path');
@@ -19,7 +20,7 @@ let devtool = 'cheap-module-inline-source-map';
 let buildScript = 'python run.py dev';
 
 // Override settings if running in production
-if (process.env.prod === 'true') {
+if (process.env.NODE_ENV === 'production') {
   jsOutput = '[name].bundle.[chunkhash].min.js';
   styleOutput = '[name].bundle.[chunkhash].min.css';
   mediaOutput = '[name].[hash].[ext]';
@@ -90,7 +91,7 @@ module.exports = {
   },
   resolve: {
     // where to look for "required" modules
-    modulesDirectories: [
+    modules: [
       'static/js',
       'templates',
       'sass',
@@ -113,15 +114,20 @@ module.exports = {
       'window.jQuery': 'jquery',
       'root.jQuery': 'jquery'
     }),
+    new webpack.LoaderOptionsPlugin({
+      debug: process.env.NODE_ENV !== 'production',
+      minimize: process.env.NODE_ENV === 'production'
+    }),
     // pull common js and webpack runtime out of all bundles
     new webpack.optimize.CommonsChunkPlugin({
       name: 'app',
       minChunks: Infinity
     }),
-    // optimize modules used more often
-    new webpack.optimize.OccurenceOrderPlugin(true),
     // pull all CSS out of JS bundles
-    new ExtractTextPlugin(styleOutput, { allChunks: true }),
+    new ExtractTextPlugin({
+      filename: styleOutput,
+      allChunks: true
+    }),
     // save assets.json mapping of names to bundled files
     new AssetsPlugin({
       filename: 'assets.json',
@@ -139,31 +145,41 @@ module.exports = {
     })
   ],
   module: {
-    loaders: [
+    rules: [
       {
         test: /static\/js\/.*\.js$/,
         exclude: /(node_modules|vendor)/,
-        loader: 'babel',
-        query: { cacheDirectory: process.env.prod !== 'true' }
+        use: [{
+          loader: 'babel-loader',
+          options: { cacheDirectory: process.env.NODE_ENV !== 'production' }
+        }]
       },
       {
         test: /\.woff$|\.woff2$|\.ttf$/,
-        loader: 'file',
-        query: { name: mediaOutput }
+        use: [{
+          loader: 'file-loader',
+          options: { name: mediaOutput }
+        }]
       },
       {
         test: /\.scss$/,
-        loader: ExtractTextPlugin.extract(
-          'css?sourceMap!postcss!sass?sourceMap')
+        // @@@ Ideally this would be ``use: [...]``
+        // https://github.com/webpack/extract-text-webpack-plugin/issues/265
+        loader: ExtractTextPlugin.extract({
+          loader: [
+            {
+              loader: 'css-loader',
+              query: { sourceMap: true }
+            },
+            { loader: 'postcss-loader' },
+            {
+              loader: 'sass-loader',
+              query: { sourceMap: true }
+            }
+          ]
+        })
       }
     ]
   },
-  postcss: [
-    autoprefixer({
-      browsers: ['last 2 versions'],
-      cascade: false
-    })
-  ],
-  devtool,
-  debug: process.env.prod !== 'true'
+  devtool
 };

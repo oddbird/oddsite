@@ -1,6 +1,5 @@
 const browserSync = require('browser-sync').create();
 const chalk = require('chalk');
-const chmod = require('gulp-chmod');
 const del = require('del');
 const eslint = require('gulp-eslint');
 const exec = require('child_process').exec;
@@ -191,7 +190,6 @@ gulp.task('sprites', ['sprites-clean'], () =>
       ]
     }))
     .pipe(rename('_icons.svg'))
-    .pipe(chmod(644))
     .pipe(gulp.dest(paths.SRC_TEMPLATES_DIR))
 );
 
@@ -217,15 +215,21 @@ gulp.task('prod-serve', (cb) => {
 
 const webpackOnBuild = (done) => (err, stats) => {
   if (err) {
-    gutil.log(chalk.red(err.message));
-    gutil.beep();
-  } else {
-    gutil.log(stats.toString({
-      colors: true,
-      chunks: false,
-      children: false
-    }));
+    gutil.log(chalk.red(err.stack || err));
+    if (err.details) {
+      gutil.log(chalk.red(err.details));
+    }
   }
+
+  if (err || stats.hasErrors() || stats.hasWarnings()) {
+    gutil.beep();
+  }
+
+  gutil.log(stats.toString({
+    colors: true,
+    chunks: false
+  }));
+
   if (done) { done(err); }
 };
 

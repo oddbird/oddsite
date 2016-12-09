@@ -4,7 +4,7 @@ root: true
 parserOptions:
   ecmaFeatures:
     impliedStrict: true
-  ecmaVersion: 6
+  ecmaVersion: 2015
 env:
   es6: true
   node: true
@@ -30,6 +30,7 @@ rules:
   camelcase:
     - 2
     - properties: never
+  class-methods-use-this: 2
   comma-spacing: 2
   comma-style: 2
   complexity:
@@ -45,6 +46,8 @@ rules:
   dot-notation: 2
   eol-last: 2
   eqeqeq: 2
+  func-call-spacing: 2
+  func-name-matching: 2
   func-names:
     - 2
     - never
@@ -73,6 +76,7 @@ rules:
   key-spacing: 2
   keyword-spacing: 2
   linebreak-style: 2
+  lines-around-directive: 2
   max-depth: 1
   max-len: 2
   max-nested-callbacks:
@@ -122,9 +126,9 @@ rules:
   no-extra-label: 2
   no-extra-parens:
     - 2
-    - all
-    - nestedBinaryExpressions: false
+    - functions
   no-floating-decimal: 2
+  no-global-assign: 2
   no-implicit-coercion: 2
   no-implicit-globals: 2
   no-implied-eval: 2
@@ -142,7 +146,6 @@ rules:
   no-multi-spaces: 2
   no-multi-str: 2
   no-multiple-empty-lines: 2
-  no-native-reassign: 2
   no-negated-condition: 2
   no-nested-ternary: 2
   no-new-func: 2
@@ -163,8 +166,9 @@ rules:
   no-sequences: 2
   no-shadow-restricted-names: 2
   no-shadow: 2
-  no-spaced-func: 2
   no-sync: 2
+  no-tabs: 2
+  no-template-curly-in-string: 2
   no-this-before-super: 2
   no-throw-literal: 2
   no-trailing-spaces: 2
@@ -183,6 +187,7 @@ rules:
   no-useless-constructor: 2
   no-useless-escape: 2
   no-useless-rename: 2
+  no-useless-return: 2
   no-var: 2
   no-void: 2
   no-warning-comments:
@@ -193,7 +198,6 @@ rules:
       - '@@@'
   no-whitespace-before-property: 2
   no-with: 2
-  object-curly-newline: 2
   object-curly-spacing:
     - 2
     - always
@@ -217,7 +221,7 @@ rules:
     - after
   prefer-arrow-callback: 2
   prefer-const: 2
-  prefer-reflect: 2
+  prefer-numeric-literals: 2
   prefer-rest-params: 2
   prefer-spread: 2
   prefer-template: 2
@@ -244,6 +248,7 @@ rules:
   strict:
     - 2
     - global
+  symbol-description: 2
   template-curly-spacing: 2
   unicode-bom: 2
   wrap-iife: 2
