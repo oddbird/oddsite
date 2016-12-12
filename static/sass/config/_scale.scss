@@ -10,16 +10,49 @@
 ///   Accoutrement Scale
 $modular-scale: (
   'multiple': 'linear',
+  'text-ratio': 1.35,
 );
 
 @include herman-add-ratios('modular-scale', $modular-scale);
 
 
+// Text Sizes
+// ----------
+/// @group scale
+/// @preview sizes;
+/// @link http://oddbird.net/accoutrement-scale/sassdoc/
+///   Accoutrement Scale
+$text-sizes: (
+  'root': 18px,
+  'small': 'root' ('text-ratio': -1),
+);
+
+@include herman-add-sizes('text-sizes', $text-sizes);
+
+
+// Spacing Sizes
+// -------------
+/// @group scale
+/// @preview sizes; style: ruler
+/// @link http://oddbird.net/accoutrement-scale/sassdoc/
+///   Accoutrement Scale
+$spacing-sizes: (
+  'root': 18px,
+  'rhythm': 'root' ('text-ratio': 1),
+  'gutter': 'rhythm',
+  'spacer': 'gutter' ('multiple': 3),
+  'shim': 'gutter' ('multiple': 0.5),
+  'half-shim': 'gutter' ('multiple': 0.25),
+  'border': 8px,
+);
+
+@include herman-add-sizes('spacing-sizes', $spacing-sizes);
+
 
 // Page Sizes
 // ----------
 /// @group scale
-/// @preview ratios; style: output-only
+/// @preview sizes; style: output-only
 /// @link http://oddbird.net/accoutrement-scale/sassdoc/
 ///   Accoutrement Scale
 $page-sizes: (

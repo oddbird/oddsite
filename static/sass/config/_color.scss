@@ -7,8 +7,9 @@
 /// hello, brand colors!
 /// @preview color-palette
 $brand-colors: (
-  'brand-blue': hsl(195, 85%, 62%),
+  'brand-primary': hsl(195, 52%, 31%),
   'brand-orange': hsl(24, 100%, 62%),
+  'brand-pink': hsl(330, 100%, 45%),
 );
 
 @include herman-add-colors('brand-colors', $brand-colors);
@@ -19,8 +20,8 @@ $brand-colors: (
 /// hello, ui colors!
 /// @preview color-palette
 $ui-colors: (
-  'contrast-light': 'brand-blue' ('tint': 90%),
-  'contrast-dark': 'brand-blue' ('shade': 75%),
+  'contrast-light': #fff,
+  'contrast-dark': 'brand-primary' ('shade': 75%),
 );
 
 @include herman-add-colors('ui-colors', $ui-colors);
@@ -33,11 +34,13 @@ $ui-colors: (
 $theme-colors: (
   'text': 'contrast-dark',
   'background': 'contrast-light',
-  'border': 'text' ('tint': 60%),
-  'action': 'brand-orange' ('darken': 25%),
+  'border': 'brand-primary',
 
-  'callout': 'brand-blue' ('tint': 70%),
-  'invert': 'brand-blue' ('shade': 50%),
+  'action': 'brand-pink',
+  'action-alt': 'brand-primary',
+
+  'callout': 'brand-primary' ('tint': 80%),
+  'invert': 'brand-primary',
 );
 
 @include herman-add-colors('theme-colors', $theme-colors);

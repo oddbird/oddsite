@@ -1,0 +1,16 @@
+// Links Config
+// ============
+
+
+// Link
+// ----
+/// Shortcut that includes &:link and &:visited
+/// @group utilities
+$link: '&:link, &:visited';
+
+
+// Focus
+// -----
+/// Shortcut that includes &:hover, &:focus, and &:active
+/// @group utilities
+$focus: '&:hover, &:focus, &:active';

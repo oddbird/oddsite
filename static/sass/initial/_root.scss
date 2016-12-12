@@ -1,22 +1,6 @@
 // Root Initialization
 // ===================
 
-
-
-// Root Styles
-// -----------
-
 :root {
   @include contrasted('background');
-}
-
-
-
-// @@@ Temporary Layout
-// --------------------
-
-[data-region] {
-  margin: 0 auto;
-  max-width: size('full-content');
-  padding: 0.5rem 1rem;
 }

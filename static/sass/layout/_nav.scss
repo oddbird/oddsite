@@ -11,15 +11,20 @@ $nav-locations:
   'contact',
 ;
 
+.nav-link {
+  #{$link} {
+    display: inline-block;
+    padding: size('half-shim');
+    text-decoration: none;
+  }
+}
+
 @each $location in $nav-locations {
   [data-location='#{$location}'] {
     [data-active='#{$location}'] {
-      &:link,
-      &:visited {
-        @include wrap-content('[' ']');
-        color: inherit;
-        font-weight: bold;
-        text-decoration: none;
+      #{$link} {
+        color: color('action-alt');
+        font-style: italic;
       }
     }
   }

@@ -1,0 +1,27 @@
+// Banner Layout
+// =============
+
+
+[data-region='banner'] {
+  padding: size('gutter');
+  text-align: center;
+}
+
+
+// Brand
+// -----
+.brand {
+  margin: 0 auto; // @@@ bottom: negative('rhythm') * 1.5
+
+  [rel='home'] {
+    #{$link} {
+      color: color('brand-primary');
+      display: block;
+    }
+  }
+}
+
+[data-icon='logo'] {
+  height: 6rem;
+  width: 13rem;
+}

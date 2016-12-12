@@ -21,17 +21,9 @@
   @include is-hidden;
 }
 
-h1,
-h2 {
-  margin: 1.5rem 0 0.75rem;
-}
-
-h1 {
-  font-size: calc(1rem + 2vw);
-}
-
 h2 {
   font-size: calc(1rem + 1vw);
+  margin: 1.5rem 0 0.75rem;
 }
 
 h3 {
