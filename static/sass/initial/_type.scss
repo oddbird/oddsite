@@ -2,12 +2,6 @@
 // ------------------
 
 
-// Web Fonts
-// ---------
-
-@include import-webfonts;
-
-
 
 // Base
 // ----
@@ -25,14 +19,6 @@
 
 .is-hidden {
   @include is-hidden;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5 {
-  @include font-family('title');
 }
 
 h1,

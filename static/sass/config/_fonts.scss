@@ -2,64 +2,54 @@
 // ============
 
 
-
-// Dependencies
-// ------------
-
-@import '~accoutrement-type/sass/type';
-
-
-
-// Title Font
-// ----------
-/// hello title font...
-/// @preview font-specimen; key: title
-$title-font: (
-  'name': 'BaskervilleFS',
-  'stack': (Baskerville, Palatino, Cambria, Georgia, serif),
-  'regular': 'serif/baskerville-regular-webfont',
-  'italic': 'serif/baskerville-italic-webfont',
-  'bold': 'serif/baskerville-bold-webfont',
-  'bold' 'italic': 'serif/baskerville-bolditalic-webfont',
-);
-
-
-
 // Body Font
 // ---------
-/// hello body font...
+/// Freight Text Pro is the primary font of the OddBird brand.
 /// @preview font-specimen; key: body
 $body-font: (
-  'name': 'SourceSansPro',
-  'stack': ('Helvetica Neue', Helvetica, Arial, sans-serif),
-  'regular': 'sans/sourcesanspro-regular-webfont',
-  'italic': 'sans/sourcesanspro-italic-webfont',
-  'bold': 'sans/sourcesanspro-bold-webfont',
-  'bold' 'italic': 'sans/sourcesanspro-bolditalic-webfont',
+  'name': 'freight-text-pro',
+  'stack': (Baskerville, Palatino, Cambria, Georgia, serif),
+  'source': 'https://typekit.com/fonts/freight-text',
+  'regular': false,
+  'italic': false,
+  'bold': false,
+  'bold' 'italic': false,
 );
 
+@include herman-add-font('body', $body-font);
+
+
+// Alt Font
+// --------
+/// Freight Sans Pro provides a sans-serif alternative,
+/// still in the same family as our primary font.
+/// @preview font-specimen; key: alt
+$alt-font: (
+  'name': 'freight-sans-pro',
+  'stack': ('Helvetica Neue', Helvetica, Arial, sans-serif),
+  'source': 'https://typekit.com/fonts/freight-sans',
+  'regular': false,
+  'italic': false,
+  'bold': false,
+  'bold' 'italic': false,
+);
+
+@include herman-add-font('alt', $alt-font);
 
 
 // Code Font
 // ---------
-/// hello code font...
+/// Source Code Pro provides a nice-looking monospace option
+/// for code samples across the site.
 /// @preview font-specimen; key: code
 $code-font: (
   'name': 'SourceCodePro',
-  'stack': (Consolas, Menlo, Monaco, 'Lucida Console', 'Liberation Mono', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Courier New', monospace),
-  'regular': 'code/sourcecodepro-regular-webfont',
-  'bold': 'code/sourcecodepro-bold-webfont',
+  'stack': (Consolas, Menlo, Monaco, 'Courier New', monospace),
+  'source': 'https://typekit.com/fonts/source-code-pro',
+  'regular': false,
+  'italic': false,
+  'bold': false,
+  'bold' 'italic': false,
 );
 
-
-
-// Font Palette
-// ------------
-
-@include set-fonts(
-  (
-    'title': $title-font,
-    'body': $body-font,
-    'code': $code-font,
-  )
-);
+@include herman-add-font('code', $code-font);

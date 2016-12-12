@@ -1,33 +1,29 @@
 // Scale Settings
 // ==============
 
-// Dependencies
-// ------------
 
-@import '~accoutrement-scale/sass/scale';
-
-$ratios: (
+// Ratios
+// ------
+/// @group scale
+/// @preview ratios
+/// @link http://oddbird.net/accoutrement-scale/sassdoc/
+///   Accoutrement Scale
+$modular-scale: (
   'multiple': 'linear',
 );
 
+@include herman-add-ratios('modular-scale', $modular-scale);
 
-$component-sizes: (
+
+
+// Page Sizes
+// ----------
+/// @group scale
+/// @preview ratios; style: output-only
+/// @link http://oddbird.net/accoutrement-scale/sassdoc/
+///   Accoutrement Scale
+$page-sizes: (
   'full-content': 40rem,
 );
 
-
-@function merge-sizes(
-  $maps...
-) {
-  $new: $sizes;
-
-  @each $map in $maps {
-    $new: map-merge($new, $map);
-  }
-
-  @return $new;
-}
-
-$sizes: merge-sizes(
-  $component-sizes
-);
+@include herman-add-sizes('page-sizes', $page-sizes);
