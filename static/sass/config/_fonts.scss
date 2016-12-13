@@ -6,17 +6,13 @@
 // ---------
 /// Freight Text Pro is the primary font of the OddBird brand.
 /// @group fonts
-/// @preview font-specimen; key: body
+/// @preview font-specimen; key: body; show: regular, italic, bold, bold italic
 /// @link http://oddbird.net/accoutrement-type/sassdoc/
 ///   Accoutrement Type
 $body-font: (
   'name': 'freight-text-pro',
   'stack': (Baskerville, Palatino, Cambria, Georgia, serif),
   'source': 'https://typekit.com/fonts/freight-text',
-  'regular': false,
-  'italic': false,
-  'bold': false,
-  'bold' 'italic': false,
 );
 
 @include herman-add-font('body', $body-font);
@@ -27,17 +23,13 @@ $body-font: (
 /// Freight Sans Pro provides a sans-serif alternative,
 /// still in the same family as our primary font.
 /// @group fonts
-/// @preview font-specimen; key: alt
+/// @preview font-specimen; key: alt; show: regular, italic, bold, bold italic
 /// @link http://oddbird.net/accoutrement-type/sassdoc/
 ///   Accoutrement Type
 $alt-font: (
   'name': 'freight-sans-pro',
   'stack': ('Helvetica Neue', Helvetica, Arial, sans-serif),
   'source': 'https://typekit.com/fonts/freight-sans',
-  'regular': false,
-  'italic': false,
-  'bold': false,
-  'bold' 'italic': false,
 );
 
 @include herman-add-font('alt', $alt-font);
@@ -48,17 +40,13 @@ $alt-font: (
 /// Source Code Pro provides a nice-looking monospace option
 /// for code samples across the site.
 /// @group fonts
-/// @preview font-specimen; key: code
+/// @preview font-specimen; key: code; show: regular, italic, bold, bold italic
 /// @link http://oddbird.net/accoutrement-type/sassdoc/
 ///   Accoutrement Type
 $code-font: (
   'name': 'SourceCodePro',
   'stack': (Consolas, Menlo, Monaco, 'Courier New', monospace),
   'source': 'https://typekit.com/fonts/source-code-pro',
-  'regular': false,
-  'italic': false,
-  'bold': false,
-  'bold' 'italic': false,
 );
 
 @include herman-add-font('code', $code-font);

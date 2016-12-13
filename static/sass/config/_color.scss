@@ -18,19 +18,21 @@ $brand-colors: (
 @include herman-add-colors('brand-colors', $brand-colors);
 
 
-// UI Colors
-// ---------
+// Contrast Colors
+// ---------------
 /// The light and dark contrast colors act as
 /// the high and low range of our palette.
 /// @group color
 /// @preview color-palette
 /// @type Map
-$ui-colors: (
+/// @link http://oddbird.net/accoutrement-color/sassdoc/
+///   Accoutrement Colors
+$contrast-colors: (
   'contrast-light': #fff,
-  'contrast-dark': 'brand-primary' ('shade': 75%),
+  'contrast-dark': 'brand-primary' ('shade': 50%),
 );
 
-@include herman-add-colors('ui-colors', $ui-colors);
+@include herman-add-colors('contrast-colors', $contrast-colors);
 
 
 // Theme Colors

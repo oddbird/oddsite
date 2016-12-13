@@ -4,13 +4,25 @@
 
 // Link
 // ----
-/// Shortcut that includes &:link and &:visited
+/// Shortcut for `link` and `visited` pseudo-classes.
 /// @group utilities
+/// @example scss -
+///   a {
+///     #{$link} {
+///       color: blue;
+///     }
+///   }
 $link: '&:link, &:visited';
 
 
 // Focus
 // -----
-/// Shortcut that includes &:hover, &:focus, and &:active
+/// Shortcut for `hover`, `focus`, and `active` pseudo-classes.
 /// @group utilities
+/// @example scss -
+///   a {
+///     #{$focus} {
+///       color: red;
+///     }
+///   }
 $focus: '&:hover, &:focus, &:active';
