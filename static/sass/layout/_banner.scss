@@ -16,7 +16,12 @@
   [rel='home'] {
     #{$link} {
       color: color('brand-primary');
-      display: block;
+      display: inline-block;
+      transition: color 250ms;
+    }
+
+    #{$focus} {
+      color: color('brand-orange');
     }
   }
 }
@@ -52,7 +57,7 @@
 
   [data-location='home'] & {
     animation: draw-logo 3s 1 ease-out both, fill-logo 3s 2s 1 ease-in-out both, fade-logo-outline 2s 2s 1 ease-in-out both;
-    stroke: color('action');
+    stroke: color('brand-orange');
     stroke-dasharray: 500;
     stroke-dashoffset: 500;
     stroke-width: 1;

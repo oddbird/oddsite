@@ -5,7 +5,10 @@
 // Body Font
 // ---------
 /// Freight Text Pro is the primary font of the OddBird brand.
+/// @group fonts
 /// @preview font-specimen; key: body
+/// @link http://oddbird.net/accoutrement-type/sassdoc/
+///   Accoutrement Type
 $body-font: (
   'name': 'freight-text-pro',
   'stack': (Baskerville, Palatino, Cambria, Georgia, serif),
@@ -23,7 +26,10 @@ $body-font: (
 // --------
 /// Freight Sans Pro provides a sans-serif alternative,
 /// still in the same family as our primary font.
+/// @group fonts
 /// @preview font-specimen; key: alt
+/// @link http://oddbird.net/accoutrement-type/sassdoc/
+///   Accoutrement Type
 $alt-font: (
   'name': 'freight-sans-pro',
   'stack': ('Helvetica Neue', Helvetica, Arial, sans-serif),
@@ -41,7 +47,10 @@ $alt-font: (
 // ---------
 /// Source Code Pro provides a nice-looking monospace option
 /// for code samples across the site.
+/// @group fonts
 /// @preview font-specimen; key: code
+/// @link http://oddbird.net/accoutrement-type/sassdoc/
+///   Accoutrement Type
 $code-font: (
   'name': 'SourceCodePro',
   'stack': (Consolas, Menlo, Monaco, 'Courier New', monospace),
