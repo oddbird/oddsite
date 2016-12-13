@@ -21,6 +21,12 @@
   @include is-hidden;
 }
 
+h1,
+h2,
+h3 {
+  @include font-family('alt');
+}
+
 h2 {
   font-size: calc(1rem + 1vw);
   margin: 1.5rem 0 0.75rem;
@@ -32,15 +38,15 @@ h3 {
 }
 
 a {
-  &:link,
-  &:visited {
-    color: color('action');
+  #{$link} {
+    @include link-underline('action');
+    color: inherit;
+    text-decoration: none;
+    transition: color 150ms;
   }
 
-  &:hover,
-  &:focus,
-  &:active {
-    text-decoration: none;
+  #{$focus} {
+    color: color('action');
   }
 }
 

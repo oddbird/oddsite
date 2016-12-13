@@ -23,7 +23,7 @@ $nav-locations:
   [data-location='#{$location}'] {
     [data-active='#{$location}'] {
       #{$link} {
-        color: color('action-alt');
+        color: color('action');
         font-style: italic;
       }
     }

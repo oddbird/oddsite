@@ -26,3 +26,38 @@ $link: '&:link, &:visited';
 ///     }
 ///   }
 $focus: '&:hover, &:focus, &:active';
+
+
+// Link Outline
+// ------------
+@function link-outline(
+  $background: 'background'
+) {
+  $shadow: ();
+
+  @for $x from -1px through 1px {
+    @for $y from -1px through 1px {
+      $angle: ($x $y 0 color($background));
+      $shadow: append($shadow, $angle, comma);
+    }
+  }
+
+  @return $shadow;
+}
+
+
+// Link Underline
+// --------------
+@mixin link-underline(
+  $color: 'action',
+  $background: 'background',
+  $offset: -0.15em,
+  $size: 0.05em
+) {
+  $start: color($color) $size;
+  $end: transparent $size;
+
+  background-image: linear-gradient(to top, $start, $end);
+  background-position: 0 $offset;
+  text-shadow: link-outline($background);
+}

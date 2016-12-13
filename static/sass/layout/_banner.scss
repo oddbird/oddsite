@@ -5,6 +5,12 @@
 [data-region='banner'] {
   padding: size('gutter');
   text-align: center;
+
+  a {
+    #{$link} {
+      background-image: none;
+    }
+  }
 }
 
 

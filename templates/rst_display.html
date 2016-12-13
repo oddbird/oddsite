@@ -10,15 +10,19 @@
     {{ rst.html_title }}
   {%- endif %}
 
-  {% if ctx.pub_date %}
-    <p>
-      {{ blog.pubdate(ctx.pub_date) }}
-      {{ blog.tags(ctx.tags) }}
-    </p>
-  {% endif %}
+  {% if ctx.pub_date or ctx.author %}
+  <div data-module="rst-meta">
+    {% if ctx.pub_date %}
+      <p>
+        {{ blog.pubdate(ctx.pub_date) }}
+        {{ blog.tags(ctx.tags) }}
+      </p>
+    {% endif %}
 
-  {% if ctx.author %}
-    {{ birds.get_card(ctx.author, config, details=true) }}
+    {% if ctx.author %}
+      {{ birds.get_card(ctx.author, config, details=true) }}
+    {% endif %}
+  </div>
   {% endif %}
 
   {{ blog.header_image(ctx) }}

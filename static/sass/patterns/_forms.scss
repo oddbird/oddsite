@@ -28,11 +28,12 @@
 
 .btn {
   &,
-  &:link,
-  &:visited {
+  #{$link} {
     @include contrasted('action');
+    background-image: none;
     display: inline-block;
     padding: 0.5rem 1rem;
     text-decoration: none;
+    text-shadow: none;
   }
 }
