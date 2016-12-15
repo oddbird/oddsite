@@ -81,6 +81,7 @@ module.exports = {
     app: './init.js',
     susy_off_canvas: './pages/susy-off-canvas.js',
     app_styles: ['screen.scss'],
+    styleguide: ['styleguide.scss'],
     susy_off_canvas_styles: ['pages/susy-off-canvas.scss'],
     sass_json: ['json.scss']
   },

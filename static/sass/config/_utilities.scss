@@ -1,0 +1,34 @@
+// Utilities
+// =========
+
+
+// Text Outline
+// ------------
+/// Outline text with a 1px solid shadow of any color,
+/// because CSS doesn't provide `spread-radius` on `text-shadow`.
+/// This is primarily used for improved link-underlines.
+/// @group utilities
+/// @parameter {Color | String} $background ['background'] -
+///   Color (or Accoutrement color-key) to use for the outline.
+/// @see Smarter Link Underlines - https://eager.io/blog/smarter-link-underlines/
+/// @example njk -
+///   <a href="#">link outline example (gjq)</a>
+@mixin text-outline(
+  $background: 'background'
+) {
+  $shadow: ();
+  $spacing: 0.3em;
+  $count: 5;
+
+  @for $x from $count through - $count {
+    @for $y from $count through - $count {
+      // 0 0 0 isn't a useful shadow to include...
+      @if not ($x == 0 and $y == 0) {
+        $angle: ($x * $spacing $y * $spacing 0 color($background));
+        $shadow: append($shadow, $angle, comma);
+      }
+    }
+  }
+
+  text-shadow: $shadow;
+}
