@@ -19,7 +19,7 @@
 ) {
   $shadow: ();
   $spacing: 0.02em;
-  $count: 2;
+  $count: 5;
 
   @for $x from $count through - $count {
     @for $y from $count through - $count {
@@ -46,13 +46,13 @@
 @mixin text-underline(
   $color: 'action',
   $background: 'background',
-  $offset: -0.15em,
-  $size: 0.08rem
+  $offset: -0.185em,
+  $size: 0.06em
 ) {
   $start: color($color) $size;
   $end: transparent $size;
 
   @include text-outline($background);
-  background-image: linear-gradient(to top, $start, $end);
+  background-image: linear-gradient(to bottom, $start, $end);
   background-position: 0 $offset;
 }

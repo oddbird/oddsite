@@ -14,12 +14,18 @@
 
 
 
-// Defaults
-// --------
+// Hidden Text & Fout
+// ------------------
 
-.is-hidden {
+.is-hidden,
+.wf-loading {
   @include is-hidden;
 }
+
+
+
+// Typographic Defaults
+// --------------------
 
 h1,
 h2,
@@ -66,4 +72,10 @@ blockquote {
 
 img {
   max-width: 100%;
+}
+
+code {
+  @include font-family('code');
+  // adjust for relative size of monospace font...
+  font-size: 0.75em;
 }

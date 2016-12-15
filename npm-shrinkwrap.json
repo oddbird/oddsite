@@ -6133,9 +6133,9 @@
       }
     },
     "sassdoc-theme-herman": {
-      "version": "0.5.1",
-      "from": "sassdoc-theme-herman@0.5.1",
-      "resolved": "https://registry.npmjs.org/sassdoc-theme-herman/-/sassdoc-theme-herman-0.5.1.tgz",
+      "version": "0.5.2",
+      "from": "sassdoc-theme-herman@0.5.2",
+      "resolved": "https://registry.npmjs.org/sassdoc-theme-herman/-/sassdoc-theme-herman-0.5.2.tgz",
       "dev": true,
       "dependencies": {
         "async": {
@@ -6177,9 +6177,9 @@
           "dev": true
         },
         "glob-parent": {
-          "version": "3.0.1",
+          "version": "3.1.0",
           "from": "glob-parent@>=3.0.0 <4.0.0",
-          "resolved": "https://registry.npmjs.org/glob-parent/-/glob-parent-3.0.1.tgz",
+          "resolved": "https://registry.npmjs.org/glob-parent/-/glob-parent-3.1.0.tgz",
           "dev": true
         },
         "glob-stream": {

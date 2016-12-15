@@ -51,6 +51,8 @@ SassdocPlugin.prototype.apply = (compiler) => {
       dest: sassdocPath,
       theme: 'herman',
       customCSS: cssPath,
+      customHead: '<script src="https://use.typekit.net/slx1xnq.js"></script>' +
+        '<script>try{Typekit.load({ async: true });}catch(e){}</script>',
       descriptionPath: path.join(__dirname, 'STYLEGUIDE.md'),
       homepage: '/',
       sassjsonfile: jsonPath,
