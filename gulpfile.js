@@ -149,7 +149,6 @@ gulp.task('watch', ['webpack-watch'], () => {
   gulp.watch([
     `${paths.ICONS_DIR}**/*.svg`,
     `${paths.SRC_TEMPLATES_DIR}_icon_template.lodash`,
-    '!content/static/assets/*.css',
     './STYLEGUIDE.md'
   ], ['webpack']);
 
