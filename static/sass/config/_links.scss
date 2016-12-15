@@ -26,20 +26,3 @@ $link: '&:link, &:visited';
 ///     }
 ///   }
 $focus: '&:hover, &:focus, &:active';
-
-
-// Link Underline
-// --------------
-@mixin link-underline(
-  $color: 'action',
-  $background: 'background',
-  $offset: -0.15em,
-  $size: 0.05em
-) {
-  $start: color($color) $size;
-  $end: transparent $size;
-
-  @include text-outline($background);
-  background-image: linear-gradient(to top, $start, $end);
-  background-position: 0 $offset;
-}

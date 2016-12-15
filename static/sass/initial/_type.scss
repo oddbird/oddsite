@@ -39,7 +39,7 @@ h3 {
 
 a {
   #{$link} {
-    @include link-underline('action');
+    @include text-underline('action');
     color: inherit;
     text-decoration: none;
     transition: color 150ms;

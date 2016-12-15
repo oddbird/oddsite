@@ -11,3 +11,22 @@
 @import 'config/manifest';
 @import 'initial/manifest';
 @import 'patterns/manifest';
+
+
+// Overrides
+// ---------
+
+h1,
+h2,
+h3,
+h4 {
+  &[data-sassdoc] {
+    font-size: inherit;
+  }
+}
+
+[data-sassdoc-nav] {
+  #{$link} {
+    background-image: none;
+  }
+}

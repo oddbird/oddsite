@@ -10,15 +10,16 @@
 /// @group utilities
 /// @parameter {Color | String} $background ['background'] -
 ///   Color (or Accoutrement color-key) to use for the outline.
-/// @see Smarter Link Underlines - https://eager.io/blog/smarter-link-underlines/
+/// @link https://eager.io/blog/smarter-text-underlines/ Smarter Text Underlines
+/// @see text-underline
 /// @example njk -
 ///   <a href="#">link outline example (gjq)</a>
 @mixin text-outline(
   $background: 'background'
 ) {
   $shadow: ();
-  $spacing: 0.3em;
-  $count: 5;
+  $spacing: 0.02em;
+  $count: 2;
 
   @for $x from $count through - $count {
     @for $y from $count through - $count {
@@ -31,4 +32,27 @@
   }
 
   text-shadow: $shadow;
+}
+
+
+// Text Underline
+// --------------
+/// Underline text with a background-image
+/// that can be clipped with a text-shadow,
+/// to create more readable underlines.
+/// @group utilities
+/// @link https://eager.io/blog/smarter-text-underlines/ Smarter Text Underlines
+/// @see text-outline
+@mixin text-underline(
+  $color: 'action',
+  $background: 'background',
+  $offset: -0.15em,
+  $size: 0.08rem
+) {
+  $start: color($color) $size;
+  $end: transparent $size;
+
+  @include text-outline($background);
+  background-image: linear-gradient(to top, $start, $end);
+  background-position: 0 $offset;
 }
