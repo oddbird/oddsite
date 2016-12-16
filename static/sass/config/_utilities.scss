@@ -59,7 +59,7 @@
   $size: calc(1px + 0.03em); // determined by trial and error...
 
   @include text-outline($background);
-  background-image: linear-gradient(to bottom, color($color), color($color));
+  background-image: linear-gradient(color($color), color($color));
   background-position: 0 $offset;
   background-repeat: repeat-x;
   background-size: $size $size;

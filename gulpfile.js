@@ -5,6 +5,7 @@ const eslint = require('gulp-eslint');
 const exec = require('child_process').exec;
 const gulp = require('gulp');
 const gutil = require('gulp-util');
+const mocha = require('gulp-spawn-mocha');
 const path = require('path');
 const rename = require('gulp-rename');
 const sasslint = require('gulp-sass-lint');
@@ -28,6 +29,7 @@ const paths = {
   SRC_TEMPLATES_DIR: 'templates/',
   SRC_JS_DIR: 'static/js/',
   SASS_DIR: 'static/sass/',
+  SASS_TESTS_DIR: 'test/sass/',
   ICONS_DIR: 'templates/icons/',
   DIST_DIR: 'dev-output/',
   PROD_DIST_DIR: 'output/',
@@ -38,10 +40,12 @@ const paths = {
   init () {
     this.ALL_JS = [
       `${this.SRC_JS_DIR}**/*.js`,
+      `${this.SASS_TESTS_DIR}**/*.js`,
       '*.js'
     ].concat(this.IGNORE);
     this.SASS = [
-      `${this.SASS_DIR}**/*.scss`
+      `${this.SASS_DIR}**/*.scss`,
+      `${this.SASS_TESTS_DIR}**/*.scss`
     ].concat(this.IGNORE);
     return this;
   }
@@ -124,6 +128,8 @@ gulp.task('prod', ['webpack-prod']);
 
 gulp.task('serve', [ 'watch', 'runserver' ]);
 
+gulp.task('test', ['sasstest']);
+
 gulp.task('watch', ['webpack-watch'], () => {
   // lint js on changes
   gulp.watch(paths.ALL_JS, (ev) => {
@@ -136,7 +142,7 @@ gulp.task('watch', ['webpack-watch'], () => {
   gulp.watch('**/.eslintrc.yml', ['eslint-nofail']);
 
   // lint scss on changes
-  gulp.watch(paths.SASS, (ev) => {
+  gulp.watch(paths.SASS, ['sasstest'], (ev) => {
     if (ev.type === 'added' || ev.type === 'changed') {
       sasslintTask(ev.path, false, true);
     }
@@ -172,6 +178,11 @@ gulp.task('eslint-nofail', () => eslintTask(paths.ALL_JS));
 gulp.task('sasslint', () => sasslintTask(paths.SASS, true));
 
 gulp.task('sasslint-nofail', () => sasslintTask(paths.SASS));
+
+gulp.task('sasstest', () =>
+  gulp.src([`${paths.SASS_TESTS_DIR}test_sass.js`], { read: false })
+    .pipe(mocha({ reporter: 'dot' }))
+);
 
 gulp.task('sprites-clean', (cb) => {
   del(`${paths.SRC_TEMPLATES_DIR}_icons.svg`).then(() => {
