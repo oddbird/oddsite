@@ -135,6 +135,8 @@ and not to be taken lightly.
 .. _Pelican: http://docs.getpelican.com/
 .. _landed on: https://github.com/oddbird/oddsite/tree/b776a68889234429de054547734ac0d2591a3f60
 .. _rstBlog: https://github.com/mitsuhiko/rstblog
+.. _YAML: http://yaml.org/
+.. _Jinja2: http://jinja.pocoo.org/
 
 
 Defining Goals & Exploring Possibilities
