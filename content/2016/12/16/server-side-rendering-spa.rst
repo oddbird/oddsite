@@ -131,7 +131,10 @@ this:
         handler = resolved.func
         args = resolved.args
         kwargs = resolved.kwargs
-        return getattr(handler(request, *args, **kwargs), 'data', None)
+        resp = handler(request, *args, **kwargs)
+        if resp.status_code == 404:
+            return None
+        return getattr(resp, 'data', None)
     except Http404:
         return None
 
