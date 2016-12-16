@@ -2,6 +2,22 @@
 // ==============
 
 
+// Section Arrow
+// -------------
+/// Apply a top-border with centered down-arrow triangle,
+/// for use as a section-divider.
+/// @group sections
+/// @parameter $color -
+///   The color of the border/arrow line
+/// @parameter $background -
+///   The background color above the border/arrow,
+///   used to make it an arrow-outline rather than a solid triangle
+/// @example scss -
+///   [data-styleguide='section-arrow'] {
+///     @include section-arrow;
+///   }
+/// @example njk -
+///   <div data-styleguide="section-arrow">Section Arrow</div>
 @mixin section-arrow(
   $color: 'border',
   $background: 'background'

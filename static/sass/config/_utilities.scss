@@ -7,20 +7,20 @@
 /// Outline text with a 1px solid shadow of any color,
 /// because CSS doesn't provide `spread-radius` on `text-shadow`.
 /// This is primarily used for improved link-underlines.
-/// @group utilities
+/// @group typography
 /// @parameter {Color | String} $background ['background'] -
 ///   Color (or Accoutrement color-key) to use for the outline.
-/// @link https://eager.io/blog/smarter-text-underlines/
+/// @link https://eager.io/blog/smarter-link-underlines/
 ///   Smarter Text Underlines
 /// @see text-underline
 /// @example njk -
-///   <a href="#">link outline example (gjq)</a>
+///   <a href="#">link outline (decenders: Qhghjhqhy)</a>
 @mixin text-outline(
   $background: 'background'
 ) {
   $shadow: ();
-  $spacing: 0.025em; // determined by trial and error...
-  $count: 3; // determined by trial and error...
+  $spacing: 0.02em; // determined by trial and error...
+  $count: 4; // determined by trial and error...
 
   @for $x from $count through - $count {
     @for $y from $count through - $count {
@@ -41,24 +41,26 @@
 /// Underline text with a background-image
 /// that can be clipped with a text-shadow,
 /// to create more readable underlines.
-/// @group utilities
+/// @group typography
 /// @parameter {Color | String} $color ['action'] -
 ///   Color (or Accoutrement color-key) to use for the underline.
 /// @parameter {Color | String} $background ['background'] -
 ///   Color (or Accoutrement color-key) to use for the text-outline.
-/// @link https://eager.io/blog/smarter-text-underlines/
+/// @link https://eager.io/blog/smarter-link-underlines/
 ///   Smarter Text Underlines
 /// @see text-outline
+/// @example njk -
+///   <a href="#">link underline (decenders: Qhghjhqhy)</a>
 @mixin text-underline(
   $color: 'action',
   $background: 'background'
 ) {
-  $offset: -0.18em; // determined by trial and error...
-  $size: 0.06em; // determined by trial and error...
-  $start: color($color) $size;
-  $end: transparent $size;
+  $offset: 1.154em; // determined by trial and error...
+  $size: calc(1px + 0.03em); // determined by trial and error...
 
   @include text-outline($background);
-  background-image: linear-gradient(to bottom, $start, $end);
+  background-image: linear-gradient(to bottom, color($color), color($color));
   background-position: 0 $offset;
+  background-repeat: repeat-x;
+  background-size: $size $size;
 }
