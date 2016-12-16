@@ -10,7 +10,8 @@
 /// @group utilities
 /// @parameter {Color | String} $background ['background'] -
 ///   Color (or Accoutrement color-key) to use for the outline.
-/// @link https://eager.io/blog/smarter-text-underlines/ Smarter Text Underlines
+/// @link https://eager.io/blog/smarter-text-underlines/
+///   Smarter Text Underlines
 /// @see text-underline
 /// @example njk -
 ///   <a href="#">link outline example (gjq)</a>
@@ -18,8 +19,8 @@
   $background: 'background'
 ) {
   $shadow: ();
-  $spacing: 0.02em;
-  $count: 5;
+  $spacing: 0.025em; // determined by trial and error...
+  $count: 3; // determined by trial and error...
 
   @for $x from $count through - $count {
     @for $y from $count through - $count {
@@ -41,14 +42,19 @@
 /// that can be clipped with a text-shadow,
 /// to create more readable underlines.
 /// @group utilities
-/// @link https://eager.io/blog/smarter-text-underlines/ Smarter Text Underlines
+/// @parameter {Color | String} $color ['action'] -
+///   Color (or Accoutrement color-key) to use for the underline.
+/// @parameter {Color | String} $background ['background'] -
+///   Color (or Accoutrement color-key) to use for the text-outline.
+/// @link https://eager.io/blog/smarter-text-underlines/
+///   Smarter Text Underlines
 /// @see text-outline
 @mixin text-underline(
   $color: 'action',
-  $background: 'background',
-  $offset: -0.185em,
-  $size: 0.06em
+  $background: 'background'
 ) {
+  $offset: -0.18em; // determined by trial and error...
+  $size: 0.06em; // determined by trial and error...
   $start: color($color) $size;
   $end: transparent $size;
 
