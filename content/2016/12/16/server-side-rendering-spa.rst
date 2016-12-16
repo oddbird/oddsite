@@ -77,11 +77,15 @@ undefined (therefore falsy) on the frontend.
 
 What other potential duplication can we remove? How about API logic?
 
-There are two plausible approaches: first, we could make distinct business
-logic, and then put an API wrapper around that, which can handle content-type
-negotiation, authentication, whatever else. Second, we can just fake out calls
-to the API on the server. The first clearly has the ring of morality to it, but
-the second is what we've opted to do, and I'll explain why.
+There are two plausible approaches:
+
+1. We could make distinct business logic, and then put an API wrapper around
+   that, which can handle content-type negotiation, authentication, whatever
+   else.
+2. We can just fake out calls to the API on the server.
+
+The first clearly has the ring of morality to it, but the second is what we've
+opted to do, and I'll explain why.
 
 The first approach turns out to have some problems. First, and most
 practically, we're making our API using `Django REST Framework
