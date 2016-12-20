@@ -17,7 +17,7 @@ Community Involvement
 
 We love being part of
 a vibrant web design and development community.
-We benifit daily from the generous contributions of others,
+We benefit daily from the generous contributions of others,
 and believe that a `diverse network`_ of shared experiences and ideas
 makes all of our work stronger.
 In addition to our `open-source software`_ and `public speaking`_,
