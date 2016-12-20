@@ -748,7 +748,7 @@ birds:
     adr:
       city: 'Boulder'
       state: 'CO'
-    no_posts: True
+    no_posts: False
     bio: |
       Kit co-leads our server-side development,
       managing code architecture,
