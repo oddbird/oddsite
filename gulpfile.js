@@ -117,13 +117,8 @@ const sasslintTask = (src, failOnError, log) => {
   return stream;
 };
 
-gulp.task('default', [
-  'eslint',
-  'sasslint',
-  'dev'
-]);
-
-gulp.task('dev', [ 'eslint', 'sasslint', 'serve' ]);
+gulp.task('default', [ 'eslint', 'sasslint', 'test' ]);
+gulp.task('dev', [ 'eslint', 'sasslint', 'test', 'serve' ]);
 gulp.task('prod', ['webpack-prod']);
 
 gulp.task('serve', [ 'watch', 'runserver' ]);
@@ -142,7 +137,7 @@ gulp.task('watch', ['webpack-watch'], () => {
   gulp.watch('**/.eslintrc.yml', ['eslint-nofail']);
 
   // lint scss on changes
-  gulp.watch(paths.SASS, ['sasstest'], (ev) => {
+  gulp.watch(paths.SASS, (ev) => {
     if (ev.type === 'added' || ev.type === 'changed') {
       sasslintTask(ev.path, false, true);
     }
@@ -150,6 +145,9 @@ gulp.task('watch', ['webpack-watch'], () => {
 
   // lint all scss when rules change
   gulp.watch('**/.sass-lint.yml', ['sasslint-nofail']);
+
+  // run sass tests on changes
+  gulp.watch(paths.SASS, ['sasstest']);
 
   // run webpack to compile styleguide assets
   gulp.watch([

@@ -48,8 +48,5 @@
     "sassdoc-theme-herman": "0.5.2",
     "webpack": "2.1.0-beta.27",
     "webpack-shell-plugin": "0.4.9"
-  },
-  "scripts": {
-    "test": "gulp test"
   }
 }

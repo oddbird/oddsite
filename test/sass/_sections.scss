@@ -12,6 +12,7 @@
       }
 
       @include expect {
+        // sass-lint:disable-all
         border-top: 0.44444rem solid #e07;
         position: relative;
 
@@ -33,6 +34,7 @@
           margin-top: -0.44444rem;
           transform: translateX(-50%) translateY(-2px);
         }
+        // sass-lint:enable-all
       }
     }
   }
