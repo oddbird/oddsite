@@ -118,8 +118,7 @@ module.exports = {
       'root.jQuery': 'jquery'
     }),
     new webpack.LoaderOptionsPlugin({
-      debug: process.env.NODE_ENV !== 'production',
-      minimize: process.env.NODE_ENV === 'production'
+      debug: process.env.NODE_ENV !== 'production'
     }),
     // pull common js and webpack runtime out of all bundles
     new webpack.optimize.CommonsChunkPlugin({
@@ -172,7 +171,10 @@ module.exports = {
           loader: [
             {
               loader: 'css-loader',
-              query: { sourceMap: true }
+              query: {
+                sourceMap: true,
+                minimize: process.env.NODE_ENV === 'production'
+              }
             },
             { loader: 'postcss-loader' },
             {
@@ -186,6 +188,6 @@ module.exports = {
   },
   devtool,
   performance: {
-    hints: process.env.NODE_ENV === 'production'
+    hints: false
   }
 };
