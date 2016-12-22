@@ -1,31 +1,22 @@
 // Sections Pattern
 // ================
 
+
 [data-module] {
-  border-bottom: 2px dotted color('action');
-  padding-bottom: 2rem;
+  margin: size('gutter') auto size('spacer');
+  max-width: size('full-content');
+  padding: 0 size('gutter');
 
   & + & {
-    padding-top: 2rem;
+    border-top: 2px dotted color('border-light');
+    padding-top: size('gutter');
   }
 }
 
 .title {
-  font-style: italic;
-  padding: 2rem 0 1rem;
-}
-
-
-// @@@ TEMPORARY
-// -------------
-
-[data-region='nav'] {
-  [href] {
-    display: inline-block;
-    padding-right: 0.5rem;
-  }
-}
-
-[data-module='pagination'] {
-  text-align: center;
+  @include font-family('alt');
+  font-size: calc(1rem + 2vw);
+  margin: size('gutter') auto;
+  max-width: size('full-content');
+  padding: 0 size('gutter');
 }

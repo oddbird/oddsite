@@ -51,6 +51,8 @@ SassdocPlugin.prototype.apply = (compiler) => {
       dest: sassdocPath,
       theme: 'herman',
       customCSS: cssPath,
+      customHead: '<script src="https://use.typekit.net/slx1xnq.js"></script>' +
+        '<script>try{Typekit.load({ async: true });}catch(e){}</script>',
       descriptionPath: path.join(__dirname, 'STYLEGUIDE.md'),
       homepage: '/',
       sassjsonfile: jsonPath,
@@ -81,6 +83,7 @@ module.exports = {
     app: './init.js',
     susy_off_canvas: './pages/susy-off-canvas.js',
     app_styles: ['screen.scss'],
+    styleguide: ['styleguide.scss'],
     susy_off_canvas_styles: ['pages/susy-off-canvas.scss'],
     sass_json: ['json.scss']
   },
@@ -181,5 +184,8 @@ module.exports = {
       }
     ]
   },
-  devtool
+  devtool,
+  performance: {
+    hints: process.env.NODE_ENV === 'production'
+  }
 };

@@ -1,0 +1,7 @@
+// Main Region Layout
+// ==================
+
+[data-region='main'] {
+  @include section-arrow;
+  padding-top: size('gutter');
+}

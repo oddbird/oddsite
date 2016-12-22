@@ -11,3 +11,4 @@ test:
   override:
     - ./node_modules/.bin/gulp eslint
     - ./node_modules/.bin/gulp sasslint
+    - ./node_modules/.bin/gulp test

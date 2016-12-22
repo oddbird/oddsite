@@ -2,12 +2,6 @@
 // ------------------
 
 
-// Web Fonts
-// ---------
-
-@include import-webfonts;
-
-
 
 // Base
 // ----
@@ -19,33 +13,39 @@
 }
 
 
+// Selection
+// ---------
+/// Selected text is highlighted in orange,
+/// with any text-shadows removed.
+/// @group typography
+::selection {
+  @include contrasted('select');
+  text-shadow: none;
+}
 
-// Defaults
-// --------
 
-.is-hidden {
+// Hidden Text & Fout
+// ------------------
+
+.is-hidden,
+.wf-loading {
   @include is-hidden;
 }
 
+
+
+// Typographic Defaults
+// --------------------
+
 h1,
 h2,
-h3,
-h4,
-h5 {
-  @include font-family('title');
-}
-
-h1,
-h2 {
-  margin: 1.5rem 0 0.75rem;
-}
-
-h1 {
-  font-size: calc(1rem + 2vw);
+h3 {
+  @include font-family('alt');
 }
 
 h2 {
   font-size: calc(1rem + 1vw);
+  margin: 1.5rem 0 0.75rem;
 }
 
 h3 {
@@ -54,15 +54,15 @@ h3 {
 }
 
 a {
-  &:link,
-  &:visited {
-    color: color('action');
+  #{$link} {
+    @include text-underline('action');
+    color: inherit;
+    text-decoration: none;
+    transition: color 150ms;
   }
 
-  &:hover,
-  &:focus,
-  &:active {
-    text-decoration: none;
+  #{$focus} {
+    color: color('action');
   }
 }
 
@@ -80,6 +80,8 @@ blockquote {
   padding: 0 0.75rem;
 }
 
-img {
-  max-width: 100%;
+code {
+  @include font-family('code');
+  // adjust for relative size of monospace font...
+  font-size: 0.75em;
 }

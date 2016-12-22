@@ -1,20 +1,23 @@
 {% extends "base.html" %}
+{% import 'utility.macros.j2' as utility %}
 
 
 {% block layout %}
   {% include 'layout/_site-message.html.j2' %}
 
-  <h1 data-region="banner">
-    <a href="/" rel="home">
-      OddBird
-    </a>
-  </h1>
+  <header data-region="banner">
+    <h1 class="brand">
+      <a href="/" rel="home">
+        {{ utility.icon('logo', alt='OddBird') }}
+      </a>
+    </h1>
 
-  <nav data-region="nav">
-    {% for link in config.nav %}
-      <a href="{{ link.url }}" class="nav-link" data-active="{{ link.text }}">{{ link.text }}</a>
-    {% endfor %}
-  </nav>
+    <nav class="nav">
+      {% for link in config.nav %}
+        <a href="{{ link.url }}" class="nav-link" data-active="{{ link.text }}">{{ link.text }}</a>
+      {% endfor %}
+    </nav>
+  </header>
 
   <main data-region="main" {% if config.pageclasses %}class="{{ config.pageclasses }}"{% endif %}>
     {% block body %}{% endblock body %}
@@ -25,11 +28,8 @@
     <p class="h-card">
       Copyright &copy; {{ config.copyright }}
       <a href="http://oddbird.net" class="p-name u-url">OddBird</a>
-    </p>
-    <p>
+      |
       Established in 2008 by three odd siblings.
-    </p>
-    <p>
       <a href="/conduct/">Code of Conduct</a>
     </p>
   </footer>

@@ -1,0 +1,23 @@
+// Site Navigation
+// ===============
+
+$nav-locations: 'birds', 'work', 'speaking', 'open-source', 'blog', 'community', 'contact';
+
+.nav-link {
+  #{$link} {
+    display: inline-block;
+    padding: size('half-shim');
+    text-decoration: none;
+  }
+}
+
+@each $location in $nav-locations {
+  [data-location='#{$location}'] {
+    [data-active='#{$location}'] {
+      #{$link} {
+        color: color('action');
+        font-style: italic;
+      }
+    }
+  }
+}

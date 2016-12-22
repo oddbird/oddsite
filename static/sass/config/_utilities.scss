@@ -1,0 +1,82 @@
+// Utilities
+// =========
+
+
+// Text Outline
+// ------------
+/// Outline text with a 1px solid shadow of any color,
+/// because CSS doesn't provide `spread-radius` on `text-shadow`.
+/// This is primarily used for improved link-underlines.
+/// @group typography
+/// @parameter {Color | String} $background ['background'] -
+///   Color (or Accoutrement color-key) to use for the outline.
+/// @parameter {Length} $size [0.08em] -
+///   Desired total size of the outline, using any valid units.
+///   The default `0.08em` scales with the text,
+///   starting around `1px` at our smallest font sizes.
+/// @parameter {Number} $resolution [4] -
+///   The number of incremental shadows used to create the full outline.
+///   Higher numbers will provide better resolution,
+///   but multiply the number of text-shadows required.
+/// @link https://eager.io/blog/smarter-link-underlines/
+///   Smarter Text Underlines
+/// @see text-underline
+/// @example njk -
+///   <a href="#" data-styleguide="text-outline">
+///     text outline (decenders: Qhghjhqhy)
+///   </a>
+@mixin text-outline(
+  $background: 'background',
+  $size: 0.1em, // determined by trial and error...
+  $resolution: 2 // determined by trial and error...
+) {
+  $spacing: $size / $resolution;
+  $shadow: ();
+
+  @for $x from $resolution through - $resolution {
+    @for $y from -1 through 1 {
+      @if not ($x == 0 and $y == 0) {
+        $angle: ($x * $spacing $y * 1px 0 color($background));
+        $shadow: append($shadow, $angle, comma);
+      }
+    }
+  }
+
+  text-shadow: $shadow;
+}
+
+
+// Text Underline
+// --------------
+/// Underline text with a background-image
+/// that can be clipped with a text-shadow,
+/// to create more readable underlines.
+/// @group typography
+/// @parameter {Color | String} $color ['action'] -
+///   Color (or Accoutrement color-key) to use for the underline.
+/// @parameter {Color | String} $background ['background'] -
+///   Color (or Accoutrement color-key) to use for the text-outline.
+/// @parameter {Length} $size [calc(1px + 0.04em)] -
+///   Underline width.
+/// @parameter {Length} $offset [calc(1.05em + 1.5px] -
+///   Underline position, measured from the top of the element.
+/// @link https://eager.io/blog/smarter-link-underlines/
+///   Smarter Text Underlines
+/// @see text-outline
+/// @example njk -
+///   <a href="#" data-styleguide="text-outline">
+///     text underline (decenders: Qhghjhqhy)
+///   </a>
+@mixin text-underline(
+  $color: 'action',
+  $background: 'background',
+  $size: calc(1px + 0.04em), // determined by trial and error...
+  $offset: calc(1.05em + 1.5px) // determined by trial and error...
+) {
+
+  @include text-outline($background);
+  background-image: linear-gradient(color($color), color($color));
+  background-position: 0 $offset;
+  background-repeat: repeat-x;
+  background-size: $size $size;
+}

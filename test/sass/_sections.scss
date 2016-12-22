@@ -1,0 +1,41 @@
+// Section Tests
+// =============
+
+
+// section-arrow
+// -------------
+@include test-module('section-arrow [mixin]') {
+  @include test('Creates top border with centered arrow') {
+    @include assert {
+      @include output {
+        @include section-arrow(#e07, #fff);
+      }
+
+      @include expect {
+        // sass-lint:disable-all
+        border-top: 0.44444rem solid #e07;
+        position: relative;
+
+        &:before,
+        &:after {
+          content: " ";
+          border: 1.38889rem solid transparent;
+          border-bottom-width: 0;
+          border-top-color: #e07;
+          left: 50%;
+          position: absolute;
+          top: 0;
+          transform: translateX(-50%);
+        }
+
+        &:after {
+          content: " ";
+          border-top-color: #fff;
+          margin-top: -0.44444rem;
+          transform: translateX(-50%) translateY(-2px);
+        }
+        // sass-lint:enable-all
+      }
+    }
+  }
+}

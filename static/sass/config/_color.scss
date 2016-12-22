@@ -2,60 +2,57 @@
 // ===================
 
 
-
-// Dependencies
-// ------------
-
-@import '~mathsass/dist/math';
-@import '~accoutrement-color/sass/color';
-
-
-
 // Brand Colors
 // ------------
-/// hello, brand colors!
+/// The brand is defined by our primary brand blue,
+/// along with secondary pink and orange base colors.
+/// @group color
 /// @preview color-palette
+/// @type Map
 $brand-colors: (
-  'brand-blue': hsl(195, 85%, 62%),
+  'brand-blue': hsl(195, 52%, 31%),
   'brand-orange': hsl(24, 100%, 62%),
+  'brand-pink': hsl(330, 100%, 45%),
 );
 
+@include herman-add-colors('brand-colors', $brand-colors);
 
 
-// UI Colors
-// ---------
-/// hello, ui colors!
+// Contrast Colors
+// ---------------
+/// The light and dark contrast colors act as
+/// the high and low range of our palette.
+/// @group color
 /// @preview color-palette
-$ui-colors: (
-  'contrast-light': 'brand-blue' ('tint': 90%),
-  'contrast-dark': 'brand-blue' ('shade': 75%),
+/// @type Map
+/// @link http://oddbird.net/accoutrement-color/sassdoc/
+///   Accoutrement Colors
+$contrast-colors: (
+  'contrast-light': #fff,
+  'contrast-dark': 'brand-blue' ('shade': 50%),
 );
 
+@include herman-add-colors('contrast-colors', $contrast-colors);
 
 
-// Theme Colors
+// Patterm Colors
 // ------------
-/// hello, theme colors!
+/// Re-usable color patterns for application in different components.
+/// @group color
 /// @preview color-palette
-$theme-colors: (
+/// @type Map
+$pattern-colors: (
   'text': 'contrast-dark',
   'background': 'contrast-light',
-  'border': 'text' ('tint': 60%),
-  'action': 'brand-orange' ('darken': 25%),
+  'border': 'brand-blue',
+  'border-light': 'border' ('tint': 50%),
+  'select': 'brand-orange' ('rgba': 0.5),
 
-  'callout': 'brand-blue' ('tint': 70%),
-  'invert': 'brand-blue' ('shade': 50%),
+  'action': 'brand-pink',
+  'action-alt': 'brand-blue',
+
+  'callout': 'brand-blue' ('tint': 80%),
+  'invert': 'brand-blue',
 );
 
-
-
-// Color Palette
-// -------------
-
-@include set-colors(
-  (
-    'brand-colors': $brand-colors,
-    'ui-colors': $ui-colors,
-    'theme-colors': $theme-colors,
-  )
-);
+@include herman-add-colors('pattern-colors', $pattern-colors);

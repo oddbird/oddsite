@@ -1,0 +1,51 @@
+// Style Guide
+// ===========
+
+
+// Sassdoc Defaults
+@import '~sassdoc-theme-herman/scss/utilities';
+@import '~sassdoc-theme-herman/scss/config/manifest';
+@import '~sassdoc-theme-herman/scss/component/manifest';
+
+// Patterns
+@import 'config/manifest';
+@import 'initial/manifest';
+@import 'patterns/manifest';
+
+
+// Overrides
+// ---------
+
+h1,
+h2,
+h3,
+h4 {
+  &[data-sassdoc] {
+    font-size: inherit;
+  }
+}
+
+[data-sassdoc-nav],
+[data-sassdoc='example-tab'] {
+  #{$link} {
+    background-image: none;
+    text-shadow: none;
+  }
+}
+
+
+// Examples
+// --------
+
+/// @access private
+/// @see section-arrow
+[data-styleguide='section-arrow'] {
+  @include section-arrow;
+}
+
+
+[data-styleguide='text-outline'] {
+  background-color: color('select');
+  display: inline-block;
+  padding: 0 size('shim');
+}

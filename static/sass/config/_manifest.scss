@@ -1,7 +1,21 @@
 // Config Manifest
 // ===============
 
-@import '~sassdoc-theme-herman/scss/utilities';
+
+// Third-Party
+// -----------
+@import 'requirements';
+
+
+// Accoutrement
+// ------------
 @import 'color';
 @import 'fonts';
 @import 'scale';
+
+
+// Utilities
+// ---------
+@import 'utilities';
+@import 'links';
+@import 'sections';
