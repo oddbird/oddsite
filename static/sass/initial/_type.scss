@@ -13,6 +13,16 @@
 }
 
 
+// Selection
+// ---------
+/// Selected text is highlighted in orange,
+/// with any text-shadows removed.
+/// @group typography
+::selection {
+  @include contrasted('select');
+  text-shadow: none;
+}
+
 
 // Hidden Text & Fout
 // ------------------
@@ -68,10 +78,6 @@ ul,
 ol,
 blockquote {
   padding: 0 0.75rem;
-}
-
-img {
-  max-width: 100%;
 }
 
 code {

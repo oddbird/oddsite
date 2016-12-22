@@ -8,6 +8,7 @@
 
   a {
     #{$link} {
+      // remove link text underlines in the header
       background-image: none;
     }
   }
@@ -21,7 +22,7 @@
 
   [rel='home'] {
     #{$link} {
-      color: color('brand-primary');
+      color: color('brand-blue');
       display: inline-block;
       transition: color 250ms;
     }

@@ -10,18 +10,15 @@
     {{ rst.html_title }}
   {%- endif %}
 
-  {% if ctx.pub_date or ctx.author %}
+  {% if ctx.pub_date %}
   <div data-module="rst-meta">
-    {% if ctx.pub_date %}
-      <p>
-        {{ blog.pubdate(ctx.pub_date) }}
-        {{ blog.tags(ctx.tags) }}
-      </p>
-    {% endif %}
-
-    {% if ctx.author %}
-      {{ birds.get_card(ctx.author, config, details=true) }}
-    {% endif %}
+    <p>
+      {{ blog.pubdate(ctx.pub_date) }}
+      {% if ctx.author %}
+        by {{ birds.get_card(ctx.author, config) }}
+      {% endif %}
+      {{ blog.tags(ctx.tags) }}
+    </p>
   </div>
   {% endif %}
 
@@ -34,6 +31,12 @@
   {% if rst.fragment %}
     <div data-module="rst-body">
       {{ rst.fragment }}
+    </div>
+  {% endif %}
+
+  {% if ctx.author %}
+    <div data-module="rst-author">
+      {{ birds.get_card(ctx.author, config, details=true) }}
     </div>
   {% endif %}
 

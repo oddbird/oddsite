@@ -66,9 +66,9 @@
 
   {% if image %}
     {% if 'http://' in image %}
-      <img src="{{ image }}">
+      <img src="{{ image }}" class="hero">
     {% else %}
-      <img src="/static/images/blog/{{ image }}">
+      <img src="/static/images/blog/{{ image }}" class="hero">
     {% endif %}
   {% endif %}
 {% endmacro %}

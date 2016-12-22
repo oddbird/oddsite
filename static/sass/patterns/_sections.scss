@@ -8,12 +8,8 @@
   padding: 0 size('gutter');
 
   & + & {
-    @include before(' • • • ') {
-      display: block;
-      font-weight: bold;
-      margin-bottom: size('spacer');
-      text-align: center;
-    }
+    border-top: 2px dotted color('border-light');
+    padding-top: size('gutter');
   }
 }
 

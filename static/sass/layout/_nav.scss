@@ -1,15 +1,7 @@
 // Site Navigation
 // ===============
 
-$nav-locations:
-  'birds',
-  'work',
-  'speaking',
-  'open-source',
-  'blog',
-  'community',
-  'contact',
-;
+$nav-locations: 'birds', 'work', 'speaking', 'open-source', 'blog', 'community', 'contact';
 
 .nav-link {
   #{$link} {

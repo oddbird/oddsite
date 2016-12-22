@@ -10,7 +10,7 @@
 /// @preview color-palette
 /// @type Map
 $brand-colors: (
-  'brand-primary': hsl(195, 52%, 31%),
+  'brand-blue': hsl(195, 52%, 31%),
   'brand-orange': hsl(24, 100%, 62%),
   'brand-pink': hsl(330, 100%, 45%),
 );
@@ -29,29 +29,30 @@ $brand-colors: (
 ///   Accoutrement Colors
 $contrast-colors: (
   'contrast-light': #fff,
-  'contrast-dark': 'brand-primary' ('shade': 50%),
+  'contrast-dark': 'brand-blue' ('shade': 50%),
 );
 
 @include herman-add-colors('contrast-colors', $contrast-colors);
 
 
-// Theme Colors
+// Patterm Colors
 // ------------
-/// Theme colors define broad patterns for
-/// how our colors will be adjusted and applied.
+/// Re-usable color patterns for application in different components.
 /// @group color
 /// @preview color-palette
 /// @type Map
-$theme-colors: (
+$pattern-colors: (
   'text': 'contrast-dark',
   'background': 'contrast-light',
-  'border': 'brand-primary',
+  'border': 'brand-blue',
+  'border-light': 'border' ('tint': 50%),
+  'select': 'brand-orange' ('rgba': 0.5),
 
   'action': 'brand-pink',
-  'action-alt': 'brand-primary',
+  'action-alt': 'brand-blue',
 
-  'callout': 'brand-primary' ('tint': 80%),
-  'invert': 'brand-primary',
+  'callout': 'brand-blue' ('tint': 80%),
+  'invert': 'brand-blue',
 );
 
-@include herman-add-colors('theme-colors', $theme-colors);
+@include herman-add-colors('pattern-colors', $pattern-colors);

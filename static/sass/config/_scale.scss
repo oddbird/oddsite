@@ -10,7 +10,7 @@
 ///   Accoutrement Scale
 $modular-scale: (
   'multiple': 'linear',
-  'text-ratio': 1.35,
+  'text-ratio': 1.4,
 );
 
 @include herman-add-ratios('modular-scale', $modular-scale);
@@ -43,10 +43,22 @@ $spacing-sizes: (
   'spacer': 'gutter' ('multiple': 3),
   'shim': 'gutter' ('multiple': 0.5),
   'half-shim': 'gutter' ('multiple': 0.25),
-  'border': 8px,
 );
 
 @include herman-add-sizes('spacing-sizes', $spacing-sizes);
+
+
+// Pattern Sizes
+// -------------
+/// @group scale
+/// @preview sizes; style: ruler
+/// @link http://oddbird.net/accoutrement-scale/sassdoc/
+///   Accoutrement Scale
+$pattern-sizes: (
+  'border': 8px,
+);
+
+@include herman-add-sizes('pattern-sizes', $pattern-sizes);
 
 
 // Page Sizes
