@@ -16,38 +16,40 @@
   </li>
 {% endmacro %}
 
-<section data-module="conferences" {{ utility.attr_if('id', module.id) }}>
-  <h2>
-    {% set title = module.title or 'Conferences and Events' %}
-    {{ utility.link_if(title|safe, module.title_url) }}
-  </h2>
+{% if config[module.data or 'events']|length %}
+  <section data-module="conferences" {{ utility.attr_if('id', module.id) }}>
+    <h2>
+      {% set title = module.title or 'Conferences and Events' %}
+      {{ utility.link_if(title|safe, module.title_url) }}
+    </h2>
 
-  {% for event in config[module.data or 'events'] %}
-    <div>
-      <h3>
-        {{ utility.link_if(event.venue, event.url) }}
-      </h3>
+    {% for event in config[module.data or 'events'] %}
+      <div>
+        <h3>
+          {{ utility.link_if(event.venue, event.url) }}
+        </h3>
 
-      <time class="dt-start" datetime="{{ [event.date[2], event.date[0], event.date[1]]|join('-') }}">
-        {{ event.date|join('/') }}
-      </time>
+        <time class="dt-start" datetime="{{ [event.date[2], event.date[0], event.date[1]]|join('-') }}">
+          {{ event.date|join('/') }}
+        </time>
 
-      {% if event.adr %} —
-        <span class="h-adr">
-          {% if event.adr.city %}
-            <span class="p-locality">{{ event.adr.city }}{% if event.adr.state %},{% endif %}</span>
-          {% endif %}
-          {% if event.adr.state %}
-            <span class="p-region">{{ event.adr.state }}</span>
-          {% endif %}
-        </span>
-      {% endif %}
+        {% if event.adr %} —
+          <span class="h-adr">
+            {% if event.adr.city %}
+              <span class="p-locality">{{ event.adr.city }}{% if event.adr.state %},{% endif %}</span>
+            {% endif %}
+            {% if event.adr.state %}
+              <span class="p-region">{{ event.adr.state }}</span>
+            {% endif %}
+          </span>
+        {% endif %}
 
-      <ul>
-        {% for who in event.who %}
-          {{ show_talk(who) }}
-        {% endfor %}
-      </ul>
-    </div>
-  {% endfor %}
-</section>
+        <ul>
+          {% for who in event.who %}
+            {{ show_talk(who) }}
+          {% endfor %}
+        </ul>
+      </div>
+    {% endfor %}
+  </section>
+{% endif %}

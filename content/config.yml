@@ -17,29 +17,6 @@ site_message:
 
 # Future Talks
 # ------------
-events:
-
-  - venue: 'Plone Digital Experience Conference'
-    url: 'http://2016.ploneconf.org/'
-    date: ['10', '20', '2016']
-    adr:
-      city: 'Boston'
-      state: 'MA'
-    who:
-      - author: 'david'
-        title: 'Greater than the sum of the parts: Lessons from integrating Pyramid, React, and Plone'
-
-  - venue: 'CSSDay.io'
-    url: 'http://cssday.io/'
-    date: ['12', '03', '2016']
-    adr:
-      city: 'Chandler'
-      state: 'AZ'
-    who:
-      - author: 'miriam'
-        title: 'Code Patterns for Pattern-Making'
-      - author: 'stacy'
-        title: 'Make Web Design Great Again'
 
 
 # Client Projects
@@ -807,6 +784,28 @@ birds_former:
 # ----------
 
 events_past:
+  - venue: 'CSSDay.io'
+    url: 'http://cssday.io/'
+    date: ['12', '03', '2016']
+    adr:
+      city: 'Chandler'
+      state: 'AZ'
+    who:
+      - author: 'miriam'
+        title: 'Code Patterns for Pattern-Making'
+      - author: 'stacy'
+        title: 'Make Web Design Great Again'
+
+  - venue: 'Plone Digital Experience Conference'
+    url: 'http://2016.ploneconf.org/'
+    date: ['10', '20', '2016']
+    adr:
+      city: 'Boston'
+      state: 'MA'
+    who:
+      - author: 'david'
+        title: 'Greater than the sum of the parts: Lessons from integrating Pyramid, React, and Plone'
+
   - venue: 'CSSConf 2016'
     url: 'http://2016.cascadiafest.org/'
     date: ['09', '26', '2016']
