@@ -16,14 +16,14 @@ We have some pretty great new(ish) properties we can use in CSS to make our
 designs more unique and help provide useful visual cues for your audience. One
 of these newer techniques can be used to create the drop caps that we know and
 love often found in print design. This technique has been used for centuries to
-bring emphasis to a new section of text and we are finally getting a decent way
-to easily apply this with CSS.
+bring emphasis to a new section of text, and we finally have a decent way
+to easily apply drop caps with CSS.
 
 
-CSS initial-letter syntax
+CSS Initial-Letter Syntax
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-First you need an element or class to use as the target and we will append the
+First you need an element or class to use as the target, and then we will append the
 ``::first-letter`` pseudo element. The property is ``initial-letter`` and the value
 is the number of lines you would like your initial letter to expand.
 
@@ -47,7 +47,7 @@ to check for support for a specific property and value:
     }
 
 When we wrap our block in a Feature Query, we can add additional values that we
-would only want applied IF ``initial-letter`` is supported.
+would only want applied `if` ``initial-letter`` is supported.
 
 .. code-block:: css
 

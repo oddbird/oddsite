@@ -80,7 +80,7 @@ Of course,
 this summary barely does justice
 to the beautiful demonstrantions Sarah included.
 Check out her `CodePen`_ page
-for a whole load of amazing and beuatiful samples.
+for a whole load of amazing and beautiful samples.
 
 |sd-links|
 
