@@ -73,13 +73,13 @@ support ``initial-letter`` to use alternate styles.
     $cap-size: $font-size * 6.25;
 
     @supports ( not (initial-letter: 5) ) and ( not (-webkit-initial-letter: 5) ) {
-    	.intro::first-letter {
-    		color:  hsl(350, 50%, 50%);
-    		font-size: $cap-size;
-    		float: left;
-    		line-height: .7;
-    		margin: 17px 2px 0 0;
-    	}
+      .intro::first-letter {
+        color:  hsl(350, 50%, 50%);
+        font-size: $cap-size;
+        float: left;
+        line-height: .7;
+        margin: 17px 2px 0 0;
+      }
     }
 
 These “magic numbers” are not universal so if you change a value or font-family
@@ -112,15 +112,15 @@ to the initial height value is the default.
 
 .. code-block:: css
 
-	 .raised-cap::first-letter {
-  		-webkit-initial-letter: 3 1;
-    	initial-letter: 3 1;
+    .raised-cap::first-letter {
+      -webkit-initial-letter: 3 1;
+      initial-letter: 3 1;
     }
 
-  	.sunken-cap::first-letter {
-  		-webkit-initial-letter: 3 2;
-  		initial-letter: 3 2;
-  	}
+    .sunken-cap::first-letter {
+      -webkit-initial-letter: 3 2;
+      initial-letter: 3 2;
+    }
 
 
 .. raw:: html
