@@ -5,8 +5,8 @@ image:
   - src: '2016/drop-caps.jpg'
 summary: |
   Using an emphasized initial letter is a technique that has been used for
-  centuries. Let's dive in to see some ways you can apply it to your project
-  to help guide your reader with visual heiarchy.
+  centuries. Let's dive in to see some ways you can apply it to your project to
+  help guide your reader with visual heiarchy.
 
 
 What's Old is New: Drop Caps in CSS
@@ -16,16 +16,17 @@ We have some pretty great new(ish) properties we can use in CSS to make our
 designs more unique and help provide useful visual cues for your audience. One
 of these newer techniques can be used to create the drop caps that we know and
 love often found in print design. This technique has been used for centuries to
-bring emphasis to a new section of text, and we finally have a decent way
-to easily apply drop caps with CSS.
+bring emphasis to a new section of text, and we finally have a decent way to
+easily apply drop caps with CSS.
 
 
 CSS Initial-Letter Syntax
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-First you need an element or class to use as the target, and then we will append the
-``::first-letter`` pseudo element. The property is ``initial-letter`` and the value
-is the number of lines you would like your initial letter to expand.
+First you need an element or class to use as the target, and then we will
+append the ``::first-letter`` pseudo element. The property is
+``initial-letter`` and the value is the number of lines you would like your
+initial letter to expand.
 
 .. code-block:: css
 
@@ -37,8 +38,8 @@ is the number of lines you would like your initial letter to expand.
 
 A few months ago we breifly introduced Feature Queries when we wrote about
 `CSS Grid Layout`_. Feature Queries will play an important role in using
-initial-letter today. As a reminder, a Feature Query will ask the browser
-to check for support for a specific property and value:
+initial-letter today. As a reminder, a Feature Query will ask the browser to
+check for support for a specific property and value:
 
 .. code-block:: css
 
@@ -59,12 +60,12 @@ would only want applied `if` ``initial-letter`` is supported.
       }
     }
 
-The specific number used in the @supports line for initial-letter does not matter
-unlike properties that require a keyword like ``(display: grid)``.
+The specific number used in the @supports line for initial-letter does not
+matter unlike properties that require a keyword like ``(display: grid)``.
 
 As of December 2016, only Safari supports initial-letter. Fortunately, you
 can still use this as an enhancement and fake it 'til you make it to achieve a
-similar outcome. By using the operator ```not`` we can tell browsers that do not
+similar outcome. By using the operator ``not`` we can tell browsers that do not
 support ``initial-letter`` to use alternate styles.
 
 .. code-block:: css
@@ -84,9 +85,9 @@ support ``initial-letter`` to use alternate styles.
 
 These “magic numbers” are not universal so if you change a value or font-family
 you will likely have to edit these values. We could probably spend some time to
-calculate the line-height and font-size more programattically, but it will
-not take into account the x-height of the typeface you choose. Here is a
-screenshot of the resulting fallback and enhancement:
+calculate the line-height and font-size more programattically, but it will not
+take into account the x-height of the typeface you choose. Here is a screenshot
+of the resulting fallback and enhancement:
 
 .. image:: /static/images/blog/2016/fallback-enhancement.jpg
    :class: align-center
@@ -105,10 +106,10 @@ Here is the CodePen demo:
 Raised and Sunken Initial Letters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Another optional value we can use for our ``initial-letter`` property will instruct
-the browser where to place the initial cap. After our drop cap height value we
-will add a space and the number of lines we want our cap to drop. A value equal
-to the initial height value is the default.
+Another optional value we can use for our ``initial-letter`` property will
+instruct the browser where to place the initial cap. After our drop cap height
+value we will add a space and the number of lines we want our cap to drop. A
+value equal to the initial height value is the default.
 
 .. code-block:: css
 
@@ -129,8 +130,8 @@ to the initial height value is the default.
     <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
 
-We'd love to see how you use ``initial-letter`` in your design. Send us a message via
-`Twitter`_ or join our public `Slack channel`_.
+We'd love to see how you use ``initial-letter`` in your design. Send us a
+message via `Twitter`_ or join our public `Slack channel`_.
 
 
 .. _CSS Grid Layout: http://oddbird.net/2016/09/19/css-grid-layout/
