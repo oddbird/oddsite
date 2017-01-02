@@ -73,7 +73,7 @@ support ``initial-letter`` to use alternate styles.
     $font-size: 1.15rem;
     $cap-size: $font-size * 6.25;
 
-    @supports ( not (initial-letter: 5) ) and ( not (-webkit-initial-letter: 5) ) {
+    @supports (not(initial-letter: 5)) and (not(-webkit-initial-letter: 5)) {
       .intro::first-letter {
         color:  hsl(350, 50%, 50%);
         font-size: $cap-size;
@@ -98,7 +98,7 @@ Here is the CodePen demo:
 
 .. raw:: html
 
-    <p data-height="265" data-theme-id="light" data-slug-hash="JbgvRe" data-default-tab="css,result" data-user="stacy" data-embed-version="2" data-pen-title="Initial Letter, with fallback and enhancement" class="codepen">See the Pen <a href="http://codepen.io/stacy/pen/JbgvRe/">Initial Letter, with fallback and enhancement</a> by Stacy (<a href="http://codepen.io/stacy">@stacy</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+    <p data-height="530" data-theme-id="light" data-slug-hash="JbgvRe" data-default-tab="css,result" data-user="stacy" data-embed-version="2" data-pen-title="Initial Letter, with fallback and enhancement" class="codepen">See the Pen <a href="http://codepen.io/stacy/pen/JbgvRe/">Initial Letter, with fallback and enhancement</a> by Stacy (<a href="http://codepen.io/stacy">@stacy</a>) on <a href="http://codepen.io">CodePen</a>.</p>
     <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
 
@@ -124,9 +124,12 @@ value equal to the initial height value is the default.
     }
 
 
+The following CodePen demo is available in Safari only:
+
+
 .. raw:: html
 
-    <p data-height="265" data-theme-id="light" data-slug-hash="GNrYgY" data-default-tab="css,result" data-user="stacy" data-embed-version="2" data-pen-title="Initial Letter, showing multiple positions" class="codepen">See the Pen <a href="http://codepen.io/stacy/pen/GNrYgY/">Initial Letter, showing multiple positions</a> by Stacy (<a href="http://codepen.io/stacy">@stacy</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+    <p data-height="830" data-theme-id="light" data-slug-hash="GNrYgY" data-default-tab="css,result" data-user="stacy" data-embed-version="2" data-pen-title="Initial Letter, showing multiple positions" class="codepen">See the Pen <a href="http://codepen.io/stacy/pen/GNrYgY/">Initial Letter, showing multiple positions</a> by Stacy (<a href="http://codepen.io/stacy">@stacy</a>) on <a href="http://codepen.io">CodePen</a>.</p>
     <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
 
