@@ -31,9 +31,21 @@ initial letter to expand.
 .. code-block:: css
 
     .intro::first-letter {
-      initial-letter: 3;
-      -webkit-initial-letter: 3;
+      initial-letter: 7;
+      -webkit-initial-letter: 7;
     }
+
+This code would give us a drop cap seven lines tall, like the large letter "I"
+in this example:
+
+.. image:: /static/images/blog/2017/initial-letter/minions-initial-letter.jpg
+   :class: align-center img-border
+   :alt: Screenshot of inital-letter demo
+
+
+.. raw:: html
+
+  <hr>
 
 
 A few months ago we breifly introduced Feature Queries when we wrote about
@@ -89,8 +101,8 @@ calculate the line-height and font-size more programattically, but it will not
 take into account the x-height of the typeface you choose. Here is a screenshot
 of the resulting fallback and enhancement:
 
-.. image:: /static/images/blog/2016/fallback-enhancement.jpg
-   :class: align-center
+.. image:: /static/images/blog/2017/initial-letter/fallback-enhancement.jpg
+   :class: align-center img-border
    :alt: Fallback and Enhancement in Chrome and Safari
 
 
@@ -122,6 +134,10 @@ value equal to the initial height value is the default.
       -webkit-initial-letter: 3 2;
       initial-letter: 3 2;
     }
+
+.. image:: /static/images/blog/2017/initial-letter/sunken-raised-drop-caps.jpg
+   :class: align-center img-border
+   :alt: Screenshot of raised, sunken, and drop cap demo
 
 
 The following CodePen demo is available in Safari only:
