@@ -2,6 +2,7 @@
 
 process.env.BROWSERSLIST_CONFIG = './browserslist';
 
+const fs = require('fs-extra');
 const AssetsPlugin = require('assets-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
@@ -13,6 +14,7 @@ const WebpackShellPlugin = require('webpack-shell-plugin');
 const outputPath = path.join(__dirname, 'content', 'static', 'assets');
 const sassdocPath = path.join(__dirname, 'content', 'styleguide');
 const assetsJsonPath = path.join(__dirname, 'content', 'static');
+let outputRootPath = path.join(__dirname, 'dev-output');
 let jsOutput = '[name].bundle.js';
 let styleOutput = '[name].bundle.css';
 let mediaOutput = '[name].[ext]';
@@ -21,6 +23,7 @@ let buildScript = 'python run.py dev';
 
 // Override settings if running in production
 if (process.env.NODE_ENV === 'production') {
+  outputRootPath = path.join(__dirname, 'output');
   jsOutput = '[name].bundle.[chunkhash].min.js';
   styleOutput = '[name].bundle.[chunkhash].min.css';
   mediaOutput = '[name].[hash].[ext]';
@@ -41,6 +44,9 @@ const getCSS = function (entry) {
   return undefined;
 };
 SassdocPlugin.prototype.apply = (compiler) => {
+  compiler.plugin('compile', () => {
+    fs.emptyDirSync(outputRootPath);
+  });
   compiler.plugin('after-emit', (compilation, cb) => {
     const statsJSON = compilation.getStats().toJson();
     const css = getCSS(statsJSON.assetsByChunkName.styleguide);
