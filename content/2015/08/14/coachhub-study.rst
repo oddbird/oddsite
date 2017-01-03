@@ -1,19 +1,39 @@
 public: yes
-author: sondra
-tags: [case-study]
+tags: [client-work, case-study]
 image:
   - src: '2016/coachhub/feature.jpg'
+client:
+  - name: 'ORCAS'
+    url: 'http://orcasinc.com'
+project:
+  - name: 'CoachHub'
+    url: 'http://www.orcasinc.com/products/coachhub/'
+    years: '2014-2016'
+    feature: true
+quotes:
+  - text: 'OddBird really changed my thinking about how successful outsourcing software development can be.'
+    credit: 'Sara Taillon'
+    title: 'ORCAS, Chief Technical Officer'
 summary: |
-  An in depth look at OddBird's design and development process
-  on the CoachHub mobile-responsive web application —
-  including logo and user experience design,
-  accessibility and usability testing,
-  site architecture, information design,
-  and functional development.
+  Our mobile coaching platform for ORCAS
+  integrates with their suite of self-management tools,
+  as well as other vetted third-party apps —
+  providing users with anywhere,
+  anytime access to varying levels of support via video chat,
+  in-app messaging, public Q&A, webinars, and support groups.
+  Users browse coaches, send messages, request appointments,
+  post questions, and grant permissions
+  for coaches to view their progress.
+  Coaches create a profile, manage daily tasks,
+  make appointments, post answers to questions,
+  view user progress, and set alerts
+  for relapse prevention and escalation of care.
+  The product is currently being used
+  by the US Military and Coast Guard as an employee health benefit.
 
 
-CoachHub: A Responsive Web App for Wellness Coaching
-====================================================
+CoachHub: Integrated Health Coaching
+====================================
 
 `CoachHub`_ is a mobile coaching platform
 we buit with `ORCAS`_ —

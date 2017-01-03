@@ -4,7 +4,7 @@
 
 [data-module] {
   margin: size('gutter') auto size('spacer');
-  max-width: size('full-content');
+  max-width: size('page');
   padding: 0 size('gutter');
 
   & + & {
@@ -17,6 +17,6 @@
   @include font-family('alt');
   font-size: calc(1rem + 2vw);
   margin: size('gutter') auto;
-  max-width: size('full-content');
+  max-width: size('page');
   padding: 0 size('gutter');
 }

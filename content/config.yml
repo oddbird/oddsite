@@ -147,7 +147,6 @@ clients:
   - name: 'Master Lookup Table'
     source: 'https://github.com/oddbird/mlt'
     years: '2011'
-    feature: true
     priority: 'live'
     tagline: 'Parcel Mapping for Urban Development'
     description: |
@@ -744,27 +743,6 @@ birds:
       - twitter: 'wlonk'
         github: 'wlonk'
 
-  - name: 'Sam Meyer-Reed'
-    author: 'sam'
-    role: 'web development intern'
-    adr:
-      city: 'Waterloo'
-      state: 'ON'
-    no_posts: True
-    bio: |
-      Sam is studying Computer Science at the
-      University of Waterloo.
-      He loves to learn new things and eagerly contributes
-      to any part of the design process.
-      Sam has over three years of experience programming
-      in as many languages as he can get his hands on.
-      Aside from talking to computers, he also enjoys
-      stimulating conversation with humans,
-      coaxing music out of his guitar,
-      and looking up.
-    links:
-      - github: 'samwisemr'
-
 birds_former:
   - name: 'Claudina Sarahe'
     author: 'claudina'
@@ -778,6 +756,10 @@ birds_former:
     author: 'una'
     posts: False
     url: 'https://twitter.com/Una'
+  - name: 'Sam Meyer-Reed'
+    author: 'sam'
+    posts: False
+    url: 'https://github.com/Samwisemr'
 
 
 # Past Talks
@@ -1131,18 +1113,18 @@ events_past:
 # ----------
 
 nav:
-  - text: 'birds'
-    url: '/birds/'
   - text: 'work'
     url: '/work/'
-  - text: 'speaking'
-    url: '/speaking/'
-  - text: 'open-source'
-    url: '/open-source/'
   - text: 'blog'
     url: '/blog/'
-  - text: 'community'
-    url: '/community/'
+  # - text: 'community'
+  #   url: '/community/'
+  # - text: 'speaking'
+  #   url: '/speaking/'
+  # - text: 'open-source'
+  #   url: '/open-source/'
+  - text: 'about'
+    url: '/birds/'
   - text: 'contact'
     url: '/contact/'
 

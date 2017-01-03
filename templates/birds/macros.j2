@@ -50,9 +50,11 @@
 
 
 {% macro get_card(author, config, details=false) %}
-  {% set bird_list = config.birds|selectattr('author', 'equalto', author)|list %}
-  {% set bird = bird_list[0] %}
-  {{ card(bird, details=details) }}
+  {% if author != 'oddbird' %}
+    {% set bird_list = config.birds|selectattr('author', 'equalto', author)|list %}
+    {% set bird = bird_list[0] %}
+    {{ card(bird, details=details) }}
+  {% endif %}
 {% endmacro %}
 
 

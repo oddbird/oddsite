@@ -19,9 +19,10 @@
         &:before,
         &:after {
           content: " ";
-          border: 1.38889rem solid transparent;
+          border: 2.5rem solid transparent;
           border-bottom-width: 0;
           border-top-color: #e07;
+          border-top-width: 1.75rem;
           left: 50%;
           position: absolute;
           top: 0;

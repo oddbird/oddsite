@@ -9,9 +9,13 @@ after:
     title: 'The OddBird Process is...'
   - include: 'projects/_services.html.j2'
   - include: 'projects/_list.html.j2'
-    title: 'Other Client Work'
-    data: 'clients'
-    priority: 'other'
+    title: 'Software We Created'
+    data: 'oss'
+    priority: creator
+  - include: 'projects/_list.html.j2'
+    title: 'Software We Maintained'
+    data: 'oss'
+    priority: core
 process:
   - title: 'Lean <i>&</i> Agile'
     body: |
@@ -63,9 +67,6 @@ and user testing — 
 with a strong commitment to well-tested,
 carefully architected,
 documented, and maintainable code.
-All our applications are built with open-web technology,
-for responsive accessibility across devices,
-browsers, and user (dis)abilities.
 
 |get-started|
 

@@ -68,7 +68,8 @@ $pattern-sizes: (
 /// @link http://oddbird.net/accoutrement-scale/sassdoc/
 ///   Accoutrement Scale
 $page-sizes: (
-  'full-content': 40rem,
+  'page': 40rem,
+  'nav': 25rem,
 );
 
 @include herman-add-sizes('page-sizes', $page-sizes);
