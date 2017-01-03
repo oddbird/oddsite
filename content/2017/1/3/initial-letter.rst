@@ -2,7 +2,7 @@ public: yes
 author: stacy
 tags: [css, design]
 image:
-  - src: '2016/drop-caps.jpg'
+  - src: '2017/initial-letter/drop-caps.jpg'
 summary: |
   Using an emphasized initial letter is a technique that has been used for
   centuries. Let's dive in to see some ways you can apply it to your project to
