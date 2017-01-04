@@ -1181,6 +1181,7 @@ active_modules: [
   tags,
   blog,
   author,
+  pages,
   wrap,
   typogrify,
   hashedassets
