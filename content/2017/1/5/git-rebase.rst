@@ -2,7 +2,7 @@ public: yes
 author: kit
 tags: []
 image:
-  - src: ''
+  - src: '2017/git-rebase/git-cave.jpg'
 summary: |
 
 A rebase-centric model of collaborative git use
