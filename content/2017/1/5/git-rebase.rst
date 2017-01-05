@@ -1,20 +1,24 @@
 public: yes
 author: kit
-tags: []
+tags: [git, workflow]
 image:
   - src: '2017/git-rebase/git-cave.jpg'
 summary: |
+  If you want to go back and make sense of your git history more easily, using
+  rebase as you work can help. But rebasing while collaborating with others can
+  get hairy quickly. Here's one way to make it work.
+
 
 A rebase-centric model of collaborative git use
 ===============================================
 
-There are `*many* <https://grimoire.ca/git/pull-request-workflow>`__ `*ways*
-<http://nvie.com/posts/a-successful-git-branching-model/>`__ `*to*
+There are `many <https://grimoire.ca/git/pull-request-workflow>`__ `ways
+<http://nvie.com/posts/a-successful-git-branching-model/>`__ `to
 <https://www.atlassian.com/git/tutorials/comparing-workflows/centralized-workflow>`__
-`*use* <https://git-scm.com/book/en/v2/Git-Branching-Branching-Workflows>`__
-`*git* <http://blog.endpoint.com/2014/05/git-workflows-that-work.html>`__.
-It's sometimes said that git is not actually a version control system, but
-rather `*a content-addressable filesystem, used to track directory trees*
+`use <https://git-scm.com/book/en/v2/Git-Branching-Branching-Workflows>`__ `git
+<http://blog.endpoint.com/2014/05/git-workflows-that-work.html>`__.  It's
+sometimes said that git is not actually a version control system, but rather `a
+content-addressable filesystem, used to track directory trees
 <http://marc.info/?l=linux-kernel&m=111293537202443>`__. So, given that it's
 only a version control system inasmuch as you impose a methodology on it, it's
 worth it to play with some different methodologies.
@@ -26,6 +30,7 @@ easier to understand when you need to come back to it later.
 
 Now that you have enough links to take you away from this post for a day at
 least, let's get started.
+
 
 Git is a DAG-manipulation tool
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -39,7 +44,7 @@ at, right?
          /         \
     D---E---F---G---H master
 
-(From `*https://git-scm.com/docs/git-merge*
+(From `https://git-scm.com/docs/git-merge
 <https://git-scm.com/docs/git-merge>`__.)
 
 This is a simple directed acyclic graph. Each node (except for D, the root
@@ -51,9 +56,8 @@ Because there are changesets in the nodes, that implies that a traversal from
 the root node to any other node will result in a description of a certain
 end-state for the files in the repository, and that a traversal to the terminal
 node marked with a particular branch will result in a description of the files
-in the latest state of that branch. **If the nodes were re-arranged, that
-*could* change the resulting state, depending on the particular changesets
-involved.**
+in the latest state of that branch. **If the nodes were re-arranged, that could
+change the resulting state, depending on the particular changesets involved.**
 
 When you rebase, you "rewrite history" and transform, for example, this DAG::
 
@@ -67,7 +71,7 @@ Into this DAG::
                  /
     D---E---F---G master
 
-(Examples from `*https://git-scm.com/docs/git-rebase*
+(Examples from `https://git-scm.com/docs/git-rebase
 <https://git-scm.com/docs/git-rebase>`__.)
 
 The commits in the ``topic`` branch are labeled with prime signs after the
@@ -80,6 +84,7 @@ you to resolve those before continuing the rebase.
 All of this, so far, is just to explain rebasing so you can feel really
 comfortable with it. Rewriting your own history is fine and safe. But what we
 really care about is rewriting history that other people have access to.
+
 
 Remotes, upstreams, and feature branches
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -126,7 +131,7 @@ them.
 As they work on the project, they will end up with branches that look like
 this:
 
-.. image:: /2017/git-rebase/fig_01.png
+.. image:: /static/images/blog/2017/git-rebase/fig_01.png
     :align: center
 
 Black commits are on ``master``, blue are by Bao, coral are by Robin. They both
@@ -140,7 +145,7 @@ But what if Robin realizes that their work really depends on the work Bao did
 and already merged into ``master``? They can just rebase their branch on to
 that work:
 
-.. image:: /2017/git-rebase/fig_02.png
+.. image:: /static/images/blog/2017/git-rebase/fig_02.png
     :align: center
 
 On Bao's machine, this looks like::
@@ -156,14 +161,14 @@ On Bao's machine, this looks like::
     $ git branch -vv
     * bao-fix       ca1f618 [robin-feature: ahead 4, behind 9] short message
       robin-feature fc58298 [origin/robin-feature] short message
-      master        d1ef2a3 [origin/master] initial commit
+      master        d1ef2a3 [origin/master] Merge Bao's work
 
 This leaves Bao's branch attached to the old commit G, which had been in
 Robin's branch before the rebase. But because Bao's branch track's Robin's
 branch as its upstream, Bao can, with fresh remote tracking info on their local
 computer, just run ``git rebase`` and get this:
 
-.. image:: /2017/git-rebase/fig_03.png
+.. image:: /static/images/blog/2017/git-rebase/fig_03.png
     :align: center
 
 Again, on Bao's machine::
@@ -173,7 +178,7 @@ Again, on Bao's machine::
     $ git branch -vv
     * bao-fix       ca1f618 [robin-feature: ahead 2] short message
       robin-feature fc58298 [origin/robin-feature] short message
-      master        d1ef2a3 [origin/master] initial commit
+      master        d1ef2a3 [origin/master] Merge Bao's work
 
 Note that Bao's work is now coming off of K', not G (or G'). This is because it
 tracks Robin's *branch* as its upstream, not a specific commit in that branch.
@@ -184,12 +189,13 @@ Then, Bao can force-push that back up to GitHub (because only Bao writes to
 that branch, this is safe), Robin can merge it in, and then the whole thing can
 be merged back into ``master``:
 
-.. image:: /2017/git-rebase/fig_04.png
+.. image:: /static/images/blog/2017/git-rebase/fig_04.png
     :align: center
 
 Note: if anyone has merge conflicts at any point in here, they have to resolve
 them, and those rebased commits (with the prime marks) can differ from their
 original renditions by whatever it takes to resolve that merge conflict.
+
 
 Caveats
 ~~~~~~~
@@ -200,22 +206,22 @@ but what the intent of that state of the code was. But unless everyone on the
 team is on board with this, and understands it, you risk the proverbial
 shooting yourself in the foot.
 
-If you use git, you should be familiar with how to use the `*reflog*
+If you use git, you should be familiar with how to use the `reflog
 <https://git-scm.com/docs/git-reflog>`__ to back yourself out of
 ah-damn-what-did-I-just-do situations. That is still true here; if you are not
 perfectly comfortable with rebase, having a way to *undo* is crucial.
 
 There are some git defaults you may want to set to make this pattern easier::
 
-    git config merge.defaultToUpstream true git config branch.autosetupmerge
-    always
+    git config merge.defaultToUpstream true
+    git config branch.autosetupmerge always
 
-Honestly, they're useful defaults to set in any case! (Hat-tip to `*Owen*
+Honestly, they're useful defaults to set in any case! (Hat-tip to `Owen
 <https://grimoire.ca/git/config>`__ for these defaults, and a lot of thinking
 about git!)
 
 Try it out on a small project, and see if you like it. It's even better if you
-write `*good commit messages*
+write `good commit messages
 <http://alistapart.com/article/the-art-of-the-commit>`__. If you don't go
 spelunking through your git history often to understand past choices, then let
 this be your excuse.
