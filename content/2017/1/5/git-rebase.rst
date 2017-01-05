@@ -225,3 +225,22 @@ write `good commit messages
 <http://alistapart.com/article/the-art-of-the-commit>`__. If you don't go
 spelunking through your git history often to understand past choices, then let
 this be your excuse.
+
+
+What do the Oddbirds do?
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+We actually use a merge-centric flow, the kind you may likely be more familiar
+with! We avoid pushing rebased branches to remotes, and don't have strong
+ownership of branches. If more than one of us is working on something at a
+time, whoever pushed to the remote first will have their work merged in to
+whatever anyone else is doing, before that other person pushes the result of
+their merged work to the remote.
+
+This is convenient enough for us, but it really is motivated by the shape of
+our team; we have specialists all along the design-frontend-backend continuum,
+and frequently will want to rapidly intertwine our work many times in a day, as
+we coordinate changes all along that spectrum.
+
+Still, some of us have used this rebase model successfully before, and think
+it's worth trying out!
