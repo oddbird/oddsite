@@ -152,7 +152,7 @@ On Bao's machine, this looks like::
 
     $ git fetch
     $ # Update local information on upstream branch.
-    $ # Because Bao \*never\* commits on this branch, every merge
+    $ # Because Bao *never* commits on this branch, every merge
     $ # should be a fast-forward merge, but let's use --ff-only
     $ # just to be sure:
     $ git checkout robin-feature && git merge --ff-only
