@@ -89,10 +89,10 @@ really care about is rewriting history that other people have access to.
 Remotes, upstreams, and feature branches
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Pretty much everything written on git warns you not to rebase any commits that
-are shared with other people or systems. It is presented as a cardinal sin and
-something that will get you shunned by all serious git users. So, let's talk
-about how to do it!
+Pretty much everything written about git warns you not to rebase any commits
+that are shared with other people or systems. It is presented as a cardinal sin
+and something that will get you shunned by all serious git users. So, let's
+talk about how to do it!
 
 The fundamental reason you're enjoined against doing it is that it generates
 more work for everyone else, to get their local repositories into a good state
@@ -106,7 +106,7 @@ consists of two principles:
 
 1. Maintain sole ownership of branches: only one person writes to a given
    branch, and if you need to collaborate, pull requests into the other
-   person's branch are the way.
+   person's branch are the way to go.
 
 2. Maintain a strong distinction between read-only upstream branches, and
    writable feature branches.
