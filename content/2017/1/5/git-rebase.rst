@@ -4,12 +4,11 @@ tags: [git, workflow]
 image:
   - src: '2017/git-rebase/git-cave.jpg'
 summary: |
-  If you want to go back and make sense of your git history more easily, using
-  rebase as you work can help. But rebasing while collaborating with others can
-  get hairy quickly. Here's one way to make it work.
+  If you want to make sense of your git history more easily when you go back, try rebasing as you go. Rebasing while collaborating with others can
+  get hairy quickly. But here's one way to make it work.
 
 
-A rebase-centric model of collaborative git use
+A Rebase-Centric Model of Collaborative Git Use
 ===============================================
 
 There are `many <https://grimoire.ca/git/pull-request-workflow>`__ `ways
@@ -23,7 +22,7 @@ content-addressable filesystem, used to track directory trees
 only a version control system inasmuch as you impose a methodology on it, it's
 worth it to play with some different methodologies.
 
-One common way to use it is with a lot of merging between branches, but if you
+One common way to use git is with a lot of merging between branches, but if you
 don't like the tangled web of history that creates, I'm going to propose a
 rebase-centric model. It's a trade-off: a little harder to make, but a lot
 easier to understand when you need to come back to it later.
@@ -32,7 +31,7 @@ Now that you have enough links to take you away from this post for a day at
 least, let's get started.
 
 
-Git is a DAG-manipulation tool
+Git is a DAG-Manipulation Tool
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 First, let's unpack what I said above. Be prepared for some graph theory terms.
@@ -83,10 +82,10 @@ you to resolve those before continuing the rebase.
 
 All of this, so far, is just to explain rebasing so you can feel really
 comfortable with it. Rewriting your own history is fine and safe. But what we
-really care about is rewriting history that other people have access to.
+really care about is rewriting history that other people can access.
 
 
-Remotes, upstreams, and feature branches
+Remotes, Upstreams, and Feature Branches
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Pretty much everything written about git warns you not to rebase any commits
@@ -95,7 +94,7 @@ and something that will get you shunned by all serious git users. So, let's
 talk about how to do it!
 
 The fundamental reason you're enjoined against doing it is that it generates
-more work for everyone else, to get their local repositories into a good state
+more work for everyone else to get their local repositories into a good state
 again. That is not something I mean in any way to contradict. If you are going
 to be pushing rewritten history to a shared remote, you *must* have everyone
 on-board and with a common understanding of the process you're using and how to
@@ -108,7 +107,7 @@ consists of two principles:
    branch, and if you need to collaborate, pull requests into the other
    person's branch are the way to go.
 
-2. Maintain a strong distinction between read-only upstream branches, and
+2. Maintain a strong distinction between read-only upstream branches and
    writable feature branches.
 
 These principles won't work for every team and every situation, so you have to
@@ -164,7 +163,7 @@ On Bao's machine, this looks like::
       master        d1ef2a3 [origin/master] Merge Bao's work
 
 This leaves Bao's branch attached to the old commit G, which had been in
-Robin's branch before the rebase. But because Bao's branch track's Robin's
+Robin's branch before the rebase. But because Bao's branch tracks Robin's
 branch as its upstream, Bao can, with fresh remote tracking info on their local
 computer, just run ``git rebase`` and get this:
 
@@ -185,14 +184,14 @@ tracks Robin's *branch* as its upstream, not a specific commit in that branch.
 Since branches can wholly change what commits they consist of, this is both
 necessary and useful.
 
-Then, Bao can force-push that back up to GitHub (because only Bao writes to
+Bao can force-push that back up to GitHub (because only Bao writes to
 that branch, this is safe), Robin can merge it in, and then the whole thing can
 be merged back into ``master``:
 
 .. image:: /static/images/blog/2017/git-rebase/fig_04.png
     :align: center
 
-Note: if anyone has merge conflicts at any point in here, they have to resolve
+Note: if anyone has merge conflicts at any point, they have to resolve
 them, and those rebased commits (with the prime marks) can differ from their
 original renditions by whatever it takes to resolve that merge conflict.
 
@@ -227,10 +226,10 @@ spelunking through your git history often to understand past choices, then let
 this be your excuse.
 
 
-What do the Oddbirds do?
+What Do the Oddbirds Do?
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-We actually use a merge-centric flow, the kind you may likely be more familiar
+We actually use a merge-centric flow, the kind you are likely more familiar
 with! We avoid pushing rebased branches to remotes, and don't have strong
 ownership of branches. If more than one of us is working on something at a
 time, whoever pushed to the remote first will have their work merged in to
@@ -239,8 +238,8 @@ their merged work to the remote.
 
 This is convenient enough for us, but it really is motivated by the shape of
 our team; we have specialists all along the design-frontend-backend continuum,
-and frequently will want to rapidly intertwine our work many times in a day, as
+and frequently want to rapidly intertwine our work many times in a day as
 we coordinate changes all along that spectrum.
 
-Still, some of us have used this rebase model successfully before, and think
+Still, some of us have used this rebase model successfully before and think
 it's worth trying out!
