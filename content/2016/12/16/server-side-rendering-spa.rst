@@ -8,7 +8,7 @@ summary: |
   server-side rendering. When you need both, here's one approach.
 
 
-A visit to the RESTful SPA
+A Visit to the RESTful SPA
 ==========================
 
 At OddBird, the lion's share of what we do is make webapps for people. We work

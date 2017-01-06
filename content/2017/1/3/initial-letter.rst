@@ -6,7 +6,7 @@ image:
 summary: |
   Using an emphasized initial letter is a technique that has been used for
   centuries. Let's dive in to see some ways you can apply it to your project to
-  help guide your reader with visual heiarchy.
+  help guide your reader with visual hierarchy.
 
 
 What's Old is New: Drop Caps in CSS
@@ -48,7 +48,7 @@ in this example:
   <hr>
 
 
-A few months ago we breifly introduced Feature Queries when we wrote about
+A few months ago we briefly introduced Feature Queries when we wrote about
 `CSS Grid Layout`_. Feature Queries will play an important role in using
 initial-letter today. As a reminder, a Feature Query will ask the browser to
 check for support for a specific property and value:
@@ -97,7 +97,7 @@ support ``initial-letter`` to use alternate styles.
 
 These “magic numbers” are not universal so if you change a value or font-family
 you will likely have to edit these values. We could probably spend some time to
-calculate the line-height and font-size more programattically, but it will not
+calculate the line-height and font-size more programmatically, but it will not
 take into account the x-height of the typeface you choose. Here is a screenshot
 of the resulting fallback and enhancement:
 
