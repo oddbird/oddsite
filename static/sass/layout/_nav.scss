@@ -8,6 +8,10 @@ $nav-locations: 'birds', 'work', 'speaking', 'open-source', 'blog', 'community',
     display: inline-block;
     padding: size('half-shim');
     text-decoration: none;
+
+    @include above('nav-column') {
+      padding: size('shim');
+    }
   }
 }
 
@@ -22,9 +26,59 @@ $nav-locations: 'birds', 'work', 'speaking', 'open-source', 'blog', 'community',
   }
 }
 
-
 .main-nav {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: size('nav-column');
+  width: 100%;
+
+  @include below('nav-column') {
+    margin-top: negative('gutter');
+    padding: 0;
+
+    > li {
+      &:nth-of-type(2) {
+        flex-grow: 1;
+      }
+    }
+  }
+
   > li {
     display: inline-flex;
+    margin: 0;
   }
+}
+
+.has-dropdown {
+  @include above('nav-column') {
+    position: relative;
+  }
+}
+
+.is-dropdown {
+  position: absolute;
+
+  @include below('nav-column') {
+    left: 0;
+    margin: 0;
+    right: 0;
+    text-align: left;
+    top: auto;
+    transform: translateY(47px);
+    width: 100%;
+  }
+
+  @include above('nav-column') {
+    left: 50%;
+    text-align: center;
+    transform: translateX(-50%);
+  }
+
+  > li {
+    display: block;
+    margin: 0;
+  }
+
+
 }
