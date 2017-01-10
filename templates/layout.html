@@ -6,16 +6,18 @@
   {% include 'layout/_site-message.html.j2' %}
 
   <header data-region="banner">
-    <h1 class="brand">
-      <a href="/" rel="home">
-        {{ utility.icon('logo', alt='OddBird') }}
-      </a>
-    </h1>
-
     <nav class="nav">
-      {% for link in config.nav %}
-        <a href="{{ link.url }}" class="nav-link" data-active="{{ link.text }}">{{ link.text }}</a>
-      {% endfor %}
+      <div class="brand">
+        <a href="/" rel="home">
+          {{ utility.icon('logo', alt='OddBird') }}
+        </a>
+      </div>
+
+      <ul class="main-nav">
+        {% for link in config.nav %}
+          <li><a href="{{ link.url }}" class="nav-link" data-active="{{ link.text }}">{{ link.text }}</a></li>
+        {% endfor %}
+      </ul>
     </nav>
   </header>
 

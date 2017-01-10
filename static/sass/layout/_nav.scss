@@ -21,3 +21,10 @@ $nav-locations: 'birds', 'work', 'speaking', 'open-source', 'blog', 'community',
     }
   }
 }
+
+
+.main-nav {
+  > li {
+    display: inline-flex;
+  }
+}
