@@ -690,6 +690,7 @@ birds:
         github: 'stacyk'
         lanyrd: 'stacy'
         codepen: 'stacy'
+        stackoverflow: '7033764'
 
   - name: 'David Glick'
     author: 'david'
@@ -794,7 +795,7 @@ events_past:
       - author: 'miriam'
         title: 'Code Patterns for Pattern-Making'
       - author: 'stacy'
-        title: 'Make Web Design Great Again'
+        title: 'The Great State of Design (with CSS Grid Layout and Friends)'
 
   - venue: 'Plone Digital Experience Conference'
     url: 'http://2016.ploneconf.org/'
