@@ -1136,10 +1136,11 @@ nav:
     url: '/birds/'
   - text: 'work'
     url: '/work/'
+    subnav:
+      - text: 'open-source'
+        url: '/open-source/'
   - text: 'speaking'
     url: '/speaking/'
-  - text: 'open-source'
-    url: '/open-source/'
   - text: 'blog'
     url: '/blog/'
   - text: 'community'
