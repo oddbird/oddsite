@@ -15,10 +15,21 @@
 
       <ul class="main-nav">
         {% for link in config.nav %}
-          <li><a href="{{ link.url }}" class="nav-link" data-active="{{ link.text }}">{{ link.text }}</a></li>
+          <li>
+            <a href="{{ link.url }}" class="nav-link" data-active="{{ link.text }}">{{ link.text }}</a>
+            {% if link.subnav %}
+              <ul class="is-dropdown" aria-expanded="false">
+                {% for sub in link.subnav %}
+                  <li><a href="{{ sub.url }}" class="nav-link" data-active="{{ link.text }}">{{ sub.text }}</a></li>
+                {% endfor %}
+                <div class="separator"></div>
+              </ul>
+            {% endif %}
+          </li>
         {% endfor %}
-      </ul>
+     </ul>
     </nav>
+    <div class="separator"></div>
   </header>
 
   <main data-region="main" {% if config.pageclasses %}class="{{ config.pageclasses }}"{% endif %}>

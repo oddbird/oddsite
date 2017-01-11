@@ -23,7 +23,9 @@
   $background: 'background'
 ) {
   border-bottom: size('border') solid color($color);
+  display: block;
   position: relative;
+  width: 100%;
 
   @include wrap-content(' ') {
     border: size('gutter') solid transparent;
@@ -32,12 +34,35 @@
     left: 50%;
     position: absolute;
     top: 100%;
-    transform: translateX(-50%);
+  }
+
+  @include before(' ') {
+    margin-top: size('border');
+    transform: translateX(-50%) translateY(-2px);
   }
 
   @include after(' ') {
     border-top-color: color($background);
-    margin-top: negative('border');
-    transform: translateX(-50%) translateY(-2px);
+    // margin-top: negative('border');
+    transform: translateX(-50%) translateY(-4px);
   }
 }
+
+// border-bottom: size('border') solid color('border');
+// padding: size('gutter') 0;
+// position: relative;
+// text-align: center;
+
+// @include wrap-content('') {
+//   border: size('gutter') solid transparent;
+//   border-bottom-width: 0;
+//   border-top-color: color('border');
+//   left: 50%;
+//   position: absolute;
+//   top: 100%;
+// }
+//
+// @include after(' ') {
+//   border-top-color: color('background');
+//   transform: translateX(-50%) translateY(-4px);
+// }

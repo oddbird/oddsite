@@ -5,13 +5,20 @@ $nav-locations: 'birds', 'work', 'speaking', 'open-source', 'blog', 'community',
 
 .nav-link {
   #{$link} {
+    color: color('action-alt');
     display: inline-block;
+    font-weight: 400;
+    margin: 0;
     padding: size('half-shim') size('gutter');
     text-decoration: none;
 
     @include above('nav-column') {
       padding: size('shim');
     }
+  }
+
+  #{$focus} {
+    color: color('action');
   }
 }
 
@@ -46,39 +53,27 @@ $nav-locations: 'birds', 'work', 'speaking', 'open-source', 'blog', 'community',
 
   > li {
     display: inline-flex;
-    margin: 0;
-  }
-}
-
-.has-dropdown {
-  @include above('nav-column') {
-    position: relative;
   }
 }
 
 .is-dropdown {
+  background-color: color('background');
   border-top: size('border') solid color('border');
-  clear: both;
-  padding: size('gutter');
+  left: 0;
+  padding: 0;
   position: absolute;
+  right: 0;
+  top: auto;
+  width: 100vw;
+  z-index: 2;
 
   @include below('nav-column') {
-    left: 0;
-    margin: 0;
-    right: 0;
+    margin: 2.8rem 0 0; // @todo - fix magic numbers
     text-align: left;
-    transform: translateY(size('shim'));
-    width: 100%;
   }
 
   @include above('nav-column') {
-    left: 50%;
+    margin: 3.3rem 0 0; // @todo - fix magic numbers
     text-align: center;
-    transform: translateX(-50%);
-  }
-
-  > li {
-    display: block;
-    margin: 0;
   }
 }

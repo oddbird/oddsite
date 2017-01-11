@@ -20,3 +20,7 @@
   max-width: size('full-content');
   padding: 0 size('gutter');
 }
+
+.separator {
+  @include section-arrow;
+}
