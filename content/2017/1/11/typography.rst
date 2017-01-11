@@ -309,6 +309,13 @@ monthly pageview tracking. With TypeKit, we were golden.
 
 .. image:: /static/images/blog/2017/typography/darden.jpg
 
+Getting Personal
+~~~~~~~~~~~~~~~~
+
+I've loved typography since I was very young. Just for fun, here's my first hand-drawn alphabet from fifth grade.
+
+.. image:: /static/images/blog/2017/typography/alphabet.jpg
+
 What Are Your Favorite Typography Tools?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -320,4 +327,4 @@ unite!
 Part 2 – How to Choose Brand Colors for Your Website
 ----------------------------------------------------
 
-**Coming Thursday!**
+**Coming Friday!**
