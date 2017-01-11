@@ -22,7 +22,7 @@
   $color: 'border',
   $background: 'background'
 ) {
-  border-top: size('border') solid color($color);
+  border-bottom: size('border') solid color($color);
   position: relative;
 
   @include wrap-content(' ') {
@@ -31,7 +31,7 @@
     border-top-color: color($color);
     left: 50%;
     position: absolute;
-    top: 0;
+    top: 100%;
     transform: translateX(-50%);
   }
 

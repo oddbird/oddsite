@@ -6,7 +6,7 @@ $nav-locations: 'birds', 'work', 'speaking', 'open-source', 'blog', 'community',
 .nav-link {
   #{$link} {
     display: inline-block;
-    padding: size('half-shim');
+    padding: size('half-shim') size('gutter');
     text-decoration: none;
 
     @include above('nav-column') {
@@ -57,6 +57,9 @@ $nav-locations: 'birds', 'work', 'speaking', 'open-source', 'blog', 'community',
 }
 
 .is-dropdown {
+  border-top: size('border') solid color('border');
+  clear: both;
+  padding: size('gutter');
   position: absolute;
 
   @include below('nav-column') {
@@ -64,8 +67,7 @@ $nav-locations: 'birds', 'work', 'speaking', 'open-source', 'blog', 'community',
     margin: 0;
     right: 0;
     text-align: left;
-    top: auto;
-    transform: translateY(47px);
+    transform: translateY(size('shim'));
     width: 100%;
   }
 
@@ -79,6 +81,4 @@ $nav-locations: 'birds', 'work', 'speaking', 'open-source', 'blog', 'community',
     display: block;
     margin: 0;
   }
-
-
 }

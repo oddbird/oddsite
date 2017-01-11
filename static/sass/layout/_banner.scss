@@ -3,7 +3,8 @@
 
 
 [data-region='banner'] {
-  padding: size('gutter');
+  @include section-arrow;
+  padding: size('gutter') 0;
   text-align: center;
 
   a {
