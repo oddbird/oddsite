@@ -2,7 +2,7 @@ public: yes
 author: sondra
 tags: [oddsite, open-design]
 image:
-  - src: '2017/typography/torntype.jpg'
+  - src: '2017/typography/type.jpg'
 summary: |
   **How do you choose the best fonts and colors for a brand identity** among the thousands of options available on the interwebs these days — fonts and colors that perfectly express the mood you or your client want to evoke when users encounter your company — while also meeting accessibility standards, and standing out from the masses?
 
@@ -26,37 +26,39 @@ How do you choose the best fonts and colors for a brand identity among the thous
 
 Whether you’re starting from scratch or rebranding like us, use this step-by-step guide to help focus and direct your decisions. I’m focusing on website branding in this two-part series, but many of these ideas apply to print as well. Feel free to use this guide and these resources with your team. Happy thieving!
 
-Part 1: Web Typography and Typeface Pairing
--------------------------------------------
+Part 1 - Web Typography and Typeface Pairing
+--------------------------------------------
 
 Step 1 - Define Brand Goals
 ---------------------------
 
-It’s hard to evaluate whether you’ve found what you’re looking for unless you first know what you’re looking for. Ask yourself or your client questions like these. What is the personality/attitude of the project? What is it not?
+It’s hard to know whether you’ve found what you’re looking for unless you first know what you’re looking for. Ask yourself or your client questions like these. What is the personality/attitude of the project? What is it *not*?
 
 After a review of our `OddSite Brand Goals`_ we knew we were looking for type families that conjured the ideas of trustworthiness, skill and high standards without arrogance or that rectangular corporate look. All of that plus a dash of our odd, people-first personality. Though, we agreed any typeface termed cute or flashy would be going too far.
 
 .. _OddSite Brand Goals: http://oddbird.net/2016/11/04/branding-type/
 
 
-Step 2 - Play with Many Typography Options and Typeface Pairings
-----------------------------------------------------------------
+Step 2 - Play with Typography Options and Typeface Pairings
+-----------------------------------------------------------
 
-Now the fun part! Typography is a delight and there are so many choices with unique associations and histories and uses. Serifs make long chunks of small text easier to read. Typefaces like Times New Roman, Georgia, and Baskerville have been around forever and are often used to present serious news. Associations like classic and trustworthy spring to mind. According to a `study by Errol Morris`_, “Baskerville, a 250-year-old serif...was statistically more likely to influence the minds of readers than Computer Modern, Georgia, Helvetica, Comic Sans or Trebuchet.”
+Now the fun part! Typography is a delight, and there are so many choices with unique associations and histories and uses. Serifs make long chunks of small text easier to read. Typefaces like Times New Roman, Georgia, and Baskerville have been around forever and are often used to present serious news. Associations like classic and trustworthy spring to mind. According to a `study by Errol Morris`_, “Baskerville, a 250-year-old serif...was statistically more likely to influence the minds of readers than Computer Modern, Georgia, Helvetica, Comic Sans or Trebuchet.”
 
 .. _study by Errol Morris: http://www.fastcodesign.com/3046365/errol-morris-how-typography-shapes-our-perception-of-truth
 
 .. image:: /static/images/blog/2017/typography/librebaskerville.jpg
+
 *Google Fonts - Libre Baskerville*
 
-On the other hand sans serif, handdrawn typefaces like Amatic SC are personal and friendly and bring to mind trendy indie movies: Life Inside Out, Frank. Amatic shines in titling, but would make my brain hurt if I had to read several paragraphs at 14px size. Always check the description for each typeface to find out what it was designed for and whether it is accessible at small sizes.
+On the other hand sans serif, hand-drawn typefaces like Amatic SC are personal and friendly and bring to mind trendy indie movies: *Life Inside Out*, *Frank*. Amatic shines in titling, but would make my brain hurt if I had to read several paragraphs at 14px size. Always check the description for each typeface to find out what it was designed for and whether it is accessible at small sizes.
 
 .. image:: /static/images/blog/2017/typography/amatic.jpg
+
 *Google Fonts - Amatic SC*
 
 Dive deep and luxuriate.
 
-7 Resources for Free and High Quality Typography and Typeface Pairing
+7 Resources - Free and High Quality Typography and Typeface Pairing
 ---------------------------------------------------------------------
 
 `Font Squirrel`_
@@ -155,7 +157,7 @@ Browse our full element collages in `Behind the Scenes post`_.
 Step 4 - Vote Remotely Using…GitHub?
 ------------------------------------
 
-But all the options are so amazing for different reasons. How do you narrow to just one typeface or a single pair? And narrowing down is important for accessibility.
+All the options are so amazing for different reasons. How do you narrow to just one typeface or a single pair? (And narrowing down is important for accessibility.)
 
 *"Using too many font faces can create a confusing visual layout, which is bad for all users, but may be especially difficult for users with reading disorders, learning disabilities, or attention deficit disorders."* -`WebAIM`_
 
@@ -191,11 +193,11 @@ Warmth, authority, helpfulness: a very accurate description of what OddBird woul
 
 .. _Typedia: http://typedia.com/explore/typeface/freight-text/
 
-Freight Text was originally developed for print, and we love the classic feel this evokes, but it’s also very easy to read online, especially for large chunks of text like this blog post. Freight Text italics reminds us a bit of Baskerville — the font OddBird used previously, but Freight Text has a little something extra — rounded edges, subtle flourishes — that sets it apart. Unfortunately, Freight Text lacks an amazing ampersand, so we intend to `create a custom font stack`_ and continue using Baskerville’s ampersand.
+Freight Text was originally developed for print, and we love the classic feel this evokes, but it’s also very easy to read online, especially for large chunks of text like this blog post. Freight Text italics reminds us a bit of Libre Baskerville — the font OddBird used previously, but Freight Text has a little something extra — rounded edges, subtle flourishes — that sets it apart. Unfortunately, Freight Text lacks an amazing ampersand, so we intend to `create a custom font stack`_ and continue using Baskerville’s ampersand.
 
 .. _create a custom font stack: https://24ways.org/2011/creating-custom-font-stacks-with-unicode-range/
 
-Also, we’re a suckers for fonts with lowercase numerals.
+Also, we’re suckers for fonts with lowercase numerals.
 
 .. image:: /static/images/blog/2017/typography/numbers.jpg
 
@@ -213,7 +215,7 @@ OddBird loves typography, and we’re big fans of sharing resources. What free f
 
 .. _OddFriends Slack channel: http://friends.oddbird.net
 
-Part 2: How to Choose Brand Colors for Your Website
----------------------------------------------------
+Part 2 - How to Choose Brand Colors for Your Website
+----------------------------------------------------
 
 **Coming Thursday!**
