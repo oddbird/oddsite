@@ -1132,19 +1132,22 @@ events_past:
 # ----------
 
 nav:
-  - text: 'birds'
-    url: '/birds/'
   - text: 'work'
     url: '/work/'
     subnav:
       - text: 'open-source'
         url: '/open-source/'
-  - text: 'speaking'
-    url: '/speaking/'
   - text: 'blog'
     url: '/blog/'
-  - text: 'community'
-    url: '/community/'
+  - text: 'about'
+    url: ''
+    subnav:
+      - text: 'birds'
+        url: '/birds/'
+      - text: 'community'
+        url: '/community/'
+      - text: 'speaking'
+        url: '/speaking/'
   - text: 'contact'
     url: '/contact/'
 
