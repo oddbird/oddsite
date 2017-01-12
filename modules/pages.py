@@ -2,6 +2,8 @@
 """
 Page metadata module for rstblog.
 
+Use like:
+  {{ config.pages.birds.slug }}
 """
 
 
@@ -38,6 +40,6 @@ def setup(builder):
         page_key = get_page_key(page)
         page_configs[page_key] = page_config
 
-    builder.config = builder.config.add_from_dict({
+    builder.config.stack.append({
         'pages': page_configs,
     })
