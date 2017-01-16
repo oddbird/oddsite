@@ -327,4 +327,4 @@ unite!
 Part 2 – How to Choose Brand Colors for Your Website
 ----------------------------------------------------
 
-**Coming Friday!**
+**Coming Monday!**
