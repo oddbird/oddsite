@@ -19,7 +19,7 @@ Open Brand Identity Design Part 2: Please Steal These Ideas
 ===========================================================
 
 How to Choose Engaging and Accessible Brand Colors for Your Website
-----------------------------------------------------------------------------
+-------------------------------------------------------------------
 
 Now that you have `selected excellent typography`_ that fits your brand to a
 “T”, it’s time to explore brand colors. How do you select a set of colors that
