@@ -2,7 +2,7 @@ public: yes
 author: sondra
 tags: [oddsite, open-design]
 image:
-  - src: '2017/typography/type.jpg'
+  - src: '2017/colors/color.jpg'
 summary: |
   **How do you select a set of colors that express the attitude of your brand**, look great together, and pass WCAG accessibility standards? How many brand colors is too many? How do you keep track of all these moving parts without getting completely overwhelmed? Color toolkit to the rescue!
 after:
@@ -15,7 +15,7 @@ after:
 Open Brand Identity Design Part 2: Please Steal These Ideas
 ===========================================================
 
-Part 2 – How to Choose Engaging and Accessible Brand Colors for Your Website
+How to Choose Engaging and Accessible Brand Colors for Your Website
 ----------------------------------------------------------------------------
 
 Now that you have `selected excellent typography`_ that fits your brand to a “T”, it’s time to explore brand colors. How do you select a set of colors that express the attitude of your brand, look great together, and pass WCAG accessibility standards? How many brand colors is too many? How do you keep track of all these moving parts without getting completely overwhelmed? Color toolkit to the rescue! Over the years, I’ve collected several excellent web tool resources to help guide me through these challenges – many of which I used during OddBird’s `open redesign process`_.
@@ -182,6 +182,13 @@ As always, we want to know what your favorite web tools are for playing with col
 
 Bonus - Color Palette Inspiration
 ---------------------------------
+
+`Color Palette FX`_
+~~~~~~~~~~~~~~~~~~~
+
+.. _Color Palette FX: http://www.palettefx.com/
+
+.. image:: /static/images/blog/2017/colors/fx.jpg
 
 `HSL Color Picker`_
 ~~~~~~~~~~~~~~~~~~~
