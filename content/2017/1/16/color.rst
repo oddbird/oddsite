@@ -77,7 +77,7 @@ each set of colors make you feel about each company?
 `Design Seeds`_
 ~~~~~~~~~~~~~~~
 
-.. _Design Seeds: https://designschool.canva.com/blog/website-color-schemes/
+.. _Design Seeds: https://www.design-seeds.com/
 
 .. image:: /static/images/blog/2017/colors/designseeds.jpg
 
@@ -178,7 +178,7 @@ of contrast for the general population of readers.”* —`WebAIM`_
 
 Contrast Ratio is my go-to web tool for the job.
 
-`Contract Ratio`_
+`Contrast Ratio`_
 ~~~~~~~~~~~~~~~~~
 
 .. _Contrast Ratio: http://leaverou.github.io/contrast-ratio/
@@ -199,7 +199,7 @@ colors, and accessibility articles if you’d like to dive deep.
 `WebAIM: Color Contrast Checker`_
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. _WebAIM Color Contrast Checker: http://leaverou.github.io/contrast-ratio/
+.. _WebAIM Color Contrast Checker: http://webaim.org/resources/contrastchecker/
 
 .. image:: /static/images/blog/2017/colors/webaim.jpg
 
