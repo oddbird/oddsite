@@ -20,6 +20,7 @@ let devtool = 'cheap-module-inline-source-map';
 // @@@ Sassdoc does not properly update the st_mtime (modified time) on
 // re-generated files, so we empty the output styleguide/ dir before copying
 // changed files.
+// See https://github.com/oddbird/oddsite/issues/55
 let buildScript = 'rm -rf ./dev-output/styleguide/* && python run.py dev';
 
 // Override settings if running in production
