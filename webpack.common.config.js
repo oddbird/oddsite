@@ -2,7 +2,6 @@
 
 process.env.BROWSERSLIST_CONFIG = './browserslist';
 
-const fs = require('fs-extra');
 const AssetsPlugin = require('assets-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
@@ -14,21 +13,22 @@ const WebpackShellPlugin = require('webpack-shell-plugin');
 const outputPath = path.join(__dirname, 'content', 'static', 'assets');
 const sassdocPath = path.join(__dirname, 'content', 'styleguide');
 const assetsJsonPath = path.join(__dirname, 'content', 'static');
-let outputRootPath = path.join(__dirname, 'dev-output');
 let jsOutput = '[name].bundle.js';
 let styleOutput = '[name].bundle.css';
 let mediaOutput = '[name].[ext]';
 let devtool = 'cheap-module-inline-source-map';
-let buildScript = 'python run.py dev';
+// @@@ Sassdoc does not properly update the st_mtime (modified time) on
+// re-generated files, so we empty the output styleguide/ dir before copying
+// changed files.
+let buildScript = 'rm -rf ./dev-output/styleguide/* && python run.py dev';
 
 // Override settings if running in production
 if (process.env.NODE_ENV === 'production') {
-  outputRootPath = path.join(__dirname, 'output');
   jsOutput = '[name].bundle.[chunkhash].min.js';
   styleOutput = '[name].bundle.[chunkhash].min.css';
   mediaOutput = '[name].[hash].[ext]';
   devtool = 'source-map';
-  buildScript = 'python run.py prod';
+  buildScript = 'rm -rf ./output/styleguide/* && python run.py prod';
 }
 
 const SassdocPlugin = function () {
@@ -44,9 +44,6 @@ const getCSS = function (entry) {
   return undefined;
 };
 SassdocPlugin.prototype.apply = (compiler) => {
-  compiler.plugin('compile', () => {
-    fs.emptyDirSync(outputRootPath);
-  });
   compiler.plugin('after-emit', (compilation, cb) => {
     const statsJSON = compilation.getStats().toJson();
     const css = getCSS(statsJSON.assetsByChunkName.styleguide);
@@ -57,7 +54,8 @@ SassdocPlugin.prototype.apply = (compiler) => {
       dest: sassdocPath,
       theme: 'herman',
       customCSS: cssPath,
-      customHead: '<script src="https://use.typekit.net/slx1xnq.js"></script>' +
+      customHead:
+        '<script src="https://use.typekit.net/slx1xnq.js"></script>' +
         '<script>try{Typekit.load({ async: true });}catch(e){}</script>',
       descriptionPath: path.join(__dirname, 'STYLEGUIDE.md'),
       homepage: '/',
@@ -145,7 +143,8 @@ module.exports = {
     new SassdocPlugin(),
     new WebpackShellPlugin({
       onBuildEnd: [buildScript],
-      dev: false
+      dev: false,
+      safe: true
     }),
     new CleanWebpackPlugin([outputPath], {
       root: __dirname,
