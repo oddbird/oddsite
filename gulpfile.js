@@ -211,7 +211,7 @@ const getServeOpts = (dir) => ({
   logPrefix: 'oddsite',
   notify: false,
   files: [`${dir}**/*`],
-  reloadDebounce: 200
+  reloadDebounce: 500
 });
 
 gulp.task('browser-sync', (cb) => {
