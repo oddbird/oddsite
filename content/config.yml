@@ -784,6 +784,17 @@ birds_former:
 # ----------
 
 events_past:
+  - venue: 'WordPress Naperville'
+    url: 'https://www.meetup.com/WordPress-Naperville/events/236485707/'
+    date: ['1', '17', '2017']
+    adr:
+      city: 'Naperville'
+      state: 'IL'
+    who:
+      - author: 'stacy'
+        title: 'From Scratch to Launch: Planning Phase'
+
+
   - venue: 'CSSDay.io'
     url: 'http://cssday.io/'
     date: ['12', '03', '2016']
