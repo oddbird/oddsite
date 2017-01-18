@@ -7,10 +7,6 @@ site_message:
   - body: |
       <strong>We’re re-building our website in the open</strong>,
       and writing about our process along the way.
-      What you see below is up-to-date,
-      but mostly unstyled.
-      We hope you'll follow along
-      and even get involved!
     action: Find out more!
     url: '/2016/07/12/open-design/'
 
