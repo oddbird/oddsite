@@ -33,7 +33,7 @@
         {{ short }}
       </p>
 
-      <ul>
+      <ul class="social-list">
         {% for link in bird.links[0] %}
           {% if link in ['twitter', 'github'] %}
             {{ get_link(link, bird.links[0][link]) }}
