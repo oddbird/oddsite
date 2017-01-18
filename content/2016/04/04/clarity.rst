@@ -1,6 +1,6 @@
 public: yes
 author: miriam
-tags: [conferences]
+tags: ['conferences']
 image:
   - src: 'clarity.jpg'
 summary: |

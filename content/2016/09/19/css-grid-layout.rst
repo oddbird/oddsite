@@ -1,6 +1,6 @@
 public: yes
 author: stacy
-tags: [css, css-grid-layout, design]
+tags: ['grids', 'css grid', 'layout', 'design']
 image:
   - src: 'cssgriddemo.jpg'
 summary: |
@@ -9,7 +9,7 @@ summary: |
 after:
   - include: 'blog/_tag-module.html.j2'
     title: 'Posts about CSS Grid Layout'
-    tag: css-grid-layout
+    tag: 'css grid'
     id: 'css-grid-layout'
 
 
@@ -42,7 +42,7 @@ Well, CSS Grid Layout is in the far distant future. It doesn’t have much brows
     display: flex;
 
     @supports ( display: grid ) {
-  	   display: grid;
+       display: grid;
     }
   }
 

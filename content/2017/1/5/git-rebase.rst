@@ -1,6 +1,6 @@
 public: yes
 author: kit
-tags: [git, workflow]
+tags: [git, workflows]
 image:
   - src: '2017/git-rebase/git-cave.jpg'
 summary: |
@@ -227,7 +227,7 @@ spelunking through your git history often to understand past choices, then let
 this be your excuse.
 
 
-What Do the Oddbirds Do?
+What Do the OddBirds Do?
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 We actually use a merge-centric flow, the kind you are likely more familiar

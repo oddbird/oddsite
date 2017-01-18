@@ -1,6 +1,6 @@
 public: yes
 author: miriam
-tags: [oddsite, open-design]
+tags: ['oddsite', 'open design']
 image:
   - src: 'oddsite.jpg'
 summary: |
@@ -10,7 +10,7 @@ summary: |
 after:
   - include: 'blog/_tag-module.html.j2'
     title: 'OddSite Re-design Timeline'
-    tag: open-design
+    tag: 'open design'
     id: 'open-design-articles'
 
 
@@ -63,7 +63,7 @@ with `open-source collaboration`_,
 and daily client feedback,
 but designing a site in the open is new to us.
 Luckily, `we're not the first to do it`_.
-There's a broad range of open-design practices,
+There's a broad range of open design practices,
 so we'll mix-and-match to see what works for us.
 
 We decided to re-design our live site,
