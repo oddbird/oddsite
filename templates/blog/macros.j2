@@ -2,9 +2,9 @@
 {% import 'birds/macros.j2' as birds %}
 
 {% macro list(post, section='blog-post') %}
-  <article {{ utility.attr_if('data-module', section) }}>
+  <article {{ utility.attr_if('data-module', section) }} class="preview">
     {% set heading = 'h2' if section else 'h3' %}
-    <{{ heading }}>
+    <{{ heading }} class="post-title">
       <a href="{{ link_to('page', slug=post.slug) }}" rel="bookmark">
         {{ post.title }}
       </a>

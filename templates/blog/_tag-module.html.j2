@@ -6,7 +6,7 @@
 
 {% if entries %}
   <section data-module="recent-posts" {{ utility.attr_if('id', module.id) }}>
-    <h2>
+    <h2 class="section-title">
       {{ module.title or ['Articles about', module.tag]|join(' ') }}
     </h2>
 
