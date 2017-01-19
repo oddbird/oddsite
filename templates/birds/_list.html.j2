@@ -28,8 +28,8 @@
 {% endif %}
  #}
 
-{% for page in config.pages %}
- {{ page|show_all_attrs() }}
+ <pre>
+{% for page in config.pages.values() %}
+ {{ page|show_all_attrs }}
 {% endfor %}
-
-world
+ </pre>

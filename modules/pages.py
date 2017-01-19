@@ -34,6 +34,7 @@ def get_page_key(page):
 
 
 def setup(builder):
+    builder.jinja_env.filters['show_all_attrs'] = show_all_attrs
     page_configs = {}
     for page in get_pages(builder):
         page_config = get_page_context(page)
@@ -45,14 +46,10 @@ def setup(builder):
     })
 
 
-from jinja2 import *
-
-
 def show_all_attrs(value):
+    """For debugging."""
     res = []
     for k in dir(value):
-        res.append('%r %r\n' % (k, getattr(value, k)))
-    return '\n'.join(res)
-
-env = Environment()
-env.filters['show_all_attrs'] = show_all_attrs
+        if not k.startswith('_'):
+            res.append(u'{}: {}'.format(k, getattr(value, k)))
+    return u'\n'.join(res)
