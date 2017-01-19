@@ -1,6 +1,337 @@
+// sass-lint:disable no-color-literals
+
 // Code Patterns
 // =============
 
+// See: http://pygments.org/docs/styles/
+// And: https://github.com/richleland/pygments-css
 .highlight {
+  background: #f8f8f8;
   margin-bottom: 1rem;
+
+  .hll {
+    background-color: #ffc;
+  }
+
+  // Comment
+  .c {
+    color: #408080;
+    font-style: italic;
+  }
+
+  // Error
+  .err {
+    border: 1px solid #f00;
+  }
+
+  // Keyword
+  .k {
+    color: #080;
+    font-weight: bold;
+  }
+
+  // Operator
+  .o {
+    color: #666;
+  }
+
+  // Comment.Multiline
+  .cm {
+    color: #408080;
+    font-style: italic;
+  }
+
+  // Comment.Preproc
+  .cp {
+    color: #bc7a00;
+  }
+
+  // Comment.Single
+  .c1 {
+    color: #408080;
+    font-style: italic;
+  }
+
+  // Comment.Special
+  .cs {
+    color: #408080;
+    font-style: italic;
+  }
+
+  // Generic.Deleted
+  .gd {
+    color: #a00;
+  }
+
+  // Generic.Emph
+  .ge {
+    font-style: italic;
+  }
+
+  // Generic.Error
+  .gr {
+    color: #f00;
+  }
+
+  // Generic.Heading
+  .gh {
+    color: #000080;
+    font-weight: bold;
+  }
+
+  // Generic.Inserted
+  .gi {
+    color: #00a000;
+  }
+
+  // Generic.Output
+  .go {
+    color: #808080;
+  }
+
+  // Generic.Prompt
+  .gp {
+    color: #000080;
+    font-weight: bold;
+  }
+
+  // Generic.Strong
+  .gs {
+    font-weight: bold;
+  }
+
+  // Generic.Subheading
+  .gu {
+    color: #800080;
+    font-weight: bold;
+  }
+
+  // Generic.Traceback
+  .gt {
+    color: #0040d0;
+  }
+
+  // Keyword.Constant
+  .kc {
+    color: #008000;
+    font-weight: bold;
+  }
+
+  // Keyword.Declaration
+  .kd {
+    color: #008000;
+    font-weight: bold;
+  }
+
+  // Keyword.Namespace
+  .kn {
+    color: #008000;
+    font-weight: bold;
+  }
+
+  // Keyword.Pseudo
+  .kp {
+    color: #008000;
+  }
+
+  // Keyword.Reserved
+  .kr {
+    color: #008000;
+    font-weight: bold;
+  }
+
+  // Keyword.Type
+  .kt {
+    color: #b00040;
+  }
+
+  // Literal.Number
+  .m {
+    color: #666;
+  }
+
+  // Literal.String
+  .s {
+    color: #ba2121;
+  }
+
+  // Name.Attribute
+  .na {
+    color: #7d9029;
+  }
+
+  // Name.Builtin
+  .nb {
+    color: #008000;
+  }
+
+  // Name.Class
+  .nc {
+    color: #00f;
+    font-weight: bold;
+  }
+
+  // Name.Constant
+  .no {
+    color: #800;
+  }
+
+  // Name.Decorator
+  .nd {
+    color: #a2f;
+  }
+
+  // Name.Entity
+  .ni {
+    color: #999;
+    font-weight: bold;
+  }
+
+  // Name.Exception
+  .ne {
+    color: #d2413a;
+    font-weight: bold;
+  }
+
+  // Name.Function
+  .nf {
+    color: #00f;
+  }
+
+  // Name.Label
+  .nl {
+    color: #a0a000;
+  }
+
+  // Name.Namespace
+  .nn {
+    color: #00f;
+    font-weight: bold;
+  }
+
+  // Name.Tag
+  .nt {
+    color: #008000;
+    font-weight: bold;
+  }
+
+  // Name.Variable
+  .nv {
+    color: #19177c;
+  }
+
+  // Operator.Word
+  .ow {
+    color: #a2f;
+    font-weight: bold;
+  }
+
+  // Text.Whitespace
+  .w {
+    color: #bbb;
+  }
+
+  // Literal.Number.Float
+  .mf {
+    color: #666;
+  }
+
+  // Literal.Number.Hex
+  .mh {
+    color: #666;
+  }
+
+  // Literal.Number.Integer
+  .mi {
+    color: #666;
+  }
+
+  // Literal.Number.Oct
+  .mo {
+    color: #666;
+  }
+
+  // Literal.String.Backtick
+  .sb {
+    color: #ba2121;
+  }
+
+  // Literal.String.Char
+  .sc {
+    color: #ba2121;
+  }
+
+  // Literal.String.Doc
+  .sd {
+    color: #ba2121;
+    font-style: italic;
+  }
+
+  // Literal.String.Double
+  .s2 {
+    color: #ba2121;
+  }
+
+  // Literal.String.Escape
+  .se {
+    color: #b62;
+    font-weight: bold;
+  }
+
+  // Literal.String.Heredoc
+  .sh {
+    color: #ba2121;
+  }
+
+  // Literal.String.Interpol
+  .si {
+    color: #b68;
+    font-weight: bold;
+  }
+
+  // Literal.String.Other
+  .sx {
+    color: #008000;
+  }
+
+  // Literal.String.Regex
+  .sr {
+    color: #b68;
+  }
+
+  // Literal.String.Single
+  .s1 {
+    color: #ba2121;
+  }
+
+  // Literal.String.Symbol
+  .ss {
+    color: #19177c;
+  }
+
+  // Name.Builtin.Pseudo
+  .bp {
+    color: #008000;
+  }
+
+  // Name.Variable.Class
+  .vc {
+    color: #19177c;
+  }
+
+  // Name.Variable.Global
+  .vg {
+    color: #19177c;
+  }
+
+  // Name.Variable.Instance
+  .vi {
+    color: #19177c;
+  }
+
+  // Literal.Number.Integer.Long
+  .il {
+    color: #666;
+  }
+
 }
