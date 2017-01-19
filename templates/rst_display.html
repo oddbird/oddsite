@@ -11,15 +11,13 @@
   {%- endif %}
 
   {% if ctx.pub_date %}
-    <p>
-      {{ blog.pubdate(ctx.pub_date) }}
+    <div data-module="rst-meta" class="meta">
       {% if ctx.author %}
         by {{ birds.get_card(ctx.author, config) }}
       {% endif %}
+      {{ blog.pubdate(ctx.pub_date) }}
       {{ blog.tags(ctx.tags) }}
-    </p>
-  <div data-module="rst-meta" class="meta">
-  </div>
+    </div>
   {% endif %}
 
   {{ blog.header_image(ctx) }}

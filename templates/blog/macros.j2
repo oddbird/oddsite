@@ -10,12 +10,12 @@
       </a>
     </{{ heading }}>
 
-    <p>
+    <div class="meta">
+      by {{ birds.get_card(post.author, config=post.config, details=false) }}
       {{ pubdate(post.pub_date) }}
       {{ tags(post.tags) }}
-    </p>
+    </div>
 
-    {{ birds.get_card(post.author, config=post.config, details=true) }}
     {{ header_image(post) }}
 
     {% if post.summary %}
@@ -41,7 +41,7 @@
 
 {% macro byline(post) %}
 <p>
-  by {{ birds.get_card(post.author, config=post.config) }} |
+  by {{ birds.get_card(post.author, config=post.config) }}
   {{ pubdate(post.pub_date) }}
   {{ tags(post.tags) }}
 </p>
@@ -50,13 +50,12 @@
 
 {% macro tags(taglist) %}
   {% if taglist %}
-    <span>
-      in
+    <nav class="tags">
       {% for tag in taglist|sort(case_sensitive=true) %}
         {%- if not loop.first %}, {% endif -%}
         <a href="{{ link_to('tag', tag=tag) }}" rel="tag">{{ tag }}</a>
       {%- endfor %}.
-    </span>
+    </nav>
   {% endif %}
 {% endmacro %}
 
@@ -76,7 +75,7 @@
 
 {% macro pubdate(date) %}
   {% if date %}
-    <time datetime="{{ date.isoformat() }}" pubdate="pubdate">
+    on <time datetime="{{ date.isoformat() }}" pubdate="pubdate">
       {{ date.strftime("%B %d, %Y") }}
     </time>
   {% endif %}
