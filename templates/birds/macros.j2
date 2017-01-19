@@ -121,7 +121,7 @@
 {% macro list_item(name, url, extra=none) %}
   <li>
     {{ utility.link_if(name, url) }}
-    {% if exrta %}
+    {% if extra %}
       [{{ extra }}]
     {% endif %}
   </li>
