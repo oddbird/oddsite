@@ -2,7 +2,7 @@
 {% import "birds/macros.j2" as birds %}
 
 
-{% if config.birds %}
+{# {% if config.birds %}
   {% set all_posts = get_recent_blog_entries(1000) %}
 
   {% for bird in config.birds %}
@@ -26,3 +26,10 @@
     </ul>
   </section>
 {% endif %}
+ #}
+
+{% for page in config.pages %}
+ {{ page|show_all_attrs() }}
+{% endfor %}
+
+world

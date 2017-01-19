@@ -43,3 +43,16 @@ def setup(builder):
     builder.config.stack.append({
         'pages': page_configs,
     })
+
+
+from jinja2 import *
+
+
+def show_all_attrs(value):
+    res = []
+    for k in dir(value):
+        res.append('%r %r\n' % (k, getattr(value, k)))
+    return '\n'.join(res)
+
+env = Environment()
+env.filters['show_all_attrs'] = show_all_attrs
