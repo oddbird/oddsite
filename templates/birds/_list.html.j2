@@ -28,8 +28,7 @@
 {% endif %}
  #}
 
- <pre>
 {% for page in config.pages.values() %}
- {{ page|show_all_attrs }}
+ {{ page.render_summary() }}
+ {{ page.render_contents() }}
 {% endfor %}
- </pre>
