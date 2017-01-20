@@ -87,7 +87,7 @@ support ``initial-letter`` to use alternate styles.
 
     @supports (not(initial-letter: 5)) and (not(-webkit-initial-letter: 5)) {
       .intro::first-letter {
-        color:  hsl(350, 50%, 50%);
+        color: hsl(350, 50%, 50%);
         font-size: $cap-size;
         float: left;
         line-height: .7;
