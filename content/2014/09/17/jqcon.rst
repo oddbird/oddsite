@@ -39,7 +39,7 @@ and forth from the main client script.
 Keep the UI responsive, and let Workers do difficult tasks in the background.
 (Aside: This is awesome. Why isn't everyone using it already?)
 
-.. code:: js
+.. code-block:: js
 
   // main script
   var worker = new Worker('my_worker.js');
@@ -48,7 +48,7 @@ Keep the UI responsive, and let Workers do difficult tasks in the background.
   }, false);
   worker.postMessage('Hello Worker!');
 
-.. code:: js
+.. code-block:: js
 
   // worker script ('my_worker.js')
   self.addEventListener('message', function (e) {
@@ -104,7 +104,7 @@ Some of the new features I'm most excited about:
 - blocked scope variables using ``let``
 - template strings(!):
 
-.. code:: js
+.. code-block:: js
 
   var name = 'Jonny';
   var company = 'OddBird';
@@ -144,7 +144,7 @@ Throw More Errors
 
 `Error objects`_ have been around forever, and aren't difficult to use:
 
-.. code:: js
+.. code-block:: js
 
   if (user.id) {
     // do the thing
@@ -155,7 +155,7 @@ Throw More Errors
 But I'm not very good at actually doing this. When I'm writing code, I usually
 default to the "fail silently" approach:
 
-.. code:: js
+.. code-block:: js
 
   if (user.id) {
     // do the thing
@@ -170,7 +170,7 @@ place.
 
 To make this simpler, I've started using runtime assertions:
 
-.. code:: js
+.. code-block:: js
 
   var assert = function (message, test) {
     if (!test) {

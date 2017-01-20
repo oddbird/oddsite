@@ -39,7 +39,7 @@ and allows you to span columns on a grid,
 or span any width you want,
 and forget about grids entirely.
 
-.. code:: scss
+.. code-block:: scss
 
   // span 50%
   @include span(50%);
@@ -79,7 +79,7 @@ you still can set individual settings,
 but you can also contain an entire grid in a single argument.
 That allows us to change grids easily:
 
-.. code:: scss
+.. code-block:: scss
 
   $container: 80%;
   $columns: 12;
@@ -115,7 +115,7 @@ Let's dissect that.
 
 Here are a few grids:
 
-.. code:: scss
+.. code-block:: scss
 
   $susy-1-default: 12 (4em 1em) after;
   $960-ish: 12 (60px 20px) inside static;
@@ -142,7 +142,7 @@ Containers and Grid Backgrounds
 Containers are simple with the ``container`` mixin,
 and the grid syntax you already learned.
 
-.. code:: scss
+.. code-block:: scss
 
   @include container($grid);
 
@@ -150,7 +150,7 @@ Of course, we'll default to any grid you already set globally.
 you can also pass an arbitrary width,
 or add keywords to justify your container ``left``, ``right``, or ``center``.
 
-.. code:: scss
+.. code-block:: scss
 
   // 960 container, justified left
   @include container(960px left);
@@ -159,7 +159,7 @@ While you're at it,
 you can ``show`` or ``hide`` the grid background
 for that particular container:
 
-.. code:: scss
+.. code-block:: scss
 
   @include container(show);
 
@@ -170,7 +170,7 @@ You can now create a simple gallery layout
 using either isolation or basic float techniques.
 The syntax should be familiar already:
 
-.. code:: scss
+.. code-block:: scss
 
   @include gallery(2 of 12 isolate);
 
@@ -184,7 +184,7 @@ We'll add a bit of integration in before 2.0 stable,
 but for now you can just add the `use-grid()` mixin
 inside any media-queries to change your grids:
 
-.. code:: scss
+.. code-block:: scss
 
   // using breakpoint
   @include breakpoint(50em) {

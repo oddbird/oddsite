@@ -64,7 +64,7 @@ in older versions as well.
 Basic Markup:
 -------------
 
-.. code:: html
+.. code-block:: html
 
   <div class="container">
     <header>
@@ -89,7 +89,7 @@ to toggle state body-classes.
 Susy Settings:
 --------------
 
-.. code:: scss
+.. code-block:: scss
 
   $total-columns    : 5;
   $column-width     : 4em;
@@ -104,7 +104,7 @@ You can change those any way you like.
 I'm also going to establish my
 medium and large column settings right away:
 
-.. code:: scss
+.. code-block:: scss
 
   $medium-columns   : 8;
   $large-columns    : 12;
@@ -114,7 +114,7 @@ And I'll set Susy's
 override to the largest layout width,
 so the container is fluid up to that point:
 
-.. code:: scss
+.. code-block:: scss
 
   $container-width  : container-outer-width($large-columns);
 
@@ -122,7 +122,7 @@ so the container is fluid up to that point:
 Establish the Container:
 ------------------------
 
-.. code:: scss
+.. code-block:: scss
 
   .container {
     @include container;
@@ -144,7 +144,7 @@ or pushed to one side to make room
 for the ``.left`` or ``.right``
 sections to appear.
 
-.. code:: scss
+.. code-block:: scss
 
   $anchor : 1;
   $side   : $total-columns - $anchor;
@@ -155,7 +155,7 @@ remain visible while side-sections are displayed.
 The ``$side`` width of our left & right sections
 is based on the remaining space.
 
-.. code:: scss
+.. code-block:: scss
 
   .left {
     @include span-columns($side);
@@ -196,7 +196,7 @@ with the final ``gutter()`` included.
 Medium Layout:
 --------------
 
-.. code:: scss
+.. code-block:: scss
 
   $main : 5;
   $side : $medium-columns - $main;
@@ -207,7 +207,7 @@ You could, of course,
 set different right and left widths.
 I'll leave that as an exercise for the reader.
 
-.. code:: scss
+.. code-block:: scss
 
   @include at-breakpoint($medium-columns) {
     [href="#left"] { visibility: hidden; }
@@ -245,7 +245,7 @@ as it is no longer needed.
 Large Layout:
 -------------
 
-.. code:: scss
+.. code-block:: scss
 
   $main : 6;
   $side : ($large-columns - $main)/2;
@@ -253,7 +253,7 @@ Large Layout:
 Nothing new here; we're just dividing up the space
 into variables we can use.
 
-.. code:: scss
+.. code-block:: scss
 
   @include at-breakpoint($large-columns) {
     [href="#right"] { visibility: hidden; }

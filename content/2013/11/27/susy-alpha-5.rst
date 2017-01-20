@@ -67,7 +67,7 @@ For a long time the only way to establish defaults
 and user overrides in a Sass plugin has been to use variables.
 In Susy 1 and the early alpha releases, we did the same:
 
-.. code:: scss
+.. code-block:: scss
 
   $columns: 6;
   $gutters: 1/4;
@@ -78,7 +78,7 @@ Now, thanks to SassScript Maps,
 we have a new solution that keeps everything contained,
 and comes with side-benefits for anyone using multiple grids:
 
-.. code:: scss
+.. code-block:: scss
 
   $susy: (
     columns: 6,
@@ -91,14 +91,14 @@ that takes a map of all your settings.
 You can still use the grid shorthand
 with ``set-grid`` or ``use-grid``:
 
-.. code:: scss
+.. code-block:: scss
 
   @include set-grid(6 1/4 inside);
 
 But you can also mix-and-match shorthand with maps,
 both for grid-settings and for spans:
 
-.. code:: scss
+.. code-block:: scss
 
   $large: (
     columns: 12,
@@ -114,7 +114,7 @@ both for grid-settings and for spans:
 If you need access the current value of a setting,
 just use ``susy-get(setting-name)``:
 
-.. code:: scss
+.. code-block:: scss
 
   $current-columns: susy-get(columns);
 
@@ -140,7 +140,7 @@ Susy is very flexible,
 and there are many ways you can work around that problem already,
 but we added a ``container`` shortcut to make it easier.
 
-.. code:: scss
+.. code-block:: scss
 
   .outer-element {
     @include span(6 of 12 container);
@@ -165,7 +165,7 @@ Thanks to the added complexity of inside and split gutters,
 which also need to be applied on full-width elements,
 we've added a ``full`` mixin. Use it!
 
-.. code:: scss
+.. code-block:: scss
 
   // Wrong! (usually)
   @include span(12 of 12);
