@@ -12,10 +12,12 @@
 
   {% if ctx.pub_date %}
     <div data-module="rst-meta" class="meta">
-      {% if ctx.author %}
-        by {{ birds.get_card(ctx.author, config) }}
-      {% endif %}
-      {{ blog.pubdate(ctx.pub_date) }}
+      <p class="byline">
+        {% if ctx.author %}
+        <span class="meta-bit">by</span> {{ birds.get_card(ctx.author, config) }}
+        {% endif %}
+        {{ blog.pubdate(ctx.pub_date) }}
+      </p>
       {{ blog.tags(ctx.tags) }}
     </div>
   {% endif %}

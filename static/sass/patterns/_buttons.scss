@@ -1,0 +1,14 @@
+// Buttons and Button Links
+// ========================
+
+.btn {
+  &,
+  #{$link} {
+    @include contrasted('action');
+    background-image: none; // remove link underline when styling as button...
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    text-shadow: none;
+  }
+}

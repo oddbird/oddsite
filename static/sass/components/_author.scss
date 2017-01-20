@@ -1,0 +1,22 @@
+// Author Box
+// ==========
+
+.author-summary {
+  background-color: color('invert');
+  color: color('background');
+  max-width: 100%;
+  padding: 0 size('gutter');
+
+  .h-card {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: size('full-content');
+    padding: size('gutter') 0;
+  }
+}
+
+.socials {
+  a {
+    margin-right: size('shim');
+  }
+}

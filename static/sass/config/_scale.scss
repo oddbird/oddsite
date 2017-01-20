@@ -42,7 +42,8 @@ $spacing-sizes: (
   'gutter': 'rhythm',
   'spacer': 'gutter' ('multiple': 3),
   'shim': 'gutter' ('multiple': 0.5),
-  'half-shim': 'gutter' ('multiple': 0.25),
+  'half-shim': 'shim' ('multiple': 0.5),
+  'quarter-shim': 'shim' ('multiple': 0.25),
 );
 
 @include herman-add-sizes('spacing-sizes', $spacing-sizes);
@@ -56,6 +57,7 @@ $spacing-sizes: (
 ///   Accoutrement Scale
 $pattern-sizes: (
   'border': 8px,
+  'border-radius': 1rem,
 );
 
 @include herman-add-sizes('pattern-sizes', $pattern-sizes);

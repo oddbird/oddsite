@@ -1,0 +1,25 @@
+// Tags
+// ====
+
+.tags {
+  margin-bottom: size('shim');
+}
+
+.tag {
+  &,
+  #{$link} {
+    background-color: color('tag');
+    background-image: none; // remove link underline when styling as button...
+    border-radius: size('border-radius');
+    color: color('action');
+    display: inline-block;
+    font-size: size('small');
+    padding: size('quarter-shim') size('shim');
+    text-decoration: none;
+    text-shadow: none;
+  }
+
+  &:not(:last-child) {
+    margin-right: size('half-shim');
+  }
+}

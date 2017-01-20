@@ -50,7 +50,9 @@ $pattern-colors: (
   'select': 'brand-orange' ('rgba': 0.5),
 
   'action': 'brand-pink',
+  'action-hover': 'brand-pink' ('shade': 25%),
   'action-alt': 'brand-blue',
+  'tag': 'brand-orange' ('rgba': 0.1),
 
   'callout': 'brand-blue' ('tint': 80%),
   'invert': 'brand-blue',

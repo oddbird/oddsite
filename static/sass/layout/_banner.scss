@@ -10,6 +10,8 @@
     #{$link} {
       // remove link text underlines in the header
       background-image: none;
+      color: color('action-alt');
+      // font-weight: normal;
     }
   }
 }

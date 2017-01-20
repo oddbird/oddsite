@@ -55,14 +55,28 @@ h3 {
 
 a {
   #{$link} {
-    @include text-underline('action');
-    color: inherit;
+    font-weight: bold;
     text-decoration: none;
     transition: color 150ms;
   }
 
   #{$focus} {
     color: color('action');
+  }
+
+  [data-region='main'] &,
+  [data-region='footer'] & {
+    color: color('action');
+
+    #{$focus} {
+      color: color('action-hover');
+    }
+  }
+
+  // not all links get underlines.
+  p &,
+  & .icon-text {
+    @include text-underline('action');
   }
 }
 
