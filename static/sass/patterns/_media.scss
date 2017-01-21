@@ -16,3 +16,14 @@ video {
 .img-border {
   border: 1px solid color('border-img');
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  + img {
+    margin-top: size('shim');
+  }
+}

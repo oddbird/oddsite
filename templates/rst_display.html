@@ -16,7 +16,7 @@
         {% if ctx.author %}
         <span class="meta-bit">by</span> {{ birds.get_card(ctx.author, config) }}
         {% endif %}
-        {{ blog.pubdate(ctx.pub_date) }}
+        <span class="meta-bit">on</span> {{ blog.pubdate(ctx.pub_date) }}
       </p>
       {{ blog.tags(ctx.tags) }}
     </div>
@@ -35,7 +35,7 @@
   {% endif %}
 
   {% if ctx.author %}
-    <div data-module="rst-author" class="author-summary">
+    <div data-module="rst-author" class="author-summary inverted">
       {{ birds.get_card(ctx.author, config, details=true) }}
     </div>
   {% endif %}

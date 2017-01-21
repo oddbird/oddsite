@@ -2,8 +2,6 @@
 // ==========
 
 .author-summary {
-  background-color: color('invert');
-  color: color('background');
   max-width: 100%;
   padding: 0 size('gutter');
 
@@ -17,6 +15,24 @@
 
 .socials {
   a {
+    background-image: none;
     margin-right: size('shim');
+
+    &,
+    #{$link} {
+      .icon-text {
+        @include text-underline('background', 'invert');
+        color: color('background');
+      }
+    }
+
+    #{$focus} {
+      color: color('invert-link-hover');
+
+      .icon-text {
+        background-image: linear-gradient(color('invert-link-hover'), color('invert-link-hover'));
+        color: color('invert-link-hover');
+      }
+    }
   }
 }

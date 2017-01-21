@@ -13,7 +13,7 @@
     <div class="meta">
       <p class="byline">
         <span class="meta-bit">by</span> {{ birds.get_card(post.author, config=post.config, details=false) }}
-        {{ pubdate(post.pub_date) }}
+        <span class="meta-bit">on</span> {{ pubdate(post.pub_date) }}
       </p>
       {{ tags(post.tags) }}
     </div>
@@ -76,7 +76,6 @@
 
 {% macro pubdate(date) %}
   {% if date %}
-    <span class="meta-bit">on</span>
     <time datetime="{{ date.isoformat() }}" pubdate="pubdate">
       {{ date.strftime("%B %d, %Y") }}
     </time>

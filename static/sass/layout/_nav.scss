@@ -4,10 +4,24 @@
 $nav-locations: 'birds', 'work', 'speaking', 'open-source', 'blog', 'community', 'contact';
 
 .nav-link {
-  #{$link} {
-    display: inline-block;
-    padding: size('half-shim');
-    text-decoration: none;
+  display: inline-block;
+  padding: size('half-shim');
+  text-decoration: none;
+}
+
+.nav {
+  a {
+    &,
+    #{$link} {
+      // remove link text underlines in the header
+      background-image: none;
+      color: color('action-alt');
+      // font-weight: normal;
+    }
+
+    #{$focus} {
+      color: color('action');
+    }
   }
 }
 

@@ -5,15 +5,6 @@
 [data-region='banner'] {
   padding: size('gutter');
   text-align: center;
-
-  a {
-    #{$link} {
-      // remove link text underlines in the header
-      background-image: none;
-      color: color('action-alt');
-      // font-weight: normal;
-    }
-  }
 }
 
 

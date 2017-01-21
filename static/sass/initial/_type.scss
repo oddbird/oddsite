@@ -55,28 +55,22 @@ h3 {
 
 a {
   #{$link} {
+    @include text-underline('action');
+    color: color('action');
     font-weight: bold;
     text-decoration: none;
     transition: color 150ms;
-  }
 
-  #{$focus} {
-    color: color('action');
-  }
-
-  [data-region='main'] &,
-  [data-region='footer'] & {
-    color: color('action');
-
-    #{$focus} {
-      color: color('action-hover');
+    h1 &,
+    h2 &,
+    h3 & {
+      background-image: none; // remove link underline for headlines
     }
   }
 
-  // not all links get underlines.
-  p &,
-  & .icon-text {
-    @include text-underline('action');
+  #{$focus} {
+    background-image: linear-gradient(color('action-hover'), color('action-hover'));
+    color: color('action-hover');
   }
 }
 
