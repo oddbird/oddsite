@@ -17,7 +17,11 @@ let jsOutput = '[name].bundle.js';
 let styleOutput = '[name].bundle.css';
 let mediaOutput = '[name].[ext]';
 let devtool = 'cheap-module-inline-source-map';
-let buildScript = 'python run.py dev';
+// @@@ Sassdoc does not properly update the st_mtime (modified time) on
+// re-generated files, so we empty the output styleguide/ dir before copying
+// changed files.
+// See https://github.com/oddbird/oddsite/issues/55
+let buildScript = 'rm -rf ./dev-output/styleguide/* && python run.py dev';
 
 // Override settings if running in production
 if (process.env.NODE_ENV === 'production') {
@@ -25,7 +29,7 @@ if (process.env.NODE_ENV === 'production') {
   styleOutput = '[name].bundle.[chunkhash].min.css';
   mediaOutput = '[name].[hash].[ext]';
   devtool = 'source-map';
-  buildScript = 'python run.py prod';
+  buildScript = 'rm -rf ./output/styleguide/* && python run.py prod';
 }
 
 const SassdocPlugin = function () {
@@ -51,7 +55,8 @@ SassdocPlugin.prototype.apply = (compiler) => {
       dest: sassdocPath,
       theme: 'herman',
       customCSS: cssPath,
-      customHead: '<script src="https://use.typekit.net/slx1xnq.js"></script>' +
+      customHead:
+        '<script src="https://use.typekit.net/slx1xnq.js"></script>' +
         '<script>try{Typekit.load({ async: true });}catch(e){}</script>',
       descriptionPath: path.join(__dirname, 'STYLEGUIDE.md'),
       homepage: '/',
@@ -139,7 +144,8 @@ module.exports = {
     new SassdocPlugin(),
     new WebpackShellPlugin({
       onBuildEnd: [buildScript],
-      dev: false
+      dev: false,
+      safe: true
     }),
     new CleanWebpackPlugin([outputPath], {
       root: __dirname,
