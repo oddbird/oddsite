@@ -2,17 +2,17 @@ const browserSync = require('browser-sync').create();
 const chalk = require('chalk');
 const del = require('del');
 const eslint = require('gulp-eslint');
-const exec = require('child_process').exec;
+const fs = require('fs-extra');
 const gulp = require('gulp');
 const gutil = require('gulp-util');
 const mocha = require('gulp-spawn-mocha');
 const path = require('path');
 const rename = require('gulp-rename');
 const sasslint = require('gulp-sass-lint');
-const spawn = require('child_process').spawn;
 const svg = require('gulp-svg-symbols');
 const svgmin = require('gulp-svgmin');
 const webpack = require('webpack');
+const { spawn } = require('child_process');
 
 // sanity check Node version
 const packageOptions = require('./package.json');
@@ -75,16 +75,6 @@ const spawnTask = function (command, args, cb) {
       })
       .on('exit', cb)
   );
-};
-
-// Execute a command, logging output after process completes
-const execTask = function (command, cb) {
-  exec(command, (err, stdout, stderr) => {
-    if (stdout) { gutil.log(chalk.blue(stdout)); }
-    if (stderr) { gutil.log(chalk.red(stderr)); }
-    if (err) { gutil.beep(); }
-    return cb(err);
-  });
 };
 
 const eslintTask = (src, failOnError, log) => {
@@ -183,9 +173,7 @@ gulp.task('sasstest', () =>
 );
 
 gulp.task('sprites-clean', (cb) => {
-  del(`${paths.SRC_TEMPLATES_DIR}_icons.svg`).then(() => {
-    cb();
-  });
+  fs.remove(`${paths.SRC_TEMPLATES_DIR}_icons.svg`, cb);
 });
 
 gulp.task('sprites', ['sprites-clean'], () =>
@@ -258,13 +246,23 @@ gulp.task('webpack-watch', ['sprites'], () => {
 });
 
 gulp.task('dev-clean', (cb) => {
-  spawnTask('rm', [ '-rf', paths.DIST_DIR ], cb);
+  fs.emptyDir(paths.DIST_DIR, cb);
 });
 
 gulp.task('prod-clean', (cb) => {
-  execTask(`rm -rf ${paths.PROD_DIST_DIR}*`, cb);
+  del(`${paths.PROD_DIST_DIR}*`).then(() => {
+    cb();
+  });
 });
 
-gulp.task('dev-build', (cb) => {
+gulp.task('dev-styleguide-clean', (cb) => {
+  fs.emptyDir(`${paths.DIST_DIR}styleguide`, cb);
+});
+
+// @@@ Sassdoc does not properly update the st_mtime (modified time) on
+// re-generated files, so we empty the output styleguide/ dir before copying
+// changed files.
+// See https://github.com/oddbird/oddsite/issues/55
+gulp.task('dev-build', ['dev-styleguide-clean'], (cb) => {
   spawnTask('python', [ 'run.py', 'dev' ], cb);
 });

@@ -19,10 +19,10 @@ else
     arch=x86
 fi
 
-nodefile="../requirements/node-v7.2.1-${platform}-${arch}.tar.xz"
+nodefile="../requirements/node-v7.4.0-${platform}-${arch}.tar.xz"
 
 tar --strip-components=1 -Jxf ${nodefile}
 
-PATH=`pwd`/bin:$PATH ./bin/npm install -g npm@4.0.5
+PATH=`pwd`/bin:$PATH ./bin/npm install -g npm@4.1.1
 
 popd
