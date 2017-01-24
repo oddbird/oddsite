@@ -24,6 +24,8 @@
 
   {{ blog.header_image(ctx) }}
 
+  {{ blog.intro(ctx) }}
+
   {%- for module in config.before -%}
     {% include module.include %}
   {%- endfor -%}

@@ -11,16 +11,24 @@ summary: |
   way to learn on our own time from anywhere in the world. Our first video in
   this series is a talk by Sarah Parmenter titled “Designing Using Data” given
   at An Event Apart Orlando.
+intro: |
+  In her presentation, `Sarah Parmenter`_ walks us through a journey of using
+  research throughout the design process to make informed decisions. While she
+  is known for her work in user interface design, she goes beyond designing
+  screens and showcases how she created a successful (non-web design) business
+  by focusing on every detail of a customer’s experience.
 
 
 Designing Using Data
 ====================
 
-In her presentation, `Sarah Parmenter`_ walks us through a journey of using
-research throughout the design process to make informed decisions. While she
-is known for her work in user interface design, she goes beyond designing
-screens and showcases how she created a successful (non-web design) business
-by focusing on every detail of a customer’s experience.
+.. class:: intro
+
+    In her presentation, `Sarah Parmenter`_ walks us through a journey of using
+    research throughout the design process to make informed decisions. While she
+    is known for her work in user interface design, she goes beyond designing
+    screens and showcases how she created a successful (non-web design) business
+    by focusing on every detail of a customer’s experience.
 
 I've personally struggled with accepting data at face value from tools like
 analytics and a/b testing. While the raw data is reliable, the human

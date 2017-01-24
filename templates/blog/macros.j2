@@ -21,7 +21,7 @@
     {{ header_image(post) }}
 
     {% if post.summary %}
-      <p>
+      <p class="summary">
         {{ post.render_summary() }}
       </p>
     {% endif %}
@@ -40,6 +40,14 @@
   </a>
 {% endmacro %}
 
+
+{% macro intro(post) %}
+  {% if post.intro %}
+    <p class="intro">
+      {{ post.intro }}
+    </p>
+  {% endif %}
+{% endmacro %}
 
 {% macro byline(post) %}
   <p class="byline">
