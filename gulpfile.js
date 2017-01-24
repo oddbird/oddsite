@@ -173,9 +173,7 @@ gulp.task('sasstest', () =>
 );
 
 gulp.task('sprites-clean', (cb) => {
-  del(`${paths.SRC_TEMPLATES_DIR}_icons.svg`).then(() => {
-    cb();
-  });
+  fs.remove(`${paths.SRC_TEMPLATES_DIR}_icons.svg`, cb);
 });
 
 gulp.task('sprites', ['sprites-clean'], () =>
@@ -252,7 +250,9 @@ gulp.task('dev-clean', (cb) => {
 });
 
 gulp.task('prod-clean', (cb) => {
-  fs.emptyDir(paths.PROD_DIST_DIR, cb);
+  del(`${paths.PROD_DIST_DIR}*`).then(() => {
+    cb();
+  });
 });
 
 gulp.task('dev-styleguide-clean', (cb) => {
