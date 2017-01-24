@@ -48,7 +48,7 @@ Using John's method,
 you can now `isolate any grid element in susy`_,
 with the simple ``isolate()`` mixin:
 
-.. code-block:: scss
+.. code:: scss
 
   .span {
     @include span-columns(6);
@@ -60,7 +60,7 @@ with the simple ``isolate()`` mixin:
     <div class="span">span 6</div>
   </div>
 
-.. code-block:: scss
+.. code:: scss
 
   .isolate {
     @include span-columns(6);
@@ -76,7 +76,7 @@ with the simple ``isolate()`` mixin:
 When you put several of those together,
 you can see how they have been removed from the flow:
 
-.. code-block:: scss
+.. code:: scss
 
   .first {
     @include span-columns(3);
@@ -114,7 +114,7 @@ You just tell us how wide each item should be,
 and we'll calculate the locations,
 applying them with nth-child selectors:
 
-.. code-block:: scss
+.. code:: scss
 
   .gallery-item {
     @include isolate-grid(1);
@@ -151,7 +151,7 @@ applying them with nth-child selectors:
 
 Change the width, and we'll update everything for you:
 
-.. code-block:: scss
+.. code:: scss
 
   .gallery-item2 {
     @include isolate-grid(3);
@@ -197,7 +197,7 @@ the area it would normally occupy.
 
 Here's an element bleeding 1-column outside our 9-column page layout:
 
-.. code-block:: scss
+.. code:: scss
 
   .bleed-demo {
     @include bleed(1 of 9);
@@ -216,7 +216,7 @@ Use the second argument to list which sides should do the bleeding
 (defaults to "left right").
 You can also pass arbitrary widths in the first argument:
 
-.. code-block:: scss
+.. code:: scss
 
   .bleed-sides-demo {
     @include bleed(3 of 9, left);

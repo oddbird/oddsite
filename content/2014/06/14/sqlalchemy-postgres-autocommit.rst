@@ -56,7 +56,7 @@ In order to get psycopg2 to stop sending these automatic ``BEGIN`` statements
 and to behave like Postgres natively does, you set the `autocommit property`_
 of your connection object to ``True``:
 
-.. code-block:: python
+.. code:: python
 
     import psycopg2
     conn = psycopg2.connect('dbname=test')
@@ -175,7 +175,7 @@ became quite easy in SQLAlchemy 0.8.2: SQLAlchemy's psycopg2 "dialect" now
 exposes an ``AUTOCOMMIT`` transaction isolation level, and selecting it sets
 ``autocommit=True`` on all the psycopg2 connections.
 
-.. code-block:: python
+.. code:: python
 
     from sqlalchemy import create_engine
     engine = create_engine('postgresql://test', isolation_level="AUTOCOMMIT")
@@ -216,7 +216,7 @@ SQLAlchemy gives us a way to hook into the ``begin()`` call: the
 have to dig through a few layers of connection-wrapping to get down to the
 actual psycopg2 connection object, but that's not hard:
 
-.. code-block:: python
+.. code:: python
 
     from sqlalchemy import create_engine, event
     from sqlalchemy.orm import sessionmaker
@@ -273,7 +273,7 @@ objects to the connection(s) that have had ``autocommit`` turned off due to
 that transaction. Then I listen to ``after_transaction_end`` and restore
 autocommit on all the appropriate connections:
 
-.. code-block:: python
+.. code:: python
 
     from sqlalchemy import create_engine, event
     from sqlalchemy.orm import sessionmaker
@@ -313,7 +313,7 @@ equivalent to `transaction.atomic`_ for SQLAlchemy (unlike
 `transaction.atomic`_ this doesn't work as a decorator, but adding that is just
 a matter of some boilerplate):
 
-.. code-block:: python
+.. code:: python
 
     from contextlib import contextmanager
     from sqlalchemy.orm import Session as BaseSession

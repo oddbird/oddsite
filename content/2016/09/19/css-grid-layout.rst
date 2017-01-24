@@ -36,7 +36,7 @@ CSS Grid Layout to the rescue
 
 Well, CSS Grid Layout is in the far distant future. It doesn’t have much browser support at the moment so if you want to use it on a production site you may want to use Feature Queries. By wrapping your code in an ``@supports`` conditional, it will check to see if the browser has support for the property/value pair in the parentheses, and if so, will use what is inside the @supports brackets. If the browser doesn't have support for `display: grid` or if the browser doesn't even know what Feature Queries are, then it ignores the block of code.
 
-.. code-block:: scss
+.. code:: scss
 
   .container {
     display: flex;

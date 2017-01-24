@@ -121,7 +121,7 @@ are many ways to manage the remotes, but we'll take a simple approach right
 now: they each have a copy of the repo on their own computers, and they are
 sharing one repo on GitHub. When Bao runs ``git remote -v``, they get:
 
-.. code-block:: bash
+.. code:: console
 
     origin git@github.com:example/project.git (fetch)
     origin git@github.com:example/project.git (push)
@@ -152,7 +152,7 @@ that work:
 
 On Bao's machine, this looks like:
 
-.. code-block:: bash
+.. code:: console
 
     $ git fetch
     $ # Update local information on upstream branch.
@@ -177,7 +177,7 @@ computer, just run ``git rebase`` and get this:
 
 Again, on Bao's machine:
 
-.. code-block:: bash
+.. code:: console
 
     $ # Because the bao-fix branch has robin-feature as an upstream:
     $ git rebase
@@ -219,7 +219,7 @@ perfectly comfortable with rebase, having a way to *undo* is crucial.
 
 There are some git defaults you may want to set to make this pattern easier:
 
-.. code-block:: bash
+.. code:: console
 
     git config merge.defaultToUpstream true
     git config branch.autosetupmerge always
