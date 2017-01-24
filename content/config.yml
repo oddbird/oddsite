@@ -474,7 +474,7 @@ giving:
   - name: 'Black Girls CODE'
     url: 'http://blackgirlscode.com/'
     type: 'donations'
-    years: '2013-2015'
+    years: '2013-2016'
     description: |
       has set out to prove to the world
       that girls of every color have the skills
@@ -506,7 +506,7 @@ giving:
   - name: 'Django Girls'
     url: 'https://djangogirls.org/'
     type: 'donations'
-    years: '2015'
+    years: '2015, 2016'
     description: |
       is a non-profit organization
       and a community that empowers and helps women to organize free,
@@ -1133,21 +1133,25 @@ events_past:
 
 nav:
   - text: 'work'
-    url: '/work/'
     subnav:
+      - text: 'projects'
+        display_text: 'client projects'
+        url: '/work/'
       - text: 'open-source'
+        display_text: 'open-source contributions'
         url: '/open-source/'
   - text: 'blog'
     url: '/blog/'
   - text: 'about'
-    url: ''
     subnav:
       - text: 'birds'
         url: '/birds/'
-      - text: 'community'
-        url: '/community/'
       - text: 'speaking'
+        display_text: 'speaking engagements'
         url: '/speaking/'
+      - text: 'community'
+        display_text: 'community involvement'
+        url: '/community/'
   - text: 'contact'
     url: '/contact/'
 
