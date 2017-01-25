@@ -58,6 +58,9 @@ $spacing-sizes: (
 $pattern-sizes: (
   'border': 8px,
   'border-radius': 1rem,
+  'author-h': 8rem,
+  'author': 6rem,
+  'half-author': 3rem,
 );
 
 @include herman-add-sizes('pattern-sizes', $pattern-sizes);
