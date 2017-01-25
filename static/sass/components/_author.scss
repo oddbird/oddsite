@@ -69,18 +69,6 @@
     background-image: none;
     margin-right: size('shim');
 
-    &,
-    #{$link} {
-      .icon-text {
-        @include text-underline;
-      }
-    }
-
-    #{$focus} {
-      .icon-text {
-        background-image: linear-gradient(color('action-hover'), color('action-hover'));
-      }
-    }
 
     // Color treatments for inverted
     .inverted & {
