@@ -38,17 +38,18 @@ We're `writing more`_,
 `building a community on Slack`_,
 and contributing to more `open-source projects`_.
 
-.. _`Carl`: #@@@
-.. _`Sondra`: #@@@
-.. _`David`: #@@@
-.. _`Stacy`: #@@@
-.. _`Kit`: #@@@
-.. _`writing more`: #@@@
-.. _`speaking more`: #@@@
-.. _`taking on more clients`: #@@@
-.. _`re-designing our website and brand in the open`: #@@@
-.. _`building a community on Slack`: #@@@
-.. _`open-source projects`: #@@@
+.. _`Carl`: /birds/#bird-carl
+.. _`Instagram`: http://instagram.com
+.. _`Sondra`: /birds/#bird-sondra
+.. _`David`: /birds/#bird-david
+.. _`Stacy`: /birds/#bird-stacy
+.. _`Kit`: /birds/#bird-kit
+.. _`writing more`: /blog/
+.. _`speaking more`: /speaking/
+.. _`taking on more clients`: /work/
+.. _`re-designing our website and brand in the open`: /tags/open-design/
+.. _`building a community on Slack`: http://friends.oddbird.net/
+.. _`open-source projects`: /open-source/
 
 It was hard to lose one of the founders
 (and a sibling!)
@@ -81,7 +82,7 @@ long after we move on.
 We can't build for the center;
 we have to build for the edges.
 
-.. _`cause real pain`: #@@@
+.. _`cause real pain`: http://meyerweb.com/eric/thoughts/2014/12/24/inadvertent-algorithmic-cruelty/
 
 OddBird may not be a political organization,
 but we can't distance ourselves from the world we work in,
@@ -98,10 +99,12 @@ but it's important to all of us here
 that OddBird double-down on our commitment
 to *people* in all their diversity,
 especially when they are pushed to the margins.
-We know we have work to do,
-and `giving money`_ is only a start.
+We know that we have work to do,
+that our `code of conduct`_
+and `donations`_ are only a start.
 We're here, `we're listening`_,
 and we're not neutral.
 
-.. _`giving money`: #@@@
-.. _`we're listening`: #@@@
+.. _`code of conduct`: /conduct/
+.. _`donations`: /community/#community-giving
+.. _`we're listening`: http://friends.oddbird.net/
