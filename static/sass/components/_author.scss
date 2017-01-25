@@ -13,34 +13,57 @@
   max-width: 100%;
 }
 
+// crop triangle out of svg for birds page
+.bird-face {
+  float: left;
+  height: size('author');
+  overflow: hidden;
+}
+
 .h-card {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: size('full-content');
-  padding: 0;
-  position: relative;
+  [data-module='rst-author'] & {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: size('full-content');
+    padding: 0;
 
-  @include above('full-content') {
-    transform: translateX(negative('half-author'));
+    @include above('full-content') {
+      padding: 0 size('gutter');
+      transform: translateX(negative('half-author'));
+    }
   }
+}
 
-  p {
-    padding: size('shim') 0 0 size('half-author');
-  }
+.bio {
+  clear: both;
+}
+
+.bio-short {
+  padding: size('shim') 0 0 size('half-author');
 }
 
 [data-size='face'] {
   color: color('text');
   float: left;
   height: size('author-h');
-  shape-outside: polygon(0 0, size('author') 0, size('half-author') size('half-author'));
-  transform: translateY(-65%);
   width: size('author');
+
+  [data-module='rst-author'] & {
+    shape-outside: polygon(0 0, size('author') 0, size('half-author') size('half-author'));
+    transform: translateY(-65%);
+  }
 }
 
 .socials {
   margin: 0 0 0 size('half-author');
   padding: 0 0 size('shim');
+
+  li {
+    display: inline-block;
+    list-style: none;
+    margin-bottom: 0;
+    margin-top: 0;
+  }
 
   a {
     background-image: none;
@@ -49,18 +72,41 @@
     &,
     #{$link} {
       .icon-text {
-        @include text-underline('background', 'invert');
-        color: color('background');
+        @include text-underline;
       }
     }
 
     #{$focus} {
-      color: color('invert-link-hover');
-
       .icon-text {
-        background-image: linear-gradient(color('invert-link-hover'), color('invert-link-hover'));
-        color: color('invert-link-hover');
+        background-image: linear-gradient(color('action-hover'), color('action-hover'));
       }
     }
+
+    // Color treatments for inverted
+    .inverted & {
+      &,
+      #{$link} {
+        .icon-text {
+          @include text-underline('background', 'invert');
+          color: color('background');
+        }
+      }
+
+      #{$focus} {
+        color: color('invert-link-hover');
+
+        .icon-text {
+          background-image: linear-gradient(color('invert-link-hover'), color('invert-link-hover'));
+          color: color('invert-link-hover');
+        }
+      }
+    }
+  }
+}
+
+// Don't show the username for social icons in long bio
+[data-module='bird'] {
+  .icon-text {
+    @include is-hidden;
   }
 }

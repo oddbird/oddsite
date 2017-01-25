@@ -3,14 +3,16 @@
 
 {% macro section(bird, oss, posts=none) %}
   <div data-module='bird' class="h-card" id="bird-{{ bird.author }}">
-    {{ utility.icon(bird.author, size='face') }}
+    <div class="bird-face">
+      {{ utility.icon(bird.author, size='face') }}
+    </div>
 
     <header>
       {{ title(bird.name, bird.author, bird.no_posts) }}
       {{ link_list(bird.links[0]) }}
     </header>
 
-    <p>{{ bird.bio|safe }}</p>
+    <p class="bio">{{ bird.bio|safe }}</p>
 
     {{ oss_list(bird.author, oss) }}
     {{ publication_list(bird.publications) }}
@@ -28,7 +30,7 @@
     <div class="h-card">
       {{ utility.icon(bird.author, size='face') }}
 
-      <p>
+      <p class="bio-short">
         {{ bird_title }}
         {{ short }}
       </p>
@@ -36,7 +38,7 @@
       <ul class="socials">
         {% for link in bird.links[0] %}
           {% if link in ['twitter', 'github'] %}
-            {{ get_link(link, bird.links[0][link]) }}
+            <li>{{ get_link(link, bird.links[0][link]) }}</li>
           {% endif %}
         {% endfor %}
       </ul>
@@ -57,7 +59,7 @@
 
 
 {% macro title(name, author, no_posts=none) %}
-  <h2>
+  <h2 class="bird-name">
     {% if no_posts %}
       {{ name }}
     {% else %}
@@ -71,11 +73,11 @@
 
 {% macro link_list(links) %}
   {% if links %}
-  <div class="what-is-this">
+  <ul class="socials">
     {% for link in links %}
-      {{ get_link(link, links[link]) }}
+      <li>{{ get_link(link, links[link]) }}</li>
     {% endfor %}
-  </div>
+  </ul>
   {% endif %}
 {% endmacro %}
 
