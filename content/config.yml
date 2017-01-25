@@ -1179,6 +1179,7 @@ active_modules: [
   denormalize_config,
   pygments_simple,
   tags,
+  extended_tags,
   blog,
   author,
   wrap,
