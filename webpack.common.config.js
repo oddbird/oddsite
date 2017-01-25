@@ -150,7 +150,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /static\/js\/.*\.js$/,
+        test: /(static\/js\/.*\.js$|test\/.*\.js$)/,
         exclude: /(node_modules|vendor)/,
         use: [{
           loader: 'babel-loader',
