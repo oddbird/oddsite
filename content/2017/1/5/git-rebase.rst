@@ -4,8 +4,9 @@ tags: [git, workflow]
 image:
   - src: '2017/git-rebase/git-cave.jpg'
 summary: |
-  If you want to make sense of your git history more easily when you go back, try rebasing as you go. Rebasing while collaborating with others can
-  get hairy quickly. But here's one way to make it work.
+  If you want to make sense of your git history more easily when you go back,
+  try rebasing as you go. Rebasing while collaborating with others can get
+  hairy quickly. But here's one way to make it work.
 
 
 A Rebase-Centric Model of Collaborative Git Use

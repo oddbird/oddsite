@@ -17,7 +17,7 @@ let jsOutput = '[name].bundle.js';
 let styleOutput = '[name].bundle.css';
 let mediaOutput = '[name].[ext]';
 let devtool = 'cheap-module-inline-source-map';
-let buildScript = 'python run.py dev';
+let buildScript = 'gulp dev-build';
 
 // Override settings if running in production
 if (process.env.NODE_ENV === 'production') {
@@ -51,7 +51,8 @@ SassdocPlugin.prototype.apply = (compiler) => {
       dest: sassdocPath,
       theme: 'herman',
       customCSS: cssPath,
-      customHead: '<script src="https://use.typekit.net/slx1xnq.js"></script>' +
+      customHead:
+        '<script src="https://use.typekit.net/slx1xnq.js"></script>' +
         '<script>try{Typekit.load({ async: true });}catch(e){}</script>',
       descriptionPath: path.join(__dirname, 'STYLEGUIDE.md'),
       homepage: '/',
@@ -186,8 +187,5 @@ module.exports = {
       }
     ]
   },
-  devtool,
-  performance: {
-    hints: false
-  }
+  devtool
 };

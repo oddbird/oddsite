@@ -604,13 +604,13 @@ birds:
       turning your ideas into functional interactions.
       He has been writing clean,
       well-tested JavaScript web applications
-      for over seven years.
+      for over eight years.
       An active member in the JavaScript community,
       Jonny has authored or contributed to
       numerous open-source projects.
       He's easily distracted by a game of ultimate frisbee,
       homebrewing delicious IPAs and stouts,
-      and trying to keep up with his two-year-old daughter.
+      and trying to keep up with his two young kids.
     links:
       - twitter: 'jgerigmeyer'
         github: 'jgerigmeyer'
@@ -794,7 +794,7 @@ events_past:
       - author: 'miriam'
         title: 'Code Patterns for Pattern-Making'
       - author: 'stacy'
-        title: 'Make Web Design Great Again'
+        title: 'The Great State of Web Design with CSS Grid Layout and Friends'
 
   - venue: 'Plone Digital Experience Conference'
     url: 'http://2016.ploneconf.org/'
