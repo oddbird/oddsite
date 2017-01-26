@@ -61,12 +61,10 @@
   // Name Exception
   .ne {
     color: color('code-name-exception');
-;
   }
 
   // Name Function
   .nf {
-    //color: color('brand-orange');
     color: color('code-name-function');
   }
 
@@ -162,37 +160,31 @@
 
   // Base Style
   .k {
-    //color: #4f6466;
     color: color('code-key');
   }
 
   // Keyword Constant
   .kc {
-    //color: #45797d;
     color: color('code-key-constant');
   }
 
   // Keyword Declaration
   .kd {
-    //color: #1d6799;
     color: color('code-key-declaration');
   }
 
   // Keyword Namespace
   .kn {
-    //color: #9e448b;
     color: color('code-key-namespace');
   }
 
   // Keyword Pseudo
   .kp {
-    //color: #8bbd0d;
     color: color('code-key-pseudo');
   }
 
   // Keyword Reserved
   .kr {
-    //color: #4f6466;
     color: color('code-key-reserved');
   }
 

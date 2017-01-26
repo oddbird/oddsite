@@ -36,7 +36,7 @@ $contrast-colors: (
 
 
 // Pattern Colors
-// ------------
+// --------------
 /// Re-usable color patterns for application in different components.
 /// @group color
 /// @preview color-palette
@@ -136,7 +136,6 @@ $highlight-colors: (
   'code-gen-prompt': hsl(55, 58%, 42%),
   'code-gen-strong': hsl(135, 58%, 42%),
   'code-gen-subhead': hsl(165, 58%, 42%),
-
 );
 
 @include herman-add-colors('highlight-colors', $highlight-colors);
