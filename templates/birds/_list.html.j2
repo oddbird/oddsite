@@ -29,6 +29,21 @@
  #}
 
 {% for page in config.pages.values() %}
- {{ page.render_summary() }}
- {{ page.render_contents() }}
+  {% if page.config.bird and page.config.role %}
+    {% set author = page.config.bird %}
+    {% set posts = all_posts|selectattr('author', 'equalto', author)|list %}
+
+    <article data-module="bird">
+      {{ utility.icon(author, size='face') }}
+
+      <header>
+        {{ birds.title(page.title, author) }}
+        {{ birds.link_list(page.config.social[0]) }}
+      </header>
+
+      {{ page.render_summary() }}
+
+      {{ birds.blog_list(posts) }}
+    </article>
+  {% endif %}
 {% endfor %}

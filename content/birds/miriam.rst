@@ -1,6 +1,18 @@
 public: yes
 bird: miriam
+role: 'co-founder and product manager'
+adr:
+  - city: 'Denver'
+    state: 'CO'
+social:
+  - twitter: 'mirisuzanne'
+    github: 'mirisuzanne'
+    dribbble: 'miriamsuzanne'
+    lanyrd: 'miriamsuzanne'
+    stackoverflow: '1930386'
+    codepen: 'mirisuzanne'
 summary: |
+  Miriam
   is a process manager,
   user-experience designer,
   front-end architect,
@@ -25,4 +37,3 @@ a well-known speaker at front-end conferences,
 and a multi-media artist
 with extensive experience in theatre,
 writing, music, and visual art.
-
