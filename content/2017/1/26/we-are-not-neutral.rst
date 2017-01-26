@@ -91,7 +91,7 @@ or the lives of our members, colleagues, and clients.
 and the people we care about.
 We expect 2017 to continue that trend —
 with threats to health insurance,
-immigrants, people of color, lgbtqai+ people,
+immigrants, people of color, LGBTQAI+ people,
 muslims, women, native people, and so on.
 
 I don't have any magic words,
@@ -99,7 +99,7 @@ but it's important to all of us here
 that OddBird double-down on our commitment
 to *people* in all their diversity,
 especially when they are pushed to the margins.
-We know that we have work to do,
+We know that we have work to do —
 that our `code of conduct`_
 and `donations`_ are only a start.
 We're here, `we're listening`_,
