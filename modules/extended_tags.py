@@ -5,12 +5,26 @@
     Gives more power to tagging.
 """
 
-from collections import Counter
-from collections import defaultdict
+from collections import (
+    Counter,
+    defaultdict,
+)
 
 
 def relatedness(taglist):
-    related = defaultdict(lambda: defaultdict(int))
+    """
+    Count up which tags co-occur how often.
+
+    Given a collection of collections of the tags on each post, return a mapping
+    of mappings of ints. The higher the int, the more the two keys co-occur.
+
+    (This is a naive kind of relatedness, but it should work for tags. Something
+    like TF-IDF would probably give a better measure, but I'd expect that there
+    aren't many intrinsically-common tags in our data set, so that'd be
+    overkill.)
+    """
+
+    related = defaultdict(Counter)
     for tag_set in taglist:
         for tag in tag_set:
             related_tags = tag_set.symmetric_difference({tag})
@@ -21,9 +35,9 @@ def relatedness(taglist):
 
 def make_get_related_tags(builder):
     tags = get_all_tags(builder)
+    rels = relatedness(tags)
 
     def get_related_tags(taglist):
-        rels = relatedness(tags)
         return {
             tag: rels[tag]
             for tag
@@ -44,6 +58,14 @@ def make_get_most_used_tags(builder):
 
 
 def get_all_tags(builder):
+    """
+    Get all tags on all posts.
+
+    To get all tags on all posts requires going through all the pages via the
+    builder.iter_contexts, and we must do this before the pages themselves are
+    built, so we do it in this module's setup.
+    """
+
     tags = [
         getattr(c, 'tags', frozenset())
         for c
