@@ -7,7 +7,7 @@ $nav-locations: 'birds', 'work', 'speaking', 'open-source', 'blog', 'community',
   color: color('action-alt');
   display: inline-block;
   font-weight: 400;
-  padding: size('half-shim') size('gutter');
+  padding: size('half-shim') size('shim');
   text-decoration: none;
 
   @include above('nav-column') {
@@ -52,10 +52,13 @@ $nav-locations: 'birds', 'work', 'speaking', 'open-source', 'blog', 'community',
 
   > li {
     display: inline-flex;
-    position: relative;
 
     &:nth-of-type(2) {
       flex-grow: 1;
+    }
+
+    @include above('nav-column') {
+      position: relative;
     }
   }
 }
@@ -64,13 +67,13 @@ $nav-locations: 'birds', 'work', 'speaking', 'open-source', 'blog', 'community',
   background-color: color('background');
   border-bottom: size('border') solid color('border');
   box-shadow: 0 6px 5px color('shadow');
-  padding: size('gutter') 0;
   position: absolute;
-  top: 100%;
   z-index: 1;
 
   @include below('nav-column') {
     left: 0;
+    margin-top: 2.75rem; // magic number
+    padding: size('half-shim') 0;
     right: 0;
     text-align: left;
     width: 100vw;
@@ -78,7 +81,9 @@ $nav-locations: 'birds', 'work', 'speaking', 'open-source', 'blog', 'community',
 
   @include above('nav-column') {
     left: 50%;
+    padding: size('gutter') 0;
     text-align: center;
+    top: 100%;
     transform: translateX(-50%);
     width: 23vw;
   }
