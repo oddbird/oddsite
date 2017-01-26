@@ -400,7 +400,7 @@ they pose a particular confusion —
 two ``em`` values in the same block
 can render to different sizes:
 
-.. code-block:: scss
+.. code:: scss
 
   // assuming a 16px default inherited font size
   .title {
@@ -496,7 +496,7 @@ Here's a basic example
 for defining and accessing
 a custom property:
 
-.. code-block:: css
+.. code:: scss
 
   .this {
     --color: blue;
@@ -507,7 +507,7 @@ You can use an ``@supports`` block
 to add custom properties to your site
 as progressive enhancements:
 
-.. code-block:: css
+.. code:: scss
 
   @supports (--css: variables) {
     // etc
@@ -523,7 +523,7 @@ You can turn off inheritance for a property,
 by resetting its value to ``initial``
 in a universal selector:
 
-.. code-block:: css
+.. code:: scss
 
   * { --property: initial; }
 
@@ -549,7 +549,7 @@ ensures that nothing new is applied by default,
 but any new value
 will be applied to all the properties at once:
 
-.. code-block:: css
+.. code:: scss
 
   * {
     --clip-path: initial;

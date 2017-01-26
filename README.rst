@@ -8,7 +8,7 @@ Development setup
 Install Node.js
 ~~~~~~~~~~~~~~~
 
-OddSite development requires `Node.js`_ 7.2.1 and `npm`_ 4.0.5.
+OddSite development requires `Node.js`_ 7.4.0 and `npm`_ 4.1.1.
 
 The right version of Node is bundled in the OddSite repo and can be unpacked
 inside the repo (in the git-ignored ``node/`` directory), so you don't have to
