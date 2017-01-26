@@ -66,18 +66,20 @@ a {
   }
 }
 
-p,
-ul,
-ol,
-li,
-blockquote {
-  margin: 0.75rem 0;
-}
+[data-region='main'] {
+  p,
+  ul,
+  ol,
+  li,
+  blockquote {
+    margin: 0.75rem 0;
+  }
 
-ul,
-ol,
-blockquote {
-  padding: 0 0.75rem;
+  ul,
+  ol,
+  blockquote {
+    padding: 0 0.75rem;
+  }
 }
 
 code {
