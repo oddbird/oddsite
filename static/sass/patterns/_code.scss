@@ -15,117 +15,119 @@
 
   // Punctuation
   .p {
-    color: #7d8196;
+    color: color('code-punct');
   }
 
   // Error
   .err {
-    color: color('brand-orange');
+    color: color('code-error');
   }
 
   // Base Style
   .n {
-    color: #824e94;
+    color: color('code-name');
   }
 
   // Name Attribute
   .na {
-    color: #824e94;
+    color: color('code-name-att');
   }
 
   // Name Builtin
   .nb {
-    color: #8140a3;
+    color: color('code-name-builtin');
   }
 
   // Name Class
   .nc {
-    color: #824e94;
+    color: color('code-name-class');
   }
 
   // Name Constant
   .no {
-    color: #e6505d;
+    color: color('code-name-constant');
   }
 
   // Name Decorator
   .nd {
-    color: #824e94;
+    color: color('code-name-decorator');
   }
 
   // Name Entity
   .ni {
-    color: #824e94;
+    color: color('code-name-entity');
   }
 
   // Name Exception
   .ne {
-    color: #824e94;
+    color: color('code-name-exception');
+;
   }
 
   // Name Function
   .nf {
-    color: color('brand-orange');
+    //color: color('brand-orange');
+    color: color('code-name-function');
   }
 
   // Name Label
   .nl {
-    color: #875acc;
+    color: color('code-name-label');
   }
 
   // Name Namespace
   .nn {
-    color: #cc2d7c;
+    color: color('code-name-namespace');
   }
 
   // Name Other
   .nx {
-    color: #095677;
+    color: color('code-name-other');
   }
 
   // Name Property
   .py {
-    color: #e6505d;
+    color: color('code-name-property');
   }
 
   // Name Tag
   .nt {
-    color: #824e94;
+    color: color('code-name-tag');
   }
 
   // Name Variable
   .nv {
-    color: #7da903;
+    color: color('code-name-var');
   }
 
   // Name Variable Class
   .vc {
-    color: #396e91;
+    color: color('code-name-var-class');
   }
 
   // Name Variable Global
   .vg {
-    color: #2ba183;
+    color: color('code-name-var-global');
   }
 
   // Name Variable Instance
   .vi {
-    color: #8c2e54;
+    color: color('code-name-var-instance');
   }
 
   // Name Builtin Pseudo
   .bp {
-    color: color('text');
+    color: color('code-name-bi-pseudo');
   }
 
   // Base Style
   .o {
-    color: color('text');
+    color: color('code-operator');
   }
 
   // Operator Word
   .ow {
-    color: color('brand-pink');
+    color: color('code-operator-word');
   }
 
   // Base Style
@@ -136,61 +138,67 @@
 
   // Comment Multiline
   .cm {
-    color: color('code-comment');
+    color: color('code-comment-multi');
     font-style: italic;
   }
 
   // Comment Preproc
   .cp {
-    color: color('code-comment');
+    color: color('code-comment-preproc');
     font-style: italic;
   }
 
   // Comment Single
   .c1 {
-    color: color('code-comment');
+    color: color('code-comment-single');
     font-style: italic;
   }
 
   // Comment Special
   .cs {
-    color: color('code-comment');
+    color: color('code-comment-special');
     font-style: italic;
   }
 
   // Base Style
   .k {
-    color: #4f6466;
+    //color: #4f6466;
+    color: color('code-key');
   }
 
   // Keyword Constant
   .kc {
-    color: #45797d;
+    //color: #45797d;
+    color: color('code-key-constant');
   }
 
   // Keyword Declaration
   .kd {
-    color: #1d6799;
+    //color: #1d6799;
+    color: color('code-key-declaration');
   }
 
   // Keyword Namespace
   .kn {
-    color: #9e448b;
+    //color: #9e448b;
+    color: color('code-key-namespace');
   }
 
   // Keyword Pseudo
   .kp {
-    color: #8bbd0d;
+    //color: #8bbd0d;
+    color: color('code-key-pseudo');
   }
 
   // Keyword Reserved
   .kr {
-    color: #4f6466;
+    //color: #4f6466;
+    color: color('code-key-reserved');
   }
 
   // Keyword Type
   .kt {
-    color: #1e777d;
+    color: color('code-key-type');
   }
 
   // Base Style
@@ -200,147 +208,147 @@
 
   // Literal Date
   .ld {
-    color: color('brand-pink');
+    color: color('code-lit-date');
   }
 
   // Literal Number
   .m {
-    color: color('brand-pink');
+    color: color('code-lit-num');
   }
 
   // Literal Number Float
   .mf {
-    color: color('brand-pink');
+    color: color('code-lit-num-float');
   }
 
   // Literal Number Hex
   .mh {
-    color: color('brand-pink');
+    color: color('code-lit-num-hex');
   }
 
   // Literal Number Integer
   .mi {
-    color: color('brand-pink');
+    color: color('code-lit-num-int');
   }
 
   // Literal Number Oct
   .mo {
-    color: color('brand-pink');
+    color: color('code-lit-num-oct');
   }
 
   // Literal Number Integer Long
   .il {
-    color: color('brand-pink');
+    color: color('code-lit-num-long');
   }
 
   // Literal String
   .s {
-    color: color('text');
+    color: color('code-string');
   }
 
   // Literal String Backtick
   .sb {
-    color: color('brand-pink');
+    color: color('code-string-backtick');
   }
 
   // Literal String Char
   .sc {
-    color: color('brand-pink');
+    color: color('code-string-char');
   }
 
   // Literal String Doc
   .sd {
-    color: #4f6466;
+    color: color('code-string-doc');
   }
 
   // Literal String Double
   .s2 {
-    color: color('text');
+    color: color('code-string-double');
   }
 
   // Literal String Escape
   .se {
-    color: #8a5067;
+    color: color('code-string-escape');
   }
 
   // Literal String Heredoc
   .sh {
-    color: #8a5067;
+    color: color('code-string-heredoc');
   }
 
   // Literal String Interpol
   .si {
-    color: #b7376b;
+    color: color('code-string-interpol');
   }
 
   // Literal String Other
   .sx {
-    color: #8a5067;
+    color: color('code-string-other');
   }
 
   // Literal String Regex
   .sr {
-    color: #8a5067;
+    color: color('code-string-regex');
   }
 
   // Literal String Single
   .s1 {
-    color: #e0414b;
+    color: color('code-string-single');
   }
 
   // Literal String Symbol
   .ss {
-    color: color('text');
+    color: color('code-string-sym');
   }
 
   // Base Style
   .g {
-    color: #183f5c;
+    color: color('code-gen');
   }
 
   // Generic Deleted
   .gd {
-    color: #183f5c;
+    color: color('code-gen-del');
   }
 
   // Generic Emph
   .ge {
-    color: #183f5c;
+    color: color('code-gen-emph');
   }
 
   // Generic Error
   .gr {
-    color: #183f5c;
+    color: color('code-gen-error');
   }
 
   // Generic Heading
   .gh {
-    color: #183f5c;
+    color: color('code-gen-heading');
   }
 
   // Generic Inserted
   .gi {
-    color: #183f5c;
+    color: color('code-gen-inserted');
   }
 
   // Generic Output
   .go {
-    color: #183f5c;
+    color: color('code-gen-output');
   }
 
   // Generic Prompt
   .gp {
-    color: #183f5c;
+    color: color('code-gen-prompt');
   }
 
   // Generic Strong
   .gs {
-    color: #183f5c;
+    color: color('code-gen-strong');
   }
 
   // Generic Subheading
   .gu {
-    color: #183f5c;
+    color: color('code-gen-subhead');
   }
 
   // Generic Traceback
