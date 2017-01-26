@@ -23,4 +23,5 @@
 
 .separator {
   @include section-arrow;
+  z-index: 2;
 }
