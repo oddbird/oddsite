@@ -2,24 +2,30 @@ public: yes
 author: sondra
 tags: [design]
 image:
-  - src: '2017/video-series/sarah.jpg'
+  - src: '2017/parallax/parallax.jpg'
 summary: |
-  Whether you like it not, parallaxing is a reality, so let's learn how to do it well with CSS 3D. Paul Lewis' guide to performant parallaxing is the perfect place to start.
+  Whether you like it not, parallax scrolling is a reality, so let's learn how to do it well with CSS 3D. Paul Lewis' guide to performant parallaxing is the perfect place to start.
 
 
 Let's Talk About Parallax: Dos and Don'ts
 =========================================
 
-First, I'd like to thank Rachel Nabors, award winning cartoonist and digital storyteller, for pointing us to Paul Lewis' excellent `article on performant parallaxing`_.
+First, I'd like to thank `Rachel Nabors`_, award winning cartoonist and digital storyteller, for pointing us to Paul Lewis' excellent `article on performant parallaxing`_.
 
 .. _Rachel Nabors: http://rachelnabors.com/
 .. _article on performant parallaxing: https://developers.google.com/web/updates/2016/12/performant-parallaxing?utm_content=buffer29a95&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer
 
-Paul starts with the don'ts. Don't use scroll events to create a parallax effect.
+Don'ts
+------
+
+Paul, a developer at Google, starts with the don'ts. Don't use scroll events to create a parallax effect.
 
 *"JavaScript doesn’t guarantee that parallaxing will keep in step with the page’s scroll position."*
 
-Trying to achieve a parallax look by changing background position won't work well either, negatively effecting the animation.
+Trying to achieve a parallax look by changing background position doesn't work well either, negatively effecting the animation.
+
+CSS 3D
+------
 
 Paul recommends using CSS 3D for performant parallaxing, and gives detailed instructions for how to do just that. Anticipating the bugs for us, Paul includes various workarounds.
 
