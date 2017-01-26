@@ -12,11 +12,6 @@ $nav-locations: 'birds', 'work', 'speaking', 'open-source', 'blog', 'community',
 
   @include above('nav-column') {
     padding: size('shim') size('gutter');
-
-    .is-dropdown & {
-      padding-left: size('spacer');
-      padding-right: size('spacer');
-    }
   }
 
   #{$link} {
@@ -68,20 +63,23 @@ $nav-locations: 'birds', 'work', 'speaking', 'open-source', 'blog', 'community',
 .is-dropdown {
   background-color: color('background');
   border-bottom: size('border') solid color('border');
-  box-shadow: 3px 6px 5px color('shadow');
-  left: 50%;
-  padding: 0;
+  box-shadow: 0 6px 5px color('shadow');
+  padding: size('gutter') 0;
   position: absolute;
   top: 100%;
-  transform: translateX(-50%);
-  width: auto;
   z-index: 1;
 
   @include below('nav-column') {
+    left: 0;
+    right: 0;
     text-align: left;
+    width: 100vw;
   }
 
   @include above('nav-column') {
+    left: 50%;
     text-align: center;
+    transform: translateX(-50%);
+    width: 23vw;
   }
 }
