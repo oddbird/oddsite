@@ -46,4 +46,4 @@ other great talks from An Event Apart speakers, `visit their website`_.
 .. _visit their website: https://aneventapart.com/
 .. _Sarah Parmenter: http://www.sazzy.co.uk/
 .. _Twitter: https://twitter.com/oddbird
-.. _Slack Channel: https://oddbirdfriends.slack.com
+.. _Slack Channel: http://friends.oddbird.net/
