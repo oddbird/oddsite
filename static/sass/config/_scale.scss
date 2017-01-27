@@ -56,7 +56,10 @@ $spacing-sizes: (
 ///   Accoutrement Scale
 $pattern-sizes: (
   'border': 8px,
-  'nav-column': 30rem,
+  'nav-narrow': 26rem,
+  'nav-wide': 50rem,
+  'dropdown-narrow': 9rem, 
+  'dropdown-wide': 14rem, 
 );
 
 @include herman-add-sizes('pattern-sizes', $pattern-sizes);

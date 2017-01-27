@@ -62,6 +62,10 @@
   height: 6rem;
   width: 13rem;
 
+  @include below('nav-narrow') {
+    width: 10rem;
+  }
+
   [data-location='home'] & {
     animation: draw-logo 3s 1 ease-out both, fill-logo 3s 2s 1 ease-in-out both, fade-logo-outline 2s 2s 1 ease-in-out both;
     stroke: color('brand-orange');
