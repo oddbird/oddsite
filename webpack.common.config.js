@@ -16,7 +16,7 @@ const assetsJsonPath = path.join(__dirname, 'content', 'static');
 let jsOutput = '[name].bundle.js';
 let styleOutput = '[name].bundle.css';
 let mediaOutput = '[name].[ext]';
-let devtool = 'eval-source-map';
+let devtool = 'cheap-module-inline-source-map';
 let buildScript = 'gulp dev-build';
 
 // Override settings if running in production
