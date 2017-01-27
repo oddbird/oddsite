@@ -1,7 +1,7 @@
 // Site Navigation
 // ===============
 
-$nav-locations: 'birds', 'work', 'speaking', 'open-source', 'blog', 'community', 'contact';
+$nav-locations: 'about', 'birds', 'work', 'speaking', 'open-source', 'blog', 'community', 'contact';
 
 .nav-link {
   color: color('action-alt');
@@ -10,7 +10,7 @@ $nav-locations: 'birds', 'work', 'speaking', 'open-source', 'blog', 'community',
   padding: size('half-shim') size('shim');
   text-decoration: none;
 
-  @include above('nav-column') {
+  @include above('nav-narrow') {
     padding: size('shim') size('gutter');
   }
 
@@ -22,7 +22,8 @@ $nav-locations: 'birds', 'work', 'speaking', 'open-source', 'blog', 'community',
     color: color('action');
   }
 
-  [aria-pressed='true'] {
+  &[aria-pressed='true'] {
+    color: color('action');
     font-style: italic;
   }
 }
@@ -42,12 +43,12 @@ $nav-locations: 'birds', 'work', 'speaking', 'open-source', 'blog', 'community',
   display: flex;
   justify-content: space-between;
   margin: negative('gutter') auto 0;
-  max-width: size('nav-column');
+  max-width: size('nav-narrow');
   width: 100%;
 
-  @include below('nav-column') {
+  @include below('nav-narrow') {
     margin-top: negative('gutter');
-    padding: 0;
+    padding: 0 size('shim');
   }
 
   > li {
@@ -57,7 +58,7 @@ $nav-locations: 'birds', 'work', 'speaking', 'open-source', 'blog', 'community',
       flex-grow: 1;
     }
 
-    @include above('nav-column') {
+    @include above('nav-narrow') {
       position: relative;
     }
   }
@@ -70,21 +71,31 @@ $nav-locations: 'birds', 'work', 'speaking', 'open-source', 'blog', 'community',
   position: absolute;
   z-index: 1;
 
-  @include below('nav-column') {
+  .nav-link {
+    display: block;
+  }
+
+  @include below('nav-narrow') {
     left: 0;
-    margin-top: 2.75rem; // magic number
-    padding: size('half-shim') 0;
+    margin-top: 2.45rem; // magic number
+    padding: size('half-shim')  size('shim');
     right: 0;
     text-align: left;
     width: 100vw;
   }
 
-  @include above('nav-column') {
-    left: 50%;
+  @include above('nav-narrow') {
+    left: 0;
+    min-width: size('dropdown-narrow');
     padding: size('gutter') 0;
-    text-align: center;
+    text-align: left;
     top: 100%;
+  }
+  
+  @include above('nav-wide') {
+    left: 50%;
+    min-width: size('dropdown-wide');
+    text-align: center;
     transform: translateX(-50%);
-    width: 23vw;
   }
 }
