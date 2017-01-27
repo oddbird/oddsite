@@ -4,7 +4,7 @@ tags: [design, recommend]
 image:
   - src: '2017/parallax/parallax.jpg'
 summary: |
-  If you'd like to learn how to create parallax scrolling for your website, Paul Lewis' guide to performant parallaxing is the perfect place to start. Peter Piper picked a peck of pickled...
+  If you'd like to learn how to create parallax scrolling for your website, Paul Lewis' guide to performant parallaxing is the perfect place to start.
 
 
 Birds Recommend: Performant Parallaxing with CSS 3D
