@@ -25,7 +25,7 @@ site_message:
 clients:
   - name: 'Quarq Race Intelligence'
     url: 'http://quarqrace.com'
-    years: '2015-2016'
+    years: '2015–2016'
     feature: true
     priority: 'live'
     tagline: 'Real-Time Race Analytics'
@@ -47,7 +47,7 @@ clients:
 
   - name: 'QuarqNet'
     url: 'http://quarqnet.com'
-    years: '2015-2016'
+    years: '2015–2016'
     feature: true
     priority: 'live'
     tagline: 'Real-Time Telemetry for Athletes'
@@ -65,7 +65,7 @@ clients:
 
   - name: 'CoachHub'
     url: 'http://www.orcasinc.com/products/coachhub/'
-    years: '2014-2016'
+    years: '2014–2016'
     feature: true
     priority: 'live'
     tagline: 'Integrated Health Coaching'
@@ -94,7 +94,7 @@ clients:
 
   - name: 'Streams Resource Library'
     url: 'http://junyo.com/streams/'
-    years: '2013-2014'
+    years: '2013–2014'
     priority: 'other'
     status: 'updated'
     tagline: 'Curration Tools for Teachers'
@@ -116,7 +116,7 @@ clients:
 
   - name: 'Portfoliyo'
     source: 'https://github.com/oddbird/portfoliyo'
-    years: '2012-2013'
+    years: '2012–2013'
     priority: 'other'
     status: 'removed'
     tagline: 'Real-Time Communication for Parents, Teachers, and Students'
@@ -126,7 +126,7 @@ clients:
   - name: 'MozTrap'
     source: 'https://github.com/mozilla/moztrap'
     url: 'http://moztrap.mozilla.org'
-    years: '2011-2012'
+    years: '2011–2012'
     feature: true
     priority: 'live'
     tagline: 'Ditributed Quality Assurance Tools'
@@ -169,7 +169,7 @@ clients:
       url: 'http://provplan.org/'
 
   - name: 'Craftisan'
-    years: '2010-2011'
+    years: '2010–2011'
     priority: 'other'
     status: 'removed'
     client:
@@ -184,7 +184,7 @@ clients:
       url: 'http://www.thesteelwheels.com/'
 
   - name: 'The Carrot Project'
-    years: '2009-2010'
+    years: '2009–2010'
     priority: 'other'
     status: 'removed'
     client:
@@ -307,7 +307,7 @@ oss:
       and extensible.
     who:
       - author: 'carl'
-        role: 'maintainer, 2015-2016'
+        role: 'maintainer, 2015–2016'
       - author: 'jonny'
         role: 'contributor'
 
@@ -340,7 +340,7 @@ oss:
       and customizability by developers.
     who:
       - author: 'david'
-        role: 'core developer, 2008-2014'
+        role: 'core developer, 2008–2014'
 
   - name: 'pip'
     url: 'https://pip.pypa.io/'
@@ -352,7 +352,7 @@ oss:
       The PyPA recommended tool for installing Python packages.
     who:
       - author: 'carl'
-        role: 'maintainer, 2010-2012'
+        role: 'maintainer, 2010–2012'
 
   - name: 'virtualenv'
     url: 'https://virtualenv.pypa.io/'
@@ -364,7 +364,7 @@ oss:
       A tool for creating isolated 'virtual' python environments.
     who:
       - author: 'carl'
-        role: 'maintainer, 2010-2012'
+        role: 'maintainer, 2010–2012'
 
   - name: 'Compass'
     url: 'http://compass-style.org'
@@ -384,7 +384,7 @@ oss:
       that changed the landscape for designers developers.
     who:
       - author: 'miriam'
-        role: 'core developer, 2010-2016'
+        role: 'core developer, 2010–2016'
 
   - name: 'Warehouse'
     url: 'https://warehouse.readthedocs.io/'
@@ -430,6 +430,22 @@ oss:
 # ------
 
 giving:
+  - name: 'Electronic Frontier Foundation'
+    url: 'https://www.eff.org/'
+    type: 'donations'
+    years: '2016'
+    description: |
+      is the leading nonprofit organization
+      defending civil liberties in the digital world.
+
+  - name: 'Women Who Startup'
+    url: 'http://www.womenwhostartup.com/'
+    type: 'sponsorships'
+    years: '2017'
+    description: |
+      is a global community that connects and empowers
+      women in tech and business.
+
   - name: 'Django Software Foundation'
     url: 'https://www.djangoproject.com/foundation/'
     type: 'donations'
@@ -443,7 +459,7 @@ giving:
   - name: 'Goshen Ultimate Summer League'
     url: 'http://goshenultimate.com/'
     type: 'donations'
-    years: '2014-2016'
+    years: '2014–2016'
     description: |
       provides opportunities to learn, play,
       and teach spirited Ultimate in Goshen, IN and surrounding areas.
@@ -462,7 +478,7 @@ giving:
   - name: 'SassConf'
     url: 'http://sassconf.com/'
     type: 'sponsorships'
-    years: '2013-2015'
+    years: '2013–2015'
     description: |
       brings together a far-flung community of front-end developers,
       designers, architects, and web enthusiasts
@@ -474,7 +490,7 @@ giving:
   - name: 'Black Girls CODE'
     url: 'http://blackgirlscode.com/'
     type: 'donations'
-    years: '2013-2016'
+    years: '2013–2016'
     description: |
       has set out to prove to the world
       that girls of every color have the skills
@@ -506,7 +522,7 @@ giving:
   - name: 'Django Girls'
     url: 'https://djangogirls.org/'
     type: 'donations'
-    years: '2015, 2016'
+    years: '2015–2017'
     description: |
       is a non-profit organization
       and a community that empowers and helps women to organize free,
@@ -745,28 +761,11 @@ birds:
       - twitter: 'wlonk'
         github: 'wlonk'
 
+birds_former:
   - name: 'Sam Meyer-Reed'
     author: 'sam'
-    role: 'web development intern'
-    adr:
-      city: 'Waterloo'
-      state: 'ON'
-    no_posts: True
-    bio: |
-      Sam is studying Computer Science at the
-      University of Waterloo.
-      He loves to learn new things and eagerly contributes
-      to any part of the design process.
-      Sam has over three years of experience programming
-      in as many languages as he can get his hands on.
-      Aside from talking to computers, he also enjoys
-      stimulating conversation with humans,
-      coaxing music out of his guitar,
-      and looking up.
-    links:
-      - github: 'samwisemr'
-
-birds_former:
+    posts: False
+    url: 'https://github.com/samwisemr/'
   - name: 'Claudina Sarahe'
     author: 'claudina'
     posts: False

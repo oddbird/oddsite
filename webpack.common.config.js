@@ -16,7 +16,7 @@ const assetsJsonPath = path.join(__dirname, 'content', 'static');
 let jsOutput = '[name].bundle.js';
 let styleOutput = '[name].bundle.css';
 let mediaOutput = '[name].[ext]';
-let devtool = 'cheap-module-inline-source-map';
+let devtool = 'eval-source-map';
 let buildScript = 'gulp dev-build';
 
 // Override settings if running in production
@@ -166,13 +166,11 @@ module.exports = {
       },
       {
         test: /\.scss$/,
-        // @@@ Ideally this would be ``use: [...]``
-        // https://github.com/webpack/extract-text-webpack-plugin/issues/265
-        loader: ExtractTextPlugin.extract({
+        use: ExtractTextPlugin.extract({
           loader: [
             {
               loader: 'css-loader',
-              query: {
+              options: {
                 sourceMap: true,
                 minimize: process.env.NODE_ENV === 'production'
               }
@@ -180,7 +178,7 @@ module.exports = {
             { loader: 'postcss-loader' },
             {
               loader: 'sass-loader',
-              query: { sourceMap: true }
+              options: { sourceMap: true }
             }
           ]
         })

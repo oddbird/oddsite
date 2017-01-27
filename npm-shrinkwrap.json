@@ -918,9 +918,9 @@
       "dev": true
     },
     "caniuse-db": {
-      "version": "1.0.30000613",
+      "version": "1.0.30000617",
       "from": "caniuse-db@>=1.0.30000613 <2.0.0",
-      "resolved": "https://registry.npmjs.org/caniuse-db/-/caniuse-db-1.0.30000613.tgz",
+      "resolved": "https://registry.npmjs.org/caniuse-db/-/caniuse-db-1.0.30000617.tgz",
       "dev": true
     },
     "caseless": {
@@ -1775,9 +1775,9 @@
       "dev": true
     },
     "electron-to-chromium": {
-      "version": "1.2.0",
+      "version": "1.2.1",
       "from": "electron-to-chromium@>=1.2.0 <2.0.0",
-      "resolved": "https://registry.npmjs.org/electron-to-chromium/-/electron-to-chromium-1.2.0.tgz",
+      "resolved": "https://registry.npmjs.org/electron-to-chromium/-/electron-to-chromium-1.2.1.tgz",
       "dev": true
     },
     "elliptic": {
@@ -1996,9 +1996,9 @@
       "dev": true
     },
     "eslint": {
-      "version": "3.14.0",
-      "from": "eslint@3.14.0",
-      "resolved": "https://registry.npmjs.org/eslint/-/eslint-3.14.0.tgz",
+      "version": "3.14.1",
+      "from": "eslint@3.14.1",
+      "resolved": "https://registry.npmjs.org/eslint/-/eslint-3.14.1.tgz",
       "dev": true,
       "dependencies": {
         "strip-bom": {
@@ -2192,9 +2192,9 @@
       "dev": true
     },
     "extract-text-webpack-plugin": {
-      "version": "2.0.0-beta.5",
-      "from": "extract-text-webpack-plugin@2.0.0-beta.5",
-      "resolved": "https://registry.npmjs.org/extract-text-webpack-plugin/-/extract-text-webpack-plugin-2.0.0-beta.5.tgz",
+      "version": "2.0.0-rc.0",
+      "from": "extract-text-webpack-plugin@2.0.0-rc.0",
+      "resolved": "https://registry.npmjs.org/extract-text-webpack-plugin/-/extract-text-webpack-plugin-2.0.0-rc.0.tgz",
       "dev": true,
       "dependencies": {
         "async": {
@@ -4579,9 +4579,9 @@
       "dev": true
     },
     "loader-runner": {
-      "version": "2.2.0",
+      "version": "2.3.0",
       "from": "loader-runner@>=2.2.0 <3.0.0",
-      "resolved": "https://registry.npmjs.org/loader-runner/-/loader-runner-2.2.0.tgz",
+      "resolved": "https://registry.npmjs.org/loader-runner/-/loader-runner-2.3.0.tgz",
       "dev": true
     },
     "loader-utils": {
@@ -6939,9 +6939,9 @@
           "dev": true
         },
         "clean-css": {
-          "version": "4.0.0",
+          "version": "4.0.2",
           "from": "clean-css@>=4.0.0 <4.1.0",
-          "resolved": "https://registry.npmjs.org/clean-css/-/clean-css-4.0.0.tgz",
+          "resolved": "https://registry.npmjs.org/clean-css/-/clean-css-4.0.2.tgz",
           "dev": true
         },
         "glob": {
