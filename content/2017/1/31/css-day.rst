@@ -13,10 +13,10 @@ CSSDay 2016 Recap
 =================
 
 `CSS Day 2016`_ covered a wide range of topics for a one day conference
-including SVG, animation, color theory, design, layout and more but a theme
-started to emerge throughout the day which was focused on code
-architecture. Attendees heard a few different perspectives which were certainly
-interesting to listen to and compare.
+including SVG, animation, color theory, design, layout and more. Throughout
+the day, a focus on code architecture became a theme. Attendees heard a
+few different perspectives which were certainly interesting to listen
+to and compare.
 
 Below are the available videos and slides of each session, two of which are
 our very own OddBirds.
@@ -51,7 +51,7 @@ Applying the principles of functional programming to CSS by `Ben Adam`_
 
 .. raw:: html
 
-    <iframe width="853" height="480" src="https://www.youtube.com/J-riH-3PiyY" frameborder="0" allowfullscreen></iframe>
+    <iframe width="853" height="480" src="https://www.youtube.com/embed/J-riH-3PiyY" frameborder="0" allowfullscreen></iframe>
 
     <a href="http://css-day.surge.sh/#/?_k=xpchzn" class="btn">
       Slides »
@@ -65,7 +65,7 @@ Code Patterns for Pattern Making by `Miriam Suzanne`_
 
 .. raw:: html
 
-    <iframe width="853" height="480" src="https://www.youtube.com/iko02YqcAmA" frameborder="0" allowfullscreen></iframe>
+    <iframe width="853" height="480" src="https://www.youtube.com/embed/iko02YqcAmA" frameborder="0" allowfullscreen></iframe>
 
     <a href="https://oddbooksapp.com/book/pattern-making" class="btn">
       Slides »
@@ -79,7 +79,7 @@ The In-Betweeners of Responsive Web Design by `Pralie Dutzel`_
 
 .. raw:: html
 
-    <iframe width="853" height="480" src="https://www.youtube.com/DLMcBwwyZu0" frameborder="0" allowfullscreen></iframe>
+    <iframe width="853" height="480" src="https://www.youtube.com/embed/DLMcBwwyZu0" frameborder="0" allowfullscreen></iframe>
 
     <a href="http://praliedutzel.com/talks/betweeners-responsive-web-design/" class="btn">
       Slides »
@@ -93,7 +93,7 @@ Style Guide-Driven Development: Documentation that Does Work by `Jan Jorgensen`_
 
 .. raw:: html
 
-    <iframe width="853" height="480" src="https://www.youtube.com/jT66ITyme2Q" frameborder="0" allowfullscreen></iframe>
+    <iframe width="853" height="480" src="https://www.youtube.com/embed/jT66ITyme2Q" frameborder="0" allowfullscreen></iframe>
 
 .. _Jan Jorgensen: https://twitter.com/ramblinjan
 
@@ -132,7 +132,7 @@ Solving CSS at scale with your own UI framework by `CJ Cenizal`_
 
 .. raw:: html
 
-    <iframe width="853" height="480" src="https://www.youtube.com/_ohLo7_5iRI" frameborder="0" allowfullscreen></iframe>
+    <iframe width="853" height="480" src="https://www.youtube.com/embed/_ohLo7_5iRI" frameborder="0" allowfullscreen></iframe>
 
     <a href="http://cenizal.com/projects/solving_css_at_scale/" class="btn">
       Slides »
@@ -141,11 +141,14 @@ Solving CSS at scale with your own UI framework by `CJ Cenizal`_
 .. _CJ Cenizal: https://twitter.com/TheCJCenizal
 
 
+Showing Gratitude 
+=================
+
 The organizers and volunteers did a great job bringing the community together.
 
     “Helping to plan CSSDay with my friends as a conference by developers, for
     developers, has been one of the most rewarding and exciting things that
-    I've been able to do in my career. I’ve meet so many amazing and talented
+    I've been able to do in my career. I’ve met so many amazing and talented
     people along the way. It has been an experience.” - Brad Westfall
 
 This was the second year `Brad Westfall`_ organized this event. We are very
@@ -159,6 +162,7 @@ from CSS Day 2016. Send us a message via `Twitter`_ or join our public
 
 
 .. _CSS Day 2016: http://cssday.io/
+.. _Brad Westfall: https://twitter.com/bradwestfall
 .. _videos: https://www.youtube.com/playlist?list=PLfWvsMtBxHo2k3QAIOqqX_SnOCjZgdueT
 .. _Photos: https://drive.google.com/drive/folders/0B0xOcf_BzQVlZGJHaGVWa3Bhc0k
 .. _Twitter: https://twitter.com/oddbird
