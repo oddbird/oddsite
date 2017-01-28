@@ -23,7 +23,7 @@ our very own OddBirds.
 
 
 SVG: from Practical to Wild by `Sarah Drasner`_
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-----------------------------------------------
 
 .. raw:: html
 
@@ -33,7 +33,7 @@ SVG: from Practical to Wild by `Sarah Drasner`_
 
 
 Color Theory for people who code SVG and CSS by `Natalya Shelburne`_
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+--------------------------------------------------------------------
 
 .. raw:: html
 
@@ -47,7 +47,7 @@ Color Theory for people who code SVG and CSS by `Natalya Shelburne`_
 
 
 Applying the principles of functional programming to CSS by `Ben Adam`_
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-----------------------------------------------------------------------
 
 .. raw:: html
 
@@ -61,7 +61,7 @@ Applying the principles of functional programming to CSS by `Ben Adam`_
 
 
 Code Patterns for Pattern Making by `Miriam Suzanne`_
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-----------------------------------------------------
 
 .. raw:: html
 
@@ -75,7 +75,7 @@ Code Patterns for Pattern Making by `Miriam Suzanne`_
 
 
 The In-Betweeners of Responsive Web Design by `Pralie Dutzel`_
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+--------------------------------------------------------------
 
 .. raw:: html
 
@@ -89,7 +89,7 @@ The In-Betweeners of Responsive Web Design by `Pralie Dutzel`_
 
 
 Style Guide-Driven Development: Documentation that Does Work by `Jan Jorgensen`_
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+--------------------------------------------------------------------------------
 
 .. raw:: html
 
@@ -99,7 +99,7 @@ Style Guide-Driven Development: Documentation that Does Work by `Jan Jorgensen`_
 
 
 The Great State of Design by `Stacy Kvernmo`_
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+---------------------------------------------
 
 .. raw:: html
 
@@ -112,7 +112,7 @@ The Great State of Design by `Stacy Kvernmo`_
 
 
 jQuery out, CSS in by `John Boere`_
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-----------------------------------
 
 John’s video is yet to be posted, but his slides are available. His talk was a
 case study looking into the benefits of switching from jQuery to CSS for their
@@ -128,7 +128,7 @@ web and mobile applications.
 
 
 Solving CSS at scale with your own UI framework by `CJ Cenizal`_
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+----------------------------------------------------------------
 
 .. raw:: html
 
