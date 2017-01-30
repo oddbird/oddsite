@@ -17,6 +17,7 @@
 .bird-face {
   float: left;
   height: size('author');
+  margin-right: size('half-shim');
   overflow: hidden;
 }
 
@@ -68,6 +69,10 @@
   a {
     background-image: none;
     margin-right: size('shim');
+
+    [data-icon] {
+      padding: 1px; // avoid social icons getting cropped
+    }
 
 
     // Color treatments for inverted
