@@ -12,13 +12,11 @@ social:
     stackoverflow: '1930386'
     codepen: 'mirisuzanne'
 summary: |
-  Miriam
-  is a process manager,
+  Miriam Suzanne
+  is a product manager,
   user-experience designer,
-  front-end architect,
-  and co-founder of OddBird.
-  She is the creator of Susy,
-  and co-author of SitePoint’s Jump Start Sass.
+  writer, speaker,
+  and open-source developer.
 
 
 Miriam Suzanne

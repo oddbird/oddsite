@@ -2,48 +2,12 @@
 {% import "birds/macros.j2" as birds %}
 
 
-{# {% if config.birds %}
-  {% set all_posts = get_recent_blog_entries(1000) %}
+{# @@@ I'd rather filter this list down to `bird` pages before looping #}
+{% set all_pages = config.pages.values() %}
 
-  {% for bird in config.birds %}
-    {% set posts = all_posts|selectattr('author', 'equalto', bird.author)|list %}
-    {% set oss = config.oss_by_author[bird.author] %}
 
-    {{ birds.section(bird, oss, posts) }}
-  {% endfor %}
-{% endif %}
-
-{% if config.birds_former and module.show_former %}
-  <section data-module="birds-emeritus">
-    <h3>Birds Emeritus</h3>
-    <ul>
-      {% for bird in config.birds_former %}
-        {% set bird_url = link_to('author', author=bird.author) if bird.posts else bird.url %}
-        <li id="bird-{{ bird.author }}">
-          {{ utility.link_if(bird.name, bird_url) }}
-        </li>
-      {% endfor %}
-    </ul>
-  </section>
-{% endif %}
- #}
-
-{% for page in config.pages.values() %}
-  {% if page.config.bird and page.config.role %}
-    {% set author = page.config.bird %}
-    {% set posts = all_posts|selectattr('author', 'equalto', author)|list %}
-
-    <article data-module="bird">
-      {{ utility.icon(author, size='face') }}
-
-      <header>
-        {{ birds.title(page.title, author) }}
-        {{ birds.link_list(page.config.social[0]) }}
-      </header>
-
-      {{ page.render_summary() }}
-
-      {{ birds.blog_list(posts) }}
-    </article>
+{% for page in all_pages %}
+  {% if page.config.bird %}
+    {{ birds.section(page, config) }}
   {% endif %}
 {% endfor %}

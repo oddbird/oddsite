@@ -5,16 +5,7 @@
 <section data-module="contact-form">
   {% if module.intro %}
     <div>
-      {% if module.contact %}
-        {{ utility.icon(module.contact, size='face') }}
-        {% set contact_list = config.birds|selectattr('author', 'equalto', module.contact)|list %}
-        {% set contact = contact_list[0] %}
-        {% set contact_name = utility.link_if(contact.name, ['/birds/#bird', contact.author]|join('-')) %}
-
-        <p>{{ module.intro|safe|format(contact_name, contact.role) }}</p>
-      {% else %}
-        <p>{{ module.intro|safe }}</p>
-      {% endif %}
+      <p>{{ module.intro|safe }}</p>
     </div>
   {% endif %}
 

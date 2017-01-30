@@ -15,7 +15,7 @@
     <p>
       {{ blog.pubdate(ctx.pub_date) }}
       {% if ctx.author %}
-        by {{ birds.get_card(ctx.author, config) }}
+        by {{ birds.get_card(ctx.author) }}
       {% endif %}
       {{ blog.tags(ctx.tags) }}
     </p>
@@ -36,7 +36,7 @@
 
   {% if ctx.author %}
     <div data-module="rst-author">
-      {{ birds.get_card(ctx.author, config, details=true) }}
+      {{ birds.get_card(ctx.author, details=true) }}
     </div>
   {% endif %}
 
