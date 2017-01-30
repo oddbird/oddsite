@@ -8,17 +8,18 @@ Development setup
 Install Node.js
 ~~~~~~~~~~~~~~~
 
-OddSite development requires `Node.js`_ 7.4.0 and `npm`_ 4.1.1.
+OddSite development requires `Node.js`_ 7.4.0 and `yarn`_ 0.19.1.
 
-The right version of Node is bundled in the OddSite repo and can be unpacked
-inside the repo (in the git-ignored ``node/`` directory), so you don't have to
-install it system-wide (and possibly conflict with other projects wanting other
-Node versions). Run ``bin/unpack-node`` to unpack it into ``node/`` and install
-npm.
+The right versions of Node and yarn are bundled in the OddSite repo and can be
+unpacked inside the repo (in the git-ignored ``node/`` directory), so you don't
+have to install then system-wide (and possibly conflict with other projects
+wanting other Node/yarn versions). Run ``bin/unpack-node`` to unpack into
+``node/`` (this command also installs `yarn`_ for front-end package
+management).
 
 Next you need to make sure that whenever you are working on OddSite, you use
-that OddSite-specific Node and npm instead of any system-wide Node you may
-have. Updating your ``PATH`` will achieve that::
+that OddSite-specific Node instead of any system-wide Node you may have.
+Updating your ``PATH`` will achieve that::
 
     export ODDSITE=$HOME/projects/oddsite
     export PATH=$ODDSITE/node/bin:$ODDSITE/node_modules/.bin:$PATH
@@ -35,21 +36,24 @@ you don't know where that is, you can run ``cdvirtualenv`` with your OddSite
 virtualenv activated to find it). Your ``PATH`` will be updated when you
 ``workon oddsite`` and restored when you ``deactivate``.
 
-If you can run ``which npm`` and see a path inside your OddSite repo ending
-with ``.../node/bin/npm``, then you've got it set up right and can move on.
+If you can run ``which yarn`` and see a path inside your OddSite repo ending
+with ``.../node/bin/yarn``, then you've got it set up right and can move on.
 
 
 Install front-end dependencies
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-To install the necessary Node dependencies, run ``npm install``. You should
-re-run this command whenever ``package.json`` and/or ``npm-shrinkwrap.json``
-changes; it's safe to run anytime.
+To install the necessary Node dependencies, run ``yarn``. You should re-run
+this command whenever ``package.json`` and/or ``yarn.lock`` changes; it's safe
+to run anytime.
 
-After running ``npm install``, make sure that ``which gulp`` returns a path
-inside your OddSite repo (should end with ``.../node_modules/.bin/gulp``), not
-a system-wide path. If it doesn't, you may have set your ``PATH`` environment
+After running ``yarn``, make sure that ``which gulp`` returns a path inside
+your OddSite repo (should end with ``.../node_modules/.bin/gulp``), not a
+system-wide path. If it doesn't, you may have set your ``PATH`` environment
 variable incorrectly in the last step.
+
+To **add** or **update** a front-end package, install the package with ``yarn
+add <package_name>@<version> --exact [--dev]``.
 
 
 Install back-end dependencies
@@ -83,7 +87,7 @@ starting a local server, run ``gulp watch``. Refer to the ``gulpfile.js``
 source and `gulp`_ documentation for more info.
 
 .. _Node.js: http://nodejs.org
-.. _npm: https://www.npmjs.com/
+.. _yarn: https://yarnpkg.com/
 .. _virtualenvwrapper: http://virtualenvwrapper.readthedocs.org/en/latest/
 .. _Python: https://www.python.org/
 .. _virtualenv: http://www.virtualenv.org
