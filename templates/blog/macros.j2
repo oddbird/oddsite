@@ -34,10 +34,10 @@
 
 
 {% macro link(post) %}
-  {{ pubdate(post.pub_date) }} »
-  <a href="{{ link_to('page', slug=post.slug) }}" rel="bookmark">
+  <a class="linked-post-title" href="{{ link_to('page', slug=post.slug) }}" rel="bookmark">
     {{ post.title }}
   </a>
+  - {{ pubdate(post.pub_date) }}
 {% endmacro %}
 
 

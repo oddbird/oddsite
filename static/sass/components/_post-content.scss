@@ -8,3 +8,10 @@
 .section-title {
   margin-top: 0;
 }
+
+.linked-post-title {
+  &,
+  #{$link} {
+    background-image: none; // no underlines on related post title links
+  }
+}
