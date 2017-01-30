@@ -1,7 +1,8 @@
 // Site Navigation
 // ===============
 
-$nav-locations: 'about', 'blog', 'contact', 'work';
+$locations: 'projects', 'open-source', 'blog', 'birds', 'speaking', 'community', 'contact';
+$nav-locations: 'work', 'about';
 
 .nav-link {
   color: color('action-alt');
@@ -27,8 +28,16 @@ $nav-locations: 'about', 'blog', 'contact', 'work';
   }
 }
 
-@each $location in $nav-locations {
+@each $location in $locations {
   [data-location='#{$location}'] {
+    [data-active='#{$location}'] {
+      color: color('action');
+    }
+  }
+}
+
+@each $location in $nav-locations {
+  [data-nav-location='#{$location}'] {
     [data-active='#{$location}'] {
       color: color('action');
     }

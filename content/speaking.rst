@@ -1,5 +1,6 @@
 public: yes
-location: about
+location: speaking
+nav_location: about
 after:
   - include: 'community/_events.html.j2'
     title: 'Upcoming Events'

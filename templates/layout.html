@@ -23,7 +23,7 @@
               <ul class="is-dropdown" {{ utility.toggle_target(link.text, auto_closing=true) }}>
                 {% for sub in link.subnav %}
                   <li>
-                    <a href="{{ sub.url }}" class="nav-link">{{ sub.display_text or sub.text }}</a>
+                    <a href="{{ sub.url }}" class="nav-link" data-active="{{ sub.text }}">{{ sub.display_text or sub.text }}</a>
                   </li>
                 {% endfor %}
               </ul>
