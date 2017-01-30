@@ -33,8 +33,8 @@ Don'ts
 Paul, a developer at Google, starts with the don'ts. Don't use scroll events to
 create a parallax effect.
 
-  *"JavaScript doesn’t guarantee that parallaxing will
-  keep in step with the page’s scroll position."*
+  JavaScript doesn’t guarantee that parallaxing will
+  keep in step with the page’s scroll position.
 
 Trying to achieve a parallax look by changing background position doesn't work
 well either, negatively effecting the animation.
