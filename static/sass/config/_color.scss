@@ -35,8 +35,8 @@ $contrast-colors: (
 @include herman-add-colors('contrast-colors', $contrast-colors);
 
 
-// Patterm Colors
-// ------------
+// Pattern Colors
+// --------------
 /// Re-usable color patterns for application in different components.
 /// @group color
 /// @preview color-palette
@@ -57,3 +57,86 @@ $pattern-colors: (
 );
 
 @include herman-add-colors('pattern-colors', $pattern-colors);
+
+
+// Code Highlighting Colors
+// ------------------------
+/// Colors used with pygments
+/// @group color
+/// @preview color-palette
+/// @type Map
+$highlight-colors: (
+  'code-punct': hsl(250, 5%, 20%),
+  'code-error': hsl(10, 65%, 60%),
+
+  'code-comment': hsl(0, 0%, 63%),
+  'code-comment-multi': 'code-comment' ('adjust-hue': 10%),
+  'code-comment-preproc': 'code-comment' ('adjust-hue': 20%),
+  'code-comment-single': 'code-comment' ('adjust-hue': 30%),
+
+  'code-name': hsl(284, 70%, 35%),
+  'code-name-att': 'code-name' ('adjust-hue': 30%),
+  'code-name-builtin': 'code-name' ('adjust-hue': 60%),
+  'code-name-class': hsl(180, 100%, 32%),
+  'code-name-constant': 'code-name' ('adjust-hue': 160%),
+  'code-name-decorator': 'text' ('lighten': 20%),
+  'code-name-entity': 'code-name' ('adjust-hue': 220%),
+  'code-name-exception': 'code-name' ('adjust-hue': 240%),
+  'code-name-function': 'code-name' ('adjust-hue': 270%),
+  'code-name-label': 'code-name' ('adjust-hue': 300%),
+  'code-name-namespace': 'code-name' ('adjust-hue': 330%),
+  'code-name-other': 'code-name' ('adjust-hue': 360%),
+  'code-name-property': 'code-name' ('adjust-hue': 390%),
+  'code-name-tag': hsl(322, 40%, 50%),
+  'code-name-var': hsl(260, 50%, 42%),
+  'code-name-var-class': hsl(210, 50%, 42%),
+  'code-name-var-global': hsl(300, 60%, 32%),
+  'code-name-var-instance': hsl(135, 30%, 40%),
+  'code-name-bi-pseudo': 'code-name' ('adjust-hue': 320%, 'darken': 10%, 'saturate': 10%),
+
+  'code-operator': hsl(200, 10%, 50%),
+  'code-operator-word': hsl(200, 30%, 50%),
+
+  'code-key': hsl(283, 21%, 30%),
+  'code-key-constant': hsl(253, 61%, 30%),
+  'code-key-declaration': hsl(153, 61%, 30%),
+  'code-key-namespace': hsl(183, 61%, 30%),
+  'code-key-pseudo': hsl(103, 61%, 30%),
+  'code-key-reserved': hsl(3, 61%, 30%),
+  'code-key-type': hsl(110, 61%, 40%),
+
+  'code-lit-date': hsl(20, 50%, 40%),
+  'code-lit-num': hsl(270, 50%, 40%),
+  'code-lit-num-float': hsl(200, 50%, 40%),
+  'code-lit-num-hex': hsl(160, 50%, 40%),
+  'code-lit-num-int': hsl(200, 50%, 25%),
+  'code-lit-num-oct': hsl(130, 50%, 30%),
+  'code-lit-num-long': hsl(70, 80%, 30%),
+
+  'code-string': hsl(0, 15%, 25%),
+  'code-string-backtick': hsl(30, 15%, 25%),
+  'code-string-char': hsl(60, 15%, 25%),
+  'code-string-doc': hsl(90, 15%, 25%),
+  'code-string-double': hsl(120, 15%, 25%),
+  'code-string-escape': hsl(150, 15%, 25%),
+  'code-string-heredoc': hsl(180, 15%, 25%),
+  'code-string-interpol': hsl(210, 15%, 25%),
+  'code-string-other': hsl(240, 15%, 25%),
+  'code-string-regex': hsl(270, 15%, 25%),
+  'code-string-single': hsl(300, 15%, 25%),
+  'code-string-sym': hsl(330, 15%, 25%),
+
+  'code-gen': hsl(205, 58%, 22%),
+  'code-gen-del': hsl(235, 38%, 42%),
+  'code-gen-emph': hsl(265, 38%, 22%),
+  'code-gen-error': hsl(295, 48%, 32%),
+  'code-gen-heading': hsl(325, 48%, 22%),
+  'code-gen-inserted': hsl(355, 48%, 22%),
+  'code-gen-output': hsl(15, 58%, 22%),
+  'code-gen-prompt': hsl(55, 58%, 42%),
+  'code-gen-strong': hsl(135, 58%, 42%),
+  'code-gen-subhead': hsl(165, 58%, 42%),
+);
+
+@include herman-add-colors('highlight-colors', $highlight-colors);
+
