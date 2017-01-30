@@ -68,10 +68,12 @@ But we do have to render them *slightly* differently: the frontend has a
 skeleton page, and renders the templates into a particular element in the DOM.
 The backend needs to render a whole page every time. It turns out that you can
 put a Jinja2 ``extends`` directive in a conditional. So, our ``layout.njk``
-template begins with a simple incantation::
+template begins with a simple incantation:
+
+.. code:: jinja
 
     {% if server_rendered %}
-        {% extends 'base.html.j2' %}
+      {% extends 'base.html.j2' %}
     {% endif %}
 
 The variable ``server_rendered`` is set to ``True`` on the backend, and left
@@ -110,7 +112,7 @@ favor of the "stupid hack" approach.
 The shim we use to make "requests" from inside a request is something like
 this:
 
-.. code-block:: python
+.. code:: python
 
     from django.core.urlresolvers import resolve
     from django.http import Http404

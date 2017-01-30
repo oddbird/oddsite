@@ -19,10 +19,10 @@ else
     arch=x86
 fi
 
-nodefile="../requirements/node-v7.2.1-${platform}-${arch}.tar.xz"
+nodefile="../requirements/node-v7.4.0-${platform}-${arch}.tar.xz"
+yarnfile="../requirements/yarn-v0.20.0.tar.gz"
 
 tar --strip-components=1 -Jxf ${nodefile}
-
-PATH=`pwd`/bin:$PATH ./bin/npm install -g npm@4.0.5
+tar --strip-components=1 -xzf ${yarnfile}
 
 popd
