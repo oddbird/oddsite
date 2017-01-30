@@ -155,4 +155,4 @@ message via `Twitter`_ or join our public `Slack channel`_.
 
 .. _CSS Grid Layout: http://oddbird.net/2016/09/19/css-grid-layout/
 .. _Twitter: https://twitter.com/oddbird
-.. _Slack Channel: https://oddbirdfriends.slack.com
+.. _Slack Channel: http://friends.oddbird.net/

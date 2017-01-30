@@ -1,11 +1,16 @@
 machine:
   node:
     version: 7.4.0
+  environment:
+    PATH: "${PATH}:${HOME}/${CIRCLE_PROJECT_REPONAME}/node_modules/.bin"
 
 dependencies:
+  pre:
+    - curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 0.20.0
   override:
-    - npm install -g npm@4.1.1
-    - npm install
+    - yarn
+  cache_directories:
+    - ~/.cache/yarn
 
 test:
   override:
