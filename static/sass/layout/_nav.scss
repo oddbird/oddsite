@@ -31,10 +31,8 @@ $nav-locations: 'about', 'birds', 'work', 'speaking', 'open-source', 'blog', 'co
 @each $location in $nav-locations {
   [data-location='#{$location}'] {
     [data-active='#{$location}'] {
-      #{$link} {
-        color: color('action');
-        font-style: italic;
-      }
+      color: color('action');
+      font-style: italic;
     }
   }
 }
@@ -91,7 +89,7 @@ $nav-locations: 'about', 'birds', 'work', 'speaking', 'open-source', 'blog', 'co
     text-align: left;
     top: 100%;
   }
-  
+
   @include above('nav-wide') {
     left: 50%;
     min-width: size('dropdown-wide');
