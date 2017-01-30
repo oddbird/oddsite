@@ -57,6 +57,7 @@ a {
   #{$link} {
     @include text-underline('action');
     color: inherit;
+    font-weight: bold;
     text-decoration: none;
     transition: color 150ms;
   }

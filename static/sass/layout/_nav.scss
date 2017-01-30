@@ -6,7 +6,7 @@ $nav-locations: 'about', 'birds', 'work', 'speaking', 'open-source', 'blog', 'co
 .nav-link {
   color: color('action-alt');
   display: inline-block;
-  font-weight: 400;
+  font-weight: bold;
   padding: size('half-shim') size('shim');
   text-decoration: none;
 
@@ -24,7 +24,6 @@ $nav-locations: 'about', 'birds', 'work', 'speaking', 'open-source', 'blog', 'co
 
   &[aria-pressed='true'] {
     color: color('action');
-    font-style: italic;
   }
 }
 
@@ -32,7 +31,6 @@ $nav-locations: 'about', 'birds', 'work', 'speaking', 'open-source', 'blog', 'co
   [data-location='#{$location}'] {
     [data-active='#{$location}'] {
       color: color('action');
-      font-style: italic;
     }
   }
 }
