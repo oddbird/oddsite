@@ -141,15 +141,15 @@ Solving CSS at scale with your own UI framework by `CJ Cenizal`_
 .. _CJ Cenizal: https://twitter.com/TheCJCenizal
 
 
-Showing Gratitude 
+Showing Gratitude
 =================
 
 The organizers and volunteers did a great job bringing the community together.
 
-    “Helping to plan CSSDay with my friends as a conference by developers, for
+    *“Helping to plan CSSDay with my friends as a conference by developers, for
     developers, has been one of the most rewarding and exciting things that
     I've been able to do in my career. I’ve met so many amazing and talented
-    people along the way. It has been an experience.” - Brad Westfall
+    people along the way. It has been an experience.”* - Brad Westfall
 
 This was the second year `Brad Westfall`_ organized this event. We are very
 thankful for conference organizers, like Brad and his team, who post `videos`_
