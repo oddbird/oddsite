@@ -33,20 +33,6 @@ def get_page_key(page):
     return page.slug
 
 
-def setup(builder):
-    builder.jinja_env.filters['show_all_attrs'] = show_all_attrs
-    builder.jinja_env.filters['filter_pages'] = filter_pages
-    page_configs = {}
-    for page in get_pages(builder):
-        page_config = get_page_context(page)
-        page_key = get_page_key(page)
-        page_configs[page_key] = page_config
-
-    builder.config.stack.append({
-        'pages': page_configs,
-    })
-
-
 def show_all_attrs(value):
     """For debugging."""
     res = []
@@ -83,3 +69,18 @@ def filter_pages(values, key, operator=None, value=None):
         in values
         if predicate(x, key)
     ]
+
+
+def setup(builder):
+    builder.jinja_env.filters['show_all_attrs'] = show_all_attrs
+    builder.jinja_env.filters['filter_pages'] = filter_pages
+    builder.jinja_env.globals['all_pages'] = get_pages(builder)
+    page_configs = {}
+    for page in get_pages(builder):
+        page_config = get_page_context(page)
+        page_key = get_page_key(page)
+        page_configs[page_key] = page_config
+
+    builder.config.stack.append({
+        'pages': page_configs,
+    })

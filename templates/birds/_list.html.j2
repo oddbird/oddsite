@@ -3,9 +3,9 @@
 
 
 {# @@@ I'd rather filter this list down to `bird` pages before looping #}
-{% set all_pages = config.pages.values()|filter_pages('bird') %}
+{% set bird_pages = all_pages|filter_pages('bird') %}
 
 
-{% for page in all_pages %}
+{% for page in bird_pages %}
   {{ birds.section(page, config) }}
 {% endfor %}
