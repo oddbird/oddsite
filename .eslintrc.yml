@@ -59,9 +59,6 @@ rules:
   handle-callback-err:
     - 1
     - ^.*(e|E)rr
-  id-blacklist:
-    - 2
-    - data
   id-length:
     - 2
     - properties: never
@@ -127,6 +124,7 @@ rules:
   no-extra-parens:
     - 2
     - functions
+  no-fallthrough: 2
   no-floating-decimal: 2
   no-global-assign: 2
   no-implicit-coercion: 2
@@ -143,6 +141,7 @@ rules:
   no-mixed-requires:
     - 2
     - true
+  no-multi-assign: 2
   no-multi-spaces: 2
   no-multi-str: 2
   no-multiple-empty-lines: 2
@@ -221,7 +220,11 @@ rules:
     - after
   prefer-arrow-callback: 2
   prefer-const: 2
+  prefer-destructuring:
+    - 2
+    - array: false
   prefer-numeric-literals: 2
+  prefer-promise-reject-errors: 2
   prefer-rest-params: 2
   prefer-spread: 2
   prefer-template: 2

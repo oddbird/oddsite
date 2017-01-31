@@ -8,7 +8,6 @@ const webpackConf = extend(true, {}, require('./webpack.common.config.js'));
 
 webpackConf.plugins.push(
   new webpack.optimize.UglifyJsPlugin({
-    compress: { warnings: false },
     sourceMap: true
   })
 );
