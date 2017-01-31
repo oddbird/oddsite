@@ -1,6 +1,5 @@
 public: yes
 location: projects
-nav_location: work
 after:
   - include: 'projects/_list.html.j2'
     title: 'Live Client Projects'

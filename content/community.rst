@@ -1,6 +1,5 @@
 public: yes
 location: community
-nav_location: about
 after:
   - include: 'community/_giving.html.j2'
     title: 'Sponsoring <i>&</i> Donations'

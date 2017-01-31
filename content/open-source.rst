@@ -1,6 +1,5 @@
 public: yes
 location: open-source
-nav_location: work
 after:
   - include: 'projects/_list.html.j2'
     title: 'Software We Created'

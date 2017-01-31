@@ -1,8 +1,15 @@
 // Site Navigation
 // ===============
 
-$locations: 'projects', 'open-source', 'blog', 'birds', 'speaking', 'community', 'contact';
-$nav-locations: 'work', 'about';
+$nav-locations: (
+  'projects': 'work',
+  'open-source': 'work',
+  'birds': 'about',
+  'speaking': 'about',
+  'community': 'about',
+  'blog': null,
+  'contact': null,
+);
 
 .nav-link {
   color: color('action-alt');
@@ -29,17 +36,10 @@ $nav-locations: 'work', 'about';
   }
 }
 
-@each $location in $locations {
+@each $location, $parent in $nav-locations {
   [data-location='#{$location}'] {
-    [data-active='#{$location}'] {
-      color: color('action');
-    }
-  }
-}
-
-@each $location in $nav-locations {
-  [data-nav-location='#{$location}'] {
-    [data-active='#{$location}'] {
+    [data-active='#{$location}'],
+    [data-active='#{$parent}'] {
       color: color('action');
     }
   }
@@ -57,7 +57,7 @@ $nav-locations: 'work', 'about';
   padding: 0 size('shim');
   width: 100%;
 
-  > li {
+  .nav-item {
     display: inline-flex;
 
     &:nth-of-type(2) {

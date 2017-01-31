@@ -1,6 +1,5 @@
 public: yes
 location: birds
-nav_location: about
 after:
   - include: 'birds/_list.html.j2'
     show_former: true
