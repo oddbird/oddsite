@@ -5,3 +5,11 @@
   padding-top: size('gutter');
   position: relative;
 }
+
+[data-module='rst-body'] {
+  section {
+    + section {
+      margin-top: size('double-gutter');
+    }
+  }
+}
