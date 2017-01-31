@@ -13,12 +13,11 @@ CSSDay 2016 Recap
 =================
 
 `CSS Day 2016`_ covered a wide range of topics for a one day conference
-including SVG, animation, color theory, design, layout and more. Throughout
-the day, a focus on code architecture became a theme. Attendees heard a
-few different perspectives which were certainly interesting to listen
-to and compare.
+including SVG, animation, color theory, design, layout and more. Throughout the
+day, a focus on code architecture was a theme. Attendees heard a few different
+perspectives which were interesting to listen to and compare.
 
-Below are the available videos and slides of each session, two of which are
+Below are the available videos and slides of each session, including two from
 our very own OddBirds.
 
 
@@ -115,8 +114,8 @@ jQuery out, CSS in by `John Boere`_
 -----------------------------------
 
 John’s video is yet to be posted, but his slides are available. His talk was a
-case study looking into the benefits of switching from jQuery to CSS for their
-web and mobile applications.
+case study looking into the benefits of switching from jQuery to CSS for web
+and mobile applications.
 
 .. raw:: html
 
@@ -142,18 +141,18 @@ Solving CSS at scale with your own UI framework by `CJ Cenizal`_
 
 
 Showing Gratitude
-=================
+-----------------
 
 The organizers and volunteers did a great job bringing the community together.
 
     *“Helping to plan CSSDay with my friends as a conference by developers, for
     developers, has been one of the most rewarding and exciting things that
     I've been able to do in my career. I’ve met so many amazing and talented
-    people along the way. It has been an experience.”* - Brad Westfall
+    people along the way. It has been an experience.”* —Brad Westfall
 
 This was the second year `Brad Westfall`_ organized this event. We are very
-thankful for conference organizers, like Brad and his team, who post `videos`_
-of the sessions making this knowledge accessible for those who could not join
+thankful for conference organizers like Brad and his team, who post `videos`_
+of the sessions, making this knowledge accessible for those who could not join
 us live. `Photos`_ from CSSDay are also posted.
 
 As always, we would love to discuss the content covered in these videos shared
@@ -166,4 +165,4 @@ from CSS Day 2016. Send us a message via `Twitter`_ or join our public
 .. _videos: https://www.youtube.com/playlist?list=PLfWvsMtBxHo2k3QAIOqqX_SnOCjZgdueT
 .. _Photos: https://drive.google.com/drive/folders/0B0xOcf_BzQVlZGJHaGVWa3Bhc0k
 .. _Twitter: https://twitter.com/oddbird
-.. _Slack Channel: https://oddbirdfriends.slack.com
+.. _Slack Channel: http://friends.oddbird.net
