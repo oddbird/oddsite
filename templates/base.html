@@ -37,6 +37,17 @@
   <meta name="MobileOptimized" content="320">
   <meta name="viewport" content="initial-scale=1">
 
+  <!-- Open Graph -->
+  {% set image = post.config.image[0].src if post.config.image else '/static/images/blog/oddsite.jpg' %}
+  <meta property="og:image" content="{{ config.canonical_url }}static/images/{% block og_image %}{{ image }}{% endblock %}" />
+  <meta property="og:url" content="{{ config.canonical_url }}{% block og_url %}{% endblock %}" />
+  <meta property="og:title" content="{% block og_title %}{{ post.title }}{% endblock %}" />
+  <meta property="og:description" content="{% block og_description %}{{ post.summary }}{% endblock %}" />
+  <meta name=​"twitter:​card" content=​"">​
+  <meta name=​"twitter:​description" content=​"{% block og_description %}{{ post.summary }}{% endblock %}">​
+  <meta name=​"twitter:​title" content=​"{% block og_title %}{{ post.title }}{% endblock %}">​
+  <meta name=​"twitter:​image" content=​"{{ config.canonical_url }}static/images/{% block og_image %}{{ image }}{% endblock %}">​
+
   <!--iOS. Delete if not required -->
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
