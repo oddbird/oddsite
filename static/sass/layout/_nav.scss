@@ -10,6 +10,7 @@ $nav-locations: 'work', 'about';
   font-weight: bold;
   padding: size('half-shim') size('shim');
   text-decoration: none;
+  white-space: nowrap;
 
   @include above('nav-narrow') {
     padding: size('shim') size('gutter');
@@ -44,17 +45,17 @@ $nav-locations: 'work', 'about';
   }
 }
 
+.nav {
+  position: relative;
+}
+
 .main-nav {
   display: flex;
   justify-content: space-between;
   margin: negative('gutter') auto 0;
   max-width: size('nav-narrow');
+  padding: 0 size('shim');
   width: 100%;
-
-  @include below('nav-narrow') {
-    margin-top: negative('gutter');
-    padding: 0 size('shim');
-  }
 
   > li {
     display: inline-flex;
@@ -63,7 +64,7 @@ $nav-locations: 'work', 'about';
       flex-grow: 1;
     }
 
-    @include above('nav-narrow') {
+    @include above('nav-medium') {
       position: relative;
     }
   }
@@ -73,34 +74,27 @@ $nav-locations: 'work', 'about';
   background-color: color('background');
   border-bottom: size('border') solid color('border');
   box-shadow: 0 6px 5px color('shadow');
+  left: 0;
+  padding: size('gutter') + size('half-shim') 0 size('shim');
   position: absolute;
+  right: 0;
+  top: 100%;
+  width: 100vw;
   z-index: 1;
 
   .nav-link {
     display: block;
-  }
-
-  @include below('nav-narrow') {
-    left: 0;
-    margin-top: 2.45rem; // magic number
-    padding: size('half-shim')  size('shim');
-    right: 0;
+    padding: size('half-shim') size('gutter');
     text-align: left;
-    width: 100vw;
   }
 
-  @include above('nav-narrow') {
-    left: 0;
+  @include above('nav-medium') {
     min-width: size('dropdown-narrow');
-    padding: size('gutter') 0 size('shim');
-    text-align: left;
-    top: 100%;
+    right: auto;
+    width: auto;
   }
 
   @include above('nav-wide') {
-    left: 50%;
     min-width: size('dropdown-wide');
-    text-align: center;
-    transform: translateX(-50%);
   }
 }

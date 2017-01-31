@@ -51,15 +51,16 @@ $spacing-sizes: (
 // Pattern Sizes
 // -------------
 /// @group scale
-/// @preview sizes; style: ruler
+/// @preview sizes; style: output-only
 /// @link http://oddbird.net/accoutrement-scale/sassdoc/
 ///   Accoutrement Scale
 $pattern-sizes: (
   'border': 8px,
-  'nav-narrow': 26rem,
+  'nav-narrow': 28rem,
+  'nav-medium': 35rem,
   'nav-wide': 50rem,
-  'dropdown-narrow': 9rem, 
-  'dropdown-wide': 14rem, 
+  'dropdown-narrow': 9rem,
+  'dropdown-wide': 14rem,
 );
 
 @include herman-add-sizes('pattern-sizes', $pattern-sizes);

@@ -1131,6 +1131,8 @@ events_past:
 # ----------
 
 nav:
+  - text: 'blog'
+    url: '/blog/'
   - text: 'work'
     subnav:
       - text: 'projects'
@@ -1139,8 +1141,6 @@ nav:
       - text: 'open-source'
         display_text: 'open-source contributions'
         url: '/open-source/'
-  - text: 'blog'
-    url: '/blog/'
   - text: 'about'
     subnav:
       - text: 'birds'
