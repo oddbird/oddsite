@@ -1,6 +1,6 @@
 public: yes
 author: kit
-tags: [stupid server tricks]
+tags: ['single-page applications', 'server-side rendering', javascript, jinja2, django, python, code]
 image:
   - src: '2016/spa.jpg'
 summary: |

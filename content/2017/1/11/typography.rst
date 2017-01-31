@@ -1,6 +1,6 @@
 public: yes
 author: sondra
-tags: ['oddsite', 'open design']
+tags: ['oddsite', 'open design', 'typography', 'design']
 image:
   - src: '2017/typography/type.jpg'
 summary: |

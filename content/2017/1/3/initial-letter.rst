@@ -1,6 +1,6 @@
 public: yes
 author: stacy
-tags: [css, design]
+tags: [css, design, code, typography]
 image:
   - src: '2017/initial-letter/drop-caps.jpg'
 summary: |

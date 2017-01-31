@@ -1,6 +1,6 @@
 public: no
 author: miriam
-tags: ['oddsite', 'open design']
+tags: ['oddsite', 'open design', 'process']
 image:
   - src: 'oddsite.jpg'
 after:

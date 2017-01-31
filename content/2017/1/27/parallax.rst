@@ -1,6 +1,6 @@
 public: yes
 author: sondra
-tags: [design, recommend]
+tags: [design, recommendations]
 image:
   - src: '2017/parallax/parallax.jpg'
 summary: |

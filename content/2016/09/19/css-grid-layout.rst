@@ -1,6 +1,6 @@
 public: yes
 author: stacy
-tags: ['grids', 'css grid', 'layout', 'design']
+tags: ['grids', 'css grid', 'layout', 'design', 'code']
 image:
   - src: 'cssgriddemo.jpg'
 summary: |

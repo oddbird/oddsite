@@ -1,6 +1,6 @@
 public: yes
 author: sondra
-tags: ['oddsite', 'open design']
+tags: ['oddsite', 'open design', 'color', 'design']
 image:
   - src: '2017/colors/color.jpg'
 summary: |

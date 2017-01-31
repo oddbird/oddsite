@@ -1,5 +1,5 @@
 public: yes
-tags: [sass, maps, code]
+tags: [sass, 'sass maps', code]
 author: miriam
 image:
   - src: 'sass33.jpg'
