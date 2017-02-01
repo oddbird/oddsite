@@ -2,7 +2,7 @@ public: yes
 bird: stacy
 role: 'user-experience developer'
 adr:
-  - city: 'Naperville'
+  - city: 'Aurora'
     state: 'IL'
 social:
   - twitter: 'stacykvernmo'
@@ -11,7 +11,7 @@ social:
     codepen: 'stacy'
 summary: |
   `Stacy Kvernmo`_
-  is an interface and experience designer,
+  is a user experience designer,
   front-end developer,
   speaker,
   and podcast superfan.
@@ -22,7 +22,7 @@ summary: |
 Stacy Kvernmo
 =============
 
-With over 14 years of experience,
+With over 15 years of experience,
 Stacy takes the lead on interface development,
 architecting accessible and maintainable
 HTML, CSS, and Sass.
