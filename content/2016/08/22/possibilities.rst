@@ -1,6 +1,6 @@
 public: yes
 author: sondra
-tags: ['oddsite', 'open design', 'research', 'ux']
+tags: ['oddsite', 'open design', 'research', 'ux', 'community']
 image:
   - src: 'bwdraft.jpg'
 summary: |
