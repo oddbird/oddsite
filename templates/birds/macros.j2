@@ -63,7 +63,7 @@
   {# Get their author-url, if it's available #}
   {% set blog_url = link_to('author', author=author) if has_posts else none %}
   {# Link to blog-archive, birds-section, or none #}
-  {% set url = fallback if (not page) else (blog_url or ['/birds/#bird', author]|join('-')) %}
+  {% set url = blog_url or fallback or (['/birds/#bird', author]|join('-') if page else none) %}
 
   {{ utility.link_if(name, url) }}
 {% endmacro %}
