@@ -1,22 +1,23 @@
 {% import 'utility.macros.j2' as utility %}
 {% import "birds/macros.j2" as birds %}
 
-{% set posts = get_blog_entries_by_bird(author) %}
 
+{# `show` allows you to define an arbitrary, ordered list of birds to display #}
 {% if module.show %}
   {% for author in module.show %}
-    {% set page = all_pages|filter_pages('bird', 'eq', author)|first %}
+    {% set page = all_pages|filter_pages('bird', 'eq', author)|get_page %}
     {# @@@ Moving OSS data into pages will help clean this up... #}
     {% set oss = config.oss_by_author[author] %}
 
-    {{ birds.section(page, oss, posts) }}
+    {{ birds.section(page, oss) }}
   {% endfor %}
 {% else %}
+  {# If no list is given, show all bird pages... #}
   {% for page in all_pages|filter_pages('bird') %}
     {% set author = page.config.bird %}
     {# @@@ Moving OSS data into pages will help clean this up... #}
     {% set oss = config.oss_by_author[author] %}
 
-    {{ birds.section(page, oss, posts) }}
+    {{ birds.section(page, oss) }}
   {% endfor %}
 {% endif %}

@@ -1,7 +1,7 @@
 {% import "utility.macros.j2" as utility %}
 
 
-{% macro section(page, oss=none, posts=none) %}
+{% macro section(page, oss=none) %}
   {% set author = page.config.bird %}
 
   <div data-module='bird' class="h-card" id="bird-{{ author }}">
@@ -15,7 +15,9 @@
     {{ page.render_contents() }}
 
     {{ oss_list(author, oss) }}
-    {{ blog_list(posts) }}
+    {{ blog_list(
+      posts=get_blog_entries_by_bird(author)
+      ) }}
   </div>
 {% endmacro %}
 
@@ -37,9 +39,7 @@
     </div>
   {% else %}
     <span class="h-card">
-      <a href="/birds/#bird-{{ page.config.bird }}">
-        {{ page.title }}
-      </a>
+      {{ name_link(page.config.bird, page) }}
     </span>
   {% endif %}
 {% endmacro %}
@@ -47,21 +47,31 @@
 
 {% macro get_card(author, details=false) %}
   {{ card(
-    page=all_pages|filter_pages('bird', 'eq', author)|first,
+    page=all_pages|filter_pages('bird', 'eq', author)|get_page,
     details=details
     ) }}
 {% endmacro %}
 
 
-{% macro title(name, author, no_posts=none) %}
-  <h2>
-    {% if no_posts %}
-      {{ name }}
-    {% else %}
-      <a href="{{ link_to('author', author=author) }}" class="u-url">
-        {{ name }}
-      </a>
-    {% endif %}
+{% macro name_link(author, page=none, fallback=none) %}
+  {# Get the birds's page #}
+  {% set page = page if page else all_pages|filter_pages('bird', 'eq', author)|get_page %}
+  {# Set their name, if it's available #}
+  {% set name = page.title or author %}
+  {# Find out if they've written any posts #}
+  {% set has_posts = get_blog_entries_by_bird(author)|length %}
+  {# Get their author-url, if it's available #}
+  {% set blog_url = link_to('author', author=author) if has_posts else none %}
+  {# Link to blog-archive, birds-section, or none #}
+  {% set url = fallback if (not page) else (blog_url or ['/birds/#bird', author]|join('-')) %}
+
+  {{ utility.link_if(name, url) }}
+{% endmacro %}
+
+
+{% macro title(name, author) %}
+  <h2 class="h-card">
+    {{ name_link(author) }}
   </h2>
 {% endmacro %}
 

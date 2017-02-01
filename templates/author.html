@@ -12,6 +12,6 @@
 
 {% block list_intro %}
   {{ birds.section(
-    page=all_pages|filter_pages('bird', 'eq', author.name)|first
+    page=all_pages|filter_pages('bird', 'eq', author.name)|get_page
     ) }}
 {% endblock list_intro %}

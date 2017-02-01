@@ -1,0 +1,21 @@
+{% import "birds/macros.j2" as birds %}
+
+{% set former = all_pages|filter_pages('former') %}
+
+{% if former %}
+<div data-module="birds-former">
+  <h2>OddBirds Emeritus...</h2>
+  <ul>
+    {% for page in former %}
+      {% set author = page.config.bird %}
+      {% set data = page.config.former[0] %}
+      <li id="bird-{{ author }}">
+        <b class="h-card">
+          {{ birds.name_link(author, page, data.url) }}
+        </b>
+        [{{ data.dates }}]
+      </li>
+    {% endfor %}
+  </ul>
+</div>
+{% endif %}

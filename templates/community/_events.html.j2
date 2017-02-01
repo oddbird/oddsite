@@ -1,11 +1,11 @@
 {% import 'utility.macros.j2' as utility %}
+{% import 'birds/macros.j2' as birds %}
 
 {% macro show_talk(who) %}
-  {% set pages = all_pages|filter_pages('bird', 'eq', who.author) %}
-  {% set page = pages|first if pages|length else none %}
+  {% set page = all_pages|filter_pages('bird', 'eq', who.author)|get_page %}
 
   <li>
-    {{ utility.link_if(page.title or who.author, ['/birds/#bird', who.author]|join('-')) }}
+    {{ birds.name_link(who.author, page) }}
     {% if who.role %}[{{ who.role }}]{% endif %}
     {% if who.title or who.slides %}
       » {{ utility.link_if(who.title|safe or 'slides', who.slides or who.video) }}

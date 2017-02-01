@@ -565,24 +565,6 @@ giving:
       and teaching ally skills.
 
 
-# OddBirds
-# --------
-
-birds_former:
-  - name: 'Claudina Sarahe'
-    author: 'claudina'
-    url: 'https://twitter.com/itsmisscs'
-  - name: 'Rachel Nabors'
-    author: 'rachel'
-    url: 'https://twitter.com/rachelnabors'
-  - name: 'Una Kravets'
-    author: 'una'
-    url: 'https://twitter.com/Una'
-  - name: 'Sam Meyer-Reed'
-    author: 'sam'
-    url: 'https://github.com/samwisemr'
-
-
 # Past Talks
 # ----------
 
