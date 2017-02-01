@@ -9,7 +9,7 @@ summary: |
   I've documented here my explorations in getting that to work.
 
 
-PostgreSQL transactions and SQLAlchemy
+PostgreSQL Transactions and SQLAlchemy
 ======================================
 
 `SQLAlchemy`_ defaults to implicitly opening a new transaction on your first
@@ -67,7 +67,7 @@ of your connection object to ``True``:
 .. _autocommit property: http://initd.org/psycopg/docs/connection.html#connection.autocommit
 
 
-Postgres has it right
+Postgres Has it Right
 ---------------------
 
 I prefer the 'autocommit' model. It's simple, explicit, and
@@ -155,7 +155,7 @@ But I'm using Postgres, I know how its native autocommit mode works, and that's
 the behavior I want with SQLAlchemy. Can I make that work?
 
 
-SQLAlchemy's autocommit mode -- not what you think
+SQLAlchemy's Autocommit Mode -- Not What You Think
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 I soon found `autocommit mode`_ in SQLAlchemy's documentation, and thought I
@@ -167,7 +167,7 @@ database. It doesn't put the database connections into true autocommit mode, so
 it still wraps reads in unnecessary transactions.
 
 
-Turning on real autocommit
+Turning on Real Autocommit
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Happily, setting all of SQLAlchemy's psycopg2 connections into real autocommit
@@ -195,7 +195,7 @@ But regardless, ``isolation_level='AUTOCOMMIT'`` is the incantation needed to
 get all of our SQLAlchemy psycopg2 connections into true autocommit mode.
 
 
-Starting a transaction
+Starting a Transaction
 ~~~~~~~~~~~~~~~~~~~~~~
 
 If we didn't want to use transactions at all, this would be all we
@@ -254,7 +254,7 @@ autoflush and autoexpire features. So far I haven't done the latter; waiting to
 see what (if any) problems ensue in practice.
 
 
-Back to autocommit when the transaction ends
+Back to Autocommit When the Transaction Ends
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 One thing remains lacking from our implementation. When a transaction ends, we
@@ -305,7 +305,7 @@ autocommit on all the appropriate connections:
             del dconns_by_trans[transaction]
 
 
-A transaction context manager
+A Transaction Context Manager
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Now that we have autocommit mode working, here's an example of a rough

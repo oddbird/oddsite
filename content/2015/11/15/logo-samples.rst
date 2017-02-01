@@ -10,7 +10,7 @@ summary: |
 
 
 Brand Identity: Logos
-====================================================
+=====================
 
 We've helped develop several brands over the years.
 Here are a few of our favorites...

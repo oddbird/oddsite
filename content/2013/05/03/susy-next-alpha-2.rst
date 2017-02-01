@@ -163,7 +163,7 @@ for that particular container:
 
   @include container(show);
 
-Galleries (formerly "isolate-grid")
+Galleries (Formerly "isolate-grid")
 -----------------------------------
 
 You can now create a simple gallery layout

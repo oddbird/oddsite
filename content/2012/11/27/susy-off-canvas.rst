@@ -17,7 +17,7 @@ summary: |
   .. _Susy: http://susy.oddbird.net/
 
 
-Off-canvas layout with Susy
+Off-Canvas Layout with Susy
 ===========================
 
 **UPDATE**:

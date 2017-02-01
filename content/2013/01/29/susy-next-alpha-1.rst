@@ -14,7 +14,7 @@ summary: |
   than usable interface.
 
 
-Susy Next: The first alpha
+Susy Next: The First Alpha
 ==========================
 
 Last night we released
