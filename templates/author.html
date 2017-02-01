@@ -11,5 +11,7 @@
 {% endblock %}
 
 {% block list_intro %}
-  {{ birds.get_card(author.name, config) }}
+  {{ birds.section(
+    page=all_pages|filter_pages('bird', 'eq', author.name)|get_page
+    ) }}
 {% endblock list_intro %}

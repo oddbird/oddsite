@@ -1,7 +1,8 @@
 {% import 'utility.macros.j2' as utility %}
+{% import 'birds/macros.j2' as birds %}
 
 
-{% macro list(project, config) %}
+{% macro list(project, named_states=[]) %}
 <article>
   <h3>
     {{ utility.link_if(project.name, project.url) }}
@@ -17,7 +18,7 @@
   {% if project.client %}
     {{ for(project.client, project.years) }}
   {% else %}
-    {{ who(project.who, config) }}
+    {{ who(project.who) }}
   {% endif %}
 
   {% if project.description or project.status %}
@@ -25,7 +26,6 @@
       {{ project.description }}
 
       {% if project.status %}
-        {% set named_states = config.project_status[0] %}
         <em>{{ named_states[project.status] or project.status }}</em>
       {% endif %}
     </p>
@@ -34,7 +34,7 @@
 {% endmacro %}
 
 
-{% macro feature(project, config) %}
+{% macro feature(project) %}
   <article>
     <h3>
       {{ utility.link_if(project.name, project.url) }}
@@ -46,7 +46,7 @@
     {% if project.client %}
       {{ for(project.client) }}
     {% else %}
-      {{ who(project.who, config) }}
+      {{ who(project.who) }}
     {% endif %}
 
     {{ pullquote(project.quote) }}
@@ -77,22 +77,20 @@
   </div>
 {% endmacro %}
 
-{% macro who(contributors, config) %}
+
+{% macro who(contributors) %}
   {% if contributors %}
     <ul>
       {% for contributor in contributors %}
-        {% set bird_list = config.birds|selectattr('author', 'equalto', contributor.author)|list %}
-        {% set bird = bird_list[0] %}
+        {% set page = all_pages|filter_pages('bird', 'eq', contributor.author)|get_page %}
 
-        {% if bird %}
-          <li>
-            {{ utility.link_if(
-              bird.name,
-              ['/birds/#bird', bird.author]|join('-')
-            ) }}
-            [{{ contributor.role }}]
-          </li>
-        {% endif %}
+        <li>
+          {{ birds.name_link(
+            author=contributor.author,
+            page=page
+          ) }}
+          [{{ contributor.role }}]
+        </li>
       {% endfor %}
     </ul>
   {% endif %}
