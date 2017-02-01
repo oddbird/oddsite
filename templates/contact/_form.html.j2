@@ -4,8 +4,16 @@
 
 <section data-module="contact-form">
   {% if module.intro %}
-    <div>
-      <p>{{ module.intro|safe }}</p>
+    <div class="contact-intro">
+      {% if module.contact %}
+        {{ utility.icon(module.contact, size='face') }}
+        {% set contact = all_pages|filter_pages('bird', 'eq', module.contact)|first %}
+        {% set contact_name = utility.link_if(contact.title, ['/birds/#bird', contact.config.bird]|join('-')) %}
+
+        <p>{{ module.intro|safe|format(contact_name, contact.config.role) }}</p>
+      {% else %}
+        <p>{{ module.intro|safe }}</p>
+      {% endif %}
     </div>
   {% endif %}
 

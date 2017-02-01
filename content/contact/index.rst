@@ -2,13 +2,15 @@ public: yes
 location: contact
 before:
   - include: 'contact/_form.html.j2'
+    contact: 'miriam'
     intro: |
-      We're committed to keeping our team small and personal,
-      so the people you meet at the beginning of the process
-      are the same people who help you design, build,
-      and launch your application.
+      We're always here and happy to talk —
+      whether you have a project,
+      or a question,
+      or just want to say hi.
       Send us a message
-      and we'll be in touch with you soon.
+      and %s, our %s,
+      will be in touch with you soon.
     submit: 'Send!'
     next: 'contact/thanks/'
 
