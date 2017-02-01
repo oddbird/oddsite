@@ -1,6 +1,6 @@
 public: yes
 author: sondra
-tags: ['oddsite', 'open design', 'research', 'ux', 'community']
+tags: [OddSite, 'Open Design', Research, 'User Experience', Community]
 image:
   - src: 'bwdraft.jpg'
 summary: |
@@ -8,7 +8,7 @@ summary: |
 after:
   - include: 'blog/_tag-module.html.j2'
     title: 'OddSite Re-design Timeline'
-    tag: 'open design'
+    tag: 'Open Design'
     id: 'open-design-articles'
 
 

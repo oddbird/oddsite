@@ -1,6 +1,6 @@
 public: yes
 author: kit
-tags: ['single-page applications', 'server-side rendering', javascript, jinja2, django, python, code]
+tags: ['Single-Page Applications', 'Server-Side Rendering', JavaScript, Jinja2, Django, Python, Code]
 image:
   - src: '2016/spa.jpg'
 summary: |

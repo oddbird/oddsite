@@ -1,6 +1,6 @@
 public: yes
 author: sondra
-tags: ['oddsite', 'open design', 'typography', 'design']
+tags: [OddSite, 'Open Design', Typography, Design]
 image:
   - src: '2017/typography/type.jpg'
 summary: |
@@ -15,14 +15,14 @@ summary: |
 after:
   - include: 'blog/_tag-module.html.j2'
     title: 'OddSite Re-design Timeline'
-    tag: 'open design'
+    tag: 'Open Design'
     id: 'open-design-articles'
 
 
 Open Brand Identity Design: Please Steal These Ideas
 ====================================================
 
-How to choose evocative and accessible fonts and colors for your website brand identity.
+How to Choose Evocative and Accessible Fonts and Colors for your Website Brand Identity.
 ----------------------------------------------------------------------------------------
 
 How do you choose the best fonts and colors for a brand identity among the

@@ -1,5 +1,5 @@
 public: yes
-tags: [susy, layout, grids, "sub-pixel rounding", code]
+tags: [Susy, Layout, Grids, "Sub-pixel Rounding", Code]
 author: miriam
 image:
   - src: 'susy.jpg'

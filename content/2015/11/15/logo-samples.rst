@@ -1,6 +1,6 @@
 public: yes
 author: sondra
-tags: ['case studies']
+tags: ['Case Studies']
 image:
   - src: '2016/logos/oddbird.jpg'
 summary: |

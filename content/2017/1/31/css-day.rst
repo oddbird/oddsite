@@ -1,6 +1,6 @@
 public: yes
 author: stacy
-tags: [css, front-end, videos, conferences]
+tags: [CSS, Front-end, Videos, Conferences]
 image:
   - src: '2017/cssday/cssday.jpg'
 summary: |

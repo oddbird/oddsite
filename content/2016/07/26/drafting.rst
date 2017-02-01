@@ -1,12 +1,12 @@
 public: no
 author: miriam
-tags: ['oddsite', 'open design', 'process']
+tags: [OddSite, 'Open Design', Process]
 image:
   - src: 'oddsite.jpg'
 after:
   - include: 'blog/_tag-module.html.j2'
     title: 'OddSite Re-design Timeline'
-    tag: 'open design'
+    tag: 'Open Design'
     id: 'open-design-articles'
 
 

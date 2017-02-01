@@ -1,5 +1,5 @@
 public: yes
-tags: [susy, demo, layout, code]
+tags: [Susy, Demos, Layout, Code]
 author: miriam
 image:
   - src: 'susy.jpg'

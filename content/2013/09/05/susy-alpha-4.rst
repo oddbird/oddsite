@@ -1,5 +1,5 @@
 public: yes
-tags: [susy, "2.0", layout, grids]
+tags: [Susy, "2.0", Layout, Grids]
 author: miriam
 image:
   - src: 'susy.jpg'

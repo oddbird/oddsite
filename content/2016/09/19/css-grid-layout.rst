@@ -1,6 +1,6 @@
 public: yes
 author: stacy
-tags: ['grids', 'css grid', 'layout', 'design', 'code']
+tags: [Grids, 'CSS Grid', Layout, Design, Code]
 image:
   - src: 'cssgriddemo.jpg'
 summary: |
@@ -9,7 +9,7 @@ summary: |
 after:
   - include: 'blog/_tag-module.html.j2'
     title: 'Posts about CSS Grid Layout'
-    tag: 'css grid'
+    tag: 'CSS Grid'
     id: 'css-grid-layout'
 
 

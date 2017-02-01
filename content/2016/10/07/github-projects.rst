@@ -1,12 +1,12 @@
 public: yes
 author: miriam
-tags: ['oddsite', 'open design', tools, process, github, 'pivotal tracker']
+tags: [OddSite, 'Open Design', Tools, Process, Github, 'Pivotal Tracker']
 image:
   - src: '2016/github-projects.jpg'
 after:
   - include: 'blog/_tag-module.html.j2'
     title: 'OddSite Re-design Timeline'
-    tag: 'open design'
+    tag: 'Open Design'
     id: 'open-design-articles'
 summary: |
   With the release of kanban-style

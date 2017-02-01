@@ -1,6 +1,6 @@
 public: yes
 author: miriam
-tags: ['q&a', 'sitepoint']
+tags: ['Q&A', Sitepoint]
 image:
   - src: '2016/QandA.jpg'
 summary: |

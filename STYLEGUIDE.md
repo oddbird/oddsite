@@ -98,7 +98,7 @@ Tags
 For example, ``videos`` even if one video is referenced in the post.
 - Reference the [tag list](http://oddbird.net/tags/) before deciding on which
 tags to use in order to avoid variations of the same topic.
-- Tags are lowercase.
+- Tags are Title Case.
 - Tags with multiple words should have spaces instead of dashes unless the
 phrase is hyphenated. Multi-word tags need to be declared as a string:
 ``tag: ['open design', oddsite]``
@@ -106,5 +106,7 @@ phrase is hyphenated. Multi-word tags need to be declared as a string:
 were covered in this post that would help the reader find a related article.
 - Adding tags when you are finished writing might result in cleaner and more
 accurate tags.
+- Posts that talk about sponsorship should include the ``community`` tag.
+
 
 

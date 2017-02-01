@@ -1,6 +1,6 @@
 public: yes
 author: miriam
-tags: ['oddsite', 'open design']
+tags: [OddSite, 'Open Design']
 image:
   - src: 'oddsite.jpg'
 summary: |
@@ -10,7 +10,7 @@ summary: |
 after:
   - include: 'blog/_tag-module.html.j2'
     title: 'OddSite Re-design Timeline'
-    tag: 'open design'
+    tag: 'Open Design'
     id: 'open-design-articles'
 
 
@@ -25,7 +25,7 @@ and re-design our site in the open —
 sharing our thoughts while we work.
 
 
-You can get involved in several ways:
+You Can Get Involved in Several Ways:
 -------------------------------------
 
 - **Feedback and Conversation:**
@@ -55,7 +55,7 @@ You can get involved in several ways:
 .. _timeline: #open-design-articles
 
 
-What is open design?
+What is Open Design?
 --------------------
 
 At OddBird, we are very familiar
@@ -93,7 +93,7 @@ and share any tools we build.
 .. _source code: https://github.com/oddbird/oddsite/
 
 
-Our process from here...
+Our Process From Here...
 ------------------------
 
 These are the rough stages we expect to go through:
@@ -148,7 +148,7 @@ These are the rough stages we expect to go through:
 .. _Sondra: /birds/#bird-sondra
 
 
-Rinse and repeat...
+Rinse and Repeat...
 -------------------
 
 The steps can be listed like a numbered waterfall,

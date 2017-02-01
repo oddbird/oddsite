@@ -1,6 +1,6 @@
 public: yes
 author: sondra
-tags: ['oddsite', 'open design', 'color', 'design']
+tags: [OddSite, 'Open Design', Color, Design]
 image:
   - src: '2017/colors/color.jpg'
 summary: |
@@ -11,7 +11,7 @@ summary: |
 after:
   - include: 'blog/_tag-module.html.j2'
     title: 'OddSite Re-design Timeline'
-    tag: 'open design'
+    tag: 'Open Design'
     id: 'open-design-articles'
 
 

@@ -1,6 +1,6 @@
 public: yes
 author: kit
-tags: [git, workflows, code]
+tags: [Git, Workflows, Code]
 image:
   - src: '2017/git-rebase/git-cave.jpg'
 summary: |

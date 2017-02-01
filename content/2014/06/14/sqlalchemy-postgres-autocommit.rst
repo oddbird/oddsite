@@ -1,6 +1,6 @@
 public: yes
 author: carl
-tags: ["python", "sqlalchemy", "postgresql", "transactions", "django", code]
+tags: [Python, SQLAlchemy, PostgreSQL, Transactions, Django, Code]
 image:
   - src: 'sqlalchemy.jpg'
 summary: |

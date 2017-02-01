@@ -1,6 +1,6 @@
 public: yes
 author: miriam
-tags: ['conferences', 'front-end', 'css', 'code']
+tags: [Conferences, Front-end, CSS, Code]
 image:
   - src: '2016/cssconf/ns.jpg'
 summary: |
