@@ -15,7 +15,7 @@
       {{ tags(post.tags) }}
     </p>
 
-    {{ birds.get_card(post.author, config=post.config, details=true) }}
+    {{ birds.get_card(post.author, details=true) }}
     {{ header_image(post) }}
 
     {% if post.summary %}
@@ -41,7 +41,7 @@
 
 {% macro byline(post) %}
 <p>
-  by {{ birds.get_card(post.author, config=post.config) }} |
+  by {{ birds.get_card(post.author) }} |
   {{ pubdate(post.pub_date) }}
   {{ tags(post.tags) }}
 </p>

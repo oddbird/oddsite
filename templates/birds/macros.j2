@@ -1,70 +1,77 @@
 {% import "utility.macros.j2" as utility %}
 
 
-{% macro section(bird, oss, posts=none) %}
-  <div data-module='bird' class="h-card" id="bird-{{ bird.author }}">
-    {{ utility.icon(bird.author, size='face') }}
+{% macro section(page, oss=none) %}
+  {% set author = page.config.bird %}
+
+  <div data-module='bird' class="h-card" id="bird-{{ author }}">
+    {{ utility.icon(author, size='face') }}
 
     <header>
-      {{ title(bird.name, bird.author, bird.no_posts) }}
-      {{ link_list(bird.links[0]) }}
+      {{ title(page.title, author) }}
+      {{ link_list(page.config.social[0]) }}
     </header>
 
-    <p>{{ bird.bio|safe }}</p>
+    {{ page.render_contents() }}
 
-    {{ oss_list(bird.author, oss) }}
-    {{ publication_list(bird.publications) }}
-    {{ blog_list(posts) }}
+    {{ oss_list(author, oss) }}
+    {{ blog_list(
+      posts=get_blog_entries_by_bird(author)
+      ) }}
   </div>
 {% endmacro %}
 
 
-{% macro card(bird, details=false) %}
-  {% set bird_title = utility.link_if(bird.name, link_to('author', author=bird.author), class='u-url') %}
-
+{% macro card(page, details=false) %}
   {% if details %}
-    {% set short = bird.short if bird.short else bird.bio|truncate(200) %}
-
     <div class="h-card">
-      {{ utility.icon(bird.author, size='face') }}
+      {{ utility.icon(page.config.bird, size='face') }}
 
-      <p>
-        {{ bird_title }}
-        {{ short }}
-      </p>
+      {{ page.render_summary() }}
 
       <ul>
-        {% for link in bird.links[0] %}
+        {% for link in page.config.social[0] %}
           {% if link in ['twitter', 'github'] %}
-            {{ get_link(link, bird.links[0][link]) }}
+            {{ get_link(link, page.config.social[0][link]) }}
           {% endif %}
         {% endfor %}
       </ul>
     </div>
   {% else %}
     <span class="h-card">
-      {{ bird_title }}
+      {{ name_link(page.config.bird, page) }}
     </span>
   {% endif %}
 {% endmacro %}
 
 
-{% macro get_card(author, config, details=false) %}
-  {% set bird_list = config.birds|selectattr('author', 'equalto', author)|list %}
-  {% set bird = bird_list[0] %}
-  {{ card(bird, details=details) }}
+{% macro get_card(author, details=false) %}
+  {{ card(
+    page=all_pages|filter_pages('bird', 'eq', author)|get_page,
+    details=details
+    ) }}
 {% endmacro %}
 
 
-{% macro title(name, author, no_posts=none) %}
-  <h2>
-    {% if no_posts %}
-      {{ name }}
-    {% else %}
-      <a href="{{ link_to('author', author=author) }}" class="u-url">
-        {{ name }}
-      </a>
-    {% endif %}
+{% macro name_link(author, page=none, fallback=none) %}
+  {# Get the birds's page #}
+  {% set page = page if page else all_pages|filter_pages('bird', 'eq', author)|get_page %}
+  {# Set their name, if it's available #}
+  {% set name = page.title or author %}
+  {# Find out if they've written any posts #}
+  {% set has_posts = get_blog_entries_by_bird(author)|length %}
+  {# Get their author-url, if it's available #}
+  {% set blog_url = link_to('author', author=author) if has_posts else none %}
+  {# Link to blog-archive, birds-section, or none #}
+  {% set url = blog_url or fallback or (['/birds/#bird', author]|join('-') if page else none) %}
+
+  {{ utility.link_if(name, url) }}
+{% endmacro %}
+
+
+{% macro title(name, author) %}
+  <h2 class="h-card">
+    {{ name_link(author) }}
   </h2>
 {% endmacro %}
 
@@ -137,15 +144,6 @@
           url=link_to('page', slug=entry.slug)
         ) }}
       {% endif %}
-    {% endfor %}
-  {% endcall %}
-{% endmacro %}
-
-
-{% macro publication_list(publications) %}
-  {% call list_wrapper('Publications', 'publications', publications) %}
-    {% for item in publications %}
-      {{ list_item(item.name, item.url) }}
     {% endfor %}
   {% endcall %}
 {% endmacro %}
