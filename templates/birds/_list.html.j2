@@ -2,27 +2,22 @@
 {% import "birds/macros.j2" as birds %}
 
 
-{% if config.birds %}
-  {% set all_posts = get_recent_blog_entries(1000) %}
+{# `show` allows you to define an arbitrary, ordered list of birds to display #}
+{% if module.show %}
+  {% for author in module.show %}
+    {% set page = all_pages|filter_pages('bird', 'eq', author)|get_page %}
+    {# @@@ Moving OSS data into pages will help clean this up... #}
+    {% set oss = config.oss_by_author[author] %}
 
-  {% for bird in config.birds %}
-    {% set posts = all_posts|selectattr('author', 'equalto', bird.author)|list %}
-    {% set oss = config.oss_by_author[bird.author] %}
-
-    {{ birds.section(bird, oss, posts) }}
+    {{ birds.section(page, oss) }}
   {% endfor %}
-{% endif %}
+{% else %}
+  {# If no list is given, show all bird pages... #}
+  {% for page in all_pages|filter_pages('bird') %}
+    {% set author = page.config.bird %}
+    {# @@@ Moving OSS data into pages will help clean this up... #}
+    {% set oss = config.oss_by_author[author] %}
 
-{% if config.birds_former and module.show_former %}
-  <section data-module="birds-emeritus">
-    <h3>Birds Emeritus</h3>
-    <ul>
-      {% for bird in config.birds_former %}
-        {% set bird_url = link_to('author', author=bird.author) if bird.posts else bird.url %}
-        <li id="bird-{{ bird.author }}">
-          {{ utility.link_if(bird.name, bird_url) }}
-        </li>
-      {% endfor %}
-    </ul>
-  </section>
+    {{ birds.section(page, oss) }}
+  {% endfor %}
 {% endif %}
