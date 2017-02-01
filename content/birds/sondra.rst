@@ -21,9 +21,9 @@ Sondra Eby
 ==========
 
 Sondra spearheads the design process
-through user testing, brand development, and interface design.
+through brand development, user experience design, and usability testing.
 She has been creating custom brands
-and integrated web graphics for over eleven years.
+and integrated web graphics for over thirteen years.
 She has lead the marketing teams
 for a variety of small businesses,
 and acted as co-founder and Chief Marketing Officer
