@@ -9,10 +9,12 @@ social:
     github: 'sondrae'
     dribbble: 'sondraeby'
 summary: |
-  Sondra Eby
+  `Sondra Eby`_
   is a brand and interface designer,
   user-tester,
   author, and musican.
+
+  .. _Sondra Eby: /birds/#bird-sondra
 
 
 Sondra Eby

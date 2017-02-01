@@ -8,10 +8,12 @@ social:
   - twitter: 'jgerigmeyer'
     github: 'jgerigmeyer'
 summary: |
-  Jonny Gerig Meyer
+  `Jonny Gerig Meyer`_
   is an architect of clean,
   well-tested JavaScript web applications,
   and a brewer of delicious IPA's.
+
+  .. _Jonny Gerig Meyer: /birds/#bird-jonny
 
 
 Jonny Gerig Meyer

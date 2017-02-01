@@ -12,11 +12,13 @@ social:
     stackoverflow: '1930386'
     codepen: 'mirisuzanne'
 summary: |
-  Miriam Suzanne
+  `Miriam Suzanne`_
   is a product manager,
   user-experience designer,
   writer, speaker,
   and open-source developer.
+
+  .. _Miriam Suzanne: /birds/#bird-miriam
 
 
 Miriam Suzanne

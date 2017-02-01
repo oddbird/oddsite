@@ -1,9 +1,8 @@
 {% import "utility.macros.j2" as utility %}
 
 
-{% macro section(page, config) %}
+{% macro section(page, oss=none, posts=none) %}
   {% set author = page.config.bird %}
-  {% set oss = config.oss_by_author[author] %}
 
   <div data-module='bird' class="h-card" id="bird-{{ author }}">
     {{ utility.icon(author, size='face') }}
@@ -16,6 +15,7 @@
     {{ page.render_contents() }}
 
     {{ oss_list(author, oss) }}
+    {{ blog_list(posts) }}
   </div>
 {% endmacro %}
 
@@ -46,11 +46,10 @@
 
 
 {% macro get_card(author, details=false) %}
-  {% for page in all_pages %}
-    {% if page.config.bird == author %}
-      {{ card(page, details=details) }}
-    {% endif %}
-  {% endfor %}
+  {{ card(
+    page=all_pages|filter_pages('bird', 'eq', author)|first,
+    details=details
+    ) }}
 {% endmacro %}
 
 

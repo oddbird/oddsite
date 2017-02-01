@@ -10,12 +10,13 @@ social:
     lanyrd: 'carljm'
     stackoverflow: '3207'
 summary: |
-  Carl Meyer
+  `Carl Meyer`_
   is an active owner,
   developer-emeritus,
   and core developer of the
   `Django`_ Python web framework.
 
+  .. _Carl Meyer: /birds/#bird-carl
   .. _Django: https://www.djangoproject.com/
 
 

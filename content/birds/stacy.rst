@@ -10,11 +10,13 @@ social:
     lanyrd: 'stacy'
     codepen: 'stacy'
 summary: |
-  Stacy Kvernmo
+  `Stacy Kvernmo`_
   is an interface and experience designer,
-  a front-end developer,
+  front-end developer,
   speaker,
   and podcast superfan.
+
+  .. _Stacy Kvernmo: /birds/#bird-stacy
 
 
 Stacy Kvernmo

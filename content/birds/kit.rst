@@ -8,11 +8,13 @@ social:
   - twitter: 'wlonk'
     github: 'wlonk'
 summary: |
-  Kit La Touche
+  `Kit La Touche`_
   is a back-end developer,
   computational linguist,
   Linux system administrator,
   and game designer.
+
+  .. _Kit La Touche: /birds/#bird-kit
 
 
 Kit La Touche

@@ -81,18 +81,16 @@
   {% if contributors %}
     <ul>
       {% for contributor in contributors %}
-        {% set bird_list = config.birds|selectattr('author', 'equalto', contributor.author)|list %}
-        {% set bird = bird_list[0] %}
+        {% set pages = all_pages|filter_pages('bird', 'eq', contributor.author) %}
+        {% set page = pages|first if pages|length else none %}
 
-        {% if bird %}
-          <li>
-            {{ utility.link_if(
-              bird.name,
-              ['/birds/#bird', bird.author]|join('-')
-            ) }}
-            [{{ contributor.role }}]
-          </li>
-        {% endif %}
+        <li>
+          {{ utility.link_if(
+            content=page.title or contributor.author,
+            url=['/birds/#bird', contributor.author]|join('-')
+          ) }}
+          [{{ contributor.role }}]
+        </li>
       {% endfor %}
     </ul>
   {% endif %}
