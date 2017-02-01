@@ -1,15 +1,13 @@
 {% import 'utility.macros.j2' as utility %}
 {% import "birds/macros.j2" as birds %}
 
-{% set all_posts = get_recent_blog_entries(1000) %}
+{% set posts = get_blog_entries_by_bird(author) %}
 
 {% if module.show %}
   {% for author in module.show %}
     {% set page = all_pages|filter_pages('bird', 'eq', author)|first %}
     {# @@@ Moving OSS data into pages will help clean this up... #}
     {% set oss = config.oss_by_author[author] %}
-    {# @@@ Adding global access to posts-by-author could clean this up... #}
-    {% set posts = all_posts|selectattr('author', 'equalto', author)|list %}
 
     {{ birds.section(page, oss, posts) }}
   {% endfor %}
@@ -18,8 +16,6 @@
     {% set author = page.config.bird %}
     {# @@@ Moving OSS data into pages will help clean this up... #}
     {% set oss = config.oss_by_author[author] %}
-    {# @@@ Adding global access to posts-by-author could clean this up... #}
-    {% set posts = all_posts|selectattr('author', 'equalto', author)|list %}
 
     {{ birds.section(page, oss, posts) }}
   {% endfor %}

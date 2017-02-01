@@ -7,6 +7,15 @@ Use like:
 """
 
 
+def is_blog_post(page):
+    # Rough approximation of blog posts:
+    return (
+        page.pub_date is not None
+        and not page.slug.startswith('static')
+        and not page.slug.startswith('styleguide')
+    )
+
+
 def is_static_page(page):
     # Rough approximation of static pages:
     return (
@@ -16,6 +25,15 @@ def is_static_page(page):
     )
 
 
+def get_posts(builder):
+    return [
+        page
+        for page
+        in builder.iter_contexts()
+        if is_blog_post(page)
+    ]
+
+
 def get_pages(builder):
     return [
         page
@@ -23,6 +41,12 @@ def get_pages(builder):
         in builder.iter_contexts()
         if is_static_page(page)
     ]
+
+
+def get_page(page_list):
+    if page_list:
+        return page_list[0]
+    return None
 
 
 def get_page_context(page):
@@ -71,10 +95,46 @@ def filter_pages(values, key, operator=None, value=None):
     ]
 
 
+def make_get_blog_entries_by_bird(builder):
+    posts = get_posts(builder)
+
+    def get_blog_entries_by_bird(bird):
+        return [
+            post
+            for post
+            in posts
+            if bird == post.author
+        ]
+
+    return get_blog_entries_by_bird
+
+
+def make_get_blog_entries_by_tag(builder):
+    posts = get_posts(builder)
+
+    def get_blog_entries_by_tag(tag):
+        return [
+            post
+            for post
+            in posts
+            if tag in post.tags
+        ]
+
+    return get_blog_entries_by_tag
+
+
 def setup(builder):
-    builder.jinja_env.filters['show_all_attrs'] = show_all_attrs
-    builder.jinja_env.filters['filter_pages'] = filter_pages
-    builder.jinja_env.globals['all_pages'] = get_pages(builder)
+    env = builder.jinja_env
+    env.filters['show_all_attrs'] = show_all_attrs
+    env.filters['filter_pages'] = filter_pages
+    env.filters['get_page'] = get_page
+    env.globals['get_blog_entries_by_bird'] = make_get_blog_entries_by_bird(
+        builder,
+    )
+    env.globals['get_blog_entries_by_tag'] = make_get_blog_entries_by_tag(
+        builder,
+    )
+    env.globals['all_pages'] = get_pages(builder)
     page_configs = {}
     for page in get_pages(builder):
         page_config = get_page_context(page)
