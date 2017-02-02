@@ -62,7 +62,7 @@
   height: 6rem;
   width: 13rem;
 
-  @include below('nav-narrow') {
+  @include below('nav-medium') {
     width: 10rem;
   }
 

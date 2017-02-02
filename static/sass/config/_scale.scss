@@ -57,11 +57,12 @@ $spacing-sizes: (
 ///   Accoutrement Scale
 $pattern-sizes: (
   'border': 8px,
-  'nav-narrow': 28rem,
   'nav-medium': 35rem,
   'nav-wide': 50rem,
   'dropdown-narrow': 9rem,
   'dropdown-wide': 14rem,
+  'menu-more': 12px,
+  'menu-more-space': 'menu-more' ('multiple': 0.25),
 );
 
 @include herman-add-sizes('pattern-sizes', $pattern-sizes);
@@ -74,6 +75,7 @@ $pattern-sizes: (
 /// @link http://oddbird.net/accoutrement-scale/sassdoc/
 ///   Accoutrement Scale
 $page-sizes: (
+  'small-page': 20rem,
   'full-content': 40rem,
 );
 

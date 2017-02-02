@@ -5,24 +5,35 @@
   position: relative;
 }
 
-
 .main-nav {
   display: flex;
   justify-content: space-between;
   margin: negative('gutter') auto 0;
-  max-width: size('nav-narrow');
-  padding: 0 size('shim');
+  max-width: calc(19rem + 15vw);
+  padding-left: size('half-shim');
+  padding-right: size('half-shim');
   width: 100%;
 
   .nav-item {
     display: inline-flex;
 
     &:nth-of-type(2) {
-      flex-grow: 1;
+      flex-grow: 1.5;
     }
 
     @include above('nav-medium') {
       position: relative;
+    }
+  }
+
+  [aria-controls] {
+    @include after('\25BE') {
+      font-size: size('menu-more');
+      font-style: normal;
+      opacity: 0.5;
+      padding-left: size('menu-more-space');
+      position: relative;
+      top: -2px;
     }
   }
 }
@@ -31,7 +42,6 @@
 .nav-link {
   color: color('action-alt');
   font-weight: bold;
-  padding: size('half-shim') size('shim');
   text-decoration: none;
   white-space: nowrap;
 
@@ -47,9 +57,14 @@
 // Styles for main items outside the .nav-link base styles
 .nav-link-main {
   display: inline-block;
-  padding: size('half-shim') size('shim');
+  padding: size('half-shim');
 
-  @include above('nav-narrow') {
+  @include above('small-page') {
+    padding-left: size('shim');
+    padding-right: size('shim');
+  }
+
+  @include above('nav-medium') {
     padding: size('shim') size('gutter');
   }
 
