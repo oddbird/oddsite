@@ -1,53 +1,10 @@
 // Site Navigation
 // ===============
 
-$nav-locations: (
-  'projects': 'work',
-  'open-source': 'work',
-  'birds': 'about',
-  'speaking': 'about',
-  'community': 'about',
-  'blog': null,
-  'contact': null,
-);
-
-.nav-link {
-  color: color('action-alt');
-  display: inline-block;
-  font-weight: bold;
-  padding: size('half-shim') size('shim');
-  text-decoration: none;
-  white-space: nowrap;
-
-  @include above('nav-narrow') {
-    padding: size('shim') size('gutter');
-  }
-
-  #{$link} {
-    color: color('action-alt');
-  }
-
-  #{$focus} {
-    color: color('action');
-  }
-
-  &[aria-pressed='true'] {
-    color: color('action');
-  }
-}
-
-@each $location, $parent in $nav-locations {
-  [data-location='#{$location}'] {
-    [data-active='#{$location}'],
-    [data-active='#{$parent}'] {
-      font-style: italic;
-    }
-  }
-}
-
 .nav {
   position: relative;
 }
+
 
 .main-nav {
   display: flex;
@@ -70,6 +27,66 @@ $nav-locations: (
   }
 }
 
+// Shared base styles for links in navigation
+.nav-link {
+  color: color('action-alt');
+  font-weight: bold;
+  padding: size('half-shim') size('shim');
+  text-decoration: none;
+  white-space: nowrap;
+
+  #{$link} {
+    color: color('action-alt');
+  }
+
+  #{$focus} {
+    color: color('action');
+  }
+}
+
+// Styles for main items outside the .nav-link base styles
+.nav-link-main {
+  display: inline-block;
+  padding: size('half-shim') size('shim');
+
+  @include above('nav-narrow') {
+    padding: size('shim') size('gutter');
+  }
+
+  &[aria-pressed='true'] {
+    color: color('action');
+  }
+}
+
+// Styles for child items outside the .nav-link base styles
+.nav-link-sub {
+  display: block;
+  padding: size('half-shim') size('gutter');
+  text-align: left;
+}
+
+// Map nav locations for highlighting active page
+$nav-locations: (
+  'projects': 'work',
+  'open-source': 'work',
+  'birds': 'about',
+  'speaking': 'about',
+  'community': 'about',
+  'blog': null,
+  'contact': null,
+);
+
+// Highlight self and parent (if applicable)
+@each $location, $parent in $nav-locations {
+  [data-location='#{$location}'] {
+    [data-active='#{$location}'],
+    [data-active='#{$parent}'] {
+      font-style: italic;
+    }
+  }
+}
+
+// Dropdown ul for child items
 .is-dropdown {
   background-color: color('background');
   border-bottom: size('border') solid color('border');
@@ -81,12 +98,6 @@ $nav-locations: (
   top: 100%;
   width: 100vw;
   z-index: 1;
-
-  .nav-link {
-    display: block;
-    padding: size('half-shim') size('gutter');
-    text-align: left;
-  }
 
   @include above('nav-medium') {
     min-width: size('dropdown-narrow');
