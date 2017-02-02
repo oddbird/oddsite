@@ -43,3 +43,12 @@
 {% macro toggle_close(id) -%}
   data-toggle="close" aria-controls="{{ id }}"
 {%- endmacro %}
+
+
+{% macro datetime(date, pubdate=true) %}
+  {% if date %}
+    <time datetime="{{ date.isoformat() }}" {{ attr_if('pubdate', pubdate) }}>
+      {{ date.strftime("%B %d, %Y") }}
+    </time>
+  {% endif %}
+{% endmacro %}

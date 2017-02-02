@@ -1,5 +1,7 @@
 {% import 'utility.macros.j2' as utility %}
-{% import 'birds/macros.j2' as birds %}
+{% import 'blog/utility.macros.j2' as blog %}
+{% import 'birds/utility.macros.j2' as birds %}
+
 
 {% macro list(post, section='blog-post') %}
   <article {{ utility.attr_if('data-module', section) }}>
@@ -11,12 +13,12 @@
     </{{ heading }}>
 
     <p>
-      {{ pubdate(post.pub_date) }}
-      {{ tags(post.tags) }}
+      {{ utility.datetime(post.pub_date) }}
+      {{ blog.tags(post.tags) }}
     </p>
 
     {{ birds.get_card(post.author, details=true) }}
-    {{ header_image(post) }}
+    {{ blog.header_image(post) }}
 
     {% if post.summary %}
       <p>
@@ -31,53 +33,10 @@
 {% endmacro %}
 
 
-{% macro link(post) %}
-  {{ pubdate(post.pub_date) }} »
-  <a href="{{ link_to('page', slug=post.slug) }}" rel="bookmark">
-    {{ post.title }}
-  </a>
-{% endmacro %}
-
-
 {% macro byline(post) %}
 <p>
   by {{ birds.get_card(post.author) }} |
-  {{ pubdate(post.pub_date) }}
-  {{ tags(post.tags) }}
+  {{ utility.datetime(post.pub_date) }}
+  {{ blog.tags(post.tags) }}
 </p>
-{% endmacro %}
-
-
-{% macro tags(taglist) %}
-  {% if taglist %}
-    <span>
-      in
-      {% for tag in taglist|sort(case_sensitive=true) %}
-        {%- if not loop.first %}, {% endif -%}
-        <a href="{{ link_to('tag', tag=tag) }}" rel="tag">{{ tag }}</a>
-      {%- endfor %}.
-    </span>
-  {% endif %}
-{% endmacro %}
-
-
-{% macro header_image(post) %}
-  {% set image = post.config.image[0].src if post.config.image else none %}
-
-  {% if image %}
-    {% if 'http://' in image %}
-      <img src="{{ image }}" class="hero">
-    {% else %}
-      <img src="/static/images/blog/{{ image }}" class="hero">
-    {% endif %}
-  {% endif %}
-{% endmacro %}
-
-
-{% macro pubdate(date) %}
-  {% if date %}
-    <time datetime="{{ date.isoformat() }}" pubdate="pubdate">
-      {{ date.strftime("%B %d, %Y") }}
-    </time>
-  {% endif %}
 {% endmacro %}

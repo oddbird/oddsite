@@ -1,5 +1,5 @@
 {% import 'utility.macros.j2' as utility %}
-{% import 'birds/macros.j2' as birds %}
+{% import 'birds/utility.macros.j2' as birds %}
 
 {% macro show_talk(who) %}
   {% set page = all_pages|filter_pages('bird', 'eq', who.author)|get_page %}

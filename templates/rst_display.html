@@ -1,7 +1,8 @@
 {% extends "layout.html" %}
 
-{% import "blog/macros.j2" as blog %}
-{% import 'birds/macros.j2' as birds %}
+{% import "utility.macros.j2" as blog %}
+{% import "blog/utility.macros.j2" as blog %}
+{% import 'birds/utility.macros.j2' as birds %}
 
 {% block title %}{{ rst.title }}{% endblock %}
 
@@ -13,7 +14,7 @@
   {% if ctx.pub_date %}
   <div data-module="rst-meta">
     <p>
-      {{ blog.pubdate(ctx.pub_date) }}
+      {{ utility.datetime(ctx.pub_date) }}
       {% if ctx.author %}
         by {{ birds.get_card(ctx.author) }}
       {% endif %}
