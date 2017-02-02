@@ -1,5 +1,6 @@
 {% import "utility.macros.j2" as utility %}
-
+{% import "blog/utility.macros.j2" as blog %}
+{% import "birds/utility.macros.j2" as birds %}
 
 {% macro section(page, oss=none) %}
   {% set author = page.config.bird %}
@@ -8,157 +9,64 @@
     {{ utility.icon(author, size='face') }}
 
     <header>
-      {{ title(page.title, author) }}
-      {{ link_list(page.config.social[0]) }}
+      <h2 class="h-card">
+        {{ birds.name_link(author) }}
+      </h2>
+
+      <div>
+        {% set links = page.config.social[0] %}
+        {% for link in links %}
+          {{ birds.get_social(link, links[link]) }}
+        {% endfor %}
+      </div>
     </header>
 
     {{ page.render_contents() }}
 
     {{ oss_list(author, oss) }}
     {{ blog_list(
-      posts=get_blog_entries_by_bird(author)
+      posts=get_blog_entries_by_bird(author)|reverse|list
       ) }}
   </div>
 {% endmacro %}
 
 
-{% macro card(page, details=false) %}
-  {% if details %}
-    <div class="h-card">
-      {{ utility.icon(page.config.bird, size='face') }}
-
-      {{ page.render_summary() }}
-
+{% macro blog_list(posts) %}
+  {% if posts|length %}
+    <div>
+      <h3>Recent Articles</h3>
       <ul>
-        {% for link in page.config.social[0] %}
-          {% if link in ['twitter', 'github'] %}
-            {{ get_link(link, page.config.social[0][link]) }}
+        {% for post in posts %}
+          {% if loop.index < 4 %}
+            <li>
+              {{ blog.link(post) }}
+            </li>
           {% endif %}
         {% endfor %}
       </ul>
     </div>
-  {% else %}
-    <span class="h-card">
-      {{ name_link(page.config.bird, page) }}
-    </span>
   {% endif %}
-{% endmacro %}
-
-
-{% macro get_card(author, details=false) %}
-  {{ card(
-    page=all_pages|filter_pages('bird', 'eq', author)|get_page,
-    details=details
-    ) }}
-{% endmacro %}
-
-
-{% macro name_link(author, page=none, fallback=none) %}
-  {# Get the birds's page #}
-  {% set page = page if page else all_pages|filter_pages('bird', 'eq', author)|get_page %}
-  {# Set their name, if it's available #}
-  {% set name = page.title or author %}
-  {# Find out if they've written any posts #}
-  {% set has_posts = get_blog_entries_by_bird(author)|length %}
-  {# Get their author-url, if it's available #}
-  {% set blog_url = link_to('author', author=author) if has_posts else none %}
-  {# Link to blog-archive, birds-section, or none #}
-  {% set url = blog_url or fallback or (['/birds/#bird', author]|join('-') if page else none) %}
-
-  {{ utility.link_if(name, url) }}
-{% endmacro %}
-
-
-{% macro title(name, author) %}
-  <h2 class="h-card">
-    {{ name_link(author) }}
-  </h2>
-{% endmacro %}
-
-
-{% macro link_list(links) %}
-  {% if links %}
-  <div>
-    {% for link in links %}
-      {{ get_link(link, links[link]) }}
-    {% endfor %}
-  </div>
-  {% endif %}
-{% endmacro %}
-
-
-{% macro get_link(name, user) %}
-  {% set locations = {
-    'twitter': 'https://twitter.com/%s/',
-    'github': 'https://github.com/%s/',
-    'lanyrd': 'https://lanyrd.com/profile/%s/',
-    'stackoverflow': 'https://stackoverflow.com/users/%s/',
-    'dribbble': 'https://dribbble.com/%s/',
-    'codepen': 'https://codepen.io/%s/'
-  } %}
-
-  {% set displays = {
-    'twitter': '@%s',
-    'github': '%s',
-    'dribbble': '%s'
-  } %}
-
-  {% set url = locations[name]|format(user) if locations[name] else none %}
-  {% set username = displays[name]|format(user) if displays[name] else name %}
-
-  <a href="{{ url }}" rel="me">
-    {{ utility.icon(name) }}
-    {{ username or user }}
-  </a>
-{% endmacro %}
-
-
-{% macro list_wrapper(title, slug, list) %}
-  {% if list %}
-    <div>
-      <h3>{{ title }}</h3>
-      <ul>
-        {{ caller() }}
-      </ul>
-    </div>
-  {% endif %}
-{% endmacro %}
-
-
-{% macro list_item(name, url, extra=none) %}
-  <li>
-    {{ utility.link_if(name, url) }}
-    {% if exrta %}
-      [{{ extra }}]
-    {% endif %}
-  </li>
-{% endmacro %}
-
-
-{% macro blog_list(posts) %}
-  {% call list_wrapper('Blog Posts', 'blog', posts) %}
-    {% for entry in posts %}
-      {% if loop.index < 4 %}
-        {{ list_item(
-          name=entry.title,
-          url=link_to('page', slug=entry.slug)
-        ) }}
-      {% endif %}
-    {% endfor %}
-  {% endcall %}
 {% endmacro %}
 
 
 {% macro oss_list(author, oss) %}
-  {% call list_wrapper('Open-Source', 'oss', oss) %}
-    {% for item in oss %}
-      {% set oss_author = item.who|selectattr('author', 'equalto', author)|list %}
+  {% if oss %}
+    <div>
+      <h3>Open Source</h3>
+      <ul>
+        {% for item in oss %}
+          {% set oss_author = item.who|selectattr('author', 'equalto', author)|list %}
 
-      {% if oss_author|length > 0 %}
-        {% set oss_author = oss_author[0] %}
+          {% if oss_author|length > 0 %}
+            {% set oss_author = oss_author[0] %}
 
-        {{ list_item(item.name, item.url or item.source, oss_author.role) }}
-      {% endif %}
-    {% endfor %}
-  {% endcall %}
+            <li>
+              {{ utility.link_if(item.name, item.url or item.source) }}
+              [{{ oss_author.role }}]
+            </li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </div>
+  {% endif %}
 {% endmacro %}
