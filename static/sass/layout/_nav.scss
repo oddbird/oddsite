@@ -40,7 +40,7 @@ $nav-locations: (
   [data-location='#{$location}'] {
     [data-active='#{$location}'],
     [data-active='#{$parent}'] {
-      color: color('action');
+      font-style: italic;
     }
   }
 }
