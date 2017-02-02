@@ -16,7 +16,7 @@
 
     {{ oss_list(author, oss) }}
     {{ blog_list(
-      posts=get_blog_entries_by_bird(author)
+      posts=get_blog_entries_by_bird(author)|reverse|list
       ) }}
   </div>
 {% endmacro %}
