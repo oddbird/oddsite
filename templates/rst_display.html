@@ -6,7 +6,7 @@
 
 {% block title %}{{ rst.title }}{% endblock %}
 
-{% block og_url %}{{ [config.canonical_url, ctx.slug, '/']|join('') }}{% endblock %}
+{% block og_url %}{{ get_full_canonical_url(ctx) }}{% endblock %}
 {% block og_summary %}{{ ctx.render_summary()|striptags }}{% endblock %}
 
 {% block body %}

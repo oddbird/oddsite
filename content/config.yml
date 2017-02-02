@@ -968,7 +968,8 @@ active_modules: [
   pages,
   wrap,
   typogrify,
-  hashedassets
+  hashedassets,
+  urls
   ]
 canonical_url: http://oddbird.net/
 template_path: ../templates
