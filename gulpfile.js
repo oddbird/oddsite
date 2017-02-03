@@ -5,7 +5,6 @@ const eslint = require('gulp-eslint');
 const fs = require('fs-extra');
 const gulp = require('gulp');
 const gutil = require('gulp-util');
-const karmaConf = require('./karma.common.conf.js');
 const KarmaServer = require('karma').Server;
 const mocha = require('gulp-spawn-mocha');
 const path = require('path');
@@ -190,24 +189,22 @@ const karmaOnBuild = (done) => (exitCode) => {
 };
 
 gulp.task('jstest', (cb) => {
-  const server = new KarmaServer(karmaConf, karmaOnBuild(cb));
-  server.start();
+  const karmaConf = require('./karma.common.conf.js');
+  new KarmaServer(karmaConf, karmaOnBuild(cb)).start();
 });
 
 // Use karma watcher instead of gulp watcher for tests
 gulp.task('jstest-watch', () => {
+  const karmaConf = require('./karma.common.conf.js');
   const conf = Object.assign({}, karmaConf, {
     autoWatch: true,
-    singleRun: false,
-    coverageReporter: {
-      reporters: [
-        { type: 'html', dir: 'jscov/' },
-        { type: 'text-summary' }
-      ]
-    }
+    singleRun: false
   });
-  const server = new KarmaServer(conf);
-  server.start();
+  conf.coverageReporter.reporters = [
+    { type: 'html', dir: 'jscov/' },
+    { type: 'text-summary' }
+  ];
+  new KarmaServer(conf).start();
 });
 
 gulp.task('sprites-clean', (cb) => {
