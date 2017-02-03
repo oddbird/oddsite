@@ -31,9 +31,9 @@
  {% endmacro %}
 
 
-{% macro datetime(date, pubdate=true) %}
+{% macro datetime(date) %}
   {% if date %}
-    <time datetime="{{ date.isoformat() }}" {{ attr_if('pubdate', pubdate) }}>
+    <time datetime="{{ date.isoformat() }}">
       {{ date.strftime("%B %d, %Y") }}
     </time>
   {% endif %}
