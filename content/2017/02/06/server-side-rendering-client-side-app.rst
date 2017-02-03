@@ -151,8 +151,8 @@ an additional XHR. Now we need to add our JS layer, turning the data into
 actual models or collections managed by views.
 
 The details differ here from one framework to another. Since we're using
-`Backbone.js`_ and `Marionette`_, let's look at one approach using those
-frameworks.
+`Backbone.js`_ and `Marionette`_ (^3.0.0), let's look at one approach using
+those frameworks.
 
 .. _Backbone.js: http://backbonejs.org/
 .. _Marionette: http://marionettejs.com/
@@ -242,11 +242,12 @@ way there. Every step of the way, we strive to minimize the amount of
 duplicated code or logic — no need for a JavaScript process on the server, and
 no duplicated templates.
 
-.. _behavior: http://marionettejs.com/docs/master/marionette.behavior.html
+.. _behavior: http://marionettejs.com/docs/v3.1.0/marionette.behavior.html
 
 We have a number of other tricks for sharing canonical data — global settings,
 third-party API keys, minified asset mappings, and even color maps generated
-from Scss — but those will wait for a later installment in this series.
+directly from SCSS — but those will wait for a later installment in this
+series.
 
 How have you tackled the problem of wiring up a single-page application with
 server-side rendering? What are we missing, or where could we improve our
