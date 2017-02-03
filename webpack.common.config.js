@@ -17,11 +17,7 @@ let jsOutput = '[name].bundle.js';
 let styleOutput = '[name].bundle.css';
 let mediaOutput = '[name].[ext]';
 let devtool = 'cheap-module-inline-source-map';
-// @@@ Sassdoc does not properly update the st_mtime (modified time) on
-// re-generated files, so we empty the output styleguide/ dir before copying
-// changed files.
-// See https://github.com/oddbird/oddsite/issues/55
-let buildScript = 'rm -rf ./dev-output/styleguide/* && python run.py dev';
+let buildScript = 'gulp dev-build';
 
 // Override settings if running in production
 if (process.env.NODE_ENV === 'production') {
@@ -29,7 +25,7 @@ if (process.env.NODE_ENV === 'production') {
   styleOutput = '[name].bundle.[chunkhash].min.css';
   mediaOutput = '[name].[hash].[ext]';
   devtool = 'source-map';
-  buildScript = 'rm -rf ./output/styleguide/* && python run.py prod';
+  buildScript = 'python run.py prod';
 }
 
 const SassdocPlugin = function () {
@@ -144,8 +140,7 @@ module.exports = {
     new SassdocPlugin(),
     new WebpackShellPlugin({
       onBuildEnd: [buildScript],
-      dev: false,
-      safe: true
+      dev: false
     }),
     new CleanWebpackPlugin([outputPath], {
       root: __dirname,
@@ -155,7 +150,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /static\/js\/.*\.js$/,
+        test: /(static\/js\/.*\.js$|test\/.*\.js$)/,
         exclude: /(node_modules|vendor)/,
         use: [{
           loader: 'babel-loader',
@@ -171,13 +166,11 @@ module.exports = {
       },
       {
         test: /\.scss$/,
-        // @@@ Ideally this would be ``use: [...]``
-        // https://github.com/webpack/extract-text-webpack-plugin/issues/265
-        loader: ExtractTextPlugin.extract({
+        use: ExtractTextPlugin.extract({
           loader: [
             {
               loader: 'css-loader',
-              query: {
+              options: {
                 sourceMap: true,
                 minimize: process.env.NODE_ENV === 'production'
               }
@@ -185,15 +178,12 @@ module.exports = {
             { loader: 'postcss-loader' },
             {
               loader: 'sass-loader',
-              query: { sourceMap: true }
+              options: { sourceMap: true }
             }
           ]
         })
       }
     ]
   },
-  devtool,
-  performance: {
-    hints: false
-  }
+  devtool
 };

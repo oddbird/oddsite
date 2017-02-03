@@ -1,8 +1,7 @@
 {% import 'utility.macros.j2' as utility %}
-{% import 'blog/macros.j2' as blog %}
+{% import 'blog/utility.macros.j2' as blog %}
 
-{# @@@ Need blog_entries_by_tag() function #}
-{% set entries = get_recent_blog_entries(module.count or 100) %}
+{% set entries = get_blog_entries_by_tag(module.tag) %}
 
 {% if entries %}
   <section data-module="recent-posts" {{ utility.attr_if('id', module.id) }}>
@@ -12,11 +11,9 @@
 
     <ul>
       {% for entry in entries %}
-        {% if module.tag in entry.tags %}
-          <li>
-            {{ blog.link(entry) }}
-          </li>
-        {% endif %}
+        <li>
+          {{ blog.link(entry) }}
+        </li>
       {% endfor %}
     </ul>
   </section>

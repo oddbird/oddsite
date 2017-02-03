@@ -28,7 +28,7 @@ append the ``::first-letter`` pseudo element. The property is
 ``initial-letter`` and the value is the number of lines you would like your
 initial letter to expand.
 
-.. code-block:: css
+.. code:: scss
 
     .intro::first-letter {
       initial-letter: 7;
@@ -53,7 +53,7 @@ A few months ago we briefly introduced Feature Queries when we wrote about
 initial-letter today. As a reminder, a Feature Query will ask the browser to
 check for support for a specific property and value:
 
-.. code-block:: css
+.. code:: scss
 
     @supports (property: value) {
       property: value;
@@ -62,7 +62,7 @@ check for support for a specific property and value:
 When we wrap our block in a Feature Query, we can add additional values that we
 would only want applied `if` ``initial-letter`` is supported.
 
-.. code-block:: css
+.. code:: scss
 
     @supports (initial-letter: 7) or (-webkit-initial-letter: 7) {
       .intro::first-letter {
@@ -80,14 +80,14 @@ can still use this as an enhancement and fake it 'til you make it to achieve a
 similar outcome. By using the operator ``not`` we can tell browsers that do not
 support ``initial-letter`` to use alternate styles.
 
-.. code-block:: css
+.. code:: scss
 
     $font-size: 1.15rem;
     $cap-size: $font-size * 6.25;
 
     @supports (not(initial-letter: 5)) and (not(-webkit-initial-letter: 5)) {
       .intro::first-letter {
-        color:  hsl(350, 50%, 50%);
+        color: hsl(350, 50%, 50%);
         font-size: $cap-size;
         float: left;
         line-height: .7;
@@ -123,7 +123,7 @@ instruct the browser where to place the initial cap. After our drop cap height
 value we will add a space and the number of lines we want our cap to drop. A
 value equal to the initial height value is the default.
 
-.. code-block:: css
+.. code:: scss
 
     .raised-cap::first-letter {
       -webkit-initial-letter: 3 1;
@@ -155,4 +155,4 @@ message via `Twitter`_ or join our public `Slack channel`_.
 
 .. _CSS Grid Layout: http://oddbird.net/2016/09/19/css-grid-layout/
 .. _Twitter: https://twitter.com/oddbird
-.. _Slack Channel: https://oddbirdfriends.slack.com
+.. _Slack Channel: http://friends.oddbird.net/

@@ -1,6 +1,6 @@
 const body = $('body');
 
-const susyOffCanvasToggle = {
+export const susyOffCanvasToggle = {
   init (triggers) {
     $(triggers).click(function (evt) {
       evt.preventDefault();
@@ -35,4 +35,5 @@ const susyOffCanvasToggle = {
   }
 };
 
+/* istanbul ignore next */
 $(() => { susyOffCanvasToggle.init($('.toggle')); });

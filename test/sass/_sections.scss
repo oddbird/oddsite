@@ -13,8 +13,10 @@
 
       @include expect {
         // sass-lint:disable-all
-        border-top: 0.44444rem solid #e07;
+        border-bottom: 0.44444rem solid #e07;
+        display: block;
         position: relative;
+        width: 100%;
 
         &:before,
         &:after {
@@ -24,15 +26,19 @@
           border-top-color: #e07;
           left: 50%;
           position: absolute;
-          top: 0;
-          transform: translateX(-50%);
+          top: 100%;
+        }
+
+        &:before {
+          content: " ";
+          margin-top: 0.44444rem;
+          transform: translateX(-50%) translateY(-2px);
         }
 
         &:after {
           content: " ";
           border-top-color: #fff;
-          margin-top: -0.44444rem;
-          transform: translateX(-50%) translateY(-2px);
+          transform: translateX(-50%) translateY(-4px);
         }
         // sass-lint:enable-all
       }

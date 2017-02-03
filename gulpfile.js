@@ -2,17 +2,18 @@ const browserSync = require('browser-sync').create();
 const chalk = require('chalk');
 const del = require('del');
 const eslint = require('gulp-eslint');
-const exec = require('child_process').exec;
+const fs = require('fs-extra');
 const gulp = require('gulp');
 const gutil = require('gulp-util');
+const KarmaServer = require('karma').Server;
 const mocha = require('gulp-spawn-mocha');
 const path = require('path');
 const rename = require('gulp-rename');
 const sasslint = require('gulp-sass-lint');
-const spawn = require('child_process').spawn;
 const svg = require('gulp-svg-symbols');
 const svgmin = require('gulp-svgmin');
 const webpack = require('webpack');
+const { spawn } = require('child_process');
 
 // sanity check Node version
 const packageOptions = require('./package.json');
@@ -28,6 +29,7 @@ if (process.version !== expectedNodeVersion) {
 const paths = {
   SRC_TEMPLATES_DIR: 'templates/',
   SRC_JS_DIR: 'static/js/',
+  JS_TESTS_DIR: 'test/js/',
   SASS_DIR: 'static/sass/',
   SASS_TESTS_DIR: 'test/sass/',
   ICONS_DIR: 'templates/icons/',
@@ -40,6 +42,7 @@ const paths = {
   init () {
     this.ALL_JS = [
       `${this.SRC_JS_DIR}**/*.js`,
+      `${this.JS_TESTS_DIR}**/*.js`,
       `${this.SASS_TESTS_DIR}**/*.js`,
       '*.js'
     ].concat(this.IGNORE);
@@ -75,16 +78,6 @@ const spawnTask = function (command, args, cb) {
       })
       .on('exit', cb)
   );
-};
-
-// Execute a command, logging output after process completes
-const execTask = function (command, cb) {
-  exec(command, (err, stdout, stderr) => {
-    if (stdout) { gutil.log(chalk.blue(stdout)); }
-    if (stderr) { gutil.log(chalk.red(stderr)); }
-    if (err) { gutil.beep(); }
-    return cb(err);
-  });
 };
 
 const eslintTask = (src, failOnError, log) => {
@@ -123,9 +116,9 @@ gulp.task('prod', ['webpack-prod']);
 
 gulp.task('serve', [ 'watch', 'runserver' ]);
 
-gulp.task('test', ['sasstest']);
+gulp.task('test', [ 'jstest', 'sasstest' ]);
 
-gulp.task('watch', ['webpack-watch'], () => {
+gulp.task('watch', [ 'jstest-watch', 'webpack-watch' ], () => {
   // lint js on changes
   gulp.watch(paths.ALL_JS, (ev) => {
     if (ev.type === 'added' || ev.type === 'changed') {
@@ -182,10 +175,40 @@ gulp.task('sasstest', () =>
     .pipe(mocha({ reporter: 'dot' }))
 );
 
-gulp.task('sprites-clean', (cb) => {
-  del(`${paths.SRC_TEMPLATES_DIR}_icons.svg`).then(() => {
-    cb();
+const karmaOnBuild = (done) => (exitCode) => {
+  if (exitCode) {
+    gutil.beep();
+    done(new gutil.PluginError(
+      'karma',
+      { name: 'KarmaError', message: `Failed with exit code: ${exitCode}` }
+    ));
+  } else {
+    done();
+  }
+  process.exit(exitCode); // eslint-disable-line no-process-exit
+};
+
+gulp.task('jstest', (cb) => {
+  const karmaConf = require('./karma.common.conf.js');
+  new KarmaServer(karmaConf, karmaOnBuild(cb)).start();
+});
+
+// Use karma watcher instead of gulp watcher for tests
+gulp.task('jstest-watch', () => {
+  const karmaConf = require('./karma.common.conf.js');
+  const conf = Object.assign({}, karmaConf, {
+    autoWatch: true,
+    singleRun: false
   });
+  conf.coverageReporter.reporters = [
+    { type: 'html', dir: 'jscov/' },
+    { type: 'text-summary' }
+  ];
+  new KarmaServer(conf).start();
+});
+
+gulp.task('sprites-clean', (cb) => {
+  fs.remove(`${paths.SRC_TEMPLATES_DIR}_icons.svg`, cb);
 });
 
 gulp.task('sprites', ['sprites-clean'], () =>
@@ -258,13 +281,23 @@ gulp.task('webpack-watch', ['sprites'], () => {
 });
 
 gulp.task('dev-clean', (cb) => {
-  spawnTask('rm', [ '-rf', paths.DIST_DIR ], cb);
+  fs.emptyDir(paths.DIST_DIR, cb);
 });
 
 gulp.task('prod-clean', (cb) => {
-  execTask(`rm -rf ${paths.PROD_DIST_DIR}*`, cb);
+  del(`${paths.PROD_DIST_DIR}*`).then(() => {
+    cb();
+  });
 });
 
-gulp.task('dev-build', (cb) => {
+gulp.task('dev-styleguide-clean', (cb) => {
+  fs.emptyDir(`${paths.DIST_DIR}styleguide`, cb);
+});
+
+// @@@ Sassdoc does not properly update the st_mtime (modified time) on
+// re-generated files, so we empty the output styleguide/ dir before copying
+// changed files.
+// See https://github.com/oddbird/oddsite/issues/55
+gulp.task('dev-build', ['dev-styleguide-clean'], (cb) => {
   spawnTask('python', [ 'run.py', 'dev' ], cb);
 });
