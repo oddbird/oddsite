@@ -6,6 +6,9 @@
 
 {% block title %}{{ rst.title }}{% endblock %}
 
+{% block og_url %}{{ get_full_canonical_url(ctx.builder, slug=ctx.slug) }}{% endblock %}
+{% block og_summary %}{{ ctx.render_summary()|striptags }}{% endblock %}
+
 {% block body %}
   {%- if not config.hide_title %}
     {{ rst.html_title }}

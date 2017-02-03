@@ -33,7 +33,7 @@
   {% set image = post.config.image[0].src if post.config.image else none %}
 
   {% if image %}
-    {% if 'http://' in image %}
+    {% if '://' in image %}
       <img src="{{ image }}" class="hero">
     {% else %}
       <img src="/static/images/blog/{{ image }}" class="hero">

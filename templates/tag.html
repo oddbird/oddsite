@@ -3,6 +3,7 @@
 {% import "blog/macros.j2" as blog %}
 
 {% block title %}{{ tag.name }} | {{ super() }}{% endblock %}
+{% block og_url %}{{ get_full_canonical_url(builder, slug=['/tags', tag.name]|join('/')) }}{% endblock %}
 {% block archivetype %}tag{% endblock archivetype %}
 
 {% block feedlinks %}
