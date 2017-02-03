@@ -1,5 +1,7 @@
 {% extends "base.html" %}
+
 {% block title %}{{ rst.title }}{% endblock %}
+{% block og_url %}{{ get_full_canonical_url(ctx.builder, slug=ctx.slug) }}{% endblock %}
 
 {% block styles %}
   {% if config.styles %}

@@ -1,5 +1,7 @@
 {% extends "blog/archives.html" %}
+
 {% block title %}Authors{% endblock %}
+{% block og_url %}{{ get_full_canonical_url(builder, slug='/authors/') }}{% endblock %}
 {% block archivetype %}authors{% endblock archivetype %}
 
 {% block archive %}
