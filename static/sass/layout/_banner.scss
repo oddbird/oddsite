@@ -3,7 +3,7 @@
 
 
 [data-region='banner'] {
-  padding: size('gutter');
+  margin: size('gutter') 0;
   text-align: center;
 
   a {
@@ -61,6 +61,10 @@
 [data-icon='logo'] {
   height: 6rem;
   width: 13rem;
+
+  @include below('nav-medium') {
+    width: 10rem;
+  }
 
   [data-location='home'] & {
     animation: draw-logo 3s 1 ease-out both, fill-logo 3s 2s 1 ease-in-out both, fade-logo-outline 2s 2s 1 ease-in-out both;

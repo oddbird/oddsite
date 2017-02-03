@@ -1,0 +1,21 @@
+# http://eslint.org/docs/rules/
+
+parserOptions:
+  sourceType: module
+env:
+  browser: true
+  commonjs: true
+  jquery: true
+  mocha: true
+  node: false
+globals:
+  chai: true
+  expect: true
+  sinon: true
+rules:
+  callback-return: 0
+  max-nested-callbacks: 0
+  no-empty-function: 0
+  no-new: 0
+  no-unused-expressions: 0
+  prefer-arrow-callback: 0

@@ -5,6 +5,8 @@ const eslint = require('gulp-eslint');
 const fs = require('fs-extra');
 const gulp = require('gulp');
 const gutil = require('gulp-util');
+const karmaConf = require('./karma.common.conf.js');
+const KarmaServer = require('karma').Server;
 const mocha = require('gulp-spawn-mocha');
 const path = require('path');
 const rename = require('gulp-rename');
@@ -28,6 +30,7 @@ if (process.version !== expectedNodeVersion) {
 const paths = {
   SRC_TEMPLATES_DIR: 'templates/',
   SRC_JS_DIR: 'static/js/',
+  JS_TESTS_DIR: 'test/js/',
   SASS_DIR: 'static/sass/',
   SASS_TESTS_DIR: 'test/sass/',
   ICONS_DIR: 'templates/icons/',
@@ -40,6 +43,7 @@ const paths = {
   init () {
     this.ALL_JS = [
       `${this.SRC_JS_DIR}**/*.js`,
+      `${this.JS_TESTS_DIR}**/*.js`,
       `${this.SASS_TESTS_DIR}**/*.js`,
       '*.js'
     ].concat(this.IGNORE);
@@ -113,9 +117,9 @@ gulp.task('prod', ['webpack-prod']);
 
 gulp.task('serve', [ 'watch', 'runserver' ]);
 
-gulp.task('test', ['sasstest']);
+gulp.task('test', [ 'jstest', 'sasstest' ]);
 
-gulp.task('watch', ['webpack-watch'], () => {
+gulp.task('watch', [ 'jstest-watch', 'webpack-watch' ], () => {
   // lint js on changes
   gulp.watch(paths.ALL_JS, (ev) => {
     if (ev.type === 'added' || ev.type === 'changed') {
@@ -171,6 +175,40 @@ gulp.task('sasstest', () =>
   gulp.src([`${paths.SASS_TESTS_DIR}test_sass.js`], { read: false })
     .pipe(mocha({ reporter: 'dot' }))
 );
+
+const karmaOnBuild = (done) => (exitCode) => {
+  if (exitCode) {
+    gutil.beep();
+    done(new gutil.PluginError(
+      'karma',
+      { name: 'KarmaError', message: `Failed with exit code: ${exitCode}` }
+    ));
+  } else {
+    done();
+  }
+  process.exit(exitCode); // eslint-disable-line no-process-exit
+};
+
+gulp.task('jstest', (cb) => {
+  const server = new KarmaServer(karmaConf, karmaOnBuild(cb));
+  server.start();
+});
+
+// Use karma watcher instead of gulp watcher for tests
+gulp.task('jstest-watch', () => {
+  const conf = Object.assign({}, karmaConf, {
+    autoWatch: true,
+    singleRun: false,
+    coverageReporter: {
+      reporters: [
+        { type: 'html', dir: 'jscov/' },
+        { type: 'text-summary' }
+      ]
+    }
+  });
+  const server = new KarmaServer(conf);
+  server.start();
+});
 
 gulp.task('sprites-clean', (cb) => {
   fs.remove(`${paths.SRC_TEMPLATES_DIR}_icons.svg`, cb);

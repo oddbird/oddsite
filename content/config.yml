@@ -579,7 +579,7 @@ events_past:
       - author: 'miriam'
         title: 'Code Patterns for Pattern-Making'
       - author: 'stacy'
-        title: 'The Great State of Web Design with CSS Grid Layout and Friends'
+        title: 'The Great State of Design (with CSS Grid Layout and Friends)'
 
   - venue: 'Plone Digital Experience Conference'
     url: 'http://2016.ploneconf.org/'
@@ -916,18 +916,26 @@ events_past:
 # ----------
 
 nav:
-  - text: 'birds'
-    url: '/birds/'
-  - text: 'work'
-    url: '/work/'
-  - text: 'speaking'
-    url: '/speaking/'
-  - text: 'open-source'
-    url: '/open-source/'
   - text: 'blog'
     url: '/blog/'
-  - text: 'community'
-    url: '/community/'
+  - text: 'work'
+    subnav:
+      - text: 'projects'
+        display_text: 'client projects'
+        url: '/work/'
+      - text: 'open-source'
+        display_text: 'open-source contributions'
+        url: '/open-source/'
+  - text: 'about'
+    subnav:
+      - text: 'birds'
+        url: '/birds/'
+      - text: 'speaking'
+        display_text: 'speaking engagements'
+        url: '/speaking/'
+      - text: 'community'
+        display_text: 'community involvement'
+        url: '/community/'
   - text: 'contact'
     url: '/contact/'
 

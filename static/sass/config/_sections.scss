@@ -22,8 +22,10 @@
   $color: 'border',
   $background: 'background'
 ) {
-  border-top: size('border') solid color($color);
+  border-bottom: size('border') solid color($color);
+  display: block;
   position: relative;
+  width: 100%;
 
   @include wrap-content(' ') {
     border: size('gutter') solid transparent;
@@ -31,13 +33,16 @@
     border-top-color: color($color);
     left: 50%;
     position: absolute;
-    top: 0;
-    transform: translateX(-50%);
+    top: 100%;
+  }
+
+  @include before(' ') {
+    margin-top: size('border');
+    transform: translateX(-50%) translateY(-2px);
   }
 
   @include after(' ') {
     border-top-color: color($background);
-    margin-top: negative('border');
-    transform: translateX(-50%) translateY(-2px);
+    transform: translateX(-50%) translateY(-4px);
   }
 }
