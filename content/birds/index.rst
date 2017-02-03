@@ -2,7 +2,8 @@ public: yes
 location: birds
 after:
   - include: 'birds/_list.html.j2'
-    show_former: true
+    show: [miriam, jonny, sondra, david, kit, stacy, carl]
+  - include: 'birds/_former.html.j2'
 
 
 The People You’ll Work With

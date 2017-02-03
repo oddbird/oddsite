@@ -21,3 +21,9 @@
   max-width: size('full-content');
   padding: 0 size('gutter');
 }
+
+.separator {
+  @include section-arrow;
+  box-shadow: 0 2px 2px color('shadow');
+  z-index: 2;
+}

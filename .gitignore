@@ -5,6 +5,7 @@ content/static/assets.json
 content/styleguide/
 dev-output/
 node_modules/
+jscov/
 *.DS_Store
 *~
 *.pyc

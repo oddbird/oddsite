@@ -1,7 +1,8 @@
 {% extends "layout.html" %}
 
-{% import "blog/macros.j2" as blog %}
-{% import 'birds/macros.j2' as birds %}
+{% import "utility.macros.j2" as utility %}
+{% import "blog/utility.macros.j2" as blog %}
+{% import 'birds/utility.macros.j2' as birds %}
 
 {% block title %}{{ rst.title }}{% endblock %}
 
@@ -14,9 +15,9 @@
     <div data-module="rst-meta" class="meta">
       <p class="byline">
         {% if ctx.author %}
-        <span class="meta-bit">by</span> {{ birds.get_card(ctx.author, config) }}
+          <span class="meta-bit">by</span> {{ birds.get_card(ctx.author) }}
         {% endif %}
-        <span class="meta-bit">on</span> {{ blog.pubdate(ctx.pub_date) }}
+        <span class="meta-bit">on</span> {{ utility.datetime(ctx.pub_date) }}
       </p>
       {{ blog.tags(ctx.tags) }}
     </div>
@@ -38,7 +39,7 @@
 
   {% if ctx.author %}
     <div data-module="rst-author" class="author-summary inverted">
-      {{ birds.get_card(ctx.author, config, details=true) }}
+      {{ birds.get_card(ctx.author, details=true) }}
     </div>
   {% endif %}
 

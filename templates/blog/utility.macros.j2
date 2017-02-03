@@ -1,0 +1,42 @@
+{% import 'utility.macros.j2' as utility %}
+
+
+{% macro link(post) %}
+  <a class="linked-post-title" href="{{ link_to('page', slug=post.slug) }}" rel="bookmark">
+    {{ post.title }}
+  </a>
+  - {{ utility.datetime(post.pub_date) }}
+{% endmacro %}
+
+
+{% macro intro(post) %}
+  {% if post.intro %}
+    <p class="intro">
+      {{ post.intro }}
+    </p>
+  {% endif %}
+{% endmacro %}
+
+
+{% macro tags(taglist) %}
+  {% if taglist %}
+    <nav class="tags">
+      {% for tag in taglist|sort(case_sensitive=true) %}
+        <a href="{{ link_to('tag', tag=tag) }}" class="tag" rel="tag">{{ tag }}</a>
+      {%- endfor %}
+    </nav>
+  {% endif %}
+{% endmacro %}
+
+
+{% macro header_image(post) %}
+  {% set image = post.config.image[0].src if post.config.image else none %}
+
+  {% if image %}
+    {% if 'http://' in image %}
+      <img src="{{ image }}" class="hero">
+    {% else %}
+      <img src="/static/images/blog/{{ image }}" class="hero">
+    {% endif %}
+  {% endif %}
+{% endmacro %}

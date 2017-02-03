@@ -40,6 +40,7 @@ $spacing-sizes: (
   'root': 18px,
   'rhythm': 'root' ('text-ratio': 1),
   'gutter': 'rhythm',
+  'double-gutter': 'gutter' ('multiple': 2),
   'spacer': 'gutter' ('multiple': 3),
   'shim': 'gutter' ('multiple': 0.5),
   'half-shim': 'shim' ('multiple': 0.5),
@@ -52,7 +53,7 @@ $spacing-sizes: (
 // Pattern Sizes
 // -------------
 /// @group scale
-/// @preview sizes; style: ruler
+/// @preview sizes; style: output-only
 /// @link http://oddbird.net/accoutrement-scale/sassdoc/
 ///   Accoutrement Scale
 $pattern-sizes: (
@@ -65,6 +66,12 @@ $pattern-sizes: (
   'quote-plus': 'quote' ('multiple': 0.75),
   'quote-circle': 'quote' ('multiple': 0.45),
   'quote-circle-small': 'quote' ('multiple': 0.2),
+  'nav-medium': 35rem,
+  'nav-wide': 50rem,
+  'dropdown-narrow': 9rem,
+  'dropdown-wide': 14rem,
+  'menu-more': 12px,
+  'menu-more-space': 'menu-more' ('multiple': 0.25),
 );
 
 @include herman-add-sizes('pattern-sizes', $pattern-sizes);
@@ -77,6 +84,7 @@ $pattern-sizes: (
 /// @link http://oddbird.net/accoutrement-scale/sassdoc/
 ///   Accoutrement Scale
 $page-sizes: (
+  'small-page': 20rem,
   'full-content': 40rem,
   'blockquote': 55rem,
 );
