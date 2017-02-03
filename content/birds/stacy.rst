@@ -9,6 +9,7 @@ social:
     github: 'stacyk'
     lanyrd: 'stacy'
     codepen: 'stacy'
+    stackoverflow: '7033764'
 summary: |
   `Stacy Kvernmo`_
   is a user experience designer,

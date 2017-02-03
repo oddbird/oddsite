@@ -16,4 +16,7 @@ test:
   override:
     - ./node_modules/.bin/gulp eslint
     - ./node_modules/.bin/gulp sasslint
-    - ./node_modules/.bin/gulp test
+    - ./node_modules/.bin/gulp sasstest
+    - ./node_modules/.bin/karma start --reporters dots,coverage,junit --browsers PhantomJS,Chrome
+    - cp jscov/*.xml $CIRCLE_TEST_REPORTS/
+    - ./node_modules/.bin/istanbul check-coverage --root jscov/ --statements=100 --functions=100 --branches=100 --lines=100

@@ -1,23 +1,126 @@
 // Site Navigation
 // ===============
 
-$nav-locations: 'birds', 'work', 'speaking', 'open-source', 'blog', 'community', 'contact';
+.nav {
+  position: relative;
+}
 
-.nav-link {
-  #{$link} {
-    display: inline-block;
-    padding: size('half-shim');
-    text-decoration: none;
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+  margin: negative('gutter') auto 0;
+  max-width: calc(19rem + 15vw);
+  padding-left: size('half-shim');
+  padding-right: size('half-shim');
+  width: 100%;
+
+  .nav-item {
+    display: inline-flex;
+
+    &:nth-of-type(2) {
+      flex-grow: 1.5;
+    }
+
+    @include above('nav-medium') {
+      position: relative;
+    }
+  }
+
+  [aria-controls] {
+    @include after('\25BE') {
+      font-size: size('menu-more');
+      font-style: normal;
+      opacity: 0.5;
+      padding-left: size('menu-more-space');
+      position: relative;
+      top: -2px;
+    }
   }
 }
 
-@each $location in $nav-locations {
+// Shared base styles for links in navigation
+.nav-link {
+  color: color('action-alt');
+  font-weight: bold;
+  text-decoration: none;
+  white-space: nowrap;
+
+  #{$link} {
+    color: color('action-alt');
+  }
+
+  #{$focus} {
+    color: color('action');
+  }
+}
+
+// Styles for main items outside the .nav-link base styles
+.nav-link-main {
+  display: inline-block;
+  padding: size('half-shim');
+
+  @include above('small-page') {
+    padding-left: size('shim');
+    padding-right: size('shim');
+  }
+
+  @include above('nav-medium') {
+    padding: size('shim') size('gutter');
+  }
+
+  &[aria-pressed='true'] {
+    color: color('action');
+  }
+}
+
+// Styles for child items outside the .nav-link base styles
+.nav-link-sub {
+  display: block;
+  padding: size('half-shim') size('gutter');
+  text-align: left;
+}
+
+// Map nav locations for highlighting active page
+$nav-locations: (
+  'projects': 'work',
+  'open-source': 'work',
+  'birds': 'about',
+  'speaking': 'about',
+  'community': 'about',
+  'blog': null,
+  'contact': null,
+);
+
+// Highlight self and parent (if applicable)
+@each $location, $parent in $nav-locations {
   [data-location='#{$location}'] {
-    [data-active='#{$location}'] {
-      #{$link} {
-        color: color('action');
-        font-style: italic;
-      }
+    [data-active='#{$location}'],
+    [data-active='#{$parent}'] {
+      font-style: italic;
     }
+  }
+}
+
+// Dropdown ul for child items
+.is-dropdown {
+  background-color: color('background');
+  border-bottom: size('border') solid color('border');
+  box-shadow: 0 6px 5px color('shadow');
+  left: 0;
+  padding: size('gutter') + size('half-shim') 0 size('shim');
+  position: absolute;
+  right: 0;
+  top: 100%;
+  width: 100vw;
+  z-index: 1;
+
+  @include above('nav-medium') {
+    min-width: size('dropdown-narrow');
+    right: auto;
+    width: auto;
+  }
+
+  @include above('nav-wide') {
+    min-width: size('dropdown-wide');
   }
 }
