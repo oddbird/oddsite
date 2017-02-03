@@ -66,6 +66,13 @@ def show_all_attrs(value):
     return u'\n'.join(res)
 
 
+def show_config(config):
+    """For debugging."""
+    return u'\n'.join(
+        ', '.join(frame.keys()) for frame in config.stack
+    )
+
+
 def filter_pages(values, key, operator=None, value=None):
     """
     Filter a collection of pages based on the value of a key.
@@ -126,6 +133,7 @@ def make_get_blog_entries_by_tag(builder):
 def setup(builder):
     env = builder.jinja_env
     env.filters['show_all_attrs'] = show_all_attrs
+    env.filters['show_config'] = show_config
     env.filters['filter_pages'] = filter_pages
     env.filters['get_page'] = get_page
     env.globals['get_blog_entries_by_bird'] = make_get_blog_entries_by_bird(

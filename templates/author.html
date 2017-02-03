@@ -3,6 +3,7 @@
 {% import "birds/macros.j2" as birds %}
 
 {% block title %}Entries by {{ author.name }}{% endblock %}
+{% block og_url %}{{ get_full_canonical_url(builder, slug=['/authors', author.name]|join('/')) }}{% endblock %}
 {% block bodyclasses %}blog archive{% endblock %}
 
 {% block feedlinks %}
