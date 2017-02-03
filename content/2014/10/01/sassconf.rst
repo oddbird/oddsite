@@ -20,4 +20,4 @@ I have a flight to catch!
 See you all in SoHo!
 
 .. _SassConf: http://sassconf.com/
-.. _one of the organizers: /birds/#bio--claudina
+.. _one of the organizers: /birds/#bird-claudina

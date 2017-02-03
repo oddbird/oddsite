@@ -561,220 +561,6 @@ giving:
       and teaching ally skills.
 
 
-# OddBirds
-# --------
-
-birds:
-  - name: 'Miriam Suzanne'
-    author: 'miriam'
-    role: 'co-founder and creative director'
-    adr:
-      city: 'Denver'
-      state: 'CO'
-    short: |
-      a process manager,
-      user-experience designer,
-      and front-end architect,
-      and co-founder of OddBird.
-      She is the creator of Susy,
-      and co-author of SitePoint’s Jump Start Sass.
-    bio: |
-      Miriam leads the creative process,
-      working with clients and users to organize priorities,
-      and find solutions to their unique problems.
-      She is a pioneer of modern CSS techniques
-      and open-source Sass tools —
-      including the popular Susy responsive-grid toolkit,
-      and True unit-testing library.
-      She is the co-author of
-      SitePoint’s Jump Start Sass,
-      a well-known speaker at front-end conferences,
-      and a multi-media artist
-      with extensive experience in theatre,
-      writing, music, and visual art.
-    publications:
-      - name: 'Jump Start Sass'
-        url: 'https://www.sitepoint.com/premium/books/jump-start-sass'
-      - name: 'Riding SideSaddle*'
-        url: 'http://ridingsidesaddle.com'
-    links:
-      - twitter: 'mirisuzanne'
-        github: 'mirisuzanne'
-        dribbble: 'miriamsuzanne'
-        lanyrd: 'miriamsuzanne'
-        stackoverflow: '1930386'
-        codepen: 'mirisuzanne'
-
-  - name: 'Jonny Gerig Meyer'
-    author: 'jonny'
-    role: 'co-founder and front-end lead'
-    adr:
-      city: 'Goshen'
-      state: 'IN'
-    bio: |
-      Jonny leads the front-end development process,
-      turning your ideas into functional interactions.
-      He has been writing clean,
-      well-tested JavaScript web applications
-      for over eight years.
-      An active member in the JavaScript community,
-      Jonny has authored or contributed to
-      numerous open-source projects.
-      He's easily distracted by a game of ultimate frisbee,
-      homebrewing delicious IPAs and stouts,
-      and trying to keep up with his two young kids.
-    links:
-      - twitter: 'jgerigmeyer'
-        github: 'jgerigmeyer'
-
-  - name: 'Carl Meyer'
-    author: 'carl'
-    role: 'co-founder'
-    adr:
-      city: 'Rapid City'
-      state: 'SD'
-    bio: |
-      Carl is an active owner and developer-emeritus,
-      providing oversight and counsel
-      to the development team.
-      He is a core developer of the Django Python web framework,
-      an elected member of the inaugural Django technical board,
-      ex-maintainer of the widely-used pip and virtualenv
-      package management tools,
-      co-author of multiple accepted
-      enhancements to the Python language and ecosystem,
-      and a Fellow of the Python Software Foundation.
-      He is also a regular speaker
-      at the annual Python and Django community conferences.
-      When not chasing a more elegant algorithm,
-      he chases frisbees, hockey pucks, and a pair of sons.
-    links:
-      - twitter: 'carljm'
-        github: 'carljm'
-        lanyrd: 'carljm'
-        stackoverflow: '3207'
-
-  - name: 'Sondra Eby'
-    author: 'sondra'
-    role: 'user-experience designer'
-    adr:
-      city: 'Denver'
-      state: 'CO'
-    bio: |
-      Sondra spearheads the design process
-      through user testing, brand development, and interface design.
-      She has been creating custom brands
-      and integrated web graphics for over eleven years.
-      She has lead the marketing teams
-      for a variety of small businesses,
-      and acted as co-founder and Chief Marketing Officer
-      of a personal care products manufacturing startup
-      where she coordinated multiple crowdfunding campaigns
-      that reached over 200% of their goal.
-      Sondra is also a multi-media artist, author, and musician —
-      bringing a unique perspective
-      to audience engagement and interaction.
-    links:
-      - twitter: 'sondraeby'
-        github: 'sondrae'
-        dribbble: 'sondraeby'
-
-  - name: 'Stacy Kvernmo'
-    author: 'stacy'
-    role: 'user-experience developer'
-    adr:
-      city: 'Chicago'
-      state: 'IL'
-    bio: |
-      With over 14 years of experience,
-      Stacy takes the lead on interface development,
-      architecting accessible and maintainable
-      HTML, CSS, and Sass.
-      Balancing a love of design and code,
-      she enjoys experimenting with new design processes and tools
-      as well as new web technologies like CSS Grid Layout.
-      Stacy is enthusiastic about teaching and speaking
-      at design and front-end development conferences.
-      She is a co-host of the WordPress Naperville meetup group
-      and is a superfan of far too many podcasts.
-    links:
-      - twitter: 'stacykvernmo'
-        github: 'stacyk'
-        lanyrd: 'stacy'
-        codepen: 'stacy'
-
-  - name: 'David Glick'
-    author: 'david'
-    role: 'server-side developer'
-    adr:
-      city: 'Seattle'
-      state: 'WA'
-    no_posts: True
-    bio: |
-      David co-leads our server-side development,
-      managing code architecture,
-      database design,
-      and deployment.
-      He has been building web-based software
-      in Python and JavaScript for over a decade.
-      He has been a prolific contributor
-      to the Plone web content management system,
-      and enjoys learning new tools–most
-      recently React, elasticsearch,
-      and the Pyramid web framework.
-      When he's not coding,
-      David can be found experimenting in the kitchen
-      or singing in the Seattle Bach Choir.
-    links:
-      - twitter: 'davisagli'
-        github: 'davisagli'
-        lanyrd: 'davisagli'
-        stackoverflow: '212493'
-
-  - name: 'Kit La Touche'
-    author: 'kit'
-    role: 'server-side developer'
-    adr:
-      city: 'Boulder'
-      state: 'CO'
-    no_posts: False
-    bio: |
-      Kit co-leads our server-side development,
-      managing code architecture,
-      database design,
-      and deployment.
-      He is a web developer,
-      computational linguist,
-      Linux system administrator,
-      and game designer.
-      He’s been active in
-      Python & Django web development since 2007,
-      and also acts as a process consultant for businesses —
-      helping teams find the flow of communication
-      that works best for them.
-    links:
-      - twitter: 'wlonk'
-        github: 'wlonk'
-
-birds_former:
-  - name: 'Sam Meyer-Reed'
-    author: 'sam'
-    posts: False
-    url: 'https://github.com/samwisemr/'
-  - name: 'Claudina Sarahe'
-    author: 'claudina'
-    posts: False
-    url: 'https://twitter.com/itsmisscs'
-  - name: 'Rachel Nabors'
-    author: 'rachel'
-    posts: False
-    url: 'https://twitter.com/rachelnabors'
-  - name: 'Una Kravets'
-    author: 'una'
-    posts: False
-    url: 'https://twitter.com/Una'
-
-
 # Past Talks
 # ----------
 
@@ -800,7 +586,7 @@ events_past:
       - author: 'miriam'
         title: 'Code Patterns for Pattern-Making'
       - author: 'stacy'
-        title: 'The Great State of Web Design with CSS Grid Layout and Friends'
+        title: 'The Great State of Design (with CSS Grid Layout and Friends)'
 
   - venue: 'Plone Digital Experience Conference'
     url: 'http://2016.ploneconf.org/'
@@ -1137,18 +923,26 @@ events_past:
 # ----------
 
 nav:
-  - text: 'birds'
-    url: '/birds/'
-  - text: 'work'
-    url: '/work/'
-  - text: 'speaking'
-    url: '/speaking/'
-  - text: 'open-source'
-    url: '/open-source/'
   - text: 'blog'
     url: '/blog/'
-  - text: 'community'
-    url: '/community/'
+  - text: 'work'
+    subnav:
+      - text: 'projects'
+        display_text: 'client projects'
+        url: '/work/'
+      - text: 'open-source'
+        display_text: 'open-source contributions'
+        url: '/open-source/'
+  - text: 'about'
+    subnav:
+      - text: 'birds'
+        url: '/birds/'
+      - text: 'speaking'
+        display_text: 'speaking engagements'
+        url: '/speaking/'
+      - text: 'community'
+        display_text: 'community involvement'
+        url: '/community/'
   - text: 'contact'
     url: '/contact/'
 
@@ -1186,6 +980,7 @@ active_modules: [
   tags,
   blog,
   author,
+  pages,
   wrap,
   typogrify,
   hashedassets

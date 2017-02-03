@@ -1,0 +1,6 @@
+// States
+// ======
+
+[aria-expanded='false'] {
+  @include is-hidden;
+}

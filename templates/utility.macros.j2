@@ -28,4 +28,27 @@
     {%- endif -%}
     <use xlink:href="#icon-{{ name }}" />
   </svg>
- {% endmacro %}
+{% endmacro %}
+
+
+{# Toggle collapsible elements (see `static/js/base.js`) #}
+{% macro toggle_button(id, expanded=false, button=false, synced=false) -%}
+  data-toggle="button" aria-controls="{{ id }}" aria-pressed="{{ 'true' if expanded else 'false' }}"{% if not button %} role="button"{% endif %} data-toggle-synced="{{ 'true' if synced else 'false' }}"
+{%- endmacro %}
+
+{% macro toggle_target(id, expanded=false, auto_closing=false, auto_closing_on_any_click=false) -%}
+  data-toggle="target" id="{{ id }}" data-target-id="{{ id }}" aria-expanded="{{ 'true' if expanded else 'false' }}" data-auto-closing="{{ 'true' if auto_closing else 'false' }}" data-auto-closing-on-any-click="{{ 'true' if auto_closing_on_any_click else 'false' }}"
+{%- endmacro %}
+
+{% macro toggle_close(id) -%}
+  data-toggle="close" aria-controls="{{ id }}"
+{%- endmacro %}
+
+
+{% macro datetime(date) %}
+  {% if date %}
+    <time datetime="{{ date.isoformat() }}">
+      {{ date.strftime("%B %d, %Y") }}
+    </time>
+  {% endif %}
+{% endmacro %}

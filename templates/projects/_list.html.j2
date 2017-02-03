@@ -11,6 +11,9 @@
   {% set projects = valid_projects|selectattr('priority', 'equalto', module.priority) if module.priority else valid_projects %}
 
   {% for project in projects %}
-    {{ work.list(project, config) }}
+    {{ work.list(
+      project=project,
+      named_states=config.project_status[0]
+      ) }}
   {% endfor %}
 </section>

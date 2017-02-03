@@ -2,8 +2,8 @@
 // ==================
 
 [data-region='main'] {
-  @include section-arrow;
   padding-top: size('gutter');
+  position: relative;
 }
 
 [data-module='rst-body'] {

@@ -1,0 +1,73 @@
+{% import "utility.macros.j2" as utility %}
+
+{% macro card(page, details=false) %}
+  {% if details %}
+    <div class="h-card">
+      {{ utility.icon(page.config.bird, size='face') }}
+
+      {{ page.render_summary() }}
+
+      <ul class="social-list">
+        {% for link in page.config.social[0] %}
+          {% if link in ['twitter', 'github'] %}
+            {{ get_social(link, page.config.social[0][link]) }}
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </div>
+  {% else %}
+    <span class="h-card">
+      {{ name_link(page.config.bird, page) }}
+    </span>
+  {% endif %}
+{% endmacro %}
+
+
+{% macro get_card(author, details=false) %}
+  {{ card(
+    page=all_pages|filter_pages('bird', 'eq', author)|get_page,
+    details=details
+    ) }}
+{% endmacro %}
+
+
+{% macro name_link(author, page=none, fallback=none) %}
+  {# Get the birds's page #}
+  {% set page = page if page else all_pages|filter_pages('bird', 'eq', author)|get_page %}
+  {# Set their name, if it's available #}
+  {% set name = page.title or author %}
+  {# Find out if they've written any posts #}
+  {% set has_posts = get_blog_entries_by_bird(author)|length %}
+  {# Get their author-url, if it's available #}
+  {% set blog_url = link_to('author', author=author) if has_posts else none %}
+  {# Link to blog-archive, birds-section, or none #}
+  {% set url = blog_url or fallback or (['/birds/#bird', author]|join('-') if page else none) %}
+
+  {{ utility.link_if(name, url) }}
+{% endmacro %}
+
+
+{% macro get_social(name, user) %}
+  {% set locations = {
+    'twitter': 'https://twitter.com/%s/',
+    'github': 'https://github.com/%s/',
+    'lanyrd': 'https://lanyrd.com/profile/%s/',
+    'stackoverflow': 'https://stackoverflow.com/users/%s/',
+    'dribbble': 'https://dribbble.com/%s/',
+    'codepen': 'https://codepen.io/%s/'
+  } %}
+
+  {% set displays = {
+    'twitter': '@%s',
+    'github': '%s',
+    'dribbble': '%s'
+  } %}
+
+  {% set url = locations[name]|format(user) if locations[name] else none %}
+  {% set username = displays[name]|format(user) if displays[name] else name %}
+
+  <a href="{{ url }}" rel="me">
+    {{ utility.icon(name) }}
+    {{ username or user }}
+  </a>
+{% endmacro %}

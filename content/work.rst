@@ -1,5 +1,5 @@
 public: yes
-location: work
+location: projects
 after:
   - include: 'projects/_list.html.j2'
     title: 'Live Client Projects'
