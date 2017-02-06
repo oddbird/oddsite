@@ -1,5 +1,4 @@
 syntax: glob
-TAGS
 content/static/assets/
 content/static/assets.json
 content/styleguide/
