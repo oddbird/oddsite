@@ -167,7 +167,7 @@ module.exports = {
       {
         test: /\.scss$/,
         use: ExtractTextPlugin.extract({
-          loader: [
+          use: [
             {
               loader: 'css-loader',
               options: {
