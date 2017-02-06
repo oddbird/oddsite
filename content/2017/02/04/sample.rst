@@ -83,7 +83,7 @@ Ordered Lists
    b. I've used lowercase letters for this nested list
 5. Vestibulum tortor quam, feugiat vitae, ultricies eget
 
-.. _
+..
 
 #. Autonumeration ordered list
 #. This is an ordered list
@@ -98,31 +98,31 @@ Blockquotes and Pullquotes
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-   This is a blockquote with citation. Vestibulum tortor quam, feugiat vitae,
-   ultricies eget, tempor sit amet, ante.
+    This is a blockquote with citation. Vestibulum tortor quam, feugiat vitae,
+    ultricies eget, tempor sit amet, ante.
 
-   ---Name of cited source here preceeded by 2 or 3 ``-`` characters
+    --Name of cited source here preceeded by 2 or 3 ``-`` characters
 
 
 .. epigraph::
 
-   Gives the blockquote a class of epigraph. Maybe not needed as we can still
-   use the citation below.
+    Gives the blockquote a class of epigraph. Maybe not needed as we can still
+    use the citation below.
 
-   ---Name of cited source here preceeded by 2 or 3 ``-`` characters
+    --Name of cited source here preceeded by 2 or 3 ``-`` characters
 
 
 .. highlights::
 
-   Highlights summarize the main points of a document or section, often
-   consisting of a list.
+    Highlights summarize the main points of a document or section, often
+    consisting of a list.
 
 
 .. pull-quote::
 
-   A pull-quote is a small selection of text ‘pulled out and quoted’,
-   typically in a larger typeface. Pull-quotes are used to attract attention,
-   especially in long articles.
+    A pull-quote is a small selection of text ‘pulled out and quoted’,
+    typically in a larger typeface. Pull-quotes are used to attract attention,
+    especially in long articles.
 
 
 
@@ -136,7 +136,7 @@ Images
    :alt: alternate text here
 
 This image has align set to ``left`` rbi tristique senectus et netus et
-malesuada fames ac turpis egestas. Vestibulum tortor quam. This is a p tag. 
+malesuada fames ac turpis egestas. Vestibulum tortor quam. This is a p tag.
 Pellentesque habitant morbi tristique senectus et netus et malesuada fames
 ac turpis egestas.
 
@@ -147,7 +147,7 @@ ac turpis egestas.
    :alt: alternate text here
 
 This image has align set to ``right`` rbi tristique senectus et netus et
-malesuada fames ac turpis egestas. Vestibulum tortor quam. This is a p tag. 
+malesuada fames ac turpis egestas. Vestibulum tortor quam. This is a p tag.
 Pellentesque habitant morbi tristique senectus et netus et malesuada fames
 ac turpis egestas.
 
@@ -183,7 +183,7 @@ The following example is an image with a class of size-full:
    :alt: alternate text here
 
 
-Here is an example of a figure, which is content (usually an image) with a 
+Here is an example of a figure, which is content (usually an image) with a
 caption.
 
 .. figure:: /static/images/blog/navdraft.jpg
@@ -198,6 +198,6 @@ Unfortunately, ReStructured Text doesn't wrap them in a <figure> and <figcaption
 element. Instead they get a <div> with a class of figure. Alignment options can
 be found in the `content guidelines`_.
 
-.. _content guidelines: http://oddbird.net/styleguide
+.. _content guidelines: /styleguide
 
 

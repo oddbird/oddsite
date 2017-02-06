@@ -27,7 +27,8 @@ The CSS does the styling.
 - Blockquotes should be used when quoting another source. The ``epigraph::`` is
 the RST way of declaring a blockquote with citation:
 
-```.. epigraph::
+```none
+.. epigraph::
 
    This is a blockquote with citation. Vestibulum tortor quam, feugiat vitae,
    ultricies eget, tempor sit amet, ante.
@@ -110,7 +111,7 @@ Tags
 - Any post that contains a code sample should use the ``code`` tag.
 - Use the plural version of a word if available.
 For example, ``videos`` even if one video is referenced in the post.
-- Reference the [tag list](http://oddbird.net/tags/) before deciding on which
+- Reference the [tag list](/tags/) before deciding on which
 tags to use in order to avoid variations of the same topic.
 - Tags are Title Case.
 - Tags with multiple words should have spaces instead of dashes unless the
