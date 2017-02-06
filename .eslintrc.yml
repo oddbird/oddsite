@@ -252,6 +252,7 @@ rules:
     - global
   symbol-description: 2
   template-curly-spacing: 2
+  template-tag-spacing: 2
   unicode-bom: 2
   wrap-iife: 2
   wrap-regex: 2
