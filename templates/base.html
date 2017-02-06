@@ -48,10 +48,10 @@
   {% if config.summary %}
     <meta property="og:description" content="{% block og_summary %}{% endblock og_summary %}" />
   {% endif %}
+  <meta name="twitter:card" content="{% block twitter_type %}summary{% endblock %}" />
+  <meta name="twitter:site" content="@oddbird" />
   {% block extra_og %}
   {% endblock extra_og %}
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:site" content="@oddbird" />
 
   <!--iOS. Delete if not required -->
   <meta name="apple-mobile-web-app-capable" content="yes" />

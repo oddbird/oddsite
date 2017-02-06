@@ -9,6 +9,7 @@
 {% block og_type %}{{ 'article' if ctx.pub_date else 'website' }}{% endblock %}
 {% block og_url %}{{ get_full_canonical_url(ctx.builder, slug=ctx.slug) }}{% endblock %}
 {% block og_summary %}{{ ctx.render_summary()|striptags }}{% endblock %}
+{% block twitter_type %}{{ 'summary_large_image' if ctx.config.image and ctx.config.image[0].src else 'summary' }}{% endblock %}
 {% block extra_og %}
   {% if ctx.pub_date %}
     <meta property="article:published_time" content="{{ ctx.pub_date.isoformat() }}" />
