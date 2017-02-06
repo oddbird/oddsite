@@ -63,6 +63,7 @@ Unordered Lists
 - This is an unordered list
 - Pellentesque habitant morbi tristique
 - Vestibulum tortor quam, feugiat vitae, ultricies eget
+
   - Nested list items are indented further
   - Vestibulum tortor quam, feugiat vitae, ultricies eget
   - Vestibulum tortor quam, feugiat vitae, ultricies eget
@@ -77,6 +78,7 @@ Ordered Lists
 2. Manual input of numbers/letters
 3. Pellentesque habitant morbi tristique
 4. Vestibulum tortor quam, feugiat vitae, ultricies eget
+
    a. Nested list items are indented further
    b. I've used lowercase letters for this nested list
 5. Vestibulum tortor quam, feugiat vitae, ultricies eget
@@ -86,6 +88,7 @@ Ordered Lists
 #. Autonumeration ordered list
 #. This is an ordered list
 #. Vestibulum tortor quam, feugiat vitae, ultricies eget
+
    #. Nested list items are indented further
    #. Vestibulum tortor quam, feugiat vitae, ultricies eget
 #. Vestibulum tortor quam, feugiat vitae, ultricies eget
