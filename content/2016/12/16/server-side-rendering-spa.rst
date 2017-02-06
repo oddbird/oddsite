@@ -1,14 +1,15 @@
 public: yes
 author: kit
 tags: [
-  'Single-Page Applications',
-  'Server-Side Rendering',
-  Jinja2,
-  Django,
-  Python,
-  Code,
-  Backbone,
-  Marionette
+  'single-page-applications',
+  'server-side-rendering',
+  javascript,
+  jinja2,
+  django,
+  python,
+  code,
+  backbone,
+  marionette
   ]
 image:
   - src: '2016/spa.jpg'
