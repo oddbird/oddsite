@@ -24,16 +24,22 @@ Blockquotes
 
 - Content in a ``<blockquote>`` does not need quotation marks or italics.
 The CSS does the styling.
-- This one may have to change to a div with pullquote class
-(not sure how we want to handle this in RST)
-since ``<blockquote>`` is supposed to be used when
-[quoting another source](https://w3c.github.io/html/grouping-content.html#the-blockquote-element).
+- Blockquotes should be used when quoting another source. The ``epigraph::`` is
+the RST way of declaring a blockquote with citation:
+
+```.. epigraph::
+
+   This is a blockquote with citation. Vestibulum tortor quam, feugiat vitae,
+   ultricies eget, tempor sit amet, ante.
+
+   -—Person Name
+```
 
 
 Branding
 --------
 
-- Always capitalize the “O” and “B” in OddBird.
+- Always capitalize the “O” and “B” in OddBird and OddSite.
 
 
 Headlines
@@ -53,10 +59,14 @@ for screen readers and search engines. Alt text should describe what is in
 the image.
 - We have some utility classes for image alignments and will be adding more
 soon. As of January 31, 2017 you may use the following:
-  - align-left
-  - align-right
-  - align-center
-  - align-none
+  - ``align-left``
+  - ``align-right``
+  - ``align-center``
+  - ``align-none``
+  - ``size-quarter``
+  - ``size-half``
+  - ``size-full``
+- Note: If decalring a size, it remains this size regardless of screen size.
 - This is how you add a link, class, and alt text in RST:
 ```
 .. image:: /static/images/blog/miko.jpg
@@ -85,9 +95,14 @@ Summary
 -------
 
 - Each post should have a summary. This is shown on the archive pages
-(home and birds if recent, blog archive, tag archive)
-and when sharing on content to social sites.
+(home and birds if recent, blog archive, tag archive) and when sharing on content to social sites.
 - The summary should not be repeated as the intro in the post.
+- It is created near the top of the document and format is as follows:
+```
+summary: |
+  This is your short summary. You can include a excerpt that will appear
+  on the archive pages and as the default social media summary.
+```
 
 
 Tags
@@ -101,7 +116,7 @@ tags to use in order to avoid variations of the same topic.
 - Tags are Title Case.
 - Tags with multiple words should have spaces instead of dashes unless the
 phrase is hyphenated. Multi-word tags need to be declared as a string:
-``tag: ['open design', oddsite]``
+``tag: ['Open Design', OddSite]``
 - Tags are used to show related content. Think about what topics
 were covered in this post that would help the reader find a related article.
 - Adding tags when you are finished writing might result in cleaner and more
