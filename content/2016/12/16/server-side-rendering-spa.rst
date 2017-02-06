@@ -1,6 +1,15 @@
 public: yes
 author: kit
-tags: [stupid server tricks]
+tags: [
+  'Single-Page Applications',
+  'Server-Side Rendering',
+  Jinja2,
+  Django,
+  Python,
+  Code,
+  Backbone,
+  Marionette
+  ]
 image:
   - src: '2016/spa.jpg'
 summary: |
