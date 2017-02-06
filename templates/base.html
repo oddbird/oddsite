@@ -41,12 +41,15 @@
   {% set image = config.image[0].src if config.image else 'oddsite.jpg' %}
   {% set image = image if '://' in image else [config.canonical_url, 'static/images/blog/', image]|join('') %}
   <meta property="og:title" content="{{ self.title() }} | OddBird" />
-  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="OddBird" />
+  <meta property="og:type" content="{% block og_type %}website{% endblock og_type %}" />
   <meta property="og:image" content="{{ image }}" />
   <meta property="og:url" content="{% block og_url %}{{ config.canonical_url }}{% endblock og_url %}" />
   {% if config.summary %}
     <meta property="og:description" content="{% block og_summary %}{% endblock og_summary %}" />
   {% endif %}
+  {% block extra_og %}
+  {% endblock extra_og %}
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@oddbird" />
 
