@@ -7,7 +7,7 @@
 
       {{ page.render_summary() }}
 
-      <ul>
+      <ul class="social-list">
         {% for link in page.config.social[0] %}
           {% if link in ['twitter', 'github'] %}
             {{ get_social(link, page.config.social[0][link]) }}

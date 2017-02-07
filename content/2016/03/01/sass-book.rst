@@ -1,6 +1,6 @@
 public: yes
 author: miriam
-tags: [sass, book]
+tags: [Sass, Books]
 image:
   - src: 'sassbook.jpg'
 summary: |

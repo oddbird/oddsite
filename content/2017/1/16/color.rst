@@ -1,6 +1,6 @@
 public: yes
 author: sondra
-tags: [oddsite, open-design]
+tags: [OddSite, 'Open Design', Color, Design]
 image:
   - src: '2017/colors/color.jpg'
 summary: |
@@ -11,7 +11,7 @@ summary: |
 after:
   - include: 'blog/_tag-module.html.j2'
     title: 'OddSite Re-design Timeline'
-    tag: open-design
+    tag: 'Open Design'
     id: 'open-design-articles'
 
 
@@ -170,9 +170,11 @@ There are so many important considerations around color and accessibility, and
 I can’t tackle them all in this post. The most basic and important principle to
 keep in mind is to maintain high contrast between background and text colors.
 
-    *“Users will do what they need to do, and what they are accustomed to
+    Users will do what they need to do, and what they are accustomed to
     doing, in order to read. The main concern for web developers is to ensure a
-    high degree of contrast for the general population of readers.”* —`WebAIM`_
+    high degree of contrast for the general population of readers.
+
+    --`WebAIM`_
 
 .. _WebAIM: http://webaim.org/techniques/fonts/
 
