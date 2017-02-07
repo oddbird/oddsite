@@ -1,6 +1,6 @@
 public: yes
 author: sondra
-tags: [case-study]
+tags: ['Case Studies']
 image:
   - src: '2016/coachhub/feature.jpg'
 summary: |

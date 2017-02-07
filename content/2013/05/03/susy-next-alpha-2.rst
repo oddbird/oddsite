@@ -1,5 +1,5 @@
 public: yes
-tags: [susy, "2.0", layout, grids, rwd]
+tags: [Susy, Layout, Grids, Code]
 author: miriam
 image:
   - src: 'susy.jpg'
@@ -163,7 +163,7 @@ for that particular container:
 
   @include container(show);
 
-Galleries (formerly "isolate-grid")
+Galleries (Formerly "isolate-grid")
 -----------------------------------
 
 You can now create a simple gallery layout

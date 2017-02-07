@@ -1,5 +1,5 @@
 public: yes
-tags: [susy, "2.0", layout, grids, rwd]
+tags: [Susy, Layout, Grids]
 author: miriam
 image:
   - src: 'susy.jpg'
@@ -14,7 +14,7 @@ summary: |
   than usable interface.
 
 
-Susy Next: The first alpha
+Susy Next: The First Alpha
 ==========================
 
 Last night we released
