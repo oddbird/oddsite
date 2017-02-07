@@ -75,17 +75,25 @@ a {
   }
 }
 
+/// @todo totally yucky, need a better class to hook into
+///   [data-module='rst-body'] is only for blog posts
+///   and no global inner-level class exists
 [data-region='main'] {
-  p,
-  ul,
-  ol,
-  li {
-    margin: 0.75rem 0;
+  p {
+    margin-bottom: size('shim');
+    margin-top: size('shim');
+  }
+
+  [data-module='rst-body'] {
+    p {
+      margin-bottom: size('gutter');
+    }
   }
 
   ul,
   ol {
-    padding: 0 0.75rem;
+    margin: size('shim') 0 size ('gutter');
+    padding-left: size('gutter');
   }
 }
 
