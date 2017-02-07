@@ -61,14 +61,16 @@ soon. As of January 31, 2017 you may use the following:
   - ``size-quarter``
   - ``size-half``
   - ``size-full``
-- Note: If decalring a size, it remains this size regardless of screen size.
+  - ``img-border`` adds a hairline, helpful when using a screenshot with a
+  white background.
+- *Note:* If declaring a size, it remains this size regardless of screen size.
 - ``:align:`` accepts ``left``, ``right`` or ``center`` and outputs as a class.
 - This is how you add alignment, alt text, classes and links in RST:
 ```
 .. image:: /static/images/blog/miko.jpg
    :align: right
    :alt: Miko smiling while playing outside
-   :class: size-quarter
+   :class: size-quarter img-border
    :target: https://supportada.org/?campaign=python
 ```
 
