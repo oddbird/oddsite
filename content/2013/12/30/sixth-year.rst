@@ -1,5 +1,6 @@
 public: yes
 author: carl
+tags: ['Year in Review', Community]
 image:
   - src: '2013.jpg'
 summary: |

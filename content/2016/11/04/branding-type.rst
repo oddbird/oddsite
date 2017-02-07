@@ -1,6 +1,6 @@
 public: yes
 author: sondra
-tags: [oddsite, open-design]
+tags: [OddSite, 'Open Design', Design, Typography]
 image:
   - src: '2016/brand/type-header.jpg'
 summary: |
@@ -8,7 +8,7 @@ summary: |
 after:
   - include: 'blog/_tag-module.html.j2'
     title: 'OddSite Re-design Timeline'
-    tag: open-design
+    tag: 'Open Design'
     id: 'open-design-articles'
 
 
@@ -153,7 +153,7 @@ So we looked to our community for inspiration. Stacy posted a fantastic article 
 
 
 Typography - With a Little Help From Our Friends
---------------------------------------------------------
+------------------------------------------------
 
 Our three designers each created several designs—basically element collages—of a blogpost. We picked the blogpost for two reasons: it is text heavy, and it is also the core of our new website design. We want to be an education source for the web community, part of a conversation with you. Our blog is an essential conversation starter, so it is important for us to design it well. Focusing on just one element, typography, clarified the conversation, and we’ve narrowed the selection to our top three typefaces.
 
