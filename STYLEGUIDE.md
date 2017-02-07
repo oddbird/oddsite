@@ -15,8 +15,8 @@ to automate as much living documentation as possible.
 Writing Content
 ===============
 
-When creating content it is important to stay consistent.
-Below are a few guidelines that will help:
+When creating content it is important to stay consistent. Review a
+[sample blog post](/docs/sample), and keep in mind the following guidelines:
 
 
 Blockquotes
@@ -24,16 +24,14 @@ Blockquotes
 
 - Content in a ``<blockquote>`` does not need quotation marks or italics.
 The CSS does the styling.
-- Blockquotes should be used when quoting another source. The ``epigraph::`` is
-the RST way of declaring a blockquote with citation:
+- Blockquotes should be used when quoting another source. Blockquotes require 4
+spaces.
 
 ```none
-.. epigraph::
+    This is a blockquote with citation. Vestibulum tortor quam, feugiat vitae,
+    ultricies eget, tempor sit amet, ante.
 
-   This is a blockquote with citation. Vestibulum tortor quam, feugiat vitae,
-   ultricies eget, tempor sit amet, ante.
-
-   --Person Name
+    --Person Name
 ```
 
 
@@ -124,6 +122,3 @@ were covered in this post that would help the reader find a related article.
 - Adding tags when you are finished writing might result in cleaner and more
 accurate tags.
 - Posts that talk about sponsorship should include the ``community`` tag.
-
-
-

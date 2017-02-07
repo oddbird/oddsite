@@ -197,8 +197,6 @@ particular typeface will work for your project, I strongly recommend testing it
 in the context of your logo or website. Try out various weights – bold, italic,
 condensed – and sizes.
 
-.. epigraph::
-
     In many ways, the font size is not as important as it used to be, because
     of the increased customizability of browsers and assistive technologies.
     However, it is important that your design accommodate increased text sizes
@@ -238,8 +236,6 @@ All the options are so amazing for different reasons. How do you narrow to just
 one typeface or a single pair? (And narrowing down is important for
 accessibility.)
 
-.. epigraph::
-
     Using too many font faces can create a confusing visual layout, which is
     bad for all users, but may be especially difficult for users with reading
     disorders, learning disabilities, or attention deficit disorders.
@@ -278,7 +274,7 @@ effortless.
 
 .. image:: /static/images/blog/2017/typography/freight.jpg
 
-.. epigraph::
+..
 
     Designed for warm formality in text and an authoritative, helpful tone in
     display, Freight Sans eschews mannerisms of form in favor of a studied
@@ -291,8 +287,6 @@ effortless.
 Warmth, authority, helpfulness: a very accurate description of what OddBird
 would like our users to experience when they work with us and land on OddSite
 making Freight Sans an obvious choice to meet our brand goals.
-
-.. epigraph::
 
     Freight Text series was designed for extended reading in periodicals and
     data-intensive documents.

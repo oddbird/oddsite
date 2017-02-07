@@ -106,8 +106,7 @@ Blockquotes and Pullquotes
 
 .. epigraph::
 
-    Gives the blockquote a class of epigraph. Maybe not needed as we can still
-    use the citation below.
+    Gives the blockquote a class of ``epigraph``.
 
     --Name of cited source here preceeded by 2 or 3 ``-`` characters
 
@@ -115,14 +114,15 @@ Blockquotes and Pullquotes
 .. highlights::
 
     Highlights summarize the main points of a document or section, often
-    consisting of a list.
+    consisting of a list. Gives the blockquote a class of ``highlights``.
 
 
 .. pull-quote::
 
     A pull-quote is a small selection of text ‘pulled out and quoted’,
     typically in a larger typeface. Pull-quotes are used to attract attention,
-    especially in long articles.
+    especially in long articles. Gives the blockquote a class of
+    ``pull-quote``.
 
 
 
