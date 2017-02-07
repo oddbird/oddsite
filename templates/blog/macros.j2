@@ -23,9 +23,9 @@
     {{ blog.header_image(post) }}
 
     {% if post.summary %}
-      <p class="summary">
+      <div class="summary">
         {{ post.render_summary() }}
-      </p>
+      </div>
     {% endif %}
 
     <a href="{{ link_to('page', slug=post.slug) }}" rel="bookmark">
