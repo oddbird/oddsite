@@ -45,6 +45,7 @@ $spacing-sizes: (
   'shim': 'gutter' ('multiple': 0.5),
   'half-shim': 'shim' ('multiple': 0.5),
   'quarter-shim': 'shim' ('multiple': 0.25),
+  'pixel': 1px,
 );
 
 @include herman-add-sizes('spacing-sizes', $spacing-sizes);
