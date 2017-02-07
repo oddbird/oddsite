@@ -18,7 +18,6 @@
       &,
       #{$link} {
         @include text-underline('background', 'invert');
-        //color: color('background');
       }
 
       #{$focus} {
