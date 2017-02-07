@@ -7,7 +7,9 @@ adr:
 social:
   - twitter: jgerigmeyer
     github: jgerigmeyer
-facebook: jgerigmeyer
+og:
+  - facebook: jgerigmeyer
+    twitter: jgerigmeyer
 summary: |
   `Jonny Gerig Meyer`_
   is an architect of clean,
