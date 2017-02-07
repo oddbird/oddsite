@@ -57,6 +57,7 @@
 }
 
 .socials {
+  // override main ul spacing
   [data-region='main'] & {
     margin: 0 0 0 size('half-author');
     padding-bottom: size('shim');
@@ -73,7 +74,7 @@
     margin-right: size('shim');
 
     [data-icon] {
-      padding: 1px; // avoid social icons getting cropped
+      padding: size('pixel'); // avoid social icons getting cropped
     }
 
 
