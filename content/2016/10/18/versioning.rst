@@ -1,6 +1,6 @@
 public: no
 author: miriam
-tags: ['interview', 'sitepoint', 'podcast']
+tags: [Interviews, Sitepoint, Podcasts]
 image:
   - src: '2016/versioning.png'
 summary: |

@@ -97,6 +97,14 @@ a {
   }
 }
 
+.upperroman {
+  list-style-type: upper-roman;
+}
+
+.loweralpha {
+  list-style-type: lower-alpha;
+}
+
 code {
   @include font-family('code');
   // adjust for relative size of monospace font...

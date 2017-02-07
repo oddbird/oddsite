@@ -3,6 +3,16 @@
 // Code Patterns
 // =============
 
+pre {
+  code {
+    color: inherit;
+  }
+}
+
+code {
+  color: color('code-name-class');
+}
+
 // See: http://pygments.org/docs/styles/
 // And: https://github.com/richleland/pygments-css
 .code {

@@ -1,6 +1,6 @@
 public: yes
 author: stacy
-tags: [data, design, video, recommend]
+tags: [Data, Design, Videos, Recommendations]
 image:
   - src: '2017/video-series/sarah.jpg'
 summary: |

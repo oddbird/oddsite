@@ -1,6 +1,6 @@
 public: yes
 author: stacy
-tags: [css, css-grid-layout, design]
+tags: [Grids, 'CSS Grid', Layout, Design, Code]
 image:
   - src: 'cssgriddemo.jpg'
 summary: |
@@ -9,7 +9,7 @@ summary: |
 after:
   - include: 'blog/_tag-module.html.j2'
     title: 'Posts about CSS Grid Layout'
-    tag: css-grid-layout
+    tag: 'CSS Grid'
     id: 'css-grid-layout'
 
 
@@ -31,7 +31,7 @@ If you haven’t used Flexbox yet, I highly suggest studying this CodePen demo:
 
 Flexbox is great for single direction elements but lacks the ability to create structure on both x and y axis’. A container with `display: flex;` can either go horizontally or vertically as selected by the flex-direction property.
 
-CSS Grid Layout to the rescue
+CSS Grid Layout to the Rescue
 -----------------------------
 
 Well, CSS Grid Layout is in the far distant future. It doesn’t have much browser support at the moment so if you want to use it on a production site you may want to use Feature Queries. By wrapping your code in an ``@supports`` conditional, it will check to see if the browser has support for the property/value pair in the parentheses, and if so, will use what is inside the @supports brackets. If the browser doesn't have support for `display: grid` or if the browser doesn't even know what Feature Queries are, then it ignores the block of code.
@@ -42,7 +42,7 @@ Well, CSS Grid Layout is in the far distant future. It doesn’t have much brows
     display: flex;
 
     @supports ( display: grid ) {
-  	   display: grid;
+       display: grid;
     }
   }
 
@@ -55,7 +55,7 @@ Currently, Feature Queries are supported in most browsers except Internet Explor
 
 
 
-Grid introduces new vocabulary
+Grid Introduces New Vocabulary
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
@@ -104,8 +104,8 @@ Grid-specific CSS Properties
 
 Over the next few months we will be writing more about CSS Grid Layout. In the meantime, `CSS-Tricks posted a guide`_ from Chris House `Chris House`_ that explains each of the below properties in great detail.
 
-CSS Grid Layout Properties you would use on a grid container:
-*************************************************************
+CSS Grid Layout Properties to use on a Grid Container:
+******************************************************
 
   - display
   - grid-template-columns
@@ -124,8 +124,8 @@ CSS Grid Layout Properties you would use on a grid container:
   - grid
 
 
-CSS Grid Layout Properties you would use on a grid item:
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+CSS Grid Layout Properties to use on a Grid Item:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
   - grid-column-start
   - grid-column-end

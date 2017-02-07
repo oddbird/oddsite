@@ -1,6 +1,6 @@
 public: yes
 author: sondra
-tags: [case-study]
+tags: ['Case Studies']
 image:
   - src: '2016/logos/oddbird.jpg'
 summary: |
@@ -10,7 +10,7 @@ summary: |
 
 
 Brand Identity: Logos
-====================================================
+=====================
 
 We've helped develop several brands over the years.
 Here are a few of our favorites...
