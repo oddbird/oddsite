@@ -15,6 +15,7 @@
 
   [rel='home'] {
     #{$link} {
+      background-image: none;
       color: color('brand-blue');
       display: inline-block;
       transition: color 250ms;
