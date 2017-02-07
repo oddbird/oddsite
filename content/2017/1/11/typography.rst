@@ -1,6 +1,6 @@
 public: yes
 author: sondra
-tags: [oddsite, open-design]
+tags: [OddSite, 'Open Design', Typography, Design]
 image:
   - src: '2017/typography/type.jpg'
 summary: |
@@ -15,14 +15,14 @@ summary: |
 after:
   - include: 'blog/_tag-module.html.j2'
     title: 'OddSite Re-design Timeline'
-    tag: open-design
+    tag: 'Open Design'
     id: 'open-design-articles'
 
 
 Open Brand Identity Design: Please Steal These Ideas
 ====================================================
 
-How to choose evocative and accessible fonts and colors for your website brand identity.
+How to Choose Evocative and Accessible Fonts and Colors for your Website Brand Identity.
 ----------------------------------------------------------------------------------------
 
 How do you choose the best fonts and colors for a brand identity among the
@@ -197,10 +197,12 @@ particular typeface will work for your project, I strongly recommend testing it
 in the context of your logo or website. Try out various weights – bold, italic,
 condensed – and sizes.
 
-    *“In many ways, the font size is not as important as it used to be, because
+    In many ways, the font size is not as important as it used to be, because
     of the increased customizability of browsers and assistive technologies.
     However, it is important that your design accommodate increased text sizes
-    without loss of readability or functionality.”* —`WebAIM`_
+    without loss of readability or functionality.
+
+    --`WebAIM`_
 
 .. _WebAIM: http://webaim.org/techniques/fonts/
 
@@ -234,10 +236,11 @@ All the options are so amazing for different reasons. How do you narrow to just
 one typeface or a single pair? (And narrowing down is important for
 accessibility.)
 
-    *“Using too many font faces can create a confusing visual layout, which is
+    Using too many font faces can create a confusing visual layout, which is
     bad for all users, but may be especially difficult for users with reading
-    disorders, learning disabilities, or attention deficit disorders.”*
-    —`WebAIM`_
+    disorders, learning disabilities, or attention deficit disorders.
+
+    --`WebAIM`_
 
 .. _WebAIM: http://webaim.org/techniques/fonts/
 
@@ -273,9 +276,11 @@ effortless.
 
 ..
 
-    *“Designed for warm formality in text and an authoritative, helpful tone in
+    Designed for warm formality in text and an authoritative, helpful tone in
     display, Freight Sans eschews mannerisms of form in favor of a studied
-    balance of organic and geometric shapes.”* —`Webtype`_
+    balance of organic and geometric shapes.
+
+    --`Webtype`_
 
 .. _Webtype: http://www.webtype.com/font/freight-sans-family/
 
@@ -283,8 +288,10 @@ Warmth, authority, helpfulness: a very accurate description of what OddBird
 would like our users to experience when they work with us and land on OddSite
 making Freight Sans an obvious choice to meet our brand goals.
 
-    *“Freight Text series was designed for extended reading in periodicals and
-    data-intensive documents.”* —`Typedia`_
+    Freight Text series was designed for extended reading in periodicals and
+    data-intensive documents.
+
+    --`Typedia`_
 
 .. _Typedia: http://typedia.com/explore/typeface/freight-text/
 

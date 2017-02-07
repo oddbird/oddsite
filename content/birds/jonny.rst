@@ -2,11 +2,14 @@ public: yes
 bird: jonny
 role: 'co-founder and front-end lead'
 adr:
-  - city: 'Goshen'
-    state: 'IN'
+  - city: Goshen
+    state: IN
 social:
-  - twitter: 'jgerigmeyer'
-    github: 'jgerigmeyer'
+  - twitter: jgerigmeyer
+    github: jgerigmeyer
+og:
+  - facebook: jgerigmeyer
+    twitter: jgerigmeyer
 summary: |
   `Jonny Gerig Meyer`_
   is an architect of clean,

@@ -1,6 +1,6 @@
 public: yes
 author: miriam
-tags: [politics, year-in-review, diversity]
+tags: [Politics, 'Year in Review', Diversity]
 image:
   - src: '2017/2016-review/retreat.jpg'
 summary: |

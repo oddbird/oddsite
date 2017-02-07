@@ -1,6 +1,6 @@
 public: yes
 author: jonny
-tags: ["javascript", "conferences", "code", "jquery"]
+tags: [JavaScript, Conferences, Code, jQuery]
 image:
   - src: 'jqueryconf2014.jpg'
 summary: |

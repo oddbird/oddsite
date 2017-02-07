@@ -1,5 +1,5 @@
 public: yes
-tags: [susy, layout, grids, rwd, "sub-pixel rounding"]
+tags: [Susy, Layout, Grids, 'Sub-pixel Rounding', Code]
 author: miriam
 image:
   - src: 'susy.jpg'
@@ -14,7 +14,7 @@ summary: |
   .. _sub-pixel rounding: http://palantir.net/blog/responsive-design-s-dirty-little-secret
 
 
-Isolation and bleed in Susy
+Isolation and Bleed in Susy
 ===========================
 
 A few new features have landed in Susy 1.0.7,
