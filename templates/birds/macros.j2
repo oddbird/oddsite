@@ -15,15 +15,17 @@
         {{ birds.name_link(author) }}
       </h2>
 
-      <div>
+      <ul class="socials">
         {% set links = page.config.social[0] %}
         {% for link in links %}
-          {{ birds.get_social(link, links[link]) }}
+          <li>{{ birds.get_social(link, links[link]) }}</li>
         {% endfor %}
-      </div>
+      </ul>
     </header>
 
-    {{ page.render_contents() }}
+    <div class="bio">
+      {{ page.render_contents() }}
+    </div>
 
     {{ oss_list(author, oss) }}
     {{ blog_list(
@@ -35,9 +37,9 @@
 
 {% macro blog_list(posts) %}
   {% if posts|length %}
-    <div>
+    <div class="bird-posts">
       <h3>Recent Articles</h3>
-      <ul>
+      <ul class="title-list">
         {% for post in posts %}
           {% if loop.index < 4 %}
             <li>
@@ -53,9 +55,9 @@
 
 {% macro oss_list(author, oss) %}
   {% if oss %}
-    <div>
+    <div class="bird-posts">
       <h3>Open Source</h3>
-      <ul>
+      <ul class="title-list">
         {% for item in oss %}
           {% set oss_author = item.who|selectattr('author', 'equalto', author)|list %}
 

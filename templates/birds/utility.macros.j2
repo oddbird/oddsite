@@ -5,7 +5,9 @@
     <div class="h-card">
       {{ utility.icon(page.config.bird, size='face') }}
 
-      {{ page.render_summary() }}
+      <div class="bio-short">
+        {{ page.render_summary() }}
+      </div>
 
       <ul class="socials">
         {% for link in page.config.social[0] %}
