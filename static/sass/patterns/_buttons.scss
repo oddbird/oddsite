@@ -6,9 +6,19 @@
   #{$link} {
     @include contrasted('action');
     background-image: none; // remove link underline when styling as button...
+    border-color: transparent;
+    border-style: solid;
+    border-width: 1px;
     display: inline-block;
     padding: 0.5rem 1rem;
     text-decoration: none;
     text-shadow: none;
+    transition: color 150ms, background-color 150ms;
+  }
+
+  #{$focus} {
+    background-color: color('background');
+    border-color: color('action');
+    color: color('action');
   }
 }
