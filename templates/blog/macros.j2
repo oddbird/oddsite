@@ -14,7 +14,7 @@
 
     <div class="meta">
       <p class="byline">
-        <span class="meta-bit">by</span> {{ birds.get_card(post.author, details=true) }}
+        <span class="meta-bit">by</span> {{ birds.get_card(post.author) }}
         <span class="meta-bit">on</span> {{ utility.datetime(post.pub_date) }}
       </p>
       {{ blog.tags(post.tags) }}
