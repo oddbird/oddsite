@@ -1,15 +1,15 @@
 public: yes
 author: jonny
 tags: [
-  'single-page-applications',
-  'server-side-rendering',
-  javascript,
-  jinja2,
-  django,
-  python,
-  code,
-  backbone,
-  marionette
+  'Single-Page Applications',
+  'Server-Side Rendering',
+  JavaScript,
+  Jinja2,
+  Django,
+  Python,
+  Code,
+  Backbone,
+  Marionette
   ]
 image:
   - src: '2017/server-client/spa2.jpg'

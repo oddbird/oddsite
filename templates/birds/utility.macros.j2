@@ -7,7 +7,7 @@
 
       {{ page.render_summary() }}
 
-      <ul>
+      <ul class="social-list">
         {% for link in page.config.social[0] %}
           {% if link in ['twitter', 'github'] %}
             {{ get_social(link, page.config.social[0][link]) }}
@@ -29,6 +29,24 @@
     details=details
     ) }}
 {% endmacro %}
+
+
+{% macro get_og_author(author) -%}
+  {% set page = all_pages|filter_pages('bird', 'eq', author)|get_page %}
+  {%- if page and page.config.og and page.config.og[0].facebook -%}
+    https://www.facebook.com/{{ page.config.og[0].facebook }}
+  {%- else -%}
+    {{ page.title or author }}
+  {%- endif -%}
+{%- endmacro %}
+
+
+{% macro get_og_twitter_creator(author) -%}
+  {% set page = all_pages|filter_pages('bird', 'eq', author)|get_page %}
+  {%- if page and page.config.og and page.config.og[0].twitter -%}
+    <meta property="twitter:creator" content="@{{ page.config.og[0].twitter }}" />
+  {%- endif -%}
+{%- endmacro %}
 
 
 {% macro name_link(author, page=none, fallback=none) %}

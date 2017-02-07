@@ -1,6 +1,6 @@
 public: no
 author: miriam
-tags: [speaking]
+tags: [Speaking]
 .. before:
   - include: 'blog/_speaking.html.j2'
     title: 'Code Patterns for Pattern-Making'

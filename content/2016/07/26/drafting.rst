@@ -1,12 +1,12 @@
 public: no
 author: miriam
-tags: [oddsite, open-design]
+tags: [OddSite, 'Open Design', Process]
 image:
   - src: 'oddsite.jpg'
 after:
   - include: 'blog/_tag-module.html.j2'
     title: 'OddSite Re-design Timeline'
-    tag: open-design
+    tag: 'Open Design'
     id: 'open-design-articles'
 
 
@@ -87,7 +87,7 @@ showing our first draft is a far cry from
 showing you where we started.
 We wanted to start with something you could look at —
 a live, active, usable first draft —
-and take our open-design from there.
+and take our open design from there.
 But drafting was a lot of work,
 and I wish we had launched even earlier.
 I'll make a note for next time.

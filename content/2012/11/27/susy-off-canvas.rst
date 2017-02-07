@@ -1,5 +1,5 @@
 public: yes
-tags: [susy, demo, rwd, layout]
+tags: [Susy, Demos, Layout, Code]
 author: miriam
 image:
   - src: 'susy.jpg'
@@ -17,7 +17,7 @@ summary: |
   .. _Susy: http://susy.oddbird.net/
 
 
-Off-canvas layout with Susy
+Off-Canvas Layout with Susy
 ===========================
 
 **UPDATE**:
