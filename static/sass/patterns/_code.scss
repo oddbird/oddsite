@@ -10,7 +10,18 @@ pre {
 }
 
 code {
+  @include font-family('code');
   color: color('code-name-class');
+  font-size: 80%; // accommodate for inline <code> in any size element
+  padding: 3px;
+
+  a & {
+    color: color('action');
+  }
+
+  a:hover & {
+    color: color('action-hover');
+  }
 }
 
 // See: http://pygments.org/docs/styles/
