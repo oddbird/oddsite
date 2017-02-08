@@ -75,21 +75,16 @@ a {
   }
 }
 
-/// @todo totally yucky, need a better class to hook into
-///   [data-module='rst-body'] is only for blog posts
-///   and no global inner-level class exists
+p {
+  margin-bottom: size('shim');
+  margin-top: size('shim');
+
+  [data-module='rst-body'] & {
+    margin-bottom: size('gutter');
+  }
+}
+
 [data-region='main'] {
-  p {
-    margin-bottom: size('shim');
-    margin-top: size('shim');
-  }
-
-  [data-module='rst-body'] {
-    p {
-      margin-bottom: size('gutter');
-    }
-  }
-
   ul,
   ol {
     margin: size('shim') 0 size('gutter');
@@ -103,10 +98,4 @@ a {
 
 .loweralpha {
   list-style-type: lower-alpha;
-}
-
-code {
-  @include font-family('code');
-  // adjust for relative size of monospace font...
-  font-size: 0.75em;
 }
