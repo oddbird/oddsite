@@ -6,18 +6,14 @@
   margin: size('gutter') auto size('spacer');
   max-width: size('full-content');
   padding: 0 size('gutter');
-
-.title {
-  @include font-family('alt');
-  font-size: calc(1.5rem + 1.75vw);
-  line-height: 1.25;
-  margin: size('gutter') auto;
-  max-width: size('full-content');
-  padding: 0 size('gutter');
 }
 
 .separator {
   @include section-arrow;
   box-shadow: 0 2px 2px color('shadow');
   z-index: 2;
+}
+
+.preview {
+  margin-bottom: size('spacer');
 }
