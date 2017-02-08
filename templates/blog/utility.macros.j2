@@ -21,6 +21,7 @@
 {% macro tags(taglist) %}
   {% if taglist %}
     <nav class="tags">
+      {{ utility.icon('tags', class='icon-tag') }}
       {% for tag in taglist|sort(case_sensitive=true) %}
         <a href="{{ link_to('tag', tag=tag) }}" class="tag" rel="tag">{{ tag }}</a>
       {%- endfor %}

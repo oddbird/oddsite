@@ -8,7 +8,7 @@
 .tag {
   &,
   #{$link} {
-    background-color: color('tag');
+    background-color: color('tag-bg');
     background-image: none; // remove link underline when styling as button...
     border-radius: size('border-radius');
     color: color('action');
@@ -23,4 +23,10 @@
   &:not(:last-child) {
     margin-right: size('half-shim');
   }
+}
+
+.icon-tag {
+  display: inline-block;
+  fill: color('tag');
+  margin-right: size('half-shim');
 }
