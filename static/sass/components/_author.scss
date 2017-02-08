@@ -1,12 +1,10 @@
 // Author Box
 // ==========
 
-[data-module] {
-  + [data-module='rst-author'] {
-    border-top: 0;
-    margin-top: size('author');
-    padding-top: 0;
-  }
+[data-module='rst-author'] {
+  border-top: 0;
+  margin-top: size('author');
+  padding-top: 0;
 }
 
 .author-summary {
