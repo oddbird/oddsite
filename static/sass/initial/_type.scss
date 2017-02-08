@@ -2,7 +2,6 @@
 // ------------------
 
 
-
 // Base
 // ----
 
@@ -33,9 +32,8 @@
 }
 
 
-
-// Typographic Defaults
-// --------------------
+// Headlines
+// ---------
 
 h1,
 h2,
@@ -54,6 +52,10 @@ h3 {
   margin-top: 1.5rem;
 }
 
+
+// Links
+// -----
+
 a {
   #{$link} {
     @include text-underline('action');
@@ -70,10 +72,20 @@ a {
   }
 
   #{$focus} {
-    background-image: linear-gradient(color('action-hover'), color('action-hover'));
-    color: color('action-hover');
+    @include text-underline-color('action-hover');
   }
 }
+
+.icon-link {
+  &,
+  #{$link} {
+    background-image: none;
+  }
+}
+
+
+// Paragraphs
+// ----------
 
 p {
   margin-bottom: size('shim');
@@ -83,6 +95,10 @@ p {
     margin-bottom: size('gutter');
   }
 }
+
+
+// Lists
+// -----
 
 [data-region='main'] {
   ul,

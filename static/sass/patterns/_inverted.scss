@@ -6,23 +6,31 @@
   color: color('background');
 
   a {
-    color: color('background');
+    &,
+    #{$link}  {
+      @include text-underline('background', 'invert');
+    }
 
     #{$focus} {
-      color: color('invert-link-hover');
+      @include text-underline-color('invert-link-hover');
     }
-  }
 
-  p {
-    a {
-      &,
+    &.icon-link {
+      // no underline on whole link. Going to target text only.
       #{$link} {
-        @include text-underline('background', 'invert');
+        background-image: none;
       }
 
+      // change underline color when hover over icon too
       #{$focus} {
-        background-image: linear-gradient(color('invert-link-hover'), color('invert-link-hover'));
-        color: color('invert-link-hover');
+        .icon-text {
+          @include text-underline-color('invert-link-hover');
+        }
+      }
+
+      // target only text within these svg icon links
+      .icon-text {
+        @include text-underline('background', 'invert');
       }
     }
   }
