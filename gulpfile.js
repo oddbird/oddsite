@@ -111,7 +111,7 @@ const sasslintTask = (src, failOnError, log) => {
 };
 
 gulp.task('default', [ 'eslint', 'sasslint', 'test' ]);
-gulp.task('dev', [ 'eslint', 'sasslint', 'test', 'serve' ]);
+gulp.task('dev', [ 'eslint', 'sasslint', 'sasstest', 'serve' ]);
 gulp.task('prod', ['webpack-prod']);
 
 gulp.task('serve', [ 'watch', 'runserver' ]);
