@@ -14,8 +14,8 @@
 
     <div class="meta">
       <p class="byline">
-        <span class="meta-bit">by</span> {{ birds.get_card(post.author) }}
-        <span class="meta-bit">on</span> {{ utility.datetime(post.pub_date) }}
+        <span class="meta-preposition">by</span> {{ birds.get_card(post.author) }}
+        <span class="meta-preposition">on</span> {{ utility.datetime(post.pub_date) }}
       </p>
       {{ blog.tags(post.tags) }}
     </div>
@@ -37,7 +37,7 @@
 
 {% macro byline(post) %}
   <p class="byline">
-    <span class="meta-bit">by</span> {{ birds.get_card(post.author) }}
+    <span class="meta-preposition">by</span> {{ birds.get_card(post.author) }}
     {{ utility.datetime(post.pub_date) }}
   </p>
   {{ blog.tags(post.tags) }}
