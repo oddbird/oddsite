@@ -52,8 +52,8 @@
       @include expect {
         // sass-lint:disable-all
         text-shadow: 0.1em -1px 0 #fff, 0.1em 0px 0 #fff, 0.1em 1px 0 #fff, 0.05em -1px 0 #fff, 0.05em 0px 0 #fff, 0.05em 1px 0 #fff, 0em -1px 0 #fff, 0em 1px 0 #fff, -0.05em -1px 0 #fff, -0.05em 0px 0 #fff, -0.05em 1px 0 #fff, -0.1em -1px 0 #fff, -0.1em 0px 0 #fff, -0.1em 1px 0 #fff;
-        color: #e07;
         background-image: linear-gradient(#e07, #e07);
+        color: #e07;
         background-position: 0 calc(1.05em + 1.5px);
         background-repeat: repeat-x;
         background-size: calc(1px + 0.04em) calc(1px + 0.04em);
