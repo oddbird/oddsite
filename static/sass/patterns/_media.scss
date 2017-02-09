@@ -9,10 +9,22 @@ video {
 }
 
 .hero {
+  margin-bottom: size('shim');
   width: 100%;
 }
 
 // For those images that have text and need separation from content
 .img-border {
   border: 1px solid color('border-img');
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  + img {
+    margin-top: size('shim');
+  }
 }

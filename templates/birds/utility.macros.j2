@@ -5,12 +5,14 @@
     <div class="h-card">
       {{ utility.icon(page.config.bird, size='face') }}
 
-      {{ page.render_summary() }}
+      <div class="bio-short">
+        {{ page.render_summary() }}
+      </div>
 
-      <ul class="social-list">
+      <ul class="socials">
         {% for link in page.config.social[0] %}
           {% if link in ['twitter', 'github'] %}
-            {{ get_social(link, page.config.social[0][link]) }}
+            <li>{{ get_social(link, page.config.social[0][link]) }}</li>
           {% endif %}
         {% endfor %}
       </ul>
@@ -27,7 +29,7 @@
   {{ card(
     page=all_pages|filter_pages('bird', 'eq', author)|get_page,
     details=details
-    ) }}
+  ) }}
 {% endmacro %}
 
 
@@ -84,8 +86,8 @@
   {% set url = locations[name]|format(user) if locations[name] else none %}
   {% set username = displays[name]|format(user) if displays[name] else name %}
 
-  <a href="{{ url }}" rel="me">
+  <a class="icon-link" href="{{ url }}" rel="me">
     {{ utility.icon(name) }}
-    {{ username or user }}
+    <span class="icon-text">{{ username or user }}</span>
   </a>
 {% endmacro %}
