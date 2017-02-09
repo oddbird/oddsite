@@ -46,6 +46,26 @@
 }
 
 
+// Text and Underline Color
+// ------------------------
+/// Declare the color of underline and text/icon
+/// @group typography
+/// @parameter {Color | String} $color ['action'] -
+///   Color (or Accoutrement color-key) to use for color and
+///   linear-gradient colors which make the underline
+/// @see text-underline
+/// @example njk -
+///   <a href="#" data-styleguide="text-outline">
+///     text outline (decenders: Qhghjhqhy)
+///   </a>
+@mixin text-underline-color(
+  $color: 'action'
+) {
+  background-image: linear-gradient(color($color), color($color));
+  color: color($color);
+}
+
+
 // Text Underline
 // --------------
 /// Underline text with a background-image
@@ -63,6 +83,7 @@
 /// @link https://eager.io/blog/smarter-link-underlines/
 ///   Smarter Text Underlines
 /// @see text-outline
+/// @see text-underline-color
 /// @example njk -
 ///   <a href="#" data-styleguide="text-outline">
 ///     text underline (decenders: Qhghjhqhy)
@@ -75,7 +96,7 @@
 ) {
 
   @include text-outline($background);
-  background-image: linear-gradient(color($color), color($color));
+  @include text-underline-color($color);
   background-position: 0 $offset;
   background-repeat: repeat-x;
   background-size: $size $size;

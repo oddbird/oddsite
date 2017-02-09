@@ -4,26 +4,28 @@
 
 
 {% macro list(post, section='blog-post') %}
-  <article {{ utility.attr_if('data-module', section) }}>
+  <article {{ utility.attr_if('data-module', section) }} class="preview">
     {% set heading = 'h2' if section else 'h3' %}
-    <{{ heading }}>
+    <{{ heading }} class="post-title">
       <a href="{{ link_to('page', slug=post.slug) }}" rel="bookmark">
         {{ post.title }}
       </a>
     </{{ heading }}>
 
-    <p>
-      {{ utility.datetime(post.pub_date) }}
+    <div class="meta">
+      <p class="byline">
+        <span class="meta-preposition">by</span> {{ birds.get_card(post.author) }}
+        <span class="meta-preposition">on</span> {{ utility.datetime(post.pub_date) }}
+      </p>
       {{ blog.tags(post.tags) }}
-    </p>
+    </div>
 
-    {{ birds.get_card(post.author, details=true) }}
     {{ blog.header_image(post) }}
 
     {% if post.summary %}
-      <p>
+      <div class="summary">
         {{ post.render_summary() }}
-      </p>
+      </div>
     {% endif %}
 
     <a href="{{ link_to('page', slug=post.slug) }}" rel="bookmark">
@@ -34,9 +36,9 @@
 
 
 {% macro byline(post) %}
-<p>
-  by {{ birds.get_card(post.author) }} |
-  {{ utility.datetime(post.pub_date) }}
+  <p class="byline">
+    <span class="meta-preposition">by</span> {{ birds.get_card(post.author) }}
+    {{ utility.datetime(post.pub_date) }}
+  </p>
   {{ blog.tags(post.tags) }}
-</p>
 {% endmacro %}
