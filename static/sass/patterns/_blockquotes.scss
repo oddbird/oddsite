@@ -1,0 +1,38 @@
+// Blockquotes
+// ===========
+
+blockquote {
+  display: flex;
+  flex-direction: column;
+  font-size: calc(1.125rem + 0.5vw);
+  font-style: italic;
+  justify-content: center;
+  margin: size('gutter') 0;
+  max-width: 100%;
+  position: relative;
+
+  @include before('“') {
+    @include font-family('alt');
+    background-color: color('quote');
+    border-radius: 50%;
+    color: color('background');
+    font-size: size('quote-circle');
+    font-style: normal;
+    height: size('quote-circle-small');
+    line-height: 0.8;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    text-indent: size('half-shim');
+    width: size('quote-circle-small');
+
+    @include above('blockquote') {
+      font-size: size('quote');
+      height: size('quote-circle');
+      margin-left: negative('quote-plus');
+      position: absolute;
+      text-indent: size('shim');
+      width: size('quote-circle');
+    }
+  }
+}

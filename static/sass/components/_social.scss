@@ -1,0 +1,32 @@
+// Social
+// ======
+
+.socials {
+  // override main ul spacing
+  [data-region='main'] & {
+    margin: 0 0 0 size('half-bird-face');
+    padding-bottom: size('shim');
+    padding-left: 0;
+  }
+
+  li {
+    display: inline-block;
+    list-style: none;
+  }
+
+  a {
+    background-image: none;
+    margin-right: size('shim');
+
+    [data-icon] {
+      padding: size('pixel'); // avoid social icons getting cropped
+    }
+  }
+}
+
+// Don't show the username for social icons in long bio
+[data-module='bird'] {
+  .icon-text {
+    @include is-hidden;
+  }
+}

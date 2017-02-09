@@ -1,0 +1,27 @@
+// Post Content
+// ============
+
+
+.section-title {
+  margin-top: 0;
+}
+
+.title {
+  @include font-family('alt');
+  font-size: calc(1.5rem + 1.75vw);
+  line-height: 1.25;
+  margin: size('gutter') auto;
+  max-width: size('full-content');
+  padding: 0 size('gutter');
+}
+
+.intro {
+  font-style: italic;
+}
+
+.linked-post-title {
+  &,
+  #{$link} {
+    background-image: none; // no underlines on related post title links
+  }
+}

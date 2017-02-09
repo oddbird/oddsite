@@ -46,6 +46,7 @@
   white-space: nowrap;
 
   #{$link} {
+    background-image: none;
     color: color('action-alt');
   }
 

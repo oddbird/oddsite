@@ -6,11 +6,6 @@
   margin: size('gutter') auto size('spacer');
   //max-width: size('full-content');
   padding: 0 size('gutter');
-
-  & + & {
-    border-top: 2px dotted color('border-light');
-    padding-top: size('gutter');
-  }
 }
 
 .iconblocks {
@@ -21,7 +16,7 @@
     order: 1;
     text-align: right;
     width: 15vw;
-  
+
     svg {
       height: 5rem;
       width: 5rem;
@@ -40,17 +35,12 @@
   }
 }
 
-
-.title {
-  @include font-family('alt');
-  font-size: calc(1rem + 2vw);
-  margin: size('gutter') auto;
-  max-width: size('full-content');
-  padding: 0 size('gutter');
-}
-
 .separator {
   @include section-arrow;
   box-shadow: 0 2px 2px color('shadow');
   z-index: 2;
+}
+
+.preview {
+  margin-bottom: size('spacer');
 }
