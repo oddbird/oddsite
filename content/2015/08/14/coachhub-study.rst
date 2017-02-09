@@ -311,7 +311,7 @@ Accessibilty
 
 Accessibility is built into the core technologies
 and techniques we use on every project:
-accessible HTML5, unobtrusive Javascript,
+accessible HTML5, unobtrusive JavaScript,
 and mobile-responsive CSS styles.
 We make it a priority from the beginning of each project —
 using progressive enhancement and responsive design

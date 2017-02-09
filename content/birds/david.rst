@@ -11,7 +11,7 @@ social:
     stackoverflow: '212493'
 summary: |
   `David Glick`_
-  is a python and javascript developer,
+  is a Python and JavaScript developer,
   database designer,
   and prolific contributor to the Plone CMS.
 
