@@ -28,8 +28,9 @@ living styleguide [link?]
 which serves as documentation of the visual elements used in the app.
 The styleguide is built automatically whenever we build the code, and
 it is delivered as a static HTML website which can be served alongside the app.
-For example, the styleguide for this website can be found here:
-http://oddbird.net/styleguide/
+For example, here's the `style guide for OddSite`_.
+
+.. _style guide for OddSite: http://oddbird.net/styleguide/
 
 SassDoc
 -------
@@ -91,7 +92,7 @@ in the ``rstblog`` module:
 
   .. automodule:: rstblog
 
-But this still suffers from the single-language problem! Sphinx's autodoc
+But this approach still suffers from the single-language problem! Sphinx's autodoc
 extension is focused on Python code. And while it is extensible,
 there is a challenge in creating good autodoc extensions for other languages:
 different languages use different syntaxes, so need to be parsed by a tool
@@ -113,9 +114,9 @@ and look for directives that ask to include automatic documentation
 from other source files.
 
 A parsing utility would have the limited responsibility of reading
-a source file of one particular type. It would be run as a separate process
-by the central formatter and output a JSON representation of the code
-structure and comments which the central formatter could then make use of.
+a source file of one particular type. The central formatter would run it as a separate process
+and output a JSON representation of the code
+structure and comments for the central formatter to make use of.
 This way the parsing utility can be written in whatever language best
 supports parsing the source language.
 
