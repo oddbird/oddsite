@@ -60,9 +60,9 @@ $spacing-sizes: (
 $pattern-sizes: (
   'border': 8px,
   'border-radius': 1rem,
-  'author-h': 8rem,
-  'author': 6rem,
-  'half-author': 3rem,
+  'bird-face-tall': 8rem,
+  'bird-face': 6rem,
+  'half-bird-face': 'bird-face' ('multiple': 0.5),
   'quote': 9rem,
   'quote-plus': 'quote' ('multiple': 0.75),
   'quote-circle': 'quote' ('multiple': 0.45),
