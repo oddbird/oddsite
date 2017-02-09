@@ -14,7 +14,7 @@ summary: |
   to do that.
 
 
-Generating code documentation for polyglot projects
+Generating Code Documentation for Polyglot Projects
 ===================================================
 
 At OddBird we believe that undocumented code is unfinished code.
@@ -24,17 +24,17 @@ in different parts of a project built by different team members
 at different times.
 
 In a typical project, one of our documentation deliverables is a
-living styleguide [link?]
-which serves as documentation of the visual elements used in the app.
-The styleguide is built automatically whenever we build the code, and
+living style guide which serves as documentation of the visual elements
+used in the app as well as guidelines for and examples of usage.
+The style guide is built automatically whenever we build the code, and
 it is delivered as a static HTML website which can be served alongside the app.
-For example, the styleguide for this website can be found here:
+For example, the style guide for this website can be found here:
 http://oddbird.net/styleguide/
 
 SassDoc
 -------
 
-We are currently building our styleguides using a tool called `Sassdoc <http://sassdoc.com/>`_
+We are currently building our style guides using a tool called `Sassdoc <http://sassdoc.com/>`_
 which compiles the documentation based on special comments written
 inline in our stylesheets. For example, the triple-slash commented lines
 in the following Sass:
@@ -51,7 +51,7 @@ in the following Sass:
     text-shadow: none;
   }
 
-get rendered in the styleguide like this:
+gets rendered in the style guide like this:
 
 .. image:: /static/images/blog/2017/docs/sassdoc.png
 
@@ -60,7 +60,7 @@ We are working on our own theme for Sassdoc, called
 which provides extra tools for rendering samples of things like
 colors, fonts, and icons.
 
-The multi-language challenge
+The Multi-language Challenge
 ----------------------------
 
 Generating documentation from inline comments like this is ideal
@@ -91,7 +91,7 @@ in the ``rstblog`` module:
 
   .. automodule:: rstblog
 
-But this still suffers from the single-language problem! Sphinx's autodoc
+But this option still suffers from the single-language problem! Sphinx's autodoc
 extension is focused on Python code. And while it is extensible,
 there is a challenge in creating good autodoc extensions for other languages:
 different languages use different syntaxes, so need to be parsed by a tool
@@ -100,7 +100,7 @@ is not available in the Python ecosystem. So Sphinx autodoc extensions to pull i
 inline documentation from other languages are not consistently available
 or well-maintained.
 
-A way forward
+A Way Forward
 -------------
 
 In order to provide more flexibility, I propose tackling this challenge
@@ -113,9 +113,9 @@ and look for directives that ask to include automatic documentation
 from other source files.
 
 A parsing utility would have the limited responsibility of reading
-a source file of one particular type. It would be run as a separate process
-by the central formatter and output a JSON representation of the code
-structure and comments which the central formatter could then make use of.
+a source file of one particular type. The central formatter would run
+the parser as a separate process and output a JSON representation of the code
+structure and comments for the central formatter to make use of.
 This way the parsing utility can be written in whatever language best
 supports parsing the source language.
 
