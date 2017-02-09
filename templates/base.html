@@ -40,7 +40,9 @@
   <!-- Open Graph -->
   {% set image = config.image[0].src if config.image else 'oddsite.jpg' %}
   {% set image = image if '://' in image else [config.canonical_url, 'static/images/blog/', image]|join('') %}
-  <meta property="fb:app_id" content="1820980378150914" />
+  {% if config.facebook_id %}
+    <meta property="fb:app_id" content="{{ config.facebook_id }}" />
+  {% endif %}
   <meta property="og:title" content="{{ self.title() }}" />
   <meta property="og:site_name" content="OddBird" />
   <meta property="og:type" content="{% block og_type %}website{% endblock og_type %}" />

@@ -27,7 +27,7 @@ The CSS does the styling.
 - Blockquotes should be used when quoting another source. Blockquotes require 4
 spaces.
 
-```none
+```nohighlight
     This is a blockquote with citation. Vestibulum tortor quam, feugiat vitae,
     ultricies eget, tempor sit amet, ante.
 
@@ -61,14 +61,17 @@ soon. As of January 31, 2017 you may use the following:
   - ``size-quarter``
   - ``size-half``
   - ``size-full``
-- Note: If decalring a size, it remains this size regardless of screen size.
+  - ``img-border`` adds a hairline, helpful when using a screenshot with a
+  white background.
+- *Note:* If declaring a size, it remains this size regardless of screen size.
 - ``:align:`` accepts ``left``, ``right`` or ``center`` and outputs as a class.
 - This is how you add alignment, alt text, classes and links in RST:
-```
+
+```nohighlight
 .. image:: /static/images/blog/miko.jpg
    :align: right
    :alt: Miko smiling while playing outside
-   :class: size-quarter
+   :class: size-quarter img-border
    :target: https://supportada.org/?campaign=python
 ```
 
@@ -96,7 +99,8 @@ Summary
 on content to social sites.
 - The summary should not be repeated as the intro in the post.
 - It is created near the top of the document and format is as follows:
-```
+
+```nohighlight
 summary: |
   This is your short summary. You can include a excerpt that will appear
   on the archive pages and as the default social media summary.
@@ -114,9 +118,11 @@ tags to use in order to avoid variations of the same topic.
 - Tags are Title Case.
 - Tags with multiple words should have spaces instead of dashes unless the
 phrase is hyphenated. Multi-word tags need to be declared as a string:
+
+```nohighlight
+tag: ['Open Design', OddSite]
 ```
-  tag: ['Open Design', OddSite]
-```
+
 - Tags are used to show related content. Think about what topics
 were covered in this post that would help the reader find a related article.
 - Adding tags when you are finished writing might result in cleaner and more
