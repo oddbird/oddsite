@@ -12,7 +12,7 @@
 
 [data-input-type='default'],
 [data-input-type='textarea'] {
-  border: 1px solid;
+  border: 1px solid color('border');
   display: block;
   padding: 0.25rem 0.5rem;
   width: 100%;
@@ -24,26 +24,4 @@
 
 .form-actions {
   text-align: right;
-}
-
-.btn {
-  &,
-  #{$link} {
-    @include contrasted('action');
-    background-image: none; // remove link underline when styling as button...
-    border-color: transparent;
-    border-style: solid;
-    border-width: 1px;
-    display: inline-block;
-    padding: 0.5rem 1rem;
-    text-decoration: none;
-    text-shadow: none;
-    transition: color 150ms, background-color 150ms;
-  }
-
-  #{$focus} {
-    background-color: color('background');
-    border-color: color('action');
-    color: color('action');
-  }
 }

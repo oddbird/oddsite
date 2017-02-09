@@ -43,7 +43,9 @@ $spacing-sizes: (
   'double-gutter': 'gutter' ('multiple': 2),
   'spacer': 'gutter' ('multiple': 3),
   'shim': 'gutter' ('multiple': 0.5),
-  'half-shim': 'gutter' ('multiple': 0.25),
+  'half-shim': 'shim' ('multiple': 0.5),
+  'quarter-shim': 'shim' ('multiple': 0.25),
+  'pixel': 1px,
 );
 
 @include herman-add-sizes('spacing-sizes', $spacing-sizes);
@@ -57,6 +59,14 @@ $spacing-sizes: (
 ///   Accoutrement Scale
 $pattern-sizes: (
   'border': 8px,
+  'border-radius': 1rem,
+  'bird-face-tall': 8rem,
+  'bird-face': 6rem,
+  'half-bird-face': 'bird-face' ('multiple': 0.5),
+  'quote': 9rem,
+  'quote-plus': 'quote' ('multiple': 0.75),
+  'quote-circle': 'quote' ('multiple': 0.45),
+  'quote-circle-small': 'quote' ('multiple': 0.2),
   'nav-medium': 35rem,
   'nav-wide': 50rem,
   'dropdown-narrow': 9rem,
@@ -77,6 +87,7 @@ $pattern-sizes: (
 $page-sizes: (
   'small-page': 20rem,
   'full-content': 40rem,
+  'blockquote': 55rem,
 );
 
 @include herman-add-sizes('page-sizes', $page-sizes);

@@ -1,0 +1,55 @@
+// Author Box
+// ==========
+
+[data-module='rst-author'] {
+  border-top: 0;
+  margin-top: size('bird-face');
+  padding-top: 0;
+}
+
+.author-summary {
+  max-width: 100%;
+}
+
+// crop triangle out of svg for birds page
+.bird-face {
+  float: left;
+  height: size('bird-face');
+  margin-right: size('half-shim');
+  overflow: hidden;
+}
+
+.h-card {
+  [data-module='rst-author'] & {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: size('full-content');
+    padding: 0;
+
+    @include above('full-content') {
+      padding: 0 size('gutter');
+      transform: translateX(negative('half-bird-face'));
+    }
+  }
+}
+
+.bio {
+  clear: both;
+}
+
+.bio-short {
+  padding-left: size('half-bird-face');
+  padding-top: size('pixel'); // hack to get margin to to work
+}
+
+[data-size='face'] {
+  color: color('text');
+  float: left;
+  height: size('bird-face-tall');
+  width: size('bird-face');
+
+  [data-module='rst-author'] & {
+    shape-outside: polygon(0 0, size('bird-face') 0, size('half-bird-face') size('half-bird-face'));
+    transform: translateY(-65%);
+  }
+}
