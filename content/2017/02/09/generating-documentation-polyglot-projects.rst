@@ -3,7 +3,7 @@ author: david
 tags: [
   Docs,
   Tools,
-  Javascript,
+  JavaScript,
   Python,
   Sass
   ]
@@ -34,7 +34,7 @@ http://oddbird.net/styleguide/
 SassDoc
 -------
 
-We are currently building our style guides using a tool called `Sassdoc <http://sassdoc.com/>`_
+We are currently building our style guides using a tool called `SassDoc <http://sassdoc.com/>`_
 which compiles the documentation based on special comments written
 inline in our stylesheets. For example, the triple-slash commented lines
 in the following Sass:
@@ -51,7 +51,7 @@ in the following Sass:
     text-shadow: none;
   }
 
-gets rendered in the style guide like this:
+is rendered in the style guide like this:
 
 .. image:: /static/images/blog/2017/docs/sassdoc.png
 
@@ -59,7 +59,7 @@ We are working on our own theme for Sassdoc, called
 `Herman <https://github.com/oddbird/sassdoc-theme-herman/>`_,
 which provides extra tools for rendering samples of things like
 colors, fonts, and icons. (Alas, while we are using it to produce
-documentation, it is not yet very well documented itself.)
+documentation, it is not yet very well-documented itself.)
 
 The Multi-language Challenge
 ----------------------------
@@ -74,7 +74,7 @@ that it will be kept up to date.
 But SassDoc only knows how to read comments from Sass.
 And the projects we work on implement patterns using multiple languages
 working together: Sass for stylesheets, Nunjucks/Jinja2 for markup,
-Javascript for interactivity, Python on the backend.
+JavaScript for interactivity, Python on the backend.
 How can we generate documentation for a pattern that involves
 multiple languages, without giving up on the goal of writing
 documentation inline?
@@ -122,3 +122,9 @@ supports parsing the source language.
 
 As a proof of concept, in the near future we intend to add a feature to
 Herman to automatically include documentation of macros from Nunjucks templates.
+Stay tuned!
+
+If you have thoughts about how to make documentation better, feel free to
+`join the conversation on our Slack channel <http://friends.oddbird.net/>`_.
+Or if you'd like to hire us to help set up a living style guide or other tools,
+please `get in touch <http://oddbird.net/contact/>`_.
