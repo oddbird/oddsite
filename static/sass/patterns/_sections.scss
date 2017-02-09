@@ -8,33 +8,6 @@
   padding: 0 size('gutter');
 }
 
-.iconblocks {
-  display: flex;
-  flex-wrap: wrap;
-
-  .iconblock {
-    order: 1;
-    text-align: right;
-    width: 15vw;
-
-    svg {
-      height: 5rem;
-      width: 5rem;
-    }
-  }
-
-  h2 {
-    order: 2;
-    width: 50vw;
-  }
-
-  .textblock {
-    margin: 0 0 0 15vw;
-    order: 3;
-    width: 50vw;
-  }
-}
-
 .separator {
   @include section-arrow;
   box-shadow: 0 2px 2px color('shadow');

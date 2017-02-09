@@ -1,0 +1,24 @@
+// Icon Blocks
+// ===========
+
+
+.icon-blocks {
+  display: flex;
+
+  .icon-block {
+    margin-right: size('gutter');
+    margin-top: 1.5rem; // match margin from h2
+    text-align: right;
+    width: 20vw;
+  }
+
+  [data-icon] {
+    color: color('icon-block');
+    height: 5rem;
+    width: 5rem;
+  }
+
+  .icon-block-text {
+    width: 60vw;
+  }
+}
