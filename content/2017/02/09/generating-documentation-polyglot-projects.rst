@@ -58,7 +58,8 @@ gets rendered in the style guide like this:
 We are working on our own theme for Sassdoc, called
 `Herman <https://github.com/oddbird/sassdoc-theme-herman/>`_,
 which provides extra tools for rendering samples of things like
-colors, fonts, and icons.
+colors, fonts, and icons. (Alas, while we are using it to produce
+documentation, it is not yet very well documented itself.)
 
 The Multi-language Challenge
 ----------------------------
