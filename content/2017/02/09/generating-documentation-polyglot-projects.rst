@@ -1,13 +1,17 @@
-public: no
+public: yes
 author: david
 tags: [
   Docs,
-  Herman,
+  Tools,
   Javascript,
+  Python,
   Sass
   ]
 summary: |
-  summary
+  Code documentation is ideally written as close to the actual code
+  as possible, but compiled into a comprehensive set of documentation
+  that includes code from all languages in use. Here's how we intend
+  to do that.
 
 
 Generating code documentation for polyglot projects
@@ -33,9 +37,9 @@ SassDoc
 We are currently building our styleguides using a tool called `Sassdoc <http://sassdoc.com/>`_
 which compiles the documentation based on special comments written
 inline in our stylesheets. For example, the triple-slash commented lines
-in the following Sass::
+in the following Sass:
 
-.. code:: sass
+.. code:: scss
 
   // Selection
   // ---------
@@ -47,16 +51,17 @@ in the following Sass::
     text-shadow: none;
   }
 
-get rendered in the styleguide like this::
+get rendered in the styleguide like this:
 
 .. image:: /static/images/blog/2017/docs/sassdoc.png
 
-We are working on our own theme for Sassdoc, called Herman,
+We are working on our own theme for Sassdoc, called
+`Herman <https://github.com/oddbird/sassdoc-theme-herman/>`_,
 which provides extra tools for rendering samples of things like
 colors, fonts, and icons.
 
-Documenting other things
-------------------------
+The multi-language challenge
+----------------------------
 
 Generating documentation from inline comments like this is ideal
 for developer-oriented documentation (that is, documentation of
@@ -72,3 +77,47 @@ Javascript for interactivity, Python on the backend.
 How can we generate documentation for a pattern that involves
 multiple languages, without giving up on the goal of writing
 documentation inline?
+
+The Python documentation tool `Sphinx <http://www.sphinx-doc.org/>`_
+has a nice pattern for this: rather than only fetching documentation
+from one particular kind of code source file, it allows for
+writing free-form documentation organized in whatever way makes sense,
+but with the ability to use "autodoc" directives to pull in documentation
+from inline source comments wherever makes sense. For example, this
+directive would add documentation generated from the code and comments
+in the ``rstblog`` module:
+
+.. code:: rst
+
+  .. automodule:: rstblog
+
+But this still suffers from the single-language problem! Sphinx's autodoc
+extension is focused on Python code. And while it is extensible,
+there is a challenge in creating good autodoc extensions for other languages:
+different languages use different syntaxes, so need to be parsed by a tool
+that understands the language. But often a high-quality parser of a particular language
+is not available in the Python ecosystem. So Sphinx autodoc extensions to pull in
+inline documentation from other languages are not consistently available
+or well-maintained.
+
+A way forward
+-------------
+
+In order to provide more flexibility, I propose tackling this challenge
+using a decoupled architecture: a central documentation formatter that
+parses source code using separate processes.
+
+The central formatter would work similarly to Sassdoc or Sphinx:
+read a file that specifies the overall structure of the documentation
+and look for directives that ask to include automatic documentation
+from other source files.
+
+A parsing utility would have the limited responsibility of reading
+a source file of one particular type. It would be run as a separate process
+by the central formatter and output a JSON representation of the code
+structure and comments which the central formatter could then make use of.
+This way the parsing utility can be written in whatever language best
+supports parsing the source language.
+
+As a proof of concept, in the near future we intend to add a feature to
+Herman to automatically include documentation of macros from Nunjucks templates.
