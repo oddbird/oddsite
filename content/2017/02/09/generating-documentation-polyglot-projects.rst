@@ -3,7 +3,7 @@ author: david
 tags: [
   Docs,
   Tools,
-  Javascript,
+  JavaScript,
   Python,
   Sass
   ]
@@ -14,7 +14,7 @@ summary: |
   to do that.
 
 
-Generating code documentation for polyglot projects
+Generating Code Documentation for Polyglot Projects
 ===================================================
 
 At OddBird we believe that undocumented code is unfinished code.
@@ -24,18 +24,17 @@ in different parts of a project built by different team members
 at different times.
 
 In a typical project, one of our documentation deliverables is a
-living styleguide [link?]
-which serves as documentation of the visual elements used in the app.
-The styleguide is built automatically whenever we build the code, and
+living style guide which serves as documentation of the visual elements
+used in the app as well as guidelines for and examples of usage.
+The style guide is built automatically whenever we build the code, and
 it is delivered as a static HTML website which can be served alongside the app.
-For example, here's the `style guide for OddSite`_.
-
-.. _style guide for OddSite: http://oddbird.net/styleguide/
+For example, the style guide for this website can be found here:
+http://oddbird.net/styleguide/
 
 SassDoc
 -------
 
-We are currently building our styleguides using a tool called `Sassdoc <http://sassdoc.com/>`_
+We are currently building our style guides using a tool called `SassDoc <http://sassdoc.com/>`_
 which compiles the documentation based on special comments written
 inline in our stylesheets. For example, the triple-slash commented lines
 in the following Sass:
@@ -52,16 +51,17 @@ in the following Sass:
     text-shadow: none;
   }
 
-get rendered in the styleguide like this:
+is rendered in the style guide like this:
 
 .. image:: /static/images/blog/2017/docs/sassdoc.png
 
 We are working on our own theme for Sassdoc, called
 `Herman <https://github.com/oddbird/sassdoc-theme-herman/>`_,
 which provides extra tools for rendering samples of things like
-colors, fonts, and icons.
+colors, fonts, and icons. (Alas, while we are using it to produce
+documentation, it is not yet very well-documented itself.)
 
-The multi-language challenge
+The Multi-language Challenge
 ----------------------------
 
 Generating documentation from inline comments like this is ideal
@@ -74,7 +74,7 @@ that it will be kept up to date.
 But SassDoc only knows how to read comments from Sass.
 And the projects we work on implement patterns using multiple languages
 working together: Sass for stylesheets, Nunjucks/Jinja2 for markup,
-Javascript for interactivity, Python on the backend.
+JavaScript for interactivity, Python on the backend.
 How can we generate documentation for a pattern that involves
 multiple languages, without giving up on the goal of writing
 documentation inline?
@@ -92,7 +92,9 @@ in the ``rstblog`` module:
 
   .. automodule:: rstblog
 
+<<<<<<< HEAD
 But this approach still suffers from the single-language problem! Sphinx's autodoc
+But this still suffers from the single-language problem! Sphinx's autodoc
 extension is focused on Python code. And while it is extensible,
 there is a challenge in creating good autodoc extensions for other languages:
 different languages use different syntaxes, so need to be parsed by a tool
@@ -101,7 +103,7 @@ is not available in the Python ecosystem. So Sphinx autodoc extensions to pull i
 inline documentation from other languages are not consistently available
 or well-maintained.
 
-A way forward
+A Way Forward
 -------------
 
 In order to provide more flexibility, I propose tackling this challenge
@@ -114,11 +116,17 @@ and look for directives that ask to include automatic documentation
 from other source files.
 
 A parsing utility would have the limited responsibility of reading
-a source file of one particular type. The central formatter would run it as a separate process
-and output a JSON representation of the code
+a source file of one particular type. The central formatter would run
+the parser as a separate process and output a JSON representation of the code
 structure and comments for the central formatter to make use of.
 This way the parsing utility can be written in whatever language best
 supports parsing the source language.
 
 As a proof of concept, in the near future we intend to add a feature to
 Herman to automatically include documentation of macros from Nunjucks templates.
+Stay tuned!
+
+If you have thoughts about how to make documentation better, feel free to
+`join the conversation on our Slack channel <http://friends.oddbird.net/>`_.
+Or if you'd like to hire us to help set up a living style guide or other tools,
+please `get in touch <http://oddbird.net/contact/>`_.
