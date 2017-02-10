@@ -2,7 +2,7 @@ Style Guide *&* Pattern Library
 ===============================
 
 This is the living style guide for
-[OddBird.net](http://oddbird.net)
+[OddSite](http://oddbird.net)
 and associated OddBird branding materials.
 
 It is still in development,
