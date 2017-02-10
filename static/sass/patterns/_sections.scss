@@ -4,8 +4,12 @@
 
 [data-module] {
   margin: size('gutter') auto size('spacer');
-  //max-width: size('full-content');
+  max-width: size('full-content');
   padding: 0 size('gutter');
+
+  [data-location='work'] & {
+    max-width: none;
+  }
 }
 
 .separator {

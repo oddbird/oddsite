@@ -15,8 +15,76 @@
   padding: 0 size('gutter');
 }
 
+
+/// @todo Don't Look at me. Will clean up
+/// after I have logic down.
+
+$column-small: 10vw;
+$column: 60vw;
+$column-medium: 70vw;
+$column-wide: 85vw;
+$column-max: 100vw;
+
+[data-location='work'] {
+  max-width: none;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  ul,
+  ol {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+
+    @include above('full-content') {
+      max-width: size('full-content');
+      width: 50vw;
+    }
+  }
+
+  @include above('full-content') {
+    .intro {
+      max-width: $column-medium;
+      width: 100%;
+    }
+
+    blockquote {
+      p {
+        max-width: $column-medium;
+        width: 100%;
+      }
+    }
+  }
+}
+
+.intro-block {
+  display: flex;
+  flex-direction: column;
+
+  @include above('full-content') {
+    flex-direction: row;
+    margin-left: $column-small;
+  }
+}
+
 .intro {
+  flex: 1 0 $column;
   font-style: italic;
+}
+
+@include above('full-content') {
+  .aside {
+    border-left: 1px solid color('icon-block');
+    padding: 0 size('gutter');
+
+    .intro + {
+      padding-right: size('gutter');
+    }
+  }
 }
 
 .linked-post-title {

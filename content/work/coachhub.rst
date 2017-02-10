@@ -1,6 +1,5 @@
 public: yes
 name: 'CoachHub'
-tags: ['Case Studies']
 location: work
 url: 'http://www.orcasinc.com/products/coachhub/'
 years: '2014–2016'
@@ -33,25 +32,163 @@ client:
     credit: 'Sara Taillon'
 
 
-CoachHub
-========
 
-.. class::intro
+CoachHub *Integrated Health Coaching for ORCAS*
+===============================================
 
-Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper.  in turpis pulvinar facilisis. Ut felis.
 
-Header Level 2
---------------
+.. container:: intro-block
 
-Header Level 3
-~~~~~~~~~~~~~~
+  .. class:: intro
 
-Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quamr facilisis. Ut felis.
+    **Pellentesque habitant morbi tristique senectus et netus et malesuada** `ORCAS`_ -- ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. in turpis pulvinar facilisis. Ut felis.
+
+    .. _ORCAS: http://orcas.com
+
+  .. container:: aside
+
+    .. raw:: html
+
+      <h3>Our Responsibilities</h3>
+  
+    - List item
+    - List item
+    - List item
+    - List item
+    - List item
+    - List item
+    - List item
+    - List item
+    - List item
+    - List item
+
+      - Nested List item
+      - Nested List item
+    - List item
+
+
+..
 
 
   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend.
 
   -- My Name
+
+
+What They Needed
+----------------
+
+Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quamr facilisis. Ut felis.
+
+Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quamr facilisis. Ut felis.
+
+
+Planning and Discovery Phase
+----------------------------
+
+.. container:: icon-blocks
+
+  .. container:: icon-block
+
+    .. raw:: html
+
+      <svg data-icon="stacy">
+        <use xlink:href="#icon-stacy"></use>
+      </svg>
+
+
+  .. container:: icon-block-text
+
+    .. raw:: html
+
+      <h3>User Stories</h3>
+    
+    If you'd like to learn how to create parallax scrolling for your website, Paul Lewis' guide to performant parallaxing is the perfect place to start.
+
+
+
+.. container:: icon-blocks
+
+  .. container:: icon-block
+
+    .. raw:: html
+
+      <svg data-icon="stacy">
+        <use xlink:href="#icon-stacy"></use>
+      </svg>
+
+
+  .. container:: icon-block-text
+
+    .. raw:: html
+
+      <h3>User Stories</h3>
+    
+    If you'd like to learn how to create parallax scrolling for your website, Paul Lewis' guide to performant parallaxing is the perfect place to start.
+
+
+
+.. container:: icon-blocks
+
+  .. container:: icon-block
+
+    .. raw:: html
+
+      <svg data-icon="stacy">
+        <use xlink:href="#icon-stacy"></use>
+      </svg>
+
+
+  .. container:: icon-block-text
+
+    .. raw:: html
+
+      <h3>User Stories</h3>
+    
+    If you'd like to learn how to create parallax scrolling for your website, Paul Lewis' guide to performant parallaxing is the perfect place to start.
+
+
+
+.. container:: icon-blocks
+
+  .. container:: icon-block
+
+    .. raw:: html
+
+      <svg data-icon="stacy">
+        <use xlink:href="#icon-stacy"></use>
+      </svg>
+
+
+  .. container:: icon-block-text
+
+    .. raw:: html
+
+      <h3>User Stories</h3>
+    
+    If you'd like to learn how to create parallax scrolling for your website, Paul Lewis' guide to performant parallaxing is the perfect place to start.
+
+
+
+Design and Development Phase
+----------------------------
+
+Header Level 3
+~~~~~~~~~~~~~~
+
+.. image:: http://dummyimage.com/300x450/777777/ffffff.png
+   :align: left
+   :alt: alternate text here
+   :class: wayleft
+
+Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quamr facilisis. Ut felis.
+
+Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. 
+
+Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. 
+
+Brand Identity
+~~~~~~~~~~~~~~
 
 Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. 
 
@@ -60,26 +197,35 @@ Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacus ve
    :target: http://google.com
    :align: center
    :alt: alternate text here
-   :figclass: size-half
+   :figclass: size-full
 
    This is my caption for my figure.
 
 
+.. figure:: http://dummyimage.com/800x250/777777/ffffff.png
+   :target: http://google.com
+   :align: center
+   :alt: alternate text here
+   :figclass: size-full
 
-.. raw:: html
+   This is the logo sample.
 
-  <div class="icon-blocks">
 
-    <div class="icon-block">
-      <svg data-icon="stacy">
-        <use xlink:href="#icon-stacy"></use>
-      </svg>
-    </div>
+.. image:: http://dummyimage.com/300x450/777777/ffffff.png
+   :align: left
+   :alt: alternate text here
+   :class: wayleft
 
-    <div class="icon-block-text">
-      <h2>User Stories</h2>
-    
-      <p>If you'd like to learn how to create parallax scrolling for your website, Paul Lewis' guide to performant parallaxing is the perfect place to start.</p>
-    </div>
-  </div>
+Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
 
+Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
+
+Responsive & Interactive UX Design
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. 
+
+.. image:: http://dummyimage.com/300x450/777777/ffffff.png
+   :align: center
+   :alt: alternate text here
+   :class: size-full

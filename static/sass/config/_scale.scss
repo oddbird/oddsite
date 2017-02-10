@@ -86,8 +86,20 @@ $pattern-sizes: (
 ///   Accoutrement Scale
 $page-sizes: (
   'small-page': 20rem,
-  'full-content': 40rem,
   'blockquote': 55rem,
 );
 
 @include herman-add-sizes('page-sizes', $page-sizes);
+
+
+// Column Sizes
+// ------------
+/// @group scale
+/// @preview sizes; style: output-only
+/// @link http://oddbird.net/accoutrement-scale/sassdoc/
+///   Accoutrement Scale
+$column-sizes: (
+  'full-content': 40rem,
+);
+
+@include herman-add-sizes('column-sizes', $column-sizes);
