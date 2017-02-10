@@ -14,7 +14,7 @@
   {% if ctx.pub_date %}
     <meta property="article:published_time" content="{{ ctx.pub_date.isoformat() }}" />
     {% if ctx.author %}
-      <meta property="article:author" content="{{ birds.get_og_author(ctx.author) }}" />
+      {{ birds.get_og_author(ctx.author) }}
       {{ birds.get_og_twitter_creator(ctx.author) }}
     {% endif %}
     {% if ctx.tags %}
