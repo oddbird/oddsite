@@ -34,10 +34,10 @@ http://oddbird.net/styleguide/
 SassDoc
 -------
 
-We are currently building our style guides using a tool called `SassDoc <http://sassdoc.com/>`_
-which compiles the documentation based on special comments written
-inline in our stylesheets. For example, the triple-slash commented lines
-in the following Sass:
+We are currently building our style guides using a tool called `SassDoc
+<http://sassdoc.com/>`_ which compiles the documentation based on special
+comments written inline in our stylesheets. For example, the triple-slash
+commented lines in the following Sass:
 
 .. code:: scss
 
@@ -92,16 +92,14 @@ in the ``rstblog`` module:
 
   .. automodule:: rstblog
 
-<<<<<<< HEAD
-But this approach still suffers from the single-language problem! Sphinx's autodoc
-But this still suffers from the single-language problem! Sphinx's autodoc
-extension is focused on Python code. And while it is extensible,
-there is a challenge in creating good autodoc extensions for other languages:
-different languages use different syntaxes, so need to be parsed by a tool
-that understands the language. But often a high-quality parser of a particular language
-is not available in the Python ecosystem. So Sphinx autodoc extensions to pull in
-inline documentation from other languages are not consistently available
-or well-maintained.
+But this approach still suffers from the single-language problem! Sphinx's
+autodoc extension is focused on Python code. And while it is extensible, there
+is a challenge in creating good autodoc extensions for other languages:
+different languages use different syntaxes, so need to be parsed by a tool that
+understands the language. But often a high-quality parser of a particular
+language is not available in the Python ecosystem. So Sphinx autodoc extensions
+to pull in inline documentation from other languages are not consistently
+available or well-maintained.
 
 A Way Forward
 -------------
@@ -122,9 +120,9 @@ structure and comments for the central formatter to make use of.
 This way the parsing utility can be written in whatever language best
 supports parsing the source language.
 
-As a proof of concept, in the near future we intend to add a feature to
-Herman to automatically include documentation of macros from Nunjucks templates.
-Stay tuned!
+As a proof of concept, in the near future we intend to add a feature to Herman
+to automatically include documentation of macros from Nunjucks templates. Stay
+tuned!
 
 If you have thoughts about how to make documentation better, feel free to
 `join the conversation on our Slack channel <http://friends.oddbird.net/>`_.
