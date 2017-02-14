@@ -55,7 +55,7 @@ without `Git Gutter`_, by `JD Isaacks`_. This plugin shows icons in the
 “gutter” area (next to the line numbers) to indicate whether a line has been
 added, modified, or removed. It also includes shortcuts to quickly jump to the
 next change in the file, show the details of a modification, or revert a
-change. Jonny uses the plugin with `Sublime Text <https://www.sublimetext.com/>`_, but there are versions for
+change. Jonny uses the plugin with `Sublime Text`_, but there are versions for
 `most text editors`_.
 
 .. image:: /static/images/blog/2017/tips-tools/gitgutter.jpg
@@ -66,7 +66,7 @@ change. Jonny uses the plugin with `Sublime Text <https://www.sublimetext.com/>`
 .. _Git Gutter: https://github.com/jisaacks/GitGutter
 .. _JD Isaacks: https://twitter.com/jisaacks
 .. _most text editors: https://github.com/gitgutter
-
+.. _Sublime Text: https://www.sublimetext.com/
 
 Surround.vim
 ~~~~~~~~~~~~
@@ -76,12 +76,14 @@ Surround.vim
 into text objects, so he can select “everything inside these curly braces”
 with a single vim motion.
 
-You can also get versions of this `Sublime Text <https://github.com/jcartledge/sublime-surround>`_ and `Atom`_.
+You can also get versions of this plugin for Sublime Text called `Sublime-surround`_ and `Vim Surround for Atom`_.
 
 .. _Kit La Touche: /birds/#bird-kit
 .. _Surround.vim: https://github.com/tpope/vim-surround
 .. _Tim Pope: https://twitter.com/tpope
-.. _Atom: https://atom.io/packages/vim-surround
+.. _Sublime-surround: https://github.com/jcartledge/sublime-surround
+.. _Vim Surround for Atom: https://atom.io/packages/vim-surround
+
 
 Alfred
 ~~~~~~
