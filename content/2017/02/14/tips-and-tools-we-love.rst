@@ -40,6 +40,7 @@ enhanced view after enabling this extension.
 
 .. image:: /static/images/blog/2017/tips-tools/before-after-json-viewer.jpg
    :alt: clean and messy json screenshots
+   :class: img-border
 
 .. _David Glick: /birds/#bird-david
 .. _JSON Viewer: https://chrome.google.com/webstore/detail/json-viewer/gbmdgpbipfallnflgajpaliibnhdgobh
@@ -57,10 +58,13 @@ Surround.vim
 into text objects, so he can select “everything inside these curly braces”
 with a single vim motion.
 
+You can also get versions of this plugin for `Atom`_ and `Sublime Text`_.
+
 .. _Kit La Touche: /birds/#bird-kit
 .. _Surround.vim: https://github.com/tpope/vim-surround
 .. _Tim Pope: https://twitter.com/tpope
-
+.. _Atom: https://atom.io/packages/vim-surround
+.. _Sublime Text: https://github.com/jcartledge/sublime-surround
 
 Alfred
 ~~~~~~
