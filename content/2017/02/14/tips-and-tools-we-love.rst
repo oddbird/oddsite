@@ -120,10 +120,10 @@ Adobe Experience Design
 `Sondra Eby`_ can’t say enough about `Adobe Xd`_, a new prototyping app that’s
 still in beta. The tutorial is quick, fun, and easy to follow! Create clickable
 mockups of user flows to share with team members and clients. The latest
-updates makes it possible for everyone—even people without Adobe accounts—to
-comment on individual prototypes. The Repeat Grid feature speeds up the design
-process considerably, cutting out all that time she use to spend copying,
-pasting, and spacing repeating elements.
+updates makes it possible for everyone – even people without Adobe accounts –
+to comment on individual prototypes. The Repeat Grid feature speeds up the
+design process considerably, cutting out all that time she use to spend
+copying, pasting, and spacing repeating elements.
 
 .. _Sondra Eby: /birds/#bird-sondra
 .. _Adobe Xd: http://www.adobe.com/products/experience-design.html
@@ -137,10 +137,11 @@ TextExpander
 Most text editors have language-specific autocompletion and plugins that allow
 you to create snippets, but I use `TextExpander`_ made by `Smile`_ for a few
 reasons. Not only does it allow me to sync my snippets across my Apple devices,
-I can also choose which applications to use or exclude from expanding snippets
-and I can create complex snippets that allow repositioning of the cursor and a
-variety of options for their "Fill-ins" function. It deserves a full post
-explaining all of the benefits, but I’ll share two of my favorites.
+I can also choose which applications to use or exclude from expanding snippets,
+and create complex snippets that allow repositioning of the cursor and a
+variety of other options for their “Fill-ins” function. TextExpander deserves a
+full post of its own explaining all of the benefits, but I’ll share two of my
+favorites.
 
 .. _Smile: https://smilesoftware.com
 .. _TextExpander: https://textexpander.com
