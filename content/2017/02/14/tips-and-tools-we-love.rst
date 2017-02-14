@@ -55,7 +55,7 @@ without `Git Gutter`_, by `JD Isaacks`_. This plugin shows icons in the
 “gutter” area (next to the line numbers) to indicate whether a line has been
 added, modified, or removed. It also includes shortcuts to quickly jump to the
 next change in the file, show the details of a modification, or revert a
-change. Jonny uses the `plugin with Sublime Text`_, but there are versions for
+change. Jonny uses the plugin with `Sublime Text`_, but there are versions for
 `most text editors`_.
 
 .. image:: /static/images/blog/2017/tips-tools/gitgutter.jpg
@@ -65,9 +65,8 @@ change. Jonny uses the `plugin with Sublime Text`_, but there are versions for
 .. _Jonny Gerig Meyer: /birds/#bird-jonny
 .. _Git Gutter: https://github.com/jisaacks/GitGutter
 .. _JD Isaacks: https://twitter.com/jisaacks
-.. _plugin with Sublime Text: https://www.sublimetext.com/
 .. _most text editors: https://github.com/gitgutter
-
+.. _Sublime Text: https://www.sublimetext.com/
 
 Surround.vim
 ~~~~~~~~~~~~
@@ -77,13 +76,14 @@ Surround.vim
 into text objects, so he can select “everything inside these curly braces”
 with a single vim motion.
 
-You can also get versions of this plugin for `Atom`_ and `Sublime Text`_.
+You can also get versions of this plugin for Sublime Text called `Sublime-surround`_ and `Vim Surround for Atom`_.
 
 .. _Kit La Touche: /birds/#bird-kit
 .. _Surround.vim: https://github.com/tpope/vim-surround
 .. _Tim Pope: https://twitter.com/tpope
-.. _Atom: https://atom.io/packages/vim-surround
-.. _Sublime Text: https://github.com/jcartledge/sublime-surround
+.. _Sublime-surround: https://github.com/jcartledge/sublime-surround
+.. _Vim Surround for Atom: https://atom.io/packages/vim-surround
+
 
 Alfred
 ~~~~~~
@@ -125,12 +125,25 @@ TextExpander
 ~~~~~~~~~~~~
 
 Most text editors have language-specific autocompletion and plugins that
+<<<<<<< HEAD
 allow you to create snippets, but I use `TextExpander`_ for a few reasons.
 Not only does it allow me to sync my snippets across my Apple devices, I can
 also choose which applications to use or exclude from expanding snippets and
 create complex snippets that allow repositioning of the cursor and a
 variety of options for their "Fill-ins" function. TextExpander deserves a full post of its own
 explaining all of the benefits, but I will share two of my favorites today.
+=======
+allow you to create snippets, but I use `TextExpander`_ made by `Smile`_
+for a few reasons. Not only does it allow me to sync my snippets across
+my Apple devices, I can also choose which applications to use or exclude
+from expanding snippets and I can create complex snippets that allow
+repositioning of the cursor and a variety of options for their "Fill-ins"
+function. It deserves a full post explaining all of the benefits, but I
+will share two of my favorites today.
+
+.. _Smile: https://smilesoftware.com
+.. _TextExpander: https://textexpander.com
+>>>>>>> d6ea139071a208f362598f3d28af3b5ff4cc9205
 
 When I want to use a double right arrow symbol, I can use my snippet
 ``>>`` and TextExpander automatically changes it to ``»``. If I want the html
