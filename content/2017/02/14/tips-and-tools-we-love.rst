@@ -97,13 +97,13 @@ used Alfred features are the `launcher`_ and `searchable clipboard`_.
 
 The launcher allows you to find and open files or applications on your computer
 with just a few keyboard commands and inputs. The Alfred clipboard history
-feature gives you access to text, images and file links you've copied but may
+feature gives you access to text, images, and file links you've copied but may
 have not pasted yet.
 
-You can also create custom workflows or add from the available ones the
+You can also create custom workflows or add from the available ones
 `created by the Alfred community`_. Workflows save you time by replacing
 repetative tasks with simple keyboard shortcuts. These can be easily created in
-a drag on drop interface making it a great tool for non-developers as well.
+a drag and drop interface making it a great tool for non-developers as well.
 
 .. _Alfred: https://www.alfredapp.com/
 .. _launcher: https://www.alfredapp.com/help/features/default-results/
@@ -111,14 +111,28 @@ a drag on drop interface making it a great tool for non-developers as well.
 .. _searchable clipboard: https://www.alfredapp.com/help/features/clipboard/
 .. _created by the Alfred community: https://www.alfredapp.com/workflows/
 
+Adobe Experience Design
+~~~~~~~~~~~~~~~~~~~~~~~
+
+`Sondra Eby`_ can't say enough about `Adobe Xd`_, a new prototyping app that's still in beta. The tutorial is quick, fun, and easy to follow! Create clickable mockups of user flows to share with team members and clients. The latest updates makes it possible for everyone - even people without Adobe accounts - to comment on individual prototypes. The Repeat Grid feature speeds up the design process considerably, cutting out all that time she use to spend copying, pasting, and spacing repeating elements.
 
 .. _Sondra Eby: /birds/#bird-sondra
+.. _Adobe Xd: /birds/#bird-sondra
 
+.. image:: /static/images/blog/2017/tips-tools/adobexd.jpg
 
 TextExpander
 ~~~~~~~~~~~~
 
 Most text editors have language-specific autocompletion and plugins that
+<<<<<<< HEAD
+allow you to create snippets, but I use `TextExpander`_ for a few reasons.
+Not only does it allow me to sync my snippets across my Apple devices, I can
+also choose which applications to use or exclude from expanding snippets and
+create complex snippets that allow repositioning of the cursor and a
+variety of options for their "Fill-ins" function. TextExpander deserves a full post of its own
+explaining all of the benefits, but I will share two of my favorites today.
+=======
 allow you to create snippets, but I use `TextExpander`_ made by `Smile`_
 for a few reasons. Not only does it allow me to sync my snippets across
 my Apple devices, I can also choose which applications to use or exclude
@@ -129,13 +143,14 @@ will share two of my favorites today.
 
 .. _Smile: https://smilesoftware.com
 .. _TextExpander: https://textexpander.com
+>>>>>>> d6ea139071a208f362598f3d28af3b5ff4cc9205
 
 When I want to use a double right arrow symbol, I can use my snippet
 ``>>`` and TextExpander automatically changes it to ``»``. If I want the html
 entity I can use ``html>>`` and it changes it to ``&raquo;``. This way, I don’t
-have to remember each of the codes and use a more english-friendly version.
+have to remember each of the codes and can use a more english-friendly version.
 
-Another snippet I use often is to include a quick snippet to visually see
+Another snippet I use often allows me to visually see
 the breakpoints of a web project I am working on. When I type ``;showbp`` the
 following TextExpander snippet is triggered:
 
@@ -171,7 +186,7 @@ following TextExpander snippet is triggered:
     width: auto;
   }
 
-I used 6 single-line fill-in fields for the breakpoint names and values.
+I used six single-line fill-in fields for the breakpoint names and values.
 Breakpoints can be added or removed later if necessary.
 
 .. image:: /static/images/blog/2017/tips-tools/fill-ins.jpg
@@ -185,8 +200,8 @@ action `in this Pen`_.
 
 
 
-There are so many more tools we use that are completely deserving of making
-this list. What are a few tips or tools you wouldn't want to be without?
+There are so many more tools we use that completely deserve to make
+this list. What are the tips or tools you wouldn't want to be without?
 Let’s continue this conversation on two additional tools we love,
 `Twitter`_ and `Slack`_.
 
