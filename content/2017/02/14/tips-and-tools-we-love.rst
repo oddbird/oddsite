@@ -4,15 +4,15 @@ tags: [Tips, Workflow, Tools, Code]
 image:
   - src: '2017/tips-tools/love-tools.jpg'
 summary: |
-  We wanted to show some love to a few great tools we use to get us through
-  our work days. Do you have any to add to our list?
+  We wanted to show some love to a few great tools we use to get us through our
+  work days. Do you have any to add to our list?
 
 
 Tips and Tools We Love
 ======================
 
-In the spirit of Valentine’s Day, let's kick off this post
-with a CSS love poem:
+In the spirit of Valentine’s Day, let’s kick off this post with a CSS love
+poem:
 
 .. raw:: html
 
@@ -20,9 +20,10 @@ with a CSS love poem:
 
 Obviously, there are some pieces missing from the above sample, like where is
 the ``you`` `mixin defined`_? And why aren’t you even using the variable you
-declared? This code would not pass our OddBird code review, but today’s post
-is about the tips and tools that have our approval and praise. I asked each
-OddBird to share one work-related item they wouldn’t want to be without and why.
+declared? This code would not pass our OddBird code review, but today’s post is
+about the tips and tools that have our approval and praise. I asked each
+OddBird to share one work-related item they wouldn’t want to be without and
+why.
 
 .. _mixin defined: http://codepen.io/stacy/pen/249235ffa47cbe123358452508c554b9
 
@@ -30,8 +31,8 @@ OddBird to share one work-related item they wouldn’t want to be without and wh
 JSON Viewer
 ~~~~~~~~~~~
 
-`David Glick`_ loves the `JSON Viewer`_ extension for debugging JSON-based APIs.
-Instead of seeing an unreadable blob of JSON it automatically formats any
+`David Glick`_ loves the `JSON Viewer`_ extension for debugging JSON-based
+APIs. Instead of seeing an unreadable blob of JSON it automatically formats any
 response with a content-type of text/json, making it easy to read, searchable,
 and collapsible. Below is a screenshot comparing the default json view to the
 enhanced view after enabling this extension.
@@ -71,11 +72,12 @@ Surround.vim
 ~~~~~~~~~~~~
 
 `Kit La Touche`_ uses a wonderful vim plugin from `Tim Pope`_ called
-`Surround.vim`_. He uses it to make things-in-parens or things-in-quotes
-into text objects, so he can select “everything inside these curly braces”
-with a single vim motion.
+`Surround.vim`_. He uses it to make things-in-parens or things-in-quotes into
+text objects, so he can select “everything inside these curly braces” with a
+single vim motion.
 
-You can also get versions of this plugin for Sublime Text called `Sublime-surround`_ and `Vim Surround for Atom`_.
+You can also get versions of this plugin for Sublime Text called
+`Sublime-surround`_ and `Vim Surround for Atom`_.
 
 .. _Kit La Touche: /birds/#bird-kit
 .. _Surround.vim: https://github.com/tpope/vim-surround
@@ -88,21 +90,22 @@ Alfred
 ~~~~~~
 
 `Alfred`_ can be one of those apps that you use all the time without realizing
-how vital it is until you use someone else’s computer. Two of `Miriam Suzanne’s`_ most
-used Alfred features are the `launcher`_ and `searchable clipboard`_.
+how vital it is until you use someone else’s computer. Two of `Miriam
+Suzanne’s`_ most used Alfred features are the `launcher`_ and `searchable
+clipboard`_.
 
 .. image:: /static/images/blog/2017/tips-tools/alfred-launcher.jpg
    :alt: screenshot of the Alfred application launcher in use
 
 The launcher allows you to find and open files or applications on your computer
 with just a few keyboard commands and inputs. The Alfred clipboard history
-feature gives you access to text, images, and file links you've copied but may
+feature gives you access to text, images, and file links you’ve copied but may
 have not pasted yet.
 
-You can also create custom workflows or add from the available ones
-`created by the Alfred community`_. Workflows save you time by replacing
-repetative tasks with simple keyboard shortcuts. These can be easily created in
-a drag and drop interface making it a great tool for non-developers as well.
+You can also create custom workflows or add from the available ones `created by
+the Alfred community`_. Workflows save you time by replacing repetative tasks
+with simple keyboard shortcuts. These can be easily created in a drag and drop
+interface making it a great tool for non-developers as well.
 
 .. _Alfred: https://www.alfredapp.com/
 .. _launcher: https://www.alfredapp.com/help/features/default-results/
@@ -114,7 +117,13 @@ a drag and drop interface making it a great tool for non-developers as well.
 Adobe Experience Design
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-`Sondra Eby`_ can't say enough about `Adobe Xd`_, a new prototyping app that's still in beta. The tutorial is quick, fun, and easy to follow! Create clickable mockups of user flows to share with team members and clients. The latest updates makes it possible for everyone—even people without Adobe accounts—to comment on individual prototypes. The Repeat Grid feature speeds up the design process considerably, cutting out all that time she use to spend copying, pasting, and spacing repeating elements.
+`Sondra Eby`_ can’t say enough about `Adobe Xd`_, a new prototyping app that’s
+still in beta. The tutorial is quick, fun, and easy to follow! Create clickable
+mockups of user flows to share with team members and clients. The latest
+updates makes it possible for everyone—even people without Adobe accounts—to
+comment on individual prototypes. The Repeat Grid feature speeds up the design
+process considerably, cutting out all that time she use to spend copying,
+pasting, and spacing repeating elements.
 
 .. _Sondra Eby: /birds/#bird-sondra
 .. _Adobe Xd: http://www.adobe.com/products/experience-design.html
@@ -125,26 +134,25 @@ Adobe Experience Design
 TextExpander
 ~~~~~~~~~~~~
 
-Most text editors have language-specific autocompletion and plugins that
-allow you to create snippets, but I use `TextExpander`_ made by `Smile`_
-for a few reasons. Not only does it allow me to sync my snippets across
-my Apple devices, I can also choose which applications to use or exclude
-from expanding snippets and I can create complex snippets that allow
-repositioning of the cursor and a variety of options for their "Fill-ins"
-function. It deserves a full post explaining all of the benefits, but I’ll
-share two of my favorites.
+Most text editors have language-specific autocompletion and plugins that allow
+you to create snippets, but I use `TextExpander`_ made by `Smile`_ for a few
+reasons. Not only does it allow me to sync my snippets across my Apple devices,
+I can also choose which applications to use or exclude from expanding snippets
+and I can create complex snippets that allow repositioning of the cursor and a
+variety of options for their "Fill-ins" function. It deserves a full post
+explaining all of the benefits, but I’ll share two of my favorites.
 
 .. _Smile: https://smilesoftware.com
 .. _TextExpander: https://textexpander.com
 
-When I want to use a double right arrow symbol, I can use my snippet
-``>>`` and TextExpander automatically changes it to ``»``. If I want the html
-entity I can use ``html>>`` and it changes it to ``&raquo;``. This way, I don’t
-have to remember each of the codes and can use a more english-friendly version.
+When I want to use a double right arrow symbol, I can use my snippet ``>>`` and
+TextExpander automatically changes it to ``»``. If I want the html entity I can
+use ``html>>`` and it changes it to ``&raquo;``. This way, I don’t have to
+remember each of the codes and can use a more english-friendly version.
 
-Another snippet I use often allows me to visually see
-the breakpoints of a web project I am working on. When I type ``;showbp`` the
-following TextExpander snippet is triggered:
+Another snippet I use often allows me to visually see the breakpoints of a web
+project I am working on. When I type ``;showbp`` the following TextExpander
+snippet is triggered:
 
 .. code:: scss
 
@@ -190,10 +198,9 @@ action `in this Pen`_.
 
 .. _in this pen: http://codepen.io/stacy/pen/9b76e7d9eb9d730e734aa776a7078fc5/
 
-There are so many more tools we use that completely deserve to make
-this list. What are the tips or tools you wouldn't want to be without?
-Let’s continue this conversation on two additional tools we love,
-`Twitter`_ and `Slack`_.
+There are so many more tools we use that completely deserve to make this list.
+What are the tips or tools you wouldn’t want to be without? Let’s continue this
+conversation on two additional tools we love, `Twitter`_ and `Slack`_.
 
 .. _Twitter: https://twitter.com/oddbird
 .. _Slack: http://friends.oddbird.net
