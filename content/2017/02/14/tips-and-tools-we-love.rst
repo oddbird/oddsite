@@ -57,6 +57,9 @@ next change in the file, show the details of a modification, or revert a
 change. Jonny uses the plugin with `Sublime Text`_, but there are versions for
 `most text editors`_.
 
+.. image:: /static/images/blog/2017/tips-tools/gitgutter.jpg
+   :alt: screenshot of the Git Gutter plugin in use
+
 .. _Jonny Gerig Meyer: /birds/#bird-jonny
 .. _Git Gutter: https://github.com/jisaacks/GitGutter
 .. _JD Isaacks: https://twitter.com/jisaacks
