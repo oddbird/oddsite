@@ -114,10 +114,10 @@ a drag and drop interface making it a great tool for non-developers as well.
 Adobe Experience Design
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-`Sondra Eby`_ can't say enough about `Adobe Xd`_, a new prototyping app that's still in beta. The tutorial is quick, fun, and easy to follow! Create clickable mockups of user flows to share with team members and clients. The latest updates makes it possible for everyone - even people without Adobe accounts - to comment on individual prototypes. The Repeat Grid feature speeds up the design process considerably, cutting out all that time she use to spend copying, pasting, and spacing repeating elements.
+`Sondra Eby`_ can't say enough about `Adobe Xd`_, a new prototyping app that's still in beta. The tutorial is quick, fun, and easy to follow! Create clickable mockups of user flows to share with team members and clients. The latest updates makes it possible for everyone—even people without Adobe accounts—to comment on individual prototypes. The Repeat Grid feature speeds up the design process considerably, cutting out all that time she use to spend copying, pasting, and spacing repeating elements.
 
 .. _Sondra Eby: /birds/#bird-sondra
-.. _Adobe Xd: /birds/#bird-sondra
+.. _Adobe Xd: http://www.adobe.com/products/experience-design.html
 
 .. image:: /static/images/blog/2017/tips-tools/adobexd.jpg
 
