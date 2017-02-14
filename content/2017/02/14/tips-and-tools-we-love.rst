@@ -14,11 +14,9 @@ Tips and Tools We Love
 In the spirit of Valentine’s Day, let's kick off this post
 with a CSS love poem:
 
-
 .. raw:: html
 
   <p data-height="238" data-theme-id="light" data-slug-hash="jydWVB" data-default-tab="result" data-user="stacy" data-embed-version="2" data-pen-title="CSS Love Poem" class="codepen">See the Pen <a href="http://codepen.io/stacy/pen/jydWVB/">CSS Love Poem</a> by Stacy (<a href="http://codepen.io/stacy">@stacy</a>) on <a href="http://codepen.io">CodePen</a>.</p><script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
-
 
 Obviously, there are some pieces missing from the above sample, like where is
 the ``you`` `mixin defined`_? And why aren’t you even using the variable you
@@ -68,6 +66,7 @@ change. Jonny uses the plugin with `Sublime Text`_, but there are versions for
 .. _most text editors: https://github.com/gitgutter
 .. _Sublime Text: https://www.sublimetext.com/
 
+
 Surround.vim
 ~~~~~~~~~~~~
 
@@ -111,6 +110,7 @@ a drag and drop interface making it a great tool for non-developers as well.
 .. _searchable clipboard: https://www.alfredapp.com/help/features/clipboard/
 .. _created by the Alfred community: https://www.alfredapp.com/workflows/
 
+
 Adobe Experience Design
 ~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -121,29 +121,21 @@ Adobe Experience Design
 
 .. image:: /static/images/blog/2017/tips-tools/adobexd.jpg
 
+
 TextExpander
 ~~~~~~~~~~~~
 
 Most text editors have language-specific autocompletion and plugins that
-<<<<<<< HEAD
-allow you to create snippets, but I use `TextExpander`_ for a few reasons.
-Not only does it allow me to sync my snippets across my Apple devices, I can
-also choose which applications to use or exclude from expanding snippets and
-create complex snippets that allow repositioning of the cursor and a
-variety of options for their "Fill-ins" function. TextExpander deserves a full post of its own
-explaining all of the benefits, but I will share two of my favorites today.
-=======
 allow you to create snippets, but I use `TextExpander`_ made by `Smile`_
 for a few reasons. Not only does it allow me to sync my snippets across
 my Apple devices, I can also choose which applications to use or exclude
 from expanding snippets and I can create complex snippets that allow
 repositioning of the cursor and a variety of options for their "Fill-ins"
-function. It deserves a full post explaining all of the benefits, but I
-will share two of my favorites today.
+function. It deserves a full post explaining all of the benefits, but I’ll
+share two of my favorites.
 
 .. _Smile: https://smilesoftware.com
 .. _TextExpander: https://textexpander.com
->>>>>>> d6ea139071a208f362598f3d28af3b5ff4cc9205
 
 When I want to use a double right arrow symbol, I can use my snippet
 ``>>`` and TextExpander automatically changes it to ``»``. If I want the html
@@ -197,8 +189,6 @@ breakpoint you are in when your design needs to change. You can see it in
 action `in this Pen`_.
 
 .. _in this pen: http://codepen.io/stacy/pen/9b76e7d9eb9d730e734aa776a7078fc5/
-
-
 
 There are so many more tools we use that completely deserve to make
 this list. What are the tips or tools you wouldn't want to be without?
