@@ -89,7 +89,7 @@ Alfred
 ~~~~~~
 
 `Alfred`_ can be one of those apps that you use all the time without realizing
-how vital it is until you use someone else’s computer. Two of `Miriam’s`_ most
+how vital it is until you use someone else’s computer. Two of `Miriam Suzanne’s`_ most
 used Alfred features are the `launcher`_ and `searchable clipboard`_.
 
 .. image:: /static/images/blog/2017/tips-tools/alfred-launcher.jpg
@@ -107,7 +107,7 @@ a drag and drop interface making it a great tool for non-developers as well.
 
 .. _Alfred: https://www.alfredapp.com/
 .. _launcher: https://www.alfredapp.com/help/features/default-results/
-.. _Miriam’s: /birds/#bird-miriam
+.. _Miriam Suzanne’s: /birds/#bird-miriam
 .. _searchable clipboard: https://www.alfredapp.com/help/features/clipboard/
 .. _created by the Alfred community: https://www.alfredapp.com/workflows/
 
