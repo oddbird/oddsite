@@ -41,6 +41,14 @@ Branding
 - Always capitalize the “O” and “B” in OddBird and OddSite.
 
 
+Dashes
+------
+- En Dash – Used to show ranges of things (e.g. ``January–March``)
+- Em Dash — Instead of using em-dashes for asides as suggested by the The Chicago Manual of Style, using `space` `en-dash` `space` makes the block of text more readable. (e.g. ``this thing – and also that thing – etc``) [Read more here](https://www.smashingmagazine.com/2011/08/mind-your-en-and-em-dashes-typographic-etiquette/#the-en-dash-and-the-em-dash
+)
+- Citations still needs 2-3 dashes to trigger the attribution class
+
+
 Headlines
 ---------
 
@@ -80,6 +88,11 @@ Intro
 
 - WIP - We will be featuring an introductory paragraph in each post.
 Stay tuned for details.
+
+
+Line Length
+-----------
+- For line length, we follow the [PEP 8 - Style Guide for Python Code](https://www.python.org/dev/peps/pep-0008/#maximum-line-length) which allows 79 characters.
 
 
 Links
