@@ -141,3 +141,15 @@ were covered in this post that would help the reader find a related article.
 - Adding tags when you are finished writing might result in cleaner and more
 accurate tags.
 - Posts that talk about sponsorship should include the ``community`` tag.
+
+
+Whitespace
+----------
+
+- No whitespace at the end of lines. In Sublime Text, we strongly recommend the following settings:
+
+```nohighlight
+"ensure_newline_at_eof_on_save": true,
+"translate_tabs_to_spaces": true,
+"trim_trailing_white_space_on_save": true
+```
