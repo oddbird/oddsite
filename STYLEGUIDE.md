@@ -44,9 +44,11 @@ Branding
 Dashes
 ------
 - En Dash – Used to show ranges of things (e.g. ``January–March``)
-- Em Dash — Instead of using em-dashes for asides as suggested by the The Chicago Manual of Style, using `space` `en-dash` `space` makes the block of text more readable. (e.g. ``this thing – and also that thing – etc``) [Read more here](https://www.smashingmagazine.com/2011/08/mind-your-en-and-em-dashes-typographic-etiquette/#the-en-dash-and-the-em-dash
-)
-- Citations still needs 2-3 dashes to trigger the attribution class
+- Em Dash — Instead of using em-dashes for asides as suggested by the The
+  Chicago Manual of Style, using `space` `en-dash` `space` makes the block of
+  text more readable. (e.g. ``this thing – and also that thing – etc``)
+  [Read more here](https://www.smashingmagazine.com/2011/08/mind-your-en-and-em-dashes-typographic-etiquette/#the-en-dash-and-the-em-dash)
+- Citations still need 2-3 dashes (`-`) to trigger the attribution class
 
 
 Headlines
@@ -92,7 +94,9 @@ Stay tuned for details.
 
 Line Length
 -----------
-- For line length, we follow the [PEP 8 - Style Guide for Python Code](https://www.python.org/dev/peps/pep-0008/#maximum-line-length) which allows 79 characters.
+- For line length, we follow the
+  [PEP 8 - Style Guide for Python Code](https://www.python.org/dev/peps/pep-0008/#maximum-line-length)
+  which wraps lines after 79 characters.
 
 
 Links
@@ -146,9 +150,12 @@ accurate tags.
 Whitespace
 ----------
 
-- No whitespace at the end of lines. In Sublime Text, we strongly recommend the following settings:
+- No whitespace at the end of lines. In Sublime Text, we strongly recommend the
+  following settings:
 
 ```nohighlight
+"rulers": [79],
+"default_line_ending": "unix",
 "ensure_newline_at_eof_on_save": true,
 "translate_tabs_to_spaces": true,
 "trim_trailing_white_space_on_save": true
