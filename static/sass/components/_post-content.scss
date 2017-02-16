@@ -11,97 +11,82 @@
   font-size: calc(1.5rem + 1.75vw);
   line-height: 1.25;
   margin: size('gutter') auto;
-  max-width: size('full-content');
+  max-width: size('medium-page');
   padding: 0 size('gutter');
 }
 
 
-/// @todo Don't Look at me. Will clean up
-/// after I have logic down.
+[data-module='rst-body'] {
+  width: 100%;
 
-$column-small: 10vw;
-$column: 60vw;
-$column-medium: 70vw;
-$column-wide: 85vw;
-$column-max: 100vw;
+  @include above('medium-page') {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 
-[data-location='work'] {
-  max-width: none;
+  > * {
+    border: 1px solid color('action');
+    max-width: 90vw;
+    width: calc(100% - 10vw);
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  ul,
-  ol {
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-
-    @include above('full-content') {
-      max-width: size('full-content');
-      width: 50vw;
+    @include above('medium-page') {
+      max-width: size('column');
     }
   }
 
-  p {
-    margin-left: auto;
-    margin-right: auto;
-
-    @include above('full-content') {
-      max-width: size('full-content');
-      width: 50vw;
-    }
-  }
-
-  p[class] {
-    @include above('full-content') {
-      max-width: none;
-      width: 100%;
-    }
-  }
-
-
-  @include above('full-content') {
-    .intro {
-      max-width: $column-medium;
-      width: 100%;
-    }
-
-    blockquote {
-      p {
-        max-width: $column-medium;
-        width: 100%;
-      }
+  .intro-block {
+    @include above('medium-page') {
+      max-width: size('column-wide');
     }
   }
 }
 
-.intro-block {
-  display: flex;
-  flex-direction: column;
 
-  @include above('full-content') {
+//   p {
+//     width: 100%;
+
+//     @include above('medium-page') {
+//       max-width: size('column');
+
+//       &.intro {
+//         max-width: size('intro');
+//       }
+//     }
+//   }
+
+//   blockquote {
+//     p {
+//       @include above('medium-page') {
+//         max-width: size('blockquote');
+//       }
+//     }
+//   }
+// }
+
+.intro-block {
+  @include above('medium-page') {
+    display: flex;
     flex-direction: row;
-    margin-left: $column-small;
   }
 }
 
 .intro {
-  flex: 1 0 $column;
   font-style: italic;
+
+  @include above('medium-page') {
+    flex: 1 0 size('intro');
+  }
+
+  + aside {
+    margin-left: size('gutter');
+  }
 }
 
-@include above('full-content') {
-  .aside {
+.aside {
+  @include above('medium-page') {
     border-left: 1px solid color('icon-block');
     padding: 0 size('gutter');
-
-    .intro + {
-      padding-right: size('gutter');
-    }
   }
 }
 

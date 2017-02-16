@@ -73,6 +73,13 @@ $pattern-sizes: (
   'dropdown-wide': 14rem,
   'menu-more': 12px,
   'menu-more-space': 'menu-more' ('multiple': 0.25),
+  'column-small': 5vw,
+  'column': 50vw,
+  'column-medium': 75vw,
+  'column-wide': 90vw,
+  'column-max': 100vw,
+  'intro': 65vw, // column-medium - 10vw
+  'blockquote': 80vw, // column-wide - 10vw
 );
 
 @include herman-add-sizes('pattern-sizes', $pattern-sizes);
@@ -86,6 +93,7 @@ $pattern-sizes: (
 ///   Accoutrement Scale
 $page-sizes: (
   'small-page': 20rem,
+  'medium-page': 55rem,
   'blockquote': 55rem,
 );
 

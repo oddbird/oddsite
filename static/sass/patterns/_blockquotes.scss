@@ -1,15 +1,25 @@
 // Blockquotes
 // ===========
 
+
 blockquote {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   font-size: calc(1.125rem + 0.5vw);
   font-style: italic;
-  justify-content: center;
   margin: size('gutter') 0;
   max-width: 100%;
   position: relative;
+
+  @include below('blockquote') {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  @include above('blockquote') {
+    justify-content: flex-end;
+    min-width: size('column-wide');
+  }
 
   @include before('“') {
     @include font-family('alt');
@@ -20,19 +30,21 @@ blockquote {
     font-style: normal;
     height: size('quote-circle-small');
     line-height: 0.8;
-    margin-left: auto;
-    margin-right: auto;
-    position: relative;
     text-indent: size('half-shim');
     width: size('quote-circle-small');
 
     @include above('blockquote') {
       font-size: size('quote');
       height: size('quote-circle');
-      margin-left: negative('quote-plus');
-      position: absolute;
+      margin-right: size('gutter');
       text-indent: size('shim');
       width: size('quote-circle');
+    }
+  }
+  
+  p {
+    @include above('blockquote') {
+      flex: 0 0 80vw;
     }
   }
 }
