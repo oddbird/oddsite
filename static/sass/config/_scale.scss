@@ -78,6 +78,7 @@ $pattern-sizes: (
   'column-medium': 75vw,
   'column-wide': 90vw,
   'column-max': 100vw,
+  'intro-block': 80vw,
   'intro': 65vw, // column-medium - 10vw
   'blockquote': 80vw, // column-wide - 10vw
 );
@@ -94,7 +95,6 @@ $pattern-sizes: (
 $page-sizes: (
   'small-page': 20rem,
   'medium-page': 55rem,
-  'blockquote': 55rem,
 );
 
 @include herman-add-sizes('page-sizes', $page-sizes);

@@ -88,7 +88,7 @@ Planning and Discovery Phase
 
 .. container:: icon-blocks
 
-  .. container:: icon-block
+  .. class:: icon-block
 
     .. raw:: html
 

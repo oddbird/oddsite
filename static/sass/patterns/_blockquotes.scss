@@ -11,12 +11,12 @@ blockquote {
   max-width: 100%;
   position: relative;
 
-  @include below('blockquote') {
+  @include below('medium-page') {
     flex-direction: row;
     justify-content: center;
   }
 
-  @include above('blockquote') {
+  @include above('medium-page') {
     justify-content: flex-end;
     min-width: size('column-wide');
   }
@@ -33,7 +33,7 @@ blockquote {
     text-indent: size('half-shim');
     width: size('quote-circle-small');
 
-    @include above('blockquote') {
+    @include above('medium-page') {
       font-size: size('quote');
       height: size('quote-circle');
       margin-right: size('gutter');
@@ -43,8 +43,8 @@ blockquote {
   }
   
   p {
-    @include above('blockquote') {
-      flex: 0 0 80vw;
+    @include above('medium-page') {
+      flex: 0 0 size('blockquote');
     }
   }
 }
