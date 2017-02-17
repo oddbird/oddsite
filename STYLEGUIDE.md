@@ -41,6 +41,14 @@ Branding
 - Always capitalize the “O” and “B” in OddBird and OddSite.
 
 
+Commas
+------
+
+- Guess we are going with the Oxford comma.
+  ``writing, design, and development``
+  *Note the comma before the coordinator in the sample.*
+
+
 Dashes
 ------
 - En Dash – Used to show ranges of things (e.g. ``January–March``)
