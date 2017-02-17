@@ -5,39 +5,40 @@
   padding-top: size('gutter');
   position: relative;
 
+  // Watercolor backgrounds
   &::before,
   &::after {
-    background-size: contain;
-    content: '';
+    background-size: 150vw;
     display: block;
-    height: 200px;
+    height: 300px;
     position: absolute;
     top: negative('gutter');
     width: 100%;
     z-index: -1;
 
     @include above('full-content') {
+      background-size: contain;
       height: 350px;
     }
   }
 
-  &::before {
-    background-image: url('http://localhost:3000/static/images/multicolor_wash_2.png');
+  @include before('') {
+    background-image: url('../images/blue_pink_wash.png');
     background-position: -5% 0;
-    background-repeat: repeat-x;
-    opacity: 0.4;
-  }
-
-  &::after {
-    background-image: url('http://localhost:3000/static/images/blue_pink_wash.png');
-    background-position: 105% 0;
     background-repeat: no-repeat;
     opacity: 0.3;
-    right: -75%;
 
-    @include above('full-content') {
-      right: -25%;
+    @include below('full-content') {
+      background-repeat: repeat-x;
+      opacity: 0.2;
     }
+  }
+
+  @include after('') {
+    background-image: url('../images/multicolor_wash.png');
+    background-position: 105% 0;
+    background-repeat: repeat-x;
+    opacity: 0.5;
   }
 }
 
@@ -48,7 +49,9 @@
     }
   }
 
-  > p:first-child {
-    text-shadow: -1px -1px 1px color('background');
+  > p {
+    &:first-child {
+      text-shadow: -1px -1px 1px color('background');
+    }
   }
 }
