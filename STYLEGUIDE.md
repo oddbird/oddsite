@@ -41,6 +41,24 @@ Branding
 - Always capitalize the “O” and “B” in OddBird and OddSite.
 
 
+Commas
+------
+
+- Guess we are going with the Oxford comma.
+  ``writing, design, and development``
+  *Note the comma before the coordinator in the sample.*
+
+
+Dashes
+------
+- En Dash – Used to show ranges of things (e.g. ``January–March``)
+- Em Dash — Instead of using em-dashes for asides as suggested by the The
+  Chicago Manual of Style, using `space` `en-dash` `space` makes the block of
+  text more readable. (e.g. ``this thing – and also that thing – etc``)
+  [Read more here](https://www.smashingmagazine.com/2011/08/mind-your-en-and-em-dashes-typographic-etiquette/#the-en-dash-and-the-em-dash)
+- Citations still need 2-3 dashes (`-`) to trigger the attribution class
+
+
 Headlines
 ---------
 
@@ -80,6 +98,13 @@ Intro
 
 - WIP - We will be featuring an introductory paragraph in each post.
 Stay tuned for details.
+
+
+Line Length
+-----------
+- For line length, we follow the
+  [PEP 8 - Style Guide for Python Code](https://www.python.org/dev/peps/pep-0008/#maximum-line-length)
+  which wraps lines after 79 characters.
 
 
 Links
@@ -128,3 +153,18 @@ were covered in this post that would help the reader find a related article.
 - Adding tags when you are finished writing might result in cleaner and more
 accurate tags.
 - Posts that talk about sponsorship should include the ``community`` tag.
+
+
+Whitespace
+----------
+
+- No whitespace at the end of lines. In Sublime Text, we strongly recommend the
+  following settings:
+
+```nohighlight
+"rulers": [79],
+"default_line_ending": "unix",
+"ensure_newline_at_eof_on_save": true,
+"translate_tabs_to_spaces": true,
+"trim_trailing_white_space_on_save": true
+```
