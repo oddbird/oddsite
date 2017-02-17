@@ -165,6 +165,17 @@ module.exports = {
         }]
       },
       {
+        test: /\.jpe?g$|\.gif$|\.png$|\.svg$/,
+        use: [{
+          loader: 'file-loader',
+          options: {
+            name: mediaOutput,
+            img: 'progressive',
+            limit: 50000
+          }
+        }]
+      },
+      {
         test: /\.scss$/,
         use: ExtractTextPlugin.extract({
           use: [
