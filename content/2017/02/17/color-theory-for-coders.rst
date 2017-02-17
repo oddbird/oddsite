@@ -1,5 +1,5 @@
 public: yes
-author: Sondra
+author: sondra
 tags: [Tips, Color, Design, Recommendations]
 image:
   - src: '2017/color-theory/decision-tree.jpg'
@@ -7,7 +7,7 @@ summary: |
   If you write code and you want to delve into design, Natalya Shelburne's Practical Color Theory for Coders will get you up and running with a beautiful, cohesive, and accessible color palette using Sass color functions and teach you why her palettes work so well all at the same time.
 
 
-Bird Recommend: Color Theory for Coders
+Birds Recommend: Color Theory for Coders
 =======================================
 
 So you write code, but design intrigues you and you'd like to delve deeper. But where to start? The sheer number of tools and tutorial is overwhelming. My article on the best design tools and tutorials will go live next week, but while you're waiting, checkout `Natalya Shelburne's`_ `Practical Color Theory for People Who Code`_. Continue reading for a quick summary or **head
