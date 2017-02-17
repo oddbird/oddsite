@@ -4,6 +4,41 @@
 [data-region='main'] {
   padding-top: size('gutter');
   position: relative;
+
+  &::before,
+  &::after {
+    background-size: contain;
+    content: '';
+    display: block;
+    height: 200px;
+    position: absolute;
+    top: negative('gutter');
+    width: 100%;
+    z-index: -1;
+
+    @include above('full-content') {
+      height: 350px;
+    }
+  }
+
+  &::before {
+    background-image: url('http://localhost:3000/static/images/multicolor_wash_2.png');
+    background-position: -5% 0;
+    background-repeat: repeat-x;
+    opacity: 0.4;
+  }
+
+  &::after {
+    background-image: url('http://localhost:3000/static/images/blue_pink_wash.png');
+    background-position: 105% 0;
+    background-repeat: no-repeat;
+    opacity: 0.3;
+    right: -75%;
+
+    @include above('full-content') {
+      right: -25%;
+    }
+  }
 }
 
 [data-module='rst-body'] {
@@ -11,5 +46,9 @@
     + section {
       margin-top: size('double-gutter');
     }
+  }
+
+  > p:first-child {
+    text-shadow: -1px -1px 1px color('background');
   }
 }
