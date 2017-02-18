@@ -10,27 +10,27 @@ summary: |
 Birds Recommend: Color Theory for Coders
 ========================================
 
-So you write code, but design intrigues you and you'd like to delve deeper. Where to start? The sheer number of tools and tutorials is overwhelming. Next week, I'll be publishing an article that will help you separate the wheat from the chaff, but while you're waiting, check out `Natalya Shelburne's`_ `Practical Color Theory for People Who Code`_. Continue reading for a quick summary or **head
-over to Natalya's article right away!**
+So you write code, but design intrigues you and you'd like to delve deeper.
+Where to start? The sheer number of tools and tutorials is overwhelming. Next
+week, I'll be publishing an article with my recommendations for how to get started, but while you're waiting, check out `Natalya Shelburne's`_
+`Practical Color Theory for People Who Code`_.
 
 .. _Natalya Shelburne's: https://twitter.com/natalyathree
 .. _Practical Color Theory for People Who Code: http://tallys.github.io/color-theory/
 
-`Go to Color Theory >`_
------------------------
+.. raw:: html
 
-.. _Go to Color Theory >: http://tallys.github.io/color-theory/
+    <a href="http://tallys.github.io/color-theory/" class="btn">
+      Color Theory Demo »
+    </a>
 
-In Practical Color Theory, Natalya—fine artist, speaker, and front end developer—demos the Sass color functions she created. Start with any hsl color you like, maybe your client's brand color. Color functions take all the guess work out of picking a second color. Mix a bit of each color into the other to establish a relationship. Add neutral colors so you don't overwhelm the eye. Add contrast for accessibility and keep your color palette limited for a reasonablity level of complexity. Voila! You're designing with color.
+Natalya is a fine artist, `speaker`_, and front end developer. Her Sass color functions make it easy to create beautiful color palettes. Start with any HSL color, for example, your client's primary brand color. Use Natalya's color functions to find a complimentary color. Mix and lighten your primary and secondary colors to create neutral colors. Darken and lighten these colors even further to create black and white. Voila! You're designing with color.
 
-Checkout Natalya's guide for detailed instructions. If you're that person who's always asking why, she's even provided a toggle for you!
+.. _speaker: http://oddbird.net/2017/1/31/css-day/
 
-`Go to Color Theory >`_
------------------------
+In the physical world, colors that appear next to one another experience similar lighting conditions: the bright light of morning or the dim yellow glow of a desk lamp. Using Natalya's color functions, you can mix your primary and secondary colors to establish the same type of color relationship on the web. Checkout Natalya's demo for detailed instructions. If you're that person who's always asking why, she's even provided a special toggle for you!
 
-.. _Go to Color Theory >: http://tallys.github.io/color-theory/
-
-Have some color theories of your own? Let's discussion. Let Send us a message via `Twitter`_ or join our public `Slack channel`_.
+Have some color theories of your own? Let's discuss. Send us a message via `Twitter`_ or join our public `Slack channel`_.
 
 .. _Twitter: https://twitter.com/oddbird
 .. _Slack Channel: http://friends.oddbird.net/
