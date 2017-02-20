@@ -11,7 +11,7 @@ Birds Recommend: Color Theory for Coders
 ========================================
 
 So you write code, but design intrigues you and you'd like to delve deeper.
-Where to start? The sheer number of tools and tutorials is overwhelming. Next
+Where to start? The sheer number of tools and tutorials is overwhelming. Later this
 week, I'll be publishing an article with my recommendations for how to get started, but while you're waiting, check out `Natalya Shelburne's`_
 `Practical Color Theory for People Who Code`_.
 
