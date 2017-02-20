@@ -24,6 +24,9 @@ week, I'll be publishing an article with my recommendations for how to get start
       Color Theory Demo »
     </a>
 
+Sass Color Functions
+~~~~~~~~~~~~~~~~~~~~
+
 Natalya is a fine artist, `speaker`_, and front end developer. Her Sass color functions make it easy to create beautiful color palettes. Start with any HSL color, for example, your client's primary brand color. Use Natalya's color functions to find a complimentary color. Mix and lighten your primary and secondary colors to create neutral colors. Darken and lighten these colors even further to create black and white. Voila! You're designing with color.
 
 .. _speaker: http://oddbird.net/2017/1/31/css-day/
