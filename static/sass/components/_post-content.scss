@@ -25,83 +25,57 @@ $column-medium: 70vw;
 $column-wide: 85vw;
 $column-max: 100vw;
 
-[data-location='work'] {
-  max-width: none;
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  ul,
-  ol {
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-
-    @include above('full-content') {
-      max-width: size('full-content');
-      width: 50vw;
-    }
-  }
-
-  p {
-    margin-left: auto;
-    margin-right: auto;
-
-    @include above('full-content') {
-      max-width: size('full-content');
-      width: 50vw;
-    }
-  }
-
-  p[class] {
-    @include above('full-content') {
-      max-width: none;
-      width: 100%;
-    }
-  }
-
-
+.default-block,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   @include above('full-content') {
-    .intro {
-      max-width: $column-medium;
-      width: 100%;
-    }
-
-    blockquote {
-      p {
-        max-width: $column-medium;
-        width: 100%;
-      }
-    }
+    margin-left: auto;
+    margin-right: auto;
+    max-width: size('main-column-max');
+    width: 100%;
   }
 }
 
 .intro-block {
-  display: flex;
-  flex-direction: column;
+  @supports not (display: grid) {
+    display: flex;
+    flex-direction: column;
 
-  @include above('full-content') {
-    flex-direction: row;
-    margin-left: $column-small;
+    @include above('full-content') {
+      flex-direction: row;
+      margin-left: $column-small;
+    }
+  }
+
+  @supports (display: grid) {
+    display: grid;
+    grid-template-columns: $grid-columns;
   }
 }
 
 .intro {
-  flex: 1 0 $column;
   font-style: italic;
+
+  @supports not (display: grid) {
+    flex: 1 0 $column;
+  }
+
+  @supports (display: grid) {
+    grid-column: [col2-start] / [col3-end];
+  }
 }
 
-@include above('full-content') {
-  .aside {
+.aside {
+  @include above('full-content') {
     border-left: 1px solid color('icon-block');
-    padding: 0 size('gutter');
+  }
 
-    .intro + {
-      padding-right: size('gutter');
-    }
+  @supports (display: grid) {
+    grid-column: [col4-start] / [col5-end];
   }
 }
 

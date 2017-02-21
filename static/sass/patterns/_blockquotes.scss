@@ -2,14 +2,16 @@
 // ===========
 
 blockquote {
-  display: flex;
-  flex-direction: column;
   font-size: calc(1.125rem + 0.5vw);
   font-style: italic;
-  justify-content: center;
-  margin: size('gutter') 0;
-  max-width: 100%;
+  margin-bottom: size('gutter');
+  margin-top: size('gutter');
   position: relative;
+
+  @supports (display: grid) {
+    display: grid;
+    grid-template-columns: $grid-columns;
+  }
 
   @include before('“') {
     @include font-family('alt');
@@ -29,10 +31,32 @@ blockquote {
     @include above('blockquote') {
       font-size: size('quote');
       height: size('quote-circle');
-      margin-left: negative('quote-plus');
-      position: absolute;
       text-indent: size('shim');
       width: size('quote-circle');
+
+      @supports not (display: grid) {
+        margin-left: 0;
+        position: absolute;
+      }
+
+      @supports (display: grid) {
+        grid-columns: [col1-start] / [col1-end];
+      }
+    }
+  }
+
+  @include above('blockquote') {
+    p {
+      @supports not (display: grid) {
+        margin-left: auto;
+        margin-right: 0;
+        max-width: 90%;
+      }
+
+      @supports (display: grid) {
+        grid-column: [col2-start] / -1;
+      }
     }
   }
 }
+

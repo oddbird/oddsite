@@ -4,3 +4,5 @@
 :root {
   @include contrasted('background');
 }
+
+$grid-columns: [col1-start] 1fr [col1-end col2-start] 1fr [col2-end col3-start] minmax(auto, size('main-column-max')) [col3-end col4-start] 1fr [col4-end col5-start] 1fr [col5-end];

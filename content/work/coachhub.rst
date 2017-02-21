@@ -55,12 +55,9 @@ CoachHub *Integrated Health Coaching for ORCAS*
     - List item
     - List item
     - List item
-    - List item much longer than the others
+    - List item
     - item List item
     - List item
-
-      - Nested List item
-      - Nested List item
     - List item
 
 
@@ -72,12 +69,13 @@ CoachHub *Integrated Health Coaching for ORCAS*
   -- My Name
 
 
-What They Needed
-----------------
+.. container:: default-block
 
-Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quamr facilisis. Ut felis.
+  .. raw:: html
 
-.. class:: test
+    <h2>What They Needed</h2>
+
+  Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quamr facilisis. Ut felis.
 
   Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quamr facilisis. Ut felis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quamr facilisis. Ut felis.
 
@@ -181,17 +179,22 @@ Header Level 3
    :alt: alternate text here
    :class: wayleft
 
-Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
-turpis egestas. Vestibulum tortor quamr facilisis. Ut felis.
+.. container:: default-block
 
-Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacusvel augue laoreet rutrum faucibus dolor auctor.
+  Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
+  turpis egestas. Vestibulum tortor quamr facilisis. Ut felis.
 
-Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
+  Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacusvel augue laoreet rutrum faucibus dolor auctor.
+
+  Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
+
 
 Brand Identity
 ~~~~~~~~~~~~~~
 
-Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
+.. container:: default-block
+
+  Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
 
 
 .. figure:: http://dummyimage.com/1400x450/777777/ffffff.png
@@ -217,14 +220,20 @@ Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacus ve
    :alt: alternate text here
    :class: wayleft
 
-Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
 
-Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
+.. container:: default-block
+
+  Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
+
+  Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
+
 
 Responsive & Interactive UX Design
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
+.. container:: default-block
+
+  Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
 
 .. image:: http://dummyimage.com/300x450/777777/ffffff.png
    :align: center
