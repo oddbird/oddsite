@@ -221,17 +221,16 @@ Brand Identity
    :class: wayleft
 
 
-.. include:: templates/wrap-start.html
+.. include:: templates/wrap.rst
 
+|wrap-start|
 
 Client
 ------
 
 blah blah blah rst
 
-
-.. include:: templates/wrap-end.html
-
+|wrap-end|
 
 .. container:: default-block
 
