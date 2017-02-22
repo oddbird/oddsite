@@ -221,6 +221,21 @@ Brand Identity
    :class: wayleft
 
 
+
+.. include:: templates/wrap.html
+  :start-line: 0
+
+
+Client
+------
+
+blah blah blah rst
+
+
+.. include:: templates/wrap.html
+  :start-line: 5
+
+
 .. container:: default-block
 
   Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
