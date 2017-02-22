@@ -32,22 +32,9 @@ client:
     credit: 'Sara Taillon'
 
 
-.. |start| raw:: html
-
-  <div class="default-block">
-
-
-
-.. |end| raw:: html
-
-  </div><!-- end default-block -->
-
-
-
 
 CoachHub *Integrated Health Coaching for ORCAS*
 ===============================================
-
 
 .. container:: intro-block
 
@@ -72,26 +59,20 @@ CoachHub *Integrated Health Coaching for ORCAS*
     - List item
     - List item
 
-
 ..
+
 
 
   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend.
 
   -- My Name
 
-|start|
 
 .. raw:: html
 
-  <h2>Title inside a default block replacement div?</h2>
+  <section if="planning-and-discovery-phase">
 
-Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quamr facilisis. Ut felis.
-
-Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quamr facilisis. Ut felis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quamr facilisis. Ut felis. |end|
-
-Planning and Discovery Phase
-----------------------------
+  <h2 class="default-block">Planning and Discovery Phase</h2>
 
 .. container:: icon-blocks
 
@@ -174,6 +155,10 @@ Planning and Discovery Phase
       <h3>User Stories</h3>
 
     If you'd like to learn how to create parallax scrolling for your website, Paul Lewis' guide to performant parallaxing is the perfect place to start.
+
+.. raw:: html
+
+  </section>
 
 
 
@@ -183,7 +168,7 @@ Design and Development Phase
 Header Level 3
 ~~~~~~~~~~~~~~
 
-.. image:: http://dummyimage.com/300x450/777777/ffffff.png
+.. image:: http://dummyimage.com/200x200/777777/ffffff.png
    :align: left
    :alt: alternate text here
    :class: wayleft
@@ -191,11 +176,13 @@ Header Level 3
 .. container:: default-block
 
   Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
-  turpis egestas. Vestibulum tortor quamr facilisis. Ut felis.
+  turpis egestas. Vestibulum tortor quamr facilisis. Ut felis. Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacusvel augue laoreet rutrum faucibus dolor auctor. Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
 
-  Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacusvel augue laoreet rutrum faucibus dolor auctor.
+  Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
+  turpis egestas. Vestibulum tortor quamr facilisis. Ut felis. Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacusvel augue laoreet rutrum faucibus dolor auctor. Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
 
-  Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
+  Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
+  turpis egestas. Vestibulum tortor quamr facilisis. Ut felis. Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacusvel augue laoreet rutrum faucibus dolor auctor. Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
 
 
 Brand Identity
@@ -224,13 +211,11 @@ Brand Identity
    This is the logo sample.
 
 
-.. image:: http://dummyimage.com/300x450/777777/ffffff.png
+.. image:: http://dummyimage.com/200x200/777777/ffffff.png
    :align: left
    :alt: alternate text here
    :class: wayleft
 
-
-|start|
 
 Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
 
@@ -238,11 +223,11 @@ Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacus ve
 
 
 Responsive & Interactive UX Design
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+----------------------------------
 
 Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
 
-.. image:: http://dummyimage.com/300x450/777777/ffffff.png
+.. image:: http://dummyimage.com/200x200/777777/ffffff.png
   :align: center
   :alt: alternate text here
   :class: size-full

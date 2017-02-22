@@ -46,6 +46,7 @@ blockquote {
   }
 
   @include above('blockquote') {
+    footer,
     p {
       @supports not (display: grid) {
         margin-left: auto;

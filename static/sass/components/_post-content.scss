@@ -6,15 +6,55 @@
   margin-top: 0;
 }
 
-.title {
+@mixin title {
   @include font-family('alt');
   font-size: calc(1.5rem + 1.75vw);
   line-height: 1.25;
+}
+
+.title {
+  @include title;
   margin: size('gutter') auto;
   max-width: size('full-content');
   padding: 0 size('gutter');
+
+  [data-location='work'] & {
+    font-size: calc(1.5rem + 15vw);
+  }
 }
 
+
+.project-meta {
+  align-items: flex-end;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: size('gutter');
+
+  @include above('full-content') {
+    justify-content: space-between;
+  }
+}
+
+.project-title {
+  @include title;
+
+  @include above('full-content') {
+    max-width: 40vw;
+  }
+
+  em {
+    @include font-family('body');
+    display: block;
+    font-size: calc(1.25rem + 1.75vw);
+    font-style: italic;
+  }
+}
+
+
+
+.project-links {
+  text-align: right;
+}
 
 /// @todo Don't Look at me. Will clean up
 /// after I have logic down.
@@ -25,18 +65,19 @@ $column-medium: 70vw;
 $column-wide: 85vw;
 $column-max: 100vw;
 
-.default-block,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  @include above('full-content') {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: size('main-column-max');
-    width: 100%;
+.default-block {
+  @supports not (display: grid) {
+    @include above('full-content') {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: size('main-column-max');
+      width: 100%;
+    }
+  }
+
+  @supports (display: grid) {
+    display: grid;
+    grid-template-columns: $grid-columns;
   }
 }
 
