@@ -221,9 +221,7 @@ Brand Identity
    :class: wayleft
 
 
-
-.. include:: templates/wrap.html
-  :start-line: 0
+.. include:: templates/wrap-start.html
 
 
 Client
@@ -232,8 +230,7 @@ Client
 blah blah blah rst
 
 
-.. include:: templates/wrap.html
-  :start-line: 5
+.. include:: templates/wrap-end.html
 
 
 .. container:: default-block
