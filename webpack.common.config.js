@@ -5,6 +5,8 @@ process.env.BROWSERSLIST_CONFIG = './browserslist';
 const AssetsPlugin = require('assets-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const HardSourceWebpackPlugin = require('hard-source-webpack-plugin');
+const nodeObjectHash = require('node-object-hash');
 const path = require('path');
 const sassdoc = require('sassdoc');
 const webpack = require('webpack');
@@ -145,6 +147,16 @@ module.exports = {
     new CleanWebpackPlugin([outputPath], {
       root: __dirname,
       verbose: true
+    }),
+    new HardSourceWebpackPlugin({
+      cacheDirectory: path.join(__dirname, 'jscache/[confighash]'),
+      recordsPath: path.join(__dirname, 'jscache/[confighash]/records.json'),
+      configHash: (webpackConfig) => nodeObjectHash().hash(webpackConfig),
+      environmentHash: {
+        root: process.cwd(),
+        directories: ['node_modules'],
+        files: ['package.json'],
+      }
     })
   ],
   module: {
