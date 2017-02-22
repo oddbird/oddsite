@@ -32,6 +32,18 @@ client:
     credit: 'Sara Taillon'
 
 
+.. |start| raw:: html
+
+  <div class="default-block">
+
+
+
+.. |end| raw:: html
+
+  </div><!-- end default-block -->
+
+
+
 
 CoachHub *Integrated Health Coaching for ORCAS*
 ===============================================
@@ -68,18 +80,15 @@ CoachHub *Integrated Health Coaching for ORCAS*
 
   -- My Name
 
+|start|
 
-.. container:: default-block
+.. raw:: html
 
-  .. raw:: html
+  <h2>Title inside a default block replacement div?</h2>
 
-    <h2>What They Needed</h2>
+Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quamr facilisis. Ut felis.
 
-  Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quamr facilisis. Ut felis.
-
-  Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quamr facilisis. Ut felis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quamr facilisis. Ut felis.
-
-
+Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quamr facilisis. Ut felis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quamr facilisis. Ut felis. |end|
 
 Planning and Discovery Phase
 ----------------------------
@@ -221,32 +230,19 @@ Brand Identity
    :class: wayleft
 
 
-.. include:: templates/wrap.rst
+|start|
 
-|wrap-start|
+Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
 
-Client
-------
-
-blah blah blah rst
-
-|wrap-end|
-
-.. container:: default-block
-
-  Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
-
-  Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
+Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
 
 
 Responsive & Interactive UX Design
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. container:: default-block
-
-  Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
+Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
 
 .. image:: http://dummyimage.com/300x450/777777/ffffff.png
-   :align: center
-   :alt: alternate text here
-   :class: size-full
+  :align: center
+  :alt: alternate text here
+  :class: size-full
