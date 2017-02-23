@@ -6,6 +6,8 @@ Use like:
   {{ config.pages.birds.slug }}
 """
 
+from rstblog.modules.blog import get_all_entries
+
 
 def is_blog_post(page):
     # Rough approximation of blog posts:
@@ -103,9 +105,8 @@ def filter_pages(values, key, operator=None, value=None):
 
 
 def make_get_blog_entries_by_bird(builder):
-    posts = get_posts(builder)
-
     def get_blog_entries_by_bird(bird):
+        posts = get_all_entries(builder)
         return [
             post
             for post
@@ -117,9 +118,8 @@ def make_get_blog_entries_by_bird(builder):
 
 
 def make_get_blog_entries_by_tag(builder):
-    posts = get_posts(builder)
-
     def get_blog_entries_by_tag(tag):
+        posts = get_all_entries(builder)
         return [
             post
             for post
