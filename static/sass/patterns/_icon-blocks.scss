@@ -1,42 +1,60 @@
 // Icon Blocks
 // ===========
 
+.icon-blocks-container {
+  @include center('medium-page');
+
+  h2 {
+    @include center('full-content');
+  }
+}
 
 .icon-blocks {
-  display: flex;
-
-  @supports (display: grid) {
-    display: grid;
-    grid-template-columns: $grid-columns;
+  @supports not (display: grid) {
+    @include center('full-content');
+    display: flex;
   }
 
-  .icon-block {
-    margin-top: 1.5rem; // match margin from h2
-    padding-right: size('shim');
-    text-align: right;
+  @include grid('medium-page');
+}
 
+.icon-block {
+  margin-top: 1.5rem; // match margin from h2
+  padding-right: size('shim');
+  text-align: right;
+
+  @include below('full-content') {
     @supports not (display: grid) {
-      width: 20vw;
+      flex: 0 0 15%;
     }
+  }
 
-    @supports (display: grid) {
-      grid-column: [col2-start] / [col2-end];
+  @supports (display: grid) {
+    grid-column: 1;
+    // grid-column: [col1-start];
+
+    @include above('full-content') {
+      grid-column: 2;
     }
   }
 
   [data-icon] {
     color: color('icon-block');
-    height: 5rem;
-    width: 5rem;
+    height: calc(3rem + 3vw);
+    width: calc(3rem + 3vw);
   }
+}
 
-  .icon-block-text {
-    @supports not (display: grid) {
-      width: size('full-content');
+.icon-block-text {
+  @supports (display: grid) {
+    @include below('full-content') {
+      // grid-column: [col3-start];
+      grid-column: 2 / -1;
+      padding-left: size('shim');
     }
 
-    @supports (display: grid) {
-      grid-column: [col3-start] / [col3-end];
+    @include above('full-content') {
+      grid-column: 3 / 4;
     }
   }
 }

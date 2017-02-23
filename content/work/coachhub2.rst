@@ -46,6 +46,14 @@ client:
     </div>
   </header>
 
+  <div class="grid">
+    <div class="col1">1</div>
+    <div class="col2">2</div>
+    <div class="col3">3</div>
+    <div class="col4">4</div>
+    <div class="col5">5</div>
+  </div>
+
   <section class="intro-block">
     <p class="intro">**Pellentesque habitant morbi tristique senectus et netus et malesuada** <a href="http://orcas.com">ORCAS</a> -- ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. in turpis pulvinar facilisis. Ut felis.</p>
 
@@ -76,7 +84,7 @@ client:
   </blockquote>
 
 
-  <section id="planning-and-discovery-phase">
+  <section id="planning-and-discovery-phase" class="icon-blocks-container">
     <h2>Planning and Discovery Phase</h2>
 
     <div class="icon-blocks">
@@ -132,7 +140,7 @@ client:
     </div>
   </section>
 
-  <div class="default-block">
+  <div class="content-block">
     <section id="design-and-development-phase">
       <h2>Design and Development Phase</h2>
       <h3>Header Level 3</h3>

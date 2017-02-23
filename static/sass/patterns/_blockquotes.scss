@@ -13,10 +13,9 @@ blockquote {
   position: relative;
 
   @include above('full-content') {
-    @supports (display: grid) {
-      display: grid;
-      grid-template-columns: $grid-columns;
-    }
+    @include grid('medium-page');
+    margin-bottom: size('double-gutter');
+    margin-top: size('double-gutter');
   }
 
   @include before('“') {
@@ -49,7 +48,8 @@ blockquote {
       }
 
       @supports (display: grid) {
-        grid-column: [col1-start] / [col1-end];
+        // grid-column: [col1-start] / [col1-end];
+        grid-column: 1;
       }
     }
   }
@@ -64,7 +64,8 @@ blockquote {
       }
 
       @supports (display: grid) {
-        grid-column: [col2-start] / -1;
+        // grid-column: [col2-start] / -1;
+        grid-column: 2 / -1;
       }
     }
   }

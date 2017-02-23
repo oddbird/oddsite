@@ -6,4 +6,44 @@
 }
 
 // reusable CSS Grid Template Columns definition
-$grid-columns: [col1-start] 1fr [col1-end col2-start] 1fr [col2-end col3-start] minmax(auto, size('full-content')) [col3-end col4-start] 1fr [col4-end col5-start] 1fr [col5-end];
+//$grid-columns: [col1-start] 1fr [col1-end col2-start] 1fr [col2-end col3-start] minmax(auto, size('full-content')) [col3-end col4-start] 1fr [col4-end col5-start] 1fr [col5-end];
+// $grid-columns: [col1-start] minmax(10vw, 1fr) [col1-end col2-start] minmax(10vw, 1fr) [col2-end col3-start] size('full-content') [col3-end col4-start] minmax(10vw, 1fr) [col4-end col5-start] minmax(10vw, 1fr) [col5-end];
+//$grid-columns: [col1-start] 1fr [col1-end col2-start] 1fr [col2-end col3-start] size('full-content') [col3-end col4-start] 1fr [col4-end col5-start] 1fr [col5-end];
+$grid-columns: [col1-start] minmax(10vw, 1fr) [col1-end col2-start] minmax(10vw, 1fr) [col2-end col3-start] minmax(auto, 30rem) [col3-end col4-start] minmax(10vw, 1fr) [col4-end col5-start] minmax(10vw, 1fr) [col5-end];
+$grid-columns-large: [col1-start] 1fr [col1-end col2-start] 1fr [col2-end col3-start] 30rem [col3-end col4-start] 1fr [col4-end col5-start] 1fr [col5-end];
+
+
+// Center it (horizontally)
+// ------------------------
+/// Shortcut for l/r auto margins with optional max-width
+/// @group sections
+/// @parameter $max-width -
+///   Optional max-width for centered item
+/// @example scss -
+///   .foo {
+///     @include center('full-content');
+///   }
+/// @example css -
+///   .foo {
+///     margin-left: auto;
+///     margin-right: auto;
+///     max-width: 40rem;
+///   }
+@mixin center($max-width) {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: size($max-width);
+  width: 100%;
+}
+
+
+@mixin grid(
+  $max-width: 'medium-page'
+) {
+  @include center($max-width);
+
+  @supports (display: grid) {
+    display: grid;
+    grid-template-columns: $grid-columns;
+  }
+}

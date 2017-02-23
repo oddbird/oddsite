@@ -1,0 +1,60 @@
+// Intro Blocks
+// ============
+// Two column (on wide screens) intro and aside
+// Can be seen on case studies
+
+// wrapping container for intro
+.intro-block {
+  display: flex;
+  flex-direction: column;
+
+  @include above('medium-page') {
+    @include center('medium-page');
+    flex-direction: row;
+    justify-content: flex-end;
+
+    @include grid('medium-page');
+  }
+}
+
+// intro text block
+.intro {
+  font-style: italic;
+
+  @include above('medium-page') {
+    padding-right: size('gutter');
+  }
+
+  @supports not (display: grid) {
+    flex: 1 0 0;
+
+    @include above('medium-page') {
+      margin-left: 10vw;
+    }
+  }
+
+  @supports (display: grid) {
+    // grid-column: [col2-start] / [col3-end];
+    grid-column: 2 / 4;
+  }
+}
+
+// intro side panel
+.aside {
+  @include above('medium-page') {
+    border-left: 1px solid color('icon-block');
+    flex: 0 1 25%;
+    padding: size('shim') size('gutter');
+
+    @supports (display: grid) {
+      // grid-column: [col4-start] / [col5-end];
+      grid-column: 4 / -1;
+    }
+  }
+}
+
+// headline in aside should line up with text block
+.list-title {
+  font-size: size('medium');
+  margin-top: 0;
+}

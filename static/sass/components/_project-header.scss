@@ -1,0 +1,34 @@
+// Project Case Studies Header
+// ===========================
+
+
+.project-meta {
+  @include center('medium-page');
+  align-items: flex-end;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: size('gutter');
+
+  @include above('full-content') {
+    justify-content: space-between;
+  }
+}
+
+.project-title {
+  @include title;
+
+  @include above('full-content') {
+    max-width: 40vw;
+  }
+
+  em {
+    @include font-family('body');
+    display: block;
+    font-size: calc(1.25rem + 1.75vw);
+    font-style: italic;
+  }
+}
+
+.project-links {
+  text-align: right;
+}
