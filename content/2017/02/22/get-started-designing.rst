@@ -5,8 +5,8 @@ image:
   - src: '2017/get-started-designing/cafe-computer.jpg'
 summary: |
   So you'd like to start learning design, but the number of tools and tutorials
-  available is overwhelming. Where do you start? I recommend Paper
-  for sketching out UX ideas, *Practice Code Theory for People Who Code* to
+  available is overwhelming. Where do you start? I recommend Paper for
+  sketching out UX ideas, *Practice Code Theory for People Who Code* to
   generate color palettes and learn color theory, *Choosing the Right Font: A
   Practical Guide to Typography on the Web* as an introduction to typography,
   and Adobe Experience Design for UX prototyping.
@@ -31,11 +31,11 @@ Start Sketching: Paper
 
 When tackling a complex UX design challenge, I start with sketches. My go-to
 tool is aptly named `Paper`_. Paper, by 53, is free for iPad and iPhone. Paper
-is much more basic than tools like Adobe Photoshop and Illustrator. In
-my experience, a collapsable toolkit with several brush styles, seven colors,
-and an eraser is all I need to sketch rough drafts of web features. Here are
-two sample sketches I drew using Paper during the development of the
-`QuarqNet`_ web app.
+is much more basic than tools like Adobe Photoshop and Illustrator. In my
+experience, a collapsable toolkit with several brush styles, seven colors, and
+an eraser is all I need to sketch rough drafts of web features. Here are two
+sample sketches I drew using Paper during the development of the `QuarqNet`_
+web app.
 
 .. image:: /static/images/blog/2017/get-started-designing/sketches.jpg
    :alt: QuarqNet sketches on Paper
@@ -76,7 +76,7 @@ about the process I use to select typography for a brand identity.
 .. _Choosing the Right Font - A Practical Guide to Typography on the Web: https://webdesign.tutsplus.com/articles/choosing-the-right-font-a-practical-guide-to-typography-on-the-web--webdesign-15
 .. _Jason Santa Maria On Web Typography: https://www.youtube.com/watch?v=ipbbbMsvTEI
 .. _On Web Typography: https://abookapart.com/products/on-web-typography
-.. _my favorite resources: http://oddbird.net/2017/1/11/typography/
+.. _my favorite resources: /2017/1/11/typography/
 
 
 Color: Sass Color Functions
@@ -94,13 +94,13 @@ accessible contrast, using neutral colors, and how to simulate cohesive
 lighting conditions.
 
 Color can make or break a user’s experience on the web. If you’d like to learn
-more, here's an outlined of my `process for choosing brand
-colors`_ including a list of several fun and easy-to-use tools for
-generating color palettes and testing contrast.
+more, here's an outlined of my `process for choosing brand colors`_ including a
+list of several fun and easy-to-use tools for generating color palettes and
+testing contrast.
 
 .. _Natalya Shelburne’s Sass color functions: http://tallys.github.io/color-theory/
 .. _Practical Color Theory for People Who Code: http://tallys.github.io/color-theory/
-.. _process for choosing brand colors: http://oddbird.net/2017/1/16/color/
+.. _process for choosing brand colors: /2017/1/16/color/
 
 
 Prototype: Adobe Experience Design

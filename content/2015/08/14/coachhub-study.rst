@@ -323,7 +323,7 @@ We also built a WCAG contrast test into our
 `Sass Accoutrement toolkits`_.
 
 .. _Contrast Ratio: http://leaverou.github.io/contrast-ratio/
-.. _Sass Accoutrement toolkits: http://oddbird.net/accoutrement/
+.. _Sass Accoutrement toolkits: /accoutrement/
 
 
 Landing Pages

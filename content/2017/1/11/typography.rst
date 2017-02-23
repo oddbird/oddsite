@@ -4,16 +4,16 @@ tags: [OddSite, 'Open Design', Typography, Design]
 image:
   - src: '2017/typography/type.jpg'
 summary: |
-  **How do you choose the best fonts for a brand identity** among
-  the thousands of options available on the interwebs these days?
-  Whether you’re starting from scratch or rebranding like us, this
-  step-by-step guide can help focus and direct your process.
+  **How do you choose the best fonts for a brand identity** among the thousands
+  of options available on the interwebs these days? Whether you’re starting
+  from scratch or rebranding like us, this step-by-step guide can help focus
+  and direct your process.
 
-  First, define your brand goals. Next, explore your options. There
-  are many excellect resources that offer free, high quality,
-  and accessible fonts; I list 7 of my favorites in this guide.
-  Create element collages to test your typeface pairings
-  in context. Finally, vote on the best options with your team.
+  First, define your brand goals. Next, explore your options. There are many
+  excellect resources that offer free, high quality, and accessible fonts; I
+  list 7 of my favorites in this guide. Create element collages to test your
+  typeface pairings in context. Finally, vote on the best options with your
+  team.
 after:
   - include: 'blog/_tag-module.html.j2'
     title: 'OddSite Re-design Timeline'
@@ -27,19 +27,19 @@ How to Choose Engaging & Accessible Typography for Your Website Brand
 How do you choose the best fonts for a brand identity among the thousands of
 options available on the interwebs these days – typography that perfectly
 expresses the mood you or your client want to evoke when users encounter your
-company – while also meeting accessibility standards, and standing out from
-the masses? OddBird tackled this question as part of the `open redesign
-process`_ of this, our OddSite.
+company – while also meeting accessibility standards, and standing out from the
+masses? OddBird tackled this question as part of the `open redesign process`_
+of this, our OddSite.
 
-.. _open redesign process: http://oddbird.net/2016/07/12/open-design/
+.. _open redesign process: /2016/07/12/open-design/
 
 Whether you’re starting from scratch or rebranding like us, this step-by-step
-guide can help direct your process. I’m focusing on website
-branding, but many of these ideas apply to print as well. If you already have
-typography, but you need a beautiful color palette, check out this guide to
-`choosing brand colors for your website`_.
+guide can help direct your process. I’m focusing on website branding, but many
+of these ideas apply to print as well. If you already have typography, but you
+need a beautiful color palette, check out this guide to `choosing brand colors
+for your website`_.
 
-.. _choosing brand colors for your website: http://oddbird.net/2017/1/16/color/
+.. _choosing brand colors for your website: /2017/1/16/color/
 
 
 Step 1 – Define Brand Goals
@@ -52,10 +52,10 @@ What is the personality/attitude of the project? What is it *not*?
 After a review of our `OddSite Brand Goals`_, we knew we were looking for type
 families that conjured the ideas of trustworthiness, skill and high standards
 without arrogance or that rectangular corporate look. All of that plus a dash
-of our odd, people-first personality (though we agreed any typeface termed
-cute or flashy would be going too far).
+of our odd, people-first personality (though we agreed any typeface termed cute
+or flashy would be going too far).
 
-.. _OddSite Brand Goals: http://oddbird.net/2016/11/04/branding-type/
+.. _OddSite Brand Goals: /2016/11/04/branding-type/
 
 
 Step 2 – Play with Typography Options and Typeface Pairings
@@ -113,7 +113,7 @@ clients. Proxima Nova is a personal favorite that OddBird used for the
 `CoachHub app`_.
 
 .. _Fontspring: https://www.fontspring.com/
-.. _CoachHub app: http://oddbird.net/2015/08/14/coachhub-study/
+.. _CoachHub app: /2015/08/14/coachhub-study/
 
 .. image:: /static/images/blog/2017/typography/fontspring.jpg
 
@@ -209,10 +209,9 @@ Additionally, avoid using all caps wherever possible. It’s more difficult to
 read. Plus, **IT LOOKS LIKE YOU’RE SHOUTING**.
 
 OddBird borrowed ideas from `Vox Product’s`_ process to test our typography
-options. Our design team created typography element collages, each
-using the same content from our blog. Presenting different typeface families in
-the same context also made it easier for the rest of the Birds to evaluate the
-options.
+options. Our design team created typography element collages, each using the
+same content from our blog. Presenting different typeface families in the same
+context also made it easier for the rest of the Birds to evaluate the options.
 
 Stacy, Miriam, and myself (Sondra), the three OddBird designers, each designed
 two or three element collages. Then we met and eliminated all but the best four
@@ -226,7 +225,7 @@ serif fonts – trustworthiness is a brand goal – with a twist.
 
 Browse our full element collages in our `Behind the Scenes post`_.
 
-.. _Behind the Scenes post: http://oddbird.net/2016/11/04/branding-type/
+.. _Behind the Scenes post: /2016/11/04/branding-type/
 
 Step 4 – Vote Remotely Using…GitHub?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -335,6 +334,6 @@ unite!
 
 .. raw:: html
 
-    <a href="http://oddbird.net/2017/1/16/color/" class="btn">
+    <a href="/2017/1/16/color/" class="btn">
       How to Choose Brand Colors »
     </a>

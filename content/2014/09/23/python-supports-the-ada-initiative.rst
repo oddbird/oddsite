@@ -97,7 +97,7 @@ Carl
 .. _donate now: https://supportada.org/?campaign=python
 .. _Alex: http://alexgaynor.net/
 .. _Jacob: http://jacobian.org/
-.. _start a company: http://oddbird.net/2013/12/30/sixth-year/
+.. _start a company: /2013/12/30/sixth-year/
 .. _become a public speaker: http://pyvideo.org/speaker/35/carl-meyer
 .. _recognized for my contributions: https://docs.djangoproject.com/en/dev/internals/team/
 .. _pervasive sexual harassment: http://anontechlady.wordpress.com/2014/08/04/my-first-oscon/
