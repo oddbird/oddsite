@@ -68,7 +68,7 @@ but be warned – you may get bitten by the typography bug and find yourself
 regaling your friends about that horrendous typeface pairing on the menu at
 your favorite restaurant.
 
-If you know the theory and you’re looking for free, high-quality typography for
+If you already know the theory and you’re looking for free, high-quality typography for
 your web project, here’s a list of `my favorite resources`_. You can also read
 about the process I use to select typography for a brand identity.
 
@@ -86,19 +86,19 @@ Color: Sass Color Functions
    :alt: Natalya's color theory decision tree
 
 It’s important for any designer to be able to create pleasing and accessible
-color palettes. If you write code, `Natalya Shelburne’s Sass color functions`_
+color palettes. If you write code, Natalya Shelburne’s Sass color functions
+outlined in `Practical Color Theory for People Who Code`_
 are an excellent tool for generating a palette that works. If you’re not a
-developer, Natalya’s `Practical Color Theory for People Who Code`_ is still a
-fantastic tutorial for how to think about color for the web. You’ll learn about
+developer, this is still a
+fantastic tutorial in how to think about color for the web. You’ll learn about
 accessible contrast, using neutral colors, and how to simulate cohesive
 lighting conditions.
 
 Color can make or break a user’s experience on the web. If you’d like to learn
 more, here's an outlined of my `process for choosing brand colors`_ including a
-list of several fun and easy-to-use tools for generating color palettes and
+list of several tools for generating color palettes and
 testing contrast.
 
-.. _Natalya Shelburne’s Sass color functions: http://tallys.github.io/color-theory/
 .. _Practical Color Theory for People Who Code: http://tallys.github.io/color-theory/
 .. _process for choosing brand colors: /2017/1/16/color/
 
