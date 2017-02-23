@@ -68,9 +68,10 @@ but be warned – you may get bitten by the typography bug and find yourself
 regaling your friends about that horrendous typeface pairing on the menu at
 your favorite restaurant.
 
-If you already know the theory and you’re looking for free, high-quality typography for
-your web project, here’s a list of `my favorite resources`_. You can also read
-about the process I use to select typography for a brand identity.
+If you already know the theory and you’re looking for free, high-quality
+typography for your web project, here’s a list of `my favorite resources`_. You
+can also read about the process I use to select typography for a brand
+identity.
 
 .. _Jason Santa Maria: http://jasonsantamaria.com/
 .. _Choosing the Right Font - A Practical Guide to Typography on the Web: https://webdesign.tutsplus.com/articles/choosing-the-right-font-a-practical-guide-to-typography-on-the-web--webdesign-15
@@ -87,17 +88,15 @@ Color: Sass Color Functions
 
 It’s important for any designer to be able to create pleasing and accessible
 color palettes. If you write code, Natalya Shelburne’s Sass color functions
-outlined in `Practical Color Theory for People Who Code`_
-are an excellent tool for generating a palette that works. If you’re not a
-developer, this is still a
+outlined in `Practical Color Theory for People Who Code`_ are an excellent tool
+for generating a palette that works. If you’re not a developer, this is still a
 fantastic tutorial in how to think about color for the web. You’ll learn about
 accessible contrast, using neutral colors, and how to simulate cohesive
 lighting conditions.
 
 Color can make or break a user’s experience on the web. If you’d like to learn
 more, here's an outlined of my `process for choosing brand colors`_ including a
-list of several tools for generating color palettes and
-testing contrast.
+list of several tools for generating color palettes and testing contrast.
 
 .. _Practical Color Theory for People Who Code: http://tallys.github.io/color-theory/
 .. _process for choosing brand colors: /2017/1/16/color/
