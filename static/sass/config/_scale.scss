@@ -25,6 +25,7 @@ $modular-scale: (
 $text-sizes: (
   'root': 18px,
   'small': 'root' ('text-ratio': -1),
+  'medium': 'root' ('text-ratio': 0.7),
 );
 
 @include herman-add-sizes('text-sizes', $text-sizes);
@@ -63,24 +64,12 @@ $pattern-sizes: (
   'bird-face-tall': 8rem,
   'bird-face': 6rem,
   'half-bird-face': 'bird-face' ('multiple': 0.5),
-  'quote': 9rem,
-  'quote-plus': 'quote' ('multiple': 0.75),
-  'quote-circle': 'quote' ('multiple': 0.45),
-  'quote-circle-small': 'quote' ('multiple': 0.2),
   'nav-medium': 35rem,
   'nav-wide': 50rem,
   'dropdown-narrow': 9rem,
   'dropdown-wide': 14rem,
   'menu-more': 12px,
   'menu-more-space': 'menu-more' ('multiple': 0.25),
-  'column-small': 5vw,
-  'column': 50vw,
-  'column-medium': 75vw,
-  'column-wide': 90vw,
-  'column-max': 100vw,
-  'intro-block': 80vw,
-  'intro': 65vw, // column-medium - 10vw
-  'blockquote': 80vw, // column-wide - 10vw
 );
 
 @include herman-add-sizes('pattern-sizes', $pattern-sizes);
@@ -108,7 +97,6 @@ $page-sizes: (
 ///   Accoutrement Scale
 $column-sizes: (
   'full-content': 40rem,
-  'main-column-max': 40rem,
 );
 
 @include herman-add-sizes('column-sizes', $column-sizes);

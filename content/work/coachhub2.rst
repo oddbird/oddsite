@@ -51,7 +51,7 @@ client:
 
     <!-- different class name if we could have aside as the element -->
     <aside class="aside">
-      <h3>Our Responsibilities</h3>
+      <h3 class="list-title">Our Tasks</h3>
 
       <ul class="simple">
         <li>List item</li>
@@ -76,64 +76,63 @@ client:
   </blockquote>
 
 
+  <section id="planning-and-discovery-phase">
+    <h2>Planning and Discovery Phase</h2>
+
+    <div class="icon-blocks">
+      <div class="icon-block">
+        <svg data-icon="stacy">
+          <use xlink:href="#icon-stacy"></use>
+        </svg>
+      </div>
+
+      <div class="icon-block-text">
+        <h3>User Stories</h3>
+        <p>If you'd like to learn how to create parallax scrolling for your website, Paul Lewis' guide to performant parallaxing is the perfect place to start.</p>
+      </div>
+    </div>
+
+    <div class="icon-blocks">
+      <div class="icon-block">
+        <svg data-icon="stacy">
+          <use xlink:href="#icon-stacy"></use>
+        </svg>
+      </div>
+
+      <div class="icon-block-text">
+        <h3>User Stories</h3>
+        <p>If you'd like to learn how to create parallax scrolling for your website, Paul Lewis' guide to performant parallaxing is the perfect place to start.</p>
+      </div>
+    </div>
+
+    <div class="icon-blocks">
+      <div class="icon-block">
+        <svg data-icon="stacy">
+          <use xlink:href="#icon-stacy"></use>
+        </svg>
+      </div>
+
+      <div class="icon-block-text">
+        <h3>User Stories</h3>
+        <p>If you'd like to learn how to create parallax scrolling for your website, Paul Lewis' guide to performant parallaxing is the perfect place to start.</p>
+      </div>
+    </div>
+
+    <div class="icon-blocks">
+      <div class="icon-block">
+        <svg data-icon="stacy">
+          <use xlink:href="#icon-stacy"></use>
+        </svg>
+      </div>
+
+      <div class="icon-block-text">
+        <h3>User Stories</h3>
+        <p>If you'd like to learn how to create parallax scrolling for your website, Paul Lewis' guide to performant parallaxing is the perfect place to start.</p>
+      </div>
+    </div>
+  </section>
+
   <div class="default-block">
-    <section id="planning-and-discovery-phase">
-      <h2>Planning and Discovery Phase</h2>
-
-      <div class="icon-blocks">
-        <div class="icon-block">
-          <svg data-icon="stacy">
-            <use xlink:href="#icon-stacy"></use>
-          </svg>
-        </div>
-
-        <div class="icon-block-text">
-          <h3>User Stories</h3>
-          <p>If you'd like to learn how to create parallax scrolling for your website, Paul Lewis' guide to performant parallaxing is the perfect place to start.</p>
-        </div>
-      </div>
-
-      <div class="icon-blocks">
-        <div class="icon-block">
-          <svg data-icon="stacy">
-            <use xlink:href="#icon-stacy"></use>
-          </svg>
-        </div>
-
-        <div class="icon-block-text">
-          <h3>User Stories</h3>
-          <p>If you'd like to learn how to create parallax scrolling for your website, Paul Lewis' guide to performant parallaxing is the perfect place to start.</p>
-        </div>
-      </div>
-
-      <div class="icon-blocks">
-        <div class="icon-block">
-          <svg data-icon="stacy">
-            <use xlink:href="#icon-stacy"></use>
-          </svg>
-        </div>
-
-        <div class="icon-block-text">
-          <h3>User Stories</h3>
-          <p>If you'd like to learn how to create parallax scrolling for your website, Paul Lewis' guide to performant parallaxing is the perfect place to start.</p>
-        </div>
-      </div>
-
-      <div class="icon-blocks">
-        <div class="icon-block">
-          <svg data-icon="stacy">
-            <use xlink:href="#icon-stacy"></use>
-          </svg>
-        </div>
-
-        <div class="icon-block-text">
-          <h3>User Stories</h3>
-          <p>If you'd like to learn how to create parallax scrolling for your website, Paul Lewis' guide to performant parallaxing is the perfect place to start.</p>
-        </div>
-      </div>
-    </section>
-
-
     <section id="design-and-development-phase">
       <h2>Design and Development Phase</h2>
       <h3>Header Level 3</h3>
@@ -142,7 +141,7 @@ client:
           sizes="(max-width: 60em) 100vw, 50vw"
           srcset="http://dummyimage.com/200x200/777777/ffffff.png 200w, http://dummyimage.com/500x500/777777/ffffff.png 900w, http://dummyimage.com/1000x1000/777777/ffffff.png 1300w"
           alt="image alt"
-          class="wayleft">
+          class="col2-start">
 
       <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
       turpis egestas. Vestibulum tortor quamr facilisis. Ut felis. Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacusvel augue laoreet rutrum faucibus dolor auctor. Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>

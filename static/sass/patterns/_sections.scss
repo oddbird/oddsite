@@ -8,6 +8,13 @@
   padding: 0 size('gutter');
 }
 
+[data-location='work'] {
+  [data-module='rst-body'] {
+    border: 1px solid color('brand-pink');
+    max-width: none;
+  }
+}
+
 .separator {
   @include section-arrow;
   box-shadow: 0 2px 2px color('shadow');

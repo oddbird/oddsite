@@ -23,7 +23,6 @@
   }
 }
 
-
 .project-meta {
   align-items: flex-end;
   display: flex;
@@ -50,27 +49,16 @@
   }
 }
 
-
-
 .project-links {
   text-align: right;
 }
-
-/// @todo Don't Look at me. Will clean up
-/// after I have logic down.
-
-$column-small: 10vw;
-$column: 60vw;
-$column-medium: 70vw;
-$column-wide: 85vw;
-$column-max: 100vw;
 
 .default-block {
   @supports not (display: grid) {
     @include above('full-content') {
       margin-left: auto;
       margin-right: auto;
-      max-width: size('main-column-max');
+      max-width: size('full-content');
       width: 100%;
     }
   }
@@ -78,6 +66,10 @@ $column-max: 100vw;
   @supports (display: grid) {
     display: grid;
     grid-template-columns: $grid-columns;
+
+    > * {
+      grid-column: [col3-start] / [col3-end];
+    }
   }
 }
 
@@ -88,13 +80,17 @@ $column-max: 100vw;
 
     @include above('full-content') {
       flex-direction: row;
-      margin-left: $column-small;
+      justify-content: flex-end;
+      margin-left: auto;
+      max-width: 90%;
     }
   }
 
   @supports (display: grid) {
-    display: grid;
-    grid-template-columns: $grid-columns;
+    @include above('full-content') {
+      display: grid;
+      grid-template-columns: $grid-columns;
+    }
   }
 }
 
@@ -102,7 +98,7 @@ $column-max: 100vw;
   font-style: italic;
 
   @supports not (display: grid) {
-    flex: 1 0 $column;
+    flex: 1 0 0;
   }
 
   @supports (display: grid) {
@@ -113,11 +109,18 @@ $column-max: 100vw;
 .aside {
   @include above('full-content') {
     border-left: 1px solid color('icon-block');
-  }
+    margin-left: size('gutter');
+    padding: size('shim') size('gutter');
 
-  @supports (display: grid) {
-    grid-column: [col4-start] / [col5-end];
+    @supports (display: grid) {
+      grid-column: [col4-start] / [col5-end];
+    }
   }
+}
+
+.list-title {
+  font-size: size('medium');
+  margin-top: 0;
 }
 
 .linked-post-title {

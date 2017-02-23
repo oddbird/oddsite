@@ -1,6 +1,10 @@
 // Blockquotes
 // ===========
 
+$quote-circle: calc(2.25rem + 3vw);
+$quote-circle-type: calc(7rem + 3vw);
+
+
 blockquote {
   font-size: calc(1.125rem + 0.5vw);
   font-style: italic;
@@ -8,9 +12,11 @@ blockquote {
   margin-top: size('gutter');
   position: relative;
 
-  @supports (display: grid) {
-    display: grid;
-    grid-template-columns: $grid-columns;
+  @include above('full-content') {
+    @supports (display: grid) {
+      display: grid;
+      grid-template-columns: $grid-columns;
+    }
   }
 
   @include before('“') {
@@ -18,21 +24,24 @@ blockquote {
     background-color: color('quote');
     border-radius: 50%;
     color: color('background');
-    font-size: size('quote-circle');
+    font-size: $quote-circle-type;
     font-style: normal;
-    height: size('quote-circle-small');
+    height: $quote-circle;
     line-height: 0.8;
     margin-left: auto;
     margin-right: auto;
     position: relative;
-    text-indent: size('half-shim');
-    width: size('quote-circle-small');
+    text-align: right;
+    width: $quote-circle;
 
-    @include above('blockquote') {
-      font-size: size('quote');
-      height: size('quote-circle');
-      text-indent: size('shim');
-      width: size('quote-circle');
+    @include below('full-content') {
+      display: block;
+    }
+
+    @include above('full-content') {
+      height: $quote-circle;
+      margin-right: size('shim');
+      width: $quote-circle;
 
       @supports not (display: grid) {
         margin-left: 0;
@@ -40,12 +49,12 @@ blockquote {
       }
 
       @supports (display: grid) {
-        grid-columns: [col1-start] / [col1-end];
+        grid-column: [col1-start] / [col1-end];
       }
     }
   }
 
-  @include above('blockquote') {
+  @include above('full-content') {
     footer,
     p {
       @supports not (display: grid) {

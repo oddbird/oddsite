@@ -101,3 +101,14 @@
   background-repeat: repeat-x;
   background-size: $size $size;
 }
+
+
+// Headlines
+// -----
+/// Shortcut for all headlines.
+/// @group typography
+/// @example scss -
+///   #{$headlines} {
+///     max-width: size('full-content');
+///   }
+$headlines: 'h1, h2, h3, h4, h5, h6';
