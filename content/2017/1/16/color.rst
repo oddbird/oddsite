@@ -6,8 +6,15 @@ image:
 summary: |
   **How do you select a set of colors that express the attitude of your
   brand**, look great together, and pass WCAG accessibility standards? How many
-  brand colors is too many? How do you keep track of all these moving parts
-  without getting completely overwhelmed? Color toolkit to the rescue!
+  colors is too many? This step-by-step guide outlines OddBird's process
+  for tackling these challenges.
+
+  It's important to define your brand goals first and review them
+  throughout the process. Next, do some research for inspiration.
+  What colors are the other companies in your field using? Use Paletton
+  to generate a cohesive color palette. Test color contrast to ensure
+  accessibility. Finally, create prototypes to make sure you colors work
+  well in context.
 after:
   - include: 'blog/_tag-module.html.j2'
     title: 'OddSite Re-design Timeline'
@@ -15,19 +22,15 @@ after:
     id: 'open-design-articles'
 
 
-Open Brand Identity Design Part 2: Please Steal These Ideas
-===========================================================
-
-How to Choose Engaging and Accessible Brand Colors for Your Website
--------------------------------------------------------------------
+How to Choose Beautiful & Accessible Brand Colors for Your Website
+==================================================================
 
 Now that you have `selected excellent typography`_ that fits your brand to a
 “T”, it’s time to explore brand colors. How do you select a set of colors that
 express the attitude of your brand, look great together, and pass WCAG
-accessibility standards? How many brand colors is too many? How do you keep
+accessibility standards? How many colors is too many? How do you keep
 track of all these moving parts without getting completely overwhelmed? Color
-toolkit to the rescue! Over the years, I’ve collected several excellent web
-tool resources to help guide me through these challenges – many of which I used
+toolkit to the rescue! Over the years, I’ve collected several resources to help guide me through these challenges – many of which I used
 during OddBird’s `open redesign process`_.
 
 .. _selected excellent typography: http://oddbird.net/2017/1/11/typography/
