@@ -6,6 +6,7 @@ Use like:
   {{ config.pages.birds.slug }}
 """
 
+from functools import partial
 from rstblog.modules.blog import get_all_entries
 
 
@@ -104,30 +105,24 @@ def filter_pages(values, key, operator=None, value=None):
     ]
 
 
-def make_get_blog_entries_by_bird(builder):
-    def get_blog_entries_by_bird(bird):
-        posts = get_all_entries(builder)
-        return [
-            post
-            for post
-            in posts
-            if bird == post.author
-        ]
-
-    return get_blog_entries_by_bird
+def get_blog_entries_by_bird(builder, bird):
+    posts = get_all_entries(builder)
+    return [
+        post
+        for post
+        in posts
+        if bird == post.author
+    ]
 
 
-def make_get_blog_entries_by_tag(builder):
-    def get_blog_entries_by_tag(tag):
-        posts = get_all_entries(builder)
-        return [
-            post
-            for post
-            in posts
-            if tag in post.tags
-        ]
-
-    return get_blog_entries_by_tag
+def get_blog_entries_by_tag(builder, tag):
+    posts = get_all_entries(builder)
+    return [
+        post
+        for post
+        in posts
+        if tag in post.tags
+    ]
 
 
 def setup(builder):
@@ -136,10 +131,12 @@ def setup(builder):
     env.filters['show_config'] = show_config
     env.filters['filter_pages'] = filter_pages
     env.filters['get_page'] = get_page
-    env.globals['get_blog_entries_by_bird'] = make_get_blog_entries_by_bird(
+    env.globals['get_blog_entries_by_bird'] = partial(
+        get_blog_entries_by_bird,
         builder,
     )
-    env.globals['get_blog_entries_by_tag'] = make_get_blog_entries_by_tag(
+    env.globals['get_blog_entries_by_tag'] = partial(
+        get_blog_entries_by_tag,
         builder,
     )
     env.globals['all_pages'] = get_pages(builder)
