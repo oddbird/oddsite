@@ -4,14 +4,16 @@ tags: [OddSite, 'Open Design', Typography, Design]
 image:
   - src: '2017/typography/type.jpg'
 summary: |
-  **How do you choose the best fonts and colors for a brand identity** among
-  the thousands of options available on the interwebs these days – fonts and
-  colors that perfectly express the mood you or your client want to evoke when
-  users encounter your company – while also meeting accessibility standards, and
-  standing out from the masses?
+  **How do you choose the best fonts for a brand identity** among
+  the thousands of options available on the interwebs these days?
+  Whether you’re starting from scratch or rebranding like us, this
+  step-by-step guide can help focus and direct your process.
 
-  Whether you’re starting from scratch or rebranding like us, use this
-  step-by-step guide to help focus and direct your decisions.
+  First, define your brand goals. Next, explore your options. There
+  are many excellect resources that offer free, high quality,
+  and accessible fonts; I list 7 of my favorites in this guide.
+  Create element collages to test your typeface pairings
+  in context. Finally, vote on the best options with your team.
 after:
   - include: 'blog/_tag-module.html.j2'
     title: 'OddSite Re-design Timeline'
@@ -19,29 +21,26 @@ after:
     id: 'open-design-articles'
 
 
-Open Brand Identity Design: Please Steal These Ideas
-====================================================
+How to Choose Engaging & Accessible Typography for Your Website Brand
+=====================================================================
 
-How to Choose Evocative and Accessible Fonts and Colors for your Website Brand Identity.
-----------------------------------------------------------------------------------------
-
-How do you choose the best fonts and colors for a brand identity among the
-thousands of options available on the interwebs these days – fonts and colors
-that perfectly express the mood you or your client want to evoke when users
-encounter your company – while also meeting accessibility standards, and standing
-out from the masses? OddBird tackled this question as part of the `open
-redesign process`_ of this, our OddSite.
+How do you choose the best fonts for a brand identity among the thousands of
+options available on the interwebs these days – typography that perfectly
+expresses the mood you or your client want to evoke when users encounter your
+company – while also meeting accessibility standards, and standing out from
+the masses? OddBird tackled this question as part of the `open redesign
+process`_ of this, our OddSite.
 
 .. _open redesign process: http://oddbird.net/2016/07/12/open-design/
 
-Whether you’re starting from scratch or rebranding like us, use this
-step-by-step guide to help focus and direct your decisions. I’m focusing on
-website branding in this two-part series, but many of these ideas apply to
-print as well. Feel free to use this guide and these resources with your team.
-Happy thieving!
+Whether you’re starting from scratch or rebranding like us, this step-by-step
+guide can help direct your process. I’m focusing on website
+branding, but many of these ideas apply to print as well. If you already have
+typography, but you need a beautiful color palette, check out this guide to
+`choosing brand colors for your website`_.
 
-Part 1 – Web Typography and Typeface Pairing
---------------------------------------------
+.. _choosing brand colors for your website: http://oddbird.net/2017/1/16/color/
+
 
 Step 1 – Define Brand Goals
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -210,7 +209,7 @@ Additionally, avoid using all caps wherever possible. It’s more difficult to
 read. Plus, **IT LOOKS LIKE YOU’RE SHOUTING**.
 
 OddBird borrowed ideas from `Vox Product’s`_ process to test our typography
-options in context. Our design team created typography element collages, each
+options. Our design team created typography element collages, each
 using the same content from our blog. Presenting different typeface families in
 the same context also made it easier for the rest of the Birds to evaluate the
 options.
@@ -334,7 +333,8 @@ sites do you use? What is your favorite tool or method for typeface pairing?
 Let’s talk web typography on the `OddFriends Slack channel`_. Typography nerds
 unite!
 
-Part 2 – How to Choose Brand Colors for Your Website
-----------------------------------------------------
+.. raw:: html
 
-**Coming Monday!**
+    <a href="http://oddbird.net/2017/1/16/color/" class="btn">
+      How to Choose Brand Colors »
+    </a>
