@@ -1,24 +1,16 @@
 // Blockquotes
 // ===========
 
-
 blockquote {
-  display: flex;
-  flex-wrap: wrap;
   font-size: calc(1.125rem + 0.5vw);
   font-style: italic;
-  margin: size('gutter') 0;
-  max-width: 100%;
+  margin-bottom: size('gutter');
+  margin-top: size('gutter');
   position: relative;
 
-  @include below('medium-page') {
-    flex-direction: row;
-    justify-content: center;
-  }
-
-  @include above('medium-page') {
-    justify-content: flex-end;
-    min-width: size('column-wide');
+  @supports (display: grid) {
+    display: grid;
+    grid-template-columns: $grid-columns;
   }
 
   @include before('“') {
@@ -30,21 +22,42 @@ blockquote {
     font-style: normal;
     height: size('quote-circle-small');
     line-height: 0.8;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
     text-indent: size('half-shim');
     width: size('quote-circle-small');
 
-    @include above('medium-page') {
+    @include above('blockquote') {
       font-size: size('quote');
       height: size('quote-circle');
-      margin-right: size('gutter');
       text-indent: size('shim');
       width: size('quote-circle');
+
+      @supports not (display: grid) {
+        margin-left: 0;
+        position: absolute;
+      }
+
+      @supports (display: grid) {
+        grid-columns: [col1-start] / [col1-end];
+      }
     }
   }
-  
-  p {
-    @include above('medium-page') {
-      flex: 0 0 size('blockquote');
+
+  @include above('blockquote') {
+    footer,
+    p {
+      @supports not (display: grid) {
+        margin-left: auto;
+        margin-right: 0;
+        max-width: 90%;
+      }
+
+      @supports (display: grid) {
+        grid-column: [col2-start] / -1;
+      }
     }
   }
 }
+

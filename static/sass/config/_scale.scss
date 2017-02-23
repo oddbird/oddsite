@@ -108,6 +108,7 @@ $page-sizes: (
 ///   Accoutrement Scale
 $column-sizes: (
   'full-content': 40rem,
+  'main-column-max': 40rem,
 );
 
 @include herman-add-sizes('column-sizes', $column-sizes);

@@ -5,11 +5,23 @@
 .icon-blocks {
   display: flex;
 
+  @supports (display: grid) {
+    display: grid;
+    grid-template-columns: $grid-columns;
+  }
+
   .icon-block {
-    margin-right: size('gutter');
     margin-top: 1.5rem; // match margin from h2
+    padding-right: size('shim');
     text-align: right;
-    width: 20vw;
+
+    @supports not (display: grid) {
+      width: 20vw;
+    }
+
+    @supports (display: grid) {
+      grid-column: [col2-start] / [col2-end];
+    }
   }
 
   [data-icon] {
@@ -19,6 +31,12 @@
   }
 
   .icon-block-text {
-    width: 60vw;
+    @supports not (display: grid) {
+      width: size('full-content');
+    }
+
+    @supports (display: grid) {
+      grid-column: [col3-start] / [col3-end];
+    }
   }
 }

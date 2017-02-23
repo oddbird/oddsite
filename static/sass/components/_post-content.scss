@@ -6,51 +6,117 @@
   margin-top: 0;
 }
 
-.title {
+@mixin title {
   @include font-family('alt');
   font-size: calc(1.5rem + 1.75vw);
   line-height: 1.25;
+}
+
+.title {
+  @include title;
   margin: size('gutter') auto;
-  max-width: size('medium-page');
+  max-width: size('full-content');
   padding: 0 size('gutter');
+
+  [data-location='work'] & {
+    font-size: calc(1.5rem + 15vw);
+  }
 }
 
 
-[data-module='rst-body'] {
-  width: 100%;
+.project-meta {
+  align-items: flex-end;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: size('gutter');
 
-  @include above('medium-page') {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+  @include above('full-content') {
+    justify-content: space-between;
+  }
+}
+
+.project-title {
+  @include title;
+
+  @include above('full-content') {
+    max-width: 40vw;
+  }
+
+  em {
+    @include font-family('body');
+    display: block;
+    font-size: calc(1.25rem + 1.75vw);
+    font-style: italic;
+  }
+}
+
+
+
+.project-links {
+  text-align: right;
+}
+
+/// @todo Don't Look at me. Will clean up
+/// after I have logic down.
+
+$column-small: 10vw;
+$column: 60vw;
+$column-medium: 70vw;
+$column-wide: 85vw;
+$column-max: 100vw;
+
+.default-block {
+  @supports not (display: grid) {
+    @include above('full-content') {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: size('main-column-max');
+      width: 100%;
+    }
+  }
+
+  @supports (display: grid) {
+    display: grid;
+    grid-template-columns: $grid-columns;
   }
 }
 
 .intro-block {
-  @include above('medium-page') {
+  @supports not (display: grid) {
     display: flex;
-    flex-direction: row;
-    margin-left: 15vw;
-    min-width: size('intro-block');
+    flex-direction: column;
+
+    @include above('full-content') {
+      flex-direction: row;
+      margin-left: $column-small;
+    }
+  }
+
+  @supports (display: grid) {
+    display: grid;
+    grid-template-columns: $grid-columns;
   }
 }
 
 .intro {
   font-style: italic;
 
-  @include above('medium-page') {
-    flex: 1 0 0;
+  @supports not (display: grid) {
+    flex: 1 0 $column;
   }
 
-  + .aside {
-    margin-left: size('gutter');
+  @supports (display: grid) {
+    grid-column: [col2-start] / [col3-end];
   }
 }
 
 .aside {
-  @include above('medium-page') {
+  @include above('full-content') {
     border-left: 1px solid color('icon-block');
-    padding: 0 size('gutter');
+  }
+
+  @supports (display: grid) {
+    grid-column: [col4-start] / [col5-end];
   }
 }
 
