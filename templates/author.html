@@ -1,14 +1,17 @@
 {% extends "blog/index.html" %}
 
 {% import "birds/macros.j2" as birds %}
+{% import "birds/utility.macros.j2" as utility %}
 
-{% block title %}Entries by {{ author.name }}{% endblock %}
+{% set name = utility.get_bird_name(author.name) %}
+
+{% block title %}Entries by {{ name }}{% endblock %}
 {% block og_url %}{{ get_full_canonical_url(builder, slug=['/authors', author.name]|join('/')) }}{% endblock %}
 {% block bodyclasses %}blog archive{% endblock %}
 
 {% block feedlinks %}
 {{ super() }}
-<link href="feed.atom" rel="alternate" title="OddBird posts by '{{ author.name }}'" type="application/atom+xml">
+<link href="feed.atom" rel="alternate" title="OddBird posts by '{{ name }}'" type="application/atom+xml">
 {% endblock %}
 
 {% block list_intro %}

@@ -1,5 +1,7 @@
 {% extends "blog/archives.html" %}
 
+{% import "birds/utility.macros.j2" as birds %}
+
 {% block title %}Authors{% endblock %}
 {% block og_url %}{{ get_full_canonical_url(builder, slug='/authors/') }}{% endblock %}
 {% block archivetype %}authors{% endblock archivetype %}
@@ -8,8 +10,9 @@
   <h1 class="archivetitle">Authors</h1>
   <ul class="archivelist">
   {%- for author in get_authors(limit=50) %}
+    {% set name = birds.get_bird_name(author.name) %}
     <li class="archiveentry">
-      <a href="{{ link_to('author', author=author.name) }}" rel="bookmark">{{ author.name }}</a>
+      <a href="{{ link_to('author', author=author.name) }}" rel="bookmark">{{ name }}</a>
       <b class="archivecount">{{ author.count }}</b>
     </li>
   {%- endfor %}

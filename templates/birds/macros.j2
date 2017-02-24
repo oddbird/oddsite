@@ -28,9 +28,7 @@
     </div>
 
     {{ oss_list(author, oss) }}
-    {{ blog_list(
-      posts=get_blog_entries_by_bird(author)|reverse|list
-    ) }}
+    {{ blog_list(posts=get_blog_entries_by_bird(author)) }}
   </div>
 {% endmacro %}
 
