@@ -34,9 +34,7 @@
 
 
 {% macro get_bird_name(name) -%}
-  {# Get the birds's page #}
-  {% set page = all_pages|filter_pages('bird', 'eq', name)|get_page %}
-  {# Set their name, if it's available #}
+  {%- set page = all_pages|filter_pages('bird', 'eq', name)|get_page -%}
   {{ page.title or name }}
 {%- endmacro %}
 
