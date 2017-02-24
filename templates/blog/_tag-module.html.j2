@@ -10,6 +10,7 @@
     </h2>
 
     <ul>
+      {% set entries = entries|reverse if module.reverse else entries %}
       {% for entry in entries %}
         <li>
           {{ blog.link(entry) }}
