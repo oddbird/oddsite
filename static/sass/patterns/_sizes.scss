@@ -13,3 +13,23 @@
 .size-quarter {
   width: 25%;
 }
+
+@include above('medium-page') {
+  .extend-small-left {
+    margin-left: -10%;
+  }
+
+  .extend-small {
+    margin-left: -10%;
+    margin-right: -10%;
+  }
+
+  .extend-large-left {
+    margin-left: -20%;
+  }
+
+  .extend-large {
+    margin-left: -20%;
+    margin-right: -20%;
+  }
+}
