@@ -1,13 +1,16 @@
-// Section Config
-// ==============
+// Layout Config
+// =============
 
 
-// reusable CSS Grid Template Columns definition
-//$grid-columns: [col1-start] 1fr [col1-end col2-start] 1fr [col2-end col3-start] minmax(auto, size('full-content')) [col3-end col4-start] 1fr [col4-end col5-start] 1fr [col5-end];
-// $grid-columns: [col1-start] minmax(10vw, 1fr) [col1-end col2-start] minmax(10vw, 1fr) [col2-end col3-start] size('full-content') [col3-end col4-start] minmax(10vw, 1fr) [col4-end col5-start] minmax(10vw, 1fr) [col5-end];
-//$grid-columns: [col1-start] 1fr [col1-end col2-start] 1fr [col2-end col3-start] size('full-content') [col3-end col4-start] 1fr [col4-end col5-start] 1fr [col5-end];
+// Variables
+// Reusable CSS Grid Template Columns definition
+// ---------------------------------------------
 $grid-columns: [col1-start] 1fr [col1-end col2-start] 1fr [col2-end col3-start] minmax(auto, size('full-content')) [col3-end col4-start] 1fr [col4-end col5-start] 1fr [col5-end];
 $grid-columns-large: [col1-start] minmax(10vw, 1fr) [col1-end col2-start] minmax(10vw, 1fr) [col2-end col3-start] size('full-content') [col3-end col4-start] minmax(10vw, 1fr) [col4-end col5-start] minmax(10vw, 1fr) [col5-end];
+
+// When you need a % and not a rem, like on blockquote and intro
+// -------------------------------------------------------------
+$wide-column: 90%;
 
 
 // Center it (horizontally)
