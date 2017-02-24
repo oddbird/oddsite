@@ -46,17 +46,9 @@ client:
     </div>
   </header>
 
-  <div class="grid">
-    <div class="col1">1</div>
-    <div class="col2">2</div>
-    <div class="col3">3</div>
-    <div class="col4">4</div>
-    <div class="col5">5</div>
-  </div>
-
   <section class="intro-block">
     <div class="intro">
-      <p>**Pellentesque habitant morbi tristique senectus et netus et malesuada** <a href="http://orcas.com">ORCAS</a> -- ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. in turpis pulvinar facilisis. Ut felis.</p>
+      <p><strong>Pellentesque habitant morbi tristique senectus et netus et malesuada</strong> <a href="http://orcas.com">ORCAS</a> -- ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. in turpis pulvinar facilisis. Ut felis. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. in turpis pulvinar facilisis. Ut felis. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. in turpis pulvinar facilisis. Ut felis.</p>
 
       <div class="project-tasks">
         <h3 class="list-title">Our Tasks</h3>
@@ -65,10 +57,7 @@ client:
           <li>List item</li>
           <li>List item</li>
           <li>List item</li>
-          <li>List item</li>
-          <li>List item</li>
-          <li>item List item</li>
-          <li>List item</li>
+          <li>Item List item</li>
           <li>List item</li>
         </ul>
       </div>
@@ -150,7 +139,7 @@ client:
           sizes="(max-width: 60em) 100vw, 50vw"
           srcset="http://dummyimage.com/100x100/777777/ffffff.png 200w, http://dummyimage.com/200x200/777777/ffffff.png 640w"
           alt="image alt"
-          class="extend-small-left align-left">
+          class="extend-left">
 
       <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
       turpis egestas. Vestibulum tortor quamr facilisis. Ut felis. Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacusvel augue laoreet rutrum faucibus dolor auctor.</p>
@@ -158,10 +147,10 @@ client:
       <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
       turpis egestas. Vestibulum tortor quamr facilisis. Ut felis. Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacusvel augue laoreet rutrum faucibus dolor auctor. Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
 
-      <figure class="extend-large">
+      <figure>
         <img src="http://dummyimage.com/1600x250/777777/ffffff.png"
              href="http://google.com"
-             class="size-full center">
+             class="extend-small">
 
         <figcaption>This is my caption for my figure.</figcaption>
       </figure>
@@ -175,10 +164,10 @@ client:
       <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
       turpis egestas. Vestibulum tortor quamr facilisis. Ut felis. Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacusvel augue laoreet rutrum faucibus dolor auctor. Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
 
-      <figure class="extend-small">
+      <figure>
         <img src="http://dummyimage.com/1600x250/777777/ffffff.png"
              href="http://google.com"
-             class="size-full center">
+             class="extend-large">
 
         <figcaption>This is my caption for my figure.</figcaption>
       </figure>
@@ -186,8 +175,8 @@ client:
       <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
       turpis egestas. Vestibulum tortor quamr facilisis. Ut felis. Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacusvel augue laoreet rutrum faucibus dolor auctor. Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
 
-      <figure class="size-full align-center">
-        <img src="http://dummyimage.com/1600x250/777777/ffffff.png"
+      <figure>
+        <img class="extend-small" src="http://dummyimage.com/1600x250/777777/ffffff.png"
              href="http://google.com">
 
         <figcaption>This is my caption for my figure.</figcaption>
@@ -204,7 +193,7 @@ client:
       <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
       turpis egestas. Vestibulum tortor quamr facilisis. Ut felis. Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacusvel augue laoreet rutrum faucibus dolor auctor. Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
 
-      <img class="extend-small-left align-left" src="http://dummyimage.com/200x200/777777/ffffff.png"
+      <img class="extend-right" src="http://dummyimage.com/200x200/777777/ffffff.png"
           sizes="(max-width: 60em) 100vw, 50vw"
           srcset="http://dummyimage.com/200x200/777777/ffffff.png 200w, http://dummyimage.com/300x300/777777/ffffff.png 900w, http://dummyimage.com/500x500/777777/ffffff.png 1100w"
           alt="image alt">
@@ -213,5 +202,10 @@ client:
       turpis egestas. Vestibulum tortor quamr facilisis. Ut felis. Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacusvel augue laoreet rutrum faucibus dolor auctor. Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
       <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
       turpis egestas. Vestibulum tortor quamr facilisis. Ut felis. Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacusvel augue laoreet rutrum faucibus dolor auctor. Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+
+      <img class="extend-full" src="http://dummyimage.com/200x200/777777/ffffff.png"
+          sizes="(max-width: 60em) 100vw, 50vw"
+          srcset="http://dummyimage.com/200x100/777777/ffffff.png 200w, http://dummyimage.com/300x150/777777/ffffff.png 900w, http://dummyimage.com/1500x750/777777/ffffff.png 1100w"
+          alt="image alt">
     </section>
   </div>

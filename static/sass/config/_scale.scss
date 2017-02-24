@@ -46,6 +46,7 @@ $spacing-sizes: (
   'shim': 'gutter' ('multiple': 0.5),
   'half-shim': 'shim' ('multiple': 0.5),
   'quarter-shim': 'shim' ('multiple': 0.25),
+  'pad': 'root',
   'pixel': 1px,
 );
 
@@ -84,6 +85,7 @@ $pattern-sizes: (
 $page-sizes: (
   'small-page': 20rem,
   'medium-page': 55rem,
+  'large-page': 75rem,
 );
 
 @include herman-add-sizes('page-sizes', $page-sizes);

@@ -13,7 +13,8 @@ blockquote {
   position: relative;
 
   @include above('full-content') {
-    @include grid('medium-page');
+    @include center('medium-page');
+    @include grid;
   }
 
   @include before('“') {

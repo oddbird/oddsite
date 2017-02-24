@@ -45,41 +45,101 @@ $wide-column: 90%;
 // --------------
 /// Shortcut for declaring shared grid container styles
 /// @group layout
-/// @parameter $max-width -
-///   Optional max-width for centered item
 /// @example scss -
 ///   .foo {
-///     @include grid('full-content');
-///   }
-///   .bar {
 ///     @include grid;
 ///   }
 /// @example css -
 ///   .foo {
-///     margin-left: auto;
-///     margin-right: auto;
-///     max-width: 40rem;
-///     width: 100%;
-///
 ///     @supports (display: grid) {
 ///       display: grid;
 ///       grid-template-columns: $grid-columns;
 ///     }
 ///   }
-///
-///   .bar {
-///     @supports (display: grid) {
-///       display: grid;
-///       grid-template-columns: $grid-columns;
-///     }
-///   }
-@mixin grid(
-  $max-width: 'medium-page'
-) {
-  @include center($max-width);
-
+@mixin grid {
   @supports (display: grid) {
     display: grid;
     grid-template-columns: $grid-columns;
   }
 }
+
+
+// Extend things past their container
+
+// Margin/Size Extension Variables
+// ===============================
+// Extend thing outside its container on both sides
+// viewport, minus the main content width, divided by 2, then make negative
+/// @link http://codepen.io/mirisuzanne/pen/ded4ae1f55f9b24b2aa0ea4aaac71e47?editors=0100
+/// @link http://www.sassmeister.com/gist/8374287846277fdf3361537dfaac27a8
+
+$full-content: 40rem;
+$extend-small: 70vw;
+$extend-medium: 80vw;
+$extend-large: 90vw;
+$extend-full: 100vw;
+
+@mixin extend(
+  $extend-base-size
+) {
+
+  $extend-large-size: $extend-base-size - 10vw;
+
+  @if ($extend-base-size == $extend-full) {
+    @media (min-width: 'medium-page') {
+      margin-left: calc((#{$extend-full} - #{$full-content}) / 2 * -1);
+      margin-right: calc((#{$extend-full} - #{$full-content}) / 2 * -1);
+      max-width: $extend-full;
+      width: $extend-full;
+    }
+  } @else {
+    @media (min-width: 'medium-page') {
+      margin-left: calc((#{$extend-base-size} - #{$full-content}) / 2 * -1);
+      margin-right: calc((#{$extend-base-size} - #{$full-content}) / 2 * -1);
+      max-width: $extend-base-size;
+      width: $extend-base-size;
+    }
+
+    @media (min-width: 'large-page') {
+      margin-left: calc((#{$extend-large-size} - #{$full-content}) / 2 * -1);
+      margin-right: calc((#{$extend-large-size} - #{$full-content}) / 2 * -1);
+      max-width: $extend-large-size;
+      width: $extend-large-size;
+    }
+  }
+}
+
+// Extend thing outside its container on one side only
+@mixin extend-side(
+  $side
+) {
+
+  @if ($side == left) {
+    float: left;
+    margin-bottom: size('pad');
+    padding-right: size('pad');
+
+    @media (min-width: 'medium-page') {
+      margin-left: calc((#{$extend-medium} - #{$full-content}) / 2 * -1);
+    }
+
+    @media (min-width: 'large-page') {
+      margin-left: calc((#{$extend-small} - #{$full-content}) / 2 * -1);
+    }
+  }
+
+  @elseif ($side == right) {
+    float: right;
+    margin-bottom: size('pad');
+    padding-left: size('pad');
+
+    @media (min-width: 'medium-page') {
+      margin-right: calc((#{$extend-medium} - #{$full-content}) / 2 * -1);
+    }
+
+    @media (min-width: 'large-page') {
+      margin-right: calc((#{$extend-small} - #{$full-content}) / 2 * -1);
+    }
+  }
+}
+

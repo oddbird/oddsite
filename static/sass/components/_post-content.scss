@@ -1,35 +1,6 @@
 // Post Content
 // ============
 
-
-.grid {
-  @include grid;
-
-  div {
-    border: 1px solid color('brand-pink');
-  }
-}
-
-// .col1 {
-//   grid-column: 1;
-// }
-
-// .col2 {
-//   grid-column: 2;
-// }
-
-// .col3 {
-//   grid-column: 3;
-// }
-
-// .col4 {
-//   grid-column: 4;
-// }
-
-// .col5 {
-//   grid-column: 5;
-// }
-
 .section-title {
   margin-top: 0;
 }
@@ -51,7 +22,6 @@
   }
 }
 
-
 .content-block {
   @supports not (display: grid) {
     @include above('full-content') {
@@ -59,7 +29,7 @@
     }
   }
 
-  @include grid('medium-page');
+  @include grid;
 
   section {
     @supports (display: grid) {
@@ -67,7 +37,7 @@
 
       @include above('medium-page') {
         // grid-column: [col3-start] / [col3-end];
-        grid-column: 3 / 4;
+        grid-column: 3 / span 1;
       }
     }
   }
