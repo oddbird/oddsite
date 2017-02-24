@@ -8,7 +8,7 @@
   display: flex;
   flex-direction: column;
 
-  @include above('medium-page') {
+  @include above('full-content') {
     @include center('medium-page');
 
     @supports not (display: grid) {
@@ -16,43 +16,42 @@
       justify-content: flex-end;
     }
 
-    @include grid('medium-page');
+    @include grid;
   }
 }
 
-// intro text block
+// intro inner wrapper text block and task info
+// using this as a container to use flexbox inside and grid outside
 .intro {
-  font-style: italic;
+  @include above('full-content') {
+    display: flex;
 
-  @include above('medium-page') {
-    padding-right: size('gutter');
-  }
-
-  @supports not (display: grid) {
-    flex: 1 0 0;
-
-    @include above('medium-page') {
+    @supports not (display: grid) {
       margin-left: 10vw;
+    }
+
+    @supports (display: grid) {
+      // grid-column: [col2-start] / [col3-end];
+      grid-column: 2 / -1;
     }
   }
 
-  @supports (display: grid) {
-    // grid-column: [col2-start] / [col3-end];
-    grid-column: 2 / 4;
+  p {
+    font-style: italic;
+
+    @include above('full-content') {
+      flex: 1 0 0;
+      padding-right: size('gutter');
+    }
   }
 }
 
 // intro side panel
-.aside {
-  @include above('medium-page') {
+.project-tasks {
+  @include above('full-content') {
     border-left: 1px solid color('icon-block');
     flex: 0 1 25%;
     padding: size('shim') size('gutter');
-
-    @supports (display: grid) {
-      // grid-column: [col4-start] / [col5-end];
-      grid-column: 4 / -1;
-    }
   }
 }
 

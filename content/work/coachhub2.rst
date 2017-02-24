@@ -55,23 +55,24 @@ client:
   </div>
 
   <section class="intro-block">
-    <p class="intro">**Pellentesque habitant morbi tristique senectus et netus et malesuada** <a href="http://orcas.com">ORCAS</a> -- ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. in turpis pulvinar facilisis. Ut felis.</p>
+    <div class="intro">
+      <p>**Pellentesque habitant morbi tristique senectus et netus et malesuada** <a href="http://orcas.com">ORCAS</a> -- ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. in turpis pulvinar facilisis. Ut felis.</p>
 
-    <!-- different class name if we could have aside as the element -->
-    <aside class="aside">
-      <h3 class="list-title">Our Tasks</h3>
+      <div class="project-tasks">
+        <h3 class="list-title">Our Tasks</h3>
 
-      <ul class="simple">
-        <li>List item</li>
-        <li>List item</li>
-        <li>List item</li>
-        <li>List item</li>
-        <li>List item</li>
-        <li>item List item</li>
-        <li>List item</li>
-        <li>List item</li>
-      </ul>
-    </aside>
+        <ul class="simple">
+          <li>List item</li>
+          <li>List item</li>
+          <li>List item</li>
+          <li>List item</li>
+          <li>List item</li>
+          <li>item List item</li>
+          <li>List item</li>
+          <li>List item</li>
+        </ul>
+      </div>
+    </div>
   </section>
 
 
