@@ -6,8 +6,14 @@ image:
 summary: |
   **How do you select a set of colors that express the attitude of your
   brand**, look great together, and pass WCAG accessibility standards? How many
-  brand colors is too many? How do you keep track of all these moving parts
-  without getting completely overwhelmed? Color toolkit to the rescue!
+  colors is too many? This step-by-step guide outlines OddBird's process for
+  tackling these challenges.
+
+  It's important to define your brand goals first and review them throughout
+  the process. Next, do some research for inspiration. What colors are the
+  other companies in your field using? Use Paletton to generate a cohesive
+  color palette. Test color contrast to ensure accessibility. Finally, create
+  prototypes to make sure you colors work well in context.
 after:
   - include: 'blog/_tag-module.html.j2'
     title: 'OddSite Re-design Timeline'
@@ -15,23 +21,20 @@ after:
     id: 'open-design-articles'
 
 
-Open Brand Identity Design Part 2: Please Steal These Ideas
-===========================================================
-
-How to Choose Engaging and Accessible Brand Colors for Your Website
--------------------------------------------------------------------
+How to Choose Beautiful & Accessible Brand Colors for Your Website
+==================================================================
 
 Now that you have `selected excellent typography`_ that fits your brand to a
 “T”, it’s time to explore brand colors. How do you select a set of colors that
 express the attitude of your brand, look great together, and pass WCAG
-accessibility standards? How many brand colors is too many? How do you keep
-track of all these moving parts without getting completely overwhelmed? Color
-toolkit to the rescue! Over the years, I’ve collected several excellent web
-tool resources to help guide me through these challenges – many of which I used
-during OddBird’s `open redesign process`_.
+accessibility standards? How many colors is too many? How do you keep track of
+all these moving parts without getting completely overwhelmed? Color toolkit to
+the rescue! Over the years, I’ve collected several resources to help guide me
+through these challenges – many of which I used during OddBird’s `open redesign
+process`_.
 
-.. _selected excellent typography: http://oddbird.net/2017/1/11/typography/
-.. _open redesign process: http://oddbird.net/2016/07/12/open-design/
+.. _selected excellent typography: /2017/1/11/typography/
+.. _open redesign process: /2016/07/12/open-design/
 
 Step 1 – Define Brand Goals
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -48,7 +51,7 @@ keyword that best encapsulated all the words in each group. One group was “Odd
 Quirky, Fun” and another “Trustworthy, Transparent, Honest”. Of those, I chose
 *Odd* and *Trustworthy* as my keywords.
 
-.. _OddSite Brand Goals: http://oddbird.net/2016/11/04/branding-type/
+.. _OddSite Brand Goals: /2016/11/04/branding-type/
 
 If you try this technique you may want to re-organize your groups of words in
 several different ways. Chances are good that each of your brand words will be
@@ -159,7 +162,7 @@ pages or features.
 `Living Style Guide`_
 ~~~~~~~~~~~~~~~~~~~~~
 
-.. _Living Style Guide: http://oddbird.net/styleguide/color.html
+.. _Living Style Guide: /styleguide/color.html
 
 .. image:: /static/images/blog/2017/colors/styleguide.jpg
 
@@ -254,7 +257,7 @@ accessible, it was a good counterpoint to our serious, dark blue. The team
 loved the Susy tie-in, and OddBird’s new brand colors were born – er, hatched.
 
 .. _Susy: http://susy.oddbird.net/
-.. _Miriam: http://oddbird.net/birds/
+.. _Miriam: /birds/
 
 .. image:: /static/images/blog/2017/colors/elementcollage-final.jpg
 

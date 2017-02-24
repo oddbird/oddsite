@@ -36,9 +36,7 @@
 {% macro get_og_author(author) -%}
   {% set page = all_pages|filter_pages('bird', 'eq', author)|get_page %}
   {%- if page and page.config.og and page.config.og[0].facebook -%}
-    https://www.facebook.com/{{ page.config.og[0].facebook }}
-  {%- else -%}
-    {{ page.title or author }}
+    <meta property="article:author" content="https://www.facebook.com/{{ page.config.og[0].facebook }}" />
   {%- endif -%}
 {%- endmacro %}
 

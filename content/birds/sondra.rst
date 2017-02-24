@@ -12,7 +12,7 @@ summary: |
   `Sondra Eby`_
   is a brand and interface designer,
   user-tester,
-  author, and musican.
+  author, and musician.
 
   .. _Sondra Eby: /birds/#bird-sondra
 

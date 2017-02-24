@@ -5,6 +5,7 @@ content/styleguide/
 dev-output/
 node_modules/
 jscov/
+jscache/
 *.DS_Store
 *~
 *.pyc

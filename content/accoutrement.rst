@@ -59,11 +59,11 @@ import them all with a single command,
 and access font-stacks on-the-fly,
 with helpers for generated content and accessibility.
 
-.. _Color Module: http://oddbird.net/accoutrement-color/sassdoc/
-.. _Init Module: http://oddbird.net/accoutrement-init/sassdoc/
-.. _Layout Module: http://oddbird.net/accoutrement-layout/sassdoc/
-.. _Scale Module: http://oddbird.net/accoutrement-scale/sassdoc/
-.. _Type Module: http://oddbird.net/accoutrement-type/sassdoc/
+.. _Color Module: /accoutrement-color/sassdoc/
+.. _Init Module: /accoutrement-init/sassdoc/
+.. _Layout Module: /accoutrement-layout/sassdoc/
+.. _Scale Module: /accoutrement-scale/sassdoc/
+.. _Type Module: /accoutrement-type/sassdoc/
 
 .. _WCAG: https://www.w3.org/WAI/intro/wcag
 .. _MathSass: https://github.com/terkel/mathsass
