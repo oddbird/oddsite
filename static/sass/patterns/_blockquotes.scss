@@ -1,21 +1,19 @@
 // Blockquotes
 // ===========
 
-$quote-circle: calc(2.25rem + 3vw);
-$quote-circle-type: calc(7rem + 3vw);
+$quote-circle: calc(2.25rem + 2vw);
+$quote-circle-type: calc(6rem + 2vw);
 
 
 blockquote {
   font-size: calc(1.125rem + 0.5vw);
   font-style: italic;
-  margin-bottom: size('gutter');
-  margin-top: size('gutter');
+  margin-bottom: size('double-gutter');
+  margin-top: size('double-gutter');
   position: relative;
 
   @include above('full-content') {
     @include grid('medium-page');
-    margin-bottom: size('double-gutter');
-    margin-top: size('double-gutter');
   }
 
   @include before('“') {
@@ -27,13 +25,12 @@ blockquote {
     font-style: normal;
     height: $quote-circle;
     line-height: 0.8;
-    margin-left: auto;
-    margin-right: auto;
     position: relative;
     text-align: right;
     width: $quote-circle;
 
     @include below('full-content') {
+      @include center;
       display: block;
     }
 

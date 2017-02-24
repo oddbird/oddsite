@@ -15,18 +15,15 @@
     display: flex;
   }
 
-  @include grid('medium-page');
+  @include grid;
 }
 
 .icon-block {
   margin-top: 1.5rem; // match margin from h2
-  padding-right: size('shim');
   text-align: right;
 
-  @include below('full-content') {
-    @supports not (display: grid) {
-      flex: 0 0 15%;
-    }
+  @supports not (display: grid) {
+    padding-right: size('shim');
   }
 
   @supports (display: grid) {

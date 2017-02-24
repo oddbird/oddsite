@@ -10,8 +10,11 @@
 
   @include above('medium-page') {
     @include center('medium-page');
-    flex-direction: row;
-    justify-content: flex-end;
+
+    @supports not (display: grid) {
+      flex-direction: row;
+      justify-content: flex-end;
+    }
 
     @include grid('medium-page');
   }
