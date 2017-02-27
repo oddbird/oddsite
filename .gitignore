@@ -16,3 +16,4 @@ output/
 .cache/
 node/
 npm-debug.log
+static/js/spammers.txt
