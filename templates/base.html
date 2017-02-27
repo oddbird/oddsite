@@ -76,8 +76,8 @@
   <!-- Page-Specific Head -->
   {% block extrahead %}{% endblock extrahead %}
 
+  <script src="{{ get_asset('spam_referrals_blocker') }}"></script>
   {% if config.google_analytics_id %}
-    <script src="{{ get_asset('spam_referrals_blocker') }}"></script>
     <!-- Google Analytics -->
     <script>
       if(!window.isSpamReferral() &&
