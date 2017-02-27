@@ -977,6 +977,7 @@ contact:
 
 active_modules: [
   denormalize_config,
+  nunjucks_macros,
   tags,
   blog,
   author,

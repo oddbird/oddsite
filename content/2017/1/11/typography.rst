@@ -25,6 +25,10 @@ after:
 How to Choose Engaging & Accessible Typography for Your Website Brand
 =====================================================================
 
+.. callmacro:: blog/macros.j2#byline
+   get_blog_entries_by_bird('kit')[0]
+
+
 How do you choose the best fonts for a brand identity among the thousands of
 options available on the interwebs these days – typography that perfectly
 expresses the mood you or your client want to evoke when users encounter your
