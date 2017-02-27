@@ -6,7 +6,8 @@ window.isSpamReferral = function () {
   if (currentReferral) {
     list.unshift('oddsite.hexxie.com', 'localhost');
     for (const spammer of list) {
-      if (spammer && currentReferral.toLowerCase().indexOf(spammer) !== -1) {
+      if (spammer &&
+          currentReferral.toLowerCase().indexOf(spammer.toLowerCase()) !== -1) {
         return true;
       }
     }
