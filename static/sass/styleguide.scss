@@ -49,3 +49,8 @@ h4 {
   display: inline-block;
   padding: 0 size('shim');
 }
+
+[data-styleguide='text-shadow'] {
+  @include text-shadow;
+  background-color: color('invert');
+}

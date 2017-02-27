@@ -108,10 +108,11 @@
 /// Light shadow made for text above (watercolor) images
 /// @group typography
 /// @link http://www.sassmeister.com/gist/069480556e17107cb8d33a9d5db2f5db
+///   Text Outline vs Text-Shadow
 /// @example njk -
-///   <p data-styleguide="text-shadow">
+///   <h1 class="title" data-styleguide="text-shadow">
 ///     Text Shadow
-///   </p>
+///   </h1>
 @mixin text-shadow {
   text-shadow: -2px -2px 2px color('background');
 }
