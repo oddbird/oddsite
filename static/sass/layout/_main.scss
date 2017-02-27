@@ -4,54 +4,12 @@
 [data-region='main'] {
   padding-top: size('gutter');
   position: relative;
-
-  // Watercolor backgrounds
-  &::before,
-  &::after {
-    background-size: 150vw;
-    display: block;
-    height: 300px;
-    position: absolute;
-    top: negative('gutter');
-    width: 100%;
-    z-index: -1;
-
-    @include above('full-content') {
-      background-size: contain;
-      height: 350px;
-    }
-  }
-
-  @include before('') {
-    background-image: url('../images/blue_pink_wash.png');
-    background-position: -5% 0;
-    background-repeat: no-repeat;
-    opacity: 0.3;
-
-    @include below('full-content') {
-      background-repeat: repeat-x;
-      opacity: 0.2;
-    }
-  }
-
-  @include after('') {
-    background-image: url('../images/multicolor_wash.png');
-    background-position: 105% 0;
-    background-repeat: repeat-x;
-    opacity: 0.5;
-  }
 }
 
 [data-module='rst-body'] {
   section {
     + section {
       margin-top: size('double-gutter');
-    }
-  }
-
-  > p {
-    &:first-child {
-      text-shadow: -1px -1px 1px color('background');
     }
   }
 }

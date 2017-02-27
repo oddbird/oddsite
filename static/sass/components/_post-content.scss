@@ -15,7 +15,7 @@
   padding: 0 size('gutter');
 
   &:first-child {
-    text-shadow: -2px -2px 2px color('background');
+    @include text-shadow;
   }
 }
 
