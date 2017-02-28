@@ -2,16 +2,16 @@ public: yes
 location: projects
 after:
   - include: 'projects/_list.html.j2'
-    title: 'Live Client Projects'
     data: 'clients'
     priority: 'live'
+  - include: 'projects/_list.html.j2'
+    data: 'clients'
+    priority: 'other'
   - include: 'projects/_process.html.j2'
     title: 'The OddBird Process is...'
   - include: 'projects/_services.html.j2'
-  - include: 'projects/_list.html.j2'
-    title: 'Other Client Work'
-    data: 'clients'
-    priority: 'other'
+    title: 'Our Services'
+
 process:
   - title: 'Lean <i>&</i> Agile'
     body: |
@@ -71,6 +71,6 @@ browsers, and user (dis)abilities.
 
 .. |get-started| raw:: html
 
-  <a href="/contact/" class="btn btn-secondary">
+  <a href="/contact/" class="btn">
     Start a conversation about your project
   </a>

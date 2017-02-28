@@ -1,5 +1,8 @@
 <section data-module='process'>
-  <h2>{{ module.title or 'Process' }}</h2>
+
+  {% if module.title %}
+    <h2>{{ module.title }}</h2>
+  {% endif %}
 
   <ol>
     {% for feature in config.process %}

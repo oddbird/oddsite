@@ -3,9 +3,9 @@
 
 
 <section data-module="project-history" {{ utility.attr_if('id', module.id) }}>
-  <h2>
-    {{ module.title or 'Project History'}}
-  </h2>
+  {% if module.title %}
+    <h2>{{ module.title }}</h2>
+  {% endif %}
 
   {% set valid_projects = config[module.data] %}
   {% set projects = valid_projects|selectattr('priority', 'equalto', module.priority) if module.priority else valid_projects %}
