@@ -6,27 +6,32 @@
   #{$link} {
     @include font-family('alt');
     background-image: none; // remove link underline when styling as button...
-    border-color: color('action');
+    border-color: color('action-border');
     border-radius: size('border-radius');
     border-style: solid;
     border-width: 1px;
     color: color('action');
     display: inline-block;
     font-weight: bold;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem size('gutter');
     text-decoration: none;
     text-shadow: none;
-    transition: color 150ms, background-color 150ms;
+    transition: color 250ms, background-color 250ms;
   }
 
   #{$focus} {
     background-color: color('action');
-    border-color: color('action');
     color: color('background');
+
+    &::after {
+      transform: translateX(size('half-shim'));
+    }
   }
 
   @include after(' »') {
+    display: inline-block;
     font-weight: normal;
     padding-left: size('quarter-shim');
+    transition: transform 250ms;
   }
 }
