@@ -89,3 +89,10 @@ $extend-full: 100vw;
     width: $extend-medium;
   }
 }
+
+.extend-full {
+  margin-left: calc((#{$extend-full} - #{$full-content}) / 2 * -1);
+  margin-right: calc((#{$extend-full} - #{$full-content}) / 2 * -1);
+  max-width: $extend-full;
+  width: $extend-full;
+}

@@ -141,18 +141,17 @@ client:
           alt="image alt"
           class="extend-left">
 
-      <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
-      turpis egestas. Vestibulum tortor quamr facilisis. Ut felis. Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacusvel augue laoreet rutrum faucibus dolor auctor.</p>
+      <p>This image has a class of extend-left. Vestibulum tortor quamr facilisis. Ut felis. Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacusvel augue laoreet rutrum faucibus dolor auctor.</p>
 
       <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
       turpis egestas. Vestibulum tortor quamr facilisis. Ut felis. Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacusvel augue laoreet rutrum faucibus dolor auctor. Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
 
       <figure>
-        <img src="http://dummyimage.com/1600x250/777777/ffffff.png"
+        <img src="http://dummyimage.com/1100x250/777777/ffffff.png"
              href="http://google.com"
              class="extend-small">
 
-        <figcaption>This is my caption for my figure.</figcaption>
+        <figcaption>This is an image with the extend-small class</figcaption>
       </figure>
 
       <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
@@ -169,17 +168,17 @@ client:
              href="http://google.com"
              class="extend-large">
 
-        <figcaption>This is my caption for my figure.</figcaption>
+        <figcaption>This is an image with the extend-large class</figcaption>
       </figure>
 
       <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
       turpis egestas. Vestibulum tortor quamr facilisis. Ut felis. Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacusvel augue laoreet rutrum faucibus dolor auctor. Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
 
       <figure>
-        <img class="extend-small" src="http://dummyimage.com/1600x250/777777/ffffff.png"
+        <img class="extend-small" src="http://dummyimage.com/900x250/777777/ffffff.png"
              href="http://google.com">
 
-        <figcaption>This is my caption for my figure.</figcaption>
+        <figcaption>This is an image with the extend-small class</figcaption>
       </figure>
 
 
@@ -198,10 +197,12 @@ client:
           srcset="http://dummyimage.com/200x200/777777/ffffff.png 200w, http://dummyimage.com/300x300/777777/ffffff.png 900w, http://dummyimage.com/500x500/777777/ffffff.png 1100w"
           alt="image alt">
 
-      <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
+      <p>This image has a class of extend-right. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
       turpis egestas. Vestibulum tortor quamr facilisis. Ut felis. Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacusvel augue laoreet rutrum faucibus dolor auctor. Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
       <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
       turpis egestas. Vestibulum tortor quamr facilisis. Ut felis. Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacusvel augue laoreet rutrum faucibus dolor auctor. Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+
+      <h3>Below is a full width image with the .extend-full class</h3>
 
       <img class="extend-full" src="http://dummyimage.com/200x200/777777/ffffff.png"
           sizes="(max-width: 60em) 100vw, 50vw"
