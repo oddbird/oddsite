@@ -89,25 +89,3 @@ $extend-full: 100vw;
     width: $extend-medium;
   }
 }
-
-
-
-// .extend-left {
-//   @include extend-side('left');
-// }
-
-// .extend-right {
-//   @include extend-side('right');
-// }
-
-// .extend-small {
-//   @include extend($extend-small);
-// }
-
-// .extend-large {
-//   @include extend($extend-large);
-// }
-
-// .extend-full {
-//   @include extend($extend-full);
-// }
