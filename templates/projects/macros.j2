@@ -3,7 +3,7 @@
 
 
 {% macro list(project, named_states=[]) %}
-<article class="project">
+<article class="project project-preview">
 
   {{ cover(project.cover_image) }}
 
@@ -113,15 +113,11 @@
 
 {% macro cover(cover_image) %}
 
-  {% set coverimage = project.cover_image[0].src if project.cover_image %}
-  {% set coverimage = coverimage if '://' in coverimage else [project.canonical_url, 'static/images/blog/', coverimage]|join('') %}
+  {% set coverimage = cover_image[0].src if cover_image %}
+  {% set coverimageurl = coverimage if '://' in coverimage else [canonical_url, '../static/images/blog/', coverimage]|join('') %}
 
   {% if coverimage %}
-    {% if '://' in coverimage %}
-      <img src="{{ coverimage }}" class="cover10">
-    {% else %}
-      <img src="/static/images/blog/{{ coverimage }}" class="cover11">
-    {% endif %}
+    <img src="{{ coverimageurl }}" class="project-cover-image">
   {% endif %}
 
 {% endmacro %}
