@@ -336,5 +336,5 @@ unite!
 .. raw:: html
 
     <a href="/2017/1/16/color/" class="btn">
-      How to Choose Brand Colors »
+      How to Choose Brand Colors
     </a>

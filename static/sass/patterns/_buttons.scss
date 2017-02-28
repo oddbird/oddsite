@@ -4,12 +4,15 @@
 .btn {
   &,
   #{$link} {
-    @include contrasted('action');
+    @include font-family('alt');
     background-image: none; // remove link underline when styling as button...
-    border-color: transparent;
+    border-color: color('action');
+    border-radius: size('border-radius');
     border-style: solid;
     border-width: 1px;
+    color: color('action');
     display: inline-block;
+    font-weight: bold;
     padding: 0.5rem 1rem;
     text-decoration: none;
     text-shadow: none;
@@ -17,8 +20,13 @@
   }
 
   #{$focus} {
-    background-color: color('background');
+    background-color: color('action');
     border-color: color('action');
-    color: color('action');
+    color: color('background');
+  }
+
+  @include after(' »') {
+    font-weight: normal;
+    padding-left: size('quarter-shim');
   }
 }

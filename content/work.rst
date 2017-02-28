@@ -71,6 +71,6 @@ browsers, and user (dis)abilities.
 
 .. |get-started| raw:: html
 
-  <a href="/contact/" class="btn">
-    Start a conversation about your project »
+  <a href="/contact/" class="btn btn-secondary">
+    Start a conversation about your project
   </a>

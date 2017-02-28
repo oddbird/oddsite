@@ -91,11 +91,11 @@ for a whole load of amazing and beautiful samples.
 
   <a href="http://slides.com/sdrasner/creativity-programming#/" class="btn">
     <span class="is-hidden">Sarah Drasner</span>
-    Slides »
+    Slides
   </a>
   <a href="https://youtu.be/HVtYasAhsY0" class="btn">
     <span class="is-hidden">Sarah Drasner</span>
-    Video »
+    Video
   </a>
 
 
@@ -132,11 +132,11 @@ but there were a few philisophical points that stood out:
 
   <a href="https://speakerdeck.com/bcjordan/no-bugs-in-sight-continuous-visual-testing-at-code-dot-org-cssconf-2016" class="btn">
     <span class="is-hidden">Brian Jordan</span>
-    Slides »
+    Slides
   </a>
   <a href="https://youtu.be/8nSUIAFpNhE" class="btn">
     <span class="is-hidden">Brian Jordan</span>
-    Video »
+    Video
   </a>
 
 
@@ -174,7 +174,7 @@ and "rubber-band" scrolling.
 
   <a href="https://youtu.be/H6IDoraEpO0" class="btn">
     <span class="is-hidden">Jessica Lord</span>
-    Video »
+    Video
   </a>
 
 
@@ -234,7 +234,7 @@ that have to be solved by the JS processor:
 
   <a href="https://youtu.be/_70Yp8KPXH8" class="btn">
     <span class="is-hidden">Pete Hunt</span>
-    Video »
+    Video
   </a>
 
 
@@ -291,11 +291,11 @@ before we can use it in production.
 
   <a href="http://www.slideshare.net/jen4web/css-grid-true-layout-finally-arrives" class="btn">
     <span class="is-hidden">Jen Kramer</span>
-    Slides »
+    Slides
   </a>
   <a href="https://youtu.be/jl164y-Vb5E" class="btn">
     <span class="is-hidden">Jen Kramer</span>
-    Video »
+    Video
   </a>
 
 
@@ -368,7 +368,7 @@ with other properties.
 
   <a href="https://youtu.be/bEoLCZzWZX8" class="btn">
     <span class="is-hidden">Will Boyd</span>
-    Video »
+    Video
   </a>
 
 
@@ -448,11 +448,11 @@ but provide terrible results on their own.
 
   <a href="http://keithjgrant.com/talks/stop-thinking-in-pixels/" class="btn">
     <span class="is-hidden">Keith J. Grant</span>
-    Slides »
+    Slides
   </a>
   <a href="https://youtu.be/XanhwddQ-PM" class="btn">
     <span class="is-hidden">Keith J. Grant</span>
-    Video »
+    Video
   </a>
 
 
@@ -586,11 +586,11 @@ I highly recommend watching the video.
 
   <a href="http://leaverou.github.io/css-variables" class="btn">
     <span class="is-hidden">Lea Verou</span>
-    Slides »
+    Slides
   </a>
   <a href="https://youtu.be/2an6-WVPuJU" class="btn">
     <span class="is-hidden">Lea Verou</span>
-    Video »
+    Video
   </a>
 
 
@@ -634,11 +634,11 @@ for display.
 
   <a href="http://www.afast.site/2016/09/27/hello-css-conf-2016/" class="btn">
     <span class="is-hidden">Henri Helvetica</span>
-    Slides »
+    Slides
   </a>
   <a href="https://youtu.be/7zd3veCXNgA" class="btn">
     <span class="is-hidden">Henri Helvetica</span>
-    Video »
+    Video
   </a>
 
 
@@ -664,11 +664,11 @@ are online.
 
   <a href="https://oddbooksapp.com/book/sass-map-magic" class="btn">
     <span class="is-hidden">Miriam Suzanne</span>
-    Slides »
+    Slides
   </a>
   <a href="https://youtu.be/MdwtoFt2LOI" class="btn">
     <span class="is-hidden">Miriam Suzanne</span>
-    Video »
+    Video
   </a>
 
 
@@ -691,7 +691,7 @@ recovering from my own talk.
 
   <a href="https://youtu.be/UmP9WcBzZvU" class="btn">
     <span class="is-hidden">Zach Green</span>
-    Video »
+    Video
   </a>
 
 
@@ -721,7 +721,7 @@ this is a great place to start.
 
   <a href="https://youtu.be/5N9RkIs31Ok" class="btn">
     <span class="is-hidden">Emily Hayman</span>
-    Video »
+    Video
   </a>
 
 
@@ -749,11 +749,11 @@ in CSS.
 
   <a href="https://www.dropbox.com/s/8fr5amxfafpwnxq/bauhaus-cssconf.pdf" class="btn">
     <span class="is-hidden">Justin McDowell</span>
-    Slides »
+    Slides
   </a>
   <a href="https://youtu.be/BaQl84nDBNY" class="btn">
     <span class="is-hidden">Justin McDowell</span>
-    Video »
+    Video
   </a>
 
 
@@ -778,11 +778,11 @@ if you are using SVG in any way.
 
   <a href="https://ameliabr.github.io/great-svg-retcon/" class="btn">
     <span class="is-hidden">Amelia Bellamy-Royds</span>
-    Slides »
+    Slides
   </a>
   <a href="https://youtu.be/qnGIw7CK7pQ" class="btn">
     <span class="is-hidden">Amelia Bellamy-Royds</span>
-    Video »
+    Video
   </a>
 
 
@@ -828,9 +828,9 @@ to volunteer.
 
   <a href="https://speakerdeck.com/alishalisha/coding-is-a-privilege" class="btn">
     <span class="is-hidden">Alisha Ramos</span>
-    Slides »
+    Slides
   </a>
   <a href="https://youtu.be/PtKOzKNJF-s" class="btn">
     <span class="is-hidden">Alisha Ramos</span>
-    Video »
+    Video
   </a>

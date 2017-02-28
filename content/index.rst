@@ -37,5 +37,5 @@ to the tools and processes to keep you growing.
 .. |get-started| raw:: html
 
   <a href="/contact/" class="btn">
-    Start a conversation about your project »
+    Start a conversation about your project
   </a>

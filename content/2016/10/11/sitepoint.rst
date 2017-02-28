@@ -61,5 +61,5 @@ but it leaves out some good bits.
 .. |btn-link| raw:: html
 
   <a href="https://www.sitepoint.com/community/t/live-q-a-miriam-suzanne-on-susy-and-the-need-for-toolkits-on-18th-aug-2pm-pst/232664" class="btn">
-    Read the full conversation »
+    Read the full conversation
   </a>

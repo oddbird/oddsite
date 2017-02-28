@@ -3,26 +3,32 @@
 
 
 {% macro list(project, named_states=[]) %}
-<article>
-  <h3>
-    {{ utility.link_if(project.name, project.url) }}
-    {% if project.source %}
-      ({{ utility.link_if('source code', project.source) }})
+<article class="project">
+  <header class="project-list-meta">
+    <h2 class="project-list-title">{{ project.name }}</h2>
+
+    {% if project.tagline %}
+      <h3 class="project-list-tagline">{{ project.tagline }}
+        {% if project.client %}
+          {{ for(project.client, project.years) }}
+        {% else %}
+          {{ who(project.who) }}
+        {% endif %}
+      </h3>
     {% endif %}
-  </h3>
 
-  {% if project.tagline %}
-    <h4>{{ project.tagline }}</h4>
-  {% endif %}
-
-  {% if project.client %}
-    {{ for(project.client, project.years) }}
-  {% else %}
-    {{ who(project.who) }}
-  {% endif %}
+    <div class="project-list-links">
+      {% if project.url %}
+        {{ utility.link_if('case study', project.url, class='btn-secondary') }}
+      {% endif %}
+      {% if project.source %}
+        {{ utility.link_if('source code', project.source, class='btn-secondary') }}
+      {% endif %}
+    </div>
+  </header>
 
   {% if project.description or project.status %}
-    <p>
+    <p class="project-summary">
       {{ project.description }}
 
       {% if project.status %}
@@ -65,16 +71,17 @@
 
 
 {% macro for(client, years) %}
-  <div>
+  <span class="for-client">
     <i>for</i>
     {{ utility.link_if(
       client.name,
       client.url
-    ) }}
+    ) }}</span>
+  <span class="for-years">
     {% if years %}
       [{{ years }}]
     {% endif %}
-  </div>
+  </span>
 {% endmacro %}
 
 
