@@ -43,6 +43,10 @@ clients:
 
   - name: 'QuarqNet'
     url: 'http://quarqnet.com'
+    image:
+      - src: 'static/images/2017/server-client/spa2.jpg'
+    cover_image:
+      - src: '2017/tips-tools/love-tools.jpg'
     years: '2015–2016'
     feature: true
     priority: 'live'
@@ -61,6 +65,10 @@ clients:
 
   - name: 'CoachHub'
     url: 'http://www.orcasinc.com/products/coachhub/'
+    image:
+      - src: '2017/server-client/spa2.jpg'
+    cover_image:
+      - src: '2017/tips-tools/love-tools.jpg'
     years: '2014–2016'
     feature: true
     priority: 'live'
