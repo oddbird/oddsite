@@ -1,5 +1,13 @@
 import spammers from 'raw-loader!./spammers.txt';
 
+const devHosts = [
+  'oddsite.hexxie.com:3000',
+  'localhost:3000',
+  '127.0.0.1:3000'
+];
+
+window.isDevelopment = () => devHosts.indexOf(window.location.host) !== -1;
+
 window.isSpamReferral = function () {
   const list = spammers.split('\n');
   const currentReferral = document.referrer;
