@@ -111,43 +111,17 @@
 
 
 
-{# {% set cover_image = config.clients.cover_image[0].src and config.clients.cover_image %}
- #}
-{#   {% set cover_image = project.cover_image[0].src if project.cover_image %} #}
-{#   {% set cover_image = clients.cover_image[0].src if cover_image %} #}
-{#   {% set cover_image = clients.cover_image[0].src if clients.cover_image %} #}
-{#   {% set cover_image = config.cover_image[0].src %}
- #}
-{% set myimage = project.cover_image[0].src if project.cover_image else 'oddsite.jpg' %}
-{% set myimage = myimage if '://' in myimage else [project.canonical_url, 'static/images/blog/', myimage]|join('') %}
 {% macro cover(cover_image) %}
-  <img src="{{ myimage }}" />
-{#    {% set cover_image = cover_image[0].src %}
- #}
-{# {% set cover_image = cover_image[0].src %} #}
 
-{#
-    [cover_image.canonical_url, 'static/images/blog/', image]|join('') %}
- #}
-{#   {% set cover_image = cover_image[0].src %} #}
-{# {% set cover_image = config.cover_image[0].src if config.cover_image %}
- #}
+  {% set coverimage = project.cover_image[0].src if project.cover_image %}
+  {% set coverimage = coverimage if '://' in coverimage else [project.canonical_url, 'static/images/blog/', coverimage]|join('') %}
 
-{#  {% set cover_image = project.cover_image[0].src if project.cover_image %}
- #}
-
- {% if cover_image %}
-    {% if '://' in cover_image %}
-      <img src="{{ cover_image[0].src }}" class="cover1">
+  {% if coverimage %}
+    {% if '://' in coverimage %}
+      <img src="{{ coverimage }}" class="cover10">
     {% else %}
-      <img src="/static/images/blog/{{ cover_image[0].src }}" class="cover2">
+      <img src="/static/images/blog/{{ coverimage }}" class="cover11">
     {% endif %}
   {% endif %}
-
-{#
-  {% if cover_image %}
-      <img src="{{ cover_image }}" class="cover">
-      <img src="/static/images/blog/{{ cover_image }}" class="cover">
-  {% endif %} #}
 
 {% endmacro %}
