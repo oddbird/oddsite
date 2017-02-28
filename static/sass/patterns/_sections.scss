@@ -8,6 +8,7 @@
   padding: 0 size('gutter');
 }
 
+// Should we think of another way to allow max-width?
 [data-location='work'] {
   [data-module='rst-body'] {
     max-width: none;
