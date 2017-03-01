@@ -25,6 +25,13 @@ $extend-medium: 80vw;
 $extend-large: 90vw;
 $extend-full: 100vw;
 
+@mixin extend-base {
+  height: auto;
+  max-width: 100vw;
+  width: 100%;
+}
+
+
 // Extend thing outside its container on one side only
 // viewport, minus the main content width, divided by 2, then make negative
 /// @link http://codepen.io/mirisuzanne/pen/ded4ae1f55f9b24b2aa0ea4aaac71e47?editors=0100
@@ -59,6 +66,8 @@ $extend-full: 100vw;
 
 // Extend thing past the width of its container on both sides
 .extend-small {
+  @include extend-base;
+
   @include above('medium-page') {
     margin-left: calc((#{$extend-medium} - #{$full-content}) / 2 * -1);
     margin-right: calc((#{$extend-medium} - #{$full-content}) / 2 * -1);
@@ -75,6 +84,8 @@ $extend-full: 100vw;
 }
 
 .extend-large {
+  @include extend-base;
+
   @include above('medium-page') {
     margin-left: calc((#{$extend-large} - #{$full-content}) / 2 * -1);
     margin-right: calc((#{$extend-large} - #{$full-content}) / 2 * -1);
@@ -91,8 +102,14 @@ $extend-full: 100vw;
 }
 
 .extend-full {
-  margin-left: calc((#{$extend-full} - #{$full-content}) / 2 * -1);
-  margin-right: calc((#{$extend-full} - #{$full-content}) / 2 * -1);
-  max-width: $extend-full;
-  width: $extend-full;
+  @include extend-base;
+
+  @include above('medium-page') {
+    margin-left: calc((#{$extend-full} - #{$full-content}) / 2 * -1);
+    margin-right: calc((#{$extend-full} - #{$full-content}) / 2 * -1);
+    max-width: $extend-full;
+    width: $extend-full;
+  }
 }
+
+

@@ -33,11 +33,13 @@
 
   section {
     @supports (display: grid) {
-      grid-column: 1 / -1;
+      @include below('medium-page') {
+        grid-column: 1 / -1;
+      }
 
       @include above('medium-page') {
         // grid-column: [col3-start] / [col3-end];
-        grid-column: 3 / span 1;
+        grid-column: 3;
       }
     }
   }

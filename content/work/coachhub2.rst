@@ -136,8 +136,7 @@ client:
       <h3>Header Level 3</h3>
 
       <img src="http://dummyimage.com/200x200/777777/ffffff.png"
-          sizes="(max-width: 60em) 100vw, 50vw"
-          srcset="http://dummyimage.com/100x100/777777/ffffff.png 200w, http://dummyimage.com/200x200/777777/ffffff.png 640w"
+          srcset="http://dummyimage.com/200x200/777777/ffffff.png 200w, http://dummyimage.com/400x400/777777/ffffff.png 720w"
           alt="image alt"
           class="extend-left">
 
@@ -146,11 +145,8 @@ client:
       <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
       turpis egestas. Vestibulum tortor quamr facilisis. Ut felis. Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacusvel augue laoreet rutrum faucibus dolor auctor. Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
 
-      <figure>
-        <img src="http://dummyimage.com/1100x250/777777/ffffff.png"
-             href="http://google.com"
-             class="extend-small">
-
+      <figure class="extend-small">
+        <img src="https://dummyimage.com/1000x9:6">
         <figcaption>This is an image with the extend-small class</figcaption>
       </figure>
 
@@ -163,10 +159,9 @@ client:
       <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
       turpis egestas. Vestibulum tortor quamr facilisis. Ut felis. Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacusvel augue laoreet rutrum faucibus dolor auctor. Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
 
-      <figure>
+      <figure class="extend-large">
         <img src="http://dummyimage.com/1600x250/777777/ffffff.png"
-             href="http://google.com"
-             class="extend-large">
+             href="http://google.com">
 
         <figcaption>This is an image with the extend-large class</figcaption>
       </figure>
@@ -174,8 +169,8 @@ client:
       <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
       turpis egestas. Vestibulum tortor quamr facilisis. Ut felis. Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacusvel augue laoreet rutrum faucibus dolor auctor. Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
 
-      <figure>
-        <img class="extend-small" src="http://dummyimage.com/900x250/777777/ffffff.png"
+      <figure class="extend-small">
+        <img src="http://dummyimage.com/900x250/777777/ffffff.png"
              href="http://google.com">
 
         <figcaption>This is an image with the extend-small class</figcaption>
