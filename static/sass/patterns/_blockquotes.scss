@@ -1,19 +1,19 @@
 // Blockquotes
 // ===========
 
-$quote-circle: calc(2.25rem + 2vw);
-$quote-circle-type: calc(6rem + 2vw);
+$quote-circle: calc(1.5rem + 2vw);
+$quote-circle-type: calc(5rem + 2vw);
 
 
 blockquote {
+  @include center('medium-page');
   font-size: calc(1.125rem + 0.5vw);
   font-style: italic;
   margin-bottom: size('double-gutter');
   margin-top: size('double-gutter');
   position: relative;
 
-  @include above('full-content') {
-    @include center('medium-page');
+  @include above('medium-page') {
     @include grid;
   }
 
@@ -30,12 +30,12 @@ blockquote {
     text-align: right;
     width: $quote-circle;
 
-    @include below('full-content') {
+    @include below('medium-page') {
       @include center;
       display: block;
     }
 
-    @include above('full-content') {
+    @include above('medium-page') {
       height: $quote-circle;
       margin-right: size('shim');
       width: $quote-circle;
@@ -46,15 +46,16 @@ blockquote {
       }
 
       @supports (display: grid) {
-        // grid-column: [col1-start] / [col1-end];
-        grid-column: 1;
+        grid-column: [col1-start] / span 1;
       }
     }
   }
 
-  @include above('full-content') {
+  @include above('medium-page') {
     footer,
     p {
+      margin-top: 0;
+
       @supports not (display: grid) {
         margin-left: auto;
         margin-right: 0;
@@ -62,8 +63,7 @@ blockquote {
       }
 
       @supports (display: grid) {
-        // grid-column: [col2-start] / -1;
-        grid-column: 2 / -1;
+        grid-column: [col2-start] / -1;
       }
     }
   }
