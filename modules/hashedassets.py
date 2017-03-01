@@ -37,4 +37,5 @@ def setup(builder):
     with open(asset_map_path) as f:
         builder.jinja_env.globals['hashedassets'] = json.loads(f.read())
     builder.jinja_env.globals['minify'] = True
-    monkeypatch_context()
+    if builder.config.get('mode') == 'prod':
+        monkeypatch_context()
