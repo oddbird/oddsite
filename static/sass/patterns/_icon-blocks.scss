@@ -3,9 +3,20 @@
 
 .icon-blocks-container {
   @include center('medium-page');
+  @include grid;
 
   h2 {
-    @include center('full-content');
+    @supports not (display: grid) {
+      @include center('full-content');
+    }
+
+    @supports (display: grid) {
+      grid-column: [col1-start] / -1;
+
+      @include above('medium-page') {
+        grid-column: [col3-start] / span 1;
+      }
+    }
   }
 }
 
@@ -15,23 +26,26 @@
     display: flex;
   }
 
+  @supports (display: grid) {
+    grid-column: [col1-start] / -1;
+  }
+  
   @include grid;
 }
 
 .icon-block {
   margin-top: 1.5rem; // match margin from h2
-  text-align: right;
 
   @supports not (display: grid) {
     padding-right: size('shim');
   }
 
   @supports (display: grid) {
-    grid-column: 1;
-    // grid-column: [col1-start];
-
-    @include above('full-content') {
-      grid-column: 1 / span 2;
+    grid-column: [col1-start] / span 1;
+    
+    @include above('medium-page') {
+      grid-column: [col1-start] / span 2;
+      text-align: right;
     }
   }
 
@@ -44,14 +58,10 @@
 
 .icon-block-text {
   @supports (display: grid) {
-    @include below('full-content') {
-      // grid-column: [col3-start];
-      grid-column: 2 / -1;
-      padding-left: size('shim');
-    }
+    grid-column: [col2-start] / -1;
 
-    @include above('full-content') {
-      grid-column: 3 / span 1;
+    @include above('medium-page') {
+      grid-column: [col3-start] / span 1;
     }
   }
 }
