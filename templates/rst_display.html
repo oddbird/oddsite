@@ -26,6 +26,7 @@
 {% endblock %}
 
 {% block body %}
+
   {%- if not config.hide_title %}
     {{ rst.html_title }}
   {%- endif %}
@@ -51,7 +52,7 @@
   {%- endfor -%}
 
   {% if rst.fragment %}
-    <div data-module="rst-body">
+    <div data-module="rst-body" {% if config.grid_template %}class="grid-template"{% endif %}>
       {{ rst.fragment }}
     </div>
   {% endif %}

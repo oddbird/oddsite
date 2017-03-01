@@ -4,14 +4,10 @@
 
 [data-module] {
   margin: size('gutter') auto size('spacer');
-  max-width: size('full-content');
   padding: 0 size('gutter');
-}
 
-// Should we think of another way to allow max-width?
-[data-location='work'] {
-  [data-module='rst-body'] {
-    max-width: none;
+  &:not(.grid-template) {
+    max-width: size('full-content');
   }
 }
 

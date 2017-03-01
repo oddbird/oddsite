@@ -1,6 +1,7 @@
 public: yes
 name: 'CoachHub'
 location: work
+grid_template: true
 url: 'http://www.orcasinc.com/products/coachhub/'
 years: '2014–2016'
 feature: true
