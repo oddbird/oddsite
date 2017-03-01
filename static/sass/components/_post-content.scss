@@ -23,23 +23,15 @@
 }
 
 .content-block {
-  @supports not (display: grid) {
-    @include above('full-content') {
-      @include center('full-content');
-    }
-  }
-
+  @include center('medium-page');
   @include grid;
 
   section {
     @supports (display: grid) {
-      @include below('medium-page') {
-        grid-column: 1 / -1;
-      }
+      grid-column: [col1-start] / -1;
 
       @include above('medium-page') {
-        // grid-column: [col3-start] / [col3-end];
-        grid-column: 3;
+        grid-column: [col3-start] / span 1;
       }
     }
   }
