@@ -33,6 +33,12 @@
 {% endmacro %}
 
 
+{% macro get_bird_name(name) -%}
+  {%- set page = all_pages|filter_pages('bird', 'eq', name)|get_page -%}
+  {{ page.title or name }}
+{%- endmacro %}
+
+
 {% macro get_og_author(author) -%}
   {% set page = all_pages|filter_pages('bird', 'eq', author)|get_page %}
   {%- if page and page.config.og and page.config.og[0].facebook -%}

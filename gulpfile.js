@@ -1,6 +1,7 @@
 const browserSync = require('browser-sync').create();
 const chalk = require('chalk');
 const del = require('del');
+const download = require('gulp-download');
 const eslint = require('gulp-eslint');
 const fs = require('fs-extra');
 const gulp = require('gulp');
@@ -245,6 +246,13 @@ gulp.task('prod-serve', (cb) => {
   browserSync.init(getServeOpts(paths.PROD_DIST_DIR), cb);
 });
 
+gulp.task('update-spammers', () => {
+  const url = 'https://raw.githubusercontent.com/piwik/' +
+    'referrer-spam-blacklist/master/spammers.txt';
+  return download(url)
+    .pipe(gulp.dest(paths.SRC_JS_DIR));
+});
+
 const webpackOnBuild = (done) => (err, stats) => {
   if (err) {
     gutil.log(chalk.red(err.stack || err));
@@ -270,7 +278,11 @@ gulp.task('webpack', [ 'sprites', 'dev-clean' ], (cb) => {
   webpack(webpackConfig).run(webpackOnBuild(cb));
 });
 
-gulp.task('webpack-prod', [ 'sprites', 'prod-clean' ], (cb) => {
+gulp.task('webpack-prod', [
+  'sprites',
+  'prod-clean',
+  'update-spammers'
+], (cb) => {
   const webpackProdConfig = require('./webpack.prod.config.js');
   webpack(webpackProdConfig).run(webpackOnBuild(cb));
 });

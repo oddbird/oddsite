@@ -7,6 +7,7 @@ after:
   - include: 'blog/_tag-module.html.j2'
     title: 'OddSite Re-design Timeline'
     tag: 'Open Design'
+    reverse: true
     id: 'open-design-articles'
 summary: |
   With the release of kanban-style
