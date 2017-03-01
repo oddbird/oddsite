@@ -26,6 +26,14 @@
 {% endblock %}
 
 {% block body %}
+
+  {# background image #}
+  {{ blog.header_image_url(ctx) }}
+
+  {# foreground image #}
+  {{ blog.header_image(ctx) }}
+
+  {# TODO: How do I add a class to this title? #}
   {%- if not config.hide_title %}
     {{ rst.html_title }}
   {%- endif %}
@@ -41,8 +49,6 @@
       {{ blog.tags(ctx.tags) }}
     </div>
   {% endif %}
-
-  {{ blog.header_image(ctx) }}
 
   {{ blog.intro(ctx) }}
 

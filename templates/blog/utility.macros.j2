@@ -41,3 +41,18 @@
     {% endif %}
   {% endif %}
 {% endmacro %}
+
+
+{% macro header_image_url(post) %}
+  {% set image = post.config.image[0].src if post.config.image else none %}
+
+  {% if image %}
+    {% if '://' in image %}
+      <div class="featured-image" style="background-image: url({{ image }})">
+      </div>
+    {% else %}
+      <div class="featured-image" style="background-image: url(/static/images/blog/{{ image }})">
+      </div>
+    {% endif %}
+  {% endif %}
+{% endmacro %}

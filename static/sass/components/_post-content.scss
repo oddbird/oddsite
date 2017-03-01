@@ -10,9 +10,13 @@
   @include font-family('alt');
   font-size: calc(1.5rem + 1.75vw);
   line-height: 1.25;
-  margin: size('gutter') auto;
+  margin: size('spacer') auto size('gutter') ;
   max-width: size('full-content');
   padding: 0 size('gutter');
+
+  .hero + & {
+    margin-top: size('gutter');
+  }
 }
 
 .intro {
