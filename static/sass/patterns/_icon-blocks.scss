@@ -38,14 +38,18 @@
 
   @supports not (display: grid) {
     padding-right: size('shim');
+
+    @include below('medium-page') {
+      min-width: 15vw;
+    }
   }
 
   @supports (display: grid) {
     grid-column: col1-start;
+    text-align: right;
     
     @include above('medium-page') {
       grid-column: col1-start / span 2;
-      text-align: right;
     }
   }
 
