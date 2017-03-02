@@ -143,7 +143,7 @@ gulp.task('watch', [ 'jstest-watch', 'webpack-watch' ], () => {
   // run sass tests on changes
   gulp.watch(paths.SASS, ['sasstest']);
 
-  // run webpack to compile styleguide assets
+  // run webpack to compile svg icons and styleguide assets
   gulp.watch([
     `${paths.ICONS_DIR}**/*.svg`,
     `${paths.SRC_TEMPLATES_DIR}_icon_template.lodash`,
@@ -152,15 +152,12 @@ gulp.task('watch', [ 'jstest-watch', 'webpack-watch' ], () => {
 
   // compile rstblog assets
   gulp.watch([
-    `${paths.SRC_TEMPLATES_DIR}**/*`,
-    'content/**/*',
-    '!content/styleguide/**/*',
-    '!content/static/assets/**/*',
-    '!content/static/assets.json',
-    `!${paths.SRC_TEMPLATES_DIR}_icons.svg`,
-    `!${paths.ICONS_DIR}**/*.svg`,
-    `!${paths.SRC_TEMPLATES_DIR}_icon_template.lodash`
-  ], ['dev-build']);
+    `${paths.SRC_TEMPLATES_DIR}**/*.j2`,
+    `${paths.SRC_TEMPLATES_DIR}**/*.html`,
+    'content/**/*.rst',
+    'content/**/*.yml',
+    'content/static/images/**/*'
+  ], ['dev-rebuild']);
 });
 
 gulp.task('eslint', () => eslintTask(paths.ALL_JS, true));
@@ -287,13 +284,19 @@ gulp.task('webpack-prod', [
   webpack(webpackProdConfig).run(webpackOnBuild(cb));
 });
 
-gulp.task('webpack-watch', ['sprites'], () => {
+gulp.task('webpack-watch', [ 'sprites', 'dev-clean-html' ], () => {
   const webpackConfig = require('./webpack.config.js');
   webpack(webpackConfig).watch(300, webpackOnBuild());
 });
 
 gulp.task('dev-clean', (cb) => {
   fs.emptyDir(paths.DIST_DIR, cb);
+});
+
+gulp.task('dev-clean-html', (cb) => {
+  del([ `${paths.DIST_DIR}**/*.html`, `!${paths.DIST_DIR}` ]).then(() => {
+    cb();
+  });
 });
 
 gulp.task('prod-clean', (cb) => {
@@ -311,5 +314,9 @@ gulp.task('dev-styleguide-clean', (cb) => {
 // changed files.
 // See https://github.com/oddbird/oddsite/issues/55
 gulp.task('dev-build', ['dev-styleguide-clean'], (cb) => {
+  spawnTask('python', [ 'run.py', 'dev' ], cb);
+});
+
+gulp.task('dev-rebuild', ['dev-clean-html'], (cb) => {
   spawnTask('python', [ 'run.py', 'dev' ], cb);
 });

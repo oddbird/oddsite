@@ -38,7 +38,6 @@ $text-sizes: (
 /// @link http://oddbird.net/accoutrement-scale/sassdoc/
 ///   Accoutrement Scale
 $spacing-sizes: (
-  'root': 18px,
   'rhythm': 'root' ('text-ratio': 1),
   'gutter': 'rhythm',
   'double-gutter': 'gutter' ('multiple': 2),
