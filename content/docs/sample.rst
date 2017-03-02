@@ -237,10 +237,9 @@ caption.
 
    This is my caption for my figure.
 
-Unfortunately, ReStructured Text doesn't wrap them in a <figure> and <figcaption>
-element. Instead they get a <div> with a class of figure. Alignment options can
-be found in the `content guidelines`_.
+Unfortunately, ReStructured Text doesn't wrap them in a <figure> and
+<figcaption> element. Instead they get a <div> with a class of figure.
+Alignment options can be found in the `content guidelines`_.
 
 .. _content guidelines: /styleguide
-
 
