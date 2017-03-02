@@ -8,7 +8,7 @@
   display: flex;
   flex-direction: column;
 
-  @include above('full-content') {
+  @include above('medium-page') {
     @include center('medium-page');
 
     @supports not (display: grid) {
@@ -23,7 +23,7 @@
 // intro inner wrapper text block and task info
 // using this as a container to use flexbox inside and grid outside
 .intro {
-  @include above('full-content') {
+  @include above('medium-page') {
     display: flex;
 
     @supports not (display: grid) {
@@ -31,15 +31,14 @@
     }
 
     @supports (display: grid) {
-      // grid-column: [col2-start] / [col3-end];
-      grid-column: 2 / -1;
+      grid-column: col2-start / -1;
     }
   }
 
   p {
     font-style: italic;
 
-    @include above('full-content') {
+    @include above('medium-page') {
       flex: 1 0 0;
       padding-right: size('gutter');
     }
@@ -48,7 +47,7 @@
 
 // intro side panel
 .project-tasks {
-  @include above('full-content') {
+  @include above('medium-page') {
     border-left: 1px solid color('icon-block');
     flex: 0 1 25%;
     padding: size('shim') size('gutter');

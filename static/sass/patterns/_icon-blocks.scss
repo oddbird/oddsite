@@ -11,26 +11,26 @@
     }
 
     @supports (display: grid) {
-      grid-column: [col1-start] / -1;
+      grid-column: col1-start / -1;
 
       @include above('medium-page') {
-        grid-column: [col3-start] / span 1;
+        grid-column: col3-start / span 1;
       }
     }
   }
 }
 
 .icon-blocks {
+  @include grid;
+
   @supports not (display: grid) {
     @include center('full-content');
     display: flex;
   }
 
   @supports (display: grid) {
-    grid-column: [col1-start] / -1;
+    grid-column: col1-start / -1;
   }
-  
-  @include grid;
 }
 
 .icon-block {
@@ -41,10 +41,10 @@
   }
 
   @supports (display: grid) {
-    grid-column: [col1-start] / span 1;
+    grid-column: col1-start;
     
     @include above('medium-page') {
-      grid-column: [col1-start] / span 2;
+      grid-column: col1-start / span 2;
       text-align: right;
     }
   }
@@ -58,10 +58,10 @@
 
 .icon-block-text {
   @supports (display: grid) {
-    grid-column: [col2-start] / -1;
+    grid-column: col2-start / -1;
 
     @include above('medium-page') {
-      grid-column: [col3-start] / span 1;
+      grid-column: col3-start / span 1;
     }
   }
 }
