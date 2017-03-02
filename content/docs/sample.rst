@@ -97,32 +97,20 @@ Ordered Lists
 Blockquotes and Pullquotes
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+    This is a blockquote. It has an external source below. Vestibulum tortor
+    quam, feugiat vitae, ultricies eget, tempor sit amet, ante.
 
-    This is a blockquote with citation. Vestibulum tortor quam, feugiat vitae,
-    ultricies eget, tempor sit amet, ante.
-
-    --Name of cited source here preceeded by 2 or 3 ``-`` characters
-
-
-.. epigraph::
-
-    Gives the blockquote a class of ``epigraph``.
-
-    --Name of cited source here preceeded by 2 or 3 ``-`` characters
+    --- Name of cited source here preceeded by 2 or 3 ``-`` characters
 
 
-.. highlights::
+.. wrap:: div
+  :class: pullquote
 
-    Highlights summarize the main points of a document or section, often
-    consisting of a list. Gives the blockquote a class of ``highlights``.
-
-
-.. pull-quote::
+  .. wrap:: p
 
     A pull-quote is a small selection of text ‘pulled out and quoted’,
     typically in a larger typeface. Pull-quotes are used to attract attention,
-    especially in long articles. Gives the blockquote a class of
-    ``pull-quote``.
+    especially in long articles.
 
 
 
@@ -182,6 +170,61 @@ The following example is an image with a class of size-full:
    :class: size-full
    :alt: alternate text here
 
+
+The following example is an image with a class of extend-small:
+
+.. image:: /static/images/blog/2017/tips-tools/love-tools.jpg
+   :class: extend-small
+   :alt: alternate text here
+
+Pellentesque habitant morbi tristique senectus et netus et
+malesuada fames ac turpis egestas. Vestibulum tortor quam. 
+Pellentesque habitant morbi tristique senectus et netus et
+malesuada fames ac turpis egestas. Vestibulum tortor quam.
+
+The following example is an image with a class of extend-large:
+
+.. image:: /static/images/blog/2017/tips-tools/love-tools.jpg
+   :class: extend-large
+   :alt: alternate text here
+
+Pellentesque habitant morbi tristique senectus et netus et
+malesuada fames ac turpis egestas. Vestibulum tortor quam. 
+Pellentesque habitant morbi tristique senectus et netus et
+malesuada fames ac turpis egestas. Vestibulum tortor quam.
+
+The following example is an image with a class of extend-full:
+
+.. image:: /static/images/blog/2017/tips-tools/love-tools.jpg
+   :class: extend-full
+   :alt: alternate text here
+
+Pellentesque habitant morbi tristique senectus et netus et
+malesuada fames ac turpis egestas. Vestibulum tortor quam. 
+Pellentesque habitant morbi tristique senectus et netus et
+malesuada fames ac turpis egestas. Vestibulum tortor quam.
+
+The following example is an image with a class of extend-left:
+
+.. image:: /static/images/blog/2017/tips-tools/love-tools.jpg
+   :class: extend-left size-half
+   :alt: alternate text here
+
+Pellentesque habitant morbi tristique senectus et netus et
+malesuada fames ac turpis egestas. Vestibulum tortor quam. 
+Pellentesque habitant morbi tristique senectus et netus et
+malesuada fames ac turpis egestas. Vestibulum tortor quam.
+
+The following example is an image with a class of extend-right:
+
+.. image:: /static/images/blog/2017/tips-tools/love-tools.jpg
+   :class: extend-right size-half
+   :alt: alternate text here
+
+Pellentesque habitant morbi tristique senectus et netus et
+malesuada fames ac turpis egestas. Vestibulum tortor quam. 
+Pellentesque habitant morbi tristique senectus et netus et
+malesuada fames ac turpis egestas. Vestibulum tortor quam.
 
 Here is an example of a figure, which is content (usually an image) with a
 caption.
