@@ -49,3 +49,11 @@ h4 {
   display: inline-block;
   padding: 0 size('shim');
 }
+
+
+[data-sassdoc-table='parameter'] {
+  p {
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+}
