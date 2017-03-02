@@ -4,32 +4,3 @@
 :root {
   @include contrasted('background');
 }
-
-
-$breakpoints: (
-  'small-page': 30rem,
-  'medium-page': 55rem,
-  'large-page': 75rem,
-);
-
-
-
-@each $breakpoint, $screen-size in $breakpoints {
-  @media screen and (min-width: '#{$screen-size}') {
-    body {
-      &::before {
-        content: '@include wider-than(#{$breakpoint}) // min-width: #{$screen-size}';
-      }
-    }
-  }
-}
-
-body {
-  &::before {
-    background-color: color('brand-pink');
-    color: color('background');
-    display: block;
-    position: fixed;
-    top: 0;
-  }
-}
