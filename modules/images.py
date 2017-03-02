@@ -8,7 +8,6 @@ class ImageProgram(CopyProgram):
         img = Image.open(self.context.full_source_filename)
         img.save(
             self.context.full_destination_filename,
-            quality=90,
             optimize=True,
             progressive=True,
         )
