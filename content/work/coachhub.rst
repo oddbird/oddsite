@@ -1,6 +1,7 @@
 public: yes
 name: 'CoachHub'
 location: work
+grid_template: true
 url: 'http://www.orcasinc.com/products/coachhub/'
 years: '2014–2016'
 feature: true
@@ -33,201 +34,192 @@ client:
 
 
 
-CoachHub *Integrated Health Coaching for ORCAS*
-===============================================
-
-.. container:: intro-block
-
-  .. class:: intro
-
-    **Pellentesque habitant morbi tristique senectus et netus et malesuada** `ORCAS`_ -- ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. in turpis pulvinar facilisis. Ut felis.
-
-    .. _ORCAS: http://orcas.com
-
-  .. container:: aside
-
-    .. raw:: html
-
-      <h3>Our Responsibilities</h3>
-
-    - List item
-    - List item
-    - List item
-    - List item
-    - List item
-    - item List item
-    - List item
-    - List item
-
-..
-
-
-
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend.
-
-  -- My Name
-
-
 .. raw:: html
 
-  <section if="planning-and-discovery-phase">
+  <header class="project-meta">
+    <h1 class="project-title">
+      CoachHub <em>Integrated Health Coaching for ORCAS</em>
+    </h1>
 
-  <h2 class="default-block">Planning and Discovery Phase</h2>
+    <div class="project-links">
+      <a href="#" class="btn-large">Button</a>
+      <a href="#" class="btn-large">Button</a>
+    </div>
+  </header>
 
-.. container:: icon-blocks
+  <section class="intro-block">
+    <div class="intro">
+      <p><strong>Pellentesque habitant morbi tristique senectus et netus et malesuada</strong> <a href="http://orcas.com">ORCAS</a> -- ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. in turpis pulvinar facilisis. Ut felis. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. in turpis pulvinar facilisis. Ut felis. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. in turpis pulvinar facilisis. Ut felis.</p>
 
-  .. class:: icon-block
+      <div class="project-tasks">
+        <h3 class="list-title">Our Tasks</h3>
 
-    .. raw:: html
-
-      <svg data-icon="stacy">
-        <use xlink:href="#icon-stacy"></use>
-      </svg>
-
-
-  .. container:: icon-block-text
-
-    .. raw:: html
-
-      <h3>User Stories</h3>
-
-    If you'd like to learn how to create parallax scrolling for your website, Paul Lewis' guide to performant parallaxing is the perfect place to start.
-
-
-
-.. container:: icon-blocks
-
-  .. container:: icon-block
-
-    .. raw:: html
-
-      <svg data-icon="stacy">
-        <use xlink:href="#icon-stacy"></use>
-      </svg>
-
-
-  .. container:: icon-block-text
-
-    .. raw:: html
-
-      <h3>User Stories</h3>
-
-    If you'd like to learn how to create parallax scrolling for your website, Paul Lewis' guide to performant parallaxing is the perfect place to start.
-
-
-
-.. container:: icon-blocks
-
-  .. container:: icon-block
-
-    .. raw:: html
-
-      <svg data-icon="stacy">
-        <use xlink:href="#icon-stacy"></use>
-      </svg>
-
-
-  .. container:: icon-block-text
-
-    .. raw:: html
-
-      <h3>User Stories</h3>
-
-    If you'd like to learn how to create parallax scrolling for your website, Paul Lewis' guide to performant parallaxing is the perfect place to start.
-
-
-
-.. container:: icon-blocks
-
-  .. container:: icon-block
-
-    .. raw:: html
-
-      <svg data-icon="stacy">
-        <use xlink:href="#icon-stacy"></use>
-      </svg>
-
-
-  .. container:: icon-block-text
-
-    .. raw:: html
-
-      <h3>User Stories</h3>
-
-    If you'd like to learn how to create parallax scrolling for your website, Paul Lewis' guide to performant parallaxing is the perfect place to start.
-
-.. raw:: html
-
+        <ul class="simple">
+          <li>List item</li>
+          <li>List item</li>
+          <li>List item</li>
+          <li>Item List item</li>
+          <li>List item</li>
+        </ul>
+      </div>
+    </div>
   </section>
 
 
+  <blockquote>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend.</p>
 
-Design and Development Phase
-----------------------------
-
-Header Level 3
-~~~~~~~~~~~~~~
-
-.. image:: http://dummyimage.com/200x200/777777/ffffff.png
-   :align: left
-   :alt: alternate text here
-   :class: wayleft
-
-.. container:: default-block
-
-  Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
-  turpis egestas. Vestibulum tortor quamr facilisis. Ut felis. Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacusvel augue laoreet rutrum faucibus dolor auctor. Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
-
-  Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
-  turpis egestas. Vestibulum tortor quamr facilisis. Ut felis. Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacusvel augue laoreet rutrum faucibus dolor auctor. Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
-
-  Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
-  turpis egestas. Vestibulum tortor quamr facilisis. Ut felis. Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacusvel augue laoreet rutrum faucibus dolor auctor. Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
+    <footer>
+      — <cite><a href="http://google.com">Google</a></cite>
+    </footer>
+  </blockquote>
 
 
-Brand Identity
-~~~~~~~~~~~~~~
+  <section id="planning-and-discovery-phase" class="icon-blocks-container">
+    <h2>Planning and Discovery Phase</h2>
 
-.. container:: default-block
+    <div class="icon-blocks">
+      <div class="icon-block">
+        <svg data-icon="stacy">
+          <use xlink:href="#icon-stacy"></use>
+        </svg>
+      </div>
 
-  Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
+      <div class="icon-block-text">
+        <h3>User Stories</h3>
+        <p>If you'd like to learn how to create parallax scrolling for your website, Paul Lewis' guide to performant parallaxing is the perfect place to start.</p>
+      </div>
+    </div>
+
+    <div class="icon-blocks">
+      <div class="icon-block">
+        <svg data-icon="stacy">
+          <use xlink:href="#icon-stacy"></use>
+        </svg>
+      </div>
+
+      <div class="icon-block-text">
+        <h3>User Stories</h3>
+        <p>If you'd like to learn how to create parallax scrolling for your website, Paul Lewis' guide to performant parallaxing is the perfect place to start.</p>
+      </div>
+    </div>
+
+    <div class="icon-blocks">
+      <div class="icon-block">
+        <svg data-icon="stacy">
+          <use xlink:href="#icon-stacy"></use>
+        </svg>
+      </div>
+
+      <div class="icon-block-text">
+        <h3>User Stories</h3>
+        <p>If you'd like to learn how to create parallax scrolling for your website, Paul Lewis' guide to performant parallaxing is the perfect place to start.</p>
+      </div>
+    </div>
+
+    <div class="icon-blocks">
+      <div class="icon-block">
+        <svg data-icon="stacy">
+          <use xlink:href="#icon-stacy"></use>
+        </svg>
+      </div>
+
+      <div class="icon-block-text">
+        <h3>User Stories</h3>
+        <p>If you'd like to learn how to create parallax scrolling for your website, Paul Lewis' guide to performant parallaxing is the perfect place to start.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="content-block">
+    <section id="design-and-development-phase">
+      <h2>Design and Development Phase</h2>
+      <h3>Header Level 3</h3>
+
+      <img src="http://dummyimage.com/250x300/777777/ffffff.png"
+           alt="image alt"
+           class="extend-left">
+
+      <p>This image has a class of extend-left. Vestibulum tortor quamr facilisis. Ut felis. Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacusvel augue laoreet rutrum faucibus dolor auctor.</p>
+
+      <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
+      turpis egestas. Vestibulum tortor quamr facilisis. Ut felis. Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacusvel augue laoreet rutrum faucibus dolor auctor. Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+
+      <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
+      turpis egestas. Vestibulum tortor quamr facilisis. Ut felis. Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacusvel augue laoreet rutrum faucibus dolor auctor. Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+
+      <figure>
+        <img class="extend-small" src="https://dummyimage.com/1000x9:6">
+        <figcaption>This is an image with the extend-small class</figcaption>
+      </figure>
+
+      <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
+      turpis egestas. Vestibulum tortor quamr facilisis. Ut felis. Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacusvel augue laoreet rutrum faucibus dolor auctor. Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+
+      <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
+      turpis egestas. Vestibulum tortor quamr facilisis. Ut felis. Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacusvel augue laoreet rutrum faucibus dolor auctor. Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
 
 
-.. figure:: http://dummyimage.com/1400x450/777777/ffffff.png
-   :target: http://google.com
-   :align: center
-   :alt: alternate text here
-   :figclass: size-full
+      <h3>Brand Identity</h3>
 
-   This is my caption for my figure.
+      <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
+      turpis egestas. Vestibulum tortor quamr facilisis. Ut felis. Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacusvel augue laoreet rutrum faucibus dolor auctor. Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+
+      <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
+      turpis egestas. Vestibulum tortor quamr facilisis. Ut felis. Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacusvel augue laoreet rutrum faucibus dolor auctor. Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+
+      <figure>
+        <img class="extend-large" src="http://dummyimage.com/1600x250/777777/777777.png"
+             href="http://google.com">
+
+        <figcaption>This is an image with the extend-large class</figcaption>
+      </figure>
+
+      <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
+      turpis egestas. Vestibulum tortor quamr facilisis. Ut felis. Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacusvel augue laoreet rutrum faucibus dolor auctor. Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+
+      <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
+      turpis egestas. Vestibulum tortor quamr facilisis. Ut felis. Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacusvel augue laoreet rutrum faucibus dolor auctor. Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+
+      <figure>
+        <img src="http://dummyimage.com/1100x350/777777/777777.png"
+             class="extend-small">
+        <figcaption>This is an image with the extend-small class</figcaption>
+      </figure>
 
 
-.. figure:: http://dummyimage.com/800x250/777777/ffffff.png
-   :target: http://google.com
-   :align: center
-   :alt: alternate text here
-   :figclass: size-full
+      <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
+      turpis egestas. Vestibulum tortor quamr facilisis. Ut felis. Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacusvel augue laoreet rutrum faucibus dolor auctor. Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
 
-   This is the logo sample.
+      <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
+      turpis egestas. Vestibulum tortor quamr facilisis. Ut felis. Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacusvel augue laoreet rutrum faucibus dolor auctor. Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+    </section>
 
+    <section id="section-name-here">
+      <h2>Responsive &amp; Interactive UX Design</h2>
 
-.. image:: http://dummyimage.com/200x200/777777/ffffff.png
-   :align: left
-   :alt: alternate text here
-   :class: wayleft
+      <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
+      turpis egestas. Vestibulum tortor quamr facilisis. Ut felis. Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacusvel augue laoreet rutrum faucibus dolor auctor. Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
 
+      <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
+      turpis egestas. Vestibulum tortor quamr facilisis. Ut felis. Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacusvel augue laoreet rutrum faucibus dolor auctor. Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
 
-Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
+      <img src="http://dummyimage.com/200x200/777777/ffffff.png"
+          alt="image alt"
+          class="extend-right">
 
-Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
+      <p>This image has a class of extend-right. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
+      turpis egestas. Vestibulum tortor quamr facilisis. Ut felis. Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacusvel augue laoreet rutrum faucibus dolor auctor. Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+      <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
+      turpis egestas. Vestibulum tortor quamr facilisis. Ut felis. Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacusvel augue laoreet rutrum faucibus dolor auctor. Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
 
+      <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
+      turpis egestas. Vestibulum tortor quamr facilisis. Ut felis. Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacusvel augue laoreet rutrum faucibus dolor auctor. Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
 
-Responsive & Interactive UX Design
-----------------------------------
+      <h3>Below is a full width image with the .extend-full class</h3>
 
-Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
-
-.. image:: http://dummyimage.com/200x200/777777/ffffff.png
-  :align: center
-  :alt: alternate text here
-  :class: size-full
+      <img src="http://dummyimage.com/1600x200/777777/ffffff.png"
+          class="extend-full"
+          alt="image alt">
+    </section>
+  </div>
