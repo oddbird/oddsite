@@ -96,24 +96,3 @@ p {
   }
 }
 
-
-// Lists
-// -----
-
-[data-region='main'] {
-  ul,
-  ol {
-    &:not(.simple) {
-      margin: size('shim') 0 size('gutter');
-      padding-left: size('gutter');
-    }
-  }
-}
-
-.upperroman {
-  list-style-type: upper-roman;
-}
-
-.loweralpha {
-  list-style-type: lower-alpha;
-}
