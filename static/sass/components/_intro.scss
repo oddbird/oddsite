@@ -5,40 +5,44 @@
 
 // wrapping container for intro
 .intro-block {
+  @include grid;
   display: flex;
   flex-direction: column;
 
-  @include above('medium-page') {
+  @include above('small-page') {
     @include center('medium-page');
 
     @supports not (display: grid) {
       flex-direction: row;
       justify-content: flex-end;
     }
-
-    @include grid;
   }
 }
 
 // intro inner wrapper text block and task info
 // using this as a container to use flexbox inside and grid outside
 .intro {
-  @include above('medium-page') {
-    display: flex;
+  @supports (display: grid) {
+    grid-column: col1-start / -1;
+  }
 
+  @include above('small-page') {
+    display: flex;
+  }
+
+  @include above('large-page') {
     @supports not (display: grid) {
       max-width: $wide-column;
     }
 
-    @supports (display: grid) {
-      grid-column: col2-start / -1;
-    }
+    grid-column: col2-start / -1;
   }
+
 
   p {
     font-style: italic;
 
-    @include above('medium-page') {
+    @include above('small-page') {
       flex: 1 0 0;
       padding-right: size('gutter');
     }
@@ -47,7 +51,7 @@
 
 // intro side panel
 .project-tasks {
-  @include above('medium-page') {
+  @include above('small-page') {
     border-left: 1px solid color('icon-block');
     flex: 0 1 25%;
     padding: size('shim') size('gutter');
