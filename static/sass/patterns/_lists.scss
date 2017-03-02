@@ -3,7 +3,9 @@
 
 // Simple is a generated class from RST
 .simple {
-  list-style-type: none;
-  margin-left: 0;
-  padding-left: 0;
+  .project-tasks & {  
+    list-style-type: none;
+    margin-left: 0;
+    padding-left: 0;
+  }
 }

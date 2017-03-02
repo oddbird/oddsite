@@ -4,7 +4,7 @@
 $quote-circle: calc(1.5rem + 2vw);
 $quote-circle-type: calc(5rem + 2vw);
 
-
+.pullquote,
 blockquote {
   @include center('medium-page');
   font-size: calc(1.125rem + 0.5vw);
@@ -68,4 +68,3 @@ blockquote {
     }
   }
 }
-

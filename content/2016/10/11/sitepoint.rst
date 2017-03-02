@@ -36,6 +36,11 @@ of typing as fast as I could,
 and hoping to sound intelligent.
 Thanks for asking the questions!
 
+.. wrap:: div
+  :class: pullquote
+
+  .. wrap:: p
+
     To be clear:
     now that we have border-box sizing,
     grid math can be much simpler.
