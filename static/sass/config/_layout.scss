@@ -5,8 +5,8 @@
 // Variables
 // Reusable CSS Grid Template Columns definition
 // ---------------------------------------------
-$grid-columns: [col1-start] minmax(5vw, 1fr) [col1-end col2-start] minmax(5vw, 1fr) [col2-end col3-start] minmax(auto, 4fr) [col3-end col4-start] minmax(5vw, 1fr) [col4-end col5-start] minmax(5vw, 1fr) [col5-end];
-$grid-columns-large: [col1-start] minmax(5vw, 1fr) [col1-end col2-start] minmax(5vw, 1fr) [col2-end col3-start] minmax(auto, size('full-content')) [col3-end col4-start] minmax(5vw, 1fr) [col4-end col5-start] minmax(5vw, 1fr) [col5-end];
+$grid-columns-small: [col1-start] minmax(5vw, 1fr) [col1-end col2-start] minmax(auto, 1fr) [col2-end col3-start] minmax(auto, 1fr) [col3-end col4-start] minmax(auto, 1fr) [col4-end col5-start] minmax(auto, 1fr) [col5-end];
+$grid-columns-large: [col1-start] 1fr [col1-end col2-start] 1fr [col2-end col3-start] minmax(auto, size('full-content')) [col3-end col4-start] 1fr [col4-end col5-start] 1fr [col5-end];
 
 // When you need a % and not a rem, like on blockquote and intro
 // -------------------------------------------------------------
@@ -59,7 +59,7 @@ $wide-column: 90%;
 @mixin grid {
   @supports (display: grid) {
     display: grid;
-    grid-template-columns: $grid-columns;
+    grid-template-columns: $grid-columns-small;
 
     @include above('medium-page') {
       grid-template-columns: $grid-columns-large;
@@ -114,7 +114,8 @@ $extend-full: 100vw;
 // viewport, minus the main content width, divided by 2, then make negative
 /// @group layout
 /// @link http://codepen.io/mirisuzanne/pen/ded4ae1f55f9b24b2aa0ea4aaac71e47?editors=0100
-/// @link http://www.sassmeister.com/gist/8374287846277fdf3361537dfaac27a8
+/// @link http://www.sassmeister.com/gist/8374287846277fdf3361537dfaac27a8 - 
+/// @link http://www.sassmeister.com/gist/705b458628ee9ac28b415166e1a09f7c - With Accoutrement
 /// @parameter {Side | String} $side - Choose Right or Left
 @mixin extend-side(
   $side
@@ -122,9 +123,8 @@ $extend-full: 100vw;
 
   margin-bottom: size('pad');
   
-  @include above('medium-page') {
+  @include above('small-page') {
     float: $side;
-    margin-#{$side}: calc((#{$extend-medium} - #{$full-content}) / 2 * -1);
     
     @if ($side == left) {
       padding-right: size('pad');
@@ -133,9 +133,13 @@ $extend-full: 100vw;
     } @else {
       @error 'Choose left or right silly. How many sides do you have?';
     }
+  }
 
-    @include above('large-page') {
-      margin-#{$side}: calc((#{$extend-small} - #{$full-content}) / 2 * -1);
-    }
+  @include above('medium-page') {
+    margin-#{$side}: calc((#{$extend-medium} - #{$full-content}) / 2 * -1);
+  }
+
+  @include above('large-page') {
+    margin-#{$side}: calc((#{$extend-small} - #{$full-content}) / 2 * -1);
   }
 }
