@@ -46,7 +46,7 @@ blockquote {
       }
 
       @supports (display: grid) {
-        grid-column: [col1-start] / span 1;
+        grid-column: col1-start;
       }
     }
   }
@@ -63,7 +63,7 @@ blockquote {
       }
 
       @supports (display: grid) {
-        grid-column: [col2-start] / -1;
+        grid-column: col2-start / -1;
       }
     }
   }
