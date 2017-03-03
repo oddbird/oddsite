@@ -32,12 +32,11 @@
 
   @include above('large-page') {
     @supports not (display: grid) {
-      max-width: $wide-column;
+      max-width: size('wide-column');
     }
 
     grid-column: col2-start / -1;
   }
-
 
   p {
     font-style: italic;

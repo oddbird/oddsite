@@ -27,13 +27,13 @@
 
 // Extend thing past the width of its container on both sides
 .extend-small {
-  @include extend($extend-small);
+  @include extend('extend-small');
 }
 
 .extend-large {
-  @include extend($extend-large);
+  @include extend('extend-large');
 }
 
 .extend-full {
-  @include extend($extend-full);
+  @include extend('extend-full');
 }

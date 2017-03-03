@@ -59,7 +59,7 @@ blockquote {
       @supports not (display: grid) {
         margin-left: auto;
         margin-right: 0;
-        max-width: $wide-column;
+        max-width: size('wide-column');
       }
 
       @supports (display: grid) {

@@ -10,7 +10,7 @@ $grid-columns-large: [col1-start] 1fr [col1-end col2-start] 1fr [col2-end col3-s
 
 // When you need a % and not a rem, like on blockquote and intro
 // -------------------------------------------------------------
-$wide-column: 90%;
+
 
 
 // Center it (horizontally)
@@ -83,54 +83,46 @@ $wide-column: 90%;
 }
 
 
-// Margin/Size Extension Variables will move to scale map
-// when Accountrement Scale is updated
-$full-content: 40rem;
-$extend-small: 70vw;
-$extend-medium: 80vw;
-$extend-large: 90vw;
-$extend-full: 100vw;
-
-
 // Extend thing outside its container on both sides
 // ================================================
 // viewport, minus the main content width, divided by 2, then make negative
 /// @group layout
 /// @link http://codepen.io/mirisuzanne/pen/ded4ae1f55f9b24b2aa0ea4aaac71e47?editors=0100
 ///    Miriam's Sample CodePen
-/// @link http://www.sassmeister.com/gist/705b458628ee9ac28b415166e1a09f7c - 
+/// @link http://www.sassmeister.com/gist/705b458628ee9ac28b415166e1a09f7c -
 ///    Sample Sassmeister SCSS/CSS with Accoutrement
-/// @link http://www.sassmeister.com/gist/8374287846277fdf3361537dfaac27a8 - 
+/// @link http://www.sassmeister.com/gist/8374287846277fdf3361537dfaac27a8 -
 ///    Sample Sassmeister SCSS/CSS without Accoutrement
 /// @parameter {Size} $extend-base-size - For consistency, options include
-///    $extend-small, $extend-large or $extend-full
+///    'extend-small', 'extend-large' or 'extend-full'
 /// @example scss -
 ///   .foo {
-///     @include extend($extend-small);
+///     @include extend('extend-small');
 ///   }
 ///   .bar {
-///     @include extend($extend-medium);
+///     @include extend('extend-medium');
 ///   }
 ///   .baz {
-///     @include extend($extend-large);
+///     @include extend('extend-large');
 ///   }
 @mixin extend(
   $extend-base-size
 ) {
 
+  $extend-base-size: size($extend-base-size);
   $extend-large-size: $extend-base-size - 10vw;
 
   @include above('medium-page') {
-    margin-left: calc((#{$extend-base-size} - #{$full-content}) / 2 * -1);
-    margin-right: calc((#{$extend-base-size} - #{$full-content}) / 2 * -1);
+    margin-left: calc((#{$extend-base-size} - #{size('full-content')}) / 2 * -1);
+    margin-right: calc((#{$extend-base-size} - #{size('full-content')}) / 2 * -1);
     max-width: $extend-base-size;
     width: $extend-base-size;
   }
 
-  @if ($extend-base-size != $extend-full) {
+  @if ($extend-base-size != 'extend-full') {
     @include above('large-page') {
-      margin-left: calc((#{$extend-large-size} - #{$full-content}) / 2 * -1);
-      margin-right: calc((#{$extend-large-size} - #{$full-content}) / 2 * -1);
+      margin-left: calc((#{$extend-large-size} - #{size('full-content')}) / 2 * -1);
+      margin-right: calc((#{$extend-large-size} - #{size('full-content')}) / 2 * -1);
       max-width: $extend-large-size;
       width: $extend-large-size;
     }
@@ -144,9 +136,9 @@ $extend-full: 100vw;
 /// @group layout
 /// @link http://codepen.io/mirisuzanne/pen/ded4ae1f55f9b24b2aa0ea4aaac71e47?editors=0100
 ///    Miriam's Sample CodePen
-/// @link http://www.sassmeister.com/gist/705b458628ee9ac28b415166e1a09f7c - 
+/// @link http://www.sassmeister.com/gist/705b458628ee9ac28b415166e1a09f7c -
 ///    Sample Sassmeister SCSS/CSS with Accoutrement
-/// @link http://www.sassmeister.com/gist/8374287846277fdf3361537dfaac27a8 - 
+/// @link http://www.sassmeister.com/gist/8374287846277fdf3361537dfaac27a8 -
 ///    Sample Sassmeister SCSS/CSS without Accoutrement
 /// @parameter {Side | String} $side - Choose right or left
 /// @example scss -
@@ -161,10 +153,10 @@ $extend-full: 100vw;
 ) {
 
   margin-bottom: size('pad');
-  
+
   @include above('small-page') {
     float: $side;
-    
+
     @if ($side == left) {
       padding-right: size('pad');
     } @elseif ($side == right) {
@@ -175,10 +167,10 @@ $extend-full: 100vw;
   }
 
   @include above('medium-page') {
-    margin-#{$side}: calc((#{$extend-medium} - #{$full-content}) / 2 * -1);
+    margin-#{$side}: calc((#{size('extend-medium')} - #{size('full-content')}) / 2 * -1);
   }
 
   @include above('large-page') {
-    margin-#{$side}: calc((#{$extend-small} - #{$full-content}) / 2 * -1);
+    margin-#{$side}: calc((#{size('extend-small')} - #{size('full-content')}) / 2 * -1);
   }
 }
