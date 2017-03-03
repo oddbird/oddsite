@@ -47,7 +47,7 @@
   @supports (display: grid) {
     grid-column: col1-start;
     text-align: right;
-    
+
     @include above('medium-page') {
       grid-column: col1-start / span 2;
     }
