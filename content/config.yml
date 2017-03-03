@@ -978,15 +978,21 @@ contact:
 active_modules: [
   denormalize_config,
   nunjucks_macros,
+  typogrify,
+  images,
   tags,
   blog,
   author,
   pages,
   wrap,
-  typogrify,
   hashedassets,
   urls
   ]
+programs:
+  '*.rst': 'rst'
+  '*.jpg': 'image'
+  '*.jpeg': 'image'
+  '*.png': 'image'
 canonical_url: http://oddbird.net/
 template_path: ../templates
 asset_map_path: static/assets.json
