@@ -11,9 +11,7 @@ class CallMacro(Directive):
     required_arguments = 1
     optional_arguments = 10
     final_argument_whitespace = False
-    option_spec = {
-        # 'post': directives.unchanged,
-    }
+    option_spec = {}
 
     def get_macro(self):
         macro_id = self.arguments[0]
