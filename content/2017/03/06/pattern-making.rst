@@ -184,7 +184,7 @@ with less clutter in the global name-space.
 
 
 Other Map Advantages
-~~~~~~~~~~~~~~~~~~~~
+--------------------
 
 Maps provide a few other advantages over variables,
 especially when you want to make programmatic adjustments.
@@ -194,34 +194,50 @@ New variables can't be generated in Sass,
 but new map keys can.
 The following code attempts to create and save
 lighter and darker versions
-of our primary brand color:
+of our primary brand color.
+This won't work, using variables:
 
 .. code:: scss
 
   @for each $adjustment in ('lighten', 'darken') {
-    // This won't work, using variables…
     $new-color: call($adjustment, $brand-primary, 10%);
-    $brand-primary-#{$adjustment}: $new-color;
 
-    // But this will work, using map keys…
+    // There is no Sass syntax for this…
+    $brand-primary-#{$adjustment}: $new-color;
+  }
+
+But it does work, using map keys:
+
+.. code:: scss
+
+  @for each $adjustment in ('lighten', 'darken') {
     $new-color: call($adjustment, $brand-primary, 10%);
     $new-color-map: ('primary-#{$adjustment}': $new-color);
+
     $brand-colors: map-merge($brand-colors, $new-color-map);
   }
 
 The same is true with accessing
-variable names and map keys programmatically:
+variable names and map keys programmatically.
+Using variables, it fails:
 
 .. code:: scss
 
   @for each $header in ('h1', 'h2', 'h3') {
     #{$header} {
-      // This won't work, using variables…
       @if variable-exists('font-size-#{$header}') {
-        font-size: $font-size-#{$header}; // there is no actual syntax for this
+        // There is no Sass syntax for this…
+        font-size: $font-size-#{$header};
       }
+    }
+  }
 
-      // But this will work, using map keys…
+Again, it works great with a map key:
+
+.. code:: scss
+
+  @for each $header in ('h1', 'h2', 'h3') {
+    #{$header} {
       @if map-has-key($text-sizes, $header) {
         font-size: map-get($text-sizes, $header);
       }
@@ -231,35 +247,23 @@ variable names and map keys programmatically:
 That may not be a daily use-case,
 but it can come in handy
 for automating repetative patterns.
-
 More important to OddBird's daily use,
 we can also automate some basic style guides
 with very little effort —
 looping through the maps
 to get all the data we need.
-Add a new key/value pair to the color map,
-and it automatically appears in the style guide
-as soon as it's been defined.
-
-`David`_ has written some about
-`our experiments with automated style guides`_,
-and we'll go into more detail on that
-in another post.
-Right now, I want to stay focussed on the Sass.
-
-.. _David: @@@
-.. _our experiments with automated style guides: @@@
+We'll get to that later.
 
 
 The Map Problem
-~~~~~~~~~~~~~~~
+---------------
 
 Of course,
 no solution is perfect,
 and maps come with their own problems.
-Or *problem*, I should say.
-There's really one issue that ruins the mood:
-variables can easily reference and adjust other variables —
+Or *problem*, singular.
+There's really one issue that ruins the mood.
+Sass variables can easily reference other variables —
 e.g ``$blue-gray: desaturate($blue, 20%);`` —
 but **map values cannot reference other values in the same map**.
 
@@ -274,7 +278,7 @@ but **map values cannot reference other values in the same map**.
 
 That's ugly,
 and it doesn't work.
-The "simplest" fix, technically,
+The simplest fix, technically,
 is to only reference values across maps,
 but that gets even uglier:
 
@@ -293,10 +297,13 @@ in a single variable,
 if you have to define it
 over and over,
 one small piece at a time?
+I would have given up at this point,
+but there's nothing I love
+more than over-engeneering a solution in Sass.
 
 
 The Accoutrement Solution
-~~~~~~~~~~~~~~~~~~~~~~~~~
+-------------------------
 
 At their core,
 the Accoutrement toolkits each contain
@@ -361,3 +368,59 @@ with nothing but Sass empty ``div`` elements —
 a pretty good proof-of-concept
 for what we want our more robust
 style guide generator to do.
+
+
+The Themeing Option
+~~~~~~~~~~~~~~~~~~~
+
+There's an interesting side-effect of our solution
+that I've never really dug into before now.
+While variable relationships are static,
+calculated at the point they are defined,
+our relationships remain dynamic until they are called.
+
+Let's start with a few colors,
+defined as variables,
+with one color based on the other color:
+
+.. code:: scss
+
+  $brand: #339;
+  $brand-light: lighten($brand, 10%); // #4040bf
+
+
+If I override the value of ``$brand``
+later in the document,
+that will have no affect
+on the value of ``$brand-light``:
+
+.. code:: scss
+
+  $brand: #339;
+  $brand-light: lighten($brand, 10%); // #4040bf
+
+  $brand: #933;
+
+  .static-variables {
+    background: $brand-light; // #4040bf — still the same…
+  }
+
+The lighten-10% relationship is lost,
+unless we re-define both colors at once.
+If we do the same thing using Sass maps,
+we get a different result:
+
+.. code:: scss
+
+  $colors: (
+    'brand': #339,
+    'brand-light': 'brand' ('lighten': 10%), // #4040bf
+  );
+
+  $colors: map-merge($colors, ('brand': #933));
+
+  .dynamic-values {
+    background: color('brand-light'); // #bf4040 — it changed!
+  }
+
+
