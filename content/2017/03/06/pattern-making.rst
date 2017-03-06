@@ -132,14 +132,14 @@ where they define nearly `400 variables in a single file`_:
   $padding-base-horizontal:   12px !default;
 
 There's nothing wrong about that approach,
-and certinaly nothing unique to Bootstrap —
+and certainly nothing unique to Bootstrap —
 I'm not trying to pick on them.
 This is what variables are designed for,
 and patterns defined this way are easy to access
 without any help from a toolkit.
 
 What's missing is an explicit sense
-of the patterns developig here:
+of the patterns developing here:
 brand-colors, link-colors, fonts, etc.
 Variables are only related in implicit ways,
 by giving them similar names.
@@ -299,7 +299,7 @@ over and over,
 one small piece at a time?
 I would have given up at this point,
 but there's nothing I love
-more than over-engeneering a solution in Sass.
+more than over-engineering a solution in Sass.
 
 
 The Accoutrement Solution
