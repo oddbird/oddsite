@@ -23,11 +23,11 @@ as fast as we can,
 but someone will have to build on that foundation —
 and it might be us,
 four years later.
-If the code isn't well-tested,
-or the pattens aren't well documented,
-we're shipping legacy code
+If the code isn’t well-tested,
+or the patterns aren't well documented,
+we’re shipping legacy code
 on day one.
-That's not a good sign.
+That’s not a good sign.
 
 Without a special budget
 and dedicated full-time style guide team,
@@ -38,11 +38,11 @@ and tools that understand the patterns we make —
 so automation can happen wherever possible.
 
 Over time
-we've slowly built a set of tools
+we’ve slowly built a set of tools
 that help us manage style patterns in code,
 and document the results as we go,
 with as little extra effort as possible.
-Now we're using those tools
+Now we’re using those tools
 as we re-design this OddSite,
 and `the results`_ are updated live.
 
@@ -58,7 +58,7 @@ including this OddSite open design,
 is to install the latest Sass
 along with our `Accoutrement`_ toolkits.
 These are Sass libraries
-that we've been slowly
+that we’ve been slowly
 improving and simplifying for years.
 
 We currently have five modules,
@@ -87,7 +87,7 @@ about style and output.
 Grouping Variables into Maps
 ----------------------------
 
-When I talk about "abstract" style patterns,
+When I talk about “abstract” style patterns,
 I mean things like color-palette,
 font-families,
 and font-or-spacing sizes
@@ -96,7 +96,7 @@ patterns that exist in a theoretical way
 before they are ever applied
 to a specific UI element on the site.
 
-It's common
+It’s common
 to store these abstract patterns in Sass variables.
 Here are some example variables from `Bootstrap-Sass`_,
 where they define nearly `400 variables in a single file`_:
@@ -130,14 +130,14 @@ where they define nearly `400 variables in a single file`_:
   $padding-base-vertical:     6px !default;
   $padding-base-horizontal:   12px !default;
 
-There's nothing wrong about that approach,
+There’s nothing wrong about that approach,
 and certainly nothing unique to Bootstrap —
-I'm not trying to pick on them.
+I’m not trying to pick on them.
 This is what variables are designed for,
 and patterns defined this way are easy to access
 without any help from a toolkit.
 
-What's missing is an explicit sense
+What’s missing is an explicit sense
 of the patterns developing here:
 brand-colors, link-colors, fonts, etc.
 Variables are only related in implicit ways,
@@ -157,7 +157,7 @@ or automating style guides from them.
 To address those issues,
 we group all our common settings
 into a few map variables.
-If you haven't used Sass Maps,
+If you haven’t used Sass Maps,
 they are a variable type
 similar to arrays, dictionaries, or objects
 in other languages —
@@ -189,12 +189,12 @@ Maps provide other advantages over variables,
 especially when you want to make programmatic adjustments.
 In fact, maps were added to Sass
 to replace *variable-name interpolation*.
-New variables can't be generated in Sass,
+New variables can’t be generated in Sass,
 but new map keys can.
 The following code attempts to create and save
 lighter and darker versions
 of our primary brand color.
-This won't work, using variables:
+This won’t work, using variables:
 
 .. code:: scss
 
@@ -246,12 +246,12 @@ Again, it works great with a map key:
 That may not be a common use-case,
 but it can come in handy
 for automating repetitive patterns.
-More important to OddBird's daily use,
+More important to OddBird’s daily use,
 we can also automate some basic style guides
 with very little effort —
 looping through the maps
 to get all the data we need.
-We'll get to that later.
+We’ll get to that later.
 
 
 The Map Problem
@@ -261,7 +261,7 @@ Of course,
 no solution is perfect,
 and maps come with their own problems.
 Or *problem*, singular.
-There's really one issue that ruins the mood.
+There’s really one issue that ruins the mood.
 Sass variables can easily reference other variables —
 e.g ``$blue-gray: desaturate($blue, 20%);`` —
 but **map values cannot reference other values in the same map**.
@@ -291,13 +291,13 @@ but that gets even uglier:
     'blue-gray': desaturate(map-get($colors, blue), 20%),
   ));
 
-What's the point of grouping all your values
+What’s the point of grouping all your values
 in a single variable,
 if you have to define it
 over and over,
 one small piece at a time?
 I would have given up at this point,
-but there's nothing I love
+but there’s nothing I love
 more than over-engineering a solution in Sass.
 
 
@@ -318,7 +318,7 @@ loosely based on functional programming ideas.
 These definitions are human-readable,
 but will require processing
 in order to work.
-That's where our function comes into play:
+That’s where our function comes into play:
 
 .. code:: scss
 
@@ -332,7 +332,7 @@ That's where our function comes into play:
   $result: color('blue-gray');
 
 While ``'blue' ('desaturate': 20%)``
-doesn't mean anything special to Sass,
+doesn’t mean anything special to Sass,
 our ``color()`` function understands
 how to parse that syntax,
 and make the necessary conversions.
@@ -361,7 +361,7 @@ in this CodePen demo:
   <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
 As you can see,
-we're also generating a rough style guide
+we’re also generating a rough style guide
 on-the-fly,
 with nothing but Sass empty ``div`` elements —
 a pretty good proof-of-concept
@@ -372,13 +372,13 @@ style guide generator to do.
 The Theming Option
 ~~~~~~~~~~~~~~~~~~
 
-There's an interesting side effect of our solution
-that I've never really dug into before now.
+There’s an interesting side effect of our solution
+that I’ve never really dug into before now.
 While variable relationships are static,
 calculated at the point they are defined,
 our relationships remain dynamic until they are called.
 
-Let's start with a few colors
+Let’s start with a few colors
 defined as variables,
 with one color based on the other color:
 
