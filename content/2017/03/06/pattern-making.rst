@@ -30,7 +30,7 @@ on day one.
 That's not a good sign.
 
 Without a special budget
-and dedicated full-time style-guide team,
+and dedicated full-time style guide team,
 we have to integrate style guides
 and pattern documentation into our daily process.
 We need tools that encourage pattern-making,
@@ -46,8 +46,7 @@ Now we're using those tools
 as we re-design this OddSite,
 and `the results`_ are updated live.
 
-.. _the results: http://oddbird.net/styleguide/
-
+.. _the results: /styleguide/
 
 
 Enter Accoutrement
@@ -68,7 +67,7 @@ but I want to focus on the
 first three.
 While *init* and *layout*
 are fairly standard normalization
-and utility libraries (clearfix, etc), —
+and utility libraries (clearfix, etc),
 *color*, *scale*, and *type*
 are there to help us define and document
 abstract style patterns.
@@ -148,12 +147,12 @@ We assume that ``$brand-primary``,
 are part of the same pattern
 because they look similar —
 but that implicit relationship
-relys on naming conventions,
+relies on naming conventions,
 code proximity,
 and human interpretation.
 Sass has no way of understanding
 these relationships,
-or automating style-guides from them.
+or automating style guides from them.
 
 To address those issues,
 we group all our common settings
@@ -163,7 +162,7 @@ they are a variable type
 similar to arrays, dictionaries, or objects
 in other languages —
 a set of ``key: value`` pairs
-contained in a singe variable.
+contained in a single variable.
 
 Converting the brand-colors above
 might look something like this:
@@ -180,13 +179,13 @@ might look something like this:
 
 Now the brand-colors are grouped explicitly,
 clear to both humans and compilers,
-with less clutter in the global name-space.
+with less clutter in the global namespace.
 
 
 Other Map Advantages
 --------------------
 
-Maps provide a few other advantages over variables,
+Maps provide other advantages over variables,
 especially when you want to make programmatic adjustments.
 In fact, maps were added to Sass
 to replace *variable-name interpolation*.
@@ -244,9 +243,9 @@ Again, it works great with a map key:
     }
   }
 
-That may not be a daily use-case,
+That may not be a common use-case,
 but it can come in handy
-for automating repetative patterns.
+for automating repetitive patterns.
 More important to OddBird's daily use,
 we can also automate some basic style guides
 with very little effort —
@@ -316,7 +315,7 @@ We start by defining
 what we want to happen,
 using a syntax that we invented —
 loosely based on functional programming ideas.
-These defenitions are human-readable,
+These definitions are human-readable,
 but will require processing
 in order to work.
 That's where our function comes into play:
@@ -336,7 +335,7 @@ While ``'blue' ('desaturate': 20%)``
 doesn't mean anything special to Sass,
 our ``color()`` function understands
 how to parse that syntax,
-and make the conversions necessary.
+and make the necessary conversions.
 The syntax has two parts:
 a reference color,
 which can be a color-value or map-key,
@@ -353,7 +352,7 @@ The ``color()`` function will look up the reference color
 and then call the adjustment functions
 (``desaturate``)
 with the argument supplied (``20%``).
-Give it a spin,
+Give it a spin
 in this CodePen demo:
 
 .. raw:: html
@@ -370,16 +369,16 @@ for what we want our more robust
 style guide generator to do.
 
 
-The Themeing Option
-~~~~~~~~~~~~~~~~~~~
+The Theming Option
+~~~~~~~~~~~~~~~~~~
 
-There's an interesting side-effect of our solution
+There's an interesting side effect of our solution
 that I've never really dug into before now.
 While variable relationships are static,
 calculated at the point they are defined,
 our relationships remain dynamic until they are called.
 
-Let's start with a few colors,
+Let's start with a few colors
 defined as variables,
 with one color based on the other color:
 
@@ -387,7 +386,6 @@ with one color based on the other color:
 
   $brand: #339;
   $brand-light: lighten($brand, 10%); // #4040bf
-
 
 If I override the value of ``$brand``
 later in the document,
@@ -422,5 +420,3 @@ we get a different result:
   .dynamic-values {
     background: color('brand-light'); // #bf4040 — it changed!
   }
-
-
