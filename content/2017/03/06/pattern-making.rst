@@ -2,102 +2,86 @@ public: yes
 author: miriam
 tags: [Tools, Color, Typography, 'Style Guides', Accoutrement, Herman, OddSite, 'Open Design']
 image:
-  - src: '2017/get-started-designing/cafe-computer.jpg'
+  - src: '2017/pattern-making/NYC-sign.jpg'
 summary: |
-  Something about style guides…
+  Living Style Guide documentation on the web
+  is a difficult problem,
+  gaining a lot of attention in the last few years.
+  Let's take an in-depth look
+  at one way to store patterns directly in Sass,
+  and generate documentation automatically.
 
 
-Code Patterns & Style Guides, Part 1
-====================================
+Code Patterns & Style Guides
+============================
 
-OddBird has always been a small team,
-and our clients often need a proof-of-concept
-or MVP on a very tight budget.
-Developer hours are precious,
-and style guides are rarely
-the top priority.
-
-Our job is to get usable features
+I've often been asked
+how we sell style guides to our clients.
+The short answer is: *we don't*.
+Our clients want to put useable features
 in front of real users
-as fast as we can,
-but someone will have to build on that foundation —
-and it might be us,
-four years later.
-If the code isn’t well-tested,
-or the patterns aren't well documented,
-we’re shipping legacy code
-on day one.
-That’s not a good sign.
+on a tight schedule.
+Style guides aren't the product,
+they're part of the process.
 
-Without a special budget
-and dedicated full-time style guide team,
-we have to integrate style guides
-and pattern documentation into our daily process.
-We need tools that encourage pattern-making,
-and tools that understand the patterns we make —
-so automation can happen wherever possible.
+Style guides are necessary,
+but keeping them alive
+can be difficult and time-consuming.
+We have to find ways
+to integrate documentation into the daily workflow,
+or it will get lost in the scramble
+for bigger and better features.
 
-Over time
-we’ve slowly built a set of tools
-that help us manage style patterns in code,
-and document the results as we go,
-with as little extra effort as possible.
-Now we’re using those tools
-as we re-design this OddSite,
-and `the results`_ are updated live.
+As Carl likes to say:
+*un-tested code is legacy code —
+even if you wrote it an hour ago*.
 
-.. _the results: /styleguide/
+As I like to say:
+*if you don't document something,
+it doesn't exist*.
+
+We've been struggling with these problems
+for a long time,
+and slowly developing a set of tools
+to help us manage our patterns in code,
+and document the results as we go.
+We're not done,
+but we've learned a lot,
+and I'd like to show you what we have so far.
 
 
-Enter Accoutrement
-------------------
+Starting Abstract
+-----------------
 
-One of our first steps
-in setting up any new project,
-including this OddSite open design,
-is to install the latest Sass
-along with our `Accoutrement`_ toolkits.
-These are Sass libraries
-that we’ve been slowly
-improving and simplifying for years.
+The first style patterns we add
+to any new project
+(including this `OddSite design`_)
+are color palettes, fonts,
+and a typographic scale.
+These are what I call "abstract" patterns —
+conceptual rules that exist before
+any element is ever styled on the page.
 
-We currently have five modules,
-`color`_, `scale`_, `type`_, `init`_, and `layout`_
-but I want to focus on the
-first three.
-While *init* and *layout*
-are fairly standard normalization
-and utility libraries (clearfix, etc),
-*color*, *scale*, and *type*
-are there to help us define and document
-abstract style patterns.
-They are highly opinionated about process,
-forcing us to write patterns in a consistent way,
-while being completely un-opinionated
-about style and output.
+My first goal is to make these patterns
+tangible in our code,
+so they "exist" somehow
+outside our own imaginations.
+Our living style guide
+(which will include colors, fonts, and sizes)
+must be based on real and meaningful code,
+or it's nothing but theory.
 
-.. _Accoutrement: @@@
-.. _color: @@@
-.. _scale: @@@
-.. _type: @@@
-.. _init: @@@
-.. _layout: @@@
+.. _OddSite design: @@@
 
 
 Grouping Variables into Maps
 ----------------------------
 
-When I talk about “abstract” style patterns,
-I mean things like color-palette,
-font-families,
-and font-or-spacing sizes
-(including support for modular scales) —
-patterns that exist in a theoretical way
-before they are ever applied
-to a specific UI element on the site.
-
+Lucky for us,
+CSS pre-processors like Sass and Less
+were invented to solve this problem.
 It’s common
-to store these abstract patterns in Sass variables.
+to store abstract patterns in Sass variables.
 Here are some example variables from `Bootstrap-Sass`_,
 where they define nearly `400 variables in a single file`_:
 
@@ -131,8 +115,7 @@ where they define nearly `400 variables in a single file`_:
   $padding-base-horizontal:   12px !default;
 
 There’s nothing wrong about that approach,
-and certainly nothing unique to Bootstrap —
-I’m not trying to pick on them.
+and it's certainly not unique to Bootstrap.
 This is what variables are designed for,
 and patterns defined this way are easy to access
 without any help from a toolkit.
@@ -260,8 +243,14 @@ The Map Problem
 Of course,
 no solution is perfect,
 and maps come with their own problems.
-Or *problem*, singular.
-There’s really one issue that ruins the mood.
+Some are simple text-editor issues,
+like the ability for most language-helpers
+to autocomplete variable names,
+but not map keys.
+That's a minor frustration,
+but there’s another map issue
+that can really ruin your entire day:
+
 Sass variables can easily reference other variables —
 e.g ``$blue-gray: desaturate($blue, 20%);`` —
 but **map values cannot reference other values in the same map**.
@@ -277,8 +266,11 @@ but **map values cannot reference other values in the same map**.
 
 That's ugly,
 and it doesn't work.
-The simplest fix, technically,
-is to only reference values across maps,
+At the point where we are calling the map,
+it hasn't yet been defined.
+Technically, we could only
+reference values from previously-defined maps,
+and build our patterns that way —
 but that gets even uglier:
 
 .. code:: scss
@@ -296,29 +288,20 @@ in a single variable,
 if you have to define it
 over and over,
 one small piece at a time?
-I would have given up at this point,
-but there’s nothing I love
-more than over-engineering a solution in Sass.
+
+Lucky for you,
+there’s nothing I love
+more than over-engineering Sass tools...
 
 
-The Accoutrement Solution
--------------------------
+A Functional Solution
+---------------------
 
-At their core,
-the Accoutrement toolkits each contain
-one single function
-to help us solve that problem.
-In the color module,
-that function is aptly called ``color()``.
-
-We start by defining
-what we want to happen,
-using a syntax that we invented —
-loosely based on functional programming ideas.
-These definitions are human-readable,
-but will require processing
-in order to work.
-That’s where our function comes into play:
+Clearly we have to make some changes to our map.
+Instead of referencing and manipulating values directly,
+we use an invented syntax
+to define what references and manipulations
+*should* happen:
 
 .. code:: scss
 
@@ -328,31 +311,56 @@ That’s where our function comes into play:
     'blue-gray': 'blue' ('desaturate': 20%),
   );
 
+Our syntax has two parts:
+a base color —
+which can be any color-value,
+or another key in the map —
+and an optional map of adjustments,
+including function names, and additional arguments:
+
+.. code:: scss
+
+  $color: (
+    <color>: <base-color> (<function>: <arguments...>, …),
+    'blue-gray': 'blue' ('desaturate': 20%, 'lighten': 15%),
+  );
+
+That's hopefully human-readable,
+and loosely based on
+functional programming standards,
+but it will require processing
+in order to work.
+We need some functions
+that know how to parse our syntax,
+and return CSS-ready results.
+
+At OddBird we have three abstract
+"Sass `Accoutrement`_" toolkits
+(`color`_, `scale`_, and `type`_)
+each containing a core function
+to compile our maps.
+In the color module,
+that function is simply called ``color()``,
+and works like this:
+
+.. code:: scss
+
   // Calculate on-the-fly…
   $result: color('blue-gray');
 
 While ``'blue' ('desaturate': 20%)``
 doesn’t mean anything special to Sass,
-our ``color()`` function understands
+the ``color()`` function understands
 how to parse that syntax,
 and make the necessary conversions.
-The syntax has two parts:
-a reference color,
-which can be a color-value or map-key,
-and a map of adjustment functions with arguments.
-
-.. code:: scss
-
-  $color: (
-    <color>: <reference-color> (<function>: <arguments...>, …),
-  );
-
-The ``color()`` function will look up the reference color
+First it has to look up the reference color
 (``#339`` above),
-and then call the adjustment functions
-(``desaturate``)
-with the argument supplied (``20%``).
-Give it a spin
+and then call the adjustment function mentioned
+(``desaturate``),
+passing in the base color
+and the given argument (``20%``).
+
+You can play with it yourself
 in this CodePen demo:
 
 .. raw:: html
@@ -361,12 +369,20 @@ in this CodePen demo:
   <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
 As you can see,
-we’re also generating a rough style guide
+that demo
+also generates a rough style guide
 on-the-fly,
-with nothing but Sass empty ``div`` elements —
+with nothing but Sass
+and empty ``div`` elements —
 a pretty good proof-of-concept
-for what we want our more robust
-style guide generator to do.
+for the more robust
+style guide generator
+we'll develop later.
+
+.. _Accoutrement: @@@
+.. _color: @@@
+.. _scale: @@@
+.. _type: @@@
 
 
 The Theming Option
@@ -420,3 +436,81 @@ we get a different result:
   .dynamic-values {
     background: color('brand-light'); // #bf4040 — it changed!
   }
+
+Keeping that relationship dynamic
+could allow us to handle theming in new ways.
+Change the base color on-the-fly,
+and watch the results trickle down.
+
+
+Trade Offs
+----------
+
+We use the same approach
+for colors, sizes, and fonts —
+with additional helpers
+to manage contrast-ratios,
+modular-scales (when needed),
+robust webfont imorting,
+and (most importantly)
+automated style guides.
+
+Since the abstract site configuration
+is stored in a meaningful way,
+we can `export all that data to JSON`_
+and pass it along to a tool like `SassDoc`_
+for display.
+We're working on a SassDoc theme of our own,
+called `Herman`_,
+which knows how to display
+color-palettes, type scales, and font specimens.
+
+You can look at our
+`OddSite config`_ files on Github,
+and `see the generated docs`_ live.
+Herman is far from complete,
+but it's already been useful
+in generating docs as we go —
+with little extra effort.
+Any time a new color is added to the map,
+it is automatically available to our ``color()`` function,
+and simultaneously appears in the style guide.
+The pattern is documented directly in the code.
+
+That meaningful structure provides a lot of power,
+but comes with trade-offs.
+We have to invent our own syntax,
+which raises the learning curve for new developers,
+and eliminates some text-editor autocomplete gains.
+We've added dependencies to the project,
+making it also more difficult to test ideas in
+sandbox systems like `Codepen`_ and `Sassmeister`_.
+
+Are those trade-offs worth it?
+That depends on your needs,
+and the needs of the project.
+No solution is one-size fits all.
+We hope some of these issues can be resolved
+in our toolkit —
+like adding a hosted sandbox to our style guides —
+but your milage will almost certainly vary.
+
+.. _export all that data to JSON: @@@
+.. _SassDoc: @@@
+.. _Herman: @@@
+.. _OddSite config: @@@
+.. _see the generated docs: @@@
+.. _Codepen: @@@
+.. _Sassmeister: @@@
+
+How have you handled site configuration
+and documentation in your projects?
+How would you improve on our map solution?
+We'd love to hear your thoughts on `Twitter`_,
+on our `public Slack channel`_,
+or through our `handy contact form`_.
+Happy coding!
+
+.. _Twitter: @@@
+.. _public Slack channel: @@@
+.. _handy contact form: @@@
