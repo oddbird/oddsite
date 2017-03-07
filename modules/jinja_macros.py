@@ -6,16 +6,27 @@ from docutils import nodes
 from docutils.parsers.rst import Directive, directives
 
 
+class TolerantOptionSpec(object):
+
+    # Use str to convert any and all options
+    def __getitem__(self, key):
+        return str
+
+    # Make sure docutils will use this thing
+    # even though it's empty
+    def __nonzero__(self):
+        return True
+
+
 class CallMacro(Directive):
     has_content = True
     required_arguments = 1
-    optional_arguments = 10
+    optional_arguments = 0
     final_argument_whitespace = False
-    option_spec = {}
+    option_spec = TolerantOptionSpec()
 
     def get_macro(self):
         macro_id = self.arguments[0]
-        args = self.arguments[1:]
         content = '\n'.join(self.content)
         try:
             filename, macro_name = macro_id.split("#")
@@ -33,7 +44,8 @@ class CallMacro(Directive):
             call = "{{{{ to_run.{name}({arglist}) }}}}"
         call = call.format(
             name=macro_name,
-            arglist=", ".join(args),
+            arglist=", ".join(
+                '{}={}'.format(k, v) for k, v in self.options.items()),
             content=content,
         )
 

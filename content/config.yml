@@ -977,7 +977,7 @@ contact:
 
 active_modules: [
   denormalize_config,
-  nunjucks_macros,
+  jinja_macros,
   typogrify,
   images,
   tags,
