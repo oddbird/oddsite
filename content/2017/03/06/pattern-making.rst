@@ -18,7 +18,7 @@ Code Patterns & Style Guides
 I've often been asked
 how we sell style guides to our clients.
 The short answer is: *we don't*.
-Our clients want to put useable features
+Our clients want to put usable features
 in front of real users
 on a tight schedule.
 Style guides aren't the product,
@@ -32,9 +32,11 @@ to integrate documentation into the daily workflow,
 or it will get lost in the scramble
 for bigger and better features.
 
-As Carl likes to say:
+As `Carl`_ likes to say:
 *un-tested code is legacy code —
 even if you wrote it an hour ago*.
+
+.. _Carl: /authors/carl/
 
 As I like to say:
 *if you don't document something,
@@ -405,7 +407,7 @@ with one color based on the other color:
 
 If I override the value of ``$brand``
 later in the document,
-that will have no affect
+that will have no effect
 on the value of ``$brand-light``:
 
 .. code:: scss
