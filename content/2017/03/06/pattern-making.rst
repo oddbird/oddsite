@@ -71,7 +71,7 @@ Our living style guide
 must be based on real and meaningful code,
 or it's nothing but theory.
 
-.. _OddSite design: @@@
+.. _OddSite design: /tags/Open%20Design/
 
 
 Grouping Variables into Maps
@@ -321,7 +321,7 @@ including function names, and additional arguments:
 .. code:: scss
 
   $color: (
-    <color>: <base-color> (<function>: <arguments...>, …),
+    <name>: <base-color> (<function>: <arguments...>, …),
     'blue-gray': 'blue' ('desaturate': 20%, 'lighten': 15%),
   );
 
@@ -379,10 +379,10 @@ for the more robust
 style guide generator
 we'll develop later.
 
-.. _Accoutrement: @@@
-.. _color: @@@
-.. _scale: @@@
-.. _type: @@@
+.. _Accoutrement: /accoutrement/
+.. _color: /accoutrement-color/sassdoc/
+.. _scale: /accoutrement-scale/sassdoc/
+.. _type: /accoutrement-type/sassdoc/
 
 
 The Theming Option
@@ -443,7 +443,7 @@ Change the base color on-the-fly,
 and watch the results trickle down.
 
 
-Trade Offs
+Trade-Offs
 ----------
 
 We use the same approach
@@ -495,13 +495,13 @@ in our toolkit —
 like adding a hosted sandbox to our style guides —
 but your milage will almost certainly vary.
 
-.. _export all that data to JSON: @@@
-.. _SassDoc: @@@
-.. _Herman: @@@
-.. _OddSite config: @@@
-.. _see the generated docs: @@@
-.. _Codepen: @@@
-.. _Sassmeister: @@@
+.. _export all that data to JSON: https://github.com/oddbird/sass-json-export
+.. _SassDoc: http://sassdoc.com
+.. _Herman: https://github.com/oddbird/sassdoc-theme-herman
+.. _OddSite config: https://github.com/oddbird/oddsite/tree/master/static/sass/config
+.. _see the generated docs: /styleguide/
+.. _Codepen: http://codepen.io/
+.. _Sassmeister: http://sassmeister.com/
 
 How have you handled site configuration
 and documentation in your projects?
@@ -511,6 +511,6 @@ on our `public Slack channel`_,
 or through our `handy contact form`_.
 Happy coding!
 
-.. _Twitter: @@@
-.. _public Slack channel: @@@
-.. _handy contact form: @@@
+.. _Twitter: https://twitter.com/oddbird
+.. _public Slack channel: http://friends.oddbird.net
+.. _handy contact form: /contact/
