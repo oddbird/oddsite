@@ -33,7 +33,7 @@ or it will get lost in the scramble
 for bigger and better features.
 
 As `Carl`_ likes to say:
-*un-tested code is legacy code —
+*un-tested code is legacy code –
 even if you wrote it an hour ago*.
 
 .. _Carl: /authors/carl/
@@ -60,7 +60,7 @@ to any new project
 (including this `OddSite design`_)
 are color palettes, fonts,
 and a typographic scale.
-These are what I call "abstract" patterns —
+These are what I call "abstract" patterns –
 conceptual rules that exist before
 any element is ever styled on the page.
 
@@ -130,7 +130,7 @@ by giving them similar names.
 We assume that ``$brand-primary``,
 ``$brand-success``, and ``$brand-info``
 are part of the same pattern
-because they look similar —
+because they look similar –
 but that implicit relationship
 relies on naming conventions,
 code proximity,
@@ -145,7 +145,7 @@ into a few map variables.
 If you haven’t used Sass Maps,
 they are a variable type
 similar to arrays, dictionaries, or objects
-in other languages —
+in other languages –
 a set of ``key: value`` pairs
 contained in a single variable.
 
@@ -233,7 +233,7 @@ but it can come in handy
 for automating repetitive patterns.
 More important to OddBird’s daily use,
 we can also automate some basic style guides
-with very little effort —
+with very little effort –
 looping through the maps
 to get all the data we need.
 We’ll get to that later.
@@ -253,8 +253,8 @@ That's a minor frustration,
 but there’s another map issue
 that can really ruin your entire day:
 
-Sass variables can easily reference other variables —
-e.g ``$blue-gray: desaturate($blue, 20%);`` —
+Sass variables can easily reference other variables –
+e.g ``$blue-gray: desaturate($blue, 20%);`` –
 but **map values cannot reference other values in the same map**.
 
 .. code:: scss
@@ -272,7 +272,7 @@ At the point where we are calling the map,
 it hasn't yet been defined.
 Technically, we could only
 reference values from previously-defined maps,
-and build our patterns that way —
+and build our patterns that way –
 but that gets even uglier:
 
 .. code:: scss
@@ -314,9 +314,9 @@ to define what references and manipulations
   );
 
 Our syntax has two parts:
-a base color —
+a base color –
 which can be any color-value,
-or another key in the map —
+or another key in the map –
 and an optional map of adjustments,
 including function names, and additional arguments:
 
@@ -375,7 +375,7 @@ that demo
 also generates a rough style guide
 on-the-fly,
 with nothing but Sass
-and empty ``div`` elements —
+and empty ``div`` elements –
 a pretty good proof-of-concept
 for the more robust
 style guide generator
@@ -418,7 +418,7 @@ on the value of ``$brand-light``:
   $brand: #933;
 
   .static-variables {
-    background: $brand-light; // #4040bf — still the same…
+    background: $brand-light; // #4040bf – still the same…
   }
 
 The lighten-10% relationship is lost,
@@ -436,7 +436,7 @@ we get a different result:
   $colors: map-merge($colors, ('brand': #933));
 
   .dynamic-values {
-    background: color('brand-light'); // #bf4040 — it changed!
+    background: color('brand-light'); // #bf4040 – it changed!
   }
 
 Keeping that relationship dynamic
@@ -449,11 +449,11 @@ Trade-Offs
 ----------
 
 We use the same approach
-for colors, sizes, and fonts —
+for colors, sizes, and fonts –
 with additional helpers
 to manage contrast-ratios,
 modular-scales (when needed),
-robust webfont imorting,
+robust webfont importing,
 and (most importantly)
 automated style guides.
 
@@ -472,7 +472,7 @@ You can look at our
 and `see the generated docs`_ live.
 Herman is far from complete,
 but it's already been useful
-in generating docs as we go —
+in generating docs as we go –
 with little extra effort.
 Any time a new color is added to the map,
 it is automatically available to our ``color()`` function,
@@ -493,8 +493,8 @@ That depends on your needs,
 and the needs of the project.
 No solution is one-size fits all.
 We hope some of these issues can be resolved
-in our toolkit —
-like adding a hosted sandbox to our style guides —
+in our toolkit –
+like adding a hosted sandbox to our style guides –
 but your milage will almost certainly vary.
 
 .. _export all that data to JSON: https://github.com/oddbird/sass-json-export
