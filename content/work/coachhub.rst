@@ -33,6 +33,15 @@ client:
     credit: 'Sara Taillon'
 
 
+.. comment
+
+
+.. callmacro:: utility.macros.j2#icon
+  :name: 'stacy'
+  :size: 'face'
+  :class: 'help'
+
+
 
 .. raw:: html
 
