@@ -6,7 +6,7 @@ url: 'http://www.orcasinc.com/products/coachhub/'
 years: '2014–2016'
 feature: true
 priority: 'live'
-tagline: 'Responsive Web App for Wellness Coaching'
+tagline: 'Integrated Health Coaching for ORCAS'
 summary: |
   Summary or description
 description: |
@@ -28,33 +28,21 @@ description: |
 client:
   name: 'ORCAS'
   url: 'http://orcasinc.com'
-  quote:
-    text: 'OddBird really changed my thinking about how successful outsourcing software development can be.'
-    credit: 'Sara Taillon'
+quote:
+  text: 'OddBird really changed my thinking about how successful outsourcing software development can be.'
+  credit: 'Sara Taillon'
 
 
 .. comment
 
 
-.. callmacro:: utility.macros.j2#icon
-  :name: 'stacy'
-  :size: 'face'
-  :class: 'help'
-
+.. callmacro:: content-macros.j2#header
+  :name: 'CoachHub'
+  :tagline: 'Integrated Health Coaching for ORCAS'
 
 
 .. raw:: html
 
-  <header class="project-meta">
-    <h1 class="project-title">
-      CoachHub <em>Integrated Health Coaching for ORCAS</em>
-    </h1>
-
-    <div class="project-links">
-      <a href="#" class="btn-large">Button</a>
-      <a href="#" class="btn-large">Button</a>
-    </div>
-  </header>
 
   <section class="intro-block">
     <div class="intro">
@@ -75,23 +63,27 @@ client:
   </section>
 
 
-  <blockquote>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend.</p>
+.. callmacro:: content-macros.j2#blockquote
+  :content: 'test text'
+  :name: 'test name'
+  :url: 'http://google.com'
 
-    <footer>
-      — <cite><a href="http://google.com">Google</a></cite>
-    </footer>
-  </blockquote>
 
+.. raw:: html
 
   <section id="planning-and-discovery-phase" class="icon-blocks-container">
     <h2>Planning and Discovery Phase</h2>
 
     <div class="icon-blocks">
       <div class="icon-block">
-        <svg data-icon="stacy">
-          <use xlink:href="#icon-stacy"></use>
-        </svg>
+
+
+.. callmacro:: utility.macros.j2#icon
+  :name: 'stacy'
+
+
+.. raw:: html
+
       </div>
 
       <div class="icon-block-text">
@@ -102,9 +94,14 @@ client:
 
     <div class="icon-blocks">
       <div class="icon-block">
-        <svg data-icon="stacy">
-          <use xlink:href="#icon-stacy"></use>
-        </svg>
+
+
+.. callmacro:: utility.macros.j2#icon
+  :name: 'stacy'
+
+
+.. raw:: html
+
       </div>
 
       <div class="icon-block-text">
@@ -115,9 +112,14 @@ client:
 
     <div class="icon-blocks">
       <div class="icon-block">
-        <svg data-icon="stacy">
-          <use xlink:href="#icon-stacy"></use>
-        </svg>
+
+
+.. callmacro:: utility.macros.j2#icon
+  :name: 'stacy'
+
+
+.. raw:: html
+
       </div>
 
       <div class="icon-block-text">
@@ -128,9 +130,14 @@ client:
 
     <div class="icon-blocks">
       <div class="icon-block">
-        <svg data-icon="stacy">
-          <use xlink:href="#icon-stacy"></use>
-        </svg>
+
+
+.. callmacro:: utility.macros.j2#icon
+  :name: 'stacy'
+
+
+.. raw:: html
+
       </div>
 
       <div class="icon-block-text">

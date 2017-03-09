@@ -1,0 +1,22 @@
+{% import 'utility.macros.j2' as utility %}
+
+
+{% macro header(name, tagline) %}
+  <header class="project-meta">
+      <h1 class="project-title">{{ name }} <em>{{ tagline }}</em></h1>
+      <div class="project-links">
+        <a href="#" class="btn">View Demo</a>
+        <a href="#" class="btn">View Source</a>
+      </div>
+  </header>
+{% endmacro %}
+
+
+{% macro blockquote(content, name=none, url=none) %}
+  <blockquote>
+    <p>{{ content }}</p>
+    <footer><cite>
+      -- {{ utility.link_if(name, url) }}
+    </cite></footer>
+  </blockquote>
+{% endmacro %}
