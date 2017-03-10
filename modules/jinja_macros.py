@@ -61,7 +61,9 @@ class CallMacro(Directive):
 
     def run(self):
         template = self.get_macro()
-        html = self.builder.jinja_env.from_string(template).render()
+        html = self.builder.jinja_env.from_string(template).render({
+            'config': self.builder.config,
+        })
         # We need to return a single Raw node with the rendered HTML in it.
         node = nodes.raw(html, html, format='html')
         return [node]
