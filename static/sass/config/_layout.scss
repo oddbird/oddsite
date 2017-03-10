@@ -220,10 +220,10 @@ $grid-columns-large: [col1-start] 1fr [col1-end col2-start] 1fr [col2-end col3-s
   }
 
   @include above('medium-page') {
-    margin-#{$side}: get-extend-calc('extend-medium');
+    margin-#{$side}: get-extend-calc('extend-small');
   }
 
   @include above('large-page') {
-    margin-#{$side}: get-extend-calc('extend-small');
+    margin-#{$side}: get-extend-calc('extend-xsmall');
   }
 }
