@@ -83,16 +83,80 @@ $grid-columns-large: [col1-start] 1fr [col1-end col2-start] 1fr [col2-end col3-s
 }
 
 
-// Extend thing outside its container on both sides
-// ================================================
-// viewport, minus 100%, divided by negative 2
+// Get Extend Calc
+// ===============
+/// Returns a CSS-ready `calc()` function
+/// based on the given viewport width,
+/// minus 100%, divided by negative 2 –
+/// for use extending elements outside their container.
+/// In most cases, use `extend()` or `extend-side()`
+/// to apply properties.
+/// @access private
+/// @see extend
+/// @see extend-side
+/// @parameter {Size} -
+///   Target viewport-width for the extension.
+///   For consistency, options include
+///   `'extend-small'`, `'extend-large'` or `'extend-full'`.
+/// @return {String} -
+///   CSS-ready `calc()` function
+///   for extending elements outside their containers.
+@function get-extend-calc(
+  $size
+) {
+  // Process size, when needed
+  $size: if(type-of($size) != 'number', size($size), $size);
+
+  // viewport width, divided by negative 2, plus 50%
+  @return calc(#{$size / -2} + 50%);
+}
+
+
+// Extend Element
+// ==============
+/// Directly apply width and negative margins
+/// for extending an element outside it's container
+/// to a target viewport width.
+/// For smarter media-queried extending,
+/// use the `extend()` mixin.
+/// @group layout
+/// @see extend
+/// @parameter {Size} -
+///   Target viewport-width for the element.
+///   For consistency, options include
+///   `'extend-small'`, `'extend-large'` or `'extend-full'`.
+/// @example scss -
+///   .foo {
+///     @include extend('extend-small');
+///   }
+@mixin extend-element(
+  $size
+) {
+  // Process size, when needed
+  $size: if(type-of($size) != 'number', size($size), $size);
+  $margins: get-extend-calc($size);
+
+  // output
+  margin-left: $margins;
+  margin-right: $margins;
+  max-width: $size;
+  width: $size;
+}
+
+
+// Extend
+// ======
+/// Extend an element outside its container on both sides,
+/// based on a target viewport width.
 /// @group layout
 /// @link http://codepen.io/mirisuzanne/pen/ded4ae1f55f9b24b2aa0ea4aaac71e47?editors=0100
 ///    Miriam's Sample CodePen
 /// @link http://www.sassmeister.com/gist/96e88c4ecba8716397bd8c6c19887fb0 -
 ///    Sample Sassmeister SCSS/CSS with Accoutrement
-/// @parameter {Size} $extend-base-size - For consistency, options include
-///    'extend-small', 'extend-large' or 'extend-full'
+/// @parameter {Size} $extend-base-size -
+///   Target viewport-width for the element.
+///   For consistency, options include
+///   `'extend-small'`, `'extend-large'` or `'extend-full'`.
 /// @example scss -
 ///   .foo {
 ///     @include extend('extend-small');
@@ -106,37 +170,25 @@ $grid-columns-large: [col1-start] 1fr [col1-end col2-start] 1fr [col2-end col3-s
 @mixin extend(
   $extend-base-size
 ) {
-
   $extend-base-size: size($extend-base-size);
-  $extend-large-size: $extend-base-size - 10vw;
 
   @if ($extend-base-size == size('extend-full')) {
-    margin-left: calc((#{$extend-base-size} - 100%) / -2);
-    margin-right: calc((#{$extend-base-size} - 100%) / -2);
-    max-width: $extend-base-size;
-    width: $extend-base-size;
+    @include extend-element($extend-base-size);
   } @else {
-
     @include above('medium-page') {
-      margin-left: calc((#{$extend-base-size} - 100%) / -2);
-      margin-right: calc((#{$extend-base-size} - 100%) / -2);
-      max-width: $extend-base-size;
-      width: $extend-base-size;
+      @include extend-element($extend-base-size);
     }
 
     @include above('large-page') {
-      margin-left: calc((#{$extend-large-size} - 100%) / -2);
-      margin-right: calc((#{$extend-large-size} - 100%) / -2);
-      max-width: $extend-large-size;
-      width: $extend-large-size;
+      @include extend-element($extend-base-size - 10vw);
     }
   }
 }
 
 
-// Extend thing outside its container on one side only
-// ===================================================
-// viewport, minus 100%, divided by negative 2
+// Extend Side
+// ===========
+/// Extend an element outside its container on one side only.
 /// @group layout
 /// @link http://codepen.io/mirisuzanne/pen/ded4ae1f55f9b24b2aa0ea4aaac71e47?editors=0100
 ///    Miriam's Sample CodePen
@@ -153,15 +205,14 @@ $grid-columns-large: [col1-start] 1fr [col1-end col2-start] 1fr [col2-end col3-s
 @mixin extend-side(
   $side
 ) {
-
   margin-bottom: size('pad');
 
   @include above('small-page') {
     float: $side;
 
-    @if ($side == left) {
+    @if ($side == 'left') {
       padding-right: size('pad');
-    } @elseif ($side == right) {
+    } @elseif ($side == 'right') {
       padding-left: size('pad');
     } @else {
       @error 'Choose left or right silly. How many sides do you have?';
@@ -169,10 +220,10 @@ $grid-columns-large: [col1-start] 1fr [col1-end col2-start] 1fr [col2-end col3-s
   }
 
   @include above('medium-page') {
-    margin-#{$side}: calc((#{size('extend-medium')} - 100%) / -2);
+    margin-#{$side}: get-extend-calc('extend-medium');
   }
 
   @include above('large-page') {
-    margin-#{$side}: calc((#{size('extend-small')} - 100%) / -2);
+    margin-#{$side}: get-extend-calc('extend-small');
   }
 }
