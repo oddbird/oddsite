@@ -35,7 +35,7 @@
     <div class="separator"></div>
   </header>
 
-  <main data-region="main" {% if config.pageclasses %}class="{{ config.pageclasses }}"{% endif %}>
+  <main data-region="main" class="{% if config.pageclasses %}{{ config.pageclasses }} {% endif %}{% if config.image %}has-image{% else %}no-image{% endif %}">
     {% block body %}{% endblock body %}
     {% include 'contact/_cta.html.j2' %}
   </main>
