@@ -39,9 +39,7 @@ description: |
 CoachHub Case Study
 ===================
 
-.. callmacro:: content-macros.j2#header
-  :name: config.client[0].name
-  :tagline: config.client[0].tagline
+.. callmacro:: content-macros.j2#project_header
 
 
 .. raw:: html
@@ -66,11 +64,8 @@ CoachHub Case Study
   </section>
 
 
-.. callmacro:: content-macros.j2#blockquote
-  :content: 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
-      turpis egestas. Vestibulum tortor quamr facilisis. Ut felis. Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacusvel augue laoreet rutrum faucibus dolor auctor. Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.'
-  :name: 'Stacy Kvernmo'
-  :url: 'http://google.com'
+.. callmacro:: content-macros.j2#get_quote
+  :index: 0
 
 
 .. raw:: html
