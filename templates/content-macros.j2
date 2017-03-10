@@ -1,30 +1,50 @@
 {% import 'utility.macros.j2' as utility %}
 
 
-{% macro header(name, tagline, url=none, source=none) %}
-  <header class="project-meta">
-      <h1 class="project-title">{{ name }} <em>{{ tagline }}</em></h1>
-      {% if url or source %}
-        <div class="project-links">
-          {% if url %}
-            <a href="{{ url }}" class="btn">View Site</a>
-          {% endif %}
-          {% if source %}
-            <a href="{{ source }}" class="btn">View Source</a>
-          {% endif %}
-        </div>
-      {% endif %}
-  </header>
+{% macro content_block(content=none, rst=none) %}
+  {% if (rst == none) or (rst == 'start') %}
+    <div class="content-block">
+  {% endif %}
+
+  {% if (rst == none) %}
+    {% set content = content if (content != none) else caller() %}
+    {{ content }}
+  {% endif %}
+
+  {% if (rst == none) or (rst == 'end') %}
+    <div class="content-block">
+  {% endif %}
 {% endmacro %}
 
 
-{% macro blockquote(content=none, name=none, url=none) %}
-  {% set content = content if content else caller() %}
+{% macro icon_block(title, data) %}
+  <section class="icon-blocks-container">
+    <h2>{{ title }}</h2>
+
+    {% for item in data %}
+      <div class="icon-blocks">
+        <div class="icon-block">
+          {{ utility.icon(item.icon) }}
+        </div>
+        <div class="icon-block-text">
+          {% if item.title %}
+            <h3>{{ item.title }}</h3>
+          {% endif %}
+
+          {{ item.text }}
+      </div>
+    {% endfor %}
+
+{% endmacro %}
+
+
+{% macro blockquote(content=none, name=none, url=none, role=none) %}
+  {% set content = content if (content != none) else caller() %}
 
   <blockquote>
     <p>{{ content }}</p>
     <footer><cite>
-      —{{ utility.link_if(name, url) }}
+      —{{ utility.link_if(name, url) }}{% if role %}, {{ role }}{% endif %}
     </cite></footer>
   </blockquote>
 {% endmacro %}
@@ -32,11 +52,52 @@
 
 {% macro get_quote(index=0) %}
   {% set quote = config.quotes[index] %}
-  {{ blockquote(quote.text, quote.credit, quote.url) }}
+  {{ blockquote(quote.text, quote.credit, quote.url, quote.role) }}
 {% endmacro %}
 
 
-{% macro project_header() %}
-  {% set project = config.project[0] %}
-  {{ header(project.name, project.tagline) }}
+{% macro project_header(project=none) %}
+  {% set project = project if project else config.project[0] %}
+
+  <header class="project-meta">
+      <h1 class="project-title">
+        {{ project.name }}
+        <em>{{ project.tagline }}</em>
+      </h1>
+
+      {% if project.url or project.source %}
+        <div class="project-links">
+          {% if url %}
+            <a href="{{ project.url }}" class="btn">View Site</a>
+          {% endif %}
+          {% if source %}
+            <a href="{{ project.source }}" class="btn">View Source</a>
+          {% endif %}
+        </div>
+      {% endif %}
+  </header>
+{% endmacro %}
+
+
+{% macro project_description(project=none, client=none) %}
+  {% set project = project if project else config.project[0] %}
+  {% set client = client if client else config.client[0] %}
+
+  <section class="intro-block">
+    <div class="intro">
+      <div>
+        {{ config.render_summary }}
+      </div>
+
+      <div class="project-tasks">
+        <h3 class="list-title">Our Tasks</h3>
+
+        <ul class="simple">
+          {% for task in config.tasks %}
+            <li>{{ task }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </section>
 {% endmacro %}
