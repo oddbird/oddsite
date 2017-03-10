@@ -1,12 +1,21 @@
 public: yes
-name: 'CoachHub'
+hide_title: true
 location: work
 grid_template: true
-url: 'http://www.orcasinc.com/products/coachhub/'
-years: '2014–2016'
-feature: true
-priority: 'live'
-tagline: 'Integrated Health Coaching for ORCAS'
+# case study:
+project:
+  - name: 'CoachHub'
+    tagline: 'Integrated Health Coaching for ORCAS'
+    url: 'http://www.orcasinc.com/products/coachhub/'
+    years: '2014–2016'
+    feature: true
+    priority: 'live'
+client:
+  - name: 'ORCAS'
+    url: 'http://orcasinc.com'
+quotes:
+  - text: 'OddBird really changed my thinking about how successful outsourcing software development can be.'
+    credit: 'Sara Taillon'
 summary: |
   Summary or description
 description: |
@@ -25,20 +34,14 @@ description: |
   for relapse prevention and escalation of care.
   The product is currently being used
   by the US Military and Coast Guard as an employee health benefit.
-client:
-  name: 'ORCAS'
-  url: 'http://orcasinc.com'
-quote:
-  text: 'OddBird really changed my thinking about how successful outsourcing software development can be.'
-  credit: 'Sara Taillon'
 
 
-.. comment
-
+CoachHub Case Study
+===================
 
 .. callmacro:: content-macros.j2#header
-  :name: 'CoachHub'
-  :tagline: 'Integrated Health Coaching for ORCAS'
+  :name: config.client[0].name
+  :tagline: config.client[0].tagline
 
 
 .. raw:: html
