@@ -30,6 +30,7 @@
 
       @include above('medium-page') {
         grid-column: col3-start / span 1;
+        max-width: size('full-content');
       }
     }
   }
