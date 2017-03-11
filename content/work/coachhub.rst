@@ -71,9 +71,10 @@ summary: |
 CoachHub Case Study
 ===================
 
-.. callmacro: content-macros.j2#project_header
-.. callmacro: content-macros.j2#project_description
-.. callmacro: content-macros.j2#get_quote
+.. callmacro:: content-macros.j2#project_header
+.. callmacro:: content-macros.j2#project_description
+.. callmacro:: content-macros.j2#get_quote
+
 
 .. callmacro:: content-macros.j2#content_block
   :rst: 'start'
@@ -99,9 +100,11 @@ to quickly and easily access one another in dynamic and effective ways.
 .. callmacro:: content-macros.j2#content_block
   :rst: 'end'
 
-.. callmacro: content-macros.j2#icon_block
-..   :title: 'Planning & Discovery Phase'
-..   :data: config.planning
+
+.. callmacro:: content-macros.j2#icon_block
+  :title: 'Planning & Discovery Phase'
+  :data: config.planning
+
 
 .. callmacro:: content-macros.j2#content_block
   :rst: 'start'
