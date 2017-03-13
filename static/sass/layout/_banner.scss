@@ -3,7 +3,8 @@
 
 
 [data-region='banner'] {
-  margin: size('gutter') 0;
+  background-color: color('background');
+  margin-top: size('gutter');
   text-align: center;
 }
 
