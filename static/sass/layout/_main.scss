@@ -2,8 +2,11 @@
 // ==================
 
 [data-region='main'] {
-  padding-top: size('gutter');
   position: relative;
+}
+
+.no-image {
+  padding-top: size('double-gutter');
 }
 
 [data-module='rst-body'] {

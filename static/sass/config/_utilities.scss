@@ -101,3 +101,18 @@
   background-repeat: repeat-x;
   background-size: $size $size;
 }
+
+
+// Text Shadow
+// -----------
+/// Light shadow made for text above (watercolor) images
+/// @group typography
+/// @link http://www.sassmeister.com/gist/069480556e17107cb8d33a9d5db2f5db
+///   Text Outline vs Text-Shadow
+/// @example njk -
+///   <h1 class="title" data-styleguide="text-shadow">
+///     Text Shadow
+///   </h1>
+@mixin text-shadow {
+  text-shadow: -2px -2px 2px color('background');
+}
