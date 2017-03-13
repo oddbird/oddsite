@@ -61,25 +61,3 @@
     }
   }
 }
-
-.hero {
-  + .title {
-    background-image: linear-gradient(50deg, color('background') 85%, transparent 85%);
-    margin-bottom: 1.4rem;
-    padding-right: 10%;
-    padding-top: 0.7rem;
-    position: relative;
-    transform: translateY(-100%);
-    z-index: 1;
-    
-    @include before('') {
-      background: color('background');
-      bottom: 0;
-      display: block;
-      position: absolute;
-      right: 100%;
-      top: 0;
-      width: calc((100vw - 32rem) / 2);
-    }
-  }
-}
