@@ -25,3 +25,44 @@
     }
   }
 }
+
+// Hero Images
+// ===========
+
+.post-header {
+  position: relative;
+}
+
+.hero {
+  max-height: 45vh;
+  overflow: hidden;
+  position: relative;
+
+  @include after('') {
+    @include stretch;
+    pointer-events: none;
+  }
+
+  + .title {
+    background-image: linear-gradient(50deg, color('background') 80%, transparent 80%);
+    bottom: 0;
+    margin-bottom: 0;
+    padding: size('shim') 10% 0 size('gutter');
+    position: absolute;
+    z-index: 1;
+
+    @include before('') {
+      background: color('background');
+      bottom: 0;
+      display: block;
+      position: absolute;
+      right: 100%;
+      top: 0;
+      width: calc((100vw - #{size('small-page')}) / 2);
+    }
+  }
+}
+
+.hero-image {
+  width: 100%;
+}

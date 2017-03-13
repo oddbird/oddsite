@@ -34,10 +34,12 @@
   {% set image = post.config.image[0].src if post.config.image else none %}
 
   {% if image %}
-    {% if '://' in image %}
-      <img src="{{ image }}" class="hero">
-    {% else %}
-      <img src="/static/images/blog/{{ image }}" class="hero">
-    {% endif %}
+    <figure class="hero">
+      {% if '://' in image %}
+        <img src="{{ image }}" class="hero-image">
+      {% else %}
+        <img src="/static/images/blog/{{ image }}" class="hero-image">
+      {% endif %}
+    </figure>
   {% endif %}
 {% endmacro %}

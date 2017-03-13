@@ -27,11 +27,13 @@
 
 {% block body %}
 
-  {{ blog.header_image(ctx) }}
+  <div class="post-header">
+    {{ blog.header_image(ctx) }}
 
-  {%- if not config.hide_title %}
-    {{ rst.html_title }}
-  {%- endif %}
+    {%- if not config.hide_title %}
+      {{ rst.html_title }}
+    {%- endif %}
+  </div>
 
   {% if ctx.pub_date %}
     <div data-module="rst-meta" class="meta">
