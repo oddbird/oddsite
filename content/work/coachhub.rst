@@ -23,14 +23,14 @@ quotes:
     role: 'ORCAS CTO'
 planning:
   - title: 'App Goals'
-    icon: 'goals'
+    icon: 'miriam'
     text: 'For an in-depth understanding of the CoachHub project
       and its place in the market, we created an App Goals document with ORCAS.
       We defined core problems coaches and clients face day-to-day,
       how our software might address these problems,
       and what features would make CoachHub uniquely useful.'
   - title: 'User Profiles'
-    icon: 'profiles'
+    icon: 'miriam'
     text: 'Together, we identified three distinct users —
       health coaches, individual clients,
       and business partners who might purchase CoachHub
@@ -38,7 +38,7 @@ planning:
       and detailed the significantly different motivations
       and needs of each persona.'
   - title: 'User Stories'
-    icon: 'stories'
+    icon: 'miriam'
     text: 'Each user story defined one task that a specific user
       might want to accomplish on CoachHub.
       (“As a Client, I want to schedule an appointment.”)
@@ -48,7 +48,7 @@ planning:
       before we began development, and throughout the project —
       remaining up-to-date and in control of the project cost and scope.'
   - title: 'Data Models'
-    icon: 'data'
+    icon: 'miriam'
     text: 'Placeholder text...'
 summary: |
   Our mobile coaching platform for ORCAS
@@ -72,8 +72,11 @@ CoachHub Case Study
 ===================
 
 .. callmacro:: content-macros.j2#project_header
+  :slug: 'work/coachhub'
 .. callmacro:: content-macros.j2#project_description
+  :slug: 'work/coachhub'
 .. callmacro:: content-macros.j2#get_quote
+  :slug: 'work/coachhub'
 
 
 .. callmacro:: content-macros.j2#content_block
@@ -103,7 +106,8 @@ to quickly and easily access one another in dynamic and effective ways.
 
 .. callmacro:: content-macros.j2#icon_block
   :title: 'Planning & Discovery Phase'
-  :data: config.planning
+  :slug: 'work/coachhub'
+  :data: 'planning'
 
 
 .. callmacro:: content-macros.j2#content_block
