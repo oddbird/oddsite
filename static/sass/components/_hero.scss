@@ -5,54 +5,32 @@
 // -------------------------------------
 
 .no-image {
-  &::before,
-  &::after {
+  @include after('') {
+    background-image: url('../images/multicolor-wash-05x.png');
+    background-position: 60% 0;
     background-repeat: repeat-x;
     display: block;
     position: absolute;
-    top: negative('gutter');
+    top: 0;
     transition: height 1s ease-in-out;
     width: 100%;
     z-index: -1;
 
     @include below('full-content') {
       background-size: cover;
-      height: 270px;
+      height: 300px;
     }
 
     @include above('full-content') {
-      background-size: contain;
-      height: 350px;
-    }
-  }
-
-  @include before('') {
-    background-image: url('../images/blue-pink-wash-05x.png');
-    background-position: -130% 0;
-    opacity: 0.2;
-
-    @include above('full-content') {
-      background-image: url('../images/blue-pink-wash.png');
-      opacity: 0.3;
-    }
-  }
-
-  @include after('') {
-    background-image: url('../images/multicolor-wash-05x.png');
-    background-position: 185% 0;
-    opacity: 0.5;
-
-    @include above ('full-content') {
       background-image: url('../images/multicolor-wash.png');
+      background-size: contain;
+      height: 400px;
     }
   }
-}
 
 
-// Text shadow to first <p> in body so it is more readable above watercolors
-// -------------------------------------------------------------------------
-
-.no-image {
+  // Text shadow to first <p> in body so it is more readable above watercolors
+  // -------------------------------------------------------------------------
   [data-module='rst-body'] {
     > p {
       &:first-child {
