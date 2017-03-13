@@ -1,0 +1,27 @@
+// Watercolors
+// ===========
+
+// Watercolor backgrounds on main region
+// -------------------------------------
+
+.no-image {
+  background-image: url('../images/multicolor-wash-05x.png');
+  background-position: 60% 0;
+  background-repeat: repeat-x;
+  background-size: auto 33vh;
+
+  @include above('full-content') {
+    background-image: url('../images/multicolor-wash.png');
+  }
+
+
+  // Text shadow to first <p> in body so it is more readable above watercolors
+  // -------------------------------------------------------------------------
+  [data-module='rst-body'] {
+    > p {
+      &:first-child {
+        @include text-shadow;
+      }
+    }
+  }
+}

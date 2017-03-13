@@ -27,6 +27,8 @@
 
 {% block body %}
 
+  {{ blog.header_image(ctx) }}
+
   {%- if not config.hide_title %}
     {{ rst.html_title }}
   {%- endif %}
@@ -42,8 +44,6 @@
       {{ blog.tags(ctx.tags) }}
     </div>
   {% endif %}
-
-  {{ blog.header_image(ctx) }}
 
   {{ blog.intro(ctx) }}
 
