@@ -5,8 +5,11 @@ process.env.BROWSERSLIST_CONFIG = './browserslist';
 const AssetsPlugin = require('assets-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const HardSourceWebpackPlugin = require('hard-source-webpack-plugin');
+const nodeObjectHash = require('node-object-hash');
 const path = require('path');
 const sassdoc = require('sassdoc');
+const touch = require('touch');
 const webpack = require('webpack');
 const WebpackShellPlugin = require('webpack-shell-plugin');
 
@@ -18,6 +21,9 @@ let styleOutput = '[name].bundle.css';
 let mediaOutput = '[name].[ext]';
 let devtool = 'cheap-module-inline-source-map';
 let buildScript = 'gulp dev-build';
+
+// Create empty spammers.txt file if none exists
+touch.sync('static/js/spammers.txt');
 
 // Override settings if running in production
 if (process.env.NODE_ENV === 'production') {
@@ -82,6 +88,7 @@ module.exports = {
   // define all the entry point bundles
   entry: {
     app: './init.js',
+    spam_referrals_blocker: './spamReferralsBlocker.js',
     susy_off_canvas: './pages/susy-off-canvas.js',
     app_styles: ['screen.scss'],
     styleguide: ['styleguide.scss'],
@@ -123,7 +130,7 @@ module.exports = {
     }),
     // pull common js and webpack runtime out of all bundles
     new webpack.optimize.CommonsChunkPlugin({
-      name: 'app',
+      name: 'spam_referrals_blocker',
       minChunks: Infinity
     }),
     // pull all CSS out of JS bundles
@@ -145,6 +152,16 @@ module.exports = {
     new CleanWebpackPlugin([outputPath], {
       root: __dirname,
       verbose: true
+    }),
+    new HardSourceWebpackPlugin({
+      cacheDirectory: path.join(__dirname, 'jscache/[confighash]'),
+      recordsPath: path.join(__dirname, 'jscache/[confighash]/records.json'),
+      configHash: (webpackConfig) => nodeObjectHash().hash(webpackConfig),
+      environmentHash: {
+        root: process.cwd(),
+        directories: ['node_modules'],
+        files: ['package.json'],
+      }
     })
   ],
   module: {

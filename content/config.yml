@@ -237,7 +237,7 @@ oss:
         role: 'core developer'
 
   - name: 'True'
-    url: 'http://oddbird.net/true'
+    url: '/true'
     source: 'https://github.com/oddbird/true'
     feature: true
     blog: 'sass-true'
@@ -255,7 +255,7 @@ oss:
         role: 'creator'
 
   - name: 'Sass Accoutrement'
-    url: 'http://oddbird.net/accoutrement'
+    url: '/accoutrement'
     source: 'https://github.com/oddbird/?utf8=%E2%9C%93&query=+only%3Apublic+accoutrement'
     blog: 'accoutrement'
     priority: 'creator'
@@ -826,7 +826,7 @@ events_past:
     who:
       - author: 'carl'
         title: 'Set Your Code Free'
-        slides: 'http://oddbird.net/set-your-code-free-preso/'
+        slides: '/set-your-code-free-preso/'
         video: 'http://pyvideo.org/video/2637/set-your-code-free-releasing-and-maintaining-an'
 
   - venue: 'Sass Bites'
@@ -843,7 +843,7 @@ events_past:
     who:
       - author: 'carl'
         title: 'Python Testing Tools'
-        slides: 'http://oddbird.net/python-testing-tools-preso/'
+        slides: '/python-testing-tools-preso/'
 
   - venue: 'ConFoo'
     url: 'http://confoo.ca/'
@@ -851,7 +851,7 @@ events_past:
     who:
       - author: 'carl'
         title: 'Advanced Python'
-        slides: 'http://oddbird.net/advanced-python-preso/'
+        slides: '/advanced-python-preso/'
 
   - venue: 'NYCSass Meetup'
     url: 'http://www.meetup.com/nyc-sass/events/146898452/'
@@ -891,7 +891,7 @@ events_past:
     who:
       - author: 'carl'
         title: 'Getting Started with Automated Testing'
-        slides: 'http://oddbird.net/start-testing-preso/'
+        slides: '/start-testing-preso/'
         video: 'http://pyvideo.org/video/1674/getting-started-with-automated-testing'
 
   - venue: 'DjangoCon'
@@ -977,15 +977,22 @@ contact:
 
 active_modules: [
   denormalize_config,
+  jinja_macros,
+  typogrify,
+  images,
   tags,
   blog,
   author,
   pages,
   wrap,
-  typogrify,
   hashedassets,
   urls
   ]
+programs:
+  '*.rst': 'rst'
+  '*.jpg': 'image'
+  '*.jpeg': 'image'
+  '*.png': 'image'
 canonical_url: http://oddbird.net/
 template_path: ../templates
 asset_map_path: static/assets.json

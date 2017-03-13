@@ -5,6 +5,7 @@ content/styleguide/
 dev-output/
 node_modules/
 jscov/
+jscache/
 *.DS_Store
 *~
 *.pyc
@@ -15,3 +16,4 @@ output/
 .cache/
 node/
 npm-debug.log
+static/js/spammers.txt

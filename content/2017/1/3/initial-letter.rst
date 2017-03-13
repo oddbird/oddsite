@@ -153,6 +153,6 @@ We'd love to see how you use ``initial-letter`` in your design. Send us a
 message via `Twitter`_ or join our public `Slack channel`_.
 
 
-.. _CSS Grid Layout: http://oddbird.net/2016/09/19/css-grid-layout/
+.. _CSS Grid Layout: /2016/09/19/css-grid-layout/
 .. _Twitter: https://twitter.com/oddbird
 .. _Slack Channel: http://friends.oddbird.net/

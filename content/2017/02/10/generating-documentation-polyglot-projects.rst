@@ -25,13 +25,12 @@ and the resulting documentation guides consistency in how we do things
 in different parts of a project built by different team members
 at different times.
 
-In a typical project, one of our documentation deliverables is a
-living style guide which serves as documentation of the visual elements
-used in the app as well as guidelines for and examples of usage.
-The style guide is built automatically whenever we build the code, and
-it is delivered as a static HTML website which can be served alongside the app.
-For example, the style guide for this website can be found here:
-http://oddbird.net/styleguide/
+In a typical project, one of our documentation deliverables is a living style
+guide which serves as documentation of the visual elements used in the app as
+well as guidelines for and examples of usage. The style guide is built
+automatically whenever we build the code, and it is delivered as a static HTML
+website which can be served alongside the app. For example, the style guide for
+this website can be found `here </styleguide/>`_:
 
 SassDoc
 -------
@@ -129,4 +128,4 @@ tuned!
 If you have thoughts about how to make documentation better, feel free to
 `join the conversation on our Slack channel <http://friends.oddbird.net/>`_.
 Or if you'd like to hire us to help set up a living style guide or other tools,
-please `get in touch <http://oddbird.net/contact/>`_.
+please `get in touch </contact/>`_.
