@@ -5,27 +5,13 @@
 // -------------------------------------
 
 .no-image {
-  @include after('') {
-    background-image: url('../images/multicolor-wash-05x.png');
-    background-position: 60% 0;
-    background-repeat: repeat-x;
-    display: block;
-    position: absolute;
-    top: 0;
-    transition: height 1s ease-in-out;
-    width: 100%;
-    z-index: -1;
+  background-image: url('../images/multicolor-wash-05x.png');
+  background-position: 60% 0;
+  background-repeat: repeat-x;
+  background-size: auto 33vh;
 
-    @include below('full-content') {
-      background-size: cover;
-      height: 300px;
-    }
-
-    @include above('full-content') {
-      background-image: url('../images/multicolor-wash.png');
-      background-size: contain;
-      height: 400px;
-    }
+  @include above('full-content') {
+    background-image: url('../images/multicolor-wash.png');
   }
 
 
