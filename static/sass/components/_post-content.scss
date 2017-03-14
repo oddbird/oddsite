@@ -13,7 +13,7 @@
 
 .title {
   @include font-family('alt');
-  font-size: calc(1.5rem + 1.75vw);
+  font-size: calc(1.325rem + 1.75vw);
   line-height: 1.15;
   margin: size('gutter') auto;
   max-width: size('full-content');

@@ -29,10 +29,18 @@
 // Hero Images
 // ===========
 
+$hero-shape: polygon(0% 0%, 100% 0%, 100% 100%, 55% 100%, 45% 80%, 0% 80%, 0 0);
+$shared-height: 45vh;
+$shared-height-small: 25vh;
+
 .hero {
-  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 55% 100%, 45% 80%, 0% 80%, 0 0);
-  max-height: 45vh;
+  clip-path: $hero-shape;
+  height: $shared-height-small;
   position: relative;
+
+  @include above('full-content') {
+    height: $shared-height;
+  }
 
   @include after('') {
     @include stretch;
@@ -41,10 +49,11 @@
 }
 
 .title-header {
-  margin-top: negative('double-gutter');
+  margin-top: $shared-height-small * -1;
+  padding-top: calc(1rem + 0.25vh);
 
-  @include above('medium-page') { 
-    margin-top: negative('spacer');
+  @include above('full-content') {
+    margin-top: $shared-height * -1;
   }
 
   .title {
@@ -60,12 +69,12 @@
 
 [data-icon='hero-shape'] {
   float: right;
-  height: size('spacer');
-  shape-outside: polygon(100% 0, 100% 100%, 25% 100%, 0 0);
-  width: 55vw;
+  height: $shared-height-small;
+  shape-outside: $hero-shape;
+  width: 100vw;
 
-  @include above('medium-page') {
-    height: auto;
+  @include above('full-content') {
+    height: $shared-height;
   }
 }
 
