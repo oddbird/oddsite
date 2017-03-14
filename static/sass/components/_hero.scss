@@ -30,42 +30,42 @@
 // ===========
 
 .hero {
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 55% 100%, 45% 80%, 0% 80%, 0 0);
   max-height: 45vh;
+  position: relative;
 
   @include after('') {
     @include stretch;
     pointer-events: none;
   }
+}
 
-  + .title {
-    background-image: linear-gradient(50deg, color('background') 80%, transparent 80%);
+.title-header {
+  margin-top: negative('double-gutter');
+
+  @include above('medium-page') { 
+    margin-top: negative('spacer');
+  }
+
+  .title {
     margin-bottom: 0;
-    margin-top: negative('double-gutter');
+    margin-top: 0;
+    max-width: none;
     padding-bottom: 0;
-    padding-right: calc(26% - 6vw);
     padding-top: size('shim');
     position: relative;
     z-index: 1;
+  }
+}
 
-    @include above('medium-page') {
-      background-image: linear-gradient(50deg, color('background') 75%, transparent 75%);
-      margin-top: negative('spacer');
-      padding-top: size('gutter');
-    }
+[data-icon='hero-shape'] {
+  float: right;
+  height: size('spacer');
+  shape-outside: polygon(100% 0, 100% 100%, 25% 100%, 0 0);
+  width: 55vw;
 
-    @include above('large-page') {
-      padding-right: 15%;
-    }
-
-    @include before('') {
-      background: color('background');
-      bottom: 0;
-      display: block;
-      position: absolute;
-      right: 100%;
-      top: 0;
-      width: calc((100vw - #{size('small-page')}) / 2);
-    }
+  @include above('medium-page') {
+    height: auto;
   }
 }
 

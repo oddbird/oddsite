@@ -30,7 +30,10 @@
   {{ blog.header_image(ctx) }}
 
   {%- if not config.hide_title %}
-    {{ rst.html_title }}
+    <div class="title-header">
+      {{ utility.icon('hero-shape') }}
+      {{ rst.html_title }}
+    </div>
   {%- endif %}
 
   <div class="post-container">
