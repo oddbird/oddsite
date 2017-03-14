@@ -10,7 +10,7 @@ project:
     tagline: 'Integrated Health Coaching for ORCAS'
     url: 'http://www.orcasinc.com/products/coachhub/'
     years: '2014–2016'
-    priority: 'live'
+    status: 'live'
 tasks:
   - Product Branding
   - User Experience Design
@@ -75,8 +75,8 @@ CoachHub Case Study
   :slug: 'work/coachhub'
 
 
-.. callmacro:: content-macros.j2#content_block
-  :rst: 'start'
+.. callmacro:: content-macros.j2#rst
+  :tag: 'start'
 
 What They Needed
 ----------------
@@ -96,8 +96,8 @@ In designing the CoachHub web app,
 we aimed to create an inviting space for clients and coaches
 to quickly and easily access one another in dynamic and effective ways.
 
-.. callmacro:: content-macros.j2#content_block
-  :rst: 'end'
+.. callmacro:: content-macros.j2#rst
+  :tag: 'end'
 
 
 .. callmacro:: content-macros.j2#icon_block
@@ -106,8 +106,8 @@ to quickly and easily access one another in dynamic and effective ways.
   :data: 'planning'
 
 
-.. callmacro:: content-macros.j2#content_block
-  :rst: 'start'
+.. callmacro:: content-macros.j2#rst
+  :tag: 'start'
 
 Design and Development Phase
 ----------------------------
@@ -268,5 +268,5 @@ Below is a full width image with the ``.extend-full`` class
   :alt: image alt
   :class: extend-full
 
-.. callmacro:: content-macros.j2#content_block
-  :rst: 'end'
+.. callmacro:: content-macros.j2#rst
+  :tag: 'end'

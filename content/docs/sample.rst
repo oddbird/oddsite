@@ -1,7 +1,5 @@
 public: no
-author: stacy
-tags: [CSS, Code]
-title: This is the H1 Post Title
+tags: [CSS, RST, Code]
 image:
   - src: '2017/initial-letter/drop-caps.jpg'
 quotes:
@@ -110,15 +108,67 @@ Blockquotes and Pullquotes
 
     --- Name of cited source here preceeded by 2 or 3 ``-`` characters
 
+The `pullquote` macro has a similar style,
+but doesn't imply citation from another source:
 
 .. callmacro:: content-macros.j2#pullquote
 
-  A pull-quote is a small selection of text 'pulled out and quoted',
+  A pull-quote is a small selection of text ‘pulled out and quoted’,
   typically in a larger typeface. Pull-quotes are used to attract attention,
   especially in long articles. This does not support rst.
 
+The `get_quotes` macro can be used to access `quotes`,
+in the YAML page metadata.
+This requires a ``:slug:`` argument (see below)
+to access the correct page data.
+You can also pass an ``:index:`` argument
+to select a specific quote by number (1-indexed),
+or set the index to ``none | false``
+to get a list of all quotes (default).
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. callmacro:: content-macros.j2#get_quotes
+  :slug: 'docs/sample'
+
+The YAML data should be structured as follows:
+
+.. code:: yaml
+
+  quotes:
+    - text: 'OddBird really changed my thinking about
+        how successful outsourcing software development can be.'
+      name: 'Sara Taillon'
+      url: 'http://orcasinc.com'
+      role: 'ORCAS CTO'
+    - text: 'Another Great quote.'
+      name: 'Some Client'
+
+
+Using Macros
+~~~~~~~~~~~~
+
+Arbitrary nunjucks/jinja macros can be called
+using the following syntax:
+
+.. code:: rst
+
+  .. callmacro:: path-to-macro-file.j2#macro-name
+    :argument: 'string values must be quoted'
+    :slug: 'path/to/rst-file-for-yaml-access'
+    :python: all_pages|filter_pages('slug', 'eq', slug)|get_page
+
+    Arbitrary caller() content string,
+    not currently parsed as rst.
+
+The ``path-to-macro-file`` is relative
+to the root ``templates/`` directory.
+Check the macro description
+for available arguments, or callers.
+Slugs are often required,
+if you need access to page metadata.
+Slugs are path-names
+relative to the root ``content/`` directory,
+with ``.rst`` removed,
+and no ``/`` at the start or finish.
 
 
 Images
