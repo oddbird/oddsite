@@ -3,10 +3,13 @@
 
 .meta {
   margin-bottom: size('gutter');
+  margin-top: 0;
+  padding-top: size('gutter');
 }
 
 .byline {
   margin-bottom: size('half-shim');
+  margin-top: 0;
 }
 
 .meta-preposition {
