@@ -12,7 +12,7 @@
   {% endif %}
 
   {% if (rst == none) or (rst == 'end') %}
-    <div class="content-block">
+    </div>
   {% endif %}
 {% endmacro %}
 
@@ -47,16 +47,36 @@
 
   <blockquote>
     <p>{{ content }}</p>
-    <footer><cite>
-      —{{ utility.link_if(name, url) }}{% if role %}, {{ role }}{% endif %}
-    </cite></footer>
+
+    {% if name or url or role %}
+      <footer class="attribution">
+      <cite>
+        —{{ utility.link_if(name, url) }}{% if role %}, {{ role }}{% endif %}
+      </cite>
+      </footer>
+    {% endif %}
   </blockquote>
 {% endmacro %}
 
 
-{% macro get_quote(slug, index=0) %}
-  {% set page = all_pages|filter_pages('slug', 'eq', slug)|get_page %}
-  {% set quote = page.config.quotes[index] %}
+{% macro pullquote(content=none) %}
+  {% set content = content if (content != none) else caller() %}
 
-  {{ blockquote(quote.text, quote.credit, quote.url, quote.role) }}
+  <div class="pullquote">
+    <p>{{ content }}</p>
+  </div>
+{% endmacro %}
+
+
+{% macro get_quotes(slug, index=1) %}
+  {% set page = all_pages|filter_pages('slug', 'eq', slug)|get_page %}
+
+  {% if index %}
+    {% set quote = page.config.quotes[index - 1] %}
+    {{ blockquote(quote.text, quote.name, quote.url, quote.role) }}
+  {% else %}
+    {% for quote in page.config.quotes %}
+      {{ blockquote(quote.text, quote.name, quote.url, quote.role) }}
+    {% endfor %}
+  {% endif %}
 {% endmacro %}

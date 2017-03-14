@@ -4,6 +4,14 @@ tags: [CSS, Code]
 title: This is the H1 Post Title
 image:
   - src: '2017/initial-letter/drop-caps.jpg'
+quotes:
+  - text: 'OddBird really changed my thinking about
+      how successful outsourcing software development can be.'
+    name: 'Sara Taillon'
+    url: 'http://orcasinc.com'
+    role: 'ORCAS CTO'
+  - text: 'Another Great quote.'
+    name: 'Some Client'
 summary: |
   This is that short summary that appears on archive pages and as the default
   summary when shared on social media.
@@ -103,15 +111,14 @@ Blockquotes and Pullquotes
     --- Name of cited source here preceeded by 2 or 3 ``-`` characters
 
 
-.. wrap:: div
-  :class: pullquote
+.. callmacro:: content-macros.j2#pullquote
 
-  .. wrap:: p
+  A pull-quote is a small selection of text 'pulled out and quoted',
+  typically in a larger typeface. Pull-quotes are used to attract attention,
+  especially in long articles. This does not support rst.
 
-    A pull-quote is a small selection of text ‘pulled out and quoted’,
-    typically in a larger typeface. Pull-quotes are used to attract attention,
-    especially in long articles.
 
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 Images
@@ -178,7 +185,7 @@ The following example is an image with a class of extend-small:
    :alt: alternate text here
 
 Pellentesque habitant morbi tristique senectus et netus et
-malesuada fames ac turpis egestas. Vestibulum tortor quam. 
+malesuada fames ac turpis egestas. Vestibulum tortor quam.
 Pellentesque habitant morbi tristique senectus et netus et
 malesuada fames ac turpis egestas. Vestibulum tortor quam.
 
@@ -189,7 +196,7 @@ The following example is an image with a class of extend-large:
    :alt: alternate text here
 
 Pellentesque habitant morbi tristique senectus et netus et
-malesuada fames ac turpis egestas. Vestibulum tortor quam. 
+malesuada fames ac turpis egestas. Vestibulum tortor quam.
 Pellentesque habitant morbi tristique senectus et netus et
 malesuada fames ac turpis egestas. Vestibulum tortor quam.
 
@@ -200,7 +207,7 @@ The following example is an image with a class of extend-full:
    :alt: alternate text here
 
 Pellentesque habitant morbi tristique senectus et netus et
-malesuada fames ac turpis egestas. Vestibulum tortor quam. 
+malesuada fames ac turpis egestas. Vestibulum tortor quam.
 Pellentesque habitant morbi tristique senectus et netus et
 malesuada fames ac turpis egestas. Vestibulum tortor quam.
 
@@ -211,7 +218,7 @@ The following example is an image with a class of extend-left:
    :alt: alternate text here
 
 Pellentesque habitant morbi tristique senectus et netus et
-malesuada fames ac turpis egestas. Vestibulum tortor quam. 
+malesuada fames ac turpis egestas. Vestibulum tortor quam.
 Pellentesque habitant morbi tristique senectus et netus et
 malesuada fames ac turpis egestas. Vestibulum tortor quam.
 
@@ -222,7 +229,7 @@ The following example is an image with a class of extend-right:
    :alt: alternate text here
 
 Pellentesque habitant morbi tristique senectus et netus et
-malesuada fames ac turpis egestas. Vestibulum tortor quam. 
+malesuada fames ac turpis egestas. Vestibulum tortor quam.
 Pellentesque habitant morbi tristique senectus et netus et
 malesuada fames ac turpis egestas. Vestibulum tortor quam.
 

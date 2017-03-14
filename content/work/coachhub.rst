@@ -19,7 +19,7 @@ tasks:
 quotes:
   - text: 'OddBird really changed my thinking about
       how successful outsourcing software development can be.'
-    credit: 'Sara Taillon'
+    name: 'Sara Taillon'
     role: 'ORCAS CTO'
 planning:
   - title: 'App Goals'
