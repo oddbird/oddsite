@@ -71,11 +71,7 @@ summary: |
 CoachHub Case Study
 ===================
 
-.. callmacro:: content-macros.j2#project_header
-  :slug: 'work/coachhub'
-.. callmacro:: content-macros.j2#project_description
-  :slug: 'work/coachhub'
-.. callmacro:: content-macros.j2#get_quote
+.. callmacro:: projects/case-study.macros.j2#front_matter
   :slug: 'work/coachhub'
 
 
@@ -86,7 +82,7 @@ What They Needed
 ----------------
 
 ORCAS partnered with OddBird to build a custom,
-mobile-responsive, web application —
+mobile-responsive web application —
 a hub to connect clients with health coaches
 for easy access to personalized wellness guidance and support.
 The new software needed to fit with ORCAS’s existing suite of apps,
