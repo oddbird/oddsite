@@ -30,16 +30,23 @@
 // ===========
 
 $hero-shape: polygon(0% 0%, 100% 0%, 100% 100%, 55% 100%, 45% 80%, 0% 80%, 0 0);
-$shared-height: 45vh;
+$hero-shape-small: polygon(0% 0%, 100% 0%, 100% 100%, 75% 100%, 65% 80%, 0% 80%, 0 0);
+$shared-height-large: 45vh;
+$shared-height-medium: 35vh;
 $shared-height-small: 25vh;
 
 .hero {
-  clip-path: $hero-shape;
+  clip-path: $hero-shape-small;
   height: $shared-height-small;
   position: relative;
 
-  @include above('full-content') {
-    height: $shared-height;
+  @include above('medium-page') {
+    clip-path: $hero-shape;
+    height: $shared-height-medium;
+  }
+
+  @include above('large-page') {
+    height: $shared-height-large;
   }
 
   @include after('') {
@@ -52,8 +59,12 @@ $shared-height-small: 25vh;
   margin-top: $shared-height-small * -1;
   padding-top: calc(1rem + 0.25vh);
 
-  @include above('full-content') {
-    margin-top: $shared-height * -1;
+  @include above('medium-page') {
+    margin-top: $shared-height-medium * -1;
+  }
+
+  @include above('large-page') {
+    margin-top: $shared-height-large * -1;
   }
 
   .title {
@@ -70,11 +81,16 @@ $shared-height-small: 25vh;
 [data-icon='hero-shape'] {
   float: right;
   height: $shared-height-small;
-  shape-outside: $hero-shape;
+  shape-outside: $hero-shape-small;
   width: 100vw;
 
-  @include above('full-content') {
-    height: $shared-height;
+  @include above('medium-page') {
+    height: $shared-height-medium;
+    shape-outside: $hero-shape;
+  }
+
+  @include above('large-page') {
+    height: $shared-height-large;
   }
 }
 
