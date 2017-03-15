@@ -1,4 +1,4 @@
-{% import 'content-macros.j2' as content %}
+{% import 'content.macros.j2' as content %}
 
 
 {% macro header(slug=none, page=none) %}
@@ -13,10 +13,10 @@
 
       {% if project.url or project.source %}
         <div class="project-links">
-          {% if url %}
+          {% if project.url %}
             <a href="{{ project.url }}" class="btn">View Site</a>
           {% endif %}
-          {% if source %}
+          {% if project.source %}
             <a href="{{ project.source }}" class="btn">View Source</a>
           {% endif %}
         </div>

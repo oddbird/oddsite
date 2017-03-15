@@ -2,6 +2,8 @@ public: yes
 hide_title: true
 location: work
 grid_template: true
+image:
+  - src: '2016/coachhub/feature.jpg'
 client:
   - name: 'ORCAS'
     url: 'http://orcasinc.com'
@@ -76,7 +78,7 @@ CoachHub Case Study
   :slug: 'work/coachhub'
 
 
-.. callmacro:: content-macros.j2#rst
+.. callmacro:: content.macros.j2#rst
   :tag: 'start'
 
 What They Needed
@@ -97,17 +99,17 @@ In designing the CoachHub web app,
 we aimed to create an inviting space for clients and coaches
 to quickly and easily access one another in dynamic and effective ways.
 
-.. callmacro:: content-macros.j2#rst
+.. callmacro:: content.macros.j2#rst
   :tag: 'end'
 
 
-.. callmacro:: content-macros.j2#icon_block
+.. callmacro:: content.macros.j2#icon_block
   :title: 'Planning & Discovery Phase'
   :slug: 'work/coachhub'
   :data: 'planning'
 
 
-.. callmacro:: content-macros.j2#rst
+.. callmacro:: content.macros.j2#rst
   :tag: 'start'
 
 Design and Development Phase
@@ -269,5 +271,5 @@ Below is a full width image with the ``.extend-full`` class
   :alt: image alt
   :class: extend-full
 
-.. callmacro:: content-macros.j2#rst
+.. callmacro:: content.macros.j2#rst
   :tag: 'end'

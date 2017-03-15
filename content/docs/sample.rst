@@ -111,7 +111,7 @@ Blockquotes and Pullquotes
 The `pullquote` macro has a similar style,
 but doesn't imply citation from another source:
 
-.. callmacro:: content-macros.j2#pullquote
+.. callmacro:: content.macros.j2#pullquote
 
   A pull-quote is a small selection of text ‘pulled out and quoted’,
   typically in a larger typeface. Pull-quotes are used to attract attention,
@@ -126,7 +126,7 @@ to select a specific quote by number (1-indexed),
 or set the index to ``none | false``
 to get a list of all quotes (default).
 
-.. callmacro:: content-macros.j2#get_quotes
+.. callmacro:: content.macros.j2#get_quotes
   :slug: 'docs/sample'
 
 The YAML data should be structured as follows:

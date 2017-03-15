@@ -26,7 +26,7 @@ my-blocks:
 Grid Template
 =============
 
-.. callmacro:: content-macros.j2#rst
+.. callmacro:: content.macros.j2#rst
   :tag: 'start'
 
 To use the optional grid-template,
@@ -47,7 +47,7 @@ Icon Blocks
 -----------
 
 To create blocks of content with out-dented icons,
-we provide a ``content-macros.j2#icon_block`` macro,
+we provide a ``content.macros.j2#icon_block`` macro,
 that uses YAML data from the page header.
 This should be used outside the ``rst`` wrapper macro.
 You can have more than one group of icons, but each
@@ -66,23 +66,23 @@ could have a second titled ``best-blocks``.
 
 .. code:: rst
 
-  .. callmacro:: content-macros.j2#icon_block
+  .. callmacro:: content.macros.j2#icon_block
     :title: 'Icon Block Sample (title uses h2)'
     :slug: 'docs/grid-template'
     :data: 'my-blocks'
 
 
-.. callmacro:: content-macros.j2#rst
+.. callmacro:: content.macros.j2#rst
   :tag: 'end'
 
 
-.. callmacro:: content-macros.j2#icon_block
+.. callmacro:: content.macros.j2#icon_block
   :title: 'Icon Block Sample (title uses h2)'
   :slug: 'docs/grid-template'
   :data: 'my-blocks'
 
 
-.. callmacro:: content-macros.j2#rst
+.. callmacro:: content.macros.j2#rst
   :tag: 'start'
 
 
@@ -138,5 +138,5 @@ a standard page-``summary`` and a list of ``tasks``:
     - Mobile-Responsive Styles
 
 
-.. callmacro:: content-macros.j2#rst
+.. callmacro:: content.macros.j2#rst
   :tag: 'end'

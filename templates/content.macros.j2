@@ -1,6 +1,10 @@
 {% import 'utility.macros.j2' as utility %}
 
 
+{#
+  RST Content Blocks
+  ------------------
+#}
 {% macro rst(content=none, tag=none) %}
   {% if (tag == none) or (tag == 'start') %}
     <div class="content-block">
@@ -17,6 +21,10 @@
 {% endmacro %}
 
 
+{#
+  Icon Blocks
+  -----------
+#}
 {% macro icon_block(title, slug, data) %}
   {% set page = all_pages|filter_pages('slug', 'eq', slug)|get_page %}
   {% set data = page.config[data] %}
@@ -42,6 +50,10 @@
 {% endmacro %}
 
 
+{#
+  Quotes
+  ------
+#}
 {% macro blockquote(content=none, name=none, url=none, role=none) %}
   {% set content = content if (content != none) else caller() %}
 
