@@ -20,6 +20,7 @@ quotes:
   - text: 'OddBird really changed my thinking about
       how successful outsourcing software development can be.'
     name: 'Sara Taillon'
+    url: 'http://google.com'
     role: 'ORCAS CTO'
 planning:
   - title: 'App Goals'
