@@ -50,12 +50,16 @@ To create blocks of content with out-dented icons,
 we provide a ``content-macros.j2#icon_block`` macro,
 that uses YAML data from the page header.
 This should be used outside the ``rst`` wrapper macro.
+You can have more than one group of icons, but each
+would have their own unique group name. For instance,
+the ``my-blocks`` example below is one group, and you 
+could have a second titled ``best-blocks``.
 
 .. code:: yaml
 
   my-blocks:
-    - title: 'You can add subtitles'
-      icon: 'miriam'
+    - title: 'You can add subtitles are wrapped in an h3'
+      icon: 'filename-of-icon-without.svg'
       text: 'Icon-block data must be structured as YAML...'
     - icon: 'miriam'
       text: 'Titles are optional, but icon and text are required...'
@@ -63,7 +67,7 @@ This should be used outside the ``rst`` wrapper macro.
 .. code:: rst
 
   .. callmacro:: content-macros.j2#icon_block
-    :title: 'Icon Block Sample'
+    :title: 'Icon Block Sample is the H2'
     :slug: 'docs/grid-template'
     :data: 'my-blocks'
 
@@ -73,7 +77,7 @@ This should be used outside the ``rst`` wrapper macro.
 
 
 .. callmacro:: content-macros.j2#icon_block
-  :title: 'Icon Block Sample'
+  :title: 'Icon Block Sample is the H2'
   :slug: 'docs/grid-template'
   :data: 'my-blocks'
 
