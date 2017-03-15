@@ -34,17 +34,14 @@ spaces.
     --Person Name
 ```
 
-- If you want to highlight something and make it look similar to a 
+- If you want to highlight something and make it look similar to a
 blockquote, but do not have a source, you can use the following:
 
 ```nohighlight
-.. wrap:: div
-  :class: pullquote
+.. callmacro:: content-macros.j2#pullquote
 
-  .. wrap:: p
-
-    This is the best piece of content. It isn't quoting an external source,
-    but the post is making an AWESOME point and I want to make it shine!
+  This is the best piece of content. It isn't quoting an external source,
+  but the post is making an AWESOME point and I want to make it shine!
 ```
 
 Branding
@@ -87,7 +84,7 @@ Images
 for screen readers and search engines. Alt text should describe what is in
 the image.
 - We have some utility classes for images and figures and will be adding more
-soon. As of March 2, 2017 you may use the following:
+soon. Currently, you can use the following:
   - ``size-quarter``
   - ``size-half``
   - ``size-full``
@@ -96,12 +93,12 @@ soon. As of March 2, 2017 you may use the following:
 
 *Note:* If declaring a size, it remains this size regardless of screen size.
 
-The following utility classes will push or expand an image (or item) 
+The following utility classes will push or expand an image (or item)
 outside of its parent container:
   - ``extend-left`` - extends slightly outside of its container to the left
   - ``extend-right`` - extends slightly outside of its container to the right
-  - ``extend-small`` - extends a small amount past its container on both sides 
-  - ``extend-large`` - extends a large amount past its container on both sides 
+  - ``extend-small`` - extends a small amount past its container on both sides
+  - ``extend-large`` - extends a large amount past its container on both sides
   - ``extend-full`` - extends from left to right edges of screen
 
 If using one of the above ``extend-*`` utility classes, alignment is built in.

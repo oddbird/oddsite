@@ -36,23 +36,20 @@ of typing as fast as I could,
 and hoping to sound intelligent.
 Thanks for asking the questions!
 
-.. wrap:: div
-  :class: pullquote
+  To be clear:
+  now that we have border-box sizing,
+  grid math can be much simpler.
+  Complex math is only required
+  if you are using margin-based gutters.
+  Move your gutters into padding,
+  and the math is simple.
+  That's why I don't use Susy
+  (or any grid system)
+  much any more.
+  ``percentage(1/5)`` works great in Sass -
+  and flexbox takes care of the rest.
 
-  .. wrap:: p
-
-    To be clear:
-    now that we have border-box sizing,
-    grid math can be much simpler.
-    Complex math is only required
-    if you are using margin-based gutters.
-    Move your gutters into padding,
-    and the math is simple.
-    That's why I don't use Susy
-    (or any grid system)
-    much any more.
-    ``percentage(1/5)`` works great in Sass -
-    and flexbox takes care of the rest.
+  ---`Miriam Suzanne <https://www.sitepoint.com/community/t/live-q-a-miriam-suzanne-on-susy-and-the-need-for-toolkits-on-18th-aug-2pm-pst/232664>`_
 
 |btn-link|
 

@@ -37,9 +37,9 @@ accoutrement-layout@2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/accoutrement-layout/-/accoutrement-layout-2.1.0.tgz#e0eaf47e4b810c5912e039855dec581610171c1f"
 
-accoutrement-scale@3.0.0-alpha.1:
-  version "3.0.0-alpha.1"
-  resolved "https://registry.yarnpkg.com/accoutrement-scale/-/accoutrement-scale-3.0.0-alpha.1.tgz#68ec3db75b17bee292023b533b89bb181d2d86be"
+accoutrement-scale@3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/accoutrement-scale/-/accoutrement-scale-3.0.0.tgz#a25e90f8f8154dba8967613c5ecb44fe6c9ce56b"
 
 accoutrement-type@2.1.0:
   version "2.1.0"
