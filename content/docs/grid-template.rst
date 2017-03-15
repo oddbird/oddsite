@@ -9,7 +9,7 @@ project:
     years: '2008–2016'
     status: 'live'
 my-blocks:
-  - title: 'You can add subtitles'
+  - title: 'Optional subtitles (uses h3)'
     icon: 'miriam'
     text: 'Icon-block data must be structured as YAML
       at the start of a document.
@@ -52,22 +52,22 @@ that uses YAML data from the page header.
 This should be used outside the ``rst`` wrapper macro.
 You can have more than one group of icons, but each
 would have their own unique group name. For instance,
-the ``my-blocks`` example below is one group, and you 
+the ``my-blocks`` example below is one group, and you
 could have a second titled ``best-blocks``.
 
 .. code:: yaml
 
   my-blocks:
-    - title: 'You can add subtitles are wrapped in an h3'
-      icon: 'filename-of-icon-without.svg'
-      text: 'Icon-block data must be structured as YAML...'
+    - title: 'Optional subtitles (uses h3)'
+      icon: 'filename-of-icon-without-svg-extension'
+      text: 'Icon-block data must be structured as YAML.'
     - icon: 'miriam'
-      text: 'Titles are optional, but icon and text are required...'
+      text: 'Titles are optional, but icon and text are required.'
 
 .. code:: rst
 
   .. callmacro:: content-macros.j2#icon_block
-    :title: 'Icon Block Sample is the H2'
+    :title: 'Icon Block Sample (title uses h2)'
     :slug: 'docs/grid-template'
     :data: 'my-blocks'
 
@@ -77,7 +77,7 @@ could have a second titled ``best-blocks``.
 
 
 .. callmacro:: content-macros.j2#icon_block
-  :title: 'Icon Block Sample is the H2'
+  :title: 'Icon Block Sample (title uses h2)'
   :slug: 'docs/grid-template'
   :data: 'my-blocks'
 
