@@ -19,6 +19,10 @@
   max-width: size('full-content');
   padding: 0 size('gutter');
 
+  @include above('large-page') {
+    font-size: size('title-max'); 
+  }
+
   &:first-child {
     @include text-shadow;
   }

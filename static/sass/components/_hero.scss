@@ -56,6 +56,10 @@
       padding-right: calc(23% - 3vw);
       padding-top: size('gutter');
     }
+
+    @include above('large-page') {
+      padding-right: calc(24% - 7vw);
+    }
   
     @include before('') {
       background: color('background');
