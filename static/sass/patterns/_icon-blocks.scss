@@ -37,11 +37,8 @@
   margin-top: 1.5rem; // match margin from h2
 
   @supports not (display: grid) {
+    flex: 0 0 auto;
     padding-right: size('shim');
-
-    @include below('medium-page') {
-      min-width: 15vw;
-    }
   }
 
   @supports (display: grid) {
@@ -61,6 +58,12 @@
 }
 
 .icon-block-text {
+  p {
+    &:first-child {
+      margin-top: 1.5rem; // match margin from h2
+    }
+  }
+
   @supports (display: grid) {
     grid-column: col2-start / -1;
 

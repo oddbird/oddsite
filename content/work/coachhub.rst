@@ -1,15 +1,56 @@
 public: yes
-name: 'CoachHub'
+hide_title: true
 location: work
 grid_template: true
-url: 'http://www.orcasinc.com/products/coachhub/'
-years: '2014–2016'
-feature: true
-priority: 'live'
-tagline: 'Integrated Health Coaching for ORCAS'
+client:
+  - name: 'ORCAS'
+    url: 'http://orcasinc.com'
+project:
+  - name: 'CoachHub'
+    tagline: 'Integrated Health Coaching for ORCAS'
+    url: 'http://www.orcasinc.com/products/coachhub/'
+    years: '2014–2016'
+    status: 'live'
+tasks:
+  - Product Branding
+  - User Experience Design
+  - Project Architecture
+  - Mobile-Responsive Styles
+quotes:
+  - text: 'OddBird really changed my thinking about
+      how successful outsourcing software development can be.'
+    name: 'Sara Taillon'
+    role: 'ORCAS CTO'
+planning:
+  - title: 'App Goals'
+    icon: 'miriam'
+    text: 'For an in-depth understanding of the CoachHub project
+      and its place in the market, we created an App Goals document with ORCAS.
+      We defined core problems coaches and clients face day-to-day,
+      how our software might address these problems,
+      and what features would make CoachHub uniquely useful.'
+  - title: 'User Profiles'
+    icon: 'miriam'
+    text: 'Together, we identified three distinct users —
+      health coaches, individual clients,
+      and business partners who might purchase CoachHub
+      for an employee benefits package —
+      and detailed the significantly different motivations
+      and needs of each persona.'
+  - title: 'User Stories'
+    icon: 'miriam'
+    text: 'Each user story defined one task that a specific user
+      might want to accomplish on CoachHub.
+      (“As a Client, I want to schedule an appointment.”)
+      Using Pivotal Tracker we listed each user story and
+      provided itemized story estimates.
+      This allowed ORCAS to add, prioritized, and remove stories
+      before we began development, and throughout the project —
+      remaining up-to-date and in control of the project cost and scope.'
+  - title: 'Data Models'
+    icon: 'miriam'
+    text: 'Placeholder text...'
 summary: |
-  Summary or description
-description: |
   Our mobile coaching platform for ORCAS
   integrates with their suite of self-management tools,
   as well as other vetted third-party apps —
@@ -25,218 +66,207 @@ description: |
   for relapse prevention and escalation of care.
   The product is currently being used
   by the US Military and Coast Guard as an employee health benefit.
-client:
-  name: 'ORCAS'
-  url: 'http://orcasinc.com'
-quote:
-  text: 'OddBird really changed my thinking about how successful outsourcing software development can be.'
-  credit: 'Sara Taillon'
 
 
-.. comment
+CoachHub Case Study
+===================
 
+.. callmacro:: projects/case-study.macros.j2#front_matter
+  :slug: 'work/coachhub'
 
-.. callmacro:: content-macros.j2#header
-  :name: 'CoachHub'
-  :tagline: 'Integrated Health Coaching for ORCAS'
 
+.. callmacro:: content-macros.j2#rst
+  :tag: 'start'
 
-.. raw:: html
+What They Needed
+----------------
 
+ORCAS partnered with OddBird to build a custom,
+mobile-responsive web application —
+a hub to connect clients with health coaches
+for easy access to personalized wellness guidance and support.
+The new software needed to fit with ORCAS’s existing suite of apps,
+especially MoodHacker,
+a tool for self-management of emotional well-being.
 
-  <section class="intro-block">
-    <div class="intro">
-      <p><strong>Pellentesque habitant morbi tristique senectus et netus et malesuada</strong> <a href="http://orcas.com">ORCAS</a> -- ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. in turpis pulvinar facilisis. Ut felis. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. in turpis pulvinar facilisis. Ut felis. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. in turpis pulvinar facilisis. Ut felis.</p>
+Studies show that telephonic health coaching can be effective,
+but ORCAS identified several barriers keeping clients
+from getting the right level of support when they need it.
+In designing the CoachHub web app,
+we aimed to create an inviting space for clients and coaches
+to quickly and easily access one another in dynamic and effective ways.
+
+.. callmacro:: content-macros.j2#rst
+  :tag: 'end'
 
-      <div class="project-tasks">
-        <h3 class="list-title">Our Tasks</h3>
+
+.. callmacro:: content-macros.j2#icon_block
+  :title: 'Planning & Discovery Phase'
+  :slug: 'work/coachhub'
+  :data: 'planning'
 
-        <ul class="simple">
-          <li>List item</li>
-          <li>List item</li>
-          <li>List item</li>
-          <li>Item List item</li>
-          <li>List item</li>
-        </ul>
-      </div>
-    </div>
-  </section>
 
+.. callmacro:: content-macros.j2#rst
+  :tag: 'start'
+
+Design and Development Phase
+----------------------------
+
+Header Level 3
+~~~~~~~~~~~~~~
+
+.. image:: http://dummyimage.com/250x300/777777/ffffff.png
+   :alt: image alt text
+   :class: extend-left
 
-.. callmacro:: content-macros.j2#blockquote
-  :content: 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
-      turpis egestas. Vestibulum tortor quamr facilisis. Ut felis. Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacusvel augue laoreet rutrum faucibus dolor auctor. Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.'
-  :name: 'Stacy Kvernmo'
-  :url: 'http://google.com'
+This image has a class of extend-left. Vestibulum tortor quamr facilisis.
+Ut felis. Nullam id dolor id nibh ultricies vehicula ut id elit.
+Vivamus sagittis lacusvel augue laoreet rutrum faucibus dolor auctor.
 
-
-.. raw:: html
-
-  <section id="planning-and-discovery-phase" class="icon-blocks-container">
-    <h2>Planning and Discovery Phase</h2>
-
-    <div class="icon-blocks">
-      <div class="icon-block">
-
-
-.. callmacro:: utility.macros.j2#icon
-  :name: 'stacy'
-
-
-.. raw:: html
-
-      </div>
-
-      <div class="icon-block-text">
-        <h3>User Stories</h3>
-        <p>If you'd like to learn how to create parallax scrolling for your website, Paul Lewis' guide to performant parallaxing is the perfect place to start.</p>
-      </div>
-    </div>
-
-    <div class="icon-blocks">
-      <div class="icon-block">
-
-
-.. callmacro:: utility.macros.j2#icon
-  :name: 'stacy'
-
-
-.. raw:: html
-
-      </div>
-
-      <div class="icon-block-text">
-        <h3>User Stories</h3>
-        <p>If you'd like to learn how to create parallax scrolling for your website, Paul Lewis' guide to performant parallaxing is the perfect place to start.</p>
-      </div>
-    </div>
-
-    <div class="icon-blocks">
-      <div class="icon-block">
-
-
-.. callmacro:: utility.macros.j2#icon
-  :name: 'stacy'
-
-
-.. raw:: html
-
-      </div>
-
-      <div class="icon-block-text">
-        <h3>User Stories</h3>
-        <p>If you'd like to learn how to create parallax scrolling for your website, Paul Lewis' guide to performant parallaxing is the perfect place to start.</p>
-      </div>
-    </div>
-
-    <div class="icon-blocks">
-      <div class="icon-block">
-
-
-.. callmacro:: utility.macros.j2#icon
-  :name: 'stacy'
-
-
-.. raw:: html
-
-      </div>
-
-      <div class="icon-block-text">
-        <h3>User Stories</h3>
-        <p>If you'd like to learn how to create parallax scrolling for your website, Paul Lewis' guide to performant parallaxing is the perfect place to start.</p>
-      </div>
-    </div>
-  </section>
-
-  <div class="content-block">
-    <section id="design-and-development-phase">
-      <h2>Design and Development Phase</h2>
-      <h3>Header Level 3</h3>
-
-      <img src="http://dummyimage.com/250x300/777777/ffffff.png"
-           alt="image alt"
-           class="extend-left">
-
-      <p>This image has a class of extend-left. Vestibulum tortor quamr facilisis. Ut felis. Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacusvel augue laoreet rutrum faucibus dolor auctor.</p>
-
-      <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
-      turpis egestas. Vestibulum tortor quamr facilisis. Ut felis. Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacusvel augue laoreet rutrum faucibus dolor auctor. Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
-
-      <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
-      turpis egestas. Vestibulum tortor quamr facilisis. Ut felis. Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacusvel augue laoreet rutrum faucibus dolor auctor. Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
-
-      <figure>
-        <img class="extend-small" src="https://dummyimage.com/1000x9:6">
-        <figcaption>This is an image with the extend-small class</figcaption>
-      </figure>
-
-      <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
-      turpis egestas. Vestibulum tortor quamr facilisis. Ut felis. Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacusvel augue laoreet rutrum faucibus dolor auctor. Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
-
-      <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
-      turpis egestas. Vestibulum tortor quamr facilisis. Ut felis. Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacusvel augue laoreet rutrum faucibus dolor auctor. Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
-
-
-      <h3>Brand Identity</h3>
-
-      <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
-      turpis egestas. Vestibulum tortor quamr facilisis. Ut felis. Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacusvel augue laoreet rutrum faucibus dolor auctor. Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
-
-      <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
-      turpis egestas. Vestibulum tortor quamr facilisis. Ut felis. Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacusvel augue laoreet rutrum faucibus dolor auctor. Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
-
-      <figure>
-        <img class="extend-large" src="http://dummyimage.com/1600x250/777777/777777.png"
-             href="http://google.com">
-
-        <figcaption>This is an image with the extend-large class</figcaption>
-      </figure>
-
-      <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
-      turpis egestas. Vestibulum tortor quamr facilisis. Ut felis. Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacusvel augue laoreet rutrum faucibus dolor auctor. Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
-
-      <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
-      turpis egestas. Vestibulum tortor quamr facilisis. Ut felis. Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacusvel augue laoreet rutrum faucibus dolor auctor. Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
-
-      <figure>
-        <img src="http://dummyimage.com/1100x350/777777/777777.png"
-             class="extend-small">
-        <figcaption>This is an image with the extend-small class</figcaption>
-      </figure>
-
-
-      <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
-      turpis egestas. Vestibulum tortor quamr facilisis. Ut felis. Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacusvel augue laoreet rutrum faucibus dolor auctor. Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
-
-      <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
-      turpis egestas. Vestibulum tortor quamr facilisis. Ut felis. Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacusvel augue laoreet rutrum faucibus dolor auctor. Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
-    </section>
-
-    <section id="section-name-here">
-      <h2>Responsive &amp; Interactive UX Design</h2>
-
-      <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
-      turpis egestas. Vestibulum tortor quamr facilisis. Ut felis. Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacusvel augue laoreet rutrum faucibus dolor auctor. Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
-
-      <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
-      turpis egestas. Vestibulum tortor quamr facilisis. Ut felis. Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacusvel augue laoreet rutrum faucibus dolor auctor. Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
-
-      <img src="http://dummyimage.com/200x200/777777/ffffff.png"
-          alt="image alt"
-          class="extend-right">
-
-      <p>This image has a class of extend-right. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
-      turpis egestas. Vestibulum tortor quamr facilisis. Ut felis. Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacusvel augue laoreet rutrum faucibus dolor auctor. Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
-      <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
-      turpis egestas. Vestibulum tortor quamr facilisis. Ut felis. Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacusvel augue laoreet rutrum faucibus dolor auctor. Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
-
-      <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
-      turpis egestas. Vestibulum tortor quamr facilisis. Ut felis. Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacusvel augue laoreet rutrum faucibus dolor auctor. Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
-
-      <h3>Below is a full width image with the .extend-full class</h3>
-
-      <img src="http://dummyimage.com/1600x200/777777/ffffff.png"
-          class="extend-full"
-          alt="image alt">
-    </section>
-  </div>
+Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
+turpis egestas. Vestibulum tortor quamr facilisis. Ut felis.
+Nullam id dolor id nibh ultricies vehicula ut id elit.
+Vivamus sagittis lacusvel augue laoreet rutrum faucibus dolor auctor.
+Nullam id dolor id nibh ultricies vehicula ut id elit.
+Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
+
+Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
+turpis egestas. Vestibulum tortor quamr facilisis. Ut felis.
+Nullam id dolor id nibh ultricies vehicula ut id elit.
+Vivamus sagittis lacusvel augue laoreet rutrum faucibus dolor auctor.
+Nullam id dolor id nibh ultricies vehicula ut id elit.
+Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
+
+.. figure:: https://dummyimage.com/1000x9:6
+   :class: extend-small
+   :alt: map to buried treasure
+
+   This is an image with the extend-small class.
+
+Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
+turpis egestas. Vestibulum tortor quamr facilisis. Ut felis.
+Nullam id dolor id nibh ultricies vehicula ut id elit.
+Vivamus sagittis lacusvel augue laoreet rutrum faucibus dolor auctor.
+Nullam id dolor id nibh ultricies vehicula ut id elit.
+Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
+
+Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
+turpis egestas. Vestibulum tortor quamr facilisis. Ut felis.
+Nullam id dolor id nibh ultricies vehicula ut id elit.
+Vivamus sagittis lacusvel augue laoreet rutrum faucibus dolor auctor.
+Nullam id dolor id nibh ultricies vehicula ut id elit.
+Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
+
+
+Brand Identity
+~~~~~~~~~~~~~~
+
+Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
+turpis egestas. Vestibulum tortor quamr facilisis. Ut felis.
+Nullam id dolor id nibh ultricies vehicula ut id elit.
+Vivamus sagittis lacusvel augue laoreet rutrum faucibus dolor auctor.
+Nullam id dolor id nibh ultricies vehicula ut id elit.
+Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
+
+Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
+turpis egestas. Vestibulum tortor quamr facilisis. Ut felis.
+Nullam id dolor id nibh ultricies vehicula ut id elit.
+Vivamus sagittis lacusvel augue laoreet rutrum faucibus dolor auctor.
+Nullam id dolor id nibh ultricies vehicula ut id elit.
+Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
+
+.. figure:: http://dummyimage.com/1600x250/777777/777777.png
+   :class: extend-large
+   :alt: map to buried treasure
+   :target: http://google.com
+
+   This is an image with the extend-large class.
+
+
+Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
+turpis egestas. Vestibulum tortor quamr facilisis. Ut felis.
+Nullam id dolor id nibh ultricies vehicula ut id elit.
+Vivamus sagittis lacusvel augue laoreet rutrum faucibus dolor auctor.
+Nullam id dolor id nibh ultricies vehicula ut id elit.
+Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
+
+Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
+turpis egestas. Vestibulum tortor quamr facilisis. Ut felis.
+Nullam id dolor id nibh ultricies vehicula ut id elit.
+Vivamus sagittis lacusvel augue laoreet rutrum faucibus dolor auctor.
+Nullam id dolor id nibh ultricies vehicula ut id elit.
+Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
+
+.. figure:: http://dummyimage.com/1100x350/777777/777777.png
+   :class: extend-small
+   :alt: map to buried treasure
+
+   This is an image with the extend-small class.
+
+Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
+turpis egestas. Vestibulum tortor quamr facilisis. Ut felis.
+Nullam id dolor id nibh ultricies vehicula ut id elit.
+Vivamus sagittis lacusvel augue laoreet rutrum faucibus dolor auctor.
+Nullam id dolor id nibh ultricies vehicula ut id elit.
+Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
+
+Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
+turpis egestas. Vestibulum tortor quamr facilisis. Ut felis.
+Nullam id dolor id nibh ultricies vehicula ut id elit.
+Vivamus sagittis lacusvel augue laoreet rutrum faucibus dolor auctor.
+Nullam id dolor id nibh ultricies vehicula ut id elit.
+Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
+
+
+Responsive & Interactive UX Design
+----------------------------------
+
+Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
+turpis egestas. Vestibulum tortor quamr facilisis. Ut felis.
+Nullam id dolor id nibh ultricies vehicula ut id elit.
+Vivamus sagittis lacusvel augue laoreet rutrum faucibus dolor auctor.
+Nullam id dolor id nibh ultricies vehicula ut id elit.
+Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
+
+Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
+turpis egestas. Vestibulum tortor quamr facilisis. Ut felis.
+Nullam id dolor id nibh ultricies vehicula ut id elit.
+Vivamus sagittis lacusvel augue laoreet rutrum faucibus dolor auctor.
+Nullam id dolor id nibh ultricies vehicula ut id elit.
+Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
+
+.. image:: http://dummyimage.com/200x200/777777/ffffff.png
+  :alt: image alt
+  :class: extend-right
+
+This image has a class of extend-right.
+Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
+turpis egestas. Vestibulum tortor quamr facilisis. Ut felis.
+Nullam id dolor id nibh ultricies vehicula ut id elit.
+Vivamus sagittis lacusvel augue laoreet rutrum faucibus dolor auctor.
+Nullam id dolor id nibh ultricies vehicula ut id elit.
+Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
+
+Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
+turpis egestas. Vestibulum tortor quamr facilisis. Ut felis.
+Nullam id dolor id nibh ultricies vehicula ut id elit.
+Vivamus sagittis lacusvel augue laoreet rutrum faucibus dolor auctor.
+Nullam id dolor id nibh ultricies vehicula ut id elit.
+Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
+
+Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
+turpis egestas. Vestibulum tortor quamr facilisis. Ut felis.
+Nullam id dolor id nibh ultricies vehicula ut id elit.
+Vivamus sagittis lacusvel augue laoreet rutrum faucibus dolor auctor.
+Nullam id dolor id nibh ultricies vehicula ut id elit.
+Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
+
+Below is a full width image with the ``.extend-full`` class
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. image:: http://dummyimage.com/1600x200/777777/ffffff.png
+  :alt: image alt
+  :class: extend-full
+
+.. callmacro:: content-macros.j2#rst
+  :tag: 'end'
