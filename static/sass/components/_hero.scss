@@ -29,68 +29,43 @@
 // Hero Images
 // ===========
 
-$hero-shape: polygon(0% 0%, 100% 0%, 100% 100%, 55% 100%, 45% 80%, 0% 80%, 0 0);
-$hero-shape-small: polygon(0% 0%, 100% 0%, 100% 100%, 75% 100%, 65% 80%, 0% 80%, 0 0);
-$shared-height-large: 45vh;
-$shared-height-medium: 35vh;
-$shared-height-small: 25vh;
 
 .hero {
-  clip-path: $hero-shape-small;
-  height: $shared-height-small;
+  max-height: 35vh;
+  overflow: hidden;
   position: relative;
 
   @include above('medium-page') {
-    clip-path: $hero-shape;
-    height: $shared-height-medium;
+    max-height: 45vh;
   }
 
-  @include above('large-page') {
-    height: $shared-height-large;
-  }
-
-  @include after('') {
-    @include stretch;
-    pointer-events: none;
-  }
-}
-
-.title-header {
-  margin-top: $shared-height-small * -1;
-  padding-top: calc(1rem + 0.25vh);
-
-  @include above('medium-page') {
-    margin-top: $shared-height-medium * -1;
-  }
-
-  @include above('large-page') {
-    margin-top: $shared-height-large * -1;
-  }
-
-  .title {
+  + .title {
+    background-image: linear-gradient(50deg, color('background') 80%, transparent 80%);
     margin-bottom: 0;
-    margin-top: 0;
-    max-width: none;
-    padding-bottom: 0;
+    margin-top: negative('double-gutter');
+    padding-bottom: size('shim');
+    padding-right: 20%;
     padding-top: size('shim');
     position: relative;
     z-index: 1;
-  }
-}
 
-[data-icon='hero-shape'] {
-  float: right;
-  height: $shared-height-small;
-  shape-outside: $hero-shape-small;
-  width: 100vw;
-
-  @include above('medium-page') {
-    height: $shared-height-medium;
-    shape-outside: $hero-shape;
-  }
-
-  @include above('large-page') {
-    height: $shared-height-large;
+    @include above('medium-page') {
+      background-image: linear-gradient(50deg, color('background') 75%, transparent 75%);
+      margin-top: negative('spacer');
+      padding-bottom: size('gutter');
+      padding-right: calc(23% - 3vw);
+      padding-top: size('gutter');
+    }
+  
+    @include before('') {
+      background: color('background');
+      bottom: 0;
+      display: block;
+      position: absolute;
+      right: 100%;
+      top: 0;
+      width: calc((100vw - #{size('small-page')}) / 2);
+    }
   }
 }
 
