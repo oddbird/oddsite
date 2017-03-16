@@ -2,7 +2,7 @@ public: yes
 author: kit
 tags: [Celery, Django, Serialization, Code]
 image:
-  - src: 'celery-man.jpg'
+  - src: '2017/serializing-things/celery-man.jpg'
 summary: |
   Transmitting objects between web processes and worker processes is a
   requirement of many modern web apps. Given that the safest way to do so is to
