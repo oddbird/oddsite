@@ -11,10 +11,6 @@
   max-width: size('full-content');
   padding: 0 size('gutter');
 
-  [data-location='work'] & {
-    font-size: calc(1.5rem + 15vw);
-  }
-
   &:first-child {
     @include text-shadow;
   }

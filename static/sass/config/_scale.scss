@@ -78,6 +78,7 @@ $pattern-sizes: (
 
 // Page Sizes
 // ----------
+// Mostly used as breakpoints when content is asking for css edits
 /// @group scale
 /// @preview sizes; style: output-only
 /// @link http://oddbird.net/accoutrement-scale/sassdoc/
@@ -93,6 +94,7 @@ $page-sizes: (
 
 // Column Sizes
 // ------------
+// Columns are used mostly in extend mixin and to declare size of content containers
 /// @group scale
 /// @preview sizes; style: output-only
 /// @link http://oddbird.net/accoutrement-scale/sassdoc/
