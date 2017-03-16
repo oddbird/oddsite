@@ -35,7 +35,9 @@
       max-width: size('wide-column');
     }
 
-    grid-column: col2-start / -1;
+    @supports (display: grid) {
+      grid-column: col2-start / -1;
+    }
   }
 
   p {
