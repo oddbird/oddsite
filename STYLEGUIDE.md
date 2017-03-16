@@ -135,9 +135,9 @@ summary: |
 Tags
 ----
 
-- Any post that contains a code sample should use the ``code`` tag.
+- Any post that contains a code sample should use the ``Code`` tag.
 - Use the plural version of a word if available.
-For example, ``videos`` even if one video is referenced in the post.
+For example, ``Videos`` even if one video is referenced in the post.
 - Reference the [tag list](/tags/) before deciding on which
 tags to use in order to avoid variations of the same topic.
 - Tags are Title Case.
@@ -152,7 +152,7 @@ tag: ['Open Design', OddSite]
 were covered in this post that would help the reader find a related article.
 - Adding tags when you are finished writing might result in cleaner and more
 accurate tags.
-- Posts that talk about sponsorship should include the ``community`` tag.
+- Posts that talk about sponsorship should include the ``Community`` tag.
 
 
 Whitespace
