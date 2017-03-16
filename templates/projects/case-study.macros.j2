@@ -1,30 +1,6 @@
 {% import 'content.macros.j2' as content %}
 
 
-{% macro header(slug=none, page=none) %}
-  {% set page = page if (page != none) else all_pages|filter_pages('slug', 'eq', slug)|get_page %}
-  {% set project = page.config.project[0] %}
-
-  <header class="project-meta">
-      <h1 class="project-title">
-        {{ project.name }}
-        <em>{{ project.tagline }}</em>
-      </h1>
-
-      {% if project.url or project.source %}
-        <div class="project-links">
-          {% if project.url %}
-            <a href="{{ project.url }}" class="btn">View Site</a>
-          {% endif %}
-          {% if project.source %}
-            <a href="{{ project.source }}" class="btn">View Source</a>
-          {% endif %}
-        </div>
-      {% endif %}
-  </header>
-{% endmacro %}
-
-
 {% macro description(slug=none, page=none) %}
   {% set page = page if (page != none) else all_pages|filter_pages('slug', 'eq', slug)|get_page %}
   {% set project = page.config.project[0] %}
@@ -52,7 +28,6 @@
   {% set page = all_pages|filter_pages('slug', 'eq', slug)|get_page %}
   {% set quote = page.config.quotes[quote_index] %}
 
-  {{ header(page=page) }}
   {{ description(page=page) }}
   {{ content.blockquote(quote.text, quote.name, quote.url, quote.role) }}
 {% endmacro %}

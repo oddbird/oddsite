@@ -1,5 +1,4 @@
 public: yes
-hide_title: true
 location: work
 grid_template: true
 image:

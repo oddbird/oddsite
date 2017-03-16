@@ -5,17 +5,6 @@
   margin-top: 0;
 }
 
-.title {
-  @include title;
-  margin: size('gutter') auto;
-  max-width: size('full-content');
-  padding: 0 size('gutter');
-
-  &:first-child {
-    @include text-shadow;
-  }
-}
-
 .content-block {
   @include center('medium-page');
   @include grid;
