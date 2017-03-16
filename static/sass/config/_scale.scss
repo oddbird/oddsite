@@ -25,7 +25,6 @@ $modular-scale: (
 $text-sizes: (
   'root': 18px,
   'small': 'root' ('text-ratio': -1),
-  'title-max': 40px,
 );
 
 @include herman-add-sizes('text-sizes', $text-sizes);
