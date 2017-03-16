@@ -1,8 +1,8 @@
 public: yes
 author: kit
-tags: [Celery, Django, Serialization]
+tags: [Celery, Django, Serialization, Code]
 image:
-  - src: ''
+  - src: 'celery-man.jpg'
 summary: |
   Transmitting objects between web processes and worker processes is a
   requirement of many modern web apps. Given that the safest way to do so is to
@@ -20,10 +20,10 @@ on user-submitted data. Whatever it is, you can't just put everything in your
 web processes. Some things demand worker processes consuming tasks from a
 queue.
 
-Typically we use Celery for this, though increasingly Django Channels is
+Typically we use Celery_ for this, though increasingly `Django Channels`_ is
 emerging as a viable option. In either case, there are some similar issues that
 arise from the use of a task queue broker; because of the indirection that an
-AMQP server or Redis or whatever introduces, you can't share memory, and
+AMQP_ server or Redis_ or whatever introduces, you can't share memory, and
 therefore can't share in-memory objects directly. So, you somehow have to get
 data between the web requests and the worker processes. For now, we'll assume
 we're talking about Celery.
@@ -33,14 +33,14 @@ it's not? What if you have a Django model that you want to pass to a task? This
 is hardly an uncommon need, but there are a few ways to approach the problem.
 
 First, of course, you can use the ``pickle`` Celery task serializer. This isn't
-terrible, but pickle does open you up to some `security concerns
-<https://blog.nelhage.com/2011/03/exploiting-pickle/>`_. You can mitigate them,
-but unless you feel confident that you know what you're doing, it's best to
-avoid exposing yourself to them in the first place. In the same way that you
-*can* sanitize all your database inputs and assemble DB queries through string
-concatenation – but would be well-advised to use prepared statements – you
-*can* ensure that everything that touches ``pickle`` is adequately sanitized.
-I, for one, prefer to avoid using it, and save myself the worry.
+terrible, but pickle does open you up to some `security concerns`_. You can
+mitigate them, but unless you feel confident that you know what you're doing,
+it's best to avoid exposing yourself to them in the first place. In the same
+way that you *can* sanitize all your database inputs and assemble DB queries
+through string concatenation – but would be well-advised to use prepared
+statements – you *can* ensure that everything that touches ``pickle`` is
+adequately sanitized.  I, for one, prefer to avoid using it, and save myself
+the worry.
 
 To ensure we don't risk executing arbitrary code, we can tell Celery to use the
 JSON serializer:
@@ -171,8 +171,7 @@ So if that's the goal, you could make custom JSON encoders and decoders that
 know how to traverse your classes. But that's a pain. Let's see if we can write
 as little code not related to our actual business logic as possible.
 
-One approach I like is to use the `attrs
-<https://attrs.readthedocs.io/en/stable/>`_ library. It lets you define your
+One approach I like is to use the `attrs`_ library. It lets you define your
 business logic class like so:
 
 .. code:: python
@@ -204,8 +203,23 @@ inflate it:
     def some_task(some_class):
         inst = SomeClass(**some_class)
 
-Try it out! It's very fun.
+How have you handled object serialization in your projects? We'd love to hear
+your thoughts on `Twitter`_, on our `public Slack channel`_, or through our
+`handy contact form`_. Happy coding, and serialize safely!
+
+*Header image courtesy of `Dan Morelle`_.*
 
 .. [#] You are keeping in mind that your *data model* and your Django *Models*
    aren't the same, right? Django models are persistence-layer mappings, that
    you can bolt some additional logic to. Your data model may be much more!
+
+.. _Celery: http://docs.celeryproject.org/en/latest/index.html
+.. _Django Channels: https://channels.readthedocs.io/en/stable/
+.. _AMQP: https://www.rabbitmq.com/
+.. _Redis: https://redis.io/
+.. _security concerns: https://blog.nelhage.com/2011/03/exploiting-pickle/
+.. _attrs: https://attrs.readthedocs.io/en/stable/
+.. _Twitter: https://twitter.com/oddbird
+.. _public Slack channel: http://friends.oddbird.net
+.. _handy contact form: /contact/
+.. _Dan Morelle: https://www.flickr.com/photos/doodledan/5623812207/in/photolist-9yXvrr-9W139J-rPYrZp-7BkxKT-aWPwCP-pkqpEu-8iimgZ-pkpuKF-pkqpm1-nvKV6q-4mVgtJ-pzSGYY-6qjB4E-pBVzNr-8JG1Ja-6qfuMn-pBTApN-bo34GB-pBUVaK-7NVtXW-5XJRQK-dM3hhG-aWPxoT-dQD6zK-pBURD6-pBVjRH-9VXd56-5x1PMy-7NVt7U-5qMsjU-pkqPdu-pkqWKT-4vkwsh-8WvmVA-3NBhJG-pkqCzq-pBD7rv-aWPvP4-pBUNx6-dLWDRk-7NRvR6-aWPuQB-7jnkHb-8oZuCB-DPKaV-pkqtML-pdG1Hz-6qfsrZ-pBCy9e-8Zhx4A
