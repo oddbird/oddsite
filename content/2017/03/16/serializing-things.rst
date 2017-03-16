@@ -1,6 +1,6 @@
 public: yes
 author: kit
-tags: [Celery, Django, serialization]
+tags: [Celery, Django, Serialization]
 image:
   - src: ''
 summary: |
@@ -20,13 +20,13 @@ on user-submitted data. Whatever it is, you can't just put everything in your
 web processes. Some things demand worker processes consuming tasks from a
 queue.
 
-Typically, we use Celery for this, though increasingly, Django Channels is
+Typically we use Celery for this, though increasingly Django Channels is
 emerging as a viable option. In either case, there are some similar issues that
 arise from the use of a task queue broker; because of the indirection that an
 AMQP server or Redis or whatever introduces, you can't share memory, and
 therefore can't share in-memory objects directly. So, you somehow have to get
-data between the web requests and the worker processes. Still, for now, we'll
-assume we're talking about Celery.
+data between the web requests and the worker processes. For now, we'll assume
+we're talking about Celery.
 
 If it's just primitive data, that's fine, you can serialize it. But what if
 it's not? What if you have a Django model that you want to pass to a task? This
@@ -38,22 +38,22 @@ terrible, but pickle does open you up to some `security concerns
 but unless you feel confident that you know what you're doing, it's best to
 avoid exposing yourself to them in the first place. In the same way that you
 *can* sanitize all your database inputs and assemble DB queries through string
-concatenation, but would be well-advised to use prepared statements, you *can*
-ensure that everything that touches ``pickle`` is adequately sanitized, but I,
-for one, prefer to avoid using it, and save myself the worry.
+concatenation – but would be well-advised to use prepared statements – you
+*can* ensure that everything that touches ``pickle`` is adequately sanitized.
+I, for one, prefer to avoid using it, and save myself the worry.
 
-So, to ensure we don't risk executing arbitrary code, we can tell Celery to use
-the JSON serializer:
+To ensure we don't risk executing arbitrary code, we can tell Celery to use the
+JSON serializer:
 
-.. code-block:: python
+.. code:: python
 
     CELERY_TASK_SERIALIZER = 'json'
 
-But now, we can't pass full Python objects around, only primitive data. If we
+But now we can't pass full Python objects around, only primitive data. If we
 try to pass something that can't be JSON-serialized, we'll get a runtime error.
 
 
-Getting a Django model between processes
+Getting a Django Model Between Processes
 ----------------------------------------
 
 But, we want to pass our models around! How can we do this?
@@ -66,7 +66,7 @@ instance out.
 That's fine. It doesn't quite cover all situations, though.
 
 
-What if I don't know what model I'm passing?
+What If I Don't Know What Model I'm Passing?
 --------------------------------------------
 
 This is a case I've run into. I had a task that had to be run on three
@@ -87,10 +87,10 @@ Don't do this.
 functions, and making a series of shims that make assumptions about the types
 of the arguments. Still don't do this.)
 
-Next, there's having three (or however many) different arguments to the task,
-like:
+Alternatively, you could add three (or however many) different arguments to the
+task:
 
-.. code-block:: python
+.. code:: python
 
     @task()
     def some_task(foo_id=None, bar_id=None, baz_id=None):
@@ -116,9 +116,10 @@ the call site what sort of ID you're passing in. This is a mixed blessing. It
 makes the code very legible, but it does impede managing things
 programmatically.
 
-The third option, my favorite, is to simply tell the task what model you need:
+The third option – my favorite – is to simply tell the task what model you
+need:
 
-.. code-block:: python
+.. code:: python
 
     from django.apps import apps
 
@@ -136,7 +137,7 @@ the last dot-separated part of whatever you put in ``INSTALLED_APPS``. The
 For added delight here, you can even get the model name automatically in a
 mixin to your models:
 
-.. code-block:: python
+.. code:: python
 
     class SomeMixin:
         # Assuming that you want to trigger the task on save:
@@ -155,13 +156,13 @@ issue, and sometimes it's just an acceptable cost. But in any case, it's worth
 keeping in mind.
 
 
-But what if I need something that's not a model?
+But What If I Need Something That's Not a Model?
 ------------------------------------------------
 
 Perhaps you have business-logic class instances which are never stored in the
-database.[#]_ If you can't, won't, or don't want to use the DB as a persistent
-store for your data, which you then inflate into a full object, there are
-some other ways to pass objects through the task-broker bottleneck.
+database [#]_. If you can't, won't, or don't want to use the DB as a persistent
+store for your data – which you then inflate into a full object – there are
+other ways to pass objects through the task-broker bottleneck.
 
 They all boil down to separating the primitive data from the methods and logic.
 Think of it like passing the *record* or *struct* through, not the whole class.
@@ -174,7 +175,7 @@ One approach I like is to use the `attrs
 <https://attrs.readthedocs.io/en/stable/>`_ library. It lets you define your
 business logic class like so:
 
-.. code-block:: python
+.. code:: python
 
     import attr
 
@@ -186,9 +187,9 @@ business logic class like so:
         def some_method(self):
             pass
 
-And then you can serialize an instance easily:
+And then you can easily serialize an instance:
 
-.. code-block:: python
+.. code:: python
 
     import attr
     inst = SomeClass(foo={'hi': 'there'}, bar=SomeClass(foo=1, bar=False))
@@ -196,9 +197,9 @@ And then you can serialize an instance easily:
     # {'foo': {'bar': False, 'foo': 1}, 'foo': {'hi': 'there'}}
 
 And just as importantly, you can pass that serialized data to the task, and
-inflate it like:
+inflate it:
 
-.. code-block:: python
+.. code:: python
 
     def some_task(some_class):
         inst = SomeClass(**some_class)
