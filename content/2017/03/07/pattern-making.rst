@@ -1,6 +1,6 @@
 public: yes
 author: miriam
-tags: [Tools, Color, Typography, 'Style Guides', Accoutrement, Herman, OddSite, 'Open Design']
+tags: [Tools, Color, Typography, 'Style Guides', Accoutrement, Herman, OddSite, 'Open Design', Code]
 image:
   - src: '2017/pattern-making/NYC-sign.jpg'
 summary: |

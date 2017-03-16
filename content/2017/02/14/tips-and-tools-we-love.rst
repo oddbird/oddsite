@@ -1,6 +1,6 @@
 public: yes
 author: stacy
-tags: [Tips, Workflow, Tools, Code]
+tags: [Tips, Workflows, Tools, Code]
 image:
   - src: '2017/tips-tools/love-tools.jpg'
 summary: |

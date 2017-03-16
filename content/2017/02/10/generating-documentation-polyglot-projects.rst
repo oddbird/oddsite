@@ -5,7 +5,8 @@ tags: [
   Tools,
   JavaScript,
   Python,
-  Sass
+  Sass,
+  Code
   ]
 image:
   - src: '2017/docs/style.jpg'
