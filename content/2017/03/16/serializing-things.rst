@@ -207,7 +207,7 @@ How have you handled object serialization in your projects? We'd love to hear
 your thoughts on `Twitter`_, on our `public Slack channel`_, or through our
 `handy contact form`_. Happy coding, and serialize safely!
 
-*Header image courtesy of `Dan Morelle`_.*
+Header image courtesy of `Dan Morelle`_.
 
 .. [#] You are keeping in mind that your *data model* and your Django *Models*
    aren't the same, right? Django models are persistence-layer mappings, that
