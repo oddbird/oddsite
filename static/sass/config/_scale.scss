@@ -87,6 +87,8 @@ $page-sizes: (
   'small-page': 20rem,
   'full-content': 40rem,
   'blockquote': 55rem,
+  'medium-page': 55rem,
+  'large-page': 75rem,
 );
 
 @include herman-add-sizes('page-sizes', $page-sizes);
