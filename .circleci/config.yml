@@ -9,31 +9,31 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-        key: oddsite-{{ .Branch }}-{{ checksum "yarn.lock" }}
+          key: oddsite-{{ .Branch }}-{{ checksum "yarn.lock" }}
       - run:
-        name: Install Yarn
-        command: curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 0.20.3
+          name: Install Yarn
+          command: curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 0.20.3
       - run:
-        name: Install Dependencies
-        command: yarn
+          name: Install Dependencies
+          command: yarn
       - save_cache:
-        key: oddsite-{{ .Branch }}-{{ checksum "yarn.lock" }}
-        paths:
-          - "~/.cache/yarn"
+          key: oddsite-{{ .Branch }}-{{ checksum "yarn.lock" }}
+          paths:
+            - "~/.cache/yarn"
       - run:
-        name: Lint JS
-        command: gulp eslint
+          name: Lint JS
+          command: gulp eslint
       - run:
-        name: Lint Sass
-        command: gulp sasslint
+          name: Lint Sass
+          command: gulp sasslint
       - run:
-        name: Test Sass
-        command: gulp sasstest
+          name: Test Sass
+          command: gulp sasstest
       - run:
-        name: Test JS
-        command: karma start --reporters dots,coverage,junit --browsers PhantomJS,Chrome
+          name: Test JS
+          command: karma start --reporters dots,coverage,junit --browsers PhantomJS,Chrome
       - run:
-        name: Check JS Test Coverage
-        command: istanbul check-coverage --root jscov/ --statements=100 --functions=100 --branches=100 --lines=100
+          name: Check JS Test Coverage
+          command: istanbul check-coverage --root jscov/ --statements=100 --functions=100 --branches=100 --lines=100
       - store_test_results:
-        path: jscov/
+          path: jscov/
