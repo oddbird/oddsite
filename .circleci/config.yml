@@ -4,6 +4,7 @@ jobs:
     working_directory: ~/oddsite
     docker:
       - image: node:7.7.3
+      - image: dockerfile/chrome
     steps:
       - checkout
       - restore_cache:
