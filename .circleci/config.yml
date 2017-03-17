@@ -4,7 +4,6 @@ jobs:
     working_directory: ~/oddsite
     docker:
       - image: node:7.7.3
-      - image: dockerfile/chrome
     steps:
       - checkout
       - restore_cache:
@@ -30,7 +29,7 @@ jobs:
           command: ./node_modules/.bin/gulp sasstest
       - run:
           name: Test JS
-          command: ./node_modules/.bin/karma start --reporters dots,coverage,junit --browsers PhantomJS,Chrome
+          command: ./node_modules/.bin/karma start --reporters dots,coverage,junit --browsers PhantomJS
       - run:
           name: Check JS Test Coverage
           command: ./node_modules/.bin/istanbul check-coverage --root jscov/ --statements=100 --functions=100 --branches=100 --lines=100
