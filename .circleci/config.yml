@@ -5,8 +5,8 @@ jobs:
     docker:
       - image: node:7.7.3
         environment:
-          PATH: "$PATH:~/oddsite/node_modules/.bin"
-          YARN_VERSION: "0.22.0"
+          PATH: $PATH:~/oddsite/node_modules/.bin
+          YARN_VERSION: 0.22.0
     steps:
       - checkout
       - restore_cache:
