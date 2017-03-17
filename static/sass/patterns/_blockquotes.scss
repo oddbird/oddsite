@@ -1,38 +1,70 @@
 // Blockquotes
 // ===========
 
+$quote-circle: calc(1.5rem + 2vw);
+$quote-circle-type: calc(5rem + 2vw);
+
+.pullquote,
 blockquote {
-  display: flex;
-  flex-direction: column;
+  @include center('medium-page');
   font-size: calc(1.125rem + 0.5vw);
   font-style: italic;
-  justify-content: center;
-  margin: size('gutter') 0;
-  max-width: 100%;
+  margin-bottom: size('double-gutter');
+  margin-top: size('double-gutter');
   position: relative;
+
+  @include above('medium-page') {
+    @include grid;
+  }
 
   @include before('“') {
     @include font-family('alt');
     background-color: color('quote');
     border-radius: 50%;
     color: color('background');
-    font-size: size('quote-circle');
+    font-size: $quote-circle-type;
     font-style: normal;
-    height: size('quote-circle-small');
+    height: $quote-circle;
     line-height: 0.8;
-    margin-left: auto;
-    margin-right: auto;
     position: relative;
-    text-indent: size('half-shim');
-    width: size('quote-circle-small');
+    text-align: right;
+    width: $quote-circle;
 
-    @include above('blockquote') {
-      font-size: size('quote');
-      height: size('quote-circle');
-      margin-left: negative('quote-plus');
-      position: absolute;
-      text-indent: size('shim');
-      width: size('quote-circle');
+    @include below('medium-page') {
+      @include center;
+      display: block;
+    }
+
+    @include above('medium-page') {
+      height: $quote-circle;
+      margin-right: size('shim');
+      width: $quote-circle;
+
+      @supports not (display: grid) {
+        margin-left: 0;
+        position: absolute;
+      }
+
+      @supports (display: grid) {
+        grid-column: col1-start;
+      }
+    }
+  }
+
+  @include above('medium-page') {
+    footer,
+    p {
+      margin-top: 0;
+
+      @supports not (display: grid) {
+        margin-left: auto;
+        margin-right: 0;
+        max-width: size('wide-column');
+      }
+
+      @supports (display: grid) {
+        grid-column: col2-start / -1;
+      }
     }
   }
 }

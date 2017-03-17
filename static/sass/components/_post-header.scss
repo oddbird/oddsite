@@ -1,0 +1,47 @@
+// Post Header
+// ===========
+
+.title {
+  @include title;
+  margin: size('gutter') auto;
+  max-width: size('full-content');
+  padding: 0 size('gutter');
+
+  &:first-child {
+    @include text-shadow;
+  }
+
+  em {
+    @include font-family('body');
+    font-size: calc(1.25rem + 1.75vw);
+    font-style: italic;
+  }
+}
+
+.rst-meta {
+  align-items: flex-end;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: size('gutter');
+  margin-top: 0;
+  max-width: none;
+  padding: 0 size('gutter');
+
+  @include above('full-content') {
+    justify-content: space-between;
+  }
+}
+
+.byline {
+  margin-bottom: size('half-shim');
+  margin-top: 0;
+}
+
+.meta-preposition {
+  font-style: italic;
+  font-weight: 300;
+}
+
+.project-links {
+  text-align: right;
+}

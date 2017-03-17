@@ -25,6 +25,13 @@
 {% endmacro %}
 
 
+{% macro face(author) %}
+  <div class="bird-face">
+    {{ utility.icon(author, size='face') }}
+  </div>
+{% endmacro %}
+
+
 {% macro get_card(author, details=false) %}
   {{ card(
     page=all_pages|filter_pages('bird', 'eq', author)|get_page,

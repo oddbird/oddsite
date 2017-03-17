@@ -60,6 +60,7 @@ $pattern-colors: (
   'invert': 'brand-blue',
   'invert-link-hover': 'brand-blue' ('lighten': 55%, 'saturate': 100%),
   'quote': 'brand-orange',
+  'icon-block': 'brand-orange',
 );
 
 @include herman-add-colors('pattern-colors', $pattern-colors);
