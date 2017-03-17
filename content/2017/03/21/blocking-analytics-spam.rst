@@ -16,7 +16,7 @@ summary: |
   application, but becomes worthless if spam sessions start infesting your
   data. Here's how we've tried to combat the problem for `oddbird.net`_.
 
-  .. _oddbird.net: /
+  .. _oddbird.net: http://oddbird.net/
 
 
 Blocking Analytics Spam
@@ -34,7 +34,7 @@ months ago we started seeing lots of this:
 
 It's not a new problem, but it's particularly problematic for smaller sites
 that don't receive lots of traffic. On a given day, spam hits were accounting
-for anywhere from 10–90(!) percent of our sessions.
+for anywhere from ten to ninety (!) percent of our sessions.
 
 .. image:: /static/images/blog/2017/ga-spam/sessions.jpg
    :alt: google analytics total sessions and filtered (non-spam) sessions
