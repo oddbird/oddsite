@@ -1,12 +1,14 @@
 {% import 'forms.macros.j2' as form %}
 {% import 'utility.macros.j2' as utility %}
+{% import "birds/utility.macros.j2" as birds %}
 
 
 <section data-module="contact-form">
   {% if module.intro %}
     <div class="contact-intro">
       {% if module.contact %}
-        {{ utility.icon(module.contact, size='face') }}
+        {{ birds.face(module.contact) }}
+
         {% set contact = all_pages|filter_pages('bird', 'eq', module.contact)|get_page %}
         {% set contact_name = utility.link_if(contact.title, ['/birds/#bird', contact.config.bird]|join('-')) %}
 

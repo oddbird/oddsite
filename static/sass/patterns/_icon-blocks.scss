@@ -1,0 +1,74 @@
+// Icon Blocks
+// ===========
+
+.icon-blocks-container {
+  @include center('medium-page');
+  @include grid;
+
+  h2 {
+    @supports not (display: grid) {
+      @include center('full-content');
+    }
+
+    @supports (display: grid) {
+      grid-column: col1-start / -1;
+
+      @include above('medium-page') {
+        grid-column: col3-start / span 1;
+      }
+    }
+  }
+}
+
+.icon-blocks {
+  @include grid;
+
+  @supports not (display: grid) {
+    @include center('full-content');
+    display: flex;
+  }
+
+  @supports (display: grid) {
+    grid-column: col1-start / -1;
+  }
+}
+
+.icon-block {
+  margin-top: 1.5rem; // match margin from h2
+
+  @supports not (display: grid) {
+    flex: 0 0 auto;
+    padding-right: size('shim');
+  }
+
+  @supports (display: grid) {
+    grid-column: col1-start;
+    text-align: right;
+
+    @include above('medium-page') {
+      grid-column: col1-start / span 2;
+    }
+  }
+
+  [data-icon] {
+    color: color('icon-block');
+    height: calc(3rem + 3vw);
+    width: calc(3rem + 3vw);
+  }
+}
+
+.icon-block-text {
+  p {
+    &:first-child {
+      margin-top: 1.5rem; // match margin from h2
+    }
+  }
+
+  @supports (display: grid) {
+    grid-column: col2-start / -1;
+
+    @include above('medium-page') {
+      grid-column: col3-start / span 1;
+    }
+  }
+}

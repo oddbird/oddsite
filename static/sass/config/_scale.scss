@@ -25,6 +25,7 @@ $modular-scale: (
 $text-sizes: (
   'root': 18px,
   'small': 'root' ('text-ratio': -1),
+  'medium': 'root' ('text-ratio': 0.7),
 );
 
 @include herman-add-sizes('text-sizes', $text-sizes);
@@ -37,13 +38,14 @@ $text-sizes: (
 /// @link http://oddbird.net/accoutrement-scale/sassdoc/
 ///   Accoutrement Scale
 $spacing-sizes: (
-  'rhythm': 'root' ('text-ratio': 1),
+  'rhythm': 'root' ('text-ratio': 1, 'convert-units': 'rem'),
   'gutter': 'rhythm',
   'double-gutter': 'gutter' ('multiple': 2),
   'spacer': 'gutter' ('multiple': 3),
   'shim': 'gutter' ('multiple': 0.5),
   'half-shim': 'shim' ('multiple': 0.5),
   'quarter-shim': 'shim' ('multiple': 0.25),
+  'pad': 1rem,
   'pixel': 1px,
 );
 
@@ -57,15 +59,12 @@ $spacing-sizes: (
 /// @link http://oddbird.net/accoutrement-scale/sassdoc/
 ///   Accoutrement Scale
 $pattern-sizes: (
-  'border': 8px,
+  'border': 8px ('convert-units': 'rem'),
   'border-radius': 1rem,
   'bird-face-tall': 8rem,
   'bird-face': 6rem,
   'half-bird-face': 'bird-face' ('multiple': 0.5),
-  'quote': 9rem,
-  'quote-plus': 'quote' ('multiple': 0.75),
-  'quote-circle': 'quote' ('multiple': 0.45),
-  'quote-circle-small': 'quote' ('multiple': 0.2),
+  'nav-small': 20rem,
   'nav-medium': 35rem,
   'nav-wide': 50rem,
   'dropdown-narrow': 9rem,
@@ -79,14 +78,34 @@ $pattern-sizes: (
 
 // Page Sizes
 // ----------
+// Mostly used as breakpoints when content is asking for css edits
 /// @group scale
 /// @preview sizes; style: output-only
 /// @link http://oddbird.net/accoutrement-scale/sassdoc/
 ///   Accoutrement Scale
 $page-sizes: (
-  'small-page': 20rem,
-  'full-content': 40rem,
-  'blockquote': 55rem,
+  'small-page': 34rem,
+  'medium-page': 55rem,
+  'large-page': 75rem,
 );
 
 @include herman-add-sizes('page-sizes', $page-sizes);
+
+
+// Column Sizes
+// ------------
+// Columns are used mostly in extend mixin and to declare size of content containers
+/// @group scale
+/// @preview sizes; style: output-only
+/// @link http://oddbird.net/accoutrement-scale/sassdoc/
+///   Accoutrement Scale
+$column-sizes: (
+  'full-content': 40rem,
+  'extend-xsmall': 70vw,
+  'extend-small': 80vw,
+  'extend-large': 90vw,
+  'extend-full': 100vw,
+  'wide-column': 90%,
+);
+
+@include herman-add-sizes('column-sizes', $column-sizes);

@@ -13,3 +13,27 @@
 .size-quarter {
   width: 25%;
 }
+
+
+// Extend thing outside its container on one side only
+.extend-left {
+  @include extend-side(left);
+}
+
+.extend-right {
+  @include extend-side(right);
+}
+
+
+// Extend thing past the width of its container on both sides
+.extend-small {
+  @include extend('extend-small');
+}
+
+.extend-large {
+  @include extend('extend-large');
+}
+
+.extend-full {
+  @include extend('extend-full');
+}
