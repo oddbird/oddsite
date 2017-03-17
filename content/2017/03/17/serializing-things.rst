@@ -52,6 +52,10 @@ JSON serializer:
 But now we can't pass full Python objects around, only primitive data. If we
 try to pass something that can't be JSON-serialized, we'll get a runtime error.
 
+(This has another use, incidentally: it frees us to make our worker and web
+processes in different languages. That's beyond what I'll talk about here, but
+it's worth thinking about!)
+
 
 Getting a Django Model Between Processes
 ----------------------------------------
