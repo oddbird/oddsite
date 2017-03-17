@@ -20,7 +20,7 @@ else
 fi
 
 nodefile="../requirements/node-v7.7.3-${platform}-${arch}.tar.xz"
-yarnfile="../requirements/yarn-v0.21.3.tar.gz"
+yarnfile="../requirements/yarn-v0.22.0.tar.gz"
 
 tar --strip-components=1 -Jxf ${nodefile}
 tar --strip-components=1 -xzf ${yarnfile}

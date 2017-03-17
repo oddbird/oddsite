@@ -13,7 +13,7 @@ jobs:
           command: curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 0.22.0
       - run:
           name: Install Dependencies
-          command: yarn
+          command: ~/.yarn/bin/yarn
       - save_cache:
           key: oddsite-{{ .Branch }}-{{ checksum "yarn.lock" }}
           paths:

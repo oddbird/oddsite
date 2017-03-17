@@ -8,7 +8,7 @@ Development setup
 Install Node.js
 ~~~~~~~~~~~~~~~
 
-OddSite development requires `Node.js`_ 7.7.3 and `yarn`_ 0.21.3.
+OddSite development requires `Node.js`_ 7.7.3 and `yarn`_ 0.22.0.
 
 The right versions of Node and yarn are bundled in the OddSite repo and can be
 unpacked inside the repo (in the git-ignored ``node/`` directory), so you don't
