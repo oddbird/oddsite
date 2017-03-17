@@ -4,15 +4,14 @@ jobs:
     working_directory: ~/oddsite
     docker:
       - image: node:7.7.3
-        environment:
-          YARN_VERSION: 0.22.0
     steps:
       - checkout
       - restore_cache:
           key: oddsite-{{ .Branch }}-{{ checksum "yarn.lock" }}
-      # - run:
-      #     name: Install Yarn
-      #     command: curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 0.21.3
+      - run:
+          name: Install Yarn
+          command: curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 0.21.3
+      - run: yarn cache dir
       - run:
           name: Install Dependencies
           command: yarn
