@@ -10,8 +10,8 @@ summary: |
   we send custom objects around?
 
 
-Serializing Things
-==================
+Serializing Things for Celery
+=============================
 
 Many Django apps need some kind of out-of-band processing. Perhaps you have to
 make calls to a separate API server, and don't want to nest the latency of HTTP
@@ -21,12 +21,11 @@ web processes. Some things demand worker processes consuming tasks from a
 queue.
 
 Typically we use Celery_ for this, though increasingly `Django Channels`_ is
-emerging as a viable option. In either case, there are some similar issues that
-arise from the use of a task queue broker; because of the indirection that an
-AMQP_ server or Redis_ or whatever introduces, you can't share memory, and
-therefore can't share in-memory objects directly. So, you somehow have to get
-data between the web requests and the worker processes. For now, we'll assume
-we're talking about Celery.
+emerging as a viable option. In either case, there are issues that arise from
+the use of a task queue broker; because of the indirection that the broker (be
+it an AMQP_ server or Redis_ or whatever) introduces, you can't share memory.
+Without sharing memory, you can't share in-memory objects. So, you somehow have
+to get data between the web requests and the worker processes.
 
 If it's just primitive data, that's fine, you can serialize it. But what if
 it's not? What if you have a Django model that you want to pass to a task? This
@@ -160,8 +159,8 @@ issue, and sometimes it's just an acceptable cost. But in any case, it's worth
 keeping in mind.
 
 
-But What If I Need Something That's Not a Model?
-------------------------------------------------
+What If I Need Something That's Not a Model?
+--------------------------------------------
 
 Perhaps you have business-logic class instances which are never stored in the
 database [#]_. If you can't, won't, or don't want to use the DB as a persistent
