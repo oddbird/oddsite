@@ -29,17 +29,25 @@
 {% endmacro %}
 
 
+{% macro split_headline(main, sub) %}
+  <h1 class="title">
+    <div class="title-main">{{ main }}</div>
+    <em class="title-sub">{{ sub }}</em>
+  </h1>
+{% endmacro %}
+
+
 {% macro header(rst, ctx) %}
   {% set project = ctx.config.project[0] if ctx.config.project else none %}
 
   {{ header_image(ctx) }}
 
   {% if project %}
-    <h1 class="title">
-      {{ project.name }}
-      <em>{{ project.tagline }}</em>
-    </h1>
-  {% elif not ctx.hide_title %}
+    {{ split_headline(project.name, project.tagline) }}
+  {% elif ctx.config.headline %}
+     {% set headline = ctx.config.headline[0] %}
+    {{ split_headline(headline.title or rst.title, headline.tagline) }}
+  {% elif not ctx.config.hide_title %}
     {{ rst.html_title }}
   {% endif %}
 

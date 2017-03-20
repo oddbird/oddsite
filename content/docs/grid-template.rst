@@ -2,8 +2,8 @@ public: no
 tags: [CSS, RST, Code]
 grid_template: true
 project:
-  - name: 'OddSite'
-    tagline: 'Oddly Human Web Apps'
+  - name: 'Grid Template'
+    tagline: 'Sample Documentation'
     url: 'http://www.oddbird.net/'
     source: 'https://github.com/oddbird/oddsite/'
     years: '2008–2016'
