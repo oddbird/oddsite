@@ -45,7 +45,7 @@ by adding a ``title`` property.
 
 If no ``headline`` is provided,
 most posts will use the page title provided,
-but pages with a ``product`` element
+but pages with a ``project`` element
 will generate a headline based on the project name.
 
 
