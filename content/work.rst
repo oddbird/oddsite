@@ -1,5 +1,6 @@
 public: yes
 location: projects
+grid_template: true
 after:
   - include: 'projects/_list.html.j2'
     data: 'clients'
@@ -56,6 +57,9 @@ services:
 Custom Web Software
 ===================
 
+.. callmacro:: content.macros.j2#rst
+  :tag: 'start'
+
 **Do you have a web application you want to build?**
 OddBird provides extensive experience in product development,
 branding, application design,
@@ -74,3 +78,6 @@ browsers, and user (dis)abilities.
   <a href="/contact/" class="btn">
     Start a conversation about your project
   </a>
+
+.. callmacro:: content.macros.j2#rst
+  :tag: 'end'

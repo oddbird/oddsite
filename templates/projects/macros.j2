@@ -41,7 +41,9 @@
     </p>
   {% endif %}
 
-  {{ pullquote(project.quote) }}
+ {% if project.quote %}
+    {{ content.blockquote(project.quote.text, project.quote.credit) }}
+  {% endif %}
 
 </article>
 {% endmacro %}
