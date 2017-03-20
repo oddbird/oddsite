@@ -42,11 +42,14 @@
 
   {{ header_image(ctx) }}
 
-  {% if project %}
-    {{ split_headline(project.name, project.tagline) }}
-  {% elif ctx.config.headline %}
-     {% set headline = ctx.config.headline[0] %}
+  {# Use the headline metadata when provided #}
+  {% if ctx.config.headline %}
+    {% set headline = ctx.config.headline[0] %}
     {{ split_headline(headline.title or rst.title, headline.tagline) }}
+  {# Fall back on project metadata #}
+  {% elif project %}
+    {{ split_headline(project.name, project.tagline) }}
+  {# Fall back finally on rST document title #}
   {% elif not ctx.config.hide_title %}
     {{ rst.html_title }}
   {% endif %}
