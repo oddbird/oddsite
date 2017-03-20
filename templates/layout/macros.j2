@@ -1,0 +1,73 @@
+{% import 'utility.macros.j2' as utility %}
+{% import 'birds/utility.macros.j2' as birds %}
+
+
+{% macro tags(taglist) %}
+  {% if taglist %}
+    <nav class="tags">
+      {{ utility.icon('tags', class='icon-tag') }}
+      {% for tag in taglist|sort(case_sensitive=true) %}
+        <a href="{{ link_to('tag', tag=tag) }}" class="tag" rel="tag">{{ tag }}</a>
+      {%- endfor %}
+    </nav>
+  {% endif %}
+{% endmacro %}
+
+
+{% macro header_image(post) %}
+  {% set image = post.config.image[0].src if post.config.image else none %}
+
+  {% if image %}
+    <figure class="hero">
+      {% if '://' in image %}
+        <img src="{{ image }}" class="hero-image">
+      {% else %}
+        <img src="/static/images/blog/{{ image }}" class="hero-image">
+      {% endif %}
+    </figure>
+  {% endif %}
+{% endmacro %}
+
+
+{% macro header(rst, ctx) %}
+  {% set project = ctx.config.project[0] if ctx.config.project else none %}
+
+  {{ header_image(ctx) }}
+
+  {% if project %}
+    <h1 class="title">
+      {{ project.name }}
+      <em>{{ project.tagline }}</em>
+    </h1>
+  {% elif not ctx.hide_title %}
+    {{ rst.html_title }}
+  {% endif %}
+
+  <div class="rst-meta">
+    <div class="rst-data">
+      {% if ctx.pub_date %}
+        <p class="byline">
+          {% if ctx.author %}
+            <span class="meta-preposition">by</span> {{ birds.get_card(ctx.author) }}
+          {% endif %}
+          <span class="meta-preposition">on</span> {{ utility.datetime(ctx.pub_date) }}
+        </p>
+      {% endif %}
+
+      {{ tags(ctx.tags) }}
+    </div>
+
+    {% if project and (project.url or project.source) %}
+      <div class="project-links">
+        {% if project.url %}
+          <a href="{{ project.url }}" class="btn">View Site</a>
+        {% endif %}
+        {% if project.source %}
+          <a href="{{ project.source }}" class="btn">View Source</a>
+        {% endif %}
+      </div>
+    {% endif %}
+  </div>
+{% endmacro %}
+
+

@@ -16,30 +16,3 @@
     </p>
   {% endif %}
 {% endmacro %}
-
-
-{% macro tags(taglist) %}
-  {% if taglist %}
-    <nav class="tags">
-      {{ utility.icon('tags', class='icon-tag') }}
-      {% for tag in taglist|sort(case_sensitive=true) %}
-        <a href="{{ link_to('tag', tag=tag) }}" class="tag" rel="tag">{{ tag }}</a>
-      {%- endfor %}
-    </nav>
-  {% endif %}
-{% endmacro %}
-
-
-{% macro header_image(post) %}
-  {% set image = post.config.image[0].src if post.config.image else none %}
-
-  {% if image %}
-    <figure class="hero">
-      {% if '://' in image %}
-        <img src="{{ image }}" class="hero-image">
-      {% else %}
-        <img src="/static/images/blog/{{ image }}" class="hero-image">
-      {% endif %}
-    </figure>
-  {% endif %}
-{% endmacro %}
