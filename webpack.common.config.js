@@ -9,6 +9,7 @@ const HardSourceWebpackPlugin = require('hard-source-webpack-plugin');
 const nodeObjectHash = require('node-object-hash');
 const path = require('path');
 const sassdoc = require('sassdoc');
+const touch = require('touch');
 const webpack = require('webpack');
 const WebpackShellPlugin = require('webpack-shell-plugin');
 
@@ -20,6 +21,9 @@ let styleOutput = '[name].bundle.css';
 let mediaOutput = '[name].[ext]';
 let devtool = 'cheap-module-inline-source-map';
 let buildScript = 'gulp dev-build';
+
+// Create empty spammers.txt file if none exists
+touch.sync('static/js/spammers.txt');
 
 // Override settings if running in production
 if (process.env.NODE_ENV === 'production') {
@@ -84,6 +88,7 @@ module.exports = {
   // define all the entry point bundles
   entry: {
     app: './init.js',
+    spam_referrals_blocker: './spamReferralsBlocker.js',
     susy_off_canvas: './pages/susy-off-canvas.js',
     app_styles: ['screen.scss'],
     styleguide: ['styleguide.scss'],
@@ -125,7 +130,7 @@ module.exports = {
     }),
     // pull common js and webpack runtime out of all bundles
     new webpack.optimize.CommonsChunkPlugin({
-      name: 'app',
+      name: 'spam_referrals_blocker',
       minChunks: Infinity
     }),
     // pull all CSS out of JS bundles
@@ -174,6 +179,17 @@ module.exports = {
         use: [{
           loader: 'file-loader',
           options: { name: mediaOutput }
+        }]
+      },
+      {
+        test: /\.jpe?g$|\.gif$|\.png$|\.svg$/,
+        use: [{
+          loader: 'file-loader',
+          options: {
+            name: mediaOutput,
+            img: 'progressive',
+            limit: 50000
+          }
         }]
       },
       {

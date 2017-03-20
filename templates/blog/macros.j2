@@ -1,5 +1,5 @@
 {% import 'utility.macros.j2' as utility %}
-{% import 'blog/utility.macros.j2' as blog %}
+{% import 'layout/macros.j2' as page %}
 {% import 'birds/utility.macros.j2' as birds %}
 
 
@@ -17,10 +17,10 @@
         <span class="meta-preposition">by</span> {{ birds.get_card(post.author) }}
         <span class="meta-preposition">on</span> {{ utility.datetime(post.pub_date) }}
       </p>
-      {{ blog.tags(post.tags) }}
+      {{ page.tags(post.tags) }}
     </div>
 
-    {{ blog.header_image(post) }}
+    {{ page.header_image(post) }}
 
     {% if post.summary %}
       <div class="summary">
@@ -40,5 +40,5 @@
     <span class="meta-preposition">by</span> {{ birds.get_card(post.author) }}
     {{ utility.datetime(post.pub_date) }}
   </p>
-  {{ blog.tags(post.tags) }}
+  {{ page.tags(post.tags) }}
 {% endmacro %}

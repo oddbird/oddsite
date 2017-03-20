@@ -1,22 +1,28 @@
 // Post Content
 // ============
 
-
 .section-title {
   margin-top: 0;
 }
 
-.title {
-  @include font-family('alt');
-  font-size: calc(1.5rem + 1.75vw);
-  line-height: 1.25;
-  margin: size('gutter') auto;
-  max-width: size('full-content');
-  padding: 0 size('gutter');
-}
+.content-block {
+  @include center('medium-page');
+  @include grid;
 
-.intro {
-  font-style: italic;
+  @supports not (display: grid) {
+    max-width: size('full-content');
+  }
+
+  section {
+    @supports (display: grid) {
+      grid-column: col1-start / -1;
+
+      @include above('medium-page') {
+        grid-column: col3-start / span 1;
+        max-width: size('full-content');
+      }
+    }
+  }
 }
 
 .linked-post-title {

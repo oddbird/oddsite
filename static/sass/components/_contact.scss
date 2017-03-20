@@ -4,4 +4,10 @@
 .contact-intro {
   @include micro-clearfix;
   margin-bottom: size('gutter');
+
+  p {
+    &:first-of-type {
+      @include text-shadow;
+    }
+  }
 }
