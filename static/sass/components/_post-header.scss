@@ -48,6 +48,7 @@
 .title-sub {
   @include font-family('body');
   @include text-shadow;
+  display: block;
   font-size: calc(1rem + 1vw);
   font-style: italic;
   font-weight: 400;
