@@ -10,9 +10,8 @@ project:
   - name: 'MozTrap'
     tagline: 'Ditributed Quality Assurance Tools'
     source: 'https://github.com/mozilla/moztrap'
-    url: 'http://moztrap.mozilla.org'
     years: '2011–2012'
-    status: 'public'
+    status: 'dead'
 tasks:
   - Product Branding
   - User Experience Design
