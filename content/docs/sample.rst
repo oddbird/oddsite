@@ -2,6 +2,7 @@ public: no
 tags: [CSS, RST, Code]
 headline:
   - tagline: 'sample rST document'
+    type: 'Post Type Here'
 image:
   - src: '2017/initial-letter/drop-caps.jpg'
 quotes:
@@ -31,8 +32,9 @@ you can add metadata to the YAML at the top of the document:
   headline:
     - title: 'This will optionally override the rST title for your headline'
       tagline: 'This will appear under the main title'
+      type: 'This will appear in the ribbon above the main title'
 
-The ``headline`` attribute accepts two optional properties.
+The ``headline`` attribute accepts three optional properties.
 Most commonly,
 the ``tagline`` property can be used to add
 a subtitle along side the main title.
@@ -42,6 +44,9 @@ than the actual headline text.
 In that instance,
 you can override the headline text
 by adding a ``title`` property.
+The ``type`` property can be used when the post
+belongs in higher level category or series,
+like ``Birds Recommend``. 
 
 If no ``headline`` is provided,
 most posts will use the page title provided,

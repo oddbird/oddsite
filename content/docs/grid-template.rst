@@ -4,6 +4,7 @@ grid_template: true
 project:
   - name: 'Grid Template'
     tagline: 'Sample Documentation'
+    type: 'Post Type Here'
     url: 'http://www.oddbird.net/'
     source: 'https://github.com/oddbird/oddsite/'
     years: '2008–2016'

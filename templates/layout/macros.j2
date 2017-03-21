@@ -29,10 +29,17 @@
 {% endmacro %}
 
 
-{% macro split_headline(main, sub) %}
+{% macro split_headline(main, sub, type) %}
   <h1 class="title">
+    {% if type %}
+      <div class="title-post-type">{{ type }}</div>
+    {% endif %}
+    
     <div class="title-main">{{ main }}</div>
-    <em class="title-sub">{{ sub }}</em>
+    
+    {% if sub %}
+      <em class="title-sub">{{ sub }}</em>
+    {% endif %}
   </h1>
 {% endmacro %}
 
@@ -45,7 +52,7 @@
   {# Use the headline metadata when provided #}
   {% if ctx.config.headline %}
     {% set headline = ctx.config.headline[0] %}
-    {{ split_headline(headline.title or rst.title, headline.tagline) }}
+    {{ split_headline(headline.title or rst.title, headline.tagline, headline.type) }}
   {# Fall back on project metadata #}
   {% elif project %}
     {{ split_headline(project.name, project.tagline) }}

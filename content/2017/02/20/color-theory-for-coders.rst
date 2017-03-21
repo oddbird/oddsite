@@ -1,5 +1,8 @@
 public: yes
 author: sondra
+headline:
+  - title: 'Color Theory for Coders'
+    type: 'Birds Recommend'
 tags: [Tips, Color, Design, Recommendations]
 image:
   - src: '2017/color-theory/decision-tree.jpg'

@@ -2,20 +2,55 @@
 // ===========
 
 .title {
-  @include title;
   margin: size('gutter') auto;
   max-width: size('full-content');
   padding: 0 size('gutter');
 
-  &:first-child {
+  .no-image & {
     @include text-shadow;
+    @include title;
   }
+}
 
-  em {
-    @include font-family('body');
-    font-size: calc(1.25rem + 1.75vw);
-    font-style: italic;
+// Titles on pages that live inside title wrapper
+.title-main {
+  @include text-shadow;
+  @include title;
+}
+
+// Titles on pages that don't have title wrapper
+.page-title {
+  @include text-shadow;
+  @include title;
+}
+
+.title-post-type {
+  @include font-family('body');
+  background-color: color('invert');
+  color: color('background');
+  display: inline-block;
+  font-weight: 400;
+  margin-left: negative('gutter');
+  padding: size('quarter-shim') size('gutter');
+  position: relative;
+
+  @include after('')  {
+    border-color: transparent color('background') transparent transparent;
+    border-style: solid;
+    border-width: size('triangle-height') size('triangle-width') size('triangle-height') 0;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
   }
+}
+
+.title-sub {
+  @include font-family('body');
+  @include text-shadow;
+  font-size: calc(1rem + 1vw);
+  font-style: italic;
+  font-weight: 400;
 }
 
 .rst-meta {
