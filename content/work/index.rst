@@ -1,17 +1,11 @@
 public: yes
 location: projects
 after:
-  - include: 'projects/_list.html.j2'
-    title: 'Live Client Projects'
-    data: 'clients'
-    priority: 'live'
+  - include: 'projects/_feature.html.j2'
+    has: 'client'
   - include: 'projects/_process.html.j2'
     title: 'The OddBird Process is...'
   - include: 'projects/_services.html.j2'
-  - include: 'projects/_list.html.j2'
-    title: 'Other Client Work'
-    data: 'clients'
-    priority: 'other'
 process:
   - title: 'Lean <i>&</i> Agile'
     body: |

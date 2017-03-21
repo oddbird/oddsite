@@ -70,8 +70,8 @@ summary: |
   by the US Military and Coast Guard as an employee health benefit.
 
 
-CoachHub Case Study
-===================
+Case Study: CoachHub
+====================
 
 .. callmacro:: projects/case-study.macros.j2#front_matter
   :slug: 'work/coachhub'

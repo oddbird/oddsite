@@ -35,24 +35,28 @@
 {% endmacro %}
 
 
-{% macro feature(project) %}
+{% macro feature(page) %}
+  {% set client = page.config.client[0] if page.config.client else null %}
+  {% set contributors = page.config.contributors if page.config.contributors else null %}
+  {% set project = page.config.project[0] %}
+
   <article>
     <h3>
       {{ utility.link_if(project.name, project.url) }}
     </h3>
-    <h4>
-      {{ project.tagline }}
-    </h4>
-
-    {% if project.client %}
-      {{ for(project.client) }}
-    {% else %}
-      {{ who(project.who) }}
+    {% if project.tagline %}
+      <h4>{{ project.tagline }}</h4>
     {% endif %}
 
-    {% if project.quote %}
-      {{ content.blockquote(project.quote.text, project.quote.credit) }}
+    {% if client %}
+      {{ for(client, project.years) }}
+    {% elif contributors %}
+      {{ who(contributors) }}
     {% endif %}
+
+    {% for quote in page.config.quotes %}
+      {{ content.blockquote(quote.text, quote.name, quote.url, quote.role) }}
+    {% endfor %}
   </article>
 {% endmacro %}
 

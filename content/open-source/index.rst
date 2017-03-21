@@ -1,18 +1,8 @@
 public: yes
 location: open-source
 after:
-  - include: 'projects/_list.html.j2'
-    title: 'Software We Created'
-    data: 'oss'
-    priority: creator
-  - include: 'projects/_list.html.j2'
-    title: 'Software We Maintained'
-    data: 'oss'
-    priority: core
-  - include: 'projects/_list.html.j2'
-    title: 'Other Contributions'
-    data: 'oss'
-    priority: contributor
+  - include: 'projects/_feature.html.j2'
+    has: 'contributors'
 
 
 Open-Source Leadership

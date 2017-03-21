@@ -1,16 +1,17 @@
 {% import 'utility.macros.j2' as utility %}
 {% import 'projects/macros.j2' as work %}
 
+{% set pages = all_pages|filter_pages(module.has)|filter_pages('public', 'neq', false) %}
 
-{% set projects = config[module.data] or config.clients %}
+{% if pages|length() > 0 %}
+  <section data-module="feature-projects">
+    <h2>
+      {{ utility.link_if(module.title or 'Featured Projects', module.title_url) }}
+    </h2>
 
-<section data-module="feature-projects" data-projects="{{ module.data or 'clients' }}">
-  <h2>
-    {{ utility.link_if(module.title or 'Projects', module.title_url) }}
-  </h2>
-
-  {% for project in projects|selectattr('feature') %}
-    {{ work.feature(project) }}
-  {% endfor %}
-  </div>
-</section>
+    {% for page in pages %}
+      {{ work.feature(page) }}
+    {% endfor %}
+    </div>
+  </section>
+{% endif %}

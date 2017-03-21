@@ -1,0 +1,25 @@
+public: no
+location: work
+grid_template: true
+image:
+  - src: '2016/coachhub/feature.jpg'
+client:
+  - name: 'Craftisan'
+project:
+  - name: 'Craftisan'
+    years: '2010–2011'
+    priority: 'other'
+    status: 'dead'
+tasks:
+  - Product Branding
+  - User Experience Design
+  - Project Architecture
+  - Mobile-Responsive Styles
+summary: |
+  International arts and crafts marketplace
+  specifically designed for aid workers
+  and the local artists they interact with.
+
+
+Project: Craftisan
+==================
