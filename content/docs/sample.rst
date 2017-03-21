@@ -2,7 +2,7 @@ public: no
 tags: [CSS, RST, Code]
 headline:
   - tagline: 'sample rST document'
-    type: 'Post Type Here'
+    type: 'Documentation'
 image:
   - src: '2017/initial-letter/drop-caps.jpg'
 quotes:
@@ -46,7 +46,7 @@ you can override the headline text
 by adding a ``title`` property.
 The ``type`` property can be used when the post
 belongs in higher level category or series,
-like ``Birds Recommend``. 
+like ``Birds Recommend``.
 
 If no ``headline`` is provided,
 most posts will use the page title provided,

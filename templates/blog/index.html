@@ -1,12 +1,13 @@
 {% extends "blog/archives.html" %}
 
 {% import "blog/macros.j2" as blog %}
+{% import "layout/macros.j2" as layout %}
 
 {% block title %}Blog{% endblock %}
 {% block og_url %}{{ get_full_canonical_url(builder, slug='/blog/') }}{% endblock %}
 
 {% block list_intro %}
-  <h1 class="title main-title">{{ config.blog_title }}</h1>
+  {{ layout.show_headline(config.blog_title) }}
 {% endblock list_intro %}
 
 {% block archive %}

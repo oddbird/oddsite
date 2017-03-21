@@ -29,14 +29,14 @@
 {% endmacro %}
 
 
-{% macro split_headline(main, sub, type) %}
+{% macro show_headline(main, sub=none, type=none) %}
   <h1 class="title">
     {% if type %}
       <div class="title-post-type">{{ type }}</div>
     {% endif %}
-    
+
     <div class="title-main">{{ main }}</div>
-    
+
     {% if sub %}
       <em class="title-sub">{{ sub }}</em>
     {% endif %}
@@ -45,21 +45,24 @@
 
 
 {% macro header(rst, ctx) %}
+  {% set headline = ctx.config.headline[0] if ctx.config.headline else none %}
   {% set project = ctx.config.project[0] if ctx.config.project else none %}
+  {% set client = ctx.config.client[0] if ctx.config.client else none %}
+  {% set contributors = ctx.config.contributors if ctx.config.contributors else none %}
+
+  {% set main = headline.title if (headline and headline.title) else none %}
+  {% set main = project.name if (project and project.name and not main) else main %}
+  {% set main = main or rst.title %}
+
+  {% set sub = headline.tagline if (headline and headline.tagline) else none %}
+  {% set sub = project.tagline if (project and project.tagline and not sub) else sub %}
+
+  {% set type = headline.type if (headline and headline.type) else none %}
+  {% set type = 'case study' if (project and client and not type) else type %}
+  {% set type = 'open-source software' if (project and contributors and not type) else type %}
 
   {{ header_image(ctx) }}
-
-  {# Use the headline metadata when provided #}
-  {% if ctx.config.headline %}
-    {% set headline = ctx.config.headline[0] %}
-    {{ split_headline(headline.title or rst.title, headline.tagline, headline.type) }}
-  {# Fall back on project metadata #}
-  {% elif project %}
-    {{ split_headline(project.name, project.tagline) }}
-  {# Fall back finally on rST document title #}
-  {% elif not ctx.config.hide_title %}
-    {{ rst.html_title }}
-  {% endif %}
+  {{ show_headline(main, sub, type) }}
 
   <div class="rst-meta">
     <div class="rst-data">
