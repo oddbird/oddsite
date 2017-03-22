@@ -54,6 +54,19 @@
   font-weight: 300;
 }
 
-.project-links {
+.header-actions {
   text-align: right;
+}
+
+.rst-summary {
+  font-size: size('intro-text');
+  margin: 0 auto;
+  max-width: size('full-content', 'em');
+  padding: size('shim') size('gutter') 0;
+
+  @include after('') {
+    border-top: size('border-thin') solid color('border-light');
+    display: block;
+    margin: size('double-gutter') 0;
+  }
 }

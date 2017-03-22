@@ -13,7 +13,7 @@
 
       @include expect {
         // sass-lint:disable-all
-        border-bottom: 0.44444rem solid #e07;
+        border-bottom: size('border') solid #e07;
         display: block;
         position: relative;
         width: 100%;
@@ -21,7 +21,7 @@
         &:before,
         &:after {
           content: " ";
-          border: 1.4rem solid transparent;
+          border: size('gutter') solid transparent;
           border-bottom-width: 0;
           border-top-color: #e07;
           left: 50%;
@@ -31,7 +31,7 @@
 
         &:before {
           content: " ";
-          margin-top: 0.44444rem;
+          margin-top:size('border');
           transform: translateX(-50%) translateY(-2px);
         }
 

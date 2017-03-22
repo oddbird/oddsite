@@ -1,5 +1,8 @@
 public: yes
 location: projects
+headline:
+  - tagline: 'Helping solve real problems for real users'
+    type: 'Client Projects'
 after:
   - include: 'projects/_feature.html.j2'
     has: 'client'
@@ -45,26 +48,23 @@ services:
       - User experience and interface design
       - Automated, living style guides
       - Brand design and documentation
+summary: |
+  **Do you have a web application you want to build?**
+  OddBird provides extensive experience in product development,
+  branding, application design,
+  and user testing — 
+  with a strong commitment to well-tested,
+  carefully architected,
+  documented, and maintainable code.
+  All our applications are built with open-web technology,
+  for responsive accessibility across devices,
+  browsers, and user (dis)abilities.
+
+  .. callmacro:: content.macros.j2#link_button
+    :url: '/contact/'
+
+    Start a conversation about your project »
 
 
 Custom Web Software
 ===================
-
-**Do you have a web application you want to build?**
-OddBird provides extensive experience in product development,
-branding, application design,
-and user testing — 
-with a strong commitment to well-tested,
-carefully architected,
-documented, and maintainable code.
-All our applications are built with open-web technology,
-for responsive accessibility across devices,
-browsers, and user (dis)abilities.
-
-|get-started|
-
-.. |get-started| raw:: html
-
-  <a href="/contact/" class="btn">
-    Start a conversation about your project »
-  </a>

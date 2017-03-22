@@ -1,4 +1,5 @@
 {% import 'utility.macros.j2' as utility %}
+{% import 'content.macros.j2' as content %}
 {% import 'birds/utility.macros.j2' as birds %}
 
 
@@ -44,6 +45,54 @@
 {% endmacro %}
 
 
+{% macro rst_meta(ctx, project=none) %}
+  {% set has_actions = ctx.config.actions or project.url or project.source %}
+
+  {% if ctx.pub_date or ctx.tags or has_actions %}
+    <div class="rst-meta">
+      <div class="rst-data">
+        {% if ctx.pub_date %}
+          <p class="byline">
+            {% if ctx.author %}
+              <span class="meta-preposition">by</span> {{ birds.get_card(ctx.author) }}
+            {% endif %}
+            <span class="meta-preposition">on</span> {{ utility.datetime(ctx.pub_date) }}
+          </p>
+        {% endif %}
+
+        {{ tags(ctx.tags) }}
+      </div>
+
+      {% if ctx.config.actions %}
+        {{ header_actions(ctx.config.actions) }}
+      {% elif project %}
+        {% set actions = [
+          {'text': 'go to app', 'url': project.url},
+          {'text': 'view source', 'url': project.source}
+        ] %}
+
+        {{ header_actions(actions) }}
+      {% endif %}
+    </div>
+  {% endif %}
+{% endmacro %}
+
+
+{% macro header_actions(links) %}
+  {% set links = links|selectattr('url')|list %}
+
+  {% if links|length > 0 %}
+    <div class="header-actions">
+      {% for link in links %}
+        {% call content.link_button(link.url) %}
+          {{ link.text }}
+        {% endcall %}
+      {% endfor %}
+    </div>
+  {% endif %}
+{% endmacro %}
+
+
 {% macro header(rst, ctx) %}
   {% set headline = ctx.config.headline[0] if ctx.config.headline else none %}
   {% set project = ctx.config.project[0] if ctx.config.project else none %}
@@ -63,32 +112,13 @@
 
   {{ header_image(ctx) }}
   {{ show_headline(main, sub, type) }}
+  {{ rst_meta(ctx, project) }}
 
-  <div class="rst-meta">
-    <div class="rst-data">
-      {% if ctx.pub_date %}
-        <p class="byline">
-          {% if ctx.author %}
-            <span class="meta-preposition">by</span> {{ birds.get_card(ctx.author) }}
-          {% endif %}
-          <span class="meta-preposition">on</span> {{ utility.datetime(ctx.pub_date) }}
-        </p>
-      {% endif %}
-
-      {{ tags(ctx.tags) }}
+  {% if ctx.config.summary %}
+    <div class="rst-summary">
+      {{ ctx.render_summary() }}
     </div>
-
-    {% if project and (project.url or project.source) %}
-      <div class="project-links">
-        {% if project.url %}
-          <a href="{{ project.url }}" class="btn">View Site</a>
-        {% endif %}
-        {% if project.source %}
-          <a href="{{ project.source }}" class="btn">View Source</a>
-        {% endif %}
-      </div>
-    {% endif %}
-  </div>
+  {% endif %}
 {% endmacro %}
 
 

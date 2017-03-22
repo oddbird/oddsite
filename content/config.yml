@@ -744,7 +744,10 @@ location: 'blog'
 author: 'oddbird'
 comments: false
 
-blog_title: 'Our Odd Thoughts...'
+# blog_title:
+#   - title: 'The Blog'
+#     type: 'Articles'
+#     tagline: 'Our Odd Thoughts...'
 
 contact:
   - title: 'Let’s Build Something Together!'
