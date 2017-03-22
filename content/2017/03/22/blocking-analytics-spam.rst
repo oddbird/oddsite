@@ -112,6 +112,34 @@ And in our HTML, after the JS file has been executed:
     </script>
 
 
+Bonus: Excluding Internal Traffic
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Without much extra work, we can also exclude internal traffic from our
+analytics data:
+
+.. code:: js
+
+    const devHosts = [
+      // List your local development servers
+      'oddsite.hexxie.com:3000',
+      'localhost:3000',
+      '127.0.0.1:3000'
+    ];
+
+    window.isDevelopment = () => devHosts.indexOf(window.location.host) !== -1;
+
+And our modified HTML:
+
+.. code:: html
+
+    <script>
+      if(!window.isSpamReferral() && !window.isDevelopment()) {
+        // ... initialize Google Analytics
+      }
+    </script>
+
+
 Can't We Do Better Than That?
 -----------------------------
 
@@ -126,10 +154,10 @@ less-than-ideal about fetching a raw ``.txt`` file directly from someone else's
 GitHub repo, making assumptions about the format of the file contents, and then
 relying on it as part of our build/deploy process.
 
-So we've recently implemented many of the methods outlined in `this guide`_,
-most notably `using a whitelist filter to exclude any hostnames we haven't
-explicitly authorized`_. This takes care of most of the spam, and is
-significantly cleaner and easier to maintain.
+So we've recently also implemented many of the methods outlined in `this
+guide`_, most notably `using a whitelist filter to exclude any hostnames we
+haven't explicitly authorized`_. This takes care of most of the spam, and is
+arguably cleaner and easier to maintain.
 
 .. _this guide: https://www.ohow.co/ultimate-guide-to-removing-irrelevant-traffic-in-google-analytics/
 .. _using a whitelist filter to exclude any hostnames we haven't explicitly authorized: https://www.ohow.co/ultimate-guide-to-removing-irrelevant-traffic-in-google-analytics/#a-creating-a-valid-hostname-filter-for-ghost-spam
