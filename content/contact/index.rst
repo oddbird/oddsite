@@ -1,5 +1,6 @@
 public: yes
 location: contact
+hide_contact: true
 before:
   - include: 'contact/_form.html.j2'
     contact: 'miriam'
