@@ -1,0 +1,105 @@
+{% import 'utility.macros.j2' as utility %}
+
+
+{#
+  RST Content Blocks
+  ------------------
+#}
+{% macro rst(content=none, tag=none) %}
+  {% if (tag == none) or (tag == 'start') %}
+    <div class="content-block">
+  {% endif %}
+
+  {% if (tag == none) %}
+    {% set content = content if (content != none) else caller() %}
+    {{ content|safe }}
+  {% endif %}
+
+  {% if (tag == none) or (tag == 'end') %}
+    </div>
+  {% endif %}
+{% endmacro %}
+
+
+{#
+  Icon Blocks
+  -----------
+#}
+{% macro icon_block(title, slug, data) %}
+  {% set page = all_pages|filter_pages('slug', 'eq', slug)|get_page %}
+  {% set data = page.config[data] %}
+
+  <section class="icon-blocks-container">
+    <h2>{{ title|safe }}</h2>
+
+    {% for item in data %}
+      <div class="icon-blocks">
+        <div class="icon-block">
+          {{ utility.icon(item.icon) }}
+        </div>
+        <div class="icon-block-text">
+          {% if item.title %}
+            <h3>{{ item.title|safe }}</h3>
+          {% endif %}
+
+          <p>{{ item.text|safe }}</p>
+        </div>
+      </div>
+    {% endfor %}
+  </section>
+{% endmacro %}
+
+
+{#
+  Quotes
+  ------
+#}
+{% macro blockquote(content=none, name=none, url=none, role=none) %}
+  {% set content = content if (content != none) else caller() %}
+
+  <blockquote>
+    <p>{{ content|safe }}</p>
+
+    {% if name or url or role %}
+      <footer class="attribution">
+      <cite>
+        —{{ utility.link_if(name, url) }}{% if role %}, {{ role }}{% endif %}
+      </cite>
+      </footer>
+    {% endif %}
+  </blockquote>
+{% endmacro %}
+
+
+{% macro pullquote(content=none) %}
+  {% set content = content if (content != none) else caller() %}
+
+  <div class="pullquote">
+    <p>{{ content|safe }}</p>
+  </div>
+{% endmacro %}
+
+
+{% macro get_quotes(slug, index=none) %}
+  {% set page = all_pages|filter_pages('slug', 'eq', slug)|get_page %}
+
+  {% if index %}
+    {% set quote = page.config.quotes[index - 1] %}
+    {{ blockquote(quote.text, quote.name, quote.url, quote.role) }}
+  {% else %}
+    {% for quote in page.config.quotes %}
+      {{ blockquote(quote.text, quote.name, quote.url, quote.role) }}
+    {% endfor %}
+  {% endif %}
+{% endmacro %}
+
+
+{#
+  Buttons
+  -------
+#}
+{% macro link_button(url) %}
+  <a href="{{ url }}" class="btn">
+    {{ caller() }}
+  </a>
+{% endmacro %}

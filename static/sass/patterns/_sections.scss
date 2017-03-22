@@ -8,6 +8,10 @@
   padding: 0 size('gutter');
 }
 
+.grid-template {
+  max-width: 100%;
+}
+
 .separator {
   @include section-arrow;
   box-shadow: 0 2px 2px color('shadow');

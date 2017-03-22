@@ -34,6 +34,15 @@ spaces.
     --Person Name
 ```
 
+- If you want to highlight something and make it look similar to a
+blockquote, but do not have a source, you can use the following:
+
+```nohighlight
+.. callmacro:: content-macros.j2#pullquote
+
+  This is the best piece of content. It isn't quoting an external source,
+  but the post is making an AWESOME point and I want to make it shine!
+```
 
 Branding
 --------
@@ -75,15 +84,29 @@ Images
 for screen readers and search engines. Alt text should describe what is in
 the image.
 - We have some utility classes for images and figures and will be adding more
-soon. As of January 31, 2017 you may use the following:
+soon. Currently, you can use the following:
   - ``size-quarter``
   - ``size-half``
   - ``size-full``
   - ``img-border`` adds a hairline, helpful when using a screenshot with a
   white background.
-- *Note:* If declaring a size, it remains this size regardless of screen size.
-- ``:align:`` accepts ``left``, ``right`` or ``center`` and outputs as a class.
-- This is how you add alignment, alt text, classes and links in RST:
+
+*Note:* If declaring a size, it remains this size regardless of screen size.
+
+The following utility classes will push or expand an image (or item)
+outside of its parent container:
+  - ``extend-left`` - extends slightly outside of its container to the left
+  - ``extend-right`` - extends slightly outside of its container to the right
+  - ``extend-small`` - extends a small amount past its container on both sides
+  - ``extend-large`` - extends a large amount past its container on both sides
+  - ``extend-full`` - extends from left to right edges of screen
+
+If using one of the above ``extend-*`` utility classes, alignment is built in.
+If not, the ``:align:`` directive accepts ``left``, ``right`` or ``center``
+and outputs as a class.
+
+Below are a few examples when adding alignment, alt text, classes and links to
+images in RST:
 
 ```nohighlight
 .. image:: /static/images/blog/miko.jpg
@@ -91,6 +114,10 @@ soon. As of January 31, 2017 you may use the following:
    :alt: Miko smiling while playing outside
    :class: size-quarter img-border
    :target: https://supportada.org/?campaign=python
+
+.. image:: /static/images/blog/imagename.jpg
+   :alt: page with grid lines over artwork
+   :class: extend-right
 ```
 
 Intro

@@ -14,6 +14,27 @@ site_message:
 # Future Talks
 # ------------
 
+events:
+
+  - venue: 'WordPress Naperville'
+    url: 'https://www.meetup.com/WordPress-Naperville/events/236903886/'
+    date: ['3', '21', '2017']
+    adr:
+      city: 'Naperville'
+      state: 'IL'
+    who:
+      - author: 'stacy'
+        title: 'From Scratch to Launch: Front-end Theme Building'
+
+  - venue: 'Front-End Camp'
+    url: 'http://chicagocamps.org/events/2017/front-end-camp/'
+    date: ['6', '3', '2017']
+    adr:
+      city: 'Chicago'
+      state: 'IL'
+    who:
+      - author: 'stacy'
+        title: 'The Great State of Design with CSS Grid Layout & Friends'
 
 # Client Projects
 # ---------------
@@ -565,6 +586,28 @@ giving:
 # ----------
 
 events_past:
+
+  - venue: 'WordPress Naperville'
+    url: 'https://www.meetup.com/WordPress-Naperville/events/236903879/'
+    date: ['2', '21', '2017']
+    adr:
+      city: 'Naperville'
+      state: 'IL'
+    who:
+      - author: 'stacy'
+        title: 'From Scratch to Launch: Design Phase'
+        slides: 'https://www.slideshare.net/Funstacy/from-scratch-to-launch-2-design-phase'
+
+  - venue: 'UVA Scholars’ Lab'
+    url: 'http://cal.lib.virginia.edu/event/3088981'
+    date: ['01', '23', '2017']
+    adr:
+      city: 'Charlottesville'
+      state: 'VA'
+    who:
+      - author: 'miriam'
+        title: 'A Practical Guide to Losing Control'
+
   - venue: 'WordPress Naperville'
     url: 'https://www.meetup.com/WordPress-Naperville/events/236485707/'
     date: ['1', '17', '2017']
@@ -574,7 +617,17 @@ events_past:
     who:
       - author: 'stacy'
         title: 'From Scratch to Launch: Planning Phase'
+        slides: 'https://www.slideshare.net/Funstacy/from-scratch-to-launch-series-part1-planning-phase'
 
+  - venue: 'Gotham Sass'
+    url: 'https://www.meetup.com/gothamsass/events/235946893/'
+    date: ['01', '12', '2017']
+    adr:
+      city: 'New York'
+      state: 'NY'
+    who:
+      - author: 'miriam'
+        title: 'Code Patterns for Pattern Making'
 
   - venue: 'CSSDay.io'
     url: 'http://cssday.io/'
@@ -585,8 +638,10 @@ events_past:
     who:
       - author: 'miriam'
         title: 'Code Patterns for Pattern-Making'
+        slides: 'http://oddbooksapp.com/book/pattern-making'
       - author: 'stacy'
         title: 'The Great State of Design (with CSS Grid Layout and Friends)'
+        slides: 'https://www.slideshare.net/Funstacy/the-great-state-of-design-with-css-grid-layout-and-friends'
 
   - venue: 'Plone Digital Experience Conference'
     url: 'http://2016.ploneconf.org/'

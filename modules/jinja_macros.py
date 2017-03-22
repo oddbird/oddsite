@@ -10,7 +10,7 @@ class TolerantOptionSpec(object):
 
     # Use str to convert any and all options
     def __getitem__(self, key):
-        return str
+        return lambda v: v.encode('utf-8')
 
     # Make sure docutils will use this thing
     # even though it's empty
@@ -35,26 +35,30 @@ class CallMacro(Directive):
             raise ValueError("Invalid macro id: {}".format(macro_id))
 
         if content:
-            call = """
-            {{% call to_run.{name}({arglist}) %}}
-              {content}
-            {{% endcall %}}
-            """.strip()
+            call = (
+                u"{{% call to_run.{name}({arglist}) %}}"
+                u"{content}"
+                u"{{% endcall %}}"
+            ).strip()
         else:
-            call = "{{{{ to_run.{name}({arglist}) }}}}"
+            call = u"{{{{ to_run.{name}({arglist}) }}}}"
         call = call.format(
             name=macro_name,
-            arglist=", ".join(
-                '{}={}'.format(k, v) for k, v in self.options.items()),
+            arglist=u", ".join(
+                u'{}={}'.format(
+                    k,
+                    v.decode('utf-8')
+                ) for k, v in self.options.items(),
+            ),
             content=content,
         )
 
         # We need to build a trivial template that imports the filename, and
         # then calls the macro with the right args.
-        return """
-            {{% import "{filename}" as to_run %}}
-            {call}
-        """.strip().format(
+        return (
+            u'{{% import "{filename}" as to_run %}}'
+            u"{call}"
+        ).strip().format(
             filename=filename,
             call=call,
         )

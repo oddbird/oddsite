@@ -2,13 +2,12 @@
 {% import "blog/utility.macros.j2" as blog %}
 {% import "birds/utility.macros.j2" as birds %}
 
+
 {% macro section(page, oss=none) %}
   {% set author = page.config.bird %}
 
   <div data-module='bird' class="h-card" id="bird-{{ author }}">
-    <div class="bird-face">
-      {{ utility.icon(author, size='face') }}
-    </div>
+    {{ birds.face(author) }}
 
     <header>
       <h2 class="h-card">

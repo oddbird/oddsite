@@ -1,0 +1,20 @@
+// Typography Config
+// =================
+
+/// Base styles used on page-title H elements 
+/// @group Typography
+/// @example scss - Usage (scss)
+///   .page-title {
+///     @include title;
+///   }
+/// @example css - Output (css)
+///   .page-title {
+///     font-family: "freight-sans-pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+///     font-size: calc(1.5rem + 1.75vw);
+///     line-height: 1.25;
+///   }
+@mixin title {
+  @include font-family('alt');
+  font-size: calc(1.5rem + 1.75vw);
+  line-height: 1.25;
+}

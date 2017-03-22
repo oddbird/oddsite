@@ -1,5 +1,6 @@
 {% import 'utility.macros.j2' as utility %}
 {% import 'birds/utility.macros.j2' as birds %}
+{% import 'content.macros.j2' as content %}
 
 
 {% macro list(project, named_states=[]) %}
@@ -49,18 +50,10 @@
       {{ who(project.who) }}
     {% endif %}
 
-    {{ pullquote(project.quote) }}
+    {% if project.quote %}
+      {{ content.blockquote(project.quote.text, project.quote.credit) }}
+    {% endif %}
   </article>
-{% endmacro %}
-
-
-{% macro pullquote(quote) %}
-  {% if quote %}
-    <blockquote>
-      <p>“{{ quote.text }}”</p>
-      <cite>—{{ quote.credit }}</cite>
-    </blockquote>
-  {% endif %}
 {% endmacro %}
 
 
