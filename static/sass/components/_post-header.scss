@@ -2,52 +2,29 @@
 // ===========
 
 .title {
-  margin: size('gutter') auto;
+  @include text-shadow;
+  @include title;
+  margin-bottom: size('gutter');
+  margin-top: size('gutter');
   max-width: size('full-content');
   padding: 0 size('gutter');
-
-  .no-image & {
-    @include text-shadow;
-    @include title;
-  }
-}
-
-// Titles on pages that live inside title wrapper
-.title-main {
-  @include text-shadow;
-  @include title;
-}
-
-// Titles on pages that don't have title wrapper
-.page-title {
-  @include text-shadow;
-  @include title;
 }
 
 .title-post-type {
   @include font-family('body');
   background-color: color('invert');
+  clip-path: polygon(100% 0%, calc(100% - 0.5rem) 50%, 100% 100%, 0 100%, 0% 50%, 0 0);
   color: color('background');
   display: inline-block;
+  font-size: 1rem;
   font-weight: 400;
   margin-left: negative('gutter');
   padding: size('quarter-shim') size('gutter');
-  position: relative;
-
-  @include after('')  {
-    border-color: transparent color('background') transparent transparent;
-    border-style: solid;
-    border-width: size('triangle-height') size('triangle-width') size('triangle-height') 0;
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-  }
+  text-shadow: none;
 }
 
 .title-sub {
   @include font-family('body');
-  @include text-shadow;
   display: block;
   font-size: calc(1rem + 1vw);
   font-style: italic;
@@ -69,7 +46,6 @@
 }
 
 .byline {
-  margin-bottom: size('half-shim');
   margin-top: 0;
 }
 

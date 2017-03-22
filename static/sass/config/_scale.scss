@@ -71,8 +71,6 @@ $pattern-sizes: (
   'dropdown-wide': 14rem,
   'menu-more': 12px,
   'menu-more-space': 'menu-more' ('multiple': 0.25),
-  'triangle-width': 10px,
-  'triangle-height': 'triangle-width' ('multiple': 1.8 ),
 );
 
 @include herman-add-sizes('pattern-sizes', $pattern-sizes);
