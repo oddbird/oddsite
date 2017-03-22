@@ -330,6 +330,16 @@ events_past:
         title: 'From Scratch to Launch: Design Phase'
         slides: 'https://www.slideshare.net/Funstacy/from-scratch-to-launch-2-design-phase'
 
+  - venue: 'UVA Scholars’ Lab'
+    url: 'http://cal.lib.virginia.edu/event/3088981'
+    date: ['01', '23', '2017']
+    adr:
+      city: 'Charlottesville'
+      state: 'VA'
+    who:
+      - author: 'miriam'
+        title: 'A Practical Guide to Losing Control'
+
   - venue: 'WordPress Naperville'
     url: 'https://www.meetup.com/WordPress-Naperville/events/236485707/'
     date: ['1', '17', '2017']
@@ -341,6 +351,15 @@ events_past:
         title: 'From Scratch to Launch: Planning Phase'
         slides: 'https://www.slideshare.net/Funstacy/from-scratch-to-launch-series-part1-planning-phase'
 
+  - venue: 'Gotham Sass'
+    url: 'https://www.meetup.com/gothamsass/events/235946893/'
+    date: ['01', '12', '2017']
+    adr:
+      city: 'New York'
+      state: 'NY'
+    who:
+      - author: 'miriam'
+        title: 'Code Patterns for Pattern Making'
 
   - venue: 'CSSDay.io'
     url: 'http://cssday.io/'
