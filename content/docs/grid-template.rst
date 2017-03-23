@@ -1,6 +1,8 @@
 public: no
 tags: [CSS, RST, Code]
 grid_template: true
+headline:
+  - type: 'documentation'
 project:
   - name: 'Grid Template'
     tagline: 'Sample Documentation'
@@ -95,7 +97,6 @@ These macros rely on specific YAML patterns as well.
 
 .. code:: yaml
 
-  hide_title: true
   project:
     - name: 'OddSite'
       tagline: 'Oddly Human Web Apps'
