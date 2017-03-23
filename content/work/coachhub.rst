@@ -54,14 +54,12 @@ planning:
     text: 'Placeholder text...'
 summary: |
   Our mobile coaching platform for ORCAS
-  integrates with their suite of self-management tools,
-  as well as other vetted third-party apps —
-  providing users with anywhere,
-  anytime access to varying levels of support via video chat,
-  in-app messaging, public Q&A, webinars, and support groups.
+  provides users with anywhere,
+  anytime access to varying levels of health-coaching —
+  via video chat, in-app messaging, public Q&A, webinars, and support groups.
   Users browse coaches, send messages, request appointments,
   post questions, and grant permissions
-  for coaches to view their progress.
+  for coaches to view their progress in other self-management apps.
   Coaches create a profile, manage daily tasks,
   make appointments, post answers to questions,
   view user progress, and set alerts
@@ -72,10 +70,6 @@ summary: |
 
 Case Study: CoachHub
 ====================
-
-.. callmacro:: projects/case-study.macros.j2#front_matter
-  :slug: 'work/coachhub'
-
 
 .. callmacro:: content.macros.j2#rst
   :tag: 'start'
