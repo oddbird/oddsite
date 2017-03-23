@@ -1,7 +1,7 @@
 public: yes
 location: open-source
 headline:
-  - tagline: 'Giving back to the community'
+  - tagline: 'Giving back to the community…'
     type: 'Open-Source Contributions'
 after:
   - include: 'projects/_feature.html.j2'

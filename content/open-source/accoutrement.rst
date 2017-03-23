@@ -2,7 +2,7 @@ public: yes
 location: open-source
 grid_template: true
 image:
-  - src: '2016/coachhub/feature.jpg'
+  - src: 'blog/2016/coachhub/feature.jpg'
 project:
   - name: 'Sass Accoutrement'
     tagline: 'Modular theme-configuration libraries'

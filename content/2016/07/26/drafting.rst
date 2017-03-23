@@ -2,7 +2,7 @@ public: no
 author: miriam
 tags: [OddSite, 'Open Design', Process]
 image:
-  - src: 'oddsite.jpg'
+  - src: 'blog/oddsite.jpg'
 after:
   - include: 'blog/_tag-module.html.j2'
     title: 'OddSite Re-design Timeline'

@@ -2,7 +2,7 @@ public: no
 author: miriam
 tags: [Interviews, Sitepoint, Podcasts]
 image:
-  - src: '2016/versioning.png'
+  - src: 'blog/2016/versioning.png'
 summary: |
   I joined `Tim Evko`_ and `M. David Green`_
   for their great new `SitePoint`_ podcast —

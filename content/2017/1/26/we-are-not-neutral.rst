@@ -2,7 +2,7 @@ public: yes
 author: miriam
 tags: [Politics, 'Year in Review', Diversity]
 image:
-  - src: '2017/2016-review/retreat.jpg'
+  - src: 'blog/2017/2016-review/retreat.jpg'
 summary: |
   OddBird is a small company —
   a shared vision and brand

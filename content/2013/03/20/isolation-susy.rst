@@ -2,7 +2,7 @@ public: yes
 tags: [Susy, Layout, Grids, 'Sub-pixel Rounding', Code]
 author: miriam
 image:
-  - src: 'susy.jpg'
+  - src: 'blog/susy.jpg'
 summary: |
   A few new features have landed in Susy 1.0.7,
   even as we work on more integrated syntaxes for 2.0.

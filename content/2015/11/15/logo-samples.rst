@@ -2,7 +2,7 @@ public: yes
 author: sondra
 tags: ['Case Studies']
 image:
-  - src: '2016/logos/oddbird.jpg'
+  - src: 'blog/2016/logos/oddbird.jpg'
 summary: |
   OddBird offers full brand identity development,
   including logo design.

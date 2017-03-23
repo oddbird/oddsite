@@ -2,7 +2,7 @@ public: yes
 tags: [Susy, Layout, Grids]
 author: miriam
 image:
-  - src: 'susy.jpg'
+  - src: 'blog/susy.jpg'
 summary: |
   `Susy Next alpha 4`_ is now available.
 

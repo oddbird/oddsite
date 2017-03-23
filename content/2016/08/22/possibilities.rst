@@ -2,7 +2,7 @@ public: yes
 author: sondra
 tags: [OddSite, 'Open Design', Research, 'User Experience', Community]
 image:
-  - src: 'bwdraft.jpg'
+  - src: 'blog/bwdraft.jpg'
 summary: |
   OddBird met for a work retreat in April. On the Oddgenda: grow the company and redesign OddSite. I came home from retreat tasked with reviewing OddBird’s web presence and proposing ways to improve communication about our process and services in order to attract new clients.
 after:

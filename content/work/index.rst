@@ -1,7 +1,7 @@
 public: yes
 location: projects
 headline:
-  - tagline: 'Helping solve real problems for real users'
+  - tagline: 'Solving real problems for real users…'
     type: 'Client Projects'
 after:
   - include: 'projects/_feature.html.j2'

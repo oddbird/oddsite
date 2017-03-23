@@ -2,7 +2,7 @@ public: yes
 author: miriam
 tags: ['Q&A', Sitepoint]
 image:
-  - src: '2016/QandA.jpg'
+  - src: 'blog/2016/QandA.jpg'
 summary: |
   I did a `live Q&A at SitePoint`_
   back in August.

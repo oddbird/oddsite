@@ -2,7 +2,7 @@ public: yes
 author: miriam
 tags: [Conferences, 'Style Guides']
 image:
-  - src: 'clarity.jpg'
+  - src: 'blog/clarity.jpg'
 summary: |
   It was an honor to be part of the first ever
   Clarity Conference in San Francisco —

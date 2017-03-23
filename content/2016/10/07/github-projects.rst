@@ -2,7 +2,7 @@ public: yes
 author: miriam
 tags: [OddSite, 'Open Design', Tools, Process, Github, 'Pivotal Tracker']
 image:
-  - src: '2016/github-projects.jpg'
+  - src: 'blog/2016/github-projects.jpg'
 after:
   - include: 'blog/_tag-module.html.j2'
     title: 'OddSite Re-design Timeline'

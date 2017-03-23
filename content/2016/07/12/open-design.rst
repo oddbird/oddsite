@@ -2,7 +2,7 @@ public: yes
 author: miriam
 tags: [OddSite, 'Open Design']
 image:
-  - src: 'oddsite.jpg'
+  - src: 'blog/oddsite.jpg'
 summary: |
   We’re re-building our website in the open,
   and writing about our process along the way.

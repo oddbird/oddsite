@@ -2,7 +2,7 @@ public: yes
 author: miriam
 tags: [Tools, Color, Typography, 'Style Guides', Accoutrement, Herman, OddSite, 'Open Design', Code]
 image:
-  - src: '2017/pattern-making/NYC-sign.jpg'
+  - src: 'blog/2017/pattern-making/NYC-sign.jpg'
 summary: |
   Living Style Guide documentation on the web
   is a difficult problem,

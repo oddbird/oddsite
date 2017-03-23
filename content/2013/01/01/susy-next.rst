@@ -2,7 +2,7 @@ public: yes
 tags: [Susy, Layout, Grids]
 author: miriam
 image:
-  - src: 'susy.jpg'
+  - src: 'blog/susy.jpg'
 summary: |
   The web is littered with grid systems and 'frameworks'
   that force your code & design into narrowly defined patterns.

@@ -4,7 +4,7 @@ headline:
   - tagline: 'sample rST document'
     type: 'Documentation'
 image:
-  - src: '2017/initial-letter/drop-caps.jpg'
+  - src: 'blog/2017/initial-letter/drop-caps.jpg'
 quotes:
   - text: 'OddBird really changed my thinking about
       how successful outsourcing software development can be.'

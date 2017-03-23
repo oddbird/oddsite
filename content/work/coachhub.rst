@@ -2,7 +2,7 @@ public: yes
 location: work
 grid_template: true
 image:
-  - src: '2016/coachhub/feature.jpg'
+  - src: 'blog/2016/coachhub/feature.jpg'
 client:
   - name: 'ORCAS'
     url: 'http://orcasinc.com'

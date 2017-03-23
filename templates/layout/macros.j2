@@ -23,7 +23,7 @@
       {% if '://' in image %}
         <img src="{{ image }}" class="hero-image">
       {% else %}
-        <img src="/static/images/blog/{{ image }}" class="hero-image">
+        <img src="/static/images/{{ image }}" class="hero-image">
       {% endif %}
     </figure>
   {% endif %}

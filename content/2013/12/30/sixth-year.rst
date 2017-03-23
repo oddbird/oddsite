@@ -2,7 +2,7 @@ public: yes
 author: carl
 tags: ['Year in Review', Community]
 image:
-  - src: '2013.jpg'
+  - src: 'blog/2013.jpg'
 summary: |
   A brief review of 2013: OddBird, year six.
 

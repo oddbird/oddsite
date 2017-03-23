@@ -12,7 +12,7 @@ tags: [
   Marionette
   ]
 image:
-  - src: '2017/server-client/spa2.jpg'
+  - src: 'blog/2017/server-client/spa2.jpg'
 summary: |
   We want the convenience of a client-side single-page application using our
   `MV* framework`_ `of choice`_, but don't want to sacrifice the SEO and UX

@@ -2,7 +2,7 @@ public: yes
 tags: [Susy, Layout, Grids, Code]
 author: miriam
 image:
-  - src: 'susy.jpg'
+  - src: 'blog/susy.jpg'
 summary: |
   `Susy Next alpha 5`_ is out, and loaded with changes.
   We now require Sass 3.3,

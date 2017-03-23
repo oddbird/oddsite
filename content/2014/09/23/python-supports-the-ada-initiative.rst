@@ -2,7 +2,7 @@ public: yes
 author: carl
 tags: [Python, Diversity, Community]
 image:
-  - src: 'adainitiative.jpg'
+  - src: 'blog/adainitiative.jpg'
 title: Python for Ada
 summary: |
     Donate to the Ada Initiative today

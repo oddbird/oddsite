@@ -2,7 +2,7 @@ public: yes
 author: sondra
 tags: ['Case Studies']
 image:
-  - src: '2016/coachhub/feature.jpg'
+  - src: 'blog/2016/coachhub/feature.jpg'
 summary: |
   An in depth look at OddBird's design and development process
   on the CoachHub mobile-responsive web application —

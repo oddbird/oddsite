@@ -2,7 +2,7 @@ public: yes
 author: stacy
 tags: [CSS, Front-end, Videos, Conferences]
 image:
-  - src: '2017/cssday/cssday.jpg'
+  - src: 'blog/2017/cssday/cssday.jpg'
 summary: |
   CSSDay was held in sunny Arizona on December 3, 2016. The conference is
   geared towards front-end developers who want to dive deeper into advanced

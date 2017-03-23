@@ -2,7 +2,7 @@ public: yes
 author: sondra
 tags: [OddSite, 'Open Design', Design, Typography]
 image:
-  - src: '2016/brand/type-header.jpg'
+  - src: 'blog/2016/brand/type-header.jpg'
 summary: |
   What follows is an in-depth look at our brand design process thus far as we
   work towards a new look and feel for this, our OddSite. Details. Confessions.

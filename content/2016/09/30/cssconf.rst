@@ -2,7 +2,7 @@ public: yes
 author: miriam
 tags: [Conferences, Front-end, CSS, Code]
 image:
-  - src: '2016/cssconf/ns.jpg'
+  - src: 'blog/2016/cssconf/ns.jpg'
 summary: |
   It was a pleasure speaking at
   CSSConf 2016 in Boston!

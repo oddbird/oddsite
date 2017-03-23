@@ -2,7 +2,7 @@ public: yes
 author: miriam
 tags: [Sass, Books]
 image:
-  - src: 'sassbook.jpg'
+  - src: 'blog/sassbook.jpg'
 summary: |
   I'm excited to release
   `Jump Start Sass`_,
