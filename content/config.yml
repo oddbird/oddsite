@@ -16,16 +16,6 @@ site_message:
 
 events:
 
-  - venue: 'WordPress Naperville'
-    url: 'https://www.meetup.com/WordPress-Naperville/events/236903886/'
-    date: ['3', '21', '2017']
-    adr:
-      city: 'Naperville'
-      state: 'IL'
-    who:
-      - author: 'stacy'
-        title: 'From Scratch to Launch: Front-end Theme Building'
-
   - venue: 'Front-End Camp'
     url: 'http://chicagocamps.org/events/2017/front-end-camp/'
     date: ['6', '3', '2017']
@@ -318,6 +308,16 @@ giving:
 # ----------
 
 events_past:
+
+  - venue: 'WordPress Naperville'
+    url: 'https://www.meetup.com/WordPress-Naperville/events/236903886/'
+    date: ['3', '21', '2017']
+    adr:
+      city: 'Naperville'
+      state: 'IL'
+    who:
+      - author: 'stacy'
+        title: 'From Scratch to Launch: Front-end Theme Building'
 
   - venue: 'WordPress Naperville'
     url: 'https://www.meetup.com/WordPress-Naperville/events/236903879/'

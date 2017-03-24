@@ -6,7 +6,7 @@ image:
 project:
   - name: 'True'
     tagline: 'Unit-testing for Sass developers'
-    url: '/true'
+    url: 'http://oddbird.net/true/'
     source: 'https://github.com/oddbird/true'
     status: 'public'
     owner: yes

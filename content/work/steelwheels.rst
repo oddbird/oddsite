@@ -7,7 +7,7 @@ client:
   - name: 'The Steel Wheels'
     url: 'https://www.thesteelwheels.com/'
 project:
-  - name: 'Craftisan'
+  - name: 'The Steel Wheels'
     years: '2010–2011'
     priority: 'other'
     status: 'changed'

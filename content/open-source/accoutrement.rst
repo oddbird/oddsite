@@ -7,7 +7,7 @@ project:
   - name: 'Sass Accoutrement'
     tagline: 'Modular theme-configuration libraries'
     url: '/accoutrement'
-    source: 'https://github.com/oddbird/?utf8=%E2%9C%93&query=+only%3Apublic+accoutrement'
+    source: 'https://github.com/oddbird?utf8=%E2%9C%93&q=accoutrement&type=public'
     status: 'public'
     owner: yes
 contributors:

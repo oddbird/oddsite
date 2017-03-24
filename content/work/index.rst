@@ -29,7 +29,7 @@ services:
   - title: 'We have partnered with'
     data:
       - 'Educators'
-      - 'Hipaa-compliant wellness providers'
+      - 'HIPAA-compliant wellness providers'
       - 'Non-profits and community organizations'
       - 'Professional gear manufacturers'
       - 'E-commerce startups'

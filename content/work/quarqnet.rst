@@ -17,16 +17,6 @@ tasks:
   - User Experience Design
   - Project Architecture
   - Mobile-Responsive Styles
-quotes:
-  - text: 'Just like the Quarq power meters
-      changed the playing field for power measurement,
-      this new technology is going to change the way people watch races.'
-    name: 'Triathlon Magazine'
-    url: 'http://triathlonmagazine.ca/feature/introducing-quarq-race-intelligence-quollectors/'
-  - text: 'Seguimiento GPS de atletas en IronMan Kona
-      gracias a Quarq Race Intelligence.'
-    name: 'Eduardo Mateos'
-    role: 'QRI user'
 summary: |
   QuarqNet allows athletes to track and analyze their activities,
   sharing their location and statistics
