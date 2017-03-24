@@ -41,7 +41,9 @@
     </p>
   {% endif %}
 
-  {{ pullquote(project.quote) }}
+  {% if project.quote %}
+    {{ content.blockquote(project.quote.text, project.quote.credit) }}
+  {% endif %}
 
 </article>
 {% endmacro %}
@@ -110,7 +112,7 @@
   {% set coverimageurl = coverimage if '://' in coverimage else [canonical_url, '../static/images/blog/', coverimage]|join('') %}
 
   {% if coverimage %}
-    <img src="{{ coverimageurl }}" class="project-cover-image">
+    <img src="{{ coverimageurl }}" class="project-cover-image expand-large">
   {% endif %}
 
 {% endmacro %}
