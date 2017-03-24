@@ -1,5 +1,8 @@
 public: yes
 location: home
+headline:
+  - title: 'You have a brilliant idea.'
+    tagline: 'We’ll make it fly.'
 after:
   - include: 'projects/_feature.html.j2'
     title: Client Work
@@ -19,23 +22,19 @@ after:
     count: 3
 
 
-Your Partner for Web Software
-=============================
+Software for Humans
+===================
 
-process, branding, design, and development
-------------------------------------------
+Technology is only useful
+when it solves real problems for real people.
+As your partner,
+we'll help find those opportunities –
+providing `web application design and development`_,
+with a human focus from start to finish.
 
-**You need to solve real problems for real people**,
-and we're here to help.
-We'll work closely with you
-to develop every aspect of your online product —
-from branding and code,
-to the tools and processes to keep you growing.
+.. _web application design and development: /work/
 
-|get-started|
+.. callmacro:: content.macros.j2#link_button
+  :url: '/contact/'
 
-.. |get-started| raw:: html
-
-  <a href="/contact/" class="btn">
-    Start a conversation about your project
-  </a>
+  Let's talk about your idea »

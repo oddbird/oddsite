@@ -92,3 +92,14 @@
     {% endfor %}
   {% endif %}
 {% endmacro %}
+
+
+{#
+  Buttons
+  -------
+#}
+{% macro link_button(url) %}
+  <a href="{{ url }}" class="btn">
+    {{ caller() }}
+  </a>
+{% endmacro %}

@@ -1,5 +1,8 @@
 public: no
 tags: [CSS, RST, Code]
+headline:
+  - tagline: 'sample rST document'
+    type: 'Documentation'
 image:
   - src: '2017/initial-letter/drop-caps.jpg'
 quotes:
@@ -15,12 +18,41 @@ summary: |
   summary when shared on social media.
 
 
-======================
 This is the Post Title
 ======================
 
 This is a p tag. Pellentesque habitant morbi tristique senectus et netus et
 malesuada fames ac turpis egestas. Vestibulum tortor quam.
+
+To create more complex, multipart headlines,
+you can add metadata to the YAML at the top of the document:
+
+.. code:: yaml
+
+  headline:
+    - title: 'This will optionally override the rST title for your headline'
+      tagline: 'This will appear under the main title'
+      type: 'This will appear in the ribbon above the main title'
+
+The ``headline`` attribute accepts three optional properties.
+Most commonly,
+the ``tagline`` property can be used to add
+a subtitle along side the main title.
+In some cases,
+it's useful to have a different html ``title`` tag
+than the actual headline text.
+In that instance,
+you can override the headline text
+by adding a ``title`` property.
+The ``type`` property can be used when the post
+belongs in higher level category or series,
+like ``Birds Recommend``.
+
+If no ``headline`` is provided,
+most posts will use the page title provided,
+but pages with a ``project`` element
+will generate a headline based on the project name.
+
 
 This is an H2
 -------------
@@ -53,8 +85,8 @@ This is a p tag. Pellentesque habitant morbi tristique senectus et netus et
 malesuada fames ac turpis egestas. Vestibulum tortor quam.
 
 
-This is the second Post Title
------------------------------
+This is the second H2
+---------------------
 
 This is a p tag. Pellentesque habitant morbi tristique senectus et netus et
 malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae,

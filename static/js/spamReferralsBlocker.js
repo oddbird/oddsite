@@ -12,7 +12,7 @@ window.isSpamReferral = function () {
   const list = spammers.split('\n');
   const currentReferral = document.referrer;
   if (currentReferral) {
-    list.unshift('oddsite.hexxie.com', 'localhost');
+    list.unshift('oddsite.hexxie.com', 'localhost', '127.0.0.1');
     for (const spammer of list) {
       if (spammer &&
           currentReferral.toLowerCase().indexOf(spammer.toLowerCase()) !== -1) {

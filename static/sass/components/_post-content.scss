@@ -13,7 +13,7 @@
     max-width: size('full-content');
   }
 
-  section {
+  > * {
     @supports (display: grid) {
       grid-column: col1-start / -1;
 
