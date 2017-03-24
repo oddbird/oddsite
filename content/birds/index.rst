@@ -12,7 +12,7 @@ after:
 summary: |
   As a client,
   you'll get to know our tightly-knit team
-  on a first-name basis —
+  on a first-name basis –
   with direct access to everyone involved.
   We'll all learn what makes your company special,
   and discuss features as a team,

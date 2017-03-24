@@ -58,7 +58,7 @@ and “Should I buy a cappuccino or a latte at this cafe?”
 Relying on this research and my past experiences,
 I drafted a proposal for the team to review.
 This feedback stage confirmed the proposed direction
-and helped to clarify a core OddBird value —
+and helped to clarify a core OddBird value –
 *the people that make up our team
 are the defining characteristic
 of the OddBird brand*.
@@ -71,8 +71,8 @@ Site Map
    :alt: oddsite site map
 
 
-The site outline I created next —
-showing the flow of users through the website —
+The site outline I created next –
+showing the flow of users through the website –
 pivots around our core value: people.
 Each section of content on the new OddSite
 will seek to introduce and highlight
@@ -108,9 +108,9 @@ User Profiles
    :alt: oddsite user profiles
 
 
-I created user profiles next —
+I created user profiles next –
 an audit of the goals, usage and behavior
-of each user type —
+of each user type –
 to focus our content around their specific needs.
 Many of our past clients have come to us via referral
 from other web developers,
@@ -155,8 +155,8 @@ is the individual or company
 that has an exciting business idea
 and needs a development agency
 to build the web tools to make that idea happen.
-Imagining a day in the life of this user —
-fast-paced, focused, creative, mobile —
+Imagining a day in the life of this user –
+fast-paced, focused, creative, mobile –
 helped me identify key elements to include on OddSite.
 We aim to be transparent about our process
 and make it easy to find

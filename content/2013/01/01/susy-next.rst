@@ -88,7 +88,7 @@ Please welcome the Susy Next team:
   the creator of `Breakpoint`_
   (simple sass media queries),
   and a contributor to various other great projects.
-  He also built "one of the dumbest Sass experiments" —
+  He also built "one of the dumbest Sass experiments" –
   `sassymothereffingtextshadow`_.
 
 All of us are passionate designer/developers,

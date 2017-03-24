@@ -53,7 +53,7 @@ Thanks for asking the questions!
 
 |btn-link|
 
-You can also check out the `summary`_ —
+You can also check out the `summary`_ –
 but it leaves out some good bits.
 
 .. _Susy: http://susy.oddbird.net

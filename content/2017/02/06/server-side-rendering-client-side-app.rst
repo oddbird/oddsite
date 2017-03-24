@@ -29,14 +29,14 @@ summary: |
 Server-Side Rendering For Client-Side Apps
 ==========================================
 
-Here at OddBird, we're lucky enough to mostly work on `greenfield projects`_ —
+Here at OddBird, we're lucky enough to mostly work on `greenfield projects`_ –
 which means we choose our own tech stack. One of the first questions is how to
 render templates for the initial page-load. There are many reasons to prefer
 server-side rendering over a "pure" single-page app which always renders
-content in the browser — it's better for SEO, users don't have to wait for the
+content in the browser – it's better for SEO, users don't have to wait for the
 JavaScript to initialize before seeing content on the page, etc. But it's also
-more work to convince a client-side `MV* framework`_ to play nicely — and
-efficiently — with server-rendered markup.
+more work to convince a client-side `MV* framework`_ to play nicely – and
+efficiently – with server-rendered markup.
 
 .. _greenfield projects: https://en.wikipedia.org/wiki/Greenfield_project
 .. _MV* framework: http://backbonejs.org/
@@ -80,8 +80,8 @@ Storing JSON in data-attributes on individual DOM elements has the advantage of
 coupling the data and markup together for each component, but requires
 consistent markup patterns if the JS is to be reusable for various pieces of
 the app. It necessitates DOM interactions to fetch the data, which could easily
-cause performance issues with larger collections. In our case — with a
-relatively small data set for each page — this option provides both reasonable
+cause performance issues with larger collections. In our case – with a
+relatively small data set for each page – this option provides both reasonable
 performance and a clear relationship between the data and its corresponding
 markup.
 
@@ -243,18 +243,18 @@ In the end, we're moving toward the best of both worlds: a server-rendered page
 users), with the client-side benefits of a single-page app (live-updating
 components, and no page refreshes).
 
-There are a number of improvements we could make — prioritizing the most
+There are a number of improvements we could make – prioritizing the most
 important pieces of interactivity and lazy-loading the rest, abstracting our
 code into a Marionette `behavior`_ that can be added to any view where we want
-to pre-load with data from the DOM — but this is a good start. Every step of
-the way, we strive to minimize the amount of duplicated code or logic — no need
+to pre-load with data from the DOM – but this is a good start. Every step of
+the way, we strive to minimize the amount of duplicated code or logic – no need
 for a JavaScript process on the server, and no duplicated templates.
 
 .. _behavior: http://marionettejs.com/docs/v3.1.0/marionette.behavior.html
 
-We have a number of other tricks for sharing canonical data — global settings,
+We have a number of other tricks for sharing canonical data – global settings,
 third-party API keys, minified asset mappings, and even color maps generated
-directly from SCSS — but those will wait for a later installment in this
+directly from SCSS – but those will wait for a later installment in this
 series.
 
 How have you tackled the problem of wiring up a single-page application with

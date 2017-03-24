@@ -35,7 +35,7 @@ for our `OddSite Open Design`_ process.
 
 My first impressions are mixed.
 There's a lot to like about these new features,
-and the ability to organize issues —
+and the ability to organize issues –
 but the flow doesn't feel well-integrated yet.
 We'll write about the experience
 in more detail

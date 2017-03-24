@@ -21,8 +21,8 @@ summary: |
   makes all of our work stronger.
   In addition to our `open-source software`_ and `public speaking`_,
   we are proud to sponsor
-  organizations that increase diversity in the community —
-  from race and gender, to identity and sexuality —
+  organizations that increase diversity in the community –
+  from race and gender, to identity and sexuality –
   and events that bring the whole community together
   in thoughtful and inclusive ways.
   And then, on occasion,

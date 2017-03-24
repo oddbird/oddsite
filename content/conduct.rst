@@ -14,7 +14,7 @@ It is imperative that OddBird continue to be
 a welcoming, challenging, fun, and fair place to work.*
 
 OddBird is dedicated to providing
-a harassment-free environment for everyone —
+a harassment-free environment for everyone –
 regardless of gender, gender identity and expression,
 sexual orientation, disability, physical appearance,
 body size, age, race, or religion.
@@ -102,7 +102,7 @@ Harassment includes:
 - Unwelcome sexual attention.
 - Continued one-on-one communication after requests to cease.
 - Deliberate “outing” of any aspect of a person’s identity
-  without their consent —
+  without their consent –
   except as necessary to protect vulnerable people from intentional abuse.
 - Publication of non-harassing private communication.
 

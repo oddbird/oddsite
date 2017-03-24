@@ -22,7 +22,7 @@ It's time for a major overhaul of the OddBird website,
 referred to internally as our **OddSite**.
 This will be more work than we can handle in one pass,
 so we're going to take things slow
-and re-design our site in the open —
+and re-design our site in the open –
 sharing our thoughts while we work.
 
 
@@ -79,7 +79,7 @@ We'll post more about that drafting process
 in the next week or two.
 
 You'll be able to see the site live as it develops,
-but we'll also post articles along the way —
+but we'll also post articles along the way –
 capturing screen shots of the site at different stages,
 sharing artifacts from the design process
 (such as sketches and planning documents),
@@ -122,8 +122,8 @@ These are the rough stages we expect to go through:
    we'll spend some time improving
    the data structures, views, and templates
    that drive the site.
-   We're using `rstBlog`_ —
-   a powerful but poorly-documented Python static-site generator —
+   We're using `rstBlog`_ –
+   a powerful but poorly-documented Python static-site generator –
    so it will take some customization
    and a lot of documentation
    to make sure we have a maintainable site going forward.

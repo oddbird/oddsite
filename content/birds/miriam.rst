@@ -28,7 +28,7 @@ Miriam leads our process,
 working with clients and users to organize priorities,
 and find solutions to their unique problems.
 She is a pioneer of modern CSS techniques
-and open-source Sass tools —
+and open-source Sass tools –
 including the popular Susy responsive-grid toolkit,
 and True unit-testing library.
 She is the co-author of

@@ -77,7 +77,7 @@ Into this DAG::
 The commits in the ``topic`` branch are labeled with prime signs after the
 rebase to denote that they are, in a sense, the "same" commits, but because
 they have a different ancestry, describe a different set of
-states—specifically, states that incorporate commits F and G. If there are
+states – specifically, states that incorporate commits F and G. If there are
 conflicts between the rebased commits and their new ancestry, git will prompt
 you to resolve those before continuing the rebase.
 

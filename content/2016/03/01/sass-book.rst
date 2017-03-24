@@ -61,8 +61,8 @@ later code has priority in the cascade over the code before it.
 Some of the popular branded architectures
 (the ones you know by name)
 try to eliminate this feature of the cascade entirely,
-but I use it as a guide —
-organizing code from the most general to the most specific —
+but I use it as a guide –
+organizing code from the most general to the most specific –
 so the priority override makes sense.
 Code that we want applied generally across the site should come first,
 growing slowly in specificity and detail
@@ -87,7 +87,7 @@ and finally, more specific modules, themes, and overrides.
 
 Sass projects include another category of site-wide defaults
 not found in CSS:
-code with no output at all —
+code with no output at all –
 such as variables, functions, and mixin definitions.
 Many people
 (myself included)

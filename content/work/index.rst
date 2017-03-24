@@ -23,7 +23,7 @@ process:
   - title: 'Accessible <i>&</i> Responsive'
     body: |
       We use the accessible open web stack:
-      semantic HTML5, unobtrusive JavaScript, and advanced CSS —
+      semantic HTML5, unobtrusive JavaScript, and advanced CSS –
       backed by Python & Django on the server.
 services:
   - title: 'We have partnered with'
@@ -52,7 +52,7 @@ summary: |
   **Do you have a web application you want to build?**
   OddBird provides extensive experience in product development,
   branding, application design,
-  and user testing — 
+  and user testing – 
   with a strong commitment to well-tested,
   carefully architected,
   documented, and maintainable code.

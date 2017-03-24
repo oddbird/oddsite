@@ -99,7 +99,7 @@ you can see how they have been removed from the flow:
     <div class="third">third</div>
   </div>
 
-The items can overlap, and stack in any order —
+The items can overlap, and stack in any order –
 almost as though they are positioned absolutely.
 
 Isolation Grid

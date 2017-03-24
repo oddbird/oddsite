@@ -12,7 +12,7 @@ summary: |
   .. callmacro:: birds/utility.macros.j2#face
     :author: 'miriam'
 
-  We're always here and happy to talk —
+  We're always here and happy to talk –
   whether you have a project,
   or a question,
   or just want to say hi.

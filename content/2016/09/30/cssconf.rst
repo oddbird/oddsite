@@ -6,7 +6,7 @@ image:
 summary: |
   It was a pleasure speaking at
   CSSConf 2016 in Boston!
-  Here are some of my notes from the event —
+  Here are some of my notes from the event –
   coverig everything from
   creativity and the Bauhaus movement
   to SVG 2 internals,
@@ -31,7 +31,7 @@ and everyone else for attending!
 It was a great atmosphere,
 and I met all sorts of lovely people.
 
-My talk was called **Sass Map Magic** —
+My talk was called **Sass Map Magic** –
 a major update to a talk I had given
 several years back
 at BlendConf (may it rest in peace).
@@ -59,7 +59,7 @@ Creativity in Programming for Fun and Profit
 
 `Sarah Drasner`_
 talked about programming as a creative act.
-There is more than one way to solve any given problem —
+There is more than one way to solve any given problem –
 and different solutions will come with different trade-offs.
 It's worth exploring the options,
 while keeping in mind that code is a communication tool,
@@ -119,7 +119,7 @@ but there were a few philisophical points that stood out:
 - Make sure everyone on the team can write tests
   for the code they write
 - Take the time, on occasion,
-  to review and clean up your tests —
+  to review and clean up your tests –
   otherwise you will run into bloat and compile-time issues
 
 |bj-links|
@@ -148,7 +148,7 @@ Nativize Is the New Normalize
 `Jessica Lord`_
 showed us how to use `Electron`_
 to build native (Mac, Windows, Linux) desktop applications
-using Node, HTML, and CSS —
+using Node, HTML, and CSS –
 with simplified access to native APIs.
 
 That was pretty cool,
@@ -158,7 +158,7 @@ so your app feels like desktop software,
 and not a website.
 
 Since Electron uses the latest Choromium rendering,
-you don't have to target multiple browsers —
+you don't have to target multiple browsers –
 but you do have to contend with multiple operating systems.
 Among other things,
 she advised disabling
@@ -257,7 +257,7 @@ floats for inline content wrapped by text
 and flexbox for gallery-style UI components.
 
 All of them deal with layout
-along a single axis of flow —
+along a single axis of flow –
 what Jen referrs to as "one-dimensional" layout.
 To use any of them for layout,
 we have to include "row" markup
@@ -277,7 +277,7 @@ but `implementations are sparse`_,
 hidden behind flags,
 and buggy across all browsers.
 Jen recommends using Chrome
-to explore the new possibilities —
+to explore the new possibilities –
 but it will be some time
 before we can use it in production.
 
@@ -316,7 +316,7 @@ Will was able to isolate the main causes of "jank"
 and show us where to focus our efforts.
 
 *Loading* the DOM tree from HTML
-is outside the scope of CSS animations —
+is outside the scope of CSS animations –
 so not a central issue for frame-rate
 (though unrelated background loading
 can slow down overall performance
@@ -344,7 +344,7 @@ so these properties are a smaller drain on performance.
 *Displaying* painted pixels onto the screen
 is handled by the GPU,
 and there are several CSS properties
-that have been GPU-accelerated — 
+that have been GPU-accelerated – 
 meaning they will never cause a re-flow or re-paint.
 That includes ``transform``,
 most ``filter`` values
@@ -385,10 +385,10 @@ for sizing on the web.
 
 Interesting metaphor to "kick" it off:
 when runners wear softer shoes,
-they instinctively step harder —
+they instinctively step harder –
 negating any medical benefits.
 Keith suggests that we often do the same
-with relative units —
+with relative units –
 trying to reverse-engineer pixel values,
 when we could simply trust the abstration.
 We all need to learn how to "step softer"
@@ -396,7 +396,7 @@ with our relative units.
 
 Since ``em`` units
 are relative to *inherited* font size,
-they pose a particular confusion —
+they pose a particular confusion –
 two ``em`` values in the same block
 can render to different sizes:
 
@@ -464,7 +464,7 @@ CSS Variables: var(--subtitle)
 `Lea Verou`_
 demonstrated various ways to use
 native CSS variables
-(AKA CSS Custom Properties) —
+(AKA CSS Custom Properties) –
 already available in all modern browsers
 aside from IE/Edge.
 
@@ -474,7 +474,7 @@ and it's amazing to watch.
 I learned (after the fact)
 that she has speaker notes
 overlayed directly on her slides
-at low color contrast —
+at low color contrast –
 invisible to the audience,
 because projectors can't handle the subtlety,
 but clearly visible on her own screen.
@@ -488,7 +488,7 @@ added to Opera in 2009.
 The new CSS variables
 are actually more like custom properties,
 written with an "empty" prefix
-(e.g. ``--property``) —
+(e.g. ``--property``) –
 and solve a much different issue
 than Sass variables
 by inheriting as part of the DOM.
@@ -531,7 +531,7 @@ A few use-cases to note:
 
 - Apply variables inline,
   to create variations on a global style
-  e.g. ``style="--color: blue"`` on a button element —
+  e.g. ``style="--color: blue"`` on a button element –
   especially when using JS to adjust styles,
   so the logical definitions remain in CSS
 - Change a ``--gutter`` variable
@@ -567,7 +567,7 @@ Some custom-property gotchas:
   so you can't do things like ``var(--size)em``
   to add units to a number
 - Adding units is simple using e.g. ``calc(var(--size) * 1em)``,
-  but there is no good way to remove units —
+  but there is no good way to remove units –
   so it is often best to store unitless values,
   and only add the units when they are needed.
 - Variable definitions (``--my-color``) won't animate,
@@ -605,7 +605,7 @@ but talked instead about hacks
 that she has learned to appreciate
 while working on the redesign
 of a major site.
-I found it hard to take good notes —
+I found it hard to take good notes –
 but this talk is well worth the watch.
 So much good material in here!
 
@@ -648,7 +648,7 @@ Sass Map Magic
 .. image:: /static/images/blog/2016/cssconf/mia.jpg
 
 I showed a wide range of uses
-for the underused Sass "map" data type —
+for the underused Sass "map" data type –
 from simple site theme configurations,
 to data storage,
 and complex functional programming.

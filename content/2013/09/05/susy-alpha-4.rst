@@ -14,7 +14,7 @@ Susy Next: Alpha 4
 
 I don't have a lot of time to delve,
 but let me run through some of the changes
-and new features in `Susy Next alpha 4`_ —
+and new features in `Susy Next alpha 4`_ –
 as well as alpha 3, which never got a blog post.
 You can see the full list of changes
 in the `Susy Next Changelog`_,
@@ -32,7 +32,7 @@ We also have a set of complex nesting tests
 that show how things work in practice.
 Right now,
 the `test folder`_
-provides the best documentation —
+provides the best documentation –
 with ``index.html`` showing the True results
 and ``ag.html`` showing several standard grid-types.
 Explore, download, and play!
