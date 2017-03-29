@@ -63,7 +63,8 @@ summary: |
   and support groups.
   Users browse coaches, send messages,
   request appointments, post questions,
-  and grant permissions for coaches to view their progress. Coaches create a profile, manage daily tasks,
+  and grant permissions for coaches to view their progress. Coaches create a
+  profile, manage daily tasks,
   make appointments, post answers to questions,
   view user progress,
   and set alerts for relapse prevention
@@ -175,96 +176,107 @@ are bright, cheerful, and hopeful.
 
 .. figure:: http://dummyimage.com/1600x250/777777/777777.png
    :class: extend-large
-   :alt: map to buried treasure
-   :target: http://google.com
+   :alt: palette showing primary and secondary colors
 
    Full color palette derived from three basic brand colors.
 
 
-Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
-turpis egestas. Vestibulum tortor quamr facilisis. Ut felis.
-Nullam id dolor id nibh ultricies vehicula ut id elit.
-Vivamus sagittis lacusvel augue laoreet rutrum faucibus dolor auctor.
-Nullam id dolor id nibh ultricies vehicula ut id elit.
-Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
+.. figure:: http://dummyimage.com/1600x250/777777/777777.png
+   :class: align-center
+   :alt: CoachHub logo
 
-Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
-turpis egestas. Vestibulum tortor quamr facilisis. Ut felis.
-Nullam id dolor id nibh ultricies vehicula ut id elit.
-Vivamus sagittis lacusvel augue laoreet rutrum faucibus dolor auctor.
-Nullam id dolor id nibh ultricies vehicula ut id elit.
-Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
+   Rounded edges and a playful curl, evoke feelings of friendliness and
+   movement. New life, change, and hope: turning over a new leaf.
 
-.. figure:: http://dummyimage.com/1100x350/777777/777777.png
-   :class: extend-small
-   :alt: map to buried treasure
 
-   Full color palette derived from three basic brand colors.
+.. figure:: http://dummyimage.com/200x350/777777/777777.png
+   :class: extend-left
+   :alt: graphic leaves patterns
 
-Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
-turpis egestas. Vestibulum tortor quamr facilisis. Ut felis.
-Nullam id dolor id nibh ultricies vehicula ut id elit.
-Vivamus sagittis lacusvel augue laoreet rutrum faucibus dolor auctor.
-Nullam id dolor id nibh ultricies vehicula ut id elit.
-Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
-
-Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
-turpis egestas. Vestibulum tortor quamr facilisis. Ut felis.
-Nullam id dolor id nibh ultricies vehicula ut id elit.
-Vivamus sagittis lacusvel augue laoreet rutrum faucibus dolor auctor.
-Nullam id dolor id nibh ultricies vehicula ut id elit.
-Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
+We then created hundreds of unique avatar designs from just a few unique leaf
+graphics dynamically rendered using light and dark contrasts of our colors and
+rotation of the leaves.
 
 
 Responsive & Interactive UX Design
-----------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
-turpis egestas. Vestibulum tortor quamr facilisis. Ut felis.
-Nullam id dolor id nibh ultricies vehicula ut id elit.
-Vivamus sagittis lacusvel augue laoreet rutrum faucibus dolor auctor.
-Nullam id dolor id nibh ultricies vehicula ut id elit.
-Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
+User experience design guides feature development. Working feature-by-feature,
+we created rough sketches of each feature to get a sense of the components
+and layout. With approved sketches, we moved on to detailed designs and live
+implementation. As time went on patterns developed, and features began moving
+directly from sketch to code, allowing us to move quickly and efficiently.
+Integrating design and implementation helped us minimize time and money waste
+implementing poorly-considered features.
 
-Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
-turpis egestas. Vestibulum tortor quamr facilisis. Ut felis.
-Nullam id dolor id nibh ultricies vehicula ut id elit.
-Vivamus sagittis lacusvel augue laoreet rutrum faucibus dolor auctor.
-Nullam id dolor id nibh ultricies vehicula ut id elit.
-Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
+.. figure:: http://dummyimage.com/1100x350/777777/777777.png
+   :class: extend-full
+   :alt: screenshots of design in small and wide screen formats
 
-.. image:: http://dummyimage.com/200x200/777777/ffffff.png
-  :alt: image alt
-  :class: extend-right
+   Starting with designs for the smallest, mobile screens sizes helped
+   clarify and prioritize relevant information for each user.
 
-This image has a class of extend-right.
-Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
-turpis egestas. Vestibulum tortor quamr facilisis. Ut felis.
-Nullam id dolor id nibh ultricies vehicula ut id elit.
-Vivamus sagittis lacusvel augue laoreet rutrum faucibus dolor auctor.
-Nullam id dolor id nibh ultricies vehicula ut id elit.
-Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
 
-Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
-turpis egestas. Vestibulum tortor quamr facilisis. Ut felis.
-Nullam id dolor id nibh ultricies vehicula ut id elit.
-Vivamus sagittis lacusvel augue laoreet rutrum faucibus dolor auctor.
-Nullam id dolor id nibh ultricies vehicula ut id elit.
-Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
+.. figure:: http://dummyimage.com/1100x350/777777/777777.png
+   :class: extend-small
+   :alt: design of sliding panel over calendar
 
-Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
-turpis egestas. Vestibulum tortor quamr facilisis. Ut felis.
-Nullam id dolor id nibh ultricies vehicula ut id elit.
-Vivamus sagittis lacusvel augue laoreet rutrum faucibus dolor auctor.
-Nullam id dolor id nibh ultricies vehicula ut id elit.
-Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
+   Interaction can become distracting if implemented for its own sake.
+   Sliding side panels and realtime chat, serve the needs of the user,
+   highlighting particular features or important information.
 
-Below is a full width image with the ``.extend-full`` class
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+Usability Testing
+~~~~~~~~~~~~~~~~~
+
+Usability testing guided us in prioritizing feature development and adjusting
+UX design along the way, ensuring that CoachHub would be useful and relevant
+to users and partners.
+
+.. figure:: http://dummyimage.com/1100x350/777777/777777.png
+   :class: extend-large
+   :alt: different view designs for the appointment calendar
+
+   As we observed users navigating the app, it became clear that the
+   appointment calendar needed distinct views and interactions for
+   coaches and clients.
+
+
+Accessibilty
+~~~~~~~~~~~~
+
+Accessibility is built into the core technologies and techniques we use on
+every project: accessible HTML5, unobtrusive Javascript, and mobile-responsive
+CSS styles. We make it a priority from the beginning of each project — using
+progressive enhancement and responsive design to support a broad range of
+users, devices, and browsers. For CoachHub we also used Lea Verou’s Contrast
+Ratio tool to select colors for text that passed WCAG AA level at all sizes.
+We also built a WCAG contrast test into our Sass Accoutrement toolkits.
+
+
+Landing Pages
+~~~~~~~~~~~~~
+
+In conversation with ORCAS’s internal team, we designed graphics, recommended
+and edited text, and identified important “call to action” steps to create a
+relevant and compelling landing pages for different users.
+
 
 .. image:: http://dummyimage.com/1600x200/777777/ffffff.png
   :alt: image alt
   :class: extend-full
+
+
+On-Going Design
+---------------
+
+CoachHub launched with a minimum viable set of features, and room to grow. We
+continue to work periodically with ORCAS’s internal development team,
+consulting on the design and flow of new features as CoachHub expands to
+accommodate the needs of their growing user-base — people who use it every day
+to improve their health and wellness, or as part of their work coaching others.
 
 .. callmacro:: content.macros.j2#rst
   :tag: 'end'
