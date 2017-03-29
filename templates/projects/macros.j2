@@ -9,10 +9,19 @@
   {{ cover(project.cover_image) }}
 
   <header class="project-list-meta">
-    <h2 class="project-list-title">{{ project.name }}</h2>
+    <aside class="project-list-links">
+      {% if project.url %}
+        {{ utility.link_if('Case Study', project.url, class='btn') }}
+      {% endif %}
+      {% if project.source %}
+        {{ utility.link_if('Source Code', project.source, class='btn') }}
+      {% endif %}
+    </aside>
+
+    <h2 class="project-list-title title-main">{{ project.name }}</h2>
 
     {% if project.tagline %}
-      <h3 class="project-list-tagline">{{ project.tagline }}
+      <h3 class="project-list-tagline title-sub">{{ project.tagline }}
         {% if project.client %}
           {{ for(project.client, project.years) }}
         {% else %}
@@ -20,15 +29,6 @@
         {% endif %}
       </h3>
     {% endif %}
-
-    <div class="project-list-links">
-      {% if project.url %}
-        {{ utility.link_if('Case Study', project.url, class='btn') }}
-      {% endif %}
-      {% if project.source %}
-        {{ utility.link_if('Source Code', project.source, class='btn') }}
-      {% endif %}
-    </div>
   </header>
 
   {% if project.description or project.status %}
@@ -41,7 +41,7 @@
     </p>
   {% endif %}
 
- {% if project.quote %}
+  {% if project.quote %}
     {{ content.blockquote(project.quote.text, project.quote.credit) }}
   {% endif %}
 
@@ -112,7 +112,7 @@
   {% set coverimageurl = coverimage if '://' in coverimage else [canonical_url, '../static/images/blog/', coverimage]|join('') %}
 
   {% if coverimage %}
-    <img src="{{ coverimageurl }}" class="project-cover-image">
+    <img src="{{ coverimageurl }}" class="project-cover-image expand-large">
   {% endif %}
 
 {% endmacro %}

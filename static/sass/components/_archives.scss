@@ -1,9 +1,59 @@
 // Archives
 // ========
 
+[data-module='project-history'] {
+  max-width: none;
+}
 
 .post-preview {
-  border-bottom: 1px solid color('border-light');
-  margin-bottom: size('spacer');
-  padding-bottom: size('spacer');
+  @include after('') {
+    @include center('full-content');
+    border-bottom: 1px solid color('border-light');
+    display: block;
+    margin-bottom: size('gutter');
+    padding-bottom: size('gutter');
+
+    @include above('page-small') {
+      margin-bottom: size('spacer');
+      padding-bottom: size('spacer');
+    }
+  }
 }
+
+.project-cover-image {
+  @include extend('extend-full');
+  display: block;
+  padding-bottom: size('double-gutter');
+}
+
+.project-list-meta {
+  @include below('small-page') {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.project-list-links {
+  margin-bottom: size('half-shim');
+  margin-top: size('half-shim');
+
+  @include below('small-page') {
+    order: 3;
+  }
+
+  @include above('small-page') {
+    float: right;
+  }
+}
+
+.project-list-title,
+.project-list-tagline {
+  @include center('full-content');
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.project-summary {
+  @include center('full-content');
+}
+

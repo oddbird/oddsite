@@ -2,20 +2,33 @@
 // ===========
 
 .title {
+  @include text-shadow;
   @include title;
-  margin: size('gutter') auto;
+  margin-bottom: size('gutter');
+  margin-top: size('gutter');
   max-width: size('full-content');
   padding: 0 size('gutter');
+}
 
-  &:first-child {
-    @include text-shadow;
-  }
+.title-post-type {
+  @include font-family('body');
+  background-color: color('invert');
+  clip-path: polygon(100% 0%, calc(100% - 0.5rem) 50%, 100% 100%, 0 100%, 0% 50%, 0 0);
+  color: color('background');
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-left: negative('gutter');
+  padding: size('quarter-shim') size('gutter');
+  text-shadow: none;
+}
 
-  em {
-    @include font-family('body');
-    font-size: calc(1.25rem + 1.75vw);
-    font-style: italic;
-  }
+.title-sub {
+  @include font-family('body');
+  display: block;
+  font-size: calc(1rem + 1vw);
+  font-style: italic;
+  font-weight: 400;
 }
 
 .rst-meta {
@@ -33,7 +46,6 @@
 }
 
 .byline {
-  margin-bottom: size('half-shim');
   margin-top: 0;
 }
 

@@ -1,5 +1,8 @@
 public: yes
 author: sondra
+headline:
+  - type: 'Birds Recommend'
+    tagline: 'from Natalya Shelburne'
 tags: [Tips, Color, Design, Recommendations]
 image:
   - src: '2017/color-theory/decision-tree.jpg'
@@ -10,8 +13,8 @@ summary: |
   and teach you why her palettes work so well, all at the same time.
 
 
-Birds Recommend: Color Theory for Coders
-========================================
+Color Theory for Coders
+=======================
 
 So you write code, but design intrigues you and you'd like to delve deeper.
 Where to start? The sheer number of tools and tutorials is overwhelming. Later

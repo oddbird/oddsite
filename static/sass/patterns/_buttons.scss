@@ -5,6 +5,7 @@
   &,
   #{$link} {
     @include font-family('alt');
+    background-color: color('background');
     background-image: none; // remove link underline when styling as button...
     border-color: color('action-border');
     border-radius: size('border-radius');
@@ -13,7 +14,7 @@
     color: color('action');
     display: inline-block;
     font-weight: bold;
-    padding: 0.5rem size('gutter');
+    padding: size('half-shim') 1rem;
     text-decoration: none;
     text-shadow: none;
     transition: color 250ms, background-color 250ms;

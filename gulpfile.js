@@ -246,8 +246,7 @@ gulp.task('prod-serve', (cb) => {
 gulp.task('update-spammers', () => {
   const url = 'https://raw.githubusercontent.com/piwik/' +
     'referrer-spam-blacklist/master/spammers.txt';
-  return download(url)
-    .pipe(gulp.dest(paths.SRC_JS_DIR));
+  return download(url).pipe(gulp.dest(paths.SRC_JS_DIR));
 });
 
 const webpackOnBuild = (done) => (err, stats) => {
