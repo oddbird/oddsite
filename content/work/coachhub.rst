@@ -25,14 +25,14 @@ quotes:
     role: 'ORCAS CTO'
 planning:
   - title: 'App Goals'
-    icon: 'miriam'
+    icon: 'map'
     text: 'For an in-depth understanding of the CoachHub project
       and its place in the market, we created an App Goals document with ORCAS.
       We defined core problems coaches and clients face day-to-day,
       how our software might address these problems,
       and what features would make CoachHub uniquely useful.'
   - title: 'User Profiles'
-    icon: 'miriam'
+    icon: 'users'
     text: 'Together, we identified three distinct users —
       health coaches, individual clients,
       and business partners who might purchase CoachHub
@@ -40,7 +40,7 @@ planning:
       and detailed the significantly different motivations
       and needs of each persona.'
   - title: 'User Stories'
-    icon: 'miriam'
+    icon: 'theater'
     text: 'Each user story defined one task that a specific user
       might want to accomplish on CoachHub.
       (“As a Client, I want to schedule an appointment.”)
@@ -50,7 +50,7 @@ planning:
       before we began development, and throughout the project —
       remaining up-to-date and in control of the project cost and scope.'
   - title: 'Data Models'
-    icon: 'miriam'
+    icon: 'site-map'
     text: 'Placeholder text...'
 summary: |
   **CoachHub, a responsive web app coaching platform

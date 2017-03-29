@@ -36,8 +36,7 @@
 // ---------
 
 h1,
-h2,
-h3 {
+h2 {
   @include font-family('alt');
 }
 
@@ -48,6 +47,7 @@ h2 {
 
 h3 {
   font-size: calc(1rem + 0.5vw);
+  font-style: italic;
   margin-bottom: 0.75rem;
   margin-top: 1.5rem;
 }
