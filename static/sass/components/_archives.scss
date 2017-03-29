@@ -13,7 +13,7 @@
     margin-bottom: size('gutter');
     padding-bottom: size('gutter');
 
-    @include above('page-small') {
+    @include above('small-page') {
       margin-bottom: size('spacer');
       padding-bottom: size('spacer');
     }
