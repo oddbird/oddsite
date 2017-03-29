@@ -123,7 +123,7 @@ Site Architecture & Information Design
 
 .. image:: /static/images/work/coachhub/browse-coach-sitemap.jpg
    :alt: site map for browsing coaches
-   :class: extend-left
+   :class: extend-left img-shadow
 
 We created an interactive web
 of static-HTML content templates —
@@ -224,7 +224,7 @@ implementing poorly-considered features.
 
 
 .. figure:: /static/images/work/coachhub/interactive.jpg
-   :class: extend-small
+   :class: extend-small img-shadow
    :alt: design of sliding panel over calendar
 
    Interaction can become distracting if implemented for its own sake.
@@ -272,7 +272,7 @@ relevant and compelling landing pages for different users.
 
 .. image:: /static/images/blog/2016/coachhub/splash-final-2.jpg
   :alt: final design for landing page
-  :class: extend-full
+  :class: extend-full img-shadow
 
 
 On-Going Design

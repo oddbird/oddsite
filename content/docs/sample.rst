@@ -209,10 +209,11 @@ Images
 .. image:: /static/images/blog/navdraft.jpg
    :target: http://google.com
    :align: left
-   :class: size-quarter
+   :class: size-quarter img-shadow
    :alt: alternate text here
 
-This image has align set to ``left`` rbi tristique senectus et netus et
+This image has align set to ``left`` and has a shadow.
+rbi tristique senectus et netus et
 malesuada fames ac turpis egestas. Vestibulum tortor quam. This is a p tag.
 Pellentesque habitant morbi tristique senectus et netus et malesuada fames
 ac turpis egestas.

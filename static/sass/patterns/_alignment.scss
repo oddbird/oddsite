@@ -4,13 +4,13 @@
 .align-left {
   float: left;
   margin-bottom: size('pad');
-  padding-right: size('pad');
+  margin-right: size('pad');
 }
 
 .align-right {
   float: right;
   margin-bottom: size('pad');
-  padding-left: size('pad');
+  margin-left: size('pad');
 }
 
 .align-center {
