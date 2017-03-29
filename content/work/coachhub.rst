@@ -183,9 +183,22 @@ are bright, cheerful, and hopeful.
    movement. New life, change, and hope: turning over a new leaf.
 
 
-.. figure:: /static/images/work/coachhub/avatars.jpg
-   :class: extend-left
-   :alt: graphic leaves patterns
+
+.. raw:: html
+
+   <picture class="extend-left">
+
+      <source media="(max-width: 612px)"
+              srcset="/static/images/work/coachhub/avatars-small.jpg,
+                      /static/images/work/coachhub/avatars-small@2x.jpg 2x">
+
+      <source media="(min-width: 613px)"
+              srcset="/static/images/work/coachhub/avatars-large.jpg,
+                      /static/images/work/coachhub/avatars-large@2x.jpg 2x">
+
+      <img src="/static/images/work/coachhub/avatars-small.jpg">
+   </picture>
+
 
 We then created hundreds of unique avatar designs from just a few unique leaf
 graphics dynamically rendered using light and dark contrasts of our colors and
