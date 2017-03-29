@@ -121,7 +121,7 @@ Design and Development Phase
 Site Architecture & Information Design
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. image:: /static/images/blog/2016/coachhub/browse-coach-sitemap.jpg
+.. image:: /static/images/work/coachhub/browse-coach-sitemap.jpg
    :alt: site map for browsing coaches
    :class: extend-left
 
@@ -155,12 +155,6 @@ and user-experience flows.
 Building features would be a matter
 of replacing static content with live data.
 
-.. figure:: https://dummyimage.com/1000x9:6
-   :class: extend-small
-   :alt: map to buried treasure
-
-   This is an image with the extend-small class.
-
 
 Brand Identity
 ~~~~~~~~~~~~~~
@@ -174,14 +168,14 @@ MoodHacker and BlipHub (pictured below) —
 the CoachHub logo and overall brand
 are bright, cheerful, and hopeful.
 
-.. figure:: http://dummyimage.com/1600x250/777777/777777.png
-   :class: extend-large
+.. figure:: /static/images/work/coachhub/color-palette.jpg
+   :class: extend-small
    :alt: palette showing primary and secondary colors
 
    Full color palette derived from three basic brand colors.
 
 
-.. figure:: http://dummyimage.com/1600x250/777777/777777.png
+.. figure:: /static/images/work/coachhub/logo.jpg
    :class: align-center
    :alt: CoachHub logo
 
@@ -189,7 +183,7 @@ are bright, cheerful, and hopeful.
    movement. New life, change, and hope: turning over a new leaf.
 
 
-.. figure:: http://dummyimage.com/200x350/777777/777777.png
+.. figure:: /static/images/work/coachhub/avatars.jpg
    :class: extend-left
    :alt: graphic leaves patterns
 
@@ -209,7 +203,7 @@ directly from sketch to code, allowing us to move quickly and efficiently.
 Integrating design and implementation helped us minimize time and money waste
 implementing poorly-considered features.
 
-.. figure:: http://dummyimage.com/1100x350/777777/777777.png
+.. figure:: /static/images/work/coachhub/profiles.jpg
    :class: extend-full
    :alt: screenshots of design in small and wide screen formats
 
@@ -217,7 +211,7 @@ implementing poorly-considered features.
    clarify and prioritize relevant information for each user.
 
 
-.. figure:: http://dummyimage.com/1100x350/777777/777777.png
+.. figure:: /static/images/work/coachhub/interactive.jpg
    :class: extend-small
    :alt: design of sliding panel over calendar
 
@@ -235,7 +229,7 @@ Usability testing guided us in prioritizing feature development and adjusting
 UX design along the way, ensuring that CoachHub would be useful and relevant
 to users and partners.
 
-.. figure:: http://dummyimage.com/1100x350/777777/777777.png
+.. figure:: /static/images/work/coachhub/calendars.jpg
    :class: extend-large
    :alt: different view designs for the appointment calendar
 
@@ -264,8 +258,8 @@ and edited text, and identified important “call to action” steps to create a
 relevant and compelling landing pages for different users.
 
 
-.. image:: http://dummyimage.com/1600x200/777777/ffffff.png
-  :alt: image alt
+.. image:: /static/images/blog/2016/coachhub/splash-final-2.jpg
+  :alt: final design for landing page
   :class: extend-full
 
 
