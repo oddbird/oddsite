@@ -28,3 +28,8 @@ h6 {
   }
 }
 
+.caption {
+  color: color('caption');
+  font-size: size('caption');
+  font-style: italic;
+}
