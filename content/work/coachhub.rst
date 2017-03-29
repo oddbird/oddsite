@@ -53,21 +53,24 @@ planning:
     icon: 'miriam'
     text: 'Placeholder text...'
 summary: |
-  Our mobile coaching platform for ORCAS
+  **CoachHub, a responsive web app coaching platform
+  we built with ORCAS,**
   integrates with their suite of self-management tools,
-  as well as other vetted third-party apps —
-  providing users with anywhere,
-  anytime access to varying levels of support via video chat,
-  in-app messaging, public Q&A, webinars, and support groups.
-  Users browse coaches, send messages, request appointments,
-  post questions, and grant permissions
-  for coaches to view their progress.
-  Coaches create a profile, manage daily tasks,
+  as well as other vetted third-party apps,
+  and provides users with anywhere, anytime access
+  to varying levels of support via video chat,
+  in-app messaging, public Q&A, webinars,
+  and support groups.
+  Users browse coaches, send messages,
+  request appointments, post questions,
+  and grant permissions for coaches to view their progress. Coaches create a profile, manage daily tasks,
   make appointments, post answers to questions,
-  view user progress, and set alerts
-  for relapse prevention and escalation of care.
+  view user progress,
+  and set alerts for relapse prevention
+  and escalation of care.
   The product is currently being used
-  by the US Military and Coast Guard as an employee health benefit.
+  by the US Military and Coast Guard
+  for internal health coaching.
 
 
 CoachHub Case Study
@@ -114,30 +117,42 @@ to quickly and easily access one another in dynamic and effective ways.
 Design and Development Phase
 ----------------------------
 
-Header Level 3
-~~~~~~~~~~~~~~
+Site Architecture & Information Design
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. image:: http://dummyimage.com/250x300/777777/ffffff.png
-   :alt: image alt text
+.. image:: /static/images/blog/2016/coachhub/browse-coach-sitemap.jpg
+   :alt: site map for browsing coaches
    :class: extend-left
 
-This image has a class of extend-left. Vestibulum tortor quamr facilisis.
-Ut felis. Nullam id dolor id nibh ultricies vehicula ut id elit.
-Vivamus sagittis lacusvel augue laoreet rutrum faucibus dolor auctor.
+We created an interactive web
+of static-HTML content templates —
+a living draft of the site architecture,
+with samples of real content.
+For each step in the flow
+we asked: how did the user get here,
+what do they need to achieve,
+and where are they going next?
 
-Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
-turpis egestas. Vestibulum tortor quamr facilisis. Ut felis.
-Nullam id dolor id nibh ultricies vehicula ut id elit.
-Vivamus sagittis lacusvel augue laoreet rutrum faucibus dolor auctor.
-Nullam id dolor id nibh ultricies vehicula ut id elit.
-Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
+As we interacted with this visualization,
+it became clear that we needed
+to replace the browse-coaches page,
+and the my-coaches page
+with an ever-present sidebar
+providing one-click access to coaches.
+Several pages stood out
+as important starting-points for users,
+and those pages moved into the site navigation.
+We also added a dashboard
+to give a quick overview of
+activity on the site.
 
-Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
-turpis egestas. Vestibulum tortor quamr facilisis. Ut felis.
-Nullam id dolor id nibh ultricies vehicula ut id elit.
-Vivamus sagittis lacusvel augue laoreet rutrum faucibus dolor auctor.
-Nullam id dolor id nibh ultricies vehicula ut id elit.
-Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
+Before developing any real functionality,
+we already had a live, interactive,
+and testable prototype
+of the information architecture
+and user-experience flows.
+Building features would be a matter
+of replacing static content with live data.
 
 .. figure:: https://dummyimage.com/1000x9:6
    :class: extend-small
@@ -145,44 +160,25 @@ Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
 
    This is an image with the extend-small class.
 
-Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
-turpis egestas. Vestibulum tortor quamr facilisis. Ut felis.
-Nullam id dolor id nibh ultricies vehicula ut id elit.
-Vivamus sagittis lacusvel augue laoreet rutrum faucibus dolor auctor.
-Nullam id dolor id nibh ultricies vehicula ut id elit.
-Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
-
-Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
-turpis egestas. Vestibulum tortor quamr facilisis. Ut felis.
-Nullam id dolor id nibh ultricies vehicula ut id elit.
-Vivamus sagittis lacusvel augue laoreet rutrum faucibus dolor auctor.
-Nullam id dolor id nibh ultricies vehicula ut id elit.
-Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
-
 
 Brand Identity
 ~~~~~~~~~~~~~~
 
-Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
-turpis egestas. Vestibulum tortor quamr facilisis. Ut felis.
-Nullam id dolor id nibh ultricies vehicula ut id elit.
-Vivamus sagittis lacusvel augue laoreet rutrum faucibus dolor auctor.
-Nullam id dolor id nibh ultricies vehicula ut id elit.
-Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
-
-Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
-turpis egestas. Vestibulum tortor quamr facilisis. Ut felis.
-Nullam id dolor id nibh ultricies vehicula ut id elit.
-Vivamus sagittis lacusvel augue laoreet rutrum faucibus dolor auctor.
-Nullam id dolor id nibh ultricies vehicula ut id elit.
-Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
+We worked with ORCAS
+to pinpoint the attitude and associations
+they wanted the CoachHub brand to evoke,
+and created a friendly, distinct brand identity.
+Like their existing apps —
+MoodHacker and BlipHub (pictured below) —
+the CoachHub logo and overall brand
+are bright, cheerful, and hopeful.
 
 .. figure:: http://dummyimage.com/1600x250/777777/777777.png
    :class: extend-large
    :alt: map to buried treasure
    :target: http://google.com
 
-   This is an image with the extend-large class.
+   Full color palette derived from three basic brand colors.
 
 
 Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
@@ -203,7 +199,7 @@ Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
    :class: extend-small
    :alt: map to buried treasure
 
-   This is an image with the extend-small class.
+   Full color palette derived from three basic brand colors.
 
 Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
 turpis egestas. Vestibulum tortor quamr facilisis. Ut felis.
