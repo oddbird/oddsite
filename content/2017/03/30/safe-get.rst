@@ -1,7 +1,7 @@
 public: yes
 author: miriam
 headline:
-  - tagline: 'Using safe-get and safe-call utilities'
+  - tagline: 'exploring safe-get-function and safe-call utilities'
     type: 'Code Sample'
 tags: [
   Sass,
@@ -11,7 +11,17 @@ tags: [
 image:
   - src: '2017/ga-spam/spam-traffic.jpg'
 summary: |
-  New safe-get.
+  The `Sass 3.5 Release Candidate`_
+  includes support for
+  first-class functions.
+  What are they,
+  how do we use them,
+  and what tools can we use to
+  future-proof our Sass toolkits
+  in advance?
+
+  .. _Sass 3.5 Release Candidate: http://sass.logdown.com/posts/809572-sass-35-release-candidate
+  .. _first-class functions: https://medium.com/@kaelig/sass-first-class-functions-6e718e2b5eb0
 
 
 Managing Functions Across Sass Versions
@@ -21,13 +31,74 @@ The `Sass 3.5 Release Candidate`_
 includes support for
 `first-class functions`_
 and the resulting ``get-function()`` function.
-
 I just said "function" too many times in a single sentence.
 Get used to it, there's more.
+We'll explain the problem,
+and help you
+call all the functions
+in every version of Sass!
 
-This is the first-step towards a new
-modular name-spacing system in Sass –
+.. _Sass 3.5 Release Candidate: http://sass.logdown.com/posts/809572-sass-35-release-candidate
+.. _first-class functions: https://medium.com/@kaelig/sass-first-class-functions-6e718e2b5eb0
+
+
+Calling Functions
+-----------------
+
+Normally,
+when we're using functions in Sass,
+we know what function we need,
+and we can reference it directly:
+
+.. code:: scss
+
+  // Using Susy's "span" function directly, with a single argument
+  .span {
+    width: span(3);
+  }
+
+But when we build toolkits in Sass,
+it's common that we don't know for sure
+what function we'll be calling.
+In OddBird's `Accoutrement`_ tools
+we even let the user pass in arbitrary functions
+and arguments
+that we'll call at the right time
+to manipulate CSS colors and sizes.
+
+In order to call functions,
+without knowing the function name in advance,
+we have to use the ``call()`` function.
+Here's how it works
+on the current versions of Sass:
+
+.. code:: scss
+
+  // This could change!
+  $function: 'span';
+
+  // Calling some unknown function, with a single argument
+  .span {
+    width: call($function, 3);
+  }
+
+Those two code samples will return the same results.
+The first is more direct,
+but the second is more flexible
+for use in a toolkit.
+
+.. _Accoutrement: /2017/03/07/pattern-making/
+
+
+Introducing the ``get-fuction`` function
+----------------------------------------
+
+Sass is taking a first step towards
+modular name-spacing –
 expected to land in the ``4.0`` release.
+This will allow you to include third-party tools
+without any concern for naming conflicts.
+
 Functions will be name-spaced locally
 to a given Sass file –
 something like ``susy.span()``,
@@ -65,17 +136,15 @@ How do we support old and new versions of Sass,
 while allowing users to pass in
 either strings or fisrt-class functions?
 
-In his article,
-`Kaelig provides one solution`_.
-It's a great start,
-but it doesn't cover all the uses-cases I see.
+`Kaelig provides one solution`_
+in a great article with more details.
+It's a good start,
+but it doesn't cover all the uses-cases I need.
 What if users pass in a first-class function
 that they've already captured –
 as they likely should in Sass ``3.5+``?
 Here's my slightly-expanded solution.
 
-.. _Sass 3.5 Release Candidate: http://sass.logdown.com/posts/809572-sass-35-release-candidate
-.. _first-class functions: https://medium.com/@kaelig/sass-first-class-functions-6e718e2b5eb0
 .. _Susy: http://susy.oddbird.net
 .. _Kaelig provides one solution: https://medium.com/@kaelig/sass-first-class-functions-6e718e2b5eb0
 
