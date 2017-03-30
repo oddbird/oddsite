@@ -13,7 +13,7 @@ image:
 summary: |
   The `Sass 3.5 Release Candidate`_
   includes support for
-  first-class functions.
+  `first-class functions`_.
   What are they,
   how do we use them,
   and what tools can we use to
