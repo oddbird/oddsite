@@ -26,6 +26,8 @@ $text-sizes: (
   'root': 18px,
   'small': 'root' ('text-ratio': -1),
   'medium': 'root' ('text-ratio': 0.7),
+  'caption': 'root',
+  'task': 'root' ('text-ratio': -0.125),
 );
 
 @include herman-add-sizes('text-sizes', $text-sizes);
@@ -63,7 +65,6 @@ $pattern-sizes: (
   'border-radius': 1rem,
   'bird-face-tall': 8rem,
   'bird-face': 6rem,
-  'caption': 'root',
   'half-bird-face': 'bird-face' ('multiple': 0.5),
   'nav-small': 20rem,
   'nav-medium': 35rem,

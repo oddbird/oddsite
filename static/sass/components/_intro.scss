@@ -9,7 +9,7 @@
   display: flex;
   flex-direction: column;
 
-  @include above('small-page') {
+  @include above('medium-page') {
     @include center('medium-page');
 
     @supports not (display: grid) {
@@ -26,7 +26,7 @@
     grid-column: col1-start / -1;
   }
 
-  @include above('small-page') {
+  @include above('medium-page') {
     display: flex;
   }
 
@@ -41,9 +41,11 @@
   }
 
   p {
+    font-size: size('medium');
     font-style: italic;
+    line-height: 1.4;
 
-    @include above('small-page') {
+    @include above('medium-page') {
       flex: 1 0 0;
       padding-right: size('gutter');
     }
@@ -52,10 +54,31 @@
 
 // intro side panel
 .project-tasks {
-  @include above('small-page') {
+  @include above('medium-page') {
     border-left: 1px solid color('icon-block');
-    flex: 0 1 25%;
+    flex: 0 1 30%;
     padding: size('shim') size('gutter');
+  }
+
+  ul {
+    @include below('medium-page') {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+
+  li {
+    font-size: size('task');
+    line-height: 1.2;
+    margin-bottom: size('shim');
+
+    @include below('medium-page') {
+      flex-basis: 45%;
+    }
+
+    @include below('small-page') {
+      flex-basis: 100%;
+    }
   }
 }
 
