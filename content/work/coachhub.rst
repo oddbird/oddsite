@@ -13,15 +13,20 @@ project:
     years: '2014–2016'
     status: 'live'
 tasks:
-  - Product Branding
-  - User Experience Design
+  - Accessible Interface
+  - Custom Django Application
+  - Integrated Style Guide
+  - Information Architecture
+  - Logo and Brand Identity
+  - Responsive Design
   - Project Architecture
-  - Mobile-Responsive Styles
+  - User Experience Design
+  - WCAG & HIPPA Compliant
+
 quotes:
   - text: 'OddBird really changed my thinking about
       how successful outsourcing software development can be.'
     name: 'Sara Taillon'
-    url: 'http://google.com'
     role: 'ORCAS CTO'
 planning:
   - title: 'App Goals'
