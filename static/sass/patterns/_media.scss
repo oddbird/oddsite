@@ -33,3 +33,14 @@ h6 {
   font-size: size('caption');
   font-style: italic;
 }
+
+.figure,
+.add-space {
+  margin-bottom: size('gutter');
+  margin-top: size('gutter');
+
+  @include above('medium-page') {
+    margin-bottom: size('spacer');
+    margin-top: size('spacer');
+  }
+}

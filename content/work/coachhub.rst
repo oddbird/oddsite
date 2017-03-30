@@ -188,26 +188,9 @@ are bright, cheerful, and hopeful.
    movement. New life, change, and hope: turning over a new leaf.
 
 
-
 .. raw:: html
 
-   <img src="/static/images/work/coachhub/avatars-small.jpg"
-     srcset="/static/images/work/coachhub/avatars-small.jpg 250w,
-             /static/images/work/coachhub/avatars-small@2x.jpg 600w,
-             /static/images/work/coachhub/avatars-large.jpg 700w,
-             /static/images/work/coachhub/avatars-large@2x.jpg 972w"
-      sizes="(max-width: 608px) 100vw, 25vw"
-      class="extend-left"
-      alt="leaf avatar collage">
-
-
-.. raw:: html
-
-   <picture class="extend-left">
-
-      <source media="(min-width: 613px)"
-              srcset="/static/images/work/coachhub/avatars-large.jpg,
-                      /static/images/work/coachhub/avatars-large@2x.jpg 2x">
+   <picture class="extend-left" alt="leaf avatar collage">
 
       <source srcset="/static/images/work/coachhub/avatars-small.jpg,
                       /static/images/work/coachhub/avatars-small@2x.jpg 2x">
