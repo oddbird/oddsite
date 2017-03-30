@@ -66,7 +66,7 @@ and arguments
 that we'll call at the right time
 to manipulate CSS colors and sizes.
 
-In order to call functions,
+In order to call functions
 without knowing the function name in advance,
 we have to use the ``call()`` function.
 Here's how it works
@@ -90,23 +90,23 @@ for use in a toolkit.
 .. _Accoutrement: /2017/03/07/pattern-making/
 
 
-Introducing the ``get-fuction`` function
-----------------------------------------
+Introducing the ``get-function`` function
+-----------------------------------------
 
 Sass is taking a first step towards
-modular name-spacing –
+modular namespacing –
 expected to land in the ``4.0`` release.
 This will allow you to include third-party tools
 without any concern for naming conflicts.
 
-Functions will be name-spaced locally
+Functions will be namespaced locally
 to a given Sass file –
 something like ``susy.span()``,
 though the syntax hasn't been settled.
 The new
 ``get-function()`` allows us to capture
 a snapshot of a function into a variable,
-pass that snapshot into new name-spaing contexts.
+and pass that snapshot into new namespacing contexts.
 
 .. code:: scss
 
@@ -118,28 +118,66 @@ the ``call()`` function only accepts
 first-class functions,
 where it used to accept function-names as a string.
 In brief,
-we have to start useing
+we have to start using
 ``get-function('function-name')``
 before calling a function using
 ``call()`` –
 but only in new versions of Sass.
 
+In demo code, people often write it like this:
+
 .. code:: scss
 
   $call: call(get-function('susy.span'), $arguments...);
 
-This creates a problem for toolkits and frameworks
+That code is misleading.
+I always wondered why ``get-function``
+isn't baked into ``call``,
+so we can pass a first-class function or a string.
+I still think that would have been
+the most backwards-compatible option,
+without any clear downsides.
+That's a question for Chris and Natalie.
+
+But, once the modular system is in place,
+it will be very rare to ``call`` a function
+from the local scope.
+The ``call`` option is most useful
+for handling functions defined elsewhere
+(e.g. third-party tools)
+that won't have guaranteed access
+to the functions being called.
+Using ``get-function``,
+we can pass a first-class function
+to a third-party toolkit,
+without worrying about differences in namespace.
+So, a more accurate demonstration might be:
+
+.. code:: scss
+
+  // third-party.scss
+  @mixin three($function) {
+    .three {
+      width: call($function, 3);
+    }
+  }
+
+  // my-local.scss
+  @import 'susy';
+  @include three(get-function('susy.span'));
+
+This still creates a problem for toolkits and frameworks
 (like `Susy`_)
-that use ``call()`` internally
+that already use ``call()`` internally
 to handle user input.
 How do we support old and new versions of Sass,
 while allowing users to pass in
-either strings or fisrt-class functions?
+either strings or first-class functions?
 
 `Kaelig provides one solution`_
 in a great article with more details.
 It's a good start,
-but it doesn't cover all the uses-cases I need.
+but it doesn't cover all the use cases I need.
 What if users pass in a first-class function
 that they've already captured –
 as they likely should in Sass ``3.5+``?
@@ -149,8 +187,8 @@ Here's my slightly-expanded solution.
 .. _Kaelig provides one solution: https://medium.com/@kaelig/sass-first-class-functions-6e718e2b5eb0
 
 
-Safe Get-Function
------------------
+Safe ``get-function``
+---------------------
 
 We need to use ``get-function()`` in new versions of Sass,
 but we can't use it in old versions.
@@ -163,7 +201,7 @@ in our ``safe-get-function()``.
   and we're using an older version of Sass
   => *do nothing*.
 - If the user passes in a string,
-  and need a first-class function for newer versions of Sass
+  and we're using a newer versions of Sass
   => use *get-function*.
 - If the user passes in a first-class function,
   we can assume we're using the latest Sass version
@@ -203,11 +241,11 @@ and returns the proper value
 for the version of Sass being used.
 
 
-Safe Call
----------
+Safe ``call``
+-------------
 
 I also wrote a very small
-``safe-call()`` wrapper function,
+``safe-call()`` wrapper function
 that passes all function-calls
 through our ``safe-get-function()``
 before calling them.
