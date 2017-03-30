@@ -188,15 +188,10 @@ are bright, cheerful, and hopeful.
    movement. New life, change, and hope: turning over a new leaf.
 
 
-.. raw:: html
+.. image:: /static/images/work/coachhub/avatars-small.jpg
+   :class: extend-left
+   :alt: leaf avatar collage
 
-   <picture class="extend-left" alt="leaf avatar collage">
-
-      <source srcset="/static/images/work/coachhub/avatars-small.jpg,
-                      /static/images/work/coachhub/avatars-small@2x.jpg 2x">
-
-      <img src="/static/images/work/coachhub/avatars-small.jpg">
-   </picture>
 
 We then created hundreds of unique avatar designs from just a few unique leaf
 graphics dynamically rendered using light and dark contrasts of our colors and
