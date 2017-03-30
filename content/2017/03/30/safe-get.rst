@@ -1,7 +1,7 @@
 public: yes
 author: miriam
 headline:
-  - tagline: 'exploring safe-get-function and safe-call utilities'
+  - tagline: 'using safe-get-function and safe-call utilities'
     type: 'Code Sample'
 tags: [
   Sass,
@@ -9,7 +9,7 @@ tags: [
   Code
   ]
 image:
-  - src: '2017/ga-spam/spam-traffic.jpg'
+  - src: '2017/safe-get/phone.jpg'
 summary: |
   The `Sass 3.5 Release Candidate`_
   includes support for
@@ -24,8 +24,8 @@ summary: |
   .. _first-class functions: https://medium.com/@kaelig/sass-first-class-functions-6e718e2b5eb0
 
 
-Managing Functions Across Sass Versions
-=======================================
+Making Function Calls Across Sass Versions
+==========================================
 
 The `Sass 3.5 Release Candidate`_
 includes support for
