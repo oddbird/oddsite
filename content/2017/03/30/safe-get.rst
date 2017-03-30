@@ -116,7 +116,7 @@ and pass that snapshot into new namespacing contexts.
 In Sass 3.5 and later,
 the ``call()`` function only accepts
 first-class functions,
-where it used to accept function-names as a string.
+where it used to accept function names as a string.
 In brief,
 we have to start using
 ``get-function('function-name')``
@@ -231,7 +231,7 @@ The result looks something like this:
     }
 
     // if it's not a string or a function, we know there's a problem
-    @error 'Invalid function-name, [#{$type}] `#{$function}` must be a function or string';
+    @error 'Invalid function name, [#{$type}] `#{$function}` must be a function or string';
   }
 
 This ``safe-get-function`` accepts one argument,
