@@ -191,6 +191,18 @@ are bright, cheerful, and hopeful.
 
 .. raw:: html
 
+   <img src="/static/images/work/coachhub/avatars-small.jpg"
+     srcset="/static/images/work/coachhub/avatars-small.jpg 250w,
+             /static/images/work/coachhub/avatars-small@2x.jpg 600w,
+             /static/images/work/coachhub/avatars-large.jpg 700w,
+             /static/images/work/coachhub/avatars-large@2x.jpg 972w"
+      sizes="(max-width: 608px) 100vw, 25vw"
+      class="extend-left"
+      alt="leaf avatar collage">
+
+
+.. raw:: html
+
    <picture class="extend-left">
 
       <source media="(min-width: 613px)"
@@ -202,7 +214,6 @@ are bright, cheerful, and hopeful.
 
       <img src="/static/images/work/coachhub/avatars-small.jpg">
    </picture>
-
 
 We then created hundreds of unique avatar designs from just a few unique leaf
 graphics dynamically rendered using light and dark contrasts of our colors and
