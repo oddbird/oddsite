@@ -53,13 +53,13 @@
       {% endif %}
     </h2>
 
-    {{ layout.header_image(page) }}
-
     {% if client %}
       {{ for(client, project.years) }}
     {% elif contributors %}
       {{ who(contributors) }}
     {% endif %}
+
+    {{ layout.header_image(page, class='extend-small') }}
 
     {% if page.summary %}
       <div>
@@ -82,33 +82,36 @@
 
 
 {% macro for(client, years) %}
-  <div>
-    <i>for</i>
-    {{ utility.link_if(
-      client.name,
-      client.url
-    ) }}
-    {% if years %}
-      [{{ years }}]
-    {% endif %}
+  <div class="meta">
+    <p class="byline">
+      <span class="meta-preposition">for</span>
+      {{ utility.link_if(client.name, client.url) }}
+      {% if years %}
+        <span class="meta-preposition">in</span>
+        {{ years }}
+      {% endif %}
+    </p>
   </div>
 {% endmacro %}
 
 
 {% macro who(contributors) %}
   {% if contributors %}
-    <ul>
-      {% for contributor in contributors %}
-        {% set page = all_pages|filter_pages('bird', 'eq', contributor.author)|get_page %}
-
-        <li>
+    <div class="meta">
+      <p class="byline">
+        <span class="meta-preposition">by</span>
+        {% for contributor in contributors %}
+          {% if loop.last and not loop.first %}
+            <span class="meta-preposition">and</span>
+          {% endif %}
+          {% set page = all_pages|filter_pages('bird', 'eq', contributor.author)|get_page %}
           {{ birds.name_link(
             author=contributor.author,
             page=page
           ) }}
-          [{{ contributor.role }}]
-        </li>
-      {% endfor %}
-    </ul>
+          [{{ contributor.role }}]{{ ',' if not loop.last }}
+        {% endfor %}
+      </p>
+    </div>
   {% endif %}
 {% endmacro %}

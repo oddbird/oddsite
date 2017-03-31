@@ -15,11 +15,11 @@
 {% endmacro %}
 
 
-{% macro header_image(post) %}
+{% macro header_image(post, class='') %}
   {% set image = post.config.image[0].src if post.config.image else none %}
 
   {% if image %}
-    <figure class="hero">
+    <figure class="{{ ['hero', class]|join(' ') if class else 'hero' }}">
       {% if '://' in image %}
         <img src="{{ image }}" class="hero-image">
       {% else %}

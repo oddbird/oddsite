@@ -8,7 +8,7 @@ client:
     url: 'http://orcasinc.com'
 project:
   - name: 'CoachHub'
-    tagline: 'Integrated Health Coaching for ORCAS'
+    tagline: 'Integrated Health Coaching'
     url: 'http://www.orcasinc.com/products/coachhub/'
     case_study: true
     years: '2014–2016'

@@ -9,7 +9,7 @@ tags: [
   Code
   ]
 image:
-  - src: '2017/safe-get/phone.jpg'
+  - src: 'blog/2017/safe-get/phone.jpg'
 summary: |
   The `Sass 3.5 Release Candidate`_
   includes support for
