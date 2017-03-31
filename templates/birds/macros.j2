@@ -3,8 +3,9 @@
 {% import "birds/utility.macros.j2" as birds %}
 
 
-{% macro section(page, oss=none) %}
-  {% set author = page.config.bird %}
+{% macro section(author=none, page=none) %}
+  {% set page = page or all_pages|filter_pages('bird', 'eq', author)|get_page %}
+  {% set author = author or page.config.bird %}
 
   <div data-module='bird' class="h-card" id="bird-{{ author }}">
     {{ birds.face(author) }}
@@ -26,7 +27,7 @@
       {{ page.render_contents() }}
     </div>
 
-    {{ oss_list(author, oss) }}
+    {{ oss_list(author, page) }}
     {{ blog_list(posts=get_blog_entries_by_bird(author)) }}
   </div>
 {% endmacro %}
@@ -50,22 +51,23 @@
 {% endmacro %}
 
 
-{% macro oss_list(author, oss) %}
+{% macro oss_list(author, page) %}
+  {% set oss = page.config.oss_by_author[author] %}
+
   {% if oss %}
     <div class="bird-posts">
       <h3>Open Source</h3>
       <ul class="title-list">
         {% for item in oss %}
-          {% set oss_author = item.who|selectattr('author', 'equalto', author)|list %}
-
-          {% if oss_author|length > 0 %}
-            {% set oss_author = oss_author[0] %}
-
-            <li>
-              {{ utility.link_if(item.name, item.url or item.source) }}
-              [{{ oss_author.role }}]
-            </li>
-          {% endif %}
+          {% set project = item.config.project[0] %}
+          {% set contrib = item.config.contributors|selectattr('author', 'equalto', author)|list %}
+          <li>
+            {{ utility.link_if(
+              project.name or item.title,
+              project.url or ['/', item.slug, '/']|join('')
+              ) }}
+            [{{ contrib[0].role }}]
+          </li>
         {% endfor %}
       </ul>
     </div>

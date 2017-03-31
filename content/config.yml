@@ -30,139 +30,139 @@ events:
 # Open Source Contributions
 # -------------------------
 
-oss:
-  - name: 'Nunjucks'
-    url: 'http://mozilla.github.io/nunjucks/'
-    source: 'https://github.com/mozilla/nunjucks/'
-    blog: 'nunjucks'
-    priority: 'core'
-    tagline: 'Sophisticated templating for JavaScript'
-    description: |
-      A powerful markup templating language
-      with block inheritance, autoescaping, macros,
-      asynchronous control, and more.
-      Heavily inspired by Jinja2,
-      Nunjucks is fast, lean, highly performant,
-      and extensible.
-    who:
-      - author: 'carl'
-        role: 'maintainer, 2015–2016'
-      - author: 'jonny'
-        role: 'contributor'
+# oss:
+#   - name: 'Nunjucks'
+#     url: 'http://mozilla.github.io/nunjucks/'
+#     source: 'https://github.com/mozilla/nunjucks/'
+#     blog: 'nunjucks'
+#     priority: 'core'
+#     tagline: 'Sophisticated templating for JavaScript'
+#     description: |
+#       A powerful markup templating language
+#       with block inheritance, autoescaping, macros,
+#       asynchronous control, and more.
+#       Heavily inspired by Jinja2,
+#       Nunjucks is fast, lean, highly performant,
+#       and extensible.
+#     who:
+#       - author: 'carl'
+#         role: 'maintainer, 2015–2016'
+#       - author: 'jonny'
+#         role: 'contributor'
 
-  - name: 'Sass Spec'
-    source: 'https://github.com/sass/sass-spec'
-    blog: 'sass-spec'
-    priority: 'contributor'
-    tagline: 'Sass language specification'
-    description: |
-      Now that the Sass language has multiple iplementations,
-      it is important that they all share a
-      standard specification and test suite.
-    who:
-      - author: 'miriam'
-        role: 'contributor'
+#   - name: 'Sass Spec'
+#     source: 'https://github.com/sass/sass-spec'
+#     blog: 'sass-spec'
+#     priority: 'contributor'
+#     tagline: 'Sass language specification'
+#     description: |
+#       Now that the Sass language has multiple iplementations,
+#       it is important that they all share a
+#       standard specification and test suite.
+#     who:
+#       - author: 'miriam'
+#         role: 'contributor'
 
-  - name: 'Plone'
-    url: 'http://plone.org/'
-    source: 'https://github.com/plone/Products.CMFPlone'
-    blog: 'plone'
-    priority: 'core'
-    tagline: 'Enterprise web content management system'
-    description: |
-      Plone is a mature content management platform
-      written in Python
-      and developed by an international open source community.
-      It has particular strengths
-      in user experience for content editors,
-      flexible theming,
-      and customizability by developers.
-    who:
-      - author: 'david'
-        role: 'core developer, 2008–2014'
+#   - name: 'Plone'
+#     url: 'http://plone.org/'
+#     source: 'https://github.com/plone/Products.CMFPlone'
+#     blog: 'plone'
+#     priority: 'core'
+#     tagline: 'Enterprise web content management system'
+#     description: |
+#       Plone is a mature content management platform
+#       written in Python
+#       and developed by an international open source community.
+#       It has particular strengths
+#       in user experience for content editors,
+#       flexible theming,
+#       and customizability by developers.
+#     who:
+#       - author: 'david'
+#         role: 'core developer, 2008–2014'
 
-  - name: 'pip'
-    url: 'https://pip.pypa.io/'
-    source: 'https://github.com/pypa/pip/'
-    blog: 'pip'
-    priority: 'core'
-    tagline: 'Python package installer'
-    description: |
-      The PyPA recommended tool for installing Python packages.
-    who:
-      - author: 'carl'
-        role: 'maintainer, 2010–2012'
+#   - name: 'pip'
+#     url: 'https://pip.pypa.io/'
+#     source: 'https://github.com/pypa/pip/'
+#     blog: 'pip'
+#     priority: 'core'
+#     tagline: 'Python package installer'
+#     description: |
+#       The PyPA recommended tool for installing Python packages.
+#     who:
+#       - author: 'carl'
+#         role: 'maintainer, 2010–2012'
 
-  - name: 'virtualenv'
-    url: 'https://virtualenv.pypa.io/'
-    source: 'https://github.com/pypa/virtualenv'
-    blog: 'virtualenv'
-    priority: 'core'
-    tagline: 'Virtual Python Environment builder'
-    description: |
-      A tool for creating isolated 'virtual' python environments.
-    who:
-      - author: 'carl'
-        role: 'maintainer, 2010–2012'
+#   - name: 'virtualenv'
+#     url: 'https://virtualenv.pypa.io/'
+#     source: 'https://github.com/pypa/virtualenv'
+#     blog: 'virtualenv'
+#     priority: 'core'
+#     tagline: 'Virtual Python Environment builder'
+#     description: |
+#       A tool for creating isolated 'virtual' python environments.
+#     who:
+#       - author: 'carl'
+#         role: 'maintainer, 2010–2012'
 
-  - name: 'Compass'
-    url: 'http://compass-style.org'
-    source: 'http://github.com/compass/compass'
-    blog: 'compass'
-    priority: 'core'
-    status: 'end-of-life'
-    tagline: 'CSS-authoring framework and Sass library'
-    description: |
-      An open-source CSS authoring framework
-      which uses the Sass language
-      to make writing and sharing stylesheets powerful and easy.
-      Compass was the first package-manager
-      and toolkit-sharing platform for CSS,
-      helping popularize the Sass language –
-      and offering powerful browser-compatability tools
-      that changed the landscape for designers developers.
-    who:
-      - author: 'miriam'
-        role: 'core developer, 2010–2016'
+#   - name: 'Compass'
+#     url: 'http://compass-style.org'
+#     source: 'http://github.com/compass/compass'
+#     blog: 'compass'
+#     priority: 'core'
+#     status: 'end-of-life'
+#     tagline: 'CSS-authoring framework and Sass library'
+#     description: |
+#       An open-source CSS authoring framework
+#       which uses the Sass language
+#       to make writing and sharing stylesheets powerful and easy.
+#       Compass was the first package-manager
+#       and toolkit-sharing platform for CSS,
+#       helping popularize the Sass language –
+#       and offering powerful browser-compatability tools
+#       that changed the landscape for designers developers.
+#     who:
+#       - author: 'miriam'
+#         role: 'core developer, 2010–2016'
 
-  - name: 'Warehouse'
-    url: 'https://warehouse.readthedocs.io/'
-    source: 'https://github.com/pypa/warehouse'
-    blog: 'warehouse'
-    priority: 'contributor'
-    tagline: 'Next Generation Python Package Repository'
-    description: |
-      A new code base that implements a Python package repository,
-      with plans to eventually replace the current code powering PyPI.
-      The goal is to improve PyPI by making it more user-friendly,
-      with a modern look, additional features,
-      and a more maintainable code-base,
-      with full test coverage and documentation.
-    who:
-      - author: 'kit'
-        role: 'contributor'
+#   - name: 'Warehouse'
+#     url: 'https://warehouse.readthedocs.io/'
+#     source: 'https://github.com/pypa/warehouse'
+#     blog: 'warehouse'
+#     priority: 'contributor'
+#     tagline: 'Next Generation Python Package Repository'
+#     description: |
+#       A new code base that implements a Python package repository,
+#       with plans to eventually replace the current code powering PyPI.
+#       The goal is to improve PyPI by making it more user-friendly,
+#       with a modern look, additional features,
+#       and a more maintainable code-base,
+#       with full test coverage and documentation.
+#     who:
+#       - author: 'kit'
+#         role: 'contributor'
 
-  - name: 'Helium'
-    url: 'http://heliumfloats.com/'
-    source: 'https://github.com/JadenGeller/Helium'
-    blog: 'helium'
-    priority: 'contributor'
-    tagline: 'A floating browser window for OS X'
-    description: |
-      Helium is a floating browser window
-      that allows you to watch media,
-      browse the web,
-      and do much more while you stay productive.
-      Your content will never fall behind your other windows
-      even as you switch tasks.
-      Helium supports a customizable translucency mode
-      that allows you to simultaneously see your content and your work,
-      without intercepting mouse clicks when it's translucent.
-      You have the ability to click, drag,
-      and scroll behind your floating content.
-    who:
-      - author: 'kit'
-        role: 'contributor'
+#   - name: 'Helium'
+#     url: 'http://heliumfloats.com/'
+#     source: 'https://github.com/JadenGeller/Helium'
+#     blog: 'helium'
+#     priority: 'contributor'
+#     tagline: 'A floating browser window for OS X'
+#     description: |
+#       Helium is a floating browser window
+#       that allows you to watch media,
+#       browse the web,
+#       and do much more while you stay productive.
+#       Your content will never fall behind your other windows
+#       even as you switch tasks.
+#       Helium supports a customizable translucency mode
+#       that allows you to simultaneously see your content and your work,
+#       without intercepting mouse clicks when it's translucent.
+#       You have the ability to click, drag,
+#       and scroll behind your floating content.
+#     who:
+#       - author: 'kit'
+#         role: 'contributor'
 
 
 # Giving

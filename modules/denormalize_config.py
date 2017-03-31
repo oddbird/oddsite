@@ -15,13 +15,8 @@ def setup(builder):
     ]
     # Add OSS projects indexed by author.
     author_projects = defaultdict(list)
-    for project in config['oss']:
-        if 'who' in project:
-            for author in project['who']:
-                author_projects[author['author']].append(project)
-
     for page in pages:
         for author in page.config.get('contributors', []):
-            author_projects[author['author']].append(page.config['project'])
+            author_projects[author['author']].append(page)
 
     builder.config.stack[-1]['oss_by_author'] = author_projects
