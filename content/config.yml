@@ -1,7 +1,7 @@
 ---
 
-# Site-Wide Messages
-# ------------------
+# Site-Wide Content
+# -----------------
 
 site_message:
   - body: |
@@ -9,6 +9,23 @@ site_message:
       and writing about our process along the way.
     action: Find out more!
     url: '/2016/07/12/open-design/'
+
+blog_title:
+  - title: 'Our Odd Thoughts'
+    type: 'Articles'
+    tagline: 'best-practice is an evolving conversation…'
+
+contact:
+  - title: 'Let’s Build Something Together!'
+    content: |
+      <strong>We want to hear all about your software ideas.</strong>
+      Fill out our
+      <a href="/contact/">contact form</a>,
+      join our
+      <a href="http://friends.oddbird.net">public Slack chat</a>,
+      or tweet
+      <a href="http://twitter.com/oddbird">@oddbird</a>
+      to start the conversation.
 
 
 # Future Talks
@@ -25,283 +42,6 @@ events:
     who:
       - author: 'stacy'
         title: 'The Great State of Design with CSS Grid Layout & Friends'
-
-
-# Open Source Contributions
-# -------------------------
-
-# oss:
-#   - name: 'Nunjucks'
-#     url: 'http://mozilla.github.io/nunjucks/'
-#     source: 'https://github.com/mozilla/nunjucks/'
-#     blog: 'nunjucks'
-#     priority: 'core'
-#     tagline: 'Sophisticated templating for JavaScript'
-#     description: |
-#       A powerful markup templating language
-#       with block inheritance, autoescaping, macros,
-#       asynchronous control, and more.
-#       Heavily inspired by Jinja2,
-#       Nunjucks is fast, lean, highly performant,
-#       and extensible.
-#     who:
-#       - author: 'carl'
-#         role: 'maintainer, 2015–2016'
-#       - author: 'jonny'
-#         role: 'contributor'
-
-#   - name: 'Sass Spec'
-#     source: 'https://github.com/sass/sass-spec'
-#     blog: 'sass-spec'
-#     priority: 'contributor'
-#     tagline: 'Sass language specification'
-#     description: |
-#       Now that the Sass language has multiple iplementations,
-#       it is important that they all share a
-#       standard specification and test suite.
-#     who:
-#       - author: 'miriam'
-#         role: 'contributor'
-
-#   - name: 'Plone'
-#     url: 'http://plone.org/'
-#     source: 'https://github.com/plone/Products.CMFPlone'
-#     blog: 'plone'
-#     priority: 'core'
-#     tagline: 'Enterprise web content management system'
-#     description: |
-#       Plone is a mature content management platform
-#       written in Python
-#       and developed by an international open source community.
-#       It has particular strengths
-#       in user experience for content editors,
-#       flexible theming,
-#       and customizability by developers.
-#     who:
-#       - author: 'david'
-#         role: 'core developer, 2008–2014'
-
-#   - name: 'pip'
-#     url: 'https://pip.pypa.io/'
-#     source: 'https://github.com/pypa/pip/'
-#     blog: 'pip'
-#     priority: 'core'
-#     tagline: 'Python package installer'
-#     description: |
-#       The PyPA recommended tool for installing Python packages.
-#     who:
-#       - author: 'carl'
-#         role: 'maintainer, 2010–2012'
-
-#   - name: 'virtualenv'
-#     url: 'https://virtualenv.pypa.io/'
-#     source: 'https://github.com/pypa/virtualenv'
-#     blog: 'virtualenv'
-#     priority: 'core'
-#     tagline: 'Virtual Python Environment builder'
-#     description: |
-#       A tool for creating isolated 'virtual' python environments.
-#     who:
-#       - author: 'carl'
-#         role: 'maintainer, 2010–2012'
-
-#   - name: 'Compass'
-#     url: 'http://compass-style.org'
-#     source: 'http://github.com/compass/compass'
-#     blog: 'compass'
-#     priority: 'core'
-#     status: 'end-of-life'
-#     tagline: 'CSS-authoring framework and Sass library'
-#     description: |
-#       An open-source CSS authoring framework
-#       which uses the Sass language
-#       to make writing and sharing stylesheets powerful and easy.
-#       Compass was the first package-manager
-#       and toolkit-sharing platform for CSS,
-#       helping popularize the Sass language –
-#       and offering powerful browser-compatability tools
-#       that changed the landscape for designers developers.
-#     who:
-#       - author: 'miriam'
-#         role: 'core developer, 2010–2016'
-
-#   - name: 'Warehouse'
-#     url: 'https://warehouse.readthedocs.io/'
-#     source: 'https://github.com/pypa/warehouse'
-#     blog: 'warehouse'
-#     priority: 'contributor'
-#     tagline: 'Next Generation Python Package Repository'
-#     description: |
-#       A new code base that implements a Python package repository,
-#       with plans to eventually replace the current code powering PyPI.
-#       The goal is to improve PyPI by making it more user-friendly,
-#       with a modern look, additional features,
-#       and a more maintainable code-base,
-#       with full test coverage and documentation.
-#     who:
-#       - author: 'kit'
-#         role: 'contributor'
-
-#   - name: 'Helium'
-#     url: 'http://heliumfloats.com/'
-#     source: 'https://github.com/JadenGeller/Helium'
-#     blog: 'helium'
-#     priority: 'contributor'
-#     tagline: 'A floating browser window for OS X'
-#     description: |
-#       Helium is a floating browser window
-#       that allows you to watch media,
-#       browse the web,
-#       and do much more while you stay productive.
-#       Your content will never fall behind your other windows
-#       even as you switch tasks.
-#       Helium supports a customizable translucency mode
-#       that allows you to simultaneously see your content and your work,
-#       without intercepting mouse clicks when it's translucent.
-#       You have the ability to click, drag,
-#       and scroll behind your floating content.
-#     who:
-#       - author: 'kit'
-#         role: 'contributor'
-
-
-# Giving
-# ------
-
-giving:
-  - name: 'Electronic Frontier Foundation'
-    url: 'https://www.eff.org/'
-    type: 'donations'
-    years: '2016'
-    description: |
-      is the leading nonprofit organization
-      defending civil liberties in the digital world.
-
-  - name: 'Women Who Startup'
-    url: 'http://www.womenwhostartup.com/'
-    type: 'sponsorships'
-    years: '2017'
-    description: |
-      is a global community that connects and empowers
-      women in tech and business.
-
-  - name: 'Django Software Foundation'
-    url: 'https://www.djangoproject.com/foundation/'
-    type: 'donations'
-    years: '2015, 2016'
-    description: |
-      is an independent non-profit foundation
-      established to to promote, support, and advance the Django Web framework.
-      As active users and contributors to the Django community,
-      we're proud to support the continued development of the project.
-
-  - name: 'Goshen Ultimate Summer League'
-    url: 'http://goshenultimate.com/'
-    type: 'donations'
-    years: '2014–2016'
-    description: |
-      provides opportunities to learn, play,
-      and teach spirited Ultimate in Goshen, IN and surrounding areas.
-      We're just glad they keep Jonny out of trouble
-      when he's not busy writing JavaScript.
-
-  - name: 'Django Under the Hood'
-    url: 'https://www.djangounderthehood.com/'
-    type: 'sponsorships'
-    years: '2015'
-    description: |
-       is an exciting Django conference full of deep,
-       detailed talks and amazing opportunities
-       to shape the future of Django.
-
-  - name: 'SassConf'
-    url: 'http://sassconf.com/'
-    type: 'sponsorships'
-    years: '2013–2015'
-    description: |
-      brings together a far-flung community of front-end developers,
-      designers, architects, and web enthusiasts
-      who dream of building a better web.
-      Besides being active participants in the Sass community,
-      we love the thoughtfulness and dedication to diversity
-      that the SassConf organizers bring to the community.
-
-  - name: 'Black Girls CODE'
-    url: 'http://blackgirlscode.com/'
-    type: 'donations'
-    years: '2013–2016'
-    description: |
-      has set out to prove to the world
-      that girls of every color have the skills
-      to become the programmers of tomorrow.
-      By promoting classes and programs
-      they help to grow the number of women of color
-      working in technology,
-      and give underprivileged girls a chance
-      to become the masters of their technological worlds.
-
-  - name: 'Thunder Valley Community Development Corporation'
-    url: 'http://thundervalley.org/'
-    type: 'donations'
-    years: '2014, 2015'
-    description: |
-      is a Lakota-run, grassroots Community Development Corporation
-      that is building a community for systemic change
-      on the Pine Ridge Reservation in South Dakota.
-
-  - name: 'PyLadies'
-    url: 'http://www.pyladies.com/'
-    type: 'donations'
-    years: '2012, 2014, 2015'
-    description: |
-      is an international mentorship group
-      with a focus on helping more women become active participants
-      and leaders in the Python open-source community.
-
-  - name: 'Django Girls'
-    url: 'https://djangogirls.org/'
-    type: 'donations'
-    years: '2015–2017'
-    description: |
-      is a non-profit organization
-      and a community that empowers and helps women to organize free,
-      one-day programming workshops by providing tools,
-      resources and support.
-
-  - name: 'PyCon'
-    url: 'https://us.pycon.org/'
-    type: 'sponsorships'
-    years: '2013, 2014'
-    description: |
-      is the largest annual gathering
-      for the people who use and develop
-      the open-source Python programming language.
-
-  - name: 'The Mixin'
-    url: 'http://themixinsf.com/'
-    type: 'sponsorships'
-    years: '2015'
-    description: |
-      is a San Francisco Sass front-end meetup.
-
-  - name: 'COSOLA-MACILE'
-    type: 'donations'
-    years: '2013, 2014'
-    description: |
-      is a non-profit organization
-      focused on K-12 STEM education
-      in less advantaged communities.
-
-  - name: 'Ada Initiative'
-    url: 'https://adainitiative.org/'
-    type: 'donations'
-    years: '2012, 2013'
-    description: |
-      supported women in open technology and culture
-      through activities such as producing codes of conduct
-      and anti-harassment policies,
-      advocating for gender diversity,
-      and teaching ally skills.
 
 
 # Past Talks
@@ -743,23 +483,6 @@ email: 'birds@oddbird.net'
 location: 'blog'
 author: 'oddbird'
 comments: false
-
-# blog_title:
-#   - title: 'The Blog'
-#     type: 'Articles'
-#     tagline: 'Our Odd Thoughts...'
-
-contact:
-  - title: 'Let’s Build Something Together!'
-    content: |
-      <strong>We want to hear all about your software ideas.</strong>
-      Fill out our
-      <a href="/contact/">contact form</a>,
-      join our
-      <a href="http://friends.oddbird.net">public Slack chat</a>,
-      or tweet
-      <a href="http://twitter.com/oddbird">@oddbird</a>
-      to start the conversation.
 
 
 # rstBlog Setup

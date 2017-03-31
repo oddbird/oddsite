@@ -1,6 +1,5 @@
 public: yes
 location: open-source
-grid_template: true
 image:
   - src: 'blog/susy.jpg'
 project:

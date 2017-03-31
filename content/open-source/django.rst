@@ -1,6 +1,5 @@
 public: yes
 location: open-source
-grid_template: true
 image:
   - src: 'projects/django.jpg'
 project:
@@ -8,7 +7,7 @@ project:
     tagline: 'The web framework for perfectionists with deadlines'
     url: 'https://www.djangoproject.com/'
     source: 'https://github.com/django/django'
-    status: public
+    status: 'public'
     owner: no
 contributors:
   - author: 'carl'

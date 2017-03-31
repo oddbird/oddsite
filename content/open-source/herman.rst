@@ -1,14 +1,13 @@
 public: yes
 location: open-source
-grid_template: true
 image:
   - src: 'projects/accoutrement-legos.jpg'
 project:
   - name: 'Herman'
     tagline: 'Automated Style Guides'
     source: 'https://github.com/oddbird/sassdoc-theme-herman'
-    owner: yes
     status: 'pre-release'
+    owner: yes
 contributors:
   - author: 'oddbird'
     role: 'creator'

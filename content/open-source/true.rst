@@ -1,6 +1,5 @@
 public: yes
 location: open-source
-grid_template: true
 project:
   - name: 'True'
     tagline: 'Unit-testing for Sass developers'
