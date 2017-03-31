@@ -1,8 +1,6 @@
 public: yes
 location: open-source
 grid_template: true
-image:
-  - src: 'blog/2016/coachhub/feature.jpg'
 project:
   - name: 'True'
     tagline: 'Unit-testing for Sass developers'

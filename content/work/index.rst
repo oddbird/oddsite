@@ -49,21 +49,19 @@ services:
       - Automated, living style guides
       - Brand design and documentation
 summary: |
-  **Do you have a web application you want to build?**
-  OddBird provides extensive experience in product development,
-  branding, application design,
-  and user testing – 
-  with a strong commitment to well-tested,
-  carefully architected,
+  **Do you need help developing a web application?**
+  We provide extensive experience in *product development*,
+  *branding*, *user-experience design*,
+  and *user testing* – 
+  with a strong commitment to
+  collaborative process, user needs,
+  and well-tested, carefully architected,
   documented, and maintainable code.
-  All our applications are built with open-web technology,
-  for responsive accessibility across devices,
-  browsers, and user (dis)abilities.
 
   .. callmacro:: content.macros.j2#link_button
     :url: '/contact/'
 
-    Start a conversation about your project »
+    Tell us about your project »
 
 
 Custom Web Software

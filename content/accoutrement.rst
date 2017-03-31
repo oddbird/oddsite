@@ -1,5 +1,7 @@
-public: yes
+public: no
 location: none
+image:
+  - src: 'projects/accoutrement-legos.jpg'
 
 
 Sass Accoutrement

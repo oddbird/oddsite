@@ -2,7 +2,7 @@ public: yes
 location: open-source
 grid_template: true
 image:
-  - src: 'blog/2016/coachhub/feature.jpg'
+  - src: 'projects/django.jpg'
 project:
   - name: 'Django'
     tagline: 'The web framework for perfectionists with deadlines'

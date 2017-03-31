@@ -4,14 +4,7 @@
 {% set pages = all_pages|filter_pages(module.has)|filter_pages('public', 'neq', false) %}
 
 {% if pages|length() > 0 %}
-  <section data-module="feature-projects">
-    <h2>
-      {{ utility.link_if(module.title or 'Featured Projects', module.title_url) }}
-    </h2>
-
-    {% for page in pages %}
-      {{ work.feature(page) }}
-    {% endfor %}
-    </div>
-  </section>
+  {% for page in pages %}
+    {{ work.feature(page) }}
+  {% endfor %}
 {% endif %}

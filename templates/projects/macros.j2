@@ -1,6 +1,7 @@
 {% import 'utility.macros.j2' as utility %}
 {% import 'birds/utility.macros.j2' as birds %}
 {% import 'content.macros.j2' as content %}
+{% import 'layout/macros.j2' as layout %}
 
 
 {% macro list(project, named_states=[]) %}
@@ -39,19 +40,38 @@
   {% set client = page.config.client[0] if page.config.client else null %}
   {% set contributors = page.config.contributors if page.config.contributors else null %}
   {% set project = page.config.project[0] %}
+  {% set link = ['/', page.slug, '/']|join('') if project.owner or project.case_study %}
+  {% set link = link if project.case_study else (project.url or link or project.source) %}
 
-  <article>
-    <h3>
-      {{ utility.link_if(project.name, project.url) }}
-    </h3>
-    {% if project.tagline %}
-      <h4>{{ project.tagline }}</h4>
-    {% endif %}
+  <article data-module='project-feature'>
+    <h2 class="project-title">
+      <div class="project-name">
+        {{ utility.link_if(project.name, link) }}
+      </div>
+      {% if project.tagline %}
+        <div class="project-tagline">{{ project.tagline }}</div>
+      {% endif %}
+    </h2>
+
+    {{ layout.header_image(page) }}
 
     {% if client %}
       {{ for(client, project.years) }}
     {% elif contributors %}
       {{ who(contributors) }}
+    {% endif %}
+
+    {% if page.summary %}
+      <div>
+        {{ page.render_summary() }}
+
+        {% if project.url %}
+          {% call content.link_button(project.url) %}Go to Site »{% endcall %}
+        {% endif %}
+        {% if project.source %}
+          {% call content.link_button(project.source) %}View Source »{% endcall %}
+        {% endif %}
+      </div>
     {% endif %}
 
     {% for quote in page.config.quotes %}

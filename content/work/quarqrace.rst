@@ -2,7 +2,7 @@ public: yes
 location: work
 grid_template: true
 image:
-  - src: 'blog/2016/coachhub/feature.jpg'
+  - src: 'projects/trig.jpg'
 client:
   - name: 'SRAM'
     url: 'http://sram.com/'

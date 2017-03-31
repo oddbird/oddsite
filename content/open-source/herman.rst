@@ -2,7 +2,7 @@ public: yes
 location: open-source
 grid_template: true
 image:
-  - src: 'blog/2016/coachhub/feature.jpg'
+  - src: 'projects/accoutrement-legos.jpg'
 project:
   - name: 'Herman'
     tagline: 'Automated Style Guides'
@@ -16,11 +16,13 @@ summary: |
   An automatic style-guide generator,
   built on top of SassDoc,
   and designed to integrate with OddBird's
-  Sass Accoutrement libraries
+  `Sass Accoutrement`_ libraries
   for quick theme configuration,
   color palettes, font specimens, icon libraries,
   and documentation of UI patterns
   in both Sass and Nunjucks.
+
+  .. _Sass Accoutrement: '/open-source/accoutrement/'
 
 
 Herman

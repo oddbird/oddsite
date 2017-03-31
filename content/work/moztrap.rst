@@ -2,7 +2,7 @@ public: yes
 location: work
 grid_template: true
 image:
-  - src: 'blog/2016/coachhub/feature.jpg'
+  - src: 'projects/moztrap.jpg'
 client:
   - name: 'Mozilla'
     url: 'https://www.mozilla.org/'

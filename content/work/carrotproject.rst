@@ -2,7 +2,7 @@ public: no
 location: work
 grid_template: true
 image:
-  - src: 'blog/2016/coachhub/feature.jpg'
+  - src: 'projects/carrot.jpg'
 client:
   - name: 'Jake de Grazia'
 project:

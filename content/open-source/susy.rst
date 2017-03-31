@@ -2,10 +2,11 @@ public: yes
 location: open-source
 grid_template: true
 image:
-  - src: 'blog/2016/coachhub/feature.jpg'
+  - src: 'blog/susy.jpg'
 project:
   - name: 'Susy'
     tagline: 'Your layout, our math'
+    url: 'http://susy.oddbird.net'
     source: 'https://github.com/oddbird/susy'
     years: '2009-present'
     status: 'public'

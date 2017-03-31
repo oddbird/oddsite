@@ -1,8 +1,6 @@
-public: yes
+public: no
 location: work
 grid_template: true
-image:
-  - src: 'blog/2016/coachhub/feature.jpg'
 client:
   - name: 'The Providence Plan'
     url: 'http://provplan.org/'
