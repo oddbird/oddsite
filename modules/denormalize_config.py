@@ -23,6 +23,6 @@ def setup(builder):
 
     for page in pages:
         for author in page.config['contributors']:
-            author_projects[author['author']].append(page.config['project'][0])
+            author_projects[author['author']].append(page.config['project'])
 
     builder.config.stack[-1]['oss_by_author'] = author_projects
