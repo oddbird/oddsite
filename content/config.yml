@@ -766,10 +766,10 @@ contact:
 # -------------
 
 active_modules: [
-  denormalize_config,
   jinja_macros,
   typogrify,
   images,
+  denormalize_config,
   tags,
   blog,
   author,
