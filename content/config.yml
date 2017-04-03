@@ -3,13 +3,6 @@
 # Site-Wide Content
 # -----------------
 
-site_message:
-  - body: |
-      <strong>We’re re-building our website in the open</strong>,
-      and writing about our process along the way.
-    action: Find out more!
-    url: '/2016/07/12/open-design/'
-
 contact:
   - title: 'Let’s Build Something Together!'
     content: |
