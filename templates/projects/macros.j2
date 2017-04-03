@@ -65,11 +65,20 @@
       <div>
         {{ page.render_summary() }}
 
-        {% if project.url %}
-          {% call content.link_button(project.url) %}Go to Site »{% endcall %}
+        {% if project.case_study %}
+          {% call content.link_button(project.url) %}
+            read our case study »
+          {% endcall %}
+        {% endif %}
+        {% if project.url or project.owner %}
+          {% call content.link_button(project.url or ['/', page.slug, '/']|join('')) %}
+            view the site »
+          {% endcall %}
         {% endif %}
         {% if project.source %}
-          {% call content.link_button(project.source) %}View Source »{% endcall %}
+          {% call content.link_button(project.source) %}
+            source code »
+          {% endcall %}
         {% endif %}
       </div>
     {% endif %}

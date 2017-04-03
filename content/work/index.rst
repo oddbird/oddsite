@@ -50,9 +50,9 @@ services:
       - 'Brand design and documentation'
 summary: |
   **Do you need help developing a web application?**
-  We provide extensive experience in *product development*,
+  We provide extensive expertise in *product development*,
   *branding*, *user-experience design*,
-  and *user testing* – 
+  and *usability testing* – 
   with a strong commitment to
   collaborative process, user needs,
   and well-tested, carefully architected,
