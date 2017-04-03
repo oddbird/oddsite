@@ -10,11 +10,6 @@ site_message:
     action: Find out more!
     url: '/2016/07/12/open-design/'
 
-blog_title:
-  - title: 'Our Odd Thoughts'
-    type: 'Articles'
-    tagline: 'best-practice is an evolving conversation…'
-
 contact:
   - title: 'Let’s Build Something Together!'
     content: |

@@ -39,9 +39,7 @@
     margin-bottom: 0;
     margin-top: negative('double-gutter');
     max-width: none;
-    padding-bottom: size('shim');
     padding-right: calc(20% + #{size('shim')}); // 100% - 80% (angle) = 20% then add padding
-    padding-top: size('shim');
     position: relative;
     z-index: 1;
 

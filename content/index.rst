@@ -1,6 +1,8 @@
 public: yes
 location: home
 hide_contact: true
+image:
+  - src: 'pages/faces-hero.jpg'
 headline:
   - title: 'You have a brilliant idea.'
     tagline: 'We’ll make it fly.'

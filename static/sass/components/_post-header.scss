@@ -7,7 +7,7 @@
   margin-bottom: size('gutter');
   margin-top: size('gutter');
   max-width: size('full-content');
-  padding: 0 size('gutter');
+  padding: size('shim') size('gutter');
 }
 
 .title-post-type {

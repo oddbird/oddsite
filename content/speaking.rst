@@ -1,8 +1,9 @@
 public: yes
 location: speaking
+image:
+  - src: 'pages/speaking.jpg'
 headline:
   - tagline: 'Sharing what we’ve learned…'
-    type: 'About Us'
 after:
   - include: 'community/_events.html.j2'
     title: 'Upcoming Events'
