@@ -14,7 +14,7 @@ tasks:
   - User Experience Design
   - Project Architecture
   - Custom CMS
-  - Mobile-Responsive Styles
+  - Responsive Styles
 summary: |
   The official website of The Steel Wheels.
 

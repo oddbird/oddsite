@@ -16,7 +16,7 @@ tasks:
   - Product Branding
   - User Experience Design
   - Project Architecture
-  - Mobile-Responsive Styles
+  - Responsive Styles
 quotes:
   - text: 'I consider MozTrap to be one of the best
       open source test case management systems out there.'

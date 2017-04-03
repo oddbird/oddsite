@@ -14,7 +14,7 @@ tasks:
   - Product Branding
   - User Experience Design
   - Project Architecture
-  - Mobile-Responsive Styles
+  - Responsive Styles
 summary: |
   A community tool for finding, researching, discussing, and supporting
   the most socially and environmentally ‘crunchy’ products and brands.

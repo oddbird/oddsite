@@ -16,7 +16,7 @@ tasks:
   - Product Branding
   - User Experience Design
   - Project Architecture
-  - Mobile-Responsive Styles
+  - Responsive Styles
 quotes:
   - text: 'Just like the Quarq power meters
       changed the playing field for power measurement,

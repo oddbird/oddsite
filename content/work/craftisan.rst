@@ -12,7 +12,7 @@ tasks:
   - Product Branding
   - User Experience Design
   - Project Architecture
-  - Mobile-Responsive Styles
+  - Responsive Styles
 summary: |
   International arts and crafts marketplace
   specifically designed for aid workers

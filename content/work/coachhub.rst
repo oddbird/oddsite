@@ -17,7 +17,7 @@ tasks:
   - Product Branding
   - User Experience Design
   - Project Architecture
-  - Mobile-Responsive Styles
+  - Responsive Styles
 quotes:
   - text: 'OddBird really changed my thinking about
       how successful outsourcing software development can be.'
@@ -79,7 +79,7 @@ What They Needed
 ----------------
 
 ORCAS partnered with OddBird to build a custom,
-mobile-responsive web application –
+responsive web application –
 a hub to connect clients with health coaches
 for easy access to personalized wellness guidance and support.
 The new software needed to fit with ORCAS’s existing suite of apps,

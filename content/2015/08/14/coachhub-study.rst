@@ -5,7 +5,7 @@ image:
   - src: 'blog/2016/coachhub/feature.jpg'
 summary: |
   An in depth look at OddBird's design and development process
-  on the CoachHub mobile-responsive web application –
+  on the CoachHub responsive web application –
   including logo and user experience design,
   accessibility and usability testing,
   site architecture, information design,
@@ -40,7 +40,7 @@ What They Needed
 ----------------
 
 ORCAS partnered with OddBird to build a custom,
-mobile-responsive, web application –
+responsive, web application –
 a hub to connect clients with health coaches for easy
 access to personalized wellness guidance and support.
 The new software needed to work with ORCAS’s existing suite of apps,
@@ -312,7 +312,7 @@ Accessibilty
 Accessibility is built into the core technologies
 and techniques we use on every project:
 accessible HTML5, unobtrusive JavaScript,
-and mobile-responsive CSS styles.
+and responsive CSS styles.
 We make it a priority from the beginning of each project –
 using progressive enhancement and responsive design
 to support a broad range of users, devices, and browsers.

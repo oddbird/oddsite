@@ -136,7 +136,7 @@ a standard page-``summary`` and a list of ``tasks``:
     - Product Branding
     - User Experience Design
     - Project Architecture
-    - Mobile-Responsive Styles
+    - Responsive Styles
 
 
 .. callmacro:: content.macros.j2#rst

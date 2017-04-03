@@ -14,7 +14,7 @@ tasks:
   - Product Branding
   - User Experience Design
   - Project Architecture
-  - Mobile-Responsive Styles
+  - Responsive Styles
 summary: |
   We worked with Junyo to develop
   an early version of their Streams Resource Library –

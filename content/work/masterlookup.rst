@@ -14,7 +14,7 @@ tasks:
   - Product Branding
   - User Experience Design
   - Project Architecture
-  - Mobile-Responsive Styles
+  - Responsive Styles
 summary: |
   With custom interactive in-browser maps,
   MLT streamlines the Providence Plan staff's task

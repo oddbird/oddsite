@@ -13,7 +13,7 @@ tasks:
   - Product Branding
   - User Experience Design
   - Project Architecture
-  - Mobile-Responsive Styles
+  - Responsive Styles
 summary: |
   Centralized communication for teachers, students, and parents –
   without relying on a computer in every home.

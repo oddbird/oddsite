@@ -30,7 +30,7 @@ tasks:
   - Product Branding
   - User Experience Design
   - Project Architecture
-  - Mobile-Responsive Styles
+  - Responsive Styles
 summary: |
   QuarqNet allows athletes to track and analyze their activities,
   sharing their location and statistics
