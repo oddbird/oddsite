@@ -61,7 +61,7 @@ journey.
 - *Web Development Partner:* a design and development company that builds
   web-based tools for people to use
 - *Consulting:* from strategy and design to testing and implementation
-- *Education:* open-source sharing, writing, and speaking about web design and
+- *Education:* open source sharing, writing, and speaking about web design and
   development experiences, experiments, and the tools we use
 
 

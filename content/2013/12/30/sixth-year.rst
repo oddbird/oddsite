@@ -37,7 +37,7 @@ first-ever year-end retrospective. Here's 2013, OddBird style:
 - `We <https://github.com/jgerigmeyer>`_ `released
   <https://github.com/carljm>`_ `code <https://github.com/ericam>`_
   (and even maintained most of it afterwards!)
-  Because we like open-source software,
+  Because we like open source software,
   and wouldn't be here without it.
 
 - We sponsored `SassConf`_ and are silver sponsors of `PyCon`_ 2014. It's one

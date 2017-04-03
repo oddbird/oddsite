@@ -25,7 +25,7 @@ Here are a few of our favorites...
 
 .. figure:: /static/images/blog/2016/logos/susy.jpg
 
-   *Susy: open-source web layout tools*
+   *Susy: open source web layout tools*
 
 .. figure:: /static/images/blog/2016/logos/moztrap.jpg
 

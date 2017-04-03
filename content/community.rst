@@ -93,7 +93,7 @@ giving:
     description: |
       is an international mentorship group
       with a focus on helping more women become active participants
-      and leaders in the Python open-source community.
+      and leaders in the Python open source community.
   - name: 'Django Girls'
     url: 'https://djangogirls.org/'
     type: 'donations'
@@ -110,7 +110,7 @@ giving:
     description: |
       is the largest annual gathering
       for the people who use and develop
-      the open-source Python programming language.
+      the open source Python programming language.
   - name: 'The Mixin'
     url: 'http://themixinsf.com/'
     type: 'sponsorships'
@@ -140,7 +140,7 @@ summary: |
   We benefit daily from the generous contributions of others,
   and believe that a `diverse network`_ of shared experiences and ideas
   makes all of our work stronger.
-  In addition to our `open-source software`_ and `public speaking`_,
+  In addition to our `open source software`_ and `public speaking`_,
   we are proud to sponsor
   organizations that increase diversity in the community –
   from race and gender, to identity and sexuality –
@@ -151,7 +151,7 @@ summary: |
   that keep us entertained and fulfilled outside of work.
 
   .. _`diverse network`: /conduct/
-  .. _`open-source software`: /open-source/
+  .. _`open source software`: /open-source/
   .. _`public speaking`: /speaking/
 
 

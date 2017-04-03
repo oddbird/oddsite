@@ -36,7 +36,7 @@ We're `writing more`_,
 `taking on more clients`_,
 `re-designing our website and brand in the open`_,
 `building a community on Slack`_,
-and contributing to more `open-source projects`_.
+and contributing to more `open source projects`_.
 
 .. _`Carl`: /birds/#bird-carl
 .. _`Instagram`: http://instagram.com
@@ -49,7 +49,7 @@ and contributing to more `open-source projects`_.
 .. _`taking on more clients`: /work/
 .. _`re-designing our website and brand in the open`: /tags/open-design/
 .. _`building a community on Slack`: http://friends.oddbird.net/
-.. _`open-source projects`: /open-source/
+.. _`open source projects`: /open-source/
 
 It was hard to lose one of the founders
 (and a sibling!)

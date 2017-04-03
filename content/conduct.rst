@@ -70,7 +70,7 @@ including behavior outside OddBird spaces,
 and behavior towards people who are not OddBird contributors.
 
 OddBird contributors include owners,
-contractors, clients, open-source contributors,
+contractors, clients, open source contributors,
 and anyone participating in OddBird spaces or activities.
 
 

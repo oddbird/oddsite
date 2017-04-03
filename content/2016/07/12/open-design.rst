@@ -60,7 +60,7 @@ What is Open Design?
 --------------------
 
 At OddBird, we are very familiar
-with `open-source collaboration`_,
+with `open source collaboration`_,
 and daily client feedback,
 but designing a site in the open is new to us.
 Luckily, `we're not the first to do it`_.
@@ -85,10 +85,10 @@ sharing artifacts from the design process
 (such as sketches and planning documents),
 and telling stories about our process and decision making.
 We also have our `source code`_ available on GitHub,
-and will talk about the open-source tools we use,
+and will talk about the open source tools we use,
 and share any tools we build.
 
-.. _open-source collaboration: /open-source/
+.. _open source collaboration: /open-source/
 .. _we're not the first to do it: http://bradfrost.com/blog/post/designing-in-the-open/
 .. _continuous integration: https://en.wikipedia.org/wiki/Continuous_integration
 .. _source code: https://github.com/oddbird/oddsite/

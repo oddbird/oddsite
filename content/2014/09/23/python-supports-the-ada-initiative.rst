@@ -35,7 +35,7 @@ over the world.
 I attended my first PyCon in 2008, and I've been to every one since. I gave my
 `first PyCon talk`_ in 2011. That year, 1% of the talks were by women;
 ninety-five out of ninety-six by men. Being one of those ninety-five helped me
-to launch a career in open-source software. Ninety-odd other men got that same
+to launch a career in open source software. Ninety-odd other men got that same
 opportunity that year; one woman did.
 
 Three years later, thanks to the incredible outreach efforts of Jessica
@@ -64,7 +64,7 @@ I am ashamed to be part of this industry because of `pervasive sexual
 harassment`_ and sexism at tech conferences, in the workplace, and at meetups.
 
 I want to be able to wholeheartedly celebrate my successes and recommend
-open-source software communities, but I know that I've been `playing on the
+open source software communities, but I know that I've been `playing on the
 easy setting`_: paid more and presumed competent because of my gender, skin
 color, cultural similarity to those in positions of power, and `other
 attributes that I did nothing to earn`_.

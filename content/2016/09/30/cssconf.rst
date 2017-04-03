@@ -74,7 +74,7 @@ and it was a nice reminder that they can apply to code as well.
 2. Impose artificial bounds
 3. Repurpose existing solutions
 4. Combine existing solutions
-5. Use open-source code (this seems like an extension of 3 and 4)
+5. Use open source code (this seems like an extension of 3 and 4)
 
 Of course,
 this summary barely does justice

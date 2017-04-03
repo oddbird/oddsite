@@ -19,7 +19,7 @@ tasks:
   - Mobile-Responsive Styles
 quotes:
   - text: 'I consider MozTrap to be one of the best
-      open-source test case management systems out there.'
+      open source test case management systems out there.'
     name: 'Frank O’Hara'
     role: 'Software Developer'
 summary: |

@@ -17,7 +17,6 @@ summary: |
   or reach out to `@OddBird`_ on Twitter.
 
   .. _recent articles: /blog/
-  .. _open-source contributions: /open-source/
   .. _public online chat: http://friends.oddbird.net/
   .. _@OddBird: http://twitter.com/oddbird
 

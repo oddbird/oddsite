@@ -32,7 +32,7 @@ in the ways creative inspiration
 and production are handled.
 Original ensemble "devised" theater
 is a great way to learn project management
-and the basics of open-source collaboration.
+and the basics of open source collaboration.
 The same is true in reverse.
 My art is better for
 an understanding of usability testing,
