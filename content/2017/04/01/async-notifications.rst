@@ -107,6 +107,7 @@ The one thing you should know right here and now is that the
 minimum, these values:
 
 .. code:: python
+
     channel_routing = [
         route("websocket.connect", websocket_connect),
         route("websocket.receive", websocket_receive),
@@ -121,12 +122,14 @@ task you want to run in the background.
 So, once you've called the background task:
 
 .. code:: python
+
     Channel('my-background-task').send(some_arguments)
 
 You can then, in the task, make use of the websocket connection that you set up
 when the user initially loaded the page:
 
 .. code:: python
+
     Group(get_group_id_from(some_arguments)).send("Status update")
 
 Be sure that there's some stable way to identify the ``Group`` that you need to
@@ -145,7 +148,8 @@ websocket connection on page load, you'll want to add that reply channel to the
 
 On the frontend, you should have something like this:
 
-.. code:: javascript
+.. code:: js
+
     socket = new WebSocket("ws://" + window.location.host);
     socket.onmessage = show_some_toast_for(message);
     // Call onopen directly if socket is already open
