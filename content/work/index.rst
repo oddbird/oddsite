@@ -39,15 +39,15 @@ services:
       - 'Theaters, writers, and other artists'
   - title: 'We provide'
     data:
-      - Custom web software design and development
-      - Web best-practice, code architecture, and team process development
-      - Marketing and crowdfunding consultation
-      - Content strategy and information architecture
-      - User testing and continuous integration
-      - Responsive design and development
-      - User experience and interface design
-      - Automated, living style guides
-      - Brand design and documentation
+      - 'Custom web software design and development'
+      - 'Web best-practice, code architecture, and team process development'
+      - 'Marketing and crowdfunding consultation'
+      - 'Content strategy and information architecture'
+      - 'User testing and continuous integration'
+      - 'Responsive design and development'
+      - 'User experience and interface design'
+      - 'Automated, living style guides'
+      - 'Brand design and documentation'
 summary: |
   **Do you need help developing a web application?**
   We provide extensive experience in *product development*,
