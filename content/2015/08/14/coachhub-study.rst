@@ -116,7 +116,7 @@ allowing ORCAS to add, prioritized, and remove stories
 before we started, and throughout the project –
 remaining up-to-date and in control of the project cost and scope.
 
-.. _Pivotal Tracker: @@@
+.. _Pivotal Tracker: http://www.pivotaltracker.com/
 
 
 Design *&* Development Phase
@@ -323,7 +323,7 @@ We also built a WCAG contrast test into our
 `Sass Accoutrement toolkits`_.
 
 .. _Contrast Ratio: http://leaverou.github.io/contrast-ratio/
-.. _Sass Accoutrement toolkits: /accoutrement/
+.. _Sass Accoutrement toolkits: /open-source/accoutrement/
 
 
 Landing Pages

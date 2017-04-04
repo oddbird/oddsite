@@ -1,7 +1,7 @@
 public: yes
 author: miriam
 headline:
-  - tagline: 'using safe-get-function and safe-call utilities'
+  - tagline: 'Using safe-get-function and safe-call utilities'
     type: 'Code Sample'
 tags: [
   Sass,

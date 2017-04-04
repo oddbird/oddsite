@@ -11,7 +11,7 @@ contributors:
   - author: 'miriam'
     role: 'core developer, 2010–2016'
 summary: |
-  An open-source CSS authoring framework
+  An open source CSS authoring framework
   which uses the Sass language
   to make writing and sharing stylesheets powerful and easy.
   Compass was the first package-manager

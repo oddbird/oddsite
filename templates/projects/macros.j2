@@ -66,7 +66,7 @@
         {{ page.render_summary() }}
 
         {% if project.case_study %}
-          {% call content.link_button(project.url) %}
+          {% call content.link_button(link) %}
             read our case study »
           {% endcall %}
         {% endif %}

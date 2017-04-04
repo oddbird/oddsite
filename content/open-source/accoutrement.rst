@@ -21,11 +21,11 @@ summary: |
   `webfonts and typography`_, `modular scales`_,
   and `responsive layouts`_.
 
-  .. _browser normalization: /accoutrement-init/sassdoc/
-  .. _color palettes: /accoutrement-color/sassdoc/
-  .. _webfonts and typography: /accoutrement-type/sassdoc/
-  .. _modular scales: /accoutrement-scale/sassdoc/
-  .. _responsive layouts: /accoutrement-layout/sassdoc/
+  .. _browser normalization: http://oddbird.net/accoutrement-init/sassdoc/
+  .. _color palettes: http://oddbird.net/accoutrement-color/sassdoc/
+  .. _webfonts and typography: http://oddbird.net/accoutrement-type/sassdoc/
+  .. _modular scales: http://oddbird.net/accoutrement-scale/sassdoc/
+  .. _responsive layouts: http://oddbird.net/accoutrement-layout/sassdoc/
 
 
 Accoutrement

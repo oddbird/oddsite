@@ -27,7 +27,7 @@ summary: |
 
     Bring a bird to your conference, team, or meetup »
 
-  .. _freely-shared: '/open-source/'
+  .. _freely-shared: /open-source/
 
 
 Speaking Engagements

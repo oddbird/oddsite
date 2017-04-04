@@ -21,7 +21,7 @@ summary: |
   and documentation of UI patterns
   in both Sass and Nunjucks.
 
-  .. _Sass Accoutrement: '/open-source/accoutrement/'
+  .. _Sass Accoutrement: /open-source/accoutrement/
 
 
 Herman

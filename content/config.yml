@@ -446,7 +446,7 @@ nav:
         display_text: 'client projects'
         url: '/work/'
       - text: 'open-source'
-        display_text: 'open-source contributions'
+        display_text: 'open source contributions'
         url: '/open-source/'
   - text: 'about'
     subnav:

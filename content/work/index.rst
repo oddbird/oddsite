@@ -40,7 +40,7 @@ services:
   - title: 'We provide'
     data:
       - 'Custom web software design and development'
-      - 'Web best-practice, code architecture, and team process development'
+      - 'Web best practice, code architecture, and team process development'
       - 'Marketing and crowdfunding consultation'
       - 'Content strategy and information architecture'
       - 'User testing and continuous integration'

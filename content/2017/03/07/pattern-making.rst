@@ -381,10 +381,10 @@ for the more robust
 style guide generator
 we'll develop later.
 
-.. _Accoutrement: /accoutrement/
-.. _color: /accoutrement-color/sassdoc/
-.. _scale: /accoutrement-scale/sassdoc/
-.. _type: /accoutrement-type/sassdoc/
+.. _Accoutrement: /open-source/accoutrement/
+.. _color: http://oddbird.net/accoutrement-color/sassdoc/
+.. _scale: http://oddbird.net/accoutrement-scale/sassdoc/
+.. _type: http://oddbird.net/accoutrement-type/sassdoc/
 
 
 The Theming Option
