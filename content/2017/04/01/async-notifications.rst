@@ -71,7 +71,7 @@ As an aside, it might be tempting to do something like this with the Django
 request object. I would strongly recommend saving yourself the time and
 trouble, and using anything but messages for this.
 
-.. _messages framework: https://docs.djangoproject.com/en/1.10/ref/contrib/messages/
+.. _messages framework: https://docs.djangoproject.com/en/1.11/ref/contrib/messages/
 
 So what if you want real-time updates? What if that page refresh is bumming you
 out?
