@@ -1,5 +1,6 @@
 {% import 'utility.macros.j2' as utility %}
 {% import 'layout/macros.j2' as page %}
+{% import 'content.macros.j2' as content %}
 {% import 'birds/utility.macros.j2' as birds %}
 
 
@@ -28,9 +29,13 @@
       </div>
     {% endif %}
 
-    <a href="{{ link_to('page', slug=post.slug) }}" rel="bookmark" class="btn">
+    {% call content.link_button(
+      url=link_to('page', slug=post.slug),
+      rel='bookmark'
+      ) %}
       Read More
-    </a>
+    {% endcall %}
+
   </article>
 {% endmacro %}
 
