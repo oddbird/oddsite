@@ -3,9 +3,15 @@
 
 
 [data-module] {
-  margin: size('gutter') auto size('spacer');
+  margin: size('gutter') auto;
   max-width: size('full-content');
   padding: 0 size('gutter');
+
+  @include after('') {
+    border-top: size('border-thin') solid color('border-light');
+    display: block;
+    margin: size('double-gutter') 0;
+  }
 }
 
 .grid-template {
@@ -19,5 +25,5 @@
 }
 
 .preview {
-  margin-bottom: size('spacer');
+  margin: size('double-gutter') auto;
 }

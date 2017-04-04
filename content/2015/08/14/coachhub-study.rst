@@ -2,10 +2,10 @@ public: yes
 author: sondra
 tags: ['Case Studies']
 image:
-  - src: '2016/coachhub/feature.jpg'
+  - src: 'blog/2016/coachhub/feature.jpg'
 summary: |
   An in depth look at OddBird's design and development process
-  on the CoachHub mobile-responsive web application —
+  on the CoachHub responsive web application –
   including logo and user experience design,
   accessibility and usability testing,
   site architecture, information design,
@@ -16,9 +16,9 @@ CoachHub: A Responsive Web App for Wellness Coaching
 ====================================================
 
 `CoachHub`_ is a mobile coaching platform
-we buit with `ORCAS`_ —
+we buit with `ORCAS`_ –
 integrating with their suite of self-management tools,
-as well as other vetted third-party apps —
+as well as other vetted third-party apps –
 and providing users with anywhere, anytime access
 to varying levels of support via video chat,
 in-app messaging, public Q&A, webinars, and support groups.
@@ -40,7 +40,7 @@ What They Needed
 ----------------
 
 ORCAS partnered with OddBird to build a custom,
-mobile-responsive, web application —
+responsive, web application –
 a hub to connect clients with health coaches for easy
 access to personalized wellness guidance and support.
 The new software needed to work with ORCAS’s existing suite of apps,
@@ -79,7 +79,7 @@ Vision & Strategy
 
 For an in-depth understanding of the CoachHub project
 and its place in the market,
-we created a vision & strategy document with ORCAS —
+we created a vision & strategy document with ORCAS –
 getting to the core of the problems
 faced by coaches and clients day-to-day,
 how our software could most help solve those problems,
@@ -89,16 +89,16 @@ and what approaches would make it unique.
 User Profiles
 ~~~~~~~~~~~~~
 
-Together, we created profiles of the desired users —
+Together, we created profiles of the desired users –
 asking who they were,
 how the application would fit the schedule of their day,
 and what they needed to accomplish
 at different times from different devices?
-We identified three distinct users —
+We identified three distinct users –
 health coaches,
 individual clients,
 and business partners
-who would include CoachHub as part of a benefits package —
+who would include CoachHub as part of a benefits package –
 and detailed the significantly different motivations
 and needs of each persona.
 
@@ -109,14 +109,14 @@ Out of that conversation,
 we documented **user stories** in `Pivotal Tracker`_,
 where we could easily track progress, assign tasks, and manage priorities.
 Each story describes one goal
-that a specific user would want to accomplish on CoachHub —
+that a specific user would want to accomplish on CoachHub –
 *as a <user-type>, I want to <accomplish x task>*.
 We also used Tracker to provide itemized estimates for each story,
 allowing ORCAS to add, prioritized, and remove stories
-before we started, and throughout the project —
+before we started, and throughout the project –
 remaining up-to-date and in control of the project cost and scope.
 
-.. _Pivotal Tracker: @@@
+.. _Pivotal Tracker: http://www.pivotaltracker.com/
 
 
 Design *&* Development Phase
@@ -149,7 +149,7 @@ For each step in the flow we asked
 *how did the user get here*,
 *what do they need to achieve*,
 and *where were they going next*?
-We created an interactive web of static-HTML **content templates** —
+We created an interactive web of static-HTML **content templates** –
 a living draft of the site architecture, with samples of real content.
 Interacting with the template architecture helped us find patterns.
 We replaced the browse-coaches page,
@@ -177,8 +177,8 @@ We worked with ORCAS to pinpoint
 the emotions and associations
 they wanted the CoachHub brand to evoke,
 and created a friendly, distinct brand identity.
-Like their existing apps —
-MoodHacker and BlipHub (pictured below) —
+Like their existing apps –
+MoodHacker and BlipHub (pictured below) –
 the CoachHub logo and overall brand are
 bright, cheerful, and hopeful.
 
@@ -312,8 +312,8 @@ Accessibilty
 Accessibility is built into the core technologies
 and techniques we use on every project:
 accessible HTML5, unobtrusive JavaScript,
-and mobile-responsive CSS styles.
-We make it a priority from the beginning of each project —
+and responsive CSS styles.
+We make it a priority from the beginning of each project –
 using progressive enhancement and responsive design
 to support a broad range of users, devices, and browsers.
 For CoachHub we also used
@@ -323,7 +323,7 @@ We also built a WCAG contrast test into our
 `Sass Accoutrement toolkits`_.
 
 .. _Contrast Ratio: http://leaverou.github.io/contrast-ratio/
-.. _Sass Accoutrement toolkits: /accoutrement/
+.. _Sass Accoutrement toolkits: /open-source/accoutrement/
 
 
 Landing Pages
@@ -354,6 +354,6 @@ On-Going Design
 CoachHub launched with a minimum viable set of features, and room to grow.
 We continue to work periodically with ORCAS’s internal development team,
 consulting on the design and flow of new features
-as CoachHub expands to accommodate the needs of their growing user-base —
+as CoachHub expands to accommodate the needs of their growing user-base –
 people who use it every day to improve their health and wellness,
 or as part of their work coaching others.

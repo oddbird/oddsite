@@ -2,7 +2,7 @@ public: yes
 tags: [Sass, 'Sass Maps', Code]
 author: miriam
 image:
-  - src: 'sass33.jpg'
+  - src: 'blog/sass33.jpg'
 summary: |
   The difference between map-set and map-merge? Almost
   nothing.

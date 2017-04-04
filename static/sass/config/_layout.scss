@@ -208,7 +208,7 @@ $grid-columns-large: [col1-start] 1fr [col1-end col2-start] 1fr [col2-end col3-s
   margin-bottom: size('pad');
 
   @include above('small-page') {
-    float: $side;
+    float: unquote($side);
 
     @if ($side == 'left') {
       margin-right: size('pad');

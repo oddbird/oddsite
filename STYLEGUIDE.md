@@ -7,9 +7,9 @@ and associated OddBird branding materials.
 
 It is still in development,
 using OddBird's
-[Accoutrement](/accoutrement/) and
+[Accoutrement](/open-source/accoutrement/) and
 [Herman](https://github.com/oddbird/sassdoc-theme-herman/)
-open-source toolkits
+open source toolkits
 to automate as much living documentation as possible.
 
 Writing Content

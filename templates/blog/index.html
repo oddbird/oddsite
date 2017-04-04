@@ -7,7 +7,8 @@
 {% block og_url %}{{ get_full_canonical_url(builder, slug='/blog/') }}{% endblock %}
 
 {% block list_intro %}
-  {{ layout.show_headline(config.blog_title) }}
+  {% set page = all_pages|filter_pages('index', 'eq', 'blog')|get_page %}
+  {{ layout.header(page, page) }}
 {% endblock list_intro %}
 
 {% block archive %}

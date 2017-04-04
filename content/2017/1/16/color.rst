@@ -2,7 +2,7 @@ public: yes
 author: sondra
 tags: [OddSite, 'Open Design', Color, Design]
 image:
-  - src: '2017/colors/color.jpg'
+  - src: 'blog/2017/colors/color.jpg'
 summary: |
   **How do you select a set of colors that express the attitude of your
   brand**, look great together, and pass WCAG accessibility standards? How many

@@ -2,7 +2,7 @@ public: yes
 author: sondra
 tags: [OddSite, 'Open Design', Design, Typography]
 image:
-  - src: '2016/brand/type-header.jpg'
+  - src: 'blog/2016/brand/type-header.jpg'
 summary: |
   What follows is an in-depth look at our brand design process thus far as we
   work towards a new look and feel for this, our OddSite. Details. Confessions.
@@ -61,7 +61,7 @@ journey.
 - *Web Development Partner:* a design and development company that builds
   web-based tools for people to use
 - *Consulting:* from strategy and design to testing and implementation
-- *Education:* open-source sharing, writing, and speaking about web design and
+- *Education:* open source sharing, writing, and speaking about web design and
   development experiences, experiments, and the tools we use
 
 

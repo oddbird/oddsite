@@ -2,7 +2,7 @@ public: yes
 author: sondra
 tags: [Design, Recommendations]
 image:
-  - src: '2017/parallax/parallax.jpg'
+  - src: 'blog/2017/parallax/parallax.jpg'
 summary: |
   If you'd like to learn how to create parallax scrolling for your website,
   Paul Lewis' guide to performant parallaxing is the perfect place to start.

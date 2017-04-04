@@ -1,6 +1,7 @@
 {% import 'utility.macros.j2' as utility %}
 {% import 'birds/utility.macros.j2' as birds %}
 {% import 'content.macros.j2' as content %}
+{% import 'layout/macros.j2' as layout %}
 
 
 {% macro list(project, named_states=[]) %}
@@ -35,56 +36,91 @@
 {% endmacro %}
 
 
-{% macro feature(project) %}
-  <article>
-    <h3>
-      {{ utility.link_if(project.name, project.url) }}
-    </h3>
-    <h4>
-      {{ project.tagline }}
-    </h4>
+{% macro feature(page) %}
+  {% set client = page.config.client[0] if page.config.client else null %}
+  {% set contributors = page.config.contributors if page.config.contributors else null %}
+  {% set project = page.config.project[0] %}
+  {% set link = ['/', page.slug, '/']|join('') if project.owner or project.case_study %}
+  {% set link = link if project.case_study else (project.url or link or project.source) %}
 
-    {% if project.client %}
-      {{ for(project.client) }}
-    {% else %}
-      {{ who(project.who) }}
+  <article data-module='project-feature'>
+    <h2 class="project-title">
+      <div class="project-name">
+        {{ utility.link_if(project.name, link) }}
+      </div>
+      {% if project.tagline %}
+        <div class="project-tagline">{{ project.tagline }}</div>
+      {% endif %}
+    </h2>
+
+    {% if client %}
+      {{ for(client, project.years) }}
+    {% elif contributors %}
+      {{ who(contributors) }}
     {% endif %}
 
-    {% if project.quote %}
-      {{ content.blockquote(project.quote.text, project.quote.credit) }}
+    {{ layout.header_image(page, class='extend-small') }}
+
+    {% if page.summary %}
+      <div>
+        {{ page.render_summary() }}
+
+        {% if project.case_study %}
+          {% call content.link_button(link) %}
+            read our case study »
+          {% endcall %}
+        {% endif %}
+        {% if project.url or project.owner %}
+          {% call content.link_button(project.url or ['/', page.slug, '/']|join('')) %}
+            view the site »
+          {% endcall %}
+        {% endif %}
+        {% if project.source %}
+          {% call content.link_button(project.source) %}
+            source code »
+          {% endcall %}
+        {% endif %}
+      </div>
     {% endif %}
+
+    {% for quote in page.config.quotes %}
+      {{ content.blockquote(quote.text, quote.name, quote.url, quote.role) }}
+    {% endfor %}
   </article>
 {% endmacro %}
 
 
 {% macro for(client, years) %}
-  <div>
-    <i>for</i>
-    {{ utility.link_if(
-      client.name,
-      client.url
-    ) }}
-    {% if years %}
-      [{{ years }}]
-    {% endif %}
+  <div class="meta">
+    <p class="byline">
+      <span class="meta-preposition">for</span>
+      {{ utility.link_if(client.name, client.url) }}
+      {% if years %}
+        <span class="meta-preposition">in</span>
+        {{ years }}
+      {% endif %}
+    </p>
   </div>
 {% endmacro %}
 
 
 {% macro who(contributors) %}
   {% if contributors %}
-    <ul>
-      {% for contributor in contributors %}
-        {% set page = all_pages|filter_pages('bird', 'eq', contributor.author)|get_page %}
-
-        <li>
+    <div class="meta">
+      <p class="byline">
+        <span class="meta-preposition">by</span>
+        {% for contributor in contributors %}
+          {% if loop.last and not loop.first %}
+            <span class="meta-preposition">and</span>
+          {% endif %}
+          {% set page = all_pages|filter_pages('bird', 'eq', contributor.author)|get_page %}
           {{ birds.name_link(
             author=contributor.author,
             page=page
           ) }}
-          [{{ contributor.role }}]
-        </li>
-      {% endfor %}
-    </ul>
+          [{{ contributor.role }}]{{ ',' if not loop.last }}
+        {% endfor %}
+      </p>
+    </div>
   {% endif %}
 {% endmacro %}
