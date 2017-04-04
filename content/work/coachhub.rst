@@ -10,7 +10,7 @@ project:
   - name: 'CoachHub'
     tagline: 'Integrated Health Coaching'
     url: 'http://www.orcasinc.com/products/coachhub/'
-    case_study: true
+    case_study: false
     years: '2014–2016'
     status: 'live'
 tasks:
