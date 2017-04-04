@@ -60,10 +60,12 @@ $spacing-sizes: (
 ///   Accoutrement Scale
 $pattern-sizes: (
   'border': 8px ('convert-units': 'rem'),
+  'border-thin': 1px,
   'border-radius': 1rem,
   'bird-face-tall': 8rem,
   'bird-face': 6rem,
   'half-bird-face': 'bird-face' ('multiple': 0.5),
+  'intro-text': 'medium' ('convert-units': 'rem'),
   'nav-small': 20rem,
   'nav-medium': 35rem,
   'nav-wide': 50rem,

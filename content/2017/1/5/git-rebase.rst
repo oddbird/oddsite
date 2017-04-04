@@ -2,7 +2,7 @@ public: yes
 author: kit
 tags: [Git, Workflows, Code]
 image:
-  - src: '2017/git-rebase/git-cave.jpg'
+  - src: 'blog/2017/git-rebase/git-cave.jpg'
 summary: |
   If you want to make sense of your git history more easily when you go back,
   try rebasing as you go. Rebasing while collaborating with others can get
@@ -77,7 +77,7 @@ Into this DAG::
 The commits in the ``topic`` branch are labeled with prime signs after the
 rebase to denote that they are, in a sense, the "same" commits, but because
 they have a different ancestry, describe a different set of
-states—specifically, states that incorporate commits F and G. If there are
+states – specifically, states that incorporate commits F and G. If there are
 conflicts between the rebased commits and their new ancestry, git will prompt
 you to resolve those before continuing the rebase.
 

@@ -17,11 +17,11 @@
 
 // Extend thing outside its container on one side only
 .extend-left {
-  @include extend-side(left);
+  @include extend-side('left');
 }
 
 .extend-right {
-  @include extend-side(right);
+  @include extend-side('right');
 }
 
 

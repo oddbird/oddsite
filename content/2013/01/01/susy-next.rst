@@ -2,7 +2,7 @@ public: yes
 tags: [Susy, Layout, Grids]
 author: miriam
 image:
-  - src: 'susy.jpg'
+  - src: 'blog/susy.jpg'
 summary: |
   The web is littered with grid systems and 'frameworks'
   that force your code & design into narrowly defined patterns.
@@ -88,7 +88,7 @@ Please welcome the Susy Next team:
   the creator of `Breakpoint`_
   (simple sass media queries),
   and a contributor to various other great projects.
-  He also built "one of the dumbest Sass experiments" —
+  He also built "one of the dumbest Sass experiments" –
   `sassymothereffingtextshadow`_.
 
 All of us are passionate designer/developers,

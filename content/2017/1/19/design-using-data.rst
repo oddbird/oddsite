@@ -2,7 +2,7 @@ public: yes
 author: stacy
 tags: [Data, Design, Videos, Recommendations]
 image:
-  - src: '2017/video-series/sarah.jpg'
+  - src: 'blog/2017/video-series/sarah.jpg'
 summary: |
   Ongoing education in our industry is a must. Attending conferences is a great
   way to learn and network with other industry professionals. Unfortunately,

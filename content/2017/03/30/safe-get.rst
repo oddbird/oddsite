@@ -1,7 +1,7 @@
 public: yes
 author: miriam
 headline:
-  - tagline: 'using safe-get-function and safe-call utilities'
+  - tagline: 'Using safe-get-function and safe-call utilities'
     type: 'Code Sample'
 tags: [
   Sass,
@@ -9,7 +9,7 @@ tags: [
   Code
   ]
 image:
-  - src: '2017/safe-get/phone.jpg'
+  - src: 'blog/2017/safe-get/phone.jpg'
 summary: |
   The `Sass 3.5 Release Candidate`_
   includes support for

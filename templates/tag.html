@@ -1,6 +1,7 @@
 {% extends "blog/archives.html" %}
 
 {% import "blog/macros.j2" as blog %}
+{% import "layout/macros.j2" as layout %}
 
 {% block title %}{{ tag.name }} | {{ super() }}{% endblock %}
 {% block og_url %}{{ get_full_canonical_url(builder, slug=['/tags', tag.name]|join('/')) }}{% endblock %}
@@ -12,7 +13,12 @@
 {% endblock feedlinks %}
 
 {% block list_intro %}
-  <h1 class="title">Posts tagged “{{ tag.name }}”</h1>
+  {% set page = all_pages|filter_pages('index', 'eq', 'blog')|get_page %}
+  {{ layout.header_image(page) }}
+  {{ layout.show_headline(
+    main=['Posts Tagged ‘', tag.name, '’']|join(''),
+    sub='More articles on the topic…',
+    type=page.config.headline.type if page.config.headline else none) }}
 {% endblock list_intro %}
 
 {% block archive %}

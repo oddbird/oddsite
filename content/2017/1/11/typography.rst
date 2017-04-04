@@ -2,7 +2,7 @@ public: yes
 author: sondra
 tags: [OddSite, 'Open Design', Typography, Design]
 image:
-  - src: '2017/typography/type.jpg'
+  - src: 'blog/2017/typography/type.jpg'
 summary: |
   **How do you choose the best fonts for a brand identity** among the thousands
   of options available on the interwebs these days? Whether you’re starting

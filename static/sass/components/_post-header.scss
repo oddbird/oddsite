@@ -7,7 +7,7 @@
   margin-bottom: size('gutter');
   margin-top: size('gutter');
   max-width: size('full-content');
-  padding: 0 size('gutter');
+  padding: size('shim') size('gutter');
 }
 
 .title-post-type {
@@ -54,6 +54,20 @@
   font-weight: 300;
 }
 
-.project-links {
+.header-actions {
   text-align: right;
+}
+
+.rst-summary {
+  @include font-size('intro-text', 1.25);
+  margin: 0 auto;
+  max-width: calc(#{size('full-content')} + 10vw);
+  padding: size('shim') size('gutter') 0;
+
+  @include after('') {
+    border-top: size('border-thin') solid color('border-light');
+    display: block;
+    flex: 0 0 100%;
+    margin: size('double-gutter') 0;
+  }
 }

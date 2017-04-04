@@ -2,26 +2,27 @@ public: yes
 location: work
 grid_template: true
 image:
-  - src: '2016/coachhub/feature.jpg'
+  - src: 'projects/coachhub.jpg'
 client:
   - name: 'ORCAS'
     url: 'http://orcasinc.com'
 project:
   - name: 'CoachHub'
-    tagline: 'Integrated Health Coaching for ORCAS'
+    tagline: 'Integrated Health Coaching'
     url: 'http://www.orcasinc.com/products/coachhub/'
+    case_study: false
     years: '2014–2016'
     status: 'live'
 tasks:
   - Product Branding
   - User Experience Design
   - Project Architecture
-  - Mobile-Responsive Styles
+  - Responsive Styles
 quotes:
   - text: 'OddBird really changed my thinking about
       how successful outsourcing software development can be.'
     name: 'Sara Taillon'
-    url: 'http://google.com'
+    url: 'http://twitter.com/sjtaillon'
     role: 'ORCAS CTO'
 planning:
   - title: 'App Goals'
@@ -33,10 +34,10 @@ planning:
       and what features would make CoachHub uniquely useful.'
   - title: 'User Profiles'
     icon: 'miriam'
-    text: 'Together, we identified three distinct users —
+    text: 'Together, we identified three distinct users –
       health coaches, individual clients,
       and business partners who might purchase CoachHub
-      for an employee benefits package —
+      for an employee benefits package –
       and detailed the significantly different motivations
       and needs of each persona.'
   - title: 'User Stories'
@@ -47,21 +48,19 @@ planning:
       Using Pivotal Tracker we listed each user story and
       provided itemized story estimates.
       This allowed ORCAS to add, prioritized, and remove stories
-      before we began development, and throughout the project —
+      before we began development, and throughout the project –
       remaining up-to-date and in control of the project cost and scope.'
   - title: 'Data Models'
     icon: 'miriam'
     text: 'Placeholder text...'
 summary: |
   Our mobile coaching platform for ORCAS
-  integrates with their suite of self-management tools,
-  as well as other vetted third-party apps —
-  providing users with anywhere,
-  anytime access to varying levels of support via video chat,
-  in-app messaging, public Q&A, webinars, and support groups.
+  provides users with anywhere,
+  anytime access to varying levels of health-coaching –
+  via video chat, in-app messaging, public Q&A, webinars, and support groups.
   Users browse coaches, send messages, request appointments,
   post questions, and grant permissions
-  for coaches to view their progress.
+  for coaches to view their progress in other self-management apps.
   Coaches create a profile, manage daily tasks,
   make appointments, post answers to questions,
   view user progress, and set alerts
@@ -70,12 +69,8 @@ summary: |
   by the US Military and Coast Guard as an employee health benefit.
 
 
-CoachHub Case Study
-===================
-
-.. callmacro:: projects/case-study.macros.j2#front_matter
-  :slug: 'work/coachhub'
-
+Case Study: CoachHub
+====================
 
 .. callmacro:: content.macros.j2#rst
   :tag: 'start'
@@ -84,7 +79,7 @@ What They Needed
 ----------------
 
 ORCAS partnered with OddBird to build a custom,
-mobile-responsive web application —
+responsive web application –
 a hub to connect clients with health coaches
 for easy access to personalized wellness guidance and support.
 The new software needed to fit with ORCAS’s existing suite of apps,
