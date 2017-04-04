@@ -67,8 +67,8 @@
         {{ header_actions(ctx.config.actions) }}
       {% elif project %}
         {% set actions = [
-          {'text': 'go to app', 'url': project.url},
-          {'text': 'view source', 'url': project.source}
+          {'text': 'Go to app', 'url': project.url},
+          {'text': 'View source', 'url': project.source}
         ] %}
 
         {{ header_actions(actions) }}
@@ -120,5 +120,3 @@
     </div>
   {% endif %}
 {% endmacro %}
-
-
