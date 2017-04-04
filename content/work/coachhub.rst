@@ -187,7 +187,7 @@ to pinpoint the attitude and associations
 they wanted the CoachHub brand to evoke,
 and created a friendly, distinct brand identity.
 Like their existing apps –
-MoodHacker and BlipHub (pictured below) –
+MoodHacker and BlipHub –
 the CoachHub logo and overall brand
 are bright, cheerful, and hopeful.
 
@@ -281,7 +281,7 @@ In conversation with ORCAS’s internal team, we designed graphics, recommended
 and edited text, and identified important “call to action” steps to create a
 relevant and compelling landing pages for different users.
 
-.. image:: /static/images/blog/2016/coachhub/splash-final-2.jpg
+.. image:: /static/images/work/coachhub/splash-final-2.jpg
   :alt: final design for landing page
   :class: extend-full img-shadow
 
