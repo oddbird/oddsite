@@ -2,7 +2,7 @@ public: yes
 author: sondra
 tags: ['Case Studies']
 image:
-  - src: '2016/logos/oddbird.jpg'
+  - src: 'blog/2016/logos/oddbird.jpg'
 summary: |
   OddBird offers full brand identity development,
   including logo design.
@@ -25,7 +25,7 @@ Here are a few of our favorites...
 
 .. figure:: /static/images/blog/2016/logos/susy.jpg
 
-   *Susy: open-source web layout tools*
+   *Susy: open source web layout tools*
 
 .. figure:: /static/images/blog/2016/logos/moztrap.jpg
 

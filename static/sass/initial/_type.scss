@@ -88,8 +88,8 @@ a {
 // ----------
 
 p {
-  margin-bottom: size('shim');
-  margin-top: size('shim');
+  margin-bottom: size('shim', 'em');
+  margin-top: size('shim', 'em');
 
   [data-module='rst-body'] & {
     margin-bottom: size('gutter');

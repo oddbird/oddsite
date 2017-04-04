@@ -1,22 +1,30 @@
 public: yes
 location: contact
+hide_contact: true
+headline:
+  - tagline: 'Let’s get to know each other…'
+    type: 'Contact us'
 before:
   - include: 'contact/_form.html.j2'
-    contact: 'miriam'
-    intro: |
-      We're always here and happy to talk —
-      whether you have a project,
-      or a question,
-      or just want to say hi.
-      Send us a message
-      and %s, our %s,
-      will be in touch with you soon.
     submit: 'Send!'
     next: 'contact/thanks/'
+summary: |
+  .. callmacro:: birds/utility.macros.j2#face
+    :author: 'miriam'
+
+  We're always here and happy to talk –
+  whether you have a project,
+  or a question,
+  or just want to say hi.
+  Send us a message
+  and `Miriam Suzanne`_, our co-founder,
+  will be in touch with you soon.
+
+  .. _Miriam Suzanne: /birds/#bird-miriam
 
 
-Let's Get to Know Each Other
-============================
+Start a Conversation
+====================
 
 There are many ways to start a conversation with us,
 so feel free to pick the one that is most comfortable to you:

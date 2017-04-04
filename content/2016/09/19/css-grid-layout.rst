@@ -2,7 +2,7 @@ public: yes
 author: stacy
 tags: [Grids, 'CSS Grid', Layout, Design, Code]
 image:
-  - src: 'cssgriddemo.jpg'
+  - src: 'blog/cssgriddemo.jpg'
 summary: |
   CSS Grid Layout is shaping up to be the layout tool we've always wanted
   on the web. How can we use it to start creating interesting layouts?

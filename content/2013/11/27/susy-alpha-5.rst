@@ -2,7 +2,7 @@ public: yes
 tags: [Susy, Layout, Grids, Code]
 author: miriam
 image:
-  - src: 'susy.jpg'
+  - src: 'blog/susy.jpg'
 summary: |
   `Susy Next alpha 5`_ is out, and loaded with changes.
   We now require Sass 3.3,
@@ -19,7 +19,7 @@ Susy Next: Alpha 5
 ==================
 
 Susy Next is almost feature complete!
-Alpha 5 is loaded with changes —
+Alpha 5 is loaded with changes –
 some as a result of alpha testing,
 but mostly in response to the new power of Sass 3.3.
 This is likely to be our final alpha.
@@ -154,7 +154,7 @@ People are often confused about spanning full widths in Susy.
 I often see ``@include span(12 of 12);`` or the Susy 1 equivalent.
 That's not necessary, and adds a fair amount of extra output
 that you don't need.
-Really, in most cases you don't need anything at all —
+Really, in most cases you don't need anything at all –
 block elements span the full width by default.
 Sometimes, though, you need to clear the previous floats (``clear: both``),
 or you need to clear internal floats (``clearfix``),

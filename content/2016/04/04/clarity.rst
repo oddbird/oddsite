@@ -2,10 +2,10 @@ public: yes
 author: miriam
 tags: [Conferences, 'Style Guides']
 image:
-  - src: 'clarity.jpg'
+  - src: 'blog/clarity.jpg'
 summary: |
   It was an honor to be part of the first ever
-  Clarity Conference in San Francisco —
+  Clarity Conference in San Francisco –
   a beautiful event
   organized by Jina,
   and completely focussed on Style Guides.
@@ -15,7 +15,7 @@ Clarity Conference
 ==================
 
 It was an honor to be part of the first ever
-`Clarity Conference`_ in San Francisco —
+`Clarity Conference`_ in San Francisco –
 a beautiful event
 organized by `Jina`_,
 and completely focussed on Style Guides.

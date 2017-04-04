@@ -2,7 +2,7 @@ public: yes
 author: miriam
 tags: ['Q&A', Sitepoint]
 image:
-  - src: '2016/QandA.jpg'
+  - src: 'blog/2016/QandA.jpg'
 summary: |
   I did a `live Q&A at SitePoint`_
   back in August.
@@ -53,7 +53,7 @@ Thanks for asking the questions!
 
 |btn-link|
 
-You can also check out the `summary`_ —
+You can also check out the `summary`_ –
 but it leaves out some good bits.
 
 .. _Susy: http://susy.oddbird.net

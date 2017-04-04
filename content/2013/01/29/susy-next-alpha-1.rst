@@ -2,7 +2,7 @@ public: yes
 tags: [Susy, Layout, Grids]
 author: miriam
 image:
-  - src: 'susy.jpg'
+  - src: 'blog/susy.jpg'
 summary: |
   Last night we released
   the very first alpha build of Susy Next.

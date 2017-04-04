@@ -10,7 +10,7 @@ tags: [
   Code
   ]
 image:
-  - src: '2017/ga-spam/spam-traffic.jpg'
+  - src: 'blog/2017/ga-spam/spam-traffic.jpg'
 summary: |
   Google Analytics is great for gathering data on who uses your web
   application, but becomes worthless if spam sessions start infesting your

@@ -2,7 +2,7 @@ public: yes
 author: jonny
 tags: [JavaScript, Conferences, Code, jQuery]
 image:
-  - src: 'jqueryconf2014.jpg'
+  - src: 'blog/jqueryconf2014.jpg'
 summary: |
   Five practical JavaScript coding takeaways
   from jQuery Conference Chicago 2014.
