@@ -51,7 +51,10 @@ Thanks for asking the questions!
 
   ---`Miriam Suzanne <https://www.sitepoint.com/community/t/live-q-a-miriam-suzanne-on-susy-and-the-need-for-toolkits-on-18th-aug-2pm-pst/232664>`_
 
-|btn-link|
+.. callmacro:: content.macros.j2#link_button
+  :url: 'https://www.sitepoint.com/community/t/live-q-a-miriam-suzanne-on-susy-and-the-need-for-toolkits-on-18th-aug-2pm-pst/232664'
+
+  Read the full conversation
 
 You can also check out the `summary`_ –
 but it leaves out some good bits.
@@ -59,9 +62,3 @@ but it leaves out some good bits.
 .. _Susy: http://susy.oddbird.net
 .. _live Q&A at SitePoint: https://www.sitepoint.com/community/t/live-q-a-miriam-suzanne-on-susy-and-the-need-for-toolkits-on-18th-aug-2pm-pst/232664
 .. _summary: https://www.sitepoint.com/how-to-choose-the-right-css-toolkits-and-frameworks/
-
-.. |btn-link| raw:: html
-
-  <a href="https://www.sitepoint.com/community/t/live-q-a-miriam-suzanne-on-susy-and-the-need-for-toolkits-on-18th-aug-2pm-pst/232664" class="btn">
-    Read the full conversation
-  </a>

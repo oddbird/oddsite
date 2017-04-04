@@ -38,9 +38,11 @@ Color Theory for people who code SVG and CSS by `Natalya Shelburne`_
 
     <iframe width="853" height="480" src="https://www.youtube.com/embed/1x-x7HfSSnU" frameborder="0" allowfullscreen></iframe>
 
-    <a href="https://docs.google.com/presentation/d/1ytSMRNpNrD9CWms351X4xelQuJT24tIqKnIzSbe2OQ0/edit?usp=sharing" class="btn">
-      Slides
-    </a>
+.. callmacro:: content.macros.j2#link_button
+  :url: 'https://docs.google.com/presentation/d/1ytSMRNpNrD9CWms351X4xelQuJT24tIqKnIzSbe2OQ0/edit?usp=sharing'
+
+  Slides
+
 
 .. _Natalya Shelburne: https://twitter.com/natalyathree
 
@@ -52,9 +54,11 @@ Applying the principles of functional programming to CSS by `Ben Adam`_
 
     <iframe width="853" height="480" src="https://www.youtube.com/embed/J-riH-3PiyY" frameborder="0" allowfullscreen></iframe>
 
-    <a href="http://css-day.surge.sh/#/?_k=xpchzn" class="btn">
-      Slides
-    </a>
+.. callmacro:: content.macros.j2#link_button
+  :url: 'http://css-day.surge.sh/#/?_k=xpchzn'
+
+  Slides
+
 
 .. _Ben Adam: https://twitter.com/benadam11
 
@@ -66,9 +70,11 @@ Code Patterns for Pattern Making by `Miriam Suzanne`_
 
     <iframe width="853" height="480" src="https://www.youtube.com/embed/iko02YqcAmA" frameborder="0" allowfullscreen></iframe>
 
-    <a href="https://oddbooksapp.com/book/pattern-making" class="btn">
-      Slides
-    </a>
+.. callmacro:: content.macros.j2#link_button
+  :url: 'https://oddbooksapp.com/book/pattern-making'
+
+  Slides
+
 
 .. _Miriam Suzanne: https://twitter.com/mirisuzanne/
 
@@ -80,9 +86,11 @@ The In-Betweeners of Responsive Web Design by `Pralie Dutzel`_
 
     <iframe width="853" height="480" src="https://www.youtube.com/embed/DLMcBwwyZu0" frameborder="0" allowfullscreen></iframe>
 
-    <a href="http://praliedutzel.com/talks/betweeners-responsive-web-design/" class="btn">
-      Slides
-    </a>
+.. callmacro:: content.macros.j2#link_button
+  :url: 'http://praliedutzel.com/talks/betweeners-responsive-web-design/'
+
+  Slides
+
 
 .. _Pralie Dutzel: https://twitter.com/praliedutzel
 
@@ -104,9 +112,11 @@ The Great State of Design by `Stacy Kvernmo`_
 
     <iframe width="853" height="480" src="https://www.youtube.com/embed/AYXY11Bp2UI" frameborder="0" allowfullscreen></iframe>
 
-    <a href="http://www.slideshare.net/Funstacy/the-great-state-of-design-with-css-grid-layout-and-friends" class="btn">
-      Slides
-    </a>
+.. callmacro:: content.macros.j2#link_button
+  :url: 'http://www.slideshare.net/Funstacy/the-great-state-of-design-with-css-grid-layout-and-friends'
+
+  Slides
+
 .. _Stacy Kvernmo: https://twitter.com/stacykvernmo
 
 
@@ -119,9 +129,10 @@ and mobile applications.
 
 .. raw:: html
 
-    <a href="https://www.dropbox.com/s/u2sz0yfjl4753y7/1612_CSSday.pdf" class="btn">
-      Slides
-    </a>
+.. callmacro:: content.macros.j2#link_button
+  :url: 'https://www.dropbox.com/s/u2sz0yfjl4753y7/1612_CSSday.pdf'
+
+  Slides
 
 .. _John Boere: https://twitter.com/cliffhangersolu
 
@@ -133,9 +144,10 @@ Solving CSS at scale with your own UI framework by `CJ Cenizal`_
 
     <iframe width="853" height="480" src="https://www.youtube.com/embed/_ohLo7_5iRI" frameborder="0" allowfullscreen></iframe>
 
-    <a href="http://cenizal.com/projects/solving_css_at_scale/" class="btn">
-      Slides
-    </a>
+.. callmacro:: content.macros.j2#link_button
+  :url: 'http://cenizal.com/projects/solving_css_at_scale/'
+
+  Slides
 
 .. _CJ Cenizal: https://twitter.com/TheCJCenizal
 
