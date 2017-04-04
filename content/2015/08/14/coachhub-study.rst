@@ -27,13 +27,13 @@ post questions, and grant permissions for coaches to view their progress.
 Coaches create a profile, manage daily tasks,
 make appointments, post answers to questions, view user progress,
 and set alerts for relapse prevention and escalation of care.
-The product is currently being used
-by the `US Military`_ and Coast Guard
+The product is `currently being used`_
+by the US Military and Coast Guard
 for internal health coaching.
 
 .. _CoachHub: http://www.orcasinc.com/products/coachhub/
 .. _ORCAS: http://www.orcasinc.com/
-.. _US Military: http://www.militaryonesource.mil/confidential-help/other-services-and-counseling?content_id=289449
+.. _currently being used: https://coachhub.resilienceboost.com/
 
 
 What They Needed

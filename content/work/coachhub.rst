@@ -41,7 +41,7 @@ planning:
   - title: 'User Profiles'
     icon: 'users'
     text: |
-      Together, we identified three distinct users —
+      Together, we identified three distinct users –
       health coaches, individual clients,
       and business partners who might purchase CoachHub
       for an employee benefits package –
@@ -52,11 +52,11 @@ planning:
     text: |
       Each user story defined one task that a specific user
       might want to accomplish on CoachHub.
-      (“As a Client, I want to schedule an appointment.”)
-      Using Pivotal Tracker we listed each user story and
-      provided itemized story estimates.
-      This allowed ORCAS to add, prioritized, and remove stories
-      before we began development, and throughout the project –
+      <em>(“As a Client, I want to schedule an appointment.”)</em>
+      Using <a href="http://www.pivotaltracker.com/">Pivotal Tracker</a>,
+      we listed each user story and provided itemized story estimates.
+      This allowed ORCAS to add, prioritize, and remove stories
+      before we began development and throughout the project –
       remaining up-to-date and in control of the project cost and scope.
   - title: 'Data Models'
     icon: 'site-map'
@@ -90,9 +90,11 @@ summary: |
   and set alerts for relapse prevention
   and escalation of care.
 
-  The product is currently being used
+  The product is `currently being used`_
   by the US Military and Coast Guard
   for internal health coaching.
+
+  .. _currently being used: https://coachhub.resilienceboost.com/
 
 
 Case Study: CoachHub
@@ -104,13 +106,16 @@ Case Study: CoachHub
 What They Needed
 ----------------
 
-ORCAS partnered with OddBird to build a custom,
+`ORCAS`_ partnered with OddBird to build a custom,
 responsive web application –
 a hub to connect clients with health coaches
 for easy access to personalized wellness guidance and support.
 The new software needed to fit with ORCAS’s existing suite of apps,
-especially MoodHacker,
+especially `MoodHacker`_,
 a tool for self-management of emotional well-being.
+
+.. _ORCAS: http://orcasinc.com
+.. _MoodHacker: http://www.orcasinc.com/products/moodhacker/
 
 Studies show that telephonic health coaching can be effective,
 but ORCAS identified several barriers keeping clients
@@ -132,6 +137,7 @@ to quickly and easily access one another in dynamic and effective ways.
 .. callmacro:: content.macros.j2#rst
   :tag: 'start'
 
+
 Design and Development Phase
 ----------------------------
 
@@ -143,7 +149,7 @@ Site Architecture & Information Design
    :class: extend-left img-shadow
 
 We created an interactive web
-of static-HTML content templates —
+of static-HTML content templates –
 a living draft of the site architecture,
 with samples of real content.
 For each step in the flow
@@ -152,10 +158,10 @@ what do they need to achieve,
 and where are they going next?
 
 As we interacted with this visualization,
-it became clear that we needed
-to replace the browse-coaches page,
+it became clear, for example, that we needed
+to replace the browse-coaches page
 and the my-coaches page
-with an ever-present sidebar
+with an ever-present sidebar,
 providing one-click access to coaches.
 Several pages stood out
 as important starting-points for users,
@@ -180,8 +186,8 @@ We worked with ORCAS
 to pinpoint the attitude and associations
 they wanted the CoachHub brand to evoke,
 and created a friendly, distinct brand identity.
-Like their existing apps —
-MoodHacker and BlipHub (pictured below) —
+Like their existing apps –
+MoodHacker and BlipHub (pictured below) –
 the CoachHub logo and overall brand
 are bright, cheerful, and hopeful.
 
@@ -196,7 +202,7 @@ are bright, cheerful, and hopeful.
    :class: align-center
    :alt: CoachHub logo
 
-   Rounded edges and a playful curl, evoke feelings of friendliness and
+   Rounded edges and a playful curl evoke feelings of friendliness and
    movement. New life, change, and hope: turning over a new leaf.
 
 
@@ -218,8 +224,7 @@ we created rough sketches of each feature to get a sense of the components
 and layout. With approved sketches, we moved on to detailed designs and live
 implementation. As time went on patterns developed, and features began moving
 directly from sketch to code, allowing us to move quickly and efficiently.
-Integrating design and implementation helped us minimize time and money waste
-implementing poorly-considered features.
+Integrating design and implementation helped us minimize time and money waste.
 
 .. figure:: /static/images/work/coachhub/profiles.jpg
    :class: extend-full
@@ -234,10 +239,8 @@ implementing poorly-considered features.
    :alt: design of sliding panel over calendar
 
    Interaction can become distracting if implemented for its own sake.
-   Sliding side panels and realtime chat, serve the needs of the user,
+   Sliding side panels and realtime chat serve the needs of the user,
    highlighting particular features or important information.
-
-
 
 
 Usability Testing
@@ -261,11 +264,14 @@ Accessibilty
 
 Accessibility is built into the core technologies and techniques we use on
 every project: accessible HTML5, unobtrusive Javascript, and mobile-responsive
-CSS styles. We make it a priority from the beginning of each project — using
+CSS styles. We make it a priority from the beginning of each project – using
 progressive enhancement and responsive design to support a broad range of
-users, devices, and browsers. For CoachHub we also used Lea Verou’s Contrast
-Ratio tool to select colors for text that passed WCAG AA level at all sizes.
-We also built a WCAG contrast test into our Sass Accoutrement toolkits.
+users, devices, and browsers. For CoachHub we also used Lea Verou’s `Contrast
+Ratio`_ tool to select colors for text that passed WCAG AA level at all sizes.
+We also built a WCAG contrast test into our `Sass Accoutrement toolkits`_.
+
+.. _Contrast Ratio: http://leaverou.github.io/contrast-ratio/
+.. _Sass Accoutrement toolkits: /open-source/accoutrement/
 
 
 Landing Pages
@@ -274,7 +280,6 @@ Landing Pages
 In conversation with ORCAS’s internal team, we designed graphics, recommended
 and edited text, and identified important “call to action” steps to create a
 relevant and compelling landing pages for different users.
-
 
 .. image:: /static/images/blog/2016/coachhub/splash-final-2.jpg
   :alt: final design for landing page
@@ -287,7 +292,7 @@ On-Going Design
 CoachHub launched with a minimum viable set of features, and room to grow. We
 continue to work periodically with ORCAS’s internal development team,
 consulting on the design and flow of new features as CoachHub expands to
-accommodate the needs of their growing user-base — people who use it every day
+accommodate the needs of their growing user-base – people who use it every day
 to improve their health and wellness, or as part of their work coaching others.
 
 .. callmacro:: content.macros.j2#rst
