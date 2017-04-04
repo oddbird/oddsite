@@ -4,15 +4,15 @@ tags: [Celery, Django, Django-Channels, UX, Code]
 image:
   - src: ''
 summary: |
-  When you have out-of-band processing in a webapp, how do you let users know
-  that the status of a task has changed? Depending on your frontend client,
+  When you have out-of-band processing in a web app, how do you let users know
+  that the status of a task has changed? Depending on your front-end client,
   there are a few different approaches you might take.
 
 
 Django, Background Processes, and Keeping Users in the Loop
 ===========================================================
 
-In my `last post`_, I talked about how a modern webapp needs background worker
+In my `last post`_, I talked about how a modern web app needs background worker
 processes. One way or another, you'll have some things you need to do that are
 slower than you can do in a request/response cycle, and so you'll want to
 handle them out of band. Have the API return a simple ``202 ACCEPTED`` and move
@@ -20,11 +20,10 @@ on with your life, right?
 
 .. _last post: /2017/03/20/serializing-things/
 
-Well, it sometimes happens that you want to tell users about the state of those
-background processes. You might want to say "it's done!", or "it's failed!", or
-even just to acknowledge that it's taking a long time, but still going. And
-just saying "they can refresh the page" isn't always enough. (Though, sometimes
-it is!)
+Well, sometimes you want to tell users about the state of those background
+processes. You might want to say "it's done!", or "it's failed!", or even just
+to acknowledge that it's taking a long time, but still going. And just saying
+"they can refresh the page" isn't always enough. (Though, sometimes it is!)
 
 I'm going to talk about different ways you can do this.
 
@@ -96,15 +95,31 @@ If you are using the newer Django Channels package for background tasks, this
 has the added benefit of making it possible for you to make and manage your own
 websockets connections.
 
-For an overview of Channels itself, see the `channels docs`_ or Jacob
-Kaplan-Moss's `excellent blog post`_ on the subject.
+For fuller explanation of Channels itself, see the `channels docs`_ or Jacob
+Kaplan-Moss's `excellent blog post`_ on the subject. I'll give a brief overview
+here, though.
 
 .. _channels docs: https://channels.readthedocs.io/en/stable/
 .. _excellent blog post: https://blog.heroku.com/in_deep_with_django_channels_the_future_of_real_time_apps_in_django
 
-The one thing you should know right here and now is that the
-``channel_routing`` attribute (usually in ``routing.py``) should have, at a
-minimum, these values:
+I find it helps to think of Channels as a generalization of Django's view
+system. Instead of a ``urls.py`` with a ``urlpatterns`` attribute, you have a
+``routing.py`` with a ``channel_routing`` attribute. Instead of mapping paths
+to views, it maps channel types to consumers. Channel types can include
+well-known ones like websocket events, or ad-hoc ones like custom background
+tasks.
+
+(All your views and URLs can still be there in your project, untouched, too.
+This isn't instead of all that, it's in addition.)
+
+Because Channels operate outside the usual request/response cycle, sending a
+reply on a channel is a little harder. It can't operate simply through a
+function's ``return``. Instead, you have to ``.send`` on Channels, or more
+flexibly, Groups. (A Group just allows you to send to multiple consumers at
+once, if necessary.)
+
+So, for our purposes, your ``channel_routing`` should have, at a minimum, these
+values:
 
 .. code:: python
 
@@ -115,22 +130,14 @@ minimum, these values:
         route("my-background-task", my_background_task),
     ]
 
-The first three are consumers (the generalization of "views" used in Channels)
-for handling basic websocket operations. The last one is whatever long-running
-task you want to run in the background.
+The first three are consumers for handling basic websocket operations. The last
+one is whatever long-running task you want to run in the background.
 
-So, once you've called the background task:
+You can then call the background task in a view:
 
 .. code:: python
 
     Channel('my-background-task').send(some_arguments)
-
-You can then, in the task, make use of the websocket connection that you set up
-when the user initially loaded the page:
-
-.. code:: python
-
-    Group(get_group_id_from(some_arguments)).send("Status update")
 
 Be sure that there's some stable way to identify the ``Group`` that you need to
 send to. It might be as simple as passing in the username of the logged-in user
@@ -146,7 +153,7 @@ websocket connection on page load, you'll want to add that reply channel to the
         message.reply_channel.send({"accept": True})
         Group(get_group_id_from(message)).add(message.reply_channel)
 
-On the frontend, you should have something like this:
+On the front-end, you should have something like this:
 
 .. code:: js
 
@@ -155,7 +162,19 @@ On the frontend, you should have something like this:
     // Call onopen directly if socket is already open
     if (socket.readyState == WebSocket.OPEN) socket.onopen();
 
-And now you can push messages to users yourself.
+And now you can push messages to users yourself:
+
+.. code:: python
+
+    def my_background_task(message):
+        # ...
+        Group(get_group_id_from(message)).send({
+            "text": some_status_update,
+        })
+        # ...
+
+And the front-end JavaScript will receive it over the websocket. Display it in
+a toast or other style of your choosing, and you're good to go!
 
 Have you tried out Channels yet? Do you have better ideas for what to do with
 websockets? Let us know `Twitter`_, on our `public Slack channel`_, or through
