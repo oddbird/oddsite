@@ -28,7 +28,7 @@ Color Theory for People Who Code`_.
 .. raw:: html
 
     <a href="http://tallys.github.io/color-theory/" class="btn">
-      Color Theory Demo »
+      Color Theory Demo
     </a>
 
 Sass Color Functions

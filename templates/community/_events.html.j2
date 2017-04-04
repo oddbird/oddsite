@@ -8,7 +8,7 @@
     {{ birds.name_link(who.author, page) }}
     {% if who.role %}[{{ who.role }}]{% endif %}
     {% if who.title or who.slides %}
-      » {{ utility.link_if(who.title|safe or 'slides', who.slides or who.video) }}
+      {{ utility.link_if(who.title|safe or 'slides', who.slides or who.video) }}
     {% endif %}
     {% if who.slides and who.video %}
       ({{ utility.link_if('video', who.video) }})

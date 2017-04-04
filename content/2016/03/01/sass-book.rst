@@ -124,5 +124,5 @@ is going to be the best solution for you.
 .. |read| raw:: html
 
   <a href="https://www.sitepoint.com/architecture-in-sass/" class="btn">
-    Read the full chapter on SitePoint »
+    Read the full chapter on SitePoint
   </a>
