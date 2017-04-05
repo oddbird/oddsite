@@ -72,12 +72,12 @@
         {% endif %}
         {% if project.url or project.owner %}
           {% call content.link_button(project.url or ['/', page.slug, '/']|join('')) %}
-            View the site
+            View app
           {% endcall %}
         {% endif %}
         {% if project.source %}
           {% call content.link_button(project.source) %}
-            Source code
+            View source
           {% endcall %}
         {% endif %}
       </div>

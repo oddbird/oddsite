@@ -67,7 +67,7 @@
         {{ header_actions(ctx.config.actions) }}
       {% elif project %}
         {% set actions = [
-          {'text': 'Go to app', 'url': project.url},
+          {'text': 'View app', 'url': project.url},
           {'text': 'View source', 'url': project.source}
         ] %}
 
