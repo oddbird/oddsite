@@ -9,7 +9,7 @@ client:
 project:
   - name: 'CoachHub'
     tagline: 'Integrated Health Coaching'
-    url: 'http://www.orcasinc.com/products/coachhub/'
+    url: 'https://coachhub.resilienceboost.com/'
     case_study: true
     years: '2014–2016'
     status: 'live'
@@ -99,6 +99,10 @@ summary: |
 
 Case Study: CoachHub
 ====================
+
+.. callmacro:: content.macros.j2#get_quotes
+  :slug: 'work/coachhub'
+
 
 .. callmacro:: content.macros.j2#rst
   :tag: 'start'
