@@ -25,11 +25,11 @@ Color Theory for People Who Code`_.
 .. _Natalya Shelburne's: https://twitter.com/natalyathree
 .. _Practical Color Theory for People Who Code: http://tallys.github.io/color-theory/
 
-.. raw:: html
+.. callmacro:: content.macros.j2#link_button
+  :url: 'http://tallys.github.io/color-theory/'
 
-    <a href="http://tallys.github.io/color-theory/" class="btn">
-      Color Theory Demo »
-    </a>
+  Color Theory Demo
+
 
 Sass Color Functions
 ~~~~~~~~~~~~~~~~~~~~

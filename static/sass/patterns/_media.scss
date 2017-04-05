@@ -13,6 +13,10 @@ video {
   border: 1px solid color('border-img');
 }
 
+.img-shadow {
+  box-shadow: 2px 2px 5px color('shadow');
+}
+
 h1,
 h2,
 h3,
@@ -24,3 +28,19 @@ h6 {
   }
 }
 
+.caption {
+  color: color('caption');
+  font-size: size('caption');
+  font-style: italic;
+}
+
+.figure,
+.add-space {
+  margin-bottom: size('gutter');
+  margin-top: size('gutter');
+
+  @include above('medium-page') {
+    margin-bottom: size('spacer');
+    margin-top: size('spacer');
+  }
+}

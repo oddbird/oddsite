@@ -43,6 +43,19 @@
   @include above('full-content') {
     justify-content: space-between;
   }
+
+  [data-location='work'] & {
+    @include above('full-content') {
+      margin-top: negative('gutter');
+      position: relative;
+
+      .header-actions {
+        position: absolute;
+        right: size('gutter');
+        z-index: 2;
+      }
+    }
+  }
 }
 
 .byline {
