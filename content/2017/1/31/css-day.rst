@@ -40,7 +40,9 @@ leading to her recent
 Color Theory for people who code SVG and CSS by `Natalya Shelburne`_
 --------------------------------------------------------------------
 
-*(video unavaliable)*
+.. raw:: html
+
+  <iframe width="853" height="480" src="https://www.youtube.com/embed/aq3u001QMcM?list=PL5BdnUqEm29YljPlrGujuCb0l0bdMutY_" frameborder="0" allowfullscreen></iframe>
 
 .. callmacro:: content.macros.j2#link_button
   :url: 'https://docs.google.com/presentation/d/1ytSMRNpNrD9CWms351X4xelQuJT24tIqKnIzSbe2OQ0/edit?usp=sharing'
