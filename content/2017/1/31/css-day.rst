@@ -20,23 +20,27 @@ perspectives which were interesting to listen to and compare.
 Below are the available videos and slides of each session, including two from
 our very own OddBirds.
 
+*(Several of the videos are currently missing from YouTube,
+but we'll update the post when they become available.)*
+
 
 SVG: from Practical to Wild by `Sarah Drasner`_
 -----------------------------------------------
 
-.. raw:: html
+Sarah has become one of the primary voices on web-SVG and animation,
+leading to her recent
+`SVG Animations`_ book from O'Reilly.
 
-    <iframe src="//slides.com/sdrasner/practical-wild-svg/embed?style=light" width="853" height="420" scrolling="no" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+*(video unavaliable)*
 
 .. _Sarah Drasner: http://twitter.com/sarah_edo
+.. _SVG Animations: http://shop.oreilly.com/product/0636920045335.do
 
 
 Color Theory for people who code SVG and CSS by `Natalya Shelburne`_
 --------------------------------------------------------------------
 
-.. raw:: html
-
-    <iframe width="853" height="480" src="https://www.youtube.com/embed/1x-x7HfSSnU" frameborder="0" allowfullscreen></iframe>
+*(video unavaliable)*
 
 .. callmacro:: content.macros.j2#link_button
   :url: 'https://docs.google.com/presentation/d/1ytSMRNpNrD9CWms351X4xelQuJT24tIqKnIzSbe2OQ0/edit?usp=sharing'
@@ -50,9 +54,7 @@ Color Theory for people who code SVG and CSS by `Natalya Shelburne`_
 Applying the principles of functional programming to CSS by `Ben Adam`_
 -----------------------------------------------------------------------
 
-.. raw:: html
-
-    <iframe width="853" height="480" src="https://www.youtube.com/embed/J-riH-3PiyY" frameborder="0" allowfullscreen></iframe>
+*(video unavaliable)*
 
 .. callmacro:: content.macros.j2#link_button
   :url: 'http://css-day.surge.sh/#/?_k=xpchzn'
@@ -68,7 +70,7 @@ Code Patterns for Pattern Making by `Miriam Suzanne`_
 
 .. raw:: html
 
-    <iframe width="853" height="480" src="https://www.youtube.com/embed/iko02YqcAmA" frameborder="0" allowfullscreen></iframe>
+  <iframe width="853" height="480" src="https://www.youtube.com/embed/lK_akjzOUY0?list=PL5BdnUqEm29YljPlrGujuCb0l0bdMutY_" frameborder="0" allowfullscreen></iframe>
 
 .. callmacro:: content.macros.j2#link_button
   :url: 'https://oddbooksapp.com/book/pattern-making'
@@ -84,7 +86,7 @@ The In-Betweeners of Responsive Web Design by `Pralie Dutzel`_
 
 .. raw:: html
 
-    <iframe width="853" height="480" src="https://www.youtube.com/embed/DLMcBwwyZu0" frameborder="0" allowfullscreen></iframe>
+  <iframe width="853" height="480" src="https://www.youtube.com/embed/WLAVc18Ugoc?list=PL5BdnUqEm29YljPlrGujuCb0l0bdMutY_" frameborder="0" allowfullscreen></iframe>
 
 .. callmacro:: content.macros.j2#link_button
   :url: 'http://praliedutzel.com/talks/betweeners-responsive-web-design/'
@@ -98,9 +100,7 @@ The In-Betweeners of Responsive Web Design by `Pralie Dutzel`_
 Style Guide-Driven Development: Documentation that Does Work by `Jan Jorgensen`_
 --------------------------------------------------------------------------------
 
-.. raw:: html
-
-    <iframe width="853" height="480" src="https://www.youtube.com/embed/jT66ITyme2Q" frameborder="0" allowfullscreen></iframe>
+*(video unavaliable)*
 
 .. _Jan Jorgensen: https://twitter.com/ramblinjan
 
@@ -110,7 +110,7 @@ The Great State of Design by `Stacy Kvernmo`_
 
 .. raw:: html
 
-    <iframe width="853" height="480" src="https://www.youtube.com/embed/AYXY11Bp2UI" frameborder="0" allowfullscreen></iframe>
+  <iframe width="853" height="480" src="https://www.youtube.com/embed/pnbT4HdcSwM?list=PL5BdnUqEm29YljPlrGujuCb0l0bdMutY_" frameborder="0" allowfullscreen></iframe>
 
 .. callmacro:: content.macros.j2#link_button
   :url: 'http://www.slideshare.net/Funstacy/the-great-state-of-design-with-css-grid-layout-and-friends'
@@ -123,11 +123,11 @@ The Great State of Design by `Stacy Kvernmo`_
 jQuery out, CSS in by `John Boere`_
 -----------------------------------
 
-John’s video is yet to be posted, but his slides are available. His talk was a
+John’s talk was a
 case study looking into the benefits of switching from jQuery to CSS for web
 and mobile applications.
 
-.. raw:: html
+*(video unavaliable)*
 
 .. callmacro:: content.macros.j2#link_button
   :url: 'https://www.dropbox.com/s/u2sz0yfjl4753y7/1612_CSSday.pdf'
@@ -140,9 +140,7 @@ and mobile applications.
 Solving CSS at scale with your own UI framework by `CJ Cenizal`_
 ----------------------------------------------------------------
 
-.. raw:: html
-
-    <iframe width="853" height="480" src="https://www.youtube.com/embed/_ohLo7_5iRI" frameborder="0" allowfullscreen></iframe>
+*(video unavaliable)*
 
 .. callmacro:: content.macros.j2#link_button
   :url: 'http://cenizal.com/projects/solving_css_at_scale/'
@@ -176,7 +174,7 @@ from CSS Day 2016. Send us a message via `Twitter`_ or join our public
 
 .. _CSS Day 2016: http://cssday.io/
 .. _Brad Westfall: https://twitter.com/bradwestfall
-.. _videos: https://www.youtube.com/playlist?list=PLfWvsMtBxHo2k3QAIOqqX_SnOCjZgdueT
+.. _videos: https://www.youtube.com/playlist?list=PL5BdnUqEm29YljPlrGujuCb0l0bdMutY_
 .. _Photos: https://drive.google.com/drive/folders/0B0xOcf_BzQVlZGJHaGVWa3Bhc0k
 .. _Twitter: https://twitter.com/oddbird
 .. _Slack Channel: http://friends.oddbird.net
