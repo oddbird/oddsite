@@ -52,7 +52,7 @@ let’s not call *any* of them the username:
    (except perhaps on length or to avoid excessive whitespace).
    That gives users full flexibility to use their offline name
    (including in other writing systems), nickname, stage name, or even emoji.
-   It must be unique among all users to avoid confusion,
+   It should be unique among all users to avoid confusion,
    but should be editable.
 
 3. The **login**.
@@ -76,6 +76,8 @@ i.e. for official or legal purposes.
 Keep in mind that the preferred order of these names varies
 in different cultures (so avoid calling them “first name” and “last name”).
 And keep in mind that they may change over time.
+`Names are hard.
+<http://www.kalzumeus.com/2010/06/17/falsehoods-programmers-believe-about-names/>`_
 
 Building this User Model in Django
 ----------------------------------
@@ -92,7 +94,7 @@ Here's our custom ``User`` model that meets the above guidelines:
 
     class User(AbstractBaseUser, PermissionsMixin):
         email = models.EmailField("email address", unique=True)
-        name = models.CharField("name", max_length=30, blank=True)
+        name = models.CharField("name", max_length=30, blank=True, unique=True)
         date_joined = models.DateTimeField(_("date joined"), auto_now_add=True)
         is_active = models.BooleanField(_("active"), default=True)
 
