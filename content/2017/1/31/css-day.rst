@@ -20,9 +20,6 @@ perspectives which were interesting to listen to and compare.
 Below are the available videos and slides of each session, including two from
 our very own OddBirds.
 
-*(Several of the videos are currently missing from YouTube,
-but we'll update the post when they become available.)*
-
 
 SVG: from Practical to Wild by `Sarah Drasner`_
 -----------------------------------------------
@@ -56,7 +53,9 @@ Color Theory for people who code SVG and CSS by `Natalya Shelburne`_
 Applying the principles of functional programming to CSS by `Ben Adam`_
 -----------------------------------------------------------------------
 
-*(video unavaliable)*
+.. raw:: html
+
+  <iframe width="853" height="480" src="https://www.youtube.com/embed/7g0BHu0kWXo?list=PL5BdnUqEm29YljPlrGujuCb0l0bdMutY_" frameborder="0" allowfullscreen></iframe>
 
 .. callmacro:: content.macros.j2#link_button
   :url: 'http://css-day.surge.sh/#/?_k=xpchzn'
@@ -102,7 +101,9 @@ The In-Betweeners of Responsive Web Design by `Pralie Dutzel`_
 Style Guide-Driven Development: Documentation that Does Work by `Jan Jorgensen`_
 --------------------------------------------------------------------------------
 
-*(video unavaliable)*
+.. raw:: html
+
+  <iframe width="853" height="480" src="https://www.youtube.com/embed/9Fknadsepd4?list=PL5BdnUqEm29YljPlrGujuCb0l0bdMutY_" frameborder="0" allowfullscreen></iframe>
 
 .. _Jan Jorgensen: https://twitter.com/ramblinjan
 
@@ -142,7 +143,9 @@ and mobile applications.
 Solving CSS at scale with your own UI framework by `CJ Cenizal`_
 ----------------------------------------------------------------
 
-*(video unavaliable)*
+.. raw:: html
+
+  <iframe width="853" height="480" src="https://www.youtube.com/embed/CbPYf9FslXw?list=PL5BdnUqEm29YljPlrGujuCb0l0bdMutY_" frameborder="0" allowfullscreen></iframe>
 
 .. callmacro:: content.macros.j2#link_button
   :url: 'http://cenizal.com/projects/solving_css_at_scale/'
