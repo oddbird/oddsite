@@ -81,3 +81,47 @@ And keep in mind that they may change over time.
 Building this User Model in Django
 ----------------------------------
 
+We like `Django <https://www.djangoproject.com/>`_ for building backends.
+There are a number of ways to extend Django's default user model.
+Here's our custom ``User`` model that meets the above guidelines:
+
+.. code:: python
+
+    from django.db import models
+    from django.contrib.auth.models import PermissionsMixin
+    from django.contrib.auth.base_user import AbstractBaseUser
+
+    class User(AbstractBaseUser, PermissionsMixin):
+        email = models.EmailField("email address", unique=True)
+        name = models.CharField("name", max_length=30, blank=True)
+        date_joined = models.DateTimeField(_("date joined"), auto_now_add=True)
+        is_active = models.BooleanField(_("active"), default=True)
+
+        objects = UserManager()
+
+        USERNAME_FIELD = "email"
+        REQUIRED_FIELDS = []
+
+        def get_full_name(self):
+            return self.name
+
+        def get_short_name(self):
+            return self.name
+
+Like all Django models, it has a default ``id`` field
+which meets our criteria for **user id**.
+There is a single ``name`` field which
+And it has an ``email`` field which enforces uniqueness
+and is configured as Django's USERNAME_FIELD
+(which is really the **login**).
+
+(Note: This model requires a custom ``UserManager`` —
+I won't include that here; see Vitor Freitas' helpful
+`How to Extend the Django User Model <https://simpleisbetterthancomplex.com/tutorial/2016/07/22/how-to-extend-django-user-model.html>`_ article for details.)
+
+Add this model to a new Django project
+(it'll be easiest if you use it from the start),
+configure it using the `AUTH_USER_MODEL setting
+<https://docs.djangoproject.com/en/1.10/ref/settings/#std:setting-AUTH_USER_MODEL>`_,
+and you'll be well on your way to never having to
+say the word “username” again.
