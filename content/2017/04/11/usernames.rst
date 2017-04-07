@@ -74,8 +74,7 @@ You probably noticed I *did not* include the user's given and family names
 Avoid collecting these as separate fields unless you need to,
 i.e. for official or legal purposes.
 Keep in mind that the preferred order of these names varies
-in different cultures (so avoid calling them “first name” and “last name”
-if you’re building an internationalized system).
+in different cultures (so avoid calling them “first name” and “last name”).
 And keep in mind that they may change over time.
 
 Building this User Model in Django
@@ -111,6 +110,8 @@ Here's our custom ``User`` model that meets the above guidelines:
 Like all Django models, it has a default ``id`` field
 which meets our criteria for **user id**.
 There is a single ``name`` field which
+is used when Django needs to display the user's name
+via the ``get_full_name`` and ``get_short_name`` methods.
 And it has an ``email`` field which enforces uniqueness
 and is configured as Django's USERNAME_FIELD
 (which is really the **login**).
