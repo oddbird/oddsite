@@ -7,6 +7,8 @@ tags: [
   Django,
   Code
   ]
+image:
+  - src: 'blog/2017/usernames/nametag.jpg'
 summary: |
   The term “username” is ambiguous.
   When designing a user model there are several
@@ -19,7 +21,7 @@ Three Names to Include in Your User Model
 It’s time to start a new project.
 You want users, so the first thing you do is
 add a user model with username and password fields and —
-woah, hold up.
+whoa, hold up.
 
 What’s that username again?
 Is it the user’s email address?
