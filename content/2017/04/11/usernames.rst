@@ -1,4 +1,4 @@
-public: no
+public: yes
 author: david
 headline:
   - tagline: '(None of them is the username)'
@@ -128,3 +128,9 @@ configure it using the `AUTH_USER_MODEL setting
 <https://docs.djangoproject.com/en/1.10/ref/settings/#std:setting-AUTH_USER_MODEL>`_,
 and you'll be well on your way to never having to
 say the word “username” again.
+
+Did we miss anything important?
+Let us know via `Twitter`_ or our public `Slack channel`_!
+
+.. _Twitter: https://twitter.com/oddbird
+.. _Slack Channel: http://friends.oddbird.net/
