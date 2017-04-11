@@ -54,8 +54,9 @@ let’s not call *any* of them the username:
    (except perhaps on length or to avoid excessive whitespace).
    That gives users full flexibility to use their offline name
    (including in other writing systems), nickname, stage name, or even emoji.
-   It should be unique among all users to avoid confusion,
-   but should be editable.
+   If it will be shown to multiple users,
+   consider making it be unique to avoid confusion.
+   It should be editable.
 
 3. The **login**.
    This is what the user will type to log in to the system
