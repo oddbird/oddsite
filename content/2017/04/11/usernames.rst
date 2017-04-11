@@ -20,7 +20,7 @@ Three Names to Include in Your User Model
 
 It’s time to start a new project.
 You want users, so the first thing you do is
-add a user model with username and password fields and —
+add a user model with username and password fields and –
 whoa, hold up.
 
 What’s that username again?
@@ -120,7 +120,7 @@ And it has an ``email`` field which enforces uniqueness
 and is configured as Django's USERNAME_FIELD
 (which is really the **login**).
 
-(Note: This model requires a custom ``UserManager`` —
+(Note: This model requires a custom ``UserManager`` –
 I won't include that here; see Vitor Freitas' helpful
 `How to Extend the Django User Model <https://simpleisbetterthancomplex.com/tutorial/2016/07/22/how-to-extend-django-user-model.html>`_ article for details.)
 
