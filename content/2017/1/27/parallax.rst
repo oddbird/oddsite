@@ -2,7 +2,7 @@ public: yes
 author: sondra
 tags: [Design, Recommendations]
 image:
-  - src: '2017/parallax/parallax.jpg'
+  - src: 'blog/2017/parallax/parallax.jpg'
 summary: |
   If you'd like to learn how to create parallax scrolling for your website,
   Paul Lewis' guide to performant parallaxing is the perfect place to start.
@@ -33,8 +33,14 @@ Don'ts
 Paul, a developer at Google, starts with the don'ts. Don't use scroll events to
 create a parallax effect.
 
-    JavaScript doesn’t guarantee that parallaxing will
-    keep in step with the page’s scroll position.
+
+    JavaScript doesn’t guarantee that parallaxing will keep in step with
+    the page’s scroll position.
+
+    ---  `Paul Lewis`_
+
+.. _Paul Lewis: https://developers.google.com/web/updates/2016/12/performant-parallaxing
+
 
 Trying to achieve a parallax look by changing background position doesn't work
 well either, negatively effecting the animation.

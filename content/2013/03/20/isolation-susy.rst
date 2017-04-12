@@ -2,7 +2,7 @@ public: yes
 tags: [Susy, Layout, Grids, 'Sub-pixel Rounding', Code]
 author: miriam
 image:
-  - src: 'susy.jpg'
+  - src: 'blog/susy.jpg'
 summary: |
   A few new features have landed in Susy 1.0.7,
   even as we work on more integrated syntaxes for 2.0.
@@ -99,7 +99,7 @@ you can see how they have been removed from the flow:
     <div class="third">third</div>
   </div>
 
-The items can overlap, and stack in any order —
+The items can overlap, and stack in any order –
 almost as though they are positioned absolutely.
 
 Isolation Grid

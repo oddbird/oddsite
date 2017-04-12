@@ -12,7 +12,7 @@ tags: [
   Marionette
   ]
 image:
-  - src: '2016/spa.jpg'
+  - src: 'blog/2016/spa.jpg'
 summary: |
   You can't always get away with a single-page app; sometimes you need
   server-side rendering. When you need both, here's one approach.

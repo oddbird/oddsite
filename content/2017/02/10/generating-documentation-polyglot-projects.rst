@@ -5,10 +5,11 @@ tags: [
   Tools,
   JavaScript,
   Python,
-  Sass
+  Sass,
+  Code
   ]
 image:
-  - src: '2017/docs/style.jpg'
+  - src: 'blog/2017/docs/style.jpg'
 summary: |
   Code documentation is ideally written as close to the actual code
   as possible, but compiled into a comprehensive set of documentation

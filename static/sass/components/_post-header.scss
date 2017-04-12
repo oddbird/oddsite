@@ -1,0 +1,86 @@
+// Post Header
+// ===========
+
+.title {
+  @include text-shadow;
+  @include title;
+  margin-bottom: size('gutter');
+  margin-top: size('gutter');
+  max-width: size('full-content');
+  padding: size('shim') size('gutter');
+}
+
+.title-post-type {
+  @include font-family('body');
+  background-color: color('invert');
+  clip-path: polygon(100% 0%, calc(100% - 0.5rem) 50%, 100% 100%, 0 100%, 0% 50%, 0 0);
+  color: color('background');
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-left: negative('gutter');
+  padding: size('quarter-shim') size('gutter');
+  text-shadow: none;
+}
+
+.title-sub {
+  @include font-family('body');
+  display: block;
+  font-size: calc(1rem + 1vw);
+  font-style: italic;
+  font-weight: 400;
+}
+
+.rst-meta {
+  align-items: flex-end;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: size('gutter');
+  margin-top: 0;
+  max-width: none;
+  padding: 0 size('gutter');
+
+  @include above('full-content') {
+    justify-content: space-between;
+  }
+
+  [data-location='work'] & {
+    @include above('full-content') {
+      margin-top: negative('gutter');
+      position: relative;
+
+      .header-actions {
+        position: absolute;
+        right: size('gutter');
+        z-index: 2;
+      }
+    }
+  }
+}
+
+.byline {
+  margin-top: 0;
+}
+
+.meta-preposition {
+  font-style: italic;
+  font-weight: 300;
+}
+
+.header-actions {
+  text-align: right;
+}
+
+.rst-summary {
+  @include font-size('intro-text', 1.25);
+  margin: 0 auto;
+  max-width: calc(#{size('full-content')} + 10vw);
+  padding: size('shim') size('gutter') 0;
+
+  @include after('') {
+    border-top: size('border-thin') solid color('border-light');
+    display: block;
+    flex: 0 0 100%;
+    margin: size('double-gutter') 0;
+  }
+}

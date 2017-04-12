@@ -2,10 +2,10 @@ public: no
 author: miriam
 tags: [Interviews, Sitepoint, Podcasts]
 image:
-  - src: '2016/versioning.png'
+  - src: 'blog/2016/versioning.png'
 summary: |
   I joined `Tim Evko`_ and `M. David Green`_
-  for their great new `SitePoint`_ podcast —
+  for their great new `SitePoint`_ podcast –
   `The Versioning Show`_.
   We discussed going from lurker to speaker,
   the importance of writing about what you’re learning,
@@ -23,7 +23,7 @@ Versioning Show Ep.8: Miriam Suzanne
 ====================================
 
 I joined `Tim Evko`_ and `M. David Green`_
-for their great new `SitePoint`_ podcast —
+for their great new `SitePoint`_ podcast –
 `The Versioning Show`_.
 We discussed going from lurker to speaker,
 the importance of writing about what you’re learning,

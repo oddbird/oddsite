@@ -1,0 +1,89 @@
+// Intro Blocks
+// ============
+// Two column (on wide screens) intro and aside
+// Can be seen on case studies
+
+// wrapping container for intro
+.intro-block {
+  @include grid;
+  display: flex;
+  flex-direction: column;
+
+  @include above('medium-page') {
+    @include center('medium-page');
+
+    @supports not (display: grid) {
+      flex-direction: row;
+      justify-content: flex-end;
+    }
+  }
+}
+
+// intro inner wrapper text block and task info
+// using this as a container to use flexbox inside and grid outside
+.intro {
+  @supports (display: grid) {
+    grid-column: col1-start / -1;
+  }
+
+  @include above('medium-page') {
+    display: flex;
+  }
+
+  @include above('large-page') {
+    @supports not (display: grid) {
+      max-width: size('wide-column');
+    }
+
+    @supports (display: grid) {
+      grid-column: col2-start / -1;
+    }
+  }
+
+  p {
+    font-size: calc(1.1rem + 0.25vw);
+    font-style: italic;
+    line-height: 1.4;
+
+    @include above('medium-page') {
+      flex: 1 0 0;
+      padding-right: size('gutter');
+    }
+  }
+}
+
+// intro side panel
+.project-tasks {
+  @include above('medium-page') {
+    border-left: 1px solid color('icon-block');
+    flex: 0 1 30%;
+    padding: size('shim') size('gutter');
+  }
+
+  ul {
+    @include below('medium-page') {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+
+  li {
+    font-size: size('task');
+    line-height: 1.2;
+    margin-bottom: size('shim');
+
+    @include below('medium-page') {
+      flex-basis: 45%;
+    }
+
+    @include below('small-page') {
+      flex-basis: 100%;
+    }
+  }
+}
+
+// headline in aside should line up with text block
+.list-title {
+  font-size: size('medium');
+  margin-top: 0;
+}

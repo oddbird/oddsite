@@ -29,7 +29,7 @@ well-tested JavaScript web applications
 for over eight years.
 An active member in the JavaScript community,
 Jonny has authored or contributed to
-numerous open-source projects.
+numerous open source projects.
 He's easily distracted by a game of ultimate frisbee,
 homebrewing delicious IPAs and stouts,
 and trying to keep up with his two young kids.

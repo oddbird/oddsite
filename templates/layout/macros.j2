@@ -1,0 +1,122 @@
+{% import 'utility.macros.j2' as utility %}
+{% import 'content.macros.j2' as content %}
+{% import 'birds/utility.macros.j2' as birds %}
+
+
+{% macro tags(taglist) %}
+  {% if taglist %}
+    <nav class="tags">
+      {{ utility.icon('tags', class='icon-tag') }}
+      {% for tag in taglist|sort(case_sensitive=true) %}
+        <a href="{{ link_to('tag', tag=tag) }}" class="tag" rel="tag">{{ tag }}</a>
+      {%- endfor %}
+    </nav>
+  {% endif %}
+{% endmacro %}
+
+
+{% macro header_image(post, class='') %}
+  {% set image = post.config.image[0].src if post.config.image else none %}
+
+  {% if image %}
+    <figure class="{{ ['hero', class]|join(' ') if class else 'hero' }}">
+      {% if '://' in image %}
+        <img src="{{ image }}" class="hero-image">
+      {% else %}
+        <img src="/static/images/{{ image }}" class="hero-image">
+      {% endif %}
+    </figure>
+  {% endif %}
+{% endmacro %}
+
+
+{% macro show_headline(main, sub=none, type=none) %}
+  <header class="title">
+    {% if type %}
+      <div class="title-post-type">{{ type }}</div>
+    {% endif %}
+
+    <h1 class="title-main">{{ main }}</h1>
+
+    {% if sub %}
+      <div class="title-sub">{{ sub }}</div>
+    {% endif %}
+  </header>
+{% endmacro %}
+
+
+{% macro rst_meta(ctx, project=none) %}
+  {% set has_actions = ctx.config.actions or project.url or project.source %}
+
+  {% if ctx.pub_date or ctx.tags or has_actions %}
+    <div class="rst-meta">
+      <div class="rst-data">
+        {% if ctx.pub_date %}
+          <p class="byline">
+            {% if ctx.author %}
+              <span class="meta-preposition">by</span> {{ birds.get_card(ctx.author) }}
+            {% endif %}
+            <span class="meta-preposition">on</span> {{ utility.datetime(ctx.pub_date) }}
+          </p>
+        {% endif %}
+
+        {{ tags(ctx.tags) }}
+      </div>
+
+      {% if ctx.config.actions %}
+        {{ header_actions(ctx.config.actions) }}
+      {% elif project %}
+        {% set actions = [
+          {'text': 'View app', 'url': project.url},
+          {'text': 'View source', 'url': project.source}
+        ] %}
+
+        {{ header_actions(actions) }}
+      {% endif %}
+    </div>
+  {% endif %}
+{% endmacro %}
+
+
+{% macro header_actions(links) %}
+  {% set links = links|selectattr('url')|list %}
+
+  {% if links|length > 0 %}
+    <div class="header-actions">
+      {% for link in links %}
+        {% call content.link_button(link.url) %}
+          {{ link.text }}
+        {% endcall %}
+      {% endfor %}
+    </div>
+  {% endif %}
+{% endmacro %}
+
+
+{% macro header(rst, ctx) %}
+  {% set headline = ctx.config.headline[0] if ctx.config.headline else none %}
+  {% set project = ctx.config.project[0] if ctx.config.project else none %}
+  {% set client = ctx.config.client[0] if ctx.config.client else none %}
+  {% set contributors = ctx.config.contributors if ctx.config.contributors else none %}
+
+  {% set main = headline.title if (headline and headline.title) else none %}
+  {% set main = project.name if (project and project.name and not main) else main %}
+  {% set main = main or rst.title %}
+
+  {% set sub = headline.tagline if (headline and headline.tagline) else none %}
+  {% set sub = project.tagline if (project and project.tagline and not sub) else sub %}
+
+  {% set type = headline.type if (headline and headline.type) else none %}
+  {% set type = 'case study' if (project and client and not type) else type %}
+  {% set type = 'open source software' if (project and contributors and not type) else type %}
+
+  {{ header_image(ctx) }}
+  {{ show_headline(main, sub, type) }}
+  {{ rst_meta(ctx, project) }}
+
+  {% if ctx.config.summary %}
+    <div class="rst-summary">
+      {{ ctx.render_summary() }}
+    </div>
+  {% endif %}
+{% endmacro %}

@@ -7,9 +7,9 @@ and associated OddBird branding materials.
 
 It is still in development,
 using OddBird's
-[Accoutrement](/accoutrement/) and
+[Accoutrement](/open-source/accoutrement/) and
 [Herman](https://github.com/oddbird/sassdoc-theme-herman/)
-open-source toolkits
+open source toolkits
 to automate as much living documentation as possible.
 
 Writing Content
@@ -34,6 +34,15 @@ spaces.
     --Person Name
 ```
 
+- If you want to highlight something and make it look similar to a
+blockquote, but do not have a source, you can use the following:
+
+```nohighlight
+.. callmacro:: content-macros.j2#pullquote
+
+  This is the best piece of content. It isn't quoting an external source,
+  but the post is making an AWESOME point and I want to make it shine!
+```
 
 Branding
 --------
@@ -75,15 +84,30 @@ Images
 for screen readers and search engines. Alt text should describe what is in
 the image.
 - We have some utility classes for images and figures and will be adding more
-soon. As of January 31, 2017 you may use the following:
+soon. Currently, you can use the following:
   - ``size-quarter``
   - ``size-half``
   - ``size-full``
   - ``img-border`` adds a hairline, helpful when using a screenshot with a
   white background.
-- *Note:* If declaring a size, it remains this size regardless of screen size.
-- ``:align:`` accepts ``left``, ``right`` or ``center`` and outputs as a class.
-- This is how you add alignment, alt text, classes and links in RST:
+  - ``img-shadow`` adds a slight drop shadow to images
+
+*Note:* If declaring a size, it remains this size regardless of screen size.
+
+The following utility classes will push or expand an image (or item)
+outside of its parent container:
+  - ``extend-left`` - extends slightly outside of its container to the left
+  - ``extend-right`` - extends slightly outside of its container to the right
+  - ``extend-small`` - extends a small amount past its container on both sides
+  - ``extend-large`` - extends a large amount past its container on both sides
+  - ``extend-full`` - extends from left to right edges of screen
+
+If using one of the above ``extend-*`` utility classes, alignment is built in.
+If not, the ``:align:`` directive accepts ``left``, ``right`` or ``center``
+and outputs as a class.
+
+Below are a few examples when adding alignment, alt text, classes and links to
+images in RST:
 
 ```nohighlight
 .. image:: /static/images/blog/miko.jpg
@@ -91,6 +115,10 @@ soon. As of January 31, 2017 you may use the following:
    :alt: Miko smiling while playing outside
    :class: size-quarter img-border
    :target: https://supportada.org/?campaign=python
+
+.. image:: /static/images/blog/imagename.jpg
+   :alt: page with grid lines over artwork
+   :class: extend-right
 ```
 
 Intro
@@ -135,9 +163,9 @@ summary: |
 Tags
 ----
 
-- Any post that contains a code sample should use the ``code`` tag.
+- Any post that contains a code sample should use the ``Code`` tag.
 - Use the plural version of a word if available.
-For example, ``videos`` even if one video is referenced in the post.
+For example, ``Videos`` even if one video is referenced in the post.
 - Reference the [tag list](/tags/) before deciding on which
 tags to use in order to avoid variations of the same topic.
 - Tags are Title Case.
@@ -152,7 +180,7 @@ tag: ['Open Design', OddSite]
 were covered in this post that would help the reader find a related article.
 - Adding tags when you are finished writing might result in cleaner and more
 accurate tags.
-- Posts that talk about sponsorship should include the ``community`` tag.
+- Posts that talk about sponsorship should include the ``Community`` tag.
 
 
 Whitespace

@@ -25,3 +25,34 @@
     }
   }
 }
+
+// Hero Images
+// ===========
+
+.hero {
+  max-height: 55vh;
+  overflow: hidden;
+  position: relative;
+
+  + .title {
+    background-image: linear-gradient(50deg, color('background') 80%, transparent 80%);
+    margin-bottom: 0;
+    margin-top: negative('double-gutter');
+    max-width: none;
+    padding-right: calc(20% + #{size('shim')}); // 100% - 80% (angle) = 20% then add padding
+    position: relative;
+    z-index: 1;
+
+    @include above('medium-page') {
+      background-image: linear-gradient(50deg, color('background') 60%, transparent 60%);
+      margin-top: negative('spacer');
+      padding-bottom: size('gutter');
+      padding-right: calc(40% + #{size('double-gutter')}); // 100% - 60% (angle) = 40% then add padding
+      padding-top: size('gutter');
+    }
+  }
+}
+
+.hero-image {
+  width: 100%;
+}

@@ -1,8 +1,8 @@
 public: yes
 author: stacy
-tags: [Tips, Workflow, Tools, Code]
+tags: [Tips, Workflows, Tools, Code]
 image:
-  - src: '2017/tips-tools/love-tools.jpg'
+  - src: 'blog/2017/tips-tools/love-tools.jpg'
 summary: |
   We wanted to show some love to a few great tools we use to get us through our
   work days. Do you have any to add to our list?

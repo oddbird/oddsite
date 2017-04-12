@@ -3,21 +3,21 @@
 
 .align-left {
   float: left;
-  margin-bottom: 1rem;
-  padding-right: 1em;
+  margin-bottom: size('pad');
+  margin-right: size('pad');
 }
 
 .align-right {
   float: right;
-  margin-bottom: 1rem;
-  padding-left: 1em;
+  margin-bottom: size('pad');
+  margin-left: size('pad');
 }
 
 .align-center {
   display: block;
-  margin: 0 auto 1rem;
+  margin: 0 auto size('pad');
 }
 
 .align-none {
-  margin-bottom: 1rem;
+  margin-bottom: size('pad');
 }

@@ -38,8 +38,8 @@
   <meta name="viewport" content="initial-scale=1" />
 
   <!-- Open Graph -->
-  {% set image = config.image[0].src if config.image else 'oddsite.jpg' %}
-  {% set image = image if '://' in image else [config.canonical_url, 'static/images/blog/', image]|join('') %}
+  {% set image = config.image[0].src if config.image else 'blog/oddsite.jpg' %}
+  {% set image = image if '://' in image else [config.canonical_url, 'static/images/', image]|join('') %}
   {% if config.facebook_id %}
     <meta property="fb:app_id" content="{{ config.facebook_id }}" />
   {% endif %}
