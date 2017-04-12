@@ -1,7 +1,5 @@
 {% macro img() %}
-<img {% for k in kwargs %}
-  {{ k }}="{{ kwargs[k] }}"
-{% endfor %}>
+  <img{% for k in kwargs %} {{ k }}="{{ kwargs[k] }}"{% endfor %}>
 {% endmacro %}
 
 
