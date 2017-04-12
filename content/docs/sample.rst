@@ -206,6 +206,11 @@ and no ``/`` at the start or finish.
 Images
 ~~~~~~
 
+.. callmacro:: utility.macros.j2#img
+   :src: "/static/images/blog/oddsite-collage-440.jpg"
+   :srcset: "/static/images/blog/oddsite-collage-440.jpg 440w, /static/images/blog/oddsite-collage-800.jpg 800w, /static/images/blog/oddsite-collage.jpg 1600w"
+
+
 .. image:: /static/images/blog/navdraft.jpg
    :target: http://google.com
    :align: left
