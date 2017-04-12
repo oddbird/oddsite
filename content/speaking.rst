@@ -25,7 +25,7 @@ summary: |
   .. callmacro:: content.macros.j2#link_button
     :url: '/contact/'
 
-    Bring a bird to your conference, team, or meetup »
+    Bring a bird to your conference, team, or meetup
 
   .. _freely-shared: /open-source/
 

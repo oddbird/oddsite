@@ -17,7 +17,7 @@ summary: |
   .. callmacro:: content.macros.j2#link_button
     :url: '/contact/'
 
-    Let's talk about your idea »
+    Let's talk about your idea
 
   .. _web application design and development: /work/
 

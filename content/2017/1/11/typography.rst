@@ -333,8 +333,7 @@ sites do you use? What is your favorite tool or method for typeface pairing?
 Let’s talk web typography on the `OddFriends Slack channel`_. Typography nerds
 unite!
 
-.. raw:: html
+.. callmacro:: content.macros.j2#link_button
+  :url: '/2017/1/16/color/'
 
-    <a href="/2017/1/16/color/" class="btn">
-      How to Choose Brand Colors »
-    </a>
+  How to Choose Brand Colors

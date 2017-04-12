@@ -61,7 +61,7 @@ summary: |
   .. callmacro:: content.macros.j2#link_button
     :url: '/contact/'
 
-    Tell us about your project »
+    Tell us about your project
 
 
 Custom Web Software

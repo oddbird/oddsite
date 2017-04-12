@@ -90,6 +90,7 @@ soon. Currently, you can use the following:
   - ``size-full``
   - ``img-border`` adds a hairline, helpful when using a screenshot with a
   white background.
+  - ``img-shadow`` adds a slight drop shadow to images
 
 *Note:* If declaring a size, it remains this size regardless of screen size.
 

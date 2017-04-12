@@ -67,17 +67,17 @@
 
         {% if project.case_study %}
           {% call content.link_button(link) %}
-            read our case study »
+            Read our case study
           {% endcall %}
         {% endif %}
         {% if project.url or project.owner %}
           {% call content.link_button(project.url or ['/', page.slug, '/']|join('')) %}
-            view the site »
+            View app
           {% endcall %}
         {% endif %}
         {% if project.source %}
           {% call content.link_button(project.source) %}
-            source code »
+            View source
           {% endcall %}
         {% endif %}
       </div>

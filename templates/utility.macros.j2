@@ -1,3 +1,8 @@
+{% macro img() %}
+  <img{% for k in kwargs %} {{ k }}="{{ kwargs[k] }}"{% endfor %}>
+{% endmacro %}
+
+
 {% macro attr_if(attr, value=none) %}
   {%- if value == true -%}
     {{ attr }}

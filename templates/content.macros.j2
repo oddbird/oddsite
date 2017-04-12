@@ -98,8 +98,8 @@
   Buttons
   -------
 #}
-{% macro link_button(url) %}
-  <a href="{{ url }}" class="btn">
+{% macro link_button(url, rel=none) %}
+  <a href="{{ url }}" {{ utility.attr_if('rel', rel) }} class="btn">
     {{ caller() }}
   </a>
 {% endmacro %}
