@@ -3,7 +3,7 @@ location: contact
 hide_contact: true
 headline:
   - tagline: 'Let’s get to know each other…'
-    type: 'Contact us'
+    type: 'Contact Us'
 before:
   - include: 'contact/_form.html.j2'
     submit: 'Send!'
@@ -12,7 +12,7 @@ summary: |
   .. callmacro:: birds/utility.macros.j2#face
     :author: 'miriam'
 
-  We're always here and happy to talk –
+  **We're always here and happy to talk** –
   whether you have a project,
   or a question,
   or just want to say hi.

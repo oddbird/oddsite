@@ -2,7 +2,7 @@ public: yes
 location: projects
 headline:
   - tagline: 'Solving real problems for real users…'
-    type: 'Client Projects'
+    type: 'Client Work'
 after:
   - include: 'projects/_feature.html.j2'
     has: 'client'
@@ -49,14 +49,12 @@ services:
       - 'Automated, living style guides'
       - 'Brand design and documentation'
 summary: |
-  **Do you need help developing a web application?**
-  We provide extensive expertise in *product development*,
-  *branding*, *user-experience design*,
-  and *usability testing* – 
-  with a strong commitment to
-  collaborative process, user needs,
-  and well-tested, carefully architected,
-  documented, and maintainable code.
+  **We integrate with your existing team**,
+  helping drive the design, development, and testing process
+  in close (daily) collaboration.
+  We do great work,
+  we love what we do,
+  and we have a track record of happy clients to show for it.
 
   .. callmacro:: content.macros.j2#link_button
     :url: '/contact/'
