@@ -34,7 +34,7 @@ services:
       - 'Professional gear manufacturers'
       - 'E-commerce startups'
       - 'Software companies'
-      - 'Urbarn planners'
+      - 'Urban planners'
       - 'Data analysts'
       - 'Theaters, writers, and other artists'
   - title: 'We provide'
