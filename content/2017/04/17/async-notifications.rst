@@ -2,7 +2,7 @@ public: yes
 author: kit
 tags: [Celery, Django, Django-Channels, UX, Code]
 image:
-  - src: ''
+  - src: 'blog/2017/04/17/async-notifications.jpg'
 summary: |
   When you have out-of-band processing in a web app, how do you let users know
   that the status of a task has changed? Depending on your front-end client,
@@ -183,3 +183,7 @@ our `handy contact form`_.
 .. _Twitter: https://twitter.com/oddbird
 .. _public Slack channel: http://friends.oddbird.net
 .. _handy contact form: /contact/
+
+*Image from `Tekniska Museet`_.*
+
+.. _Tekniska Museet: https://www.flickr.com/photos/tekniskamuseet/6984485227/in/photolist-bDcj86-bCJAcK-kuma4q-a84vA7-m9MW4X-bpxan1-5MqJ6t-qveiAk-9HUcBY-bK7X7H-bDc9G8-H4CRif-ecoWKZ-gxg8pi-gxfwdA-gxg9yo-gxganN-gxgxhM-gxgdCL-SRK9sh-g2gW4S-eWUwc-Tj1w3G-SXLqUw-kWJsG1-5nuzrQ-o6Gn1v-dn8r3R-dn8u4y-RCNiKJ-dnp4W6-82121J-Sk9roq-dn7sPf-SiTrzM-SgfCro-TmmueP-dnpnsi-SgfEp1-dnpYB5-SRnywU-RF1mQK-JP5Pxc-SFuTr9-4BrHoH-Si5fuK-Sivnqi-KKuKjn-KjmLNW-KCAU1X
