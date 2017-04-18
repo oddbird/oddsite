@@ -107,8 +107,8 @@
   {% set sub = project.tagline if (project and project.tagline and not sub) else sub %}
 
   {% set type = headline.type if (headline and headline.type) else none %}
-  {% set type = 'case study' if (project and client and not type) else type %}
-  {% set type = 'open source software' if (project and contributors and not type) else type %}
+  {% set type = 'Case Study' if (project and client and not type) else type %}
+  {% set type = 'Open Source Software' if (project and contributors and not type) else type %}
 
   {{ header_image(ctx) }}
   {{ show_headline(main, sub, type) }}
