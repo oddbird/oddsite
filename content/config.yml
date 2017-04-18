@@ -438,28 +438,28 @@ events_past:
 # ----------
 
 nav:
-  - text: 'blog'
-    url: '/blog/'
   - text: 'work'
-    subnav:
-      - text: 'projects'
-        display_text: 'client projects'
-        url: '/work/'
-      - text: 'open-source'
-        display_text: 'open source contributions'
-        url: '/open-source/'
+    url: '/work/'
+  - text: 'open-source'
+    display_text: 'open source'
+    url: '/open-source/'
+  - text: 'blog'
+    display_text: 'articles'
+    url: '/blog/'
   - text: 'about'
+    display_text: 'about us'
     subnav:
       - text: 'birds'
+        display_text: 'meet the birds'
         url: '/birds/'
       - text: 'speaking'
-        display_text: 'speaking engagements'
+        display_text: 'public speaking'
         url: '/speaking/'
       - text: 'community'
-        display_text: 'community involvement'
         url: '/community/'
-  - text: 'contact'
-    url: '/contact/'
+      - text: 'contact'
+        display_text: 'contact us'
+        url: '/contact/'
 
 
 # Site Settings
