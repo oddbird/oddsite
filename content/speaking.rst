@@ -4,6 +4,7 @@ image:
   - src: 'pages/speaking.jpg'
 headline:
   - tagline: 'Sharing what we’ve learned…'
+    type: 'About Us'
 after:
   - include: 'community/_events.html.j2'
     title: 'Upcoming Events'
@@ -12,7 +13,7 @@ after:
     title: 'Speaking History'
     data: 'events_past'
 summary: |
-  We're constantly learning
+  **We're constantly learning**
   from the `freely-shared`_ inspiration and mentoring of others –
   through blogs, podcasts, and conference talks –
   so we'd like to pass that generosity along:

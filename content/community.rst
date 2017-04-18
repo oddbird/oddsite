@@ -135,8 +135,8 @@ giving:
       advocating for gender diversity,
       and teaching ally skills.
 summary: |
-  We love being part of
-  a vibrant web design and development community.
+  **We love being part of
+  a vibrant web design and development community.**
   We benefit daily from the generous contributions of others,
   and believe that a `diverse network`_ of shared experiences and ideas
   makes all of our work stronger.

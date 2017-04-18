@@ -6,9 +6,10 @@ image:
 headline:
   - title: 'You have a brilliant idea.'
     tagline: 'We’ll make it fly.'
+    type: 'Oddly Human Design & Development'
 summary: |
-  Technology is only useful
-  when it solves real problems for real people.
+  **Technology is only useful
+  when it solves real problems for real people.**
   As your partner,
   we'll help find those opportunities –
   providing `web application design and development`_,
