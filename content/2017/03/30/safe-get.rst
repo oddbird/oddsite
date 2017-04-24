@@ -1,7 +1,7 @@
 public: yes
 author: miriam
 headline:
-  - tagline: 'Using safe-get-function and safe-call utilities'
+  - tagline: 'You don’t need safe-get-function utilities'
     type: 'Code Sample'
 tags: [
   Sass,
@@ -26,6 +26,10 @@ summary: |
 
 Making Function Calls Across Sass Versions
 ==========================================
+
+*This post was edited on April 24, 2017
+to recommend not using any ``safe-get-function`` utilities.
+See below for details.*
 
 The `Sass 3.5 Release Candidate`_
 includes support for
@@ -131,161 +135,104 @@ In demo code, people often write it like this:
   $call: call(get-function('susy.span'), $arguments...);
 
 That code is misleading.
-I always wondered why ``get-function``
-isn't baked into ``call``,
-so we can pass a first-class function or a string.
-I still think that would have been
-the most backwards-compatible option,
-without any clear downsides.
-That's a question for Chris and Natalie.
+It made me wonder why ``get-function``
+isn't simply baked into ``call``,
+so we can pass a first-class function or a string
+depending on the context.
 
-But, once the modular system is in place,
+The reason is this:
+once the modular system is in place,
 it will be very rare to ``call`` a function
 from the local scope.
-The ``call`` option is most useful
-for handling functions defined elsewhere
-(e.g. third-party tools)
-that won't have guaranteed access
-to the functions being called.
-Using ``get-function``,
-we can pass a first-class function
-to a third-party toolkit,
-without worrying about differences in namespace.
-So, a more accurate demonstration might be:
+The ``call`` option is mostly useful
+for handling functions defined elsewhere.
+Since we don't have guaranteed access
+to the functions being called in our third-party app,
+``get-function`` allows us to capture and pass-in
+functions from a different scope.
+
+A more accurate demonstration might be:
 
 .. code:: scss
 
   // third-party.scss
-  @mixin three($function) {
-    .three {
-      width: call($function, 3);
-    }
+  @mixin three-wide($function) {
+    width: call($function, 3);
   }
 
   // my-local.scss
-  @import 'susy';
-  @include three(get-function('susy.span'));
+  @import 'susy' as 'susy';
 
-This still creates a problem for toolkits and frameworks
-(like `Susy`_)
-that already use ``call()`` internally
-to handle user input.
-How do we support old and new versions of Sass,
+  $span-function: get-function('susy.span');
+  @include three-wide($span-function);
+
+So how do we support old and new versions of Sass,
 while allowing users to pass in
 either strings or first-class functions?
 
-`Kaelig provides one solution`_
-in a great article with more details.
-It's a good start,
-but it doesn't cover all the use cases I need.
-What if users pass in a first-class function
-that they've already captured –
-as they likely should in Sass ``3.5+``?
-Here's my slightly-expanded solution.
-
-.. _Susy: http://susy.oddbird.net
-.. _Kaelig provides one solution: https://medium.com/@kaelig/sass-first-class-functions-6e718e2b5eb0
+The short answer is: we don't*.
+Our users will make that change on their end,
+when they upgrade.
 
 
-Safe ``get-function``
----------------------
+Don't Worry About It
+--------------------
 
-We need to use ``get-function()`` in new versions of Sass,
-but we can't use it in old versions.
-We also don't want to use ``get-function()``
-on a function we've already got.
-That gives us several options we have to cover
-in our ``safe-get-function()``.
+`Kaelig provides one solution`_,
+and I initially meant to improve on it
+with more robust features.
+**You don't need any of that.**
 
-- If the user passes in a string,
-  and we're using an older version of Sass
-  => *do nothing*.
-- If the user passes in a string,
-  and we're using a newer versions of Sass
-  => use *get-function*.
-- If the user passes in a first-class function,
-  we can assume we're using the latest Sass version
-  => *do nothing*.
+After a long conversation with Chris Eppstein,
+one of the Sass language designers,
+it's clear that the entire upgrade path
+should be handled by users,
+not toolkit developers.
 
-The result looks something like this:
+The OddBird `Sass Accoutrement`_ tools
+allow users to `pass in an arbitrary function`_.
+Once users upgrade to Sass 3.5,
+they should be sure to ``get`` the function
+before passing it in.
+Meanwhile,
+our tools will continue to use ``call`` internally,
+without any changes.
+
+There is one excception,
+where Kaelig's solution may be acceptable.
+In Susy, we use ``call`` internally
+to access functions in the local scope, inside a loop.
+In that case,
+we're only using ``call`` to help write DRY code,
+not as a user-facing feature
+that accepts arbitrary functions passed in from outside.
+
+To handle that,
+we use a few lines similar to Kaelig's:
 
 .. code:: scss
 
-  @function safe-get-function(
-    $function
-  ) {
-    // find out what's been passed in
-    $type: type-of($function);
+  @each $key, $value in $config {
+    $function: 'susy-normalize-#{$key}';
 
-    // if it's a first-class function, do nothing
-    @if ($type == 'function') {
-      @return $function;
-    } @else if ($type == 'string') {
-      // if it's a string, but we can get a function, we should
-      @if function-exists('get-function') {
-        @return get-function($function);
-      }
-
-      // if it's a string, and we can't get a function, return the string
-      @return $function;
+    @if function-exists('get-function') {
+      $function: get-function($function);
     }
 
-    // if it's not a string or a function, we know there's a problem
-    @error 'Invalid function name, [#{$type}] `#{$function}` must be a function or string';
+    $result: call($function, $value);
   }
-
-This ``safe-get-function`` accepts one argument,
-either a string or a first-class function,
-and returns the proper value
-(also a string or a function)
-for the version of Sass being used.
-
-
-Safe ``call``
--------------
-
-I also wrote a very small
-``safe-call()`` wrapper function
-that passes all function-calls
-through our ``safe-get-function()``
-before calling them.
-
-.. code:: scss
-
-  @function safe-call(
-    $name,
-    $args...
-  ) {
-    $name: safe-get-function($name);
-    @return call($name, $args...);
-  }
-
-This function `accepts the same arguments`_
-required by Sass's internal ``call()`` function,
-a name (or first-class function),
-and arguments to pass-through when the function is called.
-You can use it right away like this:
-
-.. code:: scss
-
-  $result: safe-call('span', 3);
-
-And that should continue to work just fine
-when you upgrade to Sass 3.5 or later.
-
-.. _accepts the same arguments: http://sass-lang.com/documentation/Sass/Script/Functions.html#call-instance_method
-
-
-Ship it!
---------
-
-After adding those two functions to a project,
-I can search-and-replace every instance of
-``call(`` with ``safe-call(``,
-and I'm ready to support the latest in Sass technology.
 
 This should work on all versions of Sass,
-for all expected forms of input.
+but **should only be used internally,
+calling local functions**
+(e.g. know functions defined in the same partial).
+I don't think this simple use
+warrants a safe-get function of it's own.
+
+.. _Kaelig provides one solution: https://medium.com/@kaelig/sass-first-class-functions-6e718e2b5eb0
+.. _Sass Accoutrement: /open-source/accoutrement/
+.. _pass in an arbitrary function: ../07/pattern-making/
+
 
 Have you played with Sass 3.5 already?
 Did we miss anything important?
