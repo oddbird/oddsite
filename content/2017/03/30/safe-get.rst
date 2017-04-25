@@ -198,7 +198,7 @@ Meanwhile,
 our tools will continue to use ``call`` internally,
 without any changes.
 
-There is one excception,
+There is one exception,
 where Kaelig's solution may be acceptable.
 In Susy, we use ``call`` internally
 to access functions in the local scope, inside a loop.
@@ -225,9 +225,9 @@ we use a few lines similar to Kaelig's:
 This should work on all versions of Sass,
 but **should only be used internally,
 calling local functions**
-(e.g. know functions defined in the same partial).
+(e.g. known functions defined in the same partial).
 I don't think this simple use
-warrants a safe-get function of it's own.
+warrants a safe-get function of its own.
 
 .. _Kaelig provides one solution: https://medium.com/@kaelig/sass-first-class-functions-6e718e2b5eb0
 .. _Sass Accoutrement: /open-source/accoutrement/
