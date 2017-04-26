@@ -34,11 +34,13 @@ if (process.env.NODE_ENV === 'production') {
   buildScript = 'python run.py prod';
 }
 
-const SassdocPlugin = function () {
+const SassdocPlugin = function() {
   // do nothing
 };
-const getCSS = function (entry) {
-  if (!entry) { return undefined; }
+const getCSS = function(entry) {
+  if (!entry) {
+    return undefined;
+  }
   for (const thisPath of entry) {
     if (thisPath.substr(-4) === '.css') {
       return thisPath;
@@ -46,7 +48,7 @@ const getCSS = function (entry) {
   }
   return undefined;
 };
-SassdocPlugin.prototype.apply = (compiler) => {
+SassdocPlugin.prototype.apply = compiler => {
   compiler.plugin('after-emit', (compilation, cb) => {
     const statsJSON = compilation.getStats().toJson();
     const css = getCSS(statsJSON.assetsByChunkName.styleguide);
@@ -57,30 +59,37 @@ SassdocPlugin.prototype.apply = (compiler) => {
       dest: sassdocPath,
       theme: 'herman',
       customCSS: cssPath,
-      customHead:
-        '<script src="https://use.typekit.net/slx1xnq.js"></script>' +
+      customHead: '<script src="https://use.typekit.net/slx1xnq.js"></script>' +
         '<script>try{Typekit.load({ async: true });}catch(e){}</script>',
       descriptionPath: path.join(__dirname, 'STYLEGUIDE.md'),
       homepage: '/',
       sassjsonfile: jsonPath,
       shortcutIcon: path.join(
-        __dirname, 'content', 'static', 'images', 'favicons', 'favicon.ico'),
+        __dirname,
+        'content',
+        'static',
+        'images',
+        'favicons',
+        'favicon.ico'
+      ),
       templatepath: path.join(__dirname, 'templates'),
       minifiedIcons: '_icons.svg',
       display: { access: ['public'] },
       groups: { undefined: 'general' }
-    }).then(() => {
-      /* eslint-disable no-console */
-      console.log('Generated Sassdoc documentation.');
-      cb();
-    }, (err) => {
-      console.error(err);
-      cb();
-      /* eslint-enable no-console */
-    });
+    }).then(
+      () => {
+        /* eslint-disable no-console */
+        console.log('Generated Sassdoc documentation.');
+        cb();
+      },
+      err => {
+        console.error(err);
+        cb();
+        /* eslint-enable no-console */
+      }
+    );
   });
 };
-
 
 module.exports = {
   // context for entry points
@@ -102,26 +111,16 @@ module.exports = {
   },
   resolve: {
     // where to look for "required" modules
-    modules: [
-      'static/js',
-      'templates',
-      'sass',
-      'static',
-      'node_modules'
-    ],
+    modules: ['static/js', 'templates', 'sass', 'static', 'node_modules'],
     alias: { jquery: 'jquery/dist/jquery.slim.js' }
   },
   plugins: [
     // ignore flycheck and Emacs special files when watching
-    new webpack.WatchIgnorePlugin([
-      /flycheck_/,
-      /\.#/,
-      /#$/
-    ]),
+    new webpack.WatchIgnorePlugin([/flycheck_/, /\.#/, /#$/]),
     // make jquery accessible in all modules that use it
     new webpack.ProvidePlugin({
-      '$': 'jquery',
-      'jQuery': 'jquery',
+      $: 'jquery',
+      jQuery: 'jquery',
       'window.jQuery': 'jquery',
       'root.jQuery': 'jquery'
     }),
@@ -156,11 +155,11 @@ module.exports = {
     new HardSourceWebpackPlugin({
       cacheDirectory: path.join(__dirname, 'jscache/[confighash]'),
       recordsPath: path.join(__dirname, 'jscache/[confighash]/records.json'),
-      configHash: (webpackConfig) => nodeObjectHash().hash(webpackConfig),
+      configHash: webpackConfig => nodeObjectHash().hash(webpackConfig),
       environmentHash: {
         root: process.cwd(),
         directories: ['node_modules'],
-        files: ['package.json'],
+        files: ['package.json']
       }
     })
   ],
@@ -169,28 +168,34 @@ module.exports = {
       {
         test: /(static\/js\/.*\.js$|test\/.*\.js$)/,
         exclude: /(node_modules|vendor)/,
-        use: [{
-          loader: 'babel-loader',
-          options: { cacheDirectory: process.env.NODE_ENV !== 'production' }
-        }]
+        use: [
+          {
+            loader: 'babel-loader',
+            options: { cacheDirectory: process.env.NODE_ENV !== 'production' }
+          }
+        ]
       },
       {
         test: /\.woff$|\.woff2$|\.ttf$/,
-        use: [{
-          loader: 'file-loader',
-          options: { name: mediaOutput }
-        }]
+        use: [
+          {
+            loader: 'file-loader',
+            options: { name: mediaOutput }
+          }
+        ]
       },
       {
         test: /\.jpe?g$|\.gif$|\.png$|\.svg$/,
-        use: [{
-          loader: 'file-loader',
-          options: {
-            name: mediaOutput,
-            img: 'progressive',
-            limit: 50000
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: mediaOutput,
+              img: 'progressive',
+              limit: 50000
+            }
           }
-        }]
+        ]
       },
       {
         test: /\.scss$/,

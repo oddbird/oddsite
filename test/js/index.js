@@ -12,9 +12,15 @@ pageTestsContext.keys().forEach(pageTestsContext);
 
 // require all source js modules (to ensure full code coverage)
 const appSrcContext = require.context(
-  './../../static/js/app/', true, /.*\.js$/);
+  './../../static/js/app/',
+  true,
+  /.*\.js$/
+);
 appSrcContext.keys().forEach(appSrcContext);
 
 const pageSrcContext = require.context(
-  './../../static/js/pages/', true, /.*\.js$/);
+  './../../static/js/pages/',
+  true,
+  /.*\.js$/
+);
 pageSrcContext.keys().forEach(pageSrcContext);

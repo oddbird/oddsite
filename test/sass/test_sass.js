@@ -3,7 +3,7 @@
 const path = require('path');
 const sassTrue = require('sass-true');
 
-const importer = function (url) {
+const importer = function(url) {
   if (url[0] === '~') {
     url = path.resolve('node_modules', url.substr(1));
   }
