@@ -140,56 +140,48 @@ isn't simply baked into ``call``,
 so we can pass a first-class function or a string
 depending on the context.
 
-The reason is this:
-once the modular system is in place,
-it will be very rare to ``call`` a function
-from the local scope.
-The ``call`` option is mostly useful
-for handling functions defined elsewhere.
-Since we don't have guaranteed access
-to the functions being called in our third-party app,
-``get-function`` allows us to capture and pass-in
-functions from a different scope.
+Since ``call`` is most often used by third-party tools,
+living in a different context and namespace,
+the user will have to capture functions themselves,
+before passing them to the toolkit.
+While ``call`` happens internally,
+the ``get-function`` has to happen in the user's code.
 
 A more accurate demonstration might be:
 
 .. code:: scss
 
-  // third-party.scss
+  // third-party-toolkit.scss
   @mixin three-wide($function) {
     width: call($function, 3);
   }
 
-  // my-local.scss
-  @import 'susy' as 'susy';
+  // your-local.scss
+  @import 'susy';
 
-  $span-function: get-function('susy.span');
+  $span-function: get-function('span');
   @include three-wide($span-function);
 
 So how do we support old and new versions of Sass,
 while allowing users to pass in
 either strings or first-class functions?
 
-The short answer is: we don't*.
-Our users will make that change on their end,
-when they upgrade.
 
-
-Don't Worry About It
---------------------
-
-`Kaelig provides one solution`_,
-and I initially meant to improve on it
-with more robust features.
-**You don't need any of that.**
+Probably Don't Worry About It
+-----------------------------
 
 After a long conversation with Chris Eppstein,
 one of the Sass language designers,
-it's clear that the entire upgrade path
-should be handled by users,
-not toolkit developers.
+it's clear that the change rests
+entirely in the hands of users.
+Most toolkits can continue to use ``call``
+as they always have,
+but users upgrading to Sass 3.5+
+should begin to capture functions
+before passing them anywhere outside the local context.
 
-The OddBird `Sass Accoutrement`_ tools
+OddBird's `Sass Accoutrement`_ tools,
+for example,
 allow users to `pass in an arbitrary function`_.
 Once users upgrade to Sass 3.5,
 they should be sure to ``get`` the function
@@ -198,17 +190,22 @@ Meanwhile,
 our tools will continue to use ``call`` internally,
 without any changes.
 
+
+One Exception
+-------------
+
 There is one exception,
-where Kaelig's solution may be acceptable.
-In Susy, we use ``call`` internally
-to access functions in the local scope, inside a loop.
-In that case,
-we're only using ``call`` to help write DRY code,
-not as a user-facing feature
-that accepts arbitrary functions passed in from outside.
+where I use ``call`` internally,
+with known local functions in a loop.
+The purpose of ``call`` in this case
+is not to accept arbitrary functions from the user,
+but to DRY our code with a loop of local functions.
 
 To handle that,
-we use a few lines similar to Kaelig's:
+we use a few lines of code
+to make sure we ``get`` the function
+in newer versions of Sass,
+without breaking older versions:
 
 .. code:: scss
 
@@ -222,14 +219,14 @@ we use a few lines similar to Kaelig's:
     $result: call($function, $value);
   }
 
-This should work on all versions of Sass,
+This is basically identical to `Kaelig's solution`_,
+which initially inspired my post.
+It should work on all versions of Sass,
 but **should only be used internally,
 calling local functions**
-(e.g. known functions defined in the same partial).
-I don't think this simple use
-warrants a safe-get function of its own.
+(e.g. know functions defined in the same partial).
 
-.. _Kaelig provides one solution: https://medium.com/@kaelig/sass-first-class-functions-6e718e2b5eb0
+.. _`Kaelig's solution`: https://medium.com/@kaelig/sass-first-class-functions-6e718e2b5eb0
 .. _Sass Accoutrement: /open-source/accoutrement/
 .. _pass in an arbitrary function: ../07/pattern-making/
 
