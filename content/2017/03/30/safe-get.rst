@@ -224,7 +224,7 @@ which initially inspired my post.
 It should work on all versions of Sass,
 but **should only be used internally,
 calling local functions**
-(e.g. know functions defined in the same partial).
+(e.g. known functions defined in the same partial).
 
 .. _`Kaelig's solution`: https://medium.com/@kaelig/sass-first-class-functions-6e718e2b5eb0
 .. _Sass Accoutrement: /open-source/accoutrement/
