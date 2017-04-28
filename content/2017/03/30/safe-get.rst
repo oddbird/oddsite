@@ -158,8 +158,9 @@ A more accurate demonstration might be:
 
   // your-local.scss
   @import 'susy';
+  @import 'third-party-toolkit';
 
-  $span-function: get-function('span');
+  $span-function: get-function('susy-span');
   @include three-wide($span-function);
 
 So how do we support old and new versions of Sass,
