@@ -482,6 +482,7 @@ active_modules: [
   images,
   denormalize_config,
   tags,
+  extended_tags,
   blog,
   author,
   pages,
