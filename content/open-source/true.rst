@@ -1,5 +1,7 @@
 public: yes
 location: open-source
+image:
+  - src: 'projects/true.jpg'
 project:
   - name: 'True'
     tagline: 'Unit-testing for Sass developers'

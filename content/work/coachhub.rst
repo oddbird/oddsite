@@ -27,8 +27,7 @@ quotes:
   - text: 'OddBird really changed my thinking about
       how successful outsourcing software development can be.'
     name: 'Sara Taillon'
-    url: 'http://twitter.com/sjtaillon'
-    role: 'ORCAS CTO'
+    role: 'Chief Technical Officer at ORCAS'
 planning:
   - title: 'App Goals'
     icon: 'map'

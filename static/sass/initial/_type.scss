@@ -50,6 +50,10 @@ h3 {
   font-style: italic;
   margin-bottom: 0.75rem;
   margin-top: 1.5rem;
+
+  h2 + & {
+    margin-top: 0;
+  }
 }
 
 h1,

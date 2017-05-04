@@ -13,6 +13,12 @@ project:
 contributors:
   - author: 'miriam'
     role: 'creator'
+quotes:
+  - text: 'I like the idea of grids-on-demand,
+           rather than a strict framework.'
+    name: 'Chris Coyier'
+    role: 'CSS Tricks & CodePen'
+    url: 'http://css-tricks.com/build-web-layouts-easily-susy/'
 summary: |
   In a world of agile development
   and super-tablet-multi-magic-laptop-phones,

@@ -1,0 +1,41 @@
+{% import 'utility.macros.j2' as utility %}
+{% import 'birds/utility.macros.j2' as birds %}
+
+
+{% macro splash_list(has='client') %}
+  {% set pages = all_pages|filter_pages(has)|filter_pages('public', 'neq', false) %}
+
+  <section class='splash-projects extend-full'>
+    {% for page in pages %}
+      {{ splash(page) }}
+    {% endfor %}
+  </section>
+{% endmacro %}
+
+
+{% macro splash(page) %}
+  {% set project = page.config.project[0] %}
+  {% set client = page.config.client[0] if page.config.client else none %}
+  {% set contrib = page.config.contributors[0] if page.config.contributors else none %}
+
+  {% set link = ['/', page.slug, '/']|join('') if (project.owner or project.case_study) else '/work/' %}
+  {% set link = '/open-source/' if (contrib and link == '/work/') else link %}
+
+  {% set image = page.config.image[0].src if page.config.image else none %}
+
+  {% if image %}
+    {% set image = image if '://' in image else ['/static/images/', image]|join('') %}
+
+    <a href="{{ link }}" class="splash-project">
+      <div class="splash-image" style="background-image: url('{{ image }}');"></div>
+
+      <h2 class="splash-client">
+        {{ client.name if client else project.name }}
+      </h2>
+
+      <h3 class="splash-title">
+        {{ project.name if client else [birds.get_bird_name(contrib.author), contrib.role]|join(', ') }}
+      </h3>
+    </a>
+  {% endif %}
+{% endmacro %}

@@ -51,6 +51,23 @@
 
 
 {#
+  Headings
+  --------
+#}
+{% macro heading(content, subhead=none, level=2) %}
+  {% set main = ['h', level]|join('') %}
+
+  <{{ main }}>
+    {{ content }}
+  </{{ main }}>
+
+  {% if subhead %}
+    {{ heading(subhead, level=(level + 1)) }}
+  {% endif %}
+{% endmacro %}
+
+
+{#
   Quotes
   ------
 #}
@@ -63,7 +80,8 @@
     {% if name or url or role %}
       <footer class="attribution">
       <cite>
-        —{{ utility.link_if(name, url) }}{% if role %}, {{ role }}{% endif %}
+        {% set display_name = name if role else utility.link_if(name, url) %}
+        —{{ display_name }}{% if role %}, {{ utility.link_if(role, url) }}{% endif %}
       </cite>
       </footer>
     {% endif %}
