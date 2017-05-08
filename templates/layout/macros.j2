@@ -3,6 +3,28 @@
 {% import 'birds/utility.macros.j2' as birds %}
 
 
+{% macro main_nav(yaml) %}
+  <ul class="main-nav">
+    {% for link in yaml %}
+      <li class="nav-item">
+        {% if link.url %}
+          <a href="{{ link.url }}" class="nav-link nav-link-main" data-active="{{ link.text }}">{{ link.display_text or link.text }}</a>
+        {% elif link.subnav %}
+          <span class="nav-link nav-link-main" data-active="{{ link.text }}" {{ utility.toggle_button(link.text) }}>{{ link.display_text or link.text }}</span>
+          <ul class="is-dropdown" {{ utility.toggle_target(link.text, auto_closing=true) }}>
+            {% for sub in link.subnav %}
+              <li>
+                <a href="{{ sub.url }}" class="nav-link nav-link-sub" data-active="{{ sub.text }}">{{ sub.display_text or sub.text }}</a>
+              </li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+{% endmacro %}
+
+
 {% macro tags(taglist) %}
   {% if taglist %}
     <nav class="tags">

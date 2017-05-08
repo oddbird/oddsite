@@ -1,0 +1,14 @@
+{% extends "rst_display.html" %}
+
+{% import 'utility.macros.j2' as utility %}
+{% import 'layout/macros.j2' as layout %}
+
+{% block banner_logo %}
+  <a href="/open-source/susy/" class="logo-link">
+    {{ utility.icon('susy', alt='Susy', class='logo-icon') }}
+  </a>
+{% endblock %}
+
+{% block banner_nav %}
+  {{ layout.main_nav(config.susy_nav) }}
+{% endblock %}

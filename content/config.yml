@@ -462,6 +462,27 @@ nav:
         url: '/contact/'
 
 
+susy_nav:
+  - text: 'susysite-docs'
+    display_text: 'docs'
+    url: '#@@@'
+  - text: 'susysite-tutorials'
+    display_text: 'tutorials'
+    url: '#@@@'
+  - text: 'support'
+    subnav:
+      - text: 'github'
+        display_text: 'github issues'
+        url: 'http://stackoverflow.com/questions/tagged/susy-sass'
+      - text: 'stack-overflow'
+        display_text: 'stack overflow'
+        url: 'http://stackoverflow.com/questions/tagged/susy-sass'
+      - text: 'twitter'
+        url: 'http://twitter.com/sasssusy/'
+  - text: 'oddbird'
+    url: '/'
+
+
 # Site Settings
 # -------------
 
