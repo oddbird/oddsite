@@ -2,13 +2,20 @@
 {% import 'birds/utility.macros.j2' as birds %}
 
 
-{% macro splash_list(has='client') %}
-  {% set pages = all_pages|filter_pages(has)|filter_pages('public', 'neq', false) %}
-
+{% macro splash_list(has='client', slugs=none) %}
   <section class='splash-projects extend-full'>
-    {% for page in pages %}
-      {{ splash(page) }}
-    {% endfor %}
+    {% if slugs %}
+      {% for slug in slugs %}
+        {% set page = all_pages|filter_pages('slug', 'eq', slug)|get_page %}
+        {{ splash(page) }}
+      {% endfor %}
+    {% else %}
+      {% set pages = all_pages|filter_pages(has)|filter_pages('public', 'neq', false) %}
+
+        {% for page in pages %}
+          {{ splash(page) }}
+        {% endfor %}
+    {% endif %}
   </section>
 {% endmacro %}
 

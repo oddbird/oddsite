@@ -1,7 +1,7 @@
 public: yes
 location: open-source
 image:
-  - src: 'blog/susy.jpg'
+  - src: 'projects/susy.png'
 project:
   - name: 'Susy'
     tagline: 'Your layout, our math'

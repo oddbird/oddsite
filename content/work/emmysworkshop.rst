@@ -2,7 +2,7 @@ public: no
 location: work
 grid_template: true
 image:
-  - src: 'projects/trop.jpg'
+  - src: 'projects/emmys.jpg'
 client:
   - name: 'Carleton College'
 project:

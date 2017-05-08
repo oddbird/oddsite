@@ -79,7 +79,12 @@ Software for Humans
   :index: 1
 
 .. callmacro:: projects/splash.macros.j2#splash_list
-  :has: 'contributors'
+  :slugs: [
+    'open-source/susy',
+    'open-source/django',
+    'open-source/true',
+    'open-source/plone'
+    ]
 
 .. callmacro:: content.macros.j2#get_quotes
   :slug: 'open-source/susy'
