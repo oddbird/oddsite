@@ -46,7 +46,7 @@ Software for Humans
     :content: 'Small Team, Large Expertise'
     :subhead: 'Perfect for funded startups, and enterprise augmentation'
 
-  Founded by a `Django core-developer`_
+  Founded by a `Django core developer`_
   and the `creator of Susy`_ responsive-layout framework,
   we provide industry-leading expertise
   on a small team –
@@ -57,8 +57,8 @@ Software for Humans
   with the attention and agility
   of an internal team.*
 
-  .. _Django core-developer: '/birds/#bird-carl'
-  .. _creator of Susy: '/birds/#bird-miriam'
+  .. _Django core developer: /birds/#bird-carl
+  .. _creator of Susy: /birds/#bird-miriam
 
   .. callmacro:: content.macros.j2#link_button
     :url: '/contact/'
@@ -103,7 +103,7 @@ and cut down many of the tedious repetitive tasks
 that come with writing vanilla CSS.
 Most importantly,
 Sass makes it easier to create web applications,
-takes out some monotony and overhead out of writing CSS,
+takes some monotony and overhead out of writing CSS,
 and will save you time.
 
 This book,
@@ -111,8 +111,8 @@ written by `Miriam Suzanne`_ and `Hugo Giraudel`_
 and published by `SitePoint`_,
 provides a comprehensive introduction to Sass for beginners.
 
-.. _Miriam Suzanne: '/birds/#bird-miriam'
-.. _Hugo Giraudel: 'http://hugogiraudel.com/'
+.. _Miriam Suzanne: /birds/#bird-miriam
+.. _Hugo Giraudel: http://hugogiraudel.com/
 .. _SitePoint: https://www.sitepoint.com/premium/books/jump-start-sass
 
 .. callmacro:: content.macros.j2#link_button
