@@ -84,12 +84,12 @@
 // Map nav locations for highlighting active page
 $nav-locations: (
   'projects': 'work',
-  'open-source': 'work',
+  'open-source': null,
   'birds': 'about',
   'speaking': 'about',
   'community': 'about',
   'blog': null,
-  'contact': null,
+  'contact': 'about',
 );
 
 // Highlight self and parent (if applicable)
@@ -113,7 +113,7 @@ $nav-locations: (
   right: 0;
   top: 100%;
   width: 100vw;
-  z-index: 1;
+  z-index: 2;
 
   @include above('nav-medium') {
     min-width: size('dropdown-narrow');

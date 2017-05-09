@@ -5,19 +5,11 @@
 {# `show` allows you to define an arbitrary, ordered list of birds to display #}
 {% if module.show %}
   {% for author in module.show %}
-    {% set page = all_pages|filter_pages('bird', 'eq', author)|get_page %}
-    {# @@@ Moving OSS data into pages will help clean this up... #}
-    {% set oss = config.oss_by_author[author] %}
-
-    {{ birds.section(page, oss) }}
+    {{ birds.section(author=author) }}
   {% endfor %}
 {% else %}
   {# If no list is given, show all bird pages... #}
-  {% for page in all_pages|filter_pages('bird') %}
-    {% set author = page.config.bird %}
-    {# @@@ Moving OSS data into pages will help clean this up... #}
-    {% set oss = config.oss_by_author[author] %}
-
-    {{ birds.section(page, oss) }}
+  {% for page in all_pages|filter_pages('bird')|get_page() %}
+    {{ birds.section(page=page) }}
   {% endfor %}
 {% endif %}

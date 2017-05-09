@@ -1,30 +1,25 @@
 ---
 
-# Site-Wide Messages
-# ------------------
+# Site-Wide Content
+# -----------------
 
-site_message:
-  - body: |
-      <strong>We’re re-building our website in the open</strong>,
-      and writing about our process along the way.
-    action: Find out more!
-    url: '/2016/07/12/open-design/'
+contact:
+  - title: 'Let’s Build Something Together!'
+    content: |
+      <strong>We want to hear all about your software ideas.</strong>
+      Fill out our
+      <a href="/contact/">contact form</a>,
+      join our
+      <a href="http://friends.oddbird.net">public Slack chat</a>,
+      or tweet
+      <a href="http://twitter.com/oddbird">@oddbird</a>
+      to start the conversation.
 
 
 # Future Talks
 # ------------
 
 events:
-
-  - venue: 'WordPress Naperville'
-    url: 'https://www.meetup.com/WordPress-Naperville/events/236903886/'
-    date: ['3', '21', '2017']
-    adr:
-      city: 'Naperville'
-      state: 'IL'
-    who:
-      - author: 'stacy'
-        title: 'From Scratch to Launch: Front-end Theme Building'
 
   - venue: 'Front-End Camp'
     url: 'http://chicagocamps.org/events/2017/front-end-camp/'
@@ -36,562 +31,21 @@ events:
       - author: 'stacy'
         title: 'The Great State of Design with CSS Grid Layout & Friends'
 
-# Client Projects
-# ---------------
-
-clients:
-  - name: 'Quarq Race Intelligence'
-    url: 'http://quarqrace.com'
-    cover_image:
-      - src: 'http://oddbird.net/static/images/blog/2017/color-theory/decision-tree.jpg'
-    years: '2015–2016'
-    feature: true
-    priority: 'live'
-    tagline: 'Real-Time Race Analytics'
-    description: |
-      Quarq Race Intelligence captures and interprets
-      race performance and state-of-play information,
-      and delivers that data in real time to spectators,
-      commentators, race officials,
-      third-party analysis software and visualization tools.
-      Integrating with Quarq’s telemetry and reporting hardware,
-      the app shows racers’ positions, direction, speed, heart-rate,
-      and a number of other statistics in real time.
-      Our mobile-optimized web interface has been used for bicycle races,
-      triathlons, and non-competitive events,
-      including regular IronMan and Enduro races.
-    client:
-      name: 'SRAM'
-      url: 'http://sram.com/'
-
-  - name: 'QuarqNet'
-    url: 'http://quarqnet.com'
-    cover_image:
-      - src: '2017/server-client/spa2.jpg'
-    years: '2015–2016'
-    feature: true
-    priority: 'live'
-    tagline: 'Real-Time Telemetry for Athletes'
-    description: |
-      QuarqNet allows athletes to track and analyze their activities,
-      sharing their location and statistics
-      with friends, family, coaches, and colleagues in real time.
-      QuarqNet also integrates with
-      Quarq’s telemetry and reporting hardware,
-      and third-party services
-      like Strava, Training Peaks, Dropbox, and Today’s Plan.
-    client:
-      name: 'SRAM'
-      url: 'http://sram.com/'
-
-  - name: 'CoachHub'
-    url: 'http://www.orcasinc.com/products/coachhub/'
-    cover_image:
-      - src: 'http://oddbird.net/static/images/blog/2017/tips-tools/love-tools.jpg'
-    years: '2014–2016'
-    feature: true
-    priority: 'live'
-    tagline: 'Integrated Health Coaching'
-    description: |
-      Our mobile coaching platform for ORCAS
-      integrates with their suite of self-management tools,
-      as well as other vetted third-party apps —
-      providing users with anywhere,
-      anytime access to varying levels of support via video chat,
-      in-app messaging, public Q&A, webinars, and support groups.
-      Users browse coaches, send messages, request appointments,
-      post questions, and grant permissions
-      for coaches to view their progress.
-      Coaches create a profile, manage daily tasks,
-      make appointments, post answers to questions,
-      view user progress, and set alerts
-      for relapse prevention and escalation of care.
-      The product is currently being used
-      by the US Military and Coast Guard as an employee health benefit.
-    client:
-      name: 'ORCAS'
-      url: 'http://orcasinc.com'
-    quote:
-      text: 'OddBird really changed my thinking about how successful outsourcing software development can be.'
-      credit: 'Sara Taillon'
-
-  - name: 'Streams Resource Library'
-    url: 'http://junyo.com/streams/'
-    years: '2013–2014'
-    priority: 'other'
-    status: 'updated'
-    tagline: 'Curration Tools for Teachers'
-    description: |
-      We worked with Junyo to develop
-      an early version of their Streams Resource Library —
-      a community-currated directory of teaching materials.
-      Teachers can collect and access
-      all of their open and licensed digital resources in one library.
-      Search by curriculum, student need,
-      use case, content efficacy, users’ rankings,
-      standards, and other criteria,
-      to create custom learning streams.
-      OddBird built the initial curation and search tools
-      used to populate, annotate, and sort resources.
-    client:
-      name: 'Junyo'
-      url: 'http://junyo.com/'
-
-  - name: 'Portfoliyo'
-    source: 'https://github.com/oddbird/portfoliyo'
-    years: '2012–2013'
-    priority: 'other'
-    status: 'removed'
-    tagline: 'Real-Time Communication for Parents, Teachers, and Students'
-    client:
-      name: 'The K Network'
-
-  - name: 'MozTrap'
-    source: 'https://github.com/mozilla/moztrap'
-    url: 'http://moztrap.mozilla.org'
-    years: '2011–2012'
-    feature: true
-    priority: 'live'
-    tagline: 'Ditributed Quality Assurance Tools'
-    description: |
-      Mozilla's next-generation test case management system,
-      MozTrap manages extensive test suites
-      for all of Mozilla's software products
-      (including Firefox, Thunderbird, Firefox OS, and others),
-      and allows community testers from around the world
-      to run tests on their system and report results back to Mozilla,
-      which MozTrap aggregates into reports for product managers.
-      MozTrap also includes a RESTful JSON API
-      to allow automated tools to run tests and report results.
-    client:
-      name: 'Mozilla'
-      url: 'https://www.mozilla.org/'
-
-  - name: 'Master Lookup Table'
-    source: 'https://github.com/oddbird/mlt'
-    years: '2011'
-    feature: true
-    priority: 'live'
-    tagline: 'Parcel Mapping for Urban Development'
-    description: |
-      With custom interactive in-browser maps,
-      MLT streamlines the Providence Plan staff's task
-      of mapping street addresses to deeded land parcels.
-      In addition to allowing batch imports
-      of large numbers of addresses from CSV files
-      recording user-selected associations between addresses and parcels,
-      MLT records an audit trail of all data changes
-      and allows one-click rollback of any change.
-      We worked closely with ProvPlan staff
-      to ensure the tool was easy to understand,
-      efficient, beautiful, and a pleasure to work with.
-      MLT also includes a RESTful JSON API
-      for querying address mapping data.
-    client:
-      name: 'The Providence Plan'
-      url: 'http://provplan.org/'
-
-  - name: 'Craftisan'
-    years: '2010–2011'
-    priority: 'other'
-    status: 'removed'
-    client:
-      name: 'Craftisan'
-
-  - name: 'The Steel Wheels'
-    years: '2010'
-    priority: 'other'
-    status: 'updated'
-    client:
-      name: 'The Steel Wheels'
-      url: 'http://www.thesteelwheels.com/'
-
-  - name: 'The Carrot Project'
-    years: '2009–2010'
-    priority: 'other'
-    status: 'removed'
-    client:
-      name: 'Jake de Grazia'
-
-
-project_status:
-  -
-    pre-release: 'This software has not yet been released publically.'
-    private: 'This software is not available to the public.'
-    removed: 'This software is no longer in use.'
-    updated: 'This software has changed substantially since we worked on it.'
-    consult: 'We provided consultation, but did not build this software.'
-    end-of-life: 'This software is no longer actively maintained.'
-
-
-# Open Source Contributions
-# -------------------------
-
-oss:
-  - name: 'Susy'
-    url: 'http://susy.oddbird.net'
-    source: 'https://github.com/oddbird/susy'
-    feature: true
-    blog: 'susy'
-    priority: 'creator'
-    tagline: 'Web layout power tools'
-    description: |
-      In a world of agile development
-      and super-tablet-multi-magic-laptop-phones,
-      the best layouts can’t be contained in a single framework or technique.
-      CSS Libraries are a bloated mess of opinions about how to do your job.
-      Why let the table-saw tell you where to put the kitchen?
-    who:
-      - author: 'miriam'
-        role: 'creator'
-
-  - name: 'Django'
-    url: 'https://www.djangoproject.com/'
-    source: 'https://github.com/django/django'
-    feature: true
-    blog: 'django'
-    priority: 'core'
-    tagline: 'The web framework for perfectionists with deadlines'
-    description: |
-      Django is a high-level Python Web framework
-      that encourages rapid development and clean, pragmatic design.
-      Built by experienced developers,
-      it takes care of much of the hassle of Web development,
-      so you can focus on writing your app
-      without needing to reinvent the wheel.
-    who:
-      - author: 'carl'
-        role: 'core developer'
-
-  - name: 'True'
-    url: '/true'
-    source: 'https://github.com/oddbird/true'
-    feature: true
-    blog: 'sass-true'
-    priority: 'creator'
-    tagline: 'Unit-testing for Sass developers'
-    description: |
-      True is a full-featured unit-testing library for Sass developers.
-      The core functionality is written in pure SassScript,
-      so it can be used anywhere Sass is compiled.
-      Advanced features are available in Node
-      with our Mocha test-runner integration,
-      and in Ruby using our command-line tools.
-    who:
-      - author: 'miriam'
-        role: 'creator'
-
-  - name: 'Sass Accoutrement'
-    url: '/accoutrement'
-    source: 'https://github.com/oddbird/?utf8=%E2%9C%93&query=+only%3Apublic+accoutrement'
-    blog: 'accoutrement'
-    priority: 'creator'
-    tagline: 'Modular theme-configuration libraries'
-    description: |
-      A set of related theme-configuration libraries
-      for building and documenting style patterns
-      directly in your Sass code,
-      as part of the development process.
-      Currently includes modules for managing colors,
-      webfonts and typography, modular scales,
-      and responsive layouts.
-    who:
-      - author: 'miriam'
-        role: 'creator'
-
-  - name: 'Herman'
-    source: 'https://github.com/oddbird/sassdoc-theme-herman'
-    blog: 'herman'
-    priority: 'creator'
-    status: 'pre-release'
-    tagline: 'Automated Style Guides'
-    description: |
-      An automatic style-guide generator,
-      built on top of SassDoc,
-      and designed to integrate with OddBird's
-      Sass Accoutrement libraries
-      for quick theme configuration,
-      color palettes, font specimens, icon libraries,
-      and documentation of UI patterns
-      in both Sass and Nunjucks.
-
-  - name: 'Nunjucks'
-    url: 'http://mozilla.github.io/nunjucks/'
-    source: 'https://github.com/mozilla/nunjucks/'
-    blog: 'nunjucks'
-    priority: 'core'
-    tagline: 'Sophisticated templating for JavaScript'
-    description: |
-      A powerful markup templating language
-      with block inheritance, autoescaping, macros,
-      asynchronous control, and more.
-      Heavily inspired by Jinja2,
-      Nunjucks is fast, lean, highly performant,
-      and extensible.
-    who:
-      - author: 'carl'
-        role: 'maintainer, 2015–2016'
-      - author: 'jonny'
-        role: 'contributor'
-
-  - name: 'Sass Spec'
-    source: 'https://github.com/sass/sass-spec'
-    blog: 'sass-spec'
-    priority: 'contributor'
-    tagline: 'Sass language specification'
-    description: |
-      Now that the Sass language has multiple iplementations,
-      it is important that they all share a
-      standard specification and test suite.
-    who:
-      - author: 'miriam'
-        role: 'contributor'
-
-  - name: 'Plone'
-    url: 'http://plone.org/'
-    source: 'https://github.com/plone/Products.CMFPlone'
-    blog: 'plone'
-    priority: 'core'
-    tagline: 'Enterprise web content management system'
-    description: |
-      Plone is a mature content management platform
-      written in Python
-      and developed by an international open source community.
-      It has particular strengths
-      in user experience for content editors,
-      flexible theming,
-      and customizability by developers.
-    who:
-      - author: 'david'
-        role: 'core developer, 2008–2014'
-
-  - name: 'pip'
-    url: 'https://pip.pypa.io/'
-    source: 'https://github.com/pypa/pip/'
-    blog: 'pip'
-    priority: 'core'
-    tagline: 'Python package installer'
-    description: |
-      The PyPA recommended tool for installing Python packages.
-    who:
-      - author: 'carl'
-        role: 'maintainer, 2010–2012'
-
-  - name: 'virtualenv'
-    url: 'https://virtualenv.pypa.io/'
-    source: 'https://github.com/pypa/virtualenv'
-    blog: 'virtualenv'
-    priority: 'core'
-    tagline: 'Virtual Python Environment builder'
-    description: |
-      A tool for creating isolated 'virtual' python environments.
-    who:
-      - author: 'carl'
-        role: 'maintainer, 2010–2012'
-
-  - name: 'Compass'
-    url: 'http://compass-style.org'
-    source: 'http://github.com/compass/compass'
-    blog: 'compass'
-    priority: 'core'
-    status: 'end-of-life'
-    tagline: 'CSS-authoring framework and Sass library'
-    description: |
-      An open-source CSS authoring framework
-      which uses the Sass language
-      to make writing and sharing stylesheets powerful and easy.
-      Compass was the first package-manager
-      and toolkit-sharing platform for CSS,
-      helping popularize the Sass language —
-      and offering powerful browser-compatability tools
-      that changed the landscape for designers developers.
-    who:
-      - author: 'miriam'
-        role: 'core developer, 2010–2016'
-
-  - name: 'Warehouse'
-    url: 'https://warehouse.readthedocs.io/'
-    source: 'https://github.com/pypa/warehouse'
-    blog: 'warehouse'
-    priority: 'contributor'
-    tagline: 'Next Generation Python Package Repository'
-    description: |
-      A new code base that implements a Python package repository,
-      with plans to eventually replace the current code powering PyPI.
-      The goal is to improve PyPI by making it more user-friendly,
-      with a modern look, additional features,
-      and a more maintainable code-base,
-      with full test coverage and documentation.
-    who:
-      - author: 'kit'
-        role: 'contributor'
-
-  - name: 'Helium'
-    url: 'http://heliumfloats.com/'
-    source: 'https://github.com/JadenGeller/Helium'
-    blog: 'helium'
-    priority: 'contributor'
-    tagline: 'A floating browser window for OS X'
-    description: |
-      Helium is a floating browser window
-      that allows you to watch media,
-      browse the web,
-      and do much more while you stay productive.
-      Your content will never fall behind your other windows
-      even as you switch tasks.
-      Helium supports a customizable translucency mode
-      that allows you to simultaneously see your content and your work,
-      without intercepting mouse clicks when it's translucent.
-      You have the ability to click, drag,
-      and scroll behind your floating content.
-    who:
-      - author: 'kit'
-        role: 'contributor'
-
-
-# Giving
-# ------
-
-giving:
-  - name: 'Electronic Frontier Foundation'
-    url: 'https://www.eff.org/'
-    type: 'donations'
-    years: '2016'
-    description: |
-      is the leading nonprofit organization
-      defending civil liberties in the digital world.
-
-  - name: 'Women Who Startup'
-    url: 'http://www.womenwhostartup.com/'
-    type: 'sponsorships'
-    years: '2017'
-    description: |
-      is a global community that connects and empowers
-      women in tech and business.
-
-  - name: 'Django Software Foundation'
-    url: 'https://www.djangoproject.com/foundation/'
-    type: 'donations'
-    years: '2015, 2016'
-    description: |
-      is an independent non-profit foundation
-      established to to promote, support, and advance the Django Web framework.
-      As active users and contributors to the Django community,
-      we're proud to support the continued development of the project.
-
-  - name: 'Goshen Ultimate Summer League'
-    url: 'http://goshenultimate.com/'
-    type: 'donations'
-    years: '2014–2016'
-    description: |
-      provides opportunities to learn, play,
-      and teach spirited Ultimate in Goshen, IN and surrounding areas.
-      We're just glad they keep Jonny out of trouble
-      when he's not busy writing JavaScript.
-
-  - name: 'Django Under the Hood'
-    url: 'https://www.djangounderthehood.com/'
-    type: 'sponsorships'
-    years: '2015'
-    description: |
-       is an exciting Django conference full of deep,
-       detailed talks and amazing opportunities
-       to shape the future of Django.
-
-  - name: 'SassConf'
-    url: 'http://sassconf.com/'
-    type: 'sponsorships'
-    years: '2013–2015'
-    description: |
-      brings together a far-flung community of front-end developers,
-      designers, architects, and web enthusiasts
-      who dream of building a better web.
-      Besides being active participants in the Sass community,
-      we love the thoughtfulness and dedication to diversity
-      that the SassConf organizers bring to the community.
-
-  - name: 'Black Girls CODE'
-    url: 'http://blackgirlscode.com/'
-    type: 'donations'
-    years: '2013–2016'
-    description: |
-      has set out to prove to the world
-      that girls of every color have the skills
-      to become the programmers of tomorrow.
-      By promoting classes and programs
-      they help to grow the number of women of color
-      working in technology,
-      and give underprivileged girls a chance
-      to become the masters of their technological worlds.
-
-  - name: 'Thunder Valley Community Development Corporation'
-    url: 'http://thundervalley.org/'
-    type: 'donations'
-    years: '2014, 2015'
-    description: |
-      is a Lakota-run, grassroots Community Development Corporation
-      that is building a community for systemic change
-      on the Pine Ridge Reservation in South Dakota.
-
-  - name: 'PyLadies'
-    url: 'http://www.pyladies.com/'
-    type: 'donations'
-    years: '2012, 2014, 2015'
-    description: |
-      is an international mentorship group
-      with a focus on helping more women become active participants
-      and leaders in the Python open-source community.
-
-  - name: 'Django Girls'
-    url: 'https://djangogirls.org/'
-    type: 'donations'
-    years: '2015–2017'
-    description: |
-      is a non-profit organization
-      and a community that empowers and helps women to organize free,
-      one-day programming workshops by providing tools,
-      resources and support.
-
-  - name: 'PyCon'
-    url: 'https://us.pycon.org/'
-    type: 'sponsorships'
-    years: '2013, 2014'
-    description: |
-      is the largest annual gathering
-      for the people who use and develop
-      the open-source Python programming language.
-
-  - name: 'The Mixin'
-    url: 'http://themixinsf.com/'
-    type: 'sponsorships'
-    years: '2015'
-    description: |
-      is a San Francisco Sass front-end meetup.
-
-  - name: 'COSOLA-MACILE'
-    type: 'donations'
-    years: '2013, 2014'
-    description: |
-      is a non-profit organization
-      focused on K-12 STEM education
-      in less advantaged communities.
-
-  - name: 'Ada Initiative'
-    url: 'https://adainitiative.org/'
-    type: 'donations'
-    years: '2012, 2013'
-    description: |
-      supported women in open technology and culture
-      through activities such as producing codes of conduct
-      and anti-harassment policies,
-      advocating for gender diversity,
-      and teaching ally skills.
-
 
 # Past Talks
 # ----------
 
 events_past:
+
+  - venue: 'WordPress Naperville'
+    url: 'https://www.meetup.com/WordPress-Naperville/events/236903886/'
+    date: ['3', '21', '2017']
+    adr:
+      city: 'Naperville'
+      state: 'IL'
+    who:
+      - author: 'stacy'
+        title: 'From Scratch to Launch: Front-end Theme Building'
 
   - venue: 'WordPress Naperville'
     url: 'https://www.meetup.com/WordPress-Naperville/events/236903879/'
@@ -984,28 +438,28 @@ events_past:
 # ----------
 
 nav:
-  - text: 'blog'
-    url: '/blog/'
   - text: 'work'
-    subnav:
-      - text: 'projects'
-        display_text: 'client projects'
-        url: '/work/'
-      - text: 'open-source'
-        display_text: 'open-source contributions'
-        url: '/open-source/'
+    url: '/work/'
+  - text: 'open-source'
+    display_text: 'open source'
+    url: '/open-source/'
+  - text: 'blog'
+    display_text: 'articles'
+    url: '/blog/'
   - text: 'about'
+    display_text: 'about us'
     subnav:
       - text: 'birds'
+        display_text: 'meet the birds'
         url: '/birds/'
       - text: 'speaking'
-        display_text: 'speaking engagements'
+        display_text: 'public speaking'
         url: '/speaking/'
       - text: 'community'
-        display_text: 'community involvement'
         url: '/community/'
-  - text: 'contact'
-    url: '/contact/'
+      - text: 'contact'
+        display_text: 'contact us'
+        url: '/contact/'
 
 
 # Site Settings
@@ -1018,29 +472,15 @@ location: 'blog'
 author: 'oddbird'
 comments: false
 
-blog_title: 'Our Odd Thoughts...'
-
-contact:
-  - title: 'Let’s Build Something Together!'
-    content: |
-      <strong>We want to hear all about your software ideas.</strong>
-      Fill out our
-      <a href="/contact/">contact form</a>,
-      join our
-      <a href="http://friends.oddbird.net">public Slack chat</a>,
-      or tweet
-      <a href="http://twitter.com/oddbird">@oddbird</a>
-      to start the conversation.
-
 
 # rstBlog Setup
 # -------------
 
 active_modules: [
-  denormalize_config,
   jinja_macros,
   typogrify,
   images,
+  denormalize_config,
   tags,
   blog,
   author,

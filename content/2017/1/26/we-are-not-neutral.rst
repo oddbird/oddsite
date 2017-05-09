@@ -2,9 +2,9 @@ public: yes
 author: miriam
 tags: [Politics, 'Year in Review', Diversity]
 image:
-  - src: '2017/2016-review/retreat.jpg'
+  - src: 'blog/2017/2016-review/retreat.jpg'
 summary: |
-  OddBird is a small company —
+  OddBird is a small company –
   a shared vision and brand
   that transforms seven remote contractors
   into a *Web Software Agency*.
@@ -20,7 +20,7 @@ summary: |
 We Are Not Neutral: 2016 in Review
 ==================================
 
-OddBird is a small company —
+OddBird is a small company –
 a shared vision and brand
 that transforms seven remote contractors
 into a *Web Software Agency*.
@@ -36,7 +36,7 @@ We're `writing more`_,
 `taking on more clients`_,
 `re-designing our website and brand in the open`_,
 `building a community on Slack`_,
-and contributing to more `open-source projects`_.
+and contributing to more `open source projects`_.
 
 .. _`Carl`: /birds/#bird-carl
 .. _`Instagram`: http://instagram.com
@@ -49,12 +49,12 @@ and contributing to more `open-source projects`_.
 .. _`taking on more clients`: /work/
 .. _`re-designing our website and brand in the open`: /tags/open-design/
 .. _`building a community on Slack`: http://friends.oddbird.net/
-.. _`open-source projects`: /open-source/
+.. _`open source projects`: /open-source/
 
 It was hard to lose one of the founders
 (and a sibling!)
 from our daily work,
-but we're glad that he still drops by —
+but we're glad that he still drops by –
 an active outside eye when we need advice.
 This is the first time our founders have been outnumbered,
 but I couldn't ask for a better team.
@@ -89,7 +89,7 @@ but we can't distance ourselves from the world we work in,
 or the lives of our members, colleagues, and clients.
 2016 was a hard year for many us,
 and the people we care about.
-We expect 2017 to continue that trend —
+We expect 2017 to continue that trend –
 with threats to health insurance,
 immigrants, people of color, LGBTQAI+ people,
 muslims, women, native people, and so on.
@@ -99,7 +99,7 @@ but it's important to all of us here
 that OddBird double-down on our commitment
 to *people* in all their diversity,
 especially when they are pushed to the margins.
-We know that we have work to do —
+We know that we have work to do –
 that our `code of conduct`_
 and `donations`_ are only a start.
 We're here, `we're listening`_,

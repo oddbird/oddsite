@@ -5,7 +5,7 @@ headline:
     tagline: 'from Natalya Shelburne'
 tags: [Tips, Color, Design, Recommendations]
 image:
-  - src: '2017/color-theory/decision-tree.jpg'
+  - src: 'blog/2017/color-theory/decision-tree.jpg'
 summary: |
   If you write code and you want to delve into design, Natalya Shelburne's
   Practical Color Theory for Coders will get you up and running with a
@@ -25,11 +25,11 @@ Color Theory for People Who Code`_.
 .. _Natalya Shelburne's: https://twitter.com/natalyathree
 .. _Practical Color Theory for People Who Code: http://tallys.github.io/color-theory/
 
-.. raw:: html
+.. callmacro:: content.macros.j2#link_button
+  :url: 'http://tallys.github.io/color-theory/'
 
-    <a href="http://tallys.github.io/color-theory/" class="btn">
-      Color Theory Demo
-    </a>
+  Color Theory Demo
+
 
 Sass Color Functions
 ~~~~~~~~~~~~~~~~~~~~

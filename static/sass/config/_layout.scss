@@ -208,12 +208,12 @@ $grid-columns-large: [col1-start] 1fr [col1-end col2-start] 1fr [col2-end col3-s
   margin-bottom: size('pad');
 
   @include above('small-page') {
-    float: $side;
+    float: unquote($side);
 
     @if ($side == 'left') {
-      padding-right: size('pad');
+      margin-right: size('pad');
     } @elseif ($side == 'right') {
-      padding-left: size('pad');
+      margin-left: size('pad');
     } @else {
       @error 'Choose left or right silly. How many sides do you have?';
     }

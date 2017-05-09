@@ -7,9 +7,9 @@ and associated OddBird branding materials.
 
 It is still in development,
 using OddBird's
-[Accoutrement](/accoutrement/) and
+[Accoutrement](/open-source/accoutrement/) and
 [Herman](https://github.com/oddbird/sassdoc-theme-herman/)
-open-source toolkits
+open source toolkits
 to automate as much living documentation as possible.
 
 Writing Content
@@ -90,6 +90,7 @@ soon. Currently, you can use the following:
   - ``size-full``
   - ``img-border`` adds a hairline, helpful when using a screenshot with a
   white background.
+  - ``img-shadow`` adds a slight drop shadow to images
 
 *Note:* If declaring a size, it remains this size regardless of screen size.
 

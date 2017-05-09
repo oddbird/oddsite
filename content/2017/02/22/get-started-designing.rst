@@ -2,11 +2,11 @@ public: yes
 author: sondra
 tags: [Tools, Color, Typography, Design, User Experience]
 image:
-  - src: '2017/get-started-designing/cafe-computer.jpg'
+  - src: 'blog/2017/get-started-designing/cafe-computer.jpg'
 summary: |
   So you'd like to start learning design, but the number of tools and tutorials
   available is overwhelming. Where do you start? I recommend Paper for
-  sketching out UX ideas, *Practice Code Theory for People Who Code* to
+  sketching out UX ideas, *Practical Color Theory for Coders* to
   generate color palettes and learn color theory, *Choosing the Right Font: A
   Practical Guide to Typography on the Web* as an introduction to typography,
   and Adobe Experience Design for UX prototyping.

@@ -2,7 +2,7 @@ public: yes
 tags: [Susy, Demos, Layout, Code]
 author: miriam
 image:
-  - src: 'susy.jpg'
+  - src: 'blog/susy.jpg'
 summary: |
   The `off-canvas`_ layout pattern
   for responsive web design

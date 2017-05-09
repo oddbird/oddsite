@@ -2,16 +2,18 @@ public: yes
 author: miriam
 tags: [Sass, Books]
 image:
-  - src: 'sassbook.jpg'
+  - src: 'blog/sassbook.jpg'
+headline:
+  - tagline: 'Chapter 11: Sass Architecture'
+    type: 'Book Excerpt'
 summary: |
   I'm excited to release
   `Jump Start Sass`_,
   a book I co-authored with `Hugo Giraudel`_.
   Digital coppies are available from `SitePoint`_,
   wih print edditions sold by `O'Reilly`_.
-  There's an excerpt from Chapter 11,
-  `Sass Architecture`_,
-  after the jump.
+  Here's an excerpt from Chapter 11,
+  `Sass Architecture`_.
 
   .. _Jump Start Sass: https://www.sitepoint.com/premium/books/jump-start-sass
   .. _Hugo Giraudel: http://hugogiraudel.com/
@@ -20,23 +22,10 @@ summary: |
   .. _Sass Architecture: https://www.sitepoint.com/architecture-in-sass/
 
 
-Book Excerpt: Jump Start Sass
-=============================
+Jump Start Sass
+===============
 
-I'm excited to release
-`Jump Start Sass`_,
-a book I co-authored with `Hugo Giraudel`_.
-Digital coppies are available from `SitePoint`_,
-wih print edditions sold by `O'Reilly`_.
-Here's an excerpt from Chapter 11,
-`Sass Architecture`_.
-
-.. _Jump Start Sass: https://www.sitepoint.com/premium/books/jump-start-sass
-.. _Hugo Giraudel: http://hugogiraudel.com/
-.. _SitePoint: https://www.sitepoint.com/
-.. _O'Reilly: http://shop.oreilly.com/product/9780994182678.do
-.. _Sass Architecture: https://www.sitepoint.com/architecture-in-sass/
-
+.. sub-headers struggle without prior content...
 
 Components and Organization
 ---------------------------
@@ -61,8 +50,8 @@ later code has priority in the cascade over the code before it.
 Some of the popular branded architectures
 (the ones you know by name)
 try to eliminate this feature of the cascade entirely,
-but I use it as a guide —
-organizing code from the most general to the most specific —
+but I use it as a guide –
+organizing code from the most general to the most specific –
 so the priority override makes sense.
 Code that we want applied generally across the site should come first,
 growing slowly in specificity and detail
@@ -87,7 +76,7 @@ and finally, more specific modules, themes, and overrides.
 
 Sass projects include another category of site-wide defaults
 not found in CSS:
-code with no output at all —
+code with no output at all –
 such as variables, functions, and mixin definitions.
 Many people
 (myself included)
@@ -119,10 +108,7 @@ so you should never assume that the best solution
 for InstaFace or MyPinBook
 is going to be the best solution for you.
 
-|read|
+.. callmacro:: content.macros.j2#link_button
+  :url: 'https://www.sitepoint.com/architecture-in-sass/'
 
-.. |read| raw:: html
-
-  <a href="https://www.sitepoint.com/architecture-in-sass/" class="btn">
-    Read the full chapter on SitePoint
-  </a>
+  Read the full chapter on SitePoint

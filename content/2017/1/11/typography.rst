@@ -2,7 +2,7 @@ public: yes
 author: sondra
 tags: [OddSite, 'Open Design', Typography, Design]
 image:
-  - src: '2017/typography/type.jpg'
+  - src: 'blog/2017/typography/type.jpg'
 summary: |
   **How do you choose the best fonts for a brand identity** among the thousands
   of options available on the interwebs these days? Whether you’re starting
@@ -333,8 +333,7 @@ sites do you use? What is your favorite tool or method for typeface pairing?
 Let’s talk web typography on the `OddFriends Slack channel`_. Typography nerds
 unite!
 
-.. raw:: html
+.. callmacro:: content.macros.j2#link_button
+  :url: '/2017/1/16/color/'
 
-    <a href="/2017/1/16/color/" class="btn">
-      How to Choose Brand Colors
-    </a>
+  How to Choose Brand Colors

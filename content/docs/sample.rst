@@ -4,7 +4,7 @@ headline:
   - tagline: 'sample rST document'
     type: 'Documentation'
 image:
-  - src: '2017/initial-letter/drop-caps.jpg'
+  - src: 'blog/2017/initial-letter/drop-caps.jpg'
 quotes:
   - text: 'OddBird really changed my thinking about
       how successful outsourcing software development can be.'
@@ -206,13 +206,19 @@ and no ``/`` at the start or finish.
 Images
 ~~~~~~
 
+.. callmacro:: utility.macros.j2#img
+   :src: "/static/images/blog/oddsite-collage-440.jpg"
+   :srcset: "/static/images/blog/oddsite-collage-440.jpg 440w, /static/images/blog/oddsite-collage-800.jpg 800w, /static/images/blog/oddsite-collage.jpg 1600w"
+
+
 .. image:: /static/images/blog/navdraft.jpg
    :target: http://google.com
    :align: left
-   :class: size-quarter
+   :class: size-quarter img-shadow
    :alt: alternate text here
 
-This image has align set to ``left`` rbi tristique senectus et netus et
+This image has align set to ``left`` and has a shadow.
+rbi tristique senectus et netus et
 malesuada fames ac turpis egestas. Vestibulum tortor quam. This is a p tag.
 Pellentesque habitant morbi tristique senectus et netus et malesuada fames
 ac turpis egestas.

@@ -2,7 +2,7 @@ import chaiJquery from 'chai-jquery';
 
 chai.use(chaiJquery);
 
-before(function () {
+before(function() {
   this.respondTo = (url, status, json, headers) => {
     let matched = false;
     for (const req of this.requests) {
@@ -31,25 +31,25 @@ before(function () {
   };
 });
 
-beforeEach(function () {
+beforeEach(function() {
   this.xhr = sinon.useFakeXMLHttpRequest();
   this.requests = [];
-  this.xhr.onCreate = (req) => {
+  this.xhr.onCreate = req => {
     this.requests.push(req);
   };
   this.clock = sinon.useFakeTimers();
 });
 
-afterEach(function () {
+afterEach(function() {
   this.xhr.restore();
   this.clock.restore();
 });
 
 /* eslint-disable no-underscore-dangle */
-chai.use((_chai) => {
+chai.use(_chai => {
   const { Assertion } = _chai;
 
-  Assertion.addMethod('calledOnceWith', function (...args) {
+  Assertion.addMethod('calledOnceWith', function(...args) {
     const obj = this._obj;
     const assertion = new Assertion(obj);
 
@@ -57,7 +57,7 @@ chai.use((_chai) => {
     Reflect.apply(assertion.calledWith, assertion, args);
   });
 
-  Assertion.addMethod('calledOnceWithExactly', function (...args) {
+  Assertion.addMethod('calledOnceWithExactly', function(...args) {
     const obj = this._obj;
     const assertion = new Assertion(obj);
 
@@ -65,7 +65,7 @@ chai.use((_chai) => {
     Reflect.apply(assertion.calledWithExactly, assertion, args);
   });
 
-  Assertion.addMethod('containRequest', function (method, url) {
+  Assertion.addMethod('containRequest', function(method, url) {
     const obj = this._obj;
 
     let found = false;

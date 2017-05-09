@@ -16,7 +16,7 @@ my-blocks:
     text: 'Icon-block data must be structured as YAML
       at the start of a document.
       The <code>icon-block</code> macro takes a title,
-      slug, and data — all strings.
+      slug, and data – all strings.
       The data argument should provide the root name
       of the YAML block to use.'
   - icon: 'miriam'
@@ -136,7 +136,7 @@ a standard page-``summary`` and a list of ``tasks``:
     - Product Branding
     - User Experience Design
     - Project Architecture
-    - Mobile-Responsive Styles
+    - Responsive Styles
 
 
 .. callmacro:: content.macros.j2#rst

@@ -43,7 +43,11 @@
 
   @supports (display: grid) {
     grid-column: col1-start;
-    text-align: right;
+    text-align: left;
+
+    @include above('small-page') {
+      text-align: center;
+    }
 
     @include above('medium-page') {
       grid-column: col1-start / span 2;
@@ -52,8 +56,8 @@
 
   [data-icon] {
     color: color('icon-block');
-    height: calc(3rem + 3vw);
-    width: calc(3rem + 3vw);
+    height: calc(2.5rem + 2vw);
+    width: calc(2.5rem + 2vw);
   }
 }
 

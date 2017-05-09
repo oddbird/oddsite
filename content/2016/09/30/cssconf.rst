@@ -2,11 +2,11 @@ public: yes
 author: miriam
 tags: [Conferences, Front-end, CSS, Code]
 image:
-  - src: '2016/cssconf/ns.jpg'
+  - src: 'blog/2016/cssconf/ns.jpg'
 summary: |
   It was a pleasure speaking at
   CSSConf 2016 in Boston!
-  Here are some of my notes from the event —
+  Here are some of my notes from the event –
   coverig everything from
   creativity and the Bauhaus movement
   to SVG 2 internals,
@@ -21,8 +21,6 @@ summary: |
 CSSConf 2016 Recap
 ==================
 
-It was a pleasure speaking at
-CSSConf 2016 in Boston!
 Thanks to `Nicole Sullivan`_ for founding the series,
 `Bocoup`_ for hosting the event,
 `Claudina Sarahe`_ (an OddBird alum) for her amazing emcee-ing,
@@ -31,7 +29,7 @@ and everyone else for attending!
 It was a great atmosphere,
 and I met all sorts of lovely people.
 
-My talk was called **Sass Map Magic** —
+My talk was called **Sass Map Magic** –
 a major update to a talk I had given
 several years back
 at BlendConf (may it rest in peace).
@@ -59,7 +57,7 @@ Creativity in Programming for Fun and Profit
 
 `Sarah Drasner`_
 talked about programming as a creative act.
-There is more than one way to solve any given problem —
+There is more than one way to solve any given problem –
 and different solutions will come with different trade-offs.
 It's worth exploring the options,
 while keeping in mind that code is a communication tool,
@@ -74,7 +72,7 @@ and it was a nice reminder that they can apply to code as well.
 2. Impose artificial bounds
 3. Repurpose existing solutions
 4. Combine existing solutions
-5. Use open-source code (this seems like an extension of 3 and 4)
+5. Use open source code (this seems like an extension of 3 and 4)
 
 Of course,
 this summary barely does justice
@@ -82,21 +80,20 @@ to the beautiful demonstrantions Sarah included.
 Check out her `CodePen`_ page
 for a whole load of amazing and beautiful samples.
 
-|sd-links|
-
 .. _Sarah Drasner: http://twitter.com/sarah_edo
 .. _CodePen: http://codepen.io/sdras/
 
-.. |sd-links| raw:: html
+.. callmacro:: content.macros.j2#link_button
+  :url: 'http://slides.com/sdrasner/creativity-programming#/'
 
-  <a href="http://slides.com/sdrasner/creativity-programming#/" class="btn">
-    <span class="is-hidden">Sarah Drasner</span>
-    Slides
-  </a>
-  <a href="https://youtu.be/HVtYasAhsY0" class="btn">
-    <span class="is-hidden">Sarah Drasner</span>
-    Video
-  </a>
+  <span class="is-hidden">Sarah Drasner</span>
+  Slides
+
+.. callmacro:: content.macros.j2#link_button
+  :url: 'https://youtu.be/HVtYasAhsY0'
+
+  <span class="is-hidden">Sarah Drasner</span>
+  Video
 
 
 No Bugs in Sight
@@ -119,25 +116,24 @@ but there were a few philisophical points that stood out:
 - Make sure everyone on the team can write tests
   for the code they write
 - Take the time, on occasion,
-  to review and clean up your tests —
+  to review and clean up your tests –
   otherwise you will run into bloat and compile-time issues
-
-|bj-links|
 
 .. _Brian Jordan: http://twitter.com/bcjordan
 .. _PhantomJS: http://phantomjs.org/
 .. _`code.org`: http://code.org
 
-.. |bj-links| raw:: html
+.. callmacro:: content.macros.j2#link_button
+  :url: 'https://speakerdeck.com/bcjordan/no-bugs-in-sight-continuous-visual-testing-at-code-dot-org-cssconf-2016'
 
-  <a href="https://speakerdeck.com/bcjordan/no-bugs-in-sight-continuous-visual-testing-at-code-dot-org-cssconf-2016" class="btn">
-    <span class="is-hidden">Brian Jordan</span>
-    Slides
-  </a>
-  <a href="https://youtu.be/8nSUIAFpNhE" class="btn">
-    <span class="is-hidden">Brian Jordan</span>
-    Video
-  </a>
+  <span class="is-hidden">Brian Jordan</span>
+  Slides
+
+.. callmacro:: content.macros.j2#link_button
+  :url: 'https://youtu.be/8nSUIAFpNhE'
+
+  <span class="is-hidden">Brian Jordan</span>
+  Video
 
 
 Nativize Is the New Normalize
@@ -148,7 +144,7 @@ Nativize Is the New Normalize
 `Jessica Lord`_
 showed us how to use `Electron`_
 to build native (Mac, Windows, Linux) desktop applications
-using Node, HTML, and CSS —
+using Node, HTML, and CSS –
 with simplified access to native APIs.
 
 That was pretty cool,
@@ -158,24 +154,21 @@ so your app feels like desktop software,
 and not a website.
 
 Since Electron uses the latest Choromium rendering,
-you don't have to target multiple browsers —
+you don't have to target multiple browsers –
 but you do have to contend with multiple operating systems.
 Among other things,
 she advised disabling
 `cursor: pointer`
 and "rubber-band" scrolling.
 
-|jl-links|
-
 .. _Jessica Lord: http://twitter.com/jllord
 .. _Electron: http://electron.atom.io/
 
-.. |jl-links| raw:: html
+.. callmacro:: content.macros.j2#link_button
+  :url: 'https://youtu.be/H6IDoraEpO0'
 
-  <a href="https://youtu.be/H6IDoraEpO0" class="btn">
-    <span class="is-hidden">Jessica Lord</span>
-    Video
-  </a>
+  <span class="is-hidden">Jessica Lord</span>
+  Video
 
 
 Component-Based Style Reuse
@@ -223,19 +216,16 @@ that have to be solved by the JS processor:
 - Server rendering is difficult,
   maybe Webpack can provide a solution?
 
-|ph-links|
-
 .. _Pete Hunt: http://twitter.com/floydophone
 .. _React: https://facebook.github.io/react/
 .. _JSX: https://facebook.github.io/react/docs/jsx-in-depth.html
 .. _JSX Style: https://github.com/smyte/jsxstyle
 
-.. |ph-links| raw:: html
+.. callmacro:: content.macros.j2#link_button
+  :url: 'https://youtu.be/_70Yp8KPXH8'
 
-  <a href="https://youtu.be/_70Yp8KPXH8" class="btn">
-    <span class="is-hidden">Pete Hunt</span>
-    Video
-  </a>
+  <span class="is-hidden">Pete Hunt</span>
+  Video
 
 
 CSS4 Grid: True Layout Finally Arrives
@@ -257,7 +247,7 @@ floats for inline content wrapped by text
 and flexbox for gallery-style UI components.
 
 All of them deal with layout
-along a single axis of flow —
+along a single axis of flow –
 what Jen referrs to as "one-dimensional" layout.
 To use any of them for layout,
 we have to include "row" markup
@@ -277,26 +267,25 @@ but `implementations are sparse`_,
 hidden behind flags,
 and buggy across all browsers.
 Jen recommends using Chrome
-to explore the new possibilities —
+to explore the new possibilities –
 but it will be some time
 before we can use it in production.
-
-|jk-links|
 
 .. _Jen Kramer: http://twitter.com/jen4web
 .. _CSS Grid: https://css-tricks.com/snippets/css/complete-guide-grid/
 .. _implementations are sparse: http://caniuse.com/#feat=css-grid
 
-.. |jk-links| raw:: html
+.. callmacro:: content.macros.j2#link_button
+  :url: 'http://www.slideshare.net/jen4web/css-grid-true-layout-finally-arrives'
 
-  <a href="http://www.slideshare.net/jen4web/css-grid-true-layout-finally-arrives" class="btn">
-    <span class="is-hidden">Jen Kramer</span>
-    Slides
-  </a>
-  <a href="https://youtu.be/jl164y-Vb5E" class="btn">
-    <span class="is-hidden">Jen Kramer</span>
-    Video
-  </a>
+  <span class="is-hidden">Jen Kramer</span>
+  Slides
+
+.. callmacro:: content.macros.j2#link_button
+  :url: 'https://youtu.be/jl164y-Vb5E'
+
+  <span class="is-hidden">Jen Kramer</span>
+  Video
 
 
 Silky Smooth Animation with CSS
@@ -316,7 +305,7 @@ Will was able to isolate the main causes of "jank"
 and show us where to focus our efforts.
 
 *Loading* the DOM tree from HTML
-is outside the scope of CSS animations —
+is outside the scope of CSS animations –
 so not a central issue for frame-rate
 (though unrelated background loading
 can slow down overall performance
@@ -344,7 +333,7 @@ so these properties are a smaller drain on performance.
 *Displaying* painted pixels onto the screen
 is handled by the GPU,
 and there are several CSS properties
-that have been GPU-accelerated — 
+that have been GPU-accelerated – 
 meaning they will never cause a re-flow or re-paint.
 That includes ``transform``,
 most ``filter`` values
@@ -360,16 +349,13 @@ to achieve affects
 you might initially try to achieve
 with other properties.
 
-|wb-links|
-
 .. _Will Boyd: http://twitter.com/lonekorean
 
-.. |wb-links| raw:: html
+.. callmacro:: content.macros.j2#link_button
+  :url: 'https://youtu.be/bEoLCZzWZX8'
 
-  <a href="https://youtu.be/bEoLCZzWZX8" class="btn">
-    <span class="is-hidden">Will Boyd</span>
-    Video
-  </a>
+  <span class="is-hidden">Will Boyd</span>
+  Video
 
 
 Stop Thinking in Pixels
@@ -385,10 +371,10 @@ for sizing on the web.
 
 Interesting metaphor to "kick" it off:
 when runners wear softer shoes,
-they instinctively step harder —
+they instinctively step harder –
 negating any medical benefits.
 Keith suggests that we often do the same
-with relative units —
+with relative units –
 trying to reverse-engineer pixel values,
 when we could simply trust the abstration.
 We all need to learn how to "step softer"
@@ -396,7 +382,7 @@ with our relative units.
 
 Since ``em`` units
 are relative to *inherited* font size,
-they pose a particular confusion —
+they pose a particular confusion –
 two ``em`` values in the same block
 can render to different sizes:
 
@@ -440,20 +426,19 @@ for your root font-size.
 Hint: they work great inside ``calc()``,
 but provide terrible results on their own.
 
-|kj-links|
-
 .. _`Keith J. Grant`: http://twitter.com/keithjgrant
 
-.. |kj-links| raw:: html
+.. callmacro:: content.macros.j2#link_button
+  :url: 'http://keithjgrant.com/talks/stop-thinking-in-pixels/'
 
-  <a href="http://keithjgrant.com/talks/stop-thinking-in-pixels/" class="btn">
-    <span class="is-hidden">Keith J. Grant</span>
-    Slides
-  </a>
-  <a href="https://youtu.be/XanhwddQ-PM" class="btn">
-    <span class="is-hidden">Keith J. Grant</span>
-    Video
-  </a>
+  <span class="is-hidden">Keith J. Grant</span>
+  Slides
+
+.. callmacro:: content.macros.j2#link_button
+  :url: 'https://youtu.be/XanhwddQ-PM'
+
+  <span class="is-hidden">Keith J. Grant</span>
+  Video
 
 
 CSS Variables: var(--subtitle)
@@ -464,7 +449,7 @@ CSS Variables: var(--subtitle)
 `Lea Verou`_
 demonstrated various ways to use
 native CSS variables
-(AKA CSS Custom Properties) —
+(AKA CSS Custom Properties) –
 already available in all modern browsers
 aside from IE/Edge.
 
@@ -474,7 +459,7 @@ and it's amazing to watch.
 I learned (after the fact)
 that she has speaker notes
 overlayed directly on her slides
-at low color contrast —
+at low color contrast –
 invisible to the audience,
 because projectors can't handle the subtlety,
 but clearly visible on her own screen.
@@ -488,7 +473,7 @@ added to Opera in 2009.
 The new CSS variables
 are actually more like custom properties,
 written with an "empty" prefix
-(e.g. ``--property``) —
+(e.g. ``--property``) –
 and solve a much different issue
 than Sass variables
 by inheriting as part of the DOM.
@@ -531,7 +516,7 @@ A few use-cases to note:
 
 - Apply variables inline,
   to create variations on a global style
-  e.g. ``style="--color: blue"`` on a button element —
+  e.g. ``style="--color: blue"`` on a button element –
   especially when using JS to adjust styles,
   so the logical definitions remain in CSS
 - Change a ``--gutter`` variable
@@ -567,7 +552,7 @@ Some custom-property gotchas:
   so you can't do things like ``var(--size)em``
   to add units to a number
 - Adding units is simple using e.g. ``calc(var(--size) * 1em)``,
-  but there is no good way to remove units —
+  but there is no good way to remove units –
   so it is often best to store unitless values,
   and only add the units when they are needed.
 - Variable definitions (``--my-color``) won't animate,
@@ -578,20 +563,19 @@ Some custom-property gotchas:
 There's so much more!
 I highly recommend watching the video.
 
-|lv-links|
-
 .. _Lea Verou: http://twitter.com/leaverou
 
-.. |lv-links| raw:: html
+.. callmacro:: content.macros.j2#link_button
+  :url: 'http://leaverou.github.io/css-variables'
 
-  <a href="http://leaverou.github.io/css-variables" class="btn">
-    <span class="is-hidden">Lea Verou</span>
-    Slides
-  </a>
-  <a href="https://youtu.be/2an6-WVPuJU" class="btn">
-    <span class="is-hidden">Lea Verou</span>
-    Video
-  </a>
+  <span class="is-hidden">Lea Verou</span>
+  Slides
+
+.. callmacro:: content.macros.j2#link_button
+  :url: 'https://youtu.be/2an6-WVPuJU'
+
+  <span class="is-hidden">Lea Verou</span>
+  Video
 
 
 Creative Solutions for Creative Design Challenges with CSS and SVG
@@ -605,7 +589,7 @@ but talked instead about hacks
 that she has learned to appreciate
 while working on the redesign
 of a major site.
-I found it hard to take good notes —
+I found it hard to take good notes –
 but this talk is well worth the watch.
 So much good material in here!
 
@@ -626,20 +610,19 @@ Sites like Twitter
 convert your animated gif into mp4 format
 for display.
 
-|hh-links|
-
 .. _Henri Helvetica: http://twitter.com/HenriHelvetica
 
-.. |hh-links| raw:: html
+.. callmacro:: content.macros.j2#link_button
+  :url: 'http://www.afast.site/2016/09/27/hello-css-conf-2016/'
 
-  <a href="http://www.afast.site/2016/09/27/hello-css-conf-2016/" class="btn">
-    <span class="is-hidden">Henri Helvetica</span>
-    Slides
-  </a>
-  <a href="https://youtu.be/7zd3veCXNgA" class="btn">
-    <span class="is-hidden">Henri Helvetica</span>
-    Video
-  </a>
+  <span class="is-hidden">Henri Helvetica</span>
+  Slides
+
+.. callmacro:: content.macros.j2#link_button
+  :url: 'https://youtu.be/7zd3veCXNgA'
+
+  <span class="is-hidden">Henri Helvetica</span>
+  Video
 
 
 Sass Map Magic
@@ -648,7 +631,7 @@ Sass Map Magic
 .. image:: /static/images/blog/2016/cssconf/mia.jpg
 
 I showed a wide range of uses
-for the underused Sass "map" data type —
+for the underused Sass "map" data type –
 from simple site theme configurations,
 to data storage,
 and complex functional programming.
@@ -656,20 +639,19 @@ All the
 `slides <https://oddbooksapp.com/book/sass-map-magic>`_
 are online.
 
-|ms-links|
-
 .. _Miriam Suzanne: http://twitter.com/mirisuzanne
 
-.. |ms-links| raw:: html
+.. callmacro:: content.macros.j2#link_button
+  :url: 'https://oddbooksapp.com/book/sass-map-magic'
 
-  <a href="https://oddbooksapp.com/book/sass-map-magic" class="btn">
-    <span class="is-hidden">Miriam Suzanne</span>
-    Slides
-  </a>
-  <a href="https://youtu.be/MdwtoFt2LOI" class="btn">
-    <span class="is-hidden">Miriam Suzanne</span>
-    Video
-  </a>
+  <span class="is-hidden">Miriam Suzanne</span>
+  Slides
+
+.. callmacro:: content.macros.j2#link_button
+  :url: 'https://youtu.be/MdwtoFt2LOI'
+
+  <span class="is-hidden">Miriam Suzanne</span>
+  Video
 
 
 Webpack and CSS
@@ -682,17 +664,14 @@ walked us through his `Webpack`_ setup.
 I missed most of this,
 recovering from my own talk.
 
-|zg-links|
-
 .. _Zach Green: http://twitter.com/zgreen_
 .. _Webpack: https://webpack.github.io/
 
-.. |zg-links| raw:: html
+.. callmacro:: content.macros.j2#link_button
+  :url: 'https://youtu.be/UmP9WcBzZvU'
 
-  <a href="https://youtu.be/UmP9WcBzZvU" class="btn">
-    <span class="is-hidden">Zach Green</span>
-    Video
-  </a>
+  <span class="is-hidden">Zach Green</span>
+  Video
 
 
 It's Time To Ditch The Grid System
@@ -713,16 +692,13 @@ If you need a refresher
 on the *how* and *why* of flexbox,
 this is a great place to start.
 
-|eh-links|
-
 .. _Emily Hayman: http://twitter.com/eehayman
 
-.. |eh-links| raw:: html
+.. callmacro:: content.macros.j2#link_button
+  :url: 'https://youtu.be/5N9RkIs31Ok'
 
-  <a href="https://youtu.be/5N9RkIs31Ok" class="btn">
-    <span class="is-hidden">Emily Hayman</span>
-    Video
-  </a>
+  <span class="is-hidden">Emily Hayman</span>
+  Video
 
 
 Bauhaus in the Browser
@@ -740,21 +716,20 @@ that includes a demonstration of
 (also known as the "vertigo effect")
 in CSS.
 
-|jm-links|
-
 .. _Justin McDowell: http://twitter.com/revoltpuppy
 .. _Bauhaus: https://en.wikipedia.org/wiki/Bauhaus
 
-.. |jm-links| raw:: html
+.. callmacro:: content.macros.j2#link_button
+  :url: 'https://www.dropbox.com/s/8fr5amxfafpwnxq/bauhaus-cssconf.pdf'
 
-  <a href="https://www.dropbox.com/s/8fr5amxfafpwnxq/bauhaus-cssconf.pdf" class="btn">
-    <span class="is-hidden">Justin McDowell</span>
-    Slides
-  </a>
-  <a href="https://youtu.be/BaQl84nDBNY" class="btn">
-    <span class="is-hidden">Justin McDowell</span>
-    Video
-  </a>
+  <span class="is-hidden">Justin McDowell</span>
+  Slides
+
+.. callmacro:: content.macros.j2#link_button
+  :url: 'https://youtu.be/BaQl84nDBNY'
+
+  <span class="is-hidden">Justin McDowell</span>
+  Video
 
 
 The Great SVG RetCon
@@ -769,21 +744,20 @@ along with a history of SVG.
 This talk is packed full of useful information,
 if you are using SVG in any way.
 
-|ab-links|
-
 .. _`Amelia Bellamy-Royds`: http://twitter.com/AmeliasBrain
 .. _SVG2: https://www.w3.org/TR/SVG2/
 
-.. |ab-links| raw:: html
+.. callmacro:: content.macros.j2#link_button
+  :url: 'https://ameliabr.github.io/great-svg-retcon/'
 
-  <a href="https://ameliabr.github.io/great-svg-retcon/" class="btn">
-    <span class="is-hidden">Amelia Bellamy-Royds</span>
-    Slides
-  </a>
-  <a href="https://youtu.be/qnGIw7CK7pQ" class="btn">
-    <span class="is-hidden">Amelia Bellamy-Royds</span>
-    Video
-  </a>
+  <span class="is-hidden">Amelia Bellamy-Royds</span>
+  Slides
+
+.. callmacro:: content.macros.j2#link_button
+  :url: 'https://youtu.be/qnGIw7CK7pQ'
+
+  <span class="is-hidden">Amelia Bellamy-Royds</span>
+  Video
 
 
 Coding is a Privilege
@@ -818,19 +792,19 @@ and I should find my local
 (or similar)
 to volunteer.
 
-|ar-links|
-
 .. _Alisha Ramos: http://twitter.com/alishalisha
 .. _watch the video: https://www.youtube.com/watch?v=PtKOzKNJF-s
 .. _Black Girls Code: http://www.blackgirlscode.com/
 
-.. |ar-links| raw:: html
+.. callmacro:: content.macros.j2#link_button
+  :url: 'https://speakerdeck.com/alishalisha/coding-is-a-privilege'
 
-  <a href="https://speakerdeck.com/alishalisha/coding-is-a-privilege" class="btn">
-    <span class="is-hidden">Alisha Ramos</span>
-    Slides
-  </a>
-  <a href="https://youtu.be/PtKOzKNJF-s" class="btn">
-    <span class="is-hidden">Alisha Ramos</span>
-    Video
-  </a>
+  <span class="is-hidden">Alisha Ramos</span>
+  Slides
+
+.. callmacro:: content.macros.j2#link_button
+  :url: 'https://youtu.be/PtKOzKNJF-s'
+
+  <span class="is-hidden">Alisha Ramos</span>
+  Video
+

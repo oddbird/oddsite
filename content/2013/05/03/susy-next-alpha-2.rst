@@ -2,7 +2,7 @@ public: yes
 tags: [Susy, Layout, Grids, Code]
 author: miriam
 image:
-  - src: 'susy.jpg'
+  - src: 'blog/susy.jpg'
 summary: |
   I've just released the `second alpha`_ of Susy Next.
   Go download and play with it!
@@ -93,7 +93,7 @@ That allows us to change grids easily:
 Let's dissect that.
 
 - A grid starts with an optional container-width,
-  similar to the Susy 1.0 ``$container-width`` setting —
+  similar to the Susy 1.0 ``$container-width`` setting –
   in this case ``80%``.
 - After that we have columns,
   which can either be a simple number for symmetrical grids
@@ -104,8 +104,8 @@ Let's dissect that.
   ``1/4`` of a column for us.
   If you want to establish column/gutter widths
   as you did in Susy 1.0,
-  you can pass your ratio as a list of two values —
-  ``(4em 1em)`` —
+  you can pass your ratio as a list of two values –
+  ``(4em 1em)`` –
   and we'll use those values as column and gutter widths.
 - Finally you can pass a number of optional keyword settings,
   such as ``before``, ``after``, ``split``, and ``inside``

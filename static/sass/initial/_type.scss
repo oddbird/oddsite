@@ -36,8 +36,7 @@
 // ---------
 
 h1,
-h2,
-h3 {
+h2 {
   @include font-family('alt');
 }
 
@@ -48,10 +47,21 @@ h2 {
 
 h3 {
   font-size: calc(1rem + 0.5vw);
+  font-style: italic;
   margin-bottom: 0.75rem;
   margin-top: 1.5rem;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  [data-module='rst-body'] & {
+    clear: both;
+  }
+}
 
 // Links
 // -----
@@ -88,11 +98,10 @@ a {
 // ----------
 
 p {
-  margin-bottom: size('shim');
-  margin-top: size('shim');
+  margin-bottom: size('shim', 'em');
+  margin-top: size('shim', 'em');
 
   [data-module='rst-body'] & {
     margin-bottom: size('gutter');
   }
 }
-
