@@ -42,10 +42,11 @@ Software for Humans
 .. callmacro:: content.macros.j2#rst
   :tag: 'start'
 
-.. rstBlog refuses to render a header as the first RST content
-.. callmacro:: content.macros.j2#heading
-  :content: 'Small Team, Large Expertise'
-  :subhead: 'Partnering with funded startups and enterprise companies'
+Small Team, Large Expertise
+---------------------------
+
+Partnering with funded startups and enterprise companies
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 OddBird is a small team,
 made up of industry leaders

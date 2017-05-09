@@ -3,6 +3,9 @@ location: work
 grid_template: true
 image:
   - src: 'projects/trig.jpg'
+    type: 'hero'
+  - src: 'projects/trig-splash.jpg'
+    type: 'splash'
 client:
   - name: 'SRAM'
     url: 'http://sram.com/'

@@ -139,7 +139,7 @@ in the CSS output and/or the command line:
 - If you use ``true-cli``, ``report(terminal)`` is required for output.
 
 
-Using ``node-sass`` and ``Mocha`` (or other JS test runners)
+Using ``node-sass`` and ``Mocha`` (or Other JS Test Runners)
 ------------------------------------------------------------
 
 We recommend using Mocha
@@ -222,7 +222,7 @@ Run the tests:
 
   grunt mochacli
 
-Using ruby-sass on the command line
+Using Ruby-Sass on the Command Line
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 We include a Ruby CLI command

@@ -28,9 +28,11 @@
   {% set link = ['/', page.slug, '/']|join('') if (project.owner or project.case_study) else '/work/' %}
   {% set link = '/open-source/' if (contrib and link == '/work/') else link %}
 
-  {% set image = page.config.image[0].src if page.config.image else none %}
+  {% set images = page.config.image or none %}
 
-  {% if image %}
+  {% if images %}
+    {% set splash = images|selectattr('type', 'equalto', 'splash')|list or none %}
+    {% set image = splash[0].src if splash else images[0].src %}
     {% set image = image if '://' in image else ['/static/images/', image]|join('') %}
 
     <a href="{{ link }}" class="splash-project">

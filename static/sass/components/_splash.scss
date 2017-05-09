@@ -5,37 +5,38 @@
   align-items: stretch;
   display: flex;
   flex-direction: column;
-  overflow-x: hidden;
 
   @include above('small-page') {
     flex-direction: row;
-    min-height: 70vh;
+    min-height: 55vh;
   }
 }
 
 .splash-project {
+  & + & {
+    @include above('small-page') {
+      border-left: 2px solid color('background');
+    }
+  }
+
   #{$link} {
     align-items: flex-start;
     background: color('background');
-    clip-path: polygon(0% size('gutter'), 100% 0%, 100% calc(100% - #{size('gutter')}), 0% 100%);
     display: flex;
     flex: 1 0 10%;
     flex-direction: column;
     justify-content: center;
-    margin: negative('gutter') 0;
     overflow: hidden;
     padding: size('spacer') 0;
     position: relative;
     text-shadow: none;
     transition: flex 250ms;
-
-    @include above('small-page') {
-      clip-path: polygon(size('gutter') 0%, 100% 0%, calc(100% - #{size('gutter')}) 100%, 0% 100%);
-      margin: 0 negative('gutter');
-    }
   }
 
   #{$focus} {
+    border-left: 2px solid color('invert');
+    z-index: 1;
+
     @include above('small-page') {
       flex: 10 0 20%;
     }
@@ -45,7 +46,7 @@
     }
 
     .splash-image {
-      filter: grayscale(40%);
+      filter: grayscale(0);
       transform: translate3d(0, 0, 0) scale(1.05);
     }
 
@@ -54,20 +55,13 @@
       opacity: 1;
     }
   }
-
-  &:first-child {
-    .splash-client,
-    .splash-title {
-      padding-left: size('gutter') + size('shim');
-    }
-  }
 }
 
 .splash-image {
   @include stretch;
   background: no-repeat scroll left top;
   background-size: cover;
-  filter: grayscale(80%);
+  filter: grayscale(60%);
   transition: all 200ms;
 }
 

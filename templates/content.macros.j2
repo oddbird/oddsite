@@ -63,23 +63,6 @@
 
 
 {#
-  Headings
-  --------
-#}
-{% macro heading(content, subhead=none, level=2) %}
-  {% set main = ['h', level]|join('') %}
-
-  <{{ main }}>
-    {{ content }}
-  </{{ main }}>
-
-  {% if subhead %}
-    {{ heading(subhead, level=(level + 1)) }}
-  {% endif %}
-{% endmacro %}
-
-
-{#
   Quotes
   ------
 #}

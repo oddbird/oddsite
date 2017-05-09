@@ -3,6 +3,9 @@ location: work
 grid_template: true
 image:
   - src: 'projects/qasper.jpg'
+    type: 'hero'
+  - src: 'projects/qasper-splash.jpg'
+    type: 'splash'
 client:
   - name: 'SRAM'
     url: 'http://sram.com/'
