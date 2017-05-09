@@ -16,15 +16,15 @@
 
 
 {% macro header_image(post, class='') %}
-  {% set image = post.config.image[0].src if post.config.image else none %}
+  {% set images = post.config.image or none %}
 
-  {% if image %}
+  {% if images %}
+    {% set hero = images|selectattr('type', 'equalto', 'hero')|list or none %}
+    {% set image = hero[0].src if hero else images[0].src %}
+    {% set image = image if '://' in image else ['/static/images/', image]|join('') %}
+
     <figure class="{{ ['hero', class]|join(' ') if class else 'hero' }}">
-      {% if '://' in image %}
-        <img src="{{ image }}" class="hero-image">
-      {% else %}
-        <img src="/static/images/{{ image }}" class="hero-image">
-      {% endif %}
+      <img src="{{ image }}" class="hero-image">
     </figure>
   {% endif %}
 {% endmacro %}
