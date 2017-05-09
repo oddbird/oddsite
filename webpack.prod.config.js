@@ -1,4 +1,6 @@
-if (!process.env.NODE_ENV) { process.env.NODE_ENV = 'production'; }
+if (!process.env.NODE_ENV) {
+  process.env.NODE_ENV = 'production';
+}
 
 const extend = require('extend');
 const webpack = require('webpack');

@@ -1,15 +1,15 @@
 const body = $('body');
 
 export const susyOffCanvasToggle = {
-  init (triggers) {
-    $(triggers).click(function (evt) {
+  init(triggers) {
+    $(triggers).click(function(evt) {
       evt.preventDefault();
       susyOffCanvasToggle.toggleClasses(this);
       susyOffCanvasToggle.toggleText(triggers);
     });
     return triggers;
   },
-  toggleClasses (el) {
+  toggleClasses(el) {
     const dir = $(el).attr('href');
     if (dir === '#left') {
       body.toggleClass('show-left').removeClass('show-right');
@@ -19,7 +19,7 @@ export const susyOffCanvasToggle = {
     }
     return body.attr('class');
   },
-  toggleText (triggers) {
+  toggleText(triggers) {
     const left = $(triggers).filter('[href="#left"]');
     const right = $(triggers).filter('[href="#right"]');
     if (body.hasClass('show-left')) {
@@ -36,4 +36,6 @@ export const susyOffCanvasToggle = {
 };
 
 /* istanbul ignore next */
-$(() => { susyOffCanvasToggle.init($('.toggle')); });
+$(() => {
+  susyOffCanvasToggle.init($('.toggle'));
+});

@@ -21,8 +21,8 @@ webpackConf.plugins = [
     /static\/js\/(app|pages)$/
   ]),
   new webpack.ProvidePlugin({
-    '$': 'jquery',
-    'jQuery': 'jquery',
+    $: 'jquery',
+    jQuery: 'jquery',
     'window.jQuery': 'jquery',
     'root.jQuery': 'jquery'
   }),
@@ -35,28 +35,26 @@ module.exports = {
 
   // frameworks to use
   // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
-  frameworks: [ 'mocha', 'sinon-chai' ],
+  frameworks: ['mocha', 'sinon-chai'],
 
-  client: { mocha: { ui: 'bdd' }},
+  client: { mocha: { ui: 'bdd' } },
 
   // list of files / patterns to load in the browser
-  files: [
-    'test/js/index.js'
-  ],
+  files: ['test/js/index.js'],
 
   // list of files to exclude
   exclude: [],
 
   // preprocess matching files before serving them to the browser
   // https://npmjs.org/browse/keyword/karma-preprocessor
-  preprocessors: { 'test/js/index.js': [ 'webpack', 'sourcemap' ] },
+  preprocessors: { 'test/js/index.js': ['webpack', 'sourcemap'] },
 
   webpack: webpackConf,
 
   // test results reporter to use
   // possible values: 'dots', 'progress'
   // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-  reporters: [ 'dots', 'coverage' ],
+  reporters: ['dots', 'coverage'],
 
   coverageReporter: {
     reporters: [
@@ -64,7 +62,7 @@ module.exports = {
       { type: 'json', dir: 'jscov/' },
       { type: 'text' }
     ],
-    instrumenterOptions: { istanbul: { noCompact: true }}
+    instrumenterOptions: { istanbul: { noCompact: true } }
   },
 
   // results will be saved as $outputDir/$browserName.xml
