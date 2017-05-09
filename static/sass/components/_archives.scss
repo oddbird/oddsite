@@ -1,8 +1,12 @@
 // Archives
 // ========
 
-[data-module='project-history'] {
-  max-width: none;
+[data-module='project-feature'] {
+  max-width: 100%;
+
+  .content-block {
+    max-width: 100%;
+  }
 }
 
 .post-preview {
@@ -23,37 +27,39 @@
 .project-cover-image {
   @include extend('extend-full');
   display: block;
-  padding-bottom: size('double-gutter');
+  margin-bottom: size('gutter');
+
+  @include above('medium-page') {
+    margin-bottom: size('double-gutter');
+  }
 }
 
 .project-list-meta {
-  @include below('small-page') {
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  .content-block & {
+    @include above('medium-page') {
+      grid-column: col3-start / -1;
+      max-width: 100%;
+    }
   }
 }
 
 .project-list-links {
+  flex: 0 0 auto;
   margin-bottom: size('half-shim');
   margin-top: size('half-shim');
+}
 
-  @include below('small-page') {
-    order: 3;
-  }
-
-  @include above('small-page') {
-    float: right;
-  }
+.project-headlines {
+  flex: 0 0 1;
 }
 
 .project-list-title,
 .project-list-tagline {
-  @include center('full-content');
   margin-bottom: 0;
   margin-top: 0;
+  width: 100%;
 }
-
-.project-summary {
-  @include center('full-content');
-}
-

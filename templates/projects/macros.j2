@@ -57,49 +57,52 @@
   {% set link = ['/', page.slug, '/']|join('') if project.owner or project.case_study %}
   {% set link = link if project.case_study else (project.url or link or project.source) %}
 
-  <article data-module='project-feature'>
-    <h2 class="project-title">
-      <div class="project-name">
-        {{ utility.link_if(project.name, link) }}
-      </div>
-      {% if project.tagline %}
-        <div class="project-tagline">{{ project.tagline }}</div>
+  <article data-module='project-feature' class='grid-template'>
+    {{ layout.header_image(page, class='project-cover-image') }}
+
+    <div class="content-block">
+      <header class="project-list-meta">
+        <div class="project-headlines">
+          <h2 class="project-list-title project-title">
+            {{ utility.link_if(project.name, link) }}
+          </h2>
+          {% if project.tagline %}
+            <h3 class="project-list-tagline">{{ project.tagline }}</h3>
+          {% endif %}
+        </div>
+
+        <aside class="project-list-links">
+          {% if project.case_study %}
+            {% call content.link_button(link) %}
+              Read our case study
+            {% endcall %}
+          {% endif %}
+          {% if project.url or project.owner %}
+            {% call content.link_button(project.url or ['/', page.slug, '/']|join('')) %}
+              View app
+            {% endcall %}
+          {% endif %}
+          {% if project.source %}
+            {% call content.link_button(project.source) %}
+              View source
+            {% endcall %}
+          {% endif %}
+        </aside>
+
+        
+      </header>
+
+      {% if page.summary %}
+        <div class="project-list-summary project-summary">
+          {{ page.render_summary() }}
+        </div>
       {% endif %}
-    </h2>
-
-    {% if client %}
-      {{ for(client, project.years) }}
-    {% elif contributors %}
-      {{ who(contributors) }}
-    {% endif %}
-
-    {{ layout.header_image(page, class='extend-small') }}
-
-    {% if page.summary %}
-      <div>
-        {{ page.render_summary() }}
-
-        {% if project.case_study %}
-          {% call content.link_button(link) %}
-            Read our case study
-          {% endcall %}
-        {% endif %}
-        {% if project.url or project.owner %}
-          {% call content.link_button(project.url or ['/', page.slug, '/']|join('')) %}
-            View app
-          {% endcall %}
-        {% endif %}
-        {% if project.source %}
-          {% call content.link_button(project.source) %}
-            View source
-          {% endcall %}
-        {% endif %}
-      </div>
-    {% endif %}
+    </div>
 
     {% for quote in page.config.quotes %}
       {{ content.blockquote(quote.text, quote.name, quote.url, quote.role) }}
     {% endfor %}
+
   </article>
 {% endmacro %}
 
