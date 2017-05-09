@@ -18,7 +18,7 @@ tasks:
   - Project Architecture
   - Responsive Styles
 quotes:
-  - text: 'I consider <a href="/work/">Mozilla’s MozTrap</a> to be one of the best
+  - text: 'I consider <b>Mozilla’s MozTrap</b> to be one of the best
       open source test case management systems out there.'
     name: 'Frank O’Hara'
     role: 'MozTrap User'

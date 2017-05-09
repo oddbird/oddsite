@@ -45,7 +45,7 @@
     }
 
     .splash-image {
-      filter: blur(0) grayscale(40%);
+      filter: grayscale(40%);
       transform: translate3d(0, 0, 0) scale(1.05);
     }
 
@@ -54,13 +54,20 @@
       opacity: 1;
     }
   }
+
+  &:first-child {
+    .splash-client,
+    .splash-title {
+      padding-left: size('gutter') + size('shim');
+    }
+  }
 }
 
 .splash-image {
   @include stretch;
   background: no-repeat scroll left top;
   background-size: cover;
-  filter: blur(3px) grayscale(80%);
+  filter: grayscale(80%);
   transition: all 200ms;
 }
 
@@ -68,7 +75,7 @@
 .splash-title {
   @include contrasted('invert');
   margin: 0;
-  padding: 0 size('gutter') 0 size('gutter') + size('half-shim');
+  padding: 0 size('gutter');
   position: relative;
   transition: opacity 200ms;
   white-space: nowrap;

@@ -8,6 +8,7 @@
 {% macro rst(content=none, tag=none) %}
   {% if (tag == none) or (tag == 'start') %}
     <div class="content-block">
+      <div class="content-block-inner">
   {% endif %}
 
   {% if (tag == none) %}
@@ -16,8 +17,19 @@
   {% endif %}
 
   {% if (tag == none) or (tag == 'end') %}
+      </div>
     </div>
   {% endif %}
+{% endmacro %}
+
+
+{#
+  Dividers
+  --------
+#}
+
+{% macro divider() %}
+  <div class="separator extend-full"></div>
 {% endmacro %}
 
 

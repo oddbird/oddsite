@@ -19,7 +19,8 @@ quotes:
     name: 'BikeRumor'
     role: 'QuarqNet Review'
     url: 'https://www.bikerumor.com/2016/09/28/share-ride-real-time-quarq-qollector/'
-  - text: “QuarqNet captures the data and seamlessly synchronizes activities
+  - text: “<b>QuarqNet</b> captures the data
+      and seamlessly synchronizes activities
       with analysis sites like Strava, TrainingPeaks, and Today’s Plan.
       Athletes get unaltered, high-definition data
       and training log perfection.”

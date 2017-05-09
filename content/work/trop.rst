@@ -12,7 +12,7 @@ project:
     years: '2016'
     status: 'live'
 tasks:
-  - Wordpress Theme
+  - WordPress Theme
 quotes:
   - text: 'Having worked with a handful of web developers,
            you guys were by far the best, the nicest,

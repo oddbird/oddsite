@@ -51,9 +51,9 @@ blockquote {
     }
   }
 
-  @include above('medium-page') {
-    footer,
-    p {
+  footer,
+  p {
+    @include above('medium-page') {
       margin-top: 0;
 
       @supports not (display: grid) {
@@ -66,5 +66,13 @@ blockquote {
         grid-column: col2-start / -1;
       }
     }
+  }
+
+  footer {
+    font-size: 1rem;
+  }
+
+  cite {
+    font-style: normal;
   }
 }

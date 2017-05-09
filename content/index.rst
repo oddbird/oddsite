@@ -32,52 +32,52 @@ Software for Humans
   :slug: 'work/coachhub'
   :index: 1
 
+
+
+.. -------------------------------------
+.. callmacro:: content.macros.j2#divider
 .. callmacro:: projects/splash.macros.j2#splash_list
 
-
-.. ---------------------------------
+.. ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 .. callmacro:: content.macros.j2#rst
   :tag: 'start'
 
-.. Don't mess with typography...
-.. wrap:: div
+.. rstBlog refuses to render a header as the first RST content
+.. callmacro:: content.macros.j2#heading
+  :content: 'Small Team, Large Expertise'
+  :subhead: 'Partnering with funded startups and enterprise companies'
 
-  .. callmacro:: content.macros.j2#heading
-    :content: 'Small Team, Large Expertise'
-    :subhead: 'Perfect for funded startups, and enterprise augmentation'
+OddBird is a small team,
+made up of industry leaders
+across a range of design and code expertise,
+and working together for years
+with a tight-knit and collaborative process.
+We're able to give every project complete focus,
+putting the needs of your company and users first,
+while integrating design and development from start to finish.
+Whether you're looking for staff-augmentation,
+or a custom application,
+we provide *big agency skill,
+with the attention, communication, and agility
+of an internal team.*
 
-  Founded by a `Django core developer`_
-  and the `creator of Susy`_ responsive-layout framework,
-  we provide industry-leading expertise
-  on a small team –
-  completely focused on the needs of your company and users,
-  while integrating design and development
-  in an agile process.
-  *Big agency skill,
-  with the attention and agility
-  of an internal team.*
+.. callmacro:: content.macros.j2#link_button
+  :url: '/contact/'
 
-  .. _Django core developer: /birds/#bird-carl
-  .. _creator of Susy: /birds/#bird-miriam
-
-  .. callmacro:: content.macros.j2#link_button
-    :url: '/contact/'
-
-    Start a conversation
+  Start a conversation
 
 .. callmacro:: content.macros.j2#rst
   :tag: 'end'
-.. ---------------------------------
-
-
-.. callmacro:: content.macros.j2#get_quotes
-  :slug: 'work/moztrap'
-  :index: 1
+.. ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. callmacro:: content.macros.j2#get_quotes
   :slug: 'work/quarqnet'
   :index: 1
 
+
+
+.. -------------------------------------
+.. callmacro:: content.macros.j2#divider
 .. callmacro:: projects/splash.macros.j2#splash_list
   :slugs: [
     'open-source/susy',
@@ -86,11 +86,47 @@ Software for Humans
     'open-source/plone'
     ]
 
+.. ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. callmacro:: content.macros.j2#rst
+  :tag: 'start'
+
+Open Source Leadership
+----------------------
+
+Experts in Code Architecture & Tooling
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Founded by a `Django core developer`_
+and the `creator of Susy`_ responsive-layout framework,
+open-source software has always been central
+to the OddBird vision.
+Whether we're building tools for developers like ourselves,
+or third-party consumers,
+we keep the needs of real people
+at the center of everything we do.
+
+.. callmacro:: content.macros.j2#link_button
+  :url: '/contact/'
+
+  Hire us for a workshop or conference talk
+
+.. _Django core developer: /birds/#bird-carl
+.. _creator of Susy: /birds/#bird-miriam
+
+.. callmacro:: content.macros.j2#rst
+  :tag: 'end'
+.. ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 .. callmacro:: content.macros.j2#get_quotes
   :slug: 'open-source/susy'
   :index: 1
 
-.. ---------------------------------
+
+
+.. -------------------------------------
+.. callmacro:: content.macros.j2#divider
+
+.. ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 .. callmacro:: content.macros.j2#rst
   :tag: 'start'
 
@@ -127,8 +163,7 @@ provides a comprehensive introduction to Sass for beginners.
 
 .. callmacro:: content.macros.j2#rst
   :tag: 'end'
-.. ---------------------------------
-
+.. ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. callmacro:: content.macros.j2#blockquote
   :content: 'Miriam and Hugo have become some of the most notable
