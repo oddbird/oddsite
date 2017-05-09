@@ -19,8 +19,10 @@ code {
     color: color('action');
   }
 
-  a:hover & {
-    color: color('action-hover');
+  a:hover {
+    & {
+      color: color('action-hover');
+    }
   }
 }
 
