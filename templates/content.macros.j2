@@ -8,6 +8,7 @@
 {% macro rst(content=none, tag=none) %}
   {% if (tag == none) or (tag == 'start') %}
     <div class="content-block">
+      <div class="content-block-inner">
   {% endif %}
 
   {% if (tag == none) %}
@@ -16,8 +17,19 @@
   {% endif %}
 
   {% if (tag == none) or (tag == 'end') %}
+      </div>
     </div>
   {% endif %}
+{% endmacro %}
+
+
+{#
+  Dividers
+  --------
+#}
+
+{% macro divider() %}
+  <div class="separator extend-full"></div>
 {% endmacro %}
 
 
@@ -63,7 +75,8 @@
     {% if name or url or role %}
       <footer class="attribution">
       <cite>
-        —{{ utility.link_if(name, url) }}{% if role %}, {{ role }}{% endif %}
+        {% set display_name = name if role else utility.link_if(name, url) %}
+        —{{ display_name }}{% if role %}, {{ utility.link_if(role, url) }}{% endif %}
       </cite>
       </footer>
     {% endif %}
@@ -98,8 +111,16 @@
   Buttons
   -------
 #}
-{% macro link_button(url, rel=none) %}
-  <a href="{{ url }}" {{ utility.attr_if('rel', rel) }} class="btn">
+{% macro link_button(url, class=none) %}
+  {% set class = [class, 'btn']|join(' ') if class else 'btn' %}
+  <a href="{{ url }}" {% for k in kwargs %} {{ k }}="{{ kwargs[k] }}"{% endfor %} class="{{ class }}">
+    {{ caller() }}
+  </a>
+{% endmacro %}
+
+{% macro button(class=none) %}
+  {% set class = [class, 'btn']|join(' ') if class else 'btn' %}
+  <button {% for k in kwargs %} {{ k }}="{{ kwargs[k] }}"{% endfor %} class="{{ class }}">
     {{ caller() }}
   </a>
 {% endmacro %}

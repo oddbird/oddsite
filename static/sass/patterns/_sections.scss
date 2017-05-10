@@ -7,10 +7,12 @@
   max-width: size('full-content');
   padding: 0 size('gutter');
 
-  @include after('') {
-    border-top: size('border-thin') solid color('border-light');
-    display: block;
-    margin: size('double-gutter') 0;
+  & ~ & {
+    @include before('') {
+      border-top: size('border-thin') solid color('border-light');
+      display: block;
+      margin: size('double-gutter') 0;
+    }
   }
 }
 
@@ -22,6 +24,12 @@
   @include section-arrow;
   box-shadow: 0 2px 2px color('shadow');
   z-index: 2;
+
+  + [data-module] {
+    @include before('') {
+      display: none;
+    }
+  }
 }
 
 .preview {

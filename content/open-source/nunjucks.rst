@@ -1,5 +1,7 @@
 public: yes
 location: open-source
+image:
+  - src: 'projects/nunjucks.jpg'
 project:
   - name: 'Nunjucks'
     tagline: 'Sophisticated templating for JavaScript'

@@ -3,7 +3,7 @@ location: open-source
 image:
   - src: 'projects/accoutrement-legos.jpg'
 project:
-  - name: 'Sass Accoutrement'
+  - name: 'Accoutrement'
     tagline: 'Modular theme-configuration libraries'
     source: 'https://github.com/oddbird?utf8=%E2%9C%93&q=accoutrement&type=public'
     status: 'public'

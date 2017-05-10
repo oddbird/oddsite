@@ -2,12 +2,20 @@
 // =======
 
 .contact-intro {
-  @include micro-clearfix;
-  margin-bottom: size('gutter');
+  align-items: center;
+  display: flex;
+
+  .bird-face {
+    display: none;
+    flex: 0 0 auto;
+
+    @include above('small-page') {
+      display: block;
+    }
+  }
 
   p {
-    &:first-of-type {
-      @include text-shadow;
-    }
+    flex: 1 1 auto;
+    margin: 0;
   }
 }

@@ -18,10 +18,10 @@ tasks:
   - Project Architecture
   - Responsive Styles
 quotes:
-  - text: 'I consider MozTrap to be one of the best
+  - text: 'I consider <b>Mozilla’s MozTrap</b> to be one of the best
       open source test case management systems out there.'
     name: 'Frank O’Hara'
-    role: 'Software Developer'
+    role: 'MozTrap User'
 summary: |
   Mozilla's next-generation test case management system,
   MozTrap manages extensive test suites

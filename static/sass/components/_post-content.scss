@@ -8,20 +8,18 @@
 .content-block {
   @include center('medium-page');
   @include grid;
+  margin: size('double-gutter') auto;
 
   @supports not (display: grid) {
     max-width: size('full-content');
   }
+}
 
-  > * {
-    @supports (display: grid) {
-      grid-column: col1-start / -1;
+.content-block-inner {
+  grid-column: col1-start / -1;
 
-      @include above('medium-page') {
-        grid-column: col3-start / span 1;
-        max-width: size('full-content');
-      }
-    }
+  @include above('medium-page') {
+    grid-column: col3-start / span 1;
   }
 }
 
