@@ -135,32 +135,35 @@ Book: Jump Start Sass
 ---------------------
 
 .. image:: /static/images/pages/jssass.png
-   :class: extend-left size-quarter
+   :class: extend-left jssass-book-cover
 
-Sass bridges the gap between what CSS can offer
-and what we as web developers need in our daily routine.
-Using Sass, you can write your stylesheets
-in a more concise, dynamic, and readable way,
-and cut down many of the tedious repetitive tasks
-that come with writing vanilla CSS.
-Most importantly,
-Sass makes it easier to create web applications,
-takes some monotony and overhead out of writing CSS,
-and will save you time.
+.. wrap:: div
+  :class: jssass-book-summary
 
-This book,
-written by `Miriam Suzanne`_ and `Hugo Giraudel`_
-and published by `SitePoint`_,
-provides a comprehensive introduction to Sass for beginners.
+  Sass bridges the gap between what CSS can offer
+  and what we as web developers need in our daily routine.
+  Using Sass, you can write your stylesheets
+  in a more concise, dynamic, and readable way,
+  and cut down many of the tedious repetitive tasks
+  that come with writing vanilla CSS.
+  Most importantly,
+  Sass makes it easier to create web applications,
+  takes some monotony and overhead out of writing CSS,
+  and will save you time.
 
-.. _Miriam Suzanne: /birds/#bird-miriam
-.. _Hugo Giraudel: http://hugogiraudel.com/
-.. _SitePoint: https://www.sitepoint.com/premium/books/jump-start-sass
+  This book,
+  written by `Miriam Suzanne`_ and `Hugo Giraudel`_
+  and published by `SitePoint`_,
+  provides a comprehensive introduction to Sass for beginners.
 
-.. callmacro:: content.macros.j2#link_button
-  :url: '/contact/'
+  .. _Miriam Suzanne: /birds/#bird-miriam
+  .. _Hugo Giraudel: http://hugogiraudel.com/
+  .. _SitePoint: https://www.sitepoint.com/premium/books/jump-start-sass
 
-  Jump Start Your Project with OddBird
+  .. callmacro:: content.macros.j2#link_button
+    :url: '/contact/'
+
+    Jump Start Your Project with OddBird
 
 .. callmacro:: content.macros.j2#rst
   :tag: 'end'

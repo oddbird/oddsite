@@ -111,8 +111,16 @@
   Buttons
   -------
 #}
-{% macro link_button(url, rel=none) %}
-  <a href="{{ url }}" {{ utility.attr_if('rel', rel) }} class="btn">
+{% macro link_button(url, class=none) %}
+  {% set class = [class, 'btn']|join(' ') if class else 'btn' %}
+  <a href="{{ url }}" {% for k in kwargs %} {{ k }}="{{ kwargs[k] }}"{% endfor %} class="{{ class }}">
+    {{ caller() }}
+  </a>
+{% endmacro %}
+
+{% macro button(class=none) %}
+  {% set class = [class, 'btn']|join(' ') if class else 'btn' %}
+  <button {% for k in kwargs %} {{ k }}="{{ kwargs[k] }}"{% endfor %} class="{{ class }}">
     {{ caller() }}
   </a>
 {% endmacro %}

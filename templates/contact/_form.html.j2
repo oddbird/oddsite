@@ -1,5 +1,6 @@
 {% import 'forms.macros.j2' as form %}
 {% import 'utility.macros.j2' as utility %}
+{% import 'content.macros.j2' as content %}
 {% import "birds/utility.macros.j2" as birds %}
 
 
@@ -34,9 +35,9 @@
     ) }}
 
     <div class="form-actions">
-      <button type="submit" class="btn">
+      {% call content.button(type='submit') %}
         {{ module.submit or 'submit' }}
-      </button>
+      {% endcall %}
     </div>
   </form>
 </section>

@@ -89,3 +89,15 @@
 .splash-title {
   box-shadow: size('half-shim') size('half-shim') size('half-shim') color('shadow');
 }
+
+.jssass-book-cover {
+  float: left;
+  margin-right: size('pad');
+  max-width: 45%;
+}
+
+.jssass-book-summary {
+  @include above('small-page') {
+    padding-top: size('gutter');
+  }
+}

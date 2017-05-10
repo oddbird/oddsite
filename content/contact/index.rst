@@ -9,18 +9,22 @@ before:
     submit: 'Send!'
     next: 'contact/thanks/'
 summary: |
-  .. callmacro:: birds/utility.macros.j2#face
-    :author: 'miriam'
+  .. wrap:: div
+    :class: contact-intro
 
-  **We're always here and happy to talk** –
-  whether you have a project,
-  or a question,
-  or just want to say hi.
-  Send us a message
-  and `Miriam Suzanne`_, our co-founder,
-  will be in touch with you soon.
+    .. callmacro:: birds/utility.macros.j2#face
+      :author: 'miriam'
 
-  .. _Miriam Suzanne: /birds/#bird-miriam
+    **We're always happy to talk** –
+    whether you have a project in mind,
+    or just want to say hi.
+    Ask a question,
+    set up a (free) consultation,
+    or invite us to speak to your company or conference.
+    `Miriam Suzanne`_
+    will get back to you soon.
+
+    .. _Miriam Suzanne: /birds/#bird-miriam
 
 
 Start a Conversation
