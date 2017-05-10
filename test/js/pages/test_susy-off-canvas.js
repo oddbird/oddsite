@@ -1,22 +1,24 @@
 import { susyOffCanvasToggle } from 'js/pages/susy-off-canvas';
 
-describe('susyOffCanvasToggle', function () {
-  beforeEach(function () {
-    this.left = $('<a href="#left" class="toggle">show left</a>')
-      .appendTo('body');
-    this.right = $('<a href="#right" class="toggle">show right</a>')
-      .appendTo('body');
+describe('susyOffCanvasToggle', function() {
+  beforeEach(function() {
+    this.left = $('<a href="#left" class="toggle">show left</a>').appendTo(
+      'body'
+    );
+    this.right = $('<a href="#right" class="toggle">show right</a>').appendTo(
+      'body'
+    );
     this.body = $('body');
     susyOffCanvasToggle.init($('.toggle'));
   });
 
-  afterEach(function () {
+  afterEach(function() {
     this.body.removeClass('show-left show-right');
     this.left.remove();
     this.right.remove();
   });
 
-  it('toggles classes', function () {
+  it('toggles classes', function() {
     this.left.click();
 
     expect(this.body).to.have.class('show-left');
@@ -33,7 +35,7 @@ describe('susyOffCanvasToggle', function () {
     expect(this.body).not.to.have.class('show-right');
   });
 
-  it('toggles text', function () {
+  it('toggles text', function() {
     this.left.click();
 
     expect(this.left).to.have.text('hide left');
