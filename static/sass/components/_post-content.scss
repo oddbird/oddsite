@@ -9,9 +9,10 @@
   @include center('medium-page');
   @include grid;
   margin: size('double-gutter') auto;
+  max-width: size('full-content');
 
-  @supports not (display: grid) {
-    max-width: size('full-content');
+  @supports (display: grid) {
+    max-width: 100%;
   }
 }
 

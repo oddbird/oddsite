@@ -4,52 +4,6 @@
 {% import 'layout/macros.j2' as layout %}
 
 
-{% macro list(project, named_states=[]) %}
-<article class="project post-preview">
-
-  {{ cover(project.cover_image) }}
-
-  <header class="project-list-meta">
-    <aside class="project-list-links">
-      {% if project.url %}
-        {{ utility.link_if('Case Study', project.url, class='btn') }}
-      {% endif %}
-      {% if project.source %}
-        {{ utility.link_if('Source Code', project.source, class='btn') }}
-      {% endif %}
-    </aside>
-
-    <h2 class="project-list-title title-main">{{ project.name }}</h2>
-
-    {% if project.tagline %}
-      <h3 class="project-list-tagline title-sub">{{ project.tagline }}
-        {% if project.client %}
-          {{ for(project.client, project.years) }}
-        {% else %}
-          {{ who(project.who) }}
-        {% endif %}
-      </h3>
-    {% endif %}
-  </header>
-
-  {% if project.description or project.status %}
-    <p class="project-summary">
-      {{ project.description }}
-
-      {% if project.status %}
-        <em>{{ named_states[project.status] or project.status }}</em>
-      {% endif %}
-    </p>
-  {% endif %}
-
-  {% if project.quote %}
-    {{ content.blockquote(project.quote.text, project.quote.credit) }}
-  {% endif %}
-
-</article>
-{% endmacro %}
-
-
 {% macro feature(page) %}
   {% set client = page.config.client[0] if page.config.client else null %}
   {% set contributors = page.config.contributors if page.config.contributors else null %}
@@ -141,17 +95,4 @@
       </p>
     </div>
   {% endif %}
-{% endmacro %}
-
-
-
-{% macro cover(cover_image) %}
-
-  {% set coverimage = cover_image[0].src if cover_image %}
-  {% set coverimageurl = coverimage if '://' in coverimage else [canonical_url, '../static/images/blog/', coverimage]|join('') %}
-
-  {% if coverimage %}
-    <img src="{{ coverimageurl }}" class="project-cover-image expand-large">
-  {% endif %}
-
 {% endmacro %}

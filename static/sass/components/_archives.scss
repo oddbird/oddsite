@@ -1,29 +1,6 @@
 // Archives
 // ========
 
-.project-feature {
-  max-width: 100%;
-
-  .content-block {
-    max-width: 100%;
-  }
-}
-
-.post-preview {
-  @include after('') {
-    @include center('full-content');
-    border-bottom: 1px solid color('border-light');
-    display: block;
-    margin-bottom: size('gutter');
-    padding-bottom: size('gutter');
-
-    @include above('small-page') {
-      margin-bottom: size('spacer');
-      padding-bottom: size('spacer');
-    }
-  }
-}
-
 .project-cover-image {
   @include extend('extend-full');
   display: block;
