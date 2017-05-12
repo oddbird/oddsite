@@ -10,7 +10,7 @@ project:
     owner: yes
 contributors:
   - author: 'oddbird'
-    role: 'creator'
+    role: 'creators'
 summary: |
   An automatic style-guide generator,
   built on top of SassDoc,

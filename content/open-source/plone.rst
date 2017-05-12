@@ -1,5 +1,7 @@
 public: yes
 location: open-source
+image:
+  - src: 'projects/plone.jpg'
 project:
   - name: 'Plone'
     tagline: 'Enterprise web content management system'
@@ -9,7 +11,7 @@ project:
     owner: no
 contributors:
   - author: 'david'
-    role: 'core developer, 2008–2014'
+    role: 'core developer'
 summary: |
   Plone is a mature content management platform
   written in Python

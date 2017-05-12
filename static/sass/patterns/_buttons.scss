@@ -6,6 +6,7 @@
   &,
   #{$link} {
     @include font-family('alt');
+    align-items: center;
     background-color: color('background');
     background-image: none; // remove link underline when styling as button...
     border-color: color('action-border');
@@ -13,7 +14,7 @@
     border-style: solid;
     border-width: 1px;
     color: color('action');
-    display: inline-block;
+    display: inline-flex;
     font-weight: bold;
     padding: size('half-shim') 1rem;
     text-decoration: none;
@@ -30,10 +31,9 @@
     }
   }
 
-  @include after(' »') {
-    display: inline-block;
+  @include after('»') {
     font-weight: normal;
-    padding-left: size('quarter-shim');
+    padding-left: size('half-shim');
     transition: transform 250ms;
   }
 

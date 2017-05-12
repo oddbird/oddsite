@@ -35,7 +35,9 @@
 
   <main data-region="main" class="{% if config.pageclasses %}{{ config.pageclasses }} {% endif %}{% if config.image %}has-image{% else %}no-image{% endif %}">
     {% block body %}{% endblock body %}
+
     {% include 'contact/_cta.html.j2' %}
+    <div class="separator"></div>
   </main>
 
   <footer data-region="footer">

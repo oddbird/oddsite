@@ -3,6 +3,9 @@ location: work
 grid_template: true
 image:
   - src: 'projects/trig.jpg'
+    type: 'hero'
+  - src: 'projects/trig-splash.jpg'
+    type: 'splash'
 client:
   - name: 'SRAM'
     url: 'http://sram.com/'
@@ -22,11 +25,12 @@ quotes:
       changed the playing field for power measurement,
       this new technology is going to change the way people watch races.'
     name: 'Triathlon Magazine'
+    role: 'Quarq Race Intelligence Review'
     url: 'http://triathlonmagazine.ca/feature/introducing-quarq-race-intelligence-quollectors/'
-  - text: 'Seguimiento GPS de atletas en IronMan Kona
-      gracias a Quarq Race Intelligence.'
+  - text: 'Seguimiento GPS de atletas en <b>IronMan Kona</b>
+      gracias a <b>Quarq Race Intelligence</b>.'
     name: 'Eduardo Mateos'
-    role: 'QRI user'
+    role: 'Quarq Race Intelligence User'
 summary: |
   Quarq Race Intelligence captures and interprets
   race performance and state-of-play information,
