@@ -52,7 +52,7 @@ OddBird is a small team,
 made up of industry leaders
 across a range of design and code expertise,
 and working together for years
-with a tight-knit and collaborative process.
+with a tight-knit, agile, and collaborative process.
 We're able to give every project complete focus,
 putting the needs of your company and users first,
 while integrating design and development from start to finish.
