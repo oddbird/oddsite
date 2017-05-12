@@ -21,6 +21,16 @@ contact:
 
 events:
 
+  - venue: 'Sass Hack Denver'
+    url: 'https://www.meetup.com/Sass-Hack-Denver/events/239687418/'
+    date: ['6', '1', '2017']
+    adr:
+      city: 'Denver'
+      state: 'CO'
+    who:
+      - author: 'miriam'
+        title: 'Code Patterns for Pattern Making'
+
   - venue: 'Front-End Camp'
     url: 'http://chicagocamps.org/events/2017/front-end-camp/'
     date: ['6', '3', '2017']
