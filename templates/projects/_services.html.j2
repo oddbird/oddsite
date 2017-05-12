@@ -1,16 +1,21 @@
 {% import 'utility.macros.j2' as utility %}
 
 <section data-module="services">
-{% for group in config.services %}
-  <div>
-    <h2>
-      {{ group.title}}
-    </h2>
+
+  {% if module.title %}
+    <h2>{{ module.title }}</h2>
+  {% endif %}
+
+  {% for group in config.services %}
+    {% if group.title %}
+      <h3>{{ group.title }}</h3>
+    {% endif %}
+
     <ul>
       {% for item in group.data %}
         <li>{{ item }}</li>
       {% endfor %}
     </ul>
-  </div>
-{% endfor %}
+  {% endfor %}
+
 </section>

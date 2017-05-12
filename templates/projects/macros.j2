@@ -4,38 +4,6 @@
 {% import 'layout/macros.j2' as layout %}
 
 
-{% macro list(project, named_states=[]) %}
-<article>
-  <h3>
-    {{ utility.link_if(project.name, project.url) }}
-    {% if project.source %}
-      ({{ utility.link_if('source code', project.source) }})
-    {% endif %}
-  </h3>
-
-  {% if project.tagline %}
-    <h4>{{ project.tagline }}</h4>
-  {% endif %}
-
-  {% if project.client %}
-    {{ for(project.client, project.years) }}
-  {% else %}
-    {{ who(project.who) }}
-  {% endif %}
-
-  {% if project.description or project.status %}
-    <p>
-      {{ project.description }}
-
-      {% if project.status %}
-        <em>{{ named_states[project.status] or project.status }}</em>
-      {% endif %}
-    </p>
-  {% endif %}
-</article>
-{% endmacro %}
-
-
 {% macro feature(page) %}
   {% set client = page.config.client[0] if page.config.client else null %}
   {% set contributors = page.config.contributors if page.config.contributors else null %}
@@ -43,49 +11,53 @@
   {% set link = ['/', page.slug, '/']|join('') if project.owner or project.case_study %}
   {% set link = link if project.case_study else (project.url or link or project.source) %}
 
-  <article data-module='project-feature'>
-    <h2 class="project-title">
-      <div class="project-name">
-        {{ utility.link_if(project.name, link) }}
-      </div>
-      {% if project.tagline %}
-        <div class="project-tagline">{{ project.tagline }}</div>
+  <article class='project-feature grid-template'>
+    {{ layout.header_image(page, class='project-cover-image') }}
+
+    {% call content.rst() %}
+      <header class="project-list-meta">
+        <div class="project-headlines">
+          <h2 class="project-list-title project-title">
+            {{ utility.link_if(project.name, link) }}
+          </h2>
+          {% if project.tagline %}
+            <h3 class="project-list-tagline">{{ project.tagline }}</h3>
+          {% endif %}
+        </div>
+
+        <aside class="project-list-links">
+          {% if project.case_study %}
+            {% call content.link_button(link) %}
+              Read our case study
+            {% endcall %}
+          {% endif %}
+          {% if project.url or project.owner %}
+            {% call content.link_button(project.url or ['/', page.slug, '/']|join('')) %}
+              View app
+            {% endcall %}
+          {% endif %}
+          {% if project.source %}
+            {% call content.link_button(project.source) %}
+              View source
+            {% endcall %}
+          {% endif %}
+        </aside>
+
+
+      </header>
+
+      {% if page.summary %}
+        <div class="project-list-summary project-summary">
+          {{ page.render_summary() }}
+        </div>
       {% endif %}
-    </h2>
-
-    {% if client %}
-      {{ for(client, project.years) }}
-    {% elif contributors %}
-      {{ who(contributors) }}
-    {% endif %}
-
-    {{ layout.header_image(page, class='extend-small') }}
-
-    {% if page.summary %}
-      <div>
-        {{ page.render_summary() }}
-
-        {% if project.case_study %}
-          {% call content.link_button(link) %}
-            Read our case study
-          {% endcall %}
-        {% endif %}
-        {% if project.url or project.owner %}
-          {% call content.link_button(project.url or ['/', page.slug, '/']|join('')) %}
-            View app
-          {% endcall %}
-        {% endif %}
-        {% if project.source %}
-          {% call content.link_button(project.source) %}
-            View source
-          {% endcall %}
-        {% endif %}
-      </div>
-    {% endif %}
+    {% endcall %}
 
     {% for quote in page.config.quotes %}
       {{ content.blockquote(quote.text, quote.name, quote.url, quote.role) }}
     {% endfor %}
+
+    {{ content.divider()}}
   </article>
 {% endmacro %}
 
