@@ -57,10 +57,10 @@
   {% set link = ['/', page.slug, '/']|join('') if project.owner or project.case_study %}
   {% set link = link if project.case_study else (project.url or link or project.source) %}
 
-  <article data-module='project-feature' class='grid-template'>
+  <article class='project-feature grid-template'>
     {{ layout.header_image(page, class='project-cover-image') }}
 
-    <div class="content-block">
+    {% call content.rst() %}
       <header class="project-list-meta">
         <div class="project-headlines">
           <h2 class="project-list-title project-title">
@@ -89,7 +89,7 @@
           {% endif %}
         </aside>
 
-        
+
       </header>
 
       {% if page.summary %}
@@ -97,12 +97,13 @@
           {{ page.render_summary() }}
         </div>
       {% endif %}
-    </div>
+    {% endcall %}
 
     {% for quote in page.config.quotes %}
       {{ content.blockquote(quote.text, quote.name, quote.url, quote.role) }}
     {% endfor %}
 
+    {{ content.divider()}}
   </article>
 {% endmacro %}
 
