@@ -1,0 +1,9 @@
+<section data-module='packages'>
+
+  {% for package in config.packages %}
+    <h2>{{ package.title|safe }}</h2>
+    <h3>{{ package.subtitle|safe }}</h3>
+    <p>{{ package.body|safe }}</p>
+  {% endfor %}
+
+</section>
