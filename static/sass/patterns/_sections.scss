@@ -14,6 +14,12 @@
       margin: size('double-gutter') 0;
     }
   }
+
+  & ~ [data-module='rst-author'] {
+    @include before('') {
+      margin: 0;
+    }
+  }
 }
 
 .grid-template {
