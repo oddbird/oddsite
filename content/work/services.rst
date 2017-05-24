@@ -107,7 +107,7 @@ planning:
       describing the relationships will help guide development and keep
       the whole team on the same page.
   - title: 'Interactive Wireframe'
-    icon: 'wireframe'
+    icon: 'interact'
     text: |
       A basic, interactive design of the application, showing the movement
       of users through core interactions defined in the User Stories. We’ll
