@@ -2,7 +2,52 @@ public: yes
 location: work
 grid_template: true
 headline:
-  - tagline: 'Launch your idea quickly'
+  - title: Our Packages and Services
+    tagline: 'We will help you launch your idea quickly'
+after:
+  - include: 'projects/_process.html.j2'
+    title: 'The OddBird Process is...'
+  - include: 'projects/_services.html.j2'
+    title: 'Our Services'
+process:
+  - title: 'Lean <i>&</i> Agile'
+    body: |
+      We use a lean and agile process to deploy & integrate
+      new functionality frequently, aiming to deliver usable product
+      launches as early and often as possible.
+  - title: 'Transparent <i>&</i> Interactive'
+    body: |
+      We encourage clients to stay closely connected
+      with the daily progress,
+      offering frequent feedback and re-prioritization via Pivotal Tracker.
+  - title: 'Accessible <i>&</i> Responsive'
+    body: |
+      We use the accessible open web stack:
+      semantic HTML5, unobtrusive JavaScript, and advanced CSS –
+      backed by Python & Django on the server.
+services:
+  - title: 'Our Services:'
+    data:
+      - 'Custom web software design and development'
+      - 'Web best practice, code architecture, and team process development'
+      - 'Marketing and crowdfunding consultation'
+      - 'Content strategy and information architecture'
+      - 'User testing and continuous integration'
+      - 'Responsive design and development'
+      - 'User experience and interface design'
+      - 'Automated, living style guides'
+      - 'Brand design and documentation'
+  - title: 'We Have Partnered With:'
+    data:
+      - 'Educators'
+      - 'HIPAA-compliant wellness providers'
+      - 'Non-profits and community organizations'
+      - 'Professional gear manufacturers'
+      - 'E-commerce startups'
+      - 'Software companies'
+      - 'Urban planners'
+      - 'Data analysts'
+      - 'Theaters, writers, and other artists'
 planning:
   - title: 'Project Overview'
     icon: 'map'
@@ -120,7 +165,7 @@ Along the way, we’ll deliver:
 
 
 .. callmacro:: content.macros.j2#icon_block
-  :slug: 'work/packages'
+  :slug: 'work/services'
   :data: 'planning'
 
 

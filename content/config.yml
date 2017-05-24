@@ -449,7 +449,12 @@ events_past:
 
 nav:
   - text: 'work'
-    url: '/work/'
+    subnav:
+      - text: 'case-studies'
+        display_text: 'case studies'
+        url: '/work/'
+      - text: 'services'
+        url: '/work/services'
   - text: 'open-source'
     display_text: 'open source'
     url: '/open-source/'

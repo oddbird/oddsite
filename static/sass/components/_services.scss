@@ -1,0 +1,29 @@
+// Services Content
+// ================
+
+
+.services,
+.process {
+  margin: size('gutter') auto;
+  max-width: 100%;
+  padding: 0 size('gutter');
+}
+
+.services {
+  @include above('small-page') {
+    display: grid;
+    grid-gap: size('double-gutter');
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 80vw;
+  }
+}
+
+.process {
+  ol {
+    @include above('small-page') {
+      display: grid;
+      grid-gap: size('double-gutter');
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}
