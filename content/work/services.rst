@@ -5,6 +5,7 @@ grid_template: true
 headline:
   - title: 'Packages and Services'
     tagline: 'Helping you launch your idea quickly'
+    type: 'Client Work'
 after:
   - include: 'projects/_process.html.j2'
     title: 'The OddBird Process is...'
@@ -29,15 +30,22 @@ process:
 services:
   - title: 'Our Services:'
     data:
-      - 'Custom web software design and development'
-      - 'Web best practice, code architecture, and team process development'
-      - 'Marketing and crowdfunding consultation'
-      - 'Content strategy and information architecture'
-      - 'User testing and continuous integration'
-      - 'Responsive design and development'
-      - 'User experience and interface design'
-      - 'Automated, living style guides'
-      - 'Brand design and documentation'
+      - Custom web app design & development
+      - Django, Sass, & Python expertise
+      - Agile project management
+      - Web best practices
+      - Brand & logo design
+      - User experience design
+      - Responsive interface design
+      - Content strategy
+      - Information architecture
+      - 100% test coverage
+      - Maintainable & documented code
+      - Automated pattern libraries
+      - Usability and concept testing
+      - WCAG accessibility testing
+      - Content strategy & marketing consultation
+      - Developer training workshops
   - title: 'We Have Partnered With:'
     data:
       - 'Educators'
@@ -57,7 +65,7 @@ pitch:
       requirements of the project. We'll work with you to gain an understand
       of your users and the core features that define your web app.
   - title: 'Interactive Mockup'
-    icon: 'map'
+    icon: 'mockup'
     text: |
       Beautiful designs of the application showing core features as defined
       in the Project Summary. Highly designed, interactive visualizations
@@ -99,7 +107,7 @@ planning:
       describing the relationships will help guide development and keep
       the whole team on the same page.
   - title: 'Interactive Wireframe'
-    icon: 'site-map'
+    icon: 'wireframe'
     text: |
       A basic, interactive design of the application, showing the movement
       of users through core interactions defined in the User Stories. We’ll
@@ -109,7 +117,7 @@ planning:
       useful for a development team to kick-start the full production
       process when you take that next step.
   - title: 'Design/Development Estimate'
-    icon: 'site-map'
+    icon: 'estimate'
     text: |
       We’ll estimate each User Story individually, providing you with an
       itemized estimate, organized into phases when appropriate. We’ll
