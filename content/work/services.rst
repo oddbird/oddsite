@@ -3,8 +3,8 @@ location: work
 pageclasses: services-layout
 grid_template: true
 headline:
-  - title: Our Packages and Services
-    tagline: 'We will help you launch your idea quickly'
+  - title: 'Packages and Services'
+    tagline: 'Helping you launch your idea quickly'
 after:
   - include: 'projects/_process.html.j2'
     title: 'The OddBird Process is...'
@@ -44,12 +44,12 @@ services:
       - 'HIPAA-compliant wellness providers'
       - 'Non-profits and community organizations'
       - 'Professional gear manufacturers'
-      - 'E-commerce startups'
-      - 'Software companies'
+      - 'Startups & enterprise companies'
       - 'Urban planners'
       - 'Data analysts'
+      - 'Software companies'
       - 'Theaters, writers, and other artists'
-package1:
+pitch:
   - title: 'Project Summary'
     icon: 'map'
     text: |
@@ -115,6 +115,27 @@ planning:
       itemized estimate, organized into phases when appropriate. We’ll
       work with you to add, remove, and rearrange features to find the
       right balance of functionality and budget.
+summary: |
+  **OddBird is a full-stack design & development agency**,
+  ready to help take your project `from concept to launch`_ –
+  with agile project management,
+  branding and content strategy,
+  interface and user-experience design,
+  and well-architected front & back-end development
+  with 100% test coverage,
+  automated pattern libraries,
+  and usability/accessibility testing.
+
+  The full design & development costs will depend on your project,
+  but the packages below will help get you started!
+
+  .. callmacro:: content.macros.j2#link_button
+    :url: '/contact/'
+    :class: 'section-end'
+
+    Get started with a free consultation
+
+  .. _from concept to launch: ../
 
 
 OddBird Packages
@@ -123,11 +144,11 @@ OddBird Packages
 .. callmacro:: content.macros.j2#rst
   :tag: 'start'
 
-Package 1 - $4,000 (flat fee)
------------------------------
+Interactive Mockups
+-------------------
 
-Interactive Mockups for Pitch Decks
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+``$4000`` – great for a pitch deck or proof-of-concept
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Do you need a beautiful mockup of your web app for your pitch deck, to raise
 your first or second round of funding?
@@ -145,7 +166,7 @@ investors. That includes:
 
 .. callmacro:: content.macros.j2#icon_block
   :slug: 'work/services'
-  :data: 'package1'
+  :data: 'pitch'
 
 
 .. callmacro:: content.macros.j2#rst
@@ -156,14 +177,15 @@ investors. That includes:
   :url: '/contact/'
   :class: 'section-end'
 
-  Learn more about this package
+  Contact us to learn more
 
 
-Package 2 - $8,000 (flat fee)
------------------------------
 
-Full Project Discovery, Planning, and Development Estimate
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Project Discovery & Planning, with Development Estimate
+-------------------------------------------------------
+
+``$8,000`` – everything you need to start development
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Have you raised your first round of funding and need a design & development
 partner to help make your brilliant idea a reality? Or do you need help
@@ -195,7 +217,7 @@ Along the way, we’ll deliver:
   :url: '/contact/'
   :class: 'section-end'
 
-  Learn more about this package
+  Contact us to learn more
 
 .. callmacro:: content.macros.j2#rst
   :tag: 'end'
