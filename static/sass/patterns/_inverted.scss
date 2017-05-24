@@ -5,6 +5,12 @@
   background-color: color('invert');
   color: color('background');
 
+  + .separator {
+    @include after(null) {
+      display: none;
+    }
+  }
+
   a {
     &,
     #{$link}  {
