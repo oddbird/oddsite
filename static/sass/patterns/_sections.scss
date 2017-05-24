@@ -32,6 +32,11 @@
   }
 }
 
+// used when going back and forth between content-blocks and other elements
+.section-end {
+  margin-bottom: size('double-gutter');
+}
+
 .preview {
   margin: size('double-gutter') auto;
 }

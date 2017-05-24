@@ -1,5 +1,6 @@
 public: yes
 location: work
+pageclasses: services-layout
 grid_template: true
 headline:
   - title: Our Packages and Services
@@ -48,6 +49,22 @@ services:
       - 'Urban planners'
       - 'Data analysts'
       - 'Theaters, writers, and other artists'
+package1:
+  - title: 'Project Summary'
+    icon: 'map'
+    text: |
+      Your chance to provide a general sense of the goals, scope, and
+      requirements of the project. We'll work with you to gain an understand
+      of your users and the core features that define your web app.
+  - title: 'Interactive Mockup'
+    icon: 'map'
+    text: |
+      Beautiful designs of the application showing core features as defined
+      in the Project Summary. Highly designed, interactive visualizations
+      of your web app that represent the content layout and demonstrate
+      basic features. Colors and fonts will be based on the existing brand
+      or an accessible placeholder brand. (Full brand identity development
+      process not included, but available upon request.)
 planning:
   - title: 'Project Overview'
     icon: 'map'
@@ -122,20 +139,22 @@ interactive mockups as a proof-of-concept for your idea. Perfect for investor
 and B2B slide decks and for getting early buy-in from stakeholders and
 investors. That includes:
 
-**Project Summary:** Your chance to provide a general sense of the goals,
-scope, and requirements of the project. We'll work with you to gain an
-understand of your users and the core features that define your web app.
+.. callmacro:: content.macros.j2#rst
+  :tag: 'end'
 
-**Interactive Mockup:** Beautiful designs of the application showing core
-features as defined in the Project Summary. Highly designed, interactive
-visualizations of your web app that represent the content layout and
-demonstrate basic features. Colors and fonts will be based on the existing
-brand or an accessible placeholder brand. (Full brand identity development
-process not included, but available upon request.)
+
+.. callmacro:: content.macros.j2#icon_block
+  :slug: 'work/services'
+  :data: 'package1'
+
+
+.. callmacro:: content.macros.j2#rst
+  :tag: 'start'
 
 
 .. callmacro:: content.macros.j2#link_button
   :url: '/contact/'
+  :class: 'section-end'
 
   Learn more about this package
 
@@ -174,8 +193,11 @@ Along the way, we’ll deliver:
 
 .. callmacro:: content.macros.j2#link_button
   :url: '/contact/'
+  :class: 'section-end'
 
   Learn more about this package
 
 .. callmacro:: content.macros.j2#rst
   :tag: 'end'
+
+
