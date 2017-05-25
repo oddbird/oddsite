@@ -65,7 +65,7 @@ pitch:
       requirements of the project. We'll work with you to gain an
       understanding of your users and the core features that define
       your web app.
-- title: 'Interactive Mockup'
+  - title: 'Interactive Mockup'
     icon: 'mockup'
     text: |
       Beautiful designs of the application showing core features as defined
