@@ -1,5 +1,6 @@
 public: yes
 location: case-studies
+pageclasses: work-layout
 grid_template: true
 image:
   - src: 'projects/moztrap.jpg'

@@ -1,5 +1,6 @@
 public: no
 location: case-studies
+pageclasses: work-layout
 grid_template: true
 image:
   - src: 'projects/emmys.jpg'
