@@ -19,6 +19,7 @@ summary: |
     whether you have a project in mind,
     or just want to say hi.
     Ask a question,
+    inquire about our packages,
     set up a (free) consultation,
     or invite us to speak to your company or conference.
     `Miriam Suzanne`_
