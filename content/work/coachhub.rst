@@ -1,5 +1,5 @@
 public: yes
-location: work
+location: case-studies
 grid_template: true
 image:
   - src: 'projects/coachhub.jpg'

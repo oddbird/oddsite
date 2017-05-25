@@ -1,5 +1,5 @@
 public: no
-location: work
+location: case-studies
 grid_template: true
 client:
   - name: 'Craftisan'

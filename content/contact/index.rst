@@ -26,7 +26,7 @@ summary: |
     will get back to you soon.
 
     .. _our packages: /work/services/
-    .. _speak to your company or conference: http://oddbird.net/speaking/
+    .. _speak to your company or conference: /speaking/
     .. _Miriam Suzanne: /birds/#bird-miriam
 
 

@@ -1,5 +1,5 @@
 public: yes
-location: projects
+location: case-studies
 headline:
   - title: 'Custom Web Software'
     tagline: 'Solving real problems for real users…'

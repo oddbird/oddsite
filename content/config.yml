@@ -454,7 +454,7 @@ nav:
         display_text: 'case studies'
         url: '/work/'
       - text: 'services'
-        url: '/work/services'
+        url: '/work/services/'
   - text: 'open-source'
     display_text: 'open source'
     url: '/open-source/'

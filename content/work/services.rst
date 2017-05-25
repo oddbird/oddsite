@@ -1,5 +1,5 @@
 public: yes
-location: work
+location: services
 pageclasses: services-layout
 grid_template: true
 headline:
@@ -21,12 +21,14 @@ process:
     body: |
       We encourage clients to stay closely connected
       with the daily progress,
-      offering frequent feedback and re-prioritization via Pivotal Tracker.
+      offering frequent feedback and re-prioritization via
+      <a href="http://www.pivotaltracker.com/">Pivotal Tracker</a>.
   - title: 'Accessible <i>&</i> Responsive'
     body: |
       We use the accessible open web stack:
       semantic HTML5, unobtrusive JavaScript, and advanced CSS –
-      backed by Python & Django on the server.
+      backed by <a href="https://www.python.org/">Python</a> &
+      <a href="https://www.djangoproject.com/">Django</a> on the server.
 services:
   - title: 'Our Services:'
     data:
@@ -96,17 +98,17 @@ planning:
       of a single user. What are they trying to do, and why? The final list
       represents all of the ways that a user will interact with the
       application. The final development estimate will be itemized by story,
-      making it easier to set priorities, and your budget for each phase
-      of the project.
+      making it easier to set your priorities and budget for each phase of the
+      project.
   - title: 'Data Model/Glossary'
     icon: 'site-map'
     text: |
       What are the core concepts/objects around which the application is
       built? These will be the models. What are the relationships between
       the models? What data attributes does each model have, and what is
-      the data-type for each attribute? Giving everything a name, and
-      describing the relationships will help guide development and keep
-      the whole team on the same page.
+      the data-type for each attribute? Giving everything a name and
+      describing the relationships will help guide development, and keep
+      the entire team on the same page.
   - title: 'Interactive Wireframe'
     icon: 'interact'
     text: |
@@ -144,7 +146,7 @@ summary: |
 
     Get started with a free consultation
 
-  .. _from concept to launch: ../
+  .. _from concept to launch: /work/
 
 
 OddBird Packages
@@ -166,8 +168,8 @@ This package is designed to help you quickly experiment with features and
 demonstrate your concept to investors. We won’t take you through the full
 process for planning and estimating a project, just enough to design hi-fi,
 interactive mockups as a proof-of-concept for your idea. Perfect for investor
-and B2B slide decks and for getting early buy-in from stakeholders and
-investors. That includes:
+and B2B slide decks and for receiving early buy-in from stakeholders and
+investors:
 
 .. callmacro:: content.macros.j2#rst
   :tag: 'end'
@@ -193,7 +195,7 @@ investors. That includes:
 Project Discovery & Planning, with Development Estimate
 -------------------------------------------------------
 
-``$8,000`` – everything you need to start development
+``$8000`` – everything you need to start development
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Have you raised your first round of funding and need a design & development

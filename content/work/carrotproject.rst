@@ -1,5 +1,5 @@
 public: no
-location: work
+location: case-studies
 grid_template: true
 image:
   - src: 'projects/carrot.jpg'
