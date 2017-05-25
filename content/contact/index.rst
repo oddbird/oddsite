@@ -19,12 +19,14 @@ summary: |
     whether you have a project in mind,
     or just want to say hi.
     Ask a question,
-    inquire about our packages,
-    set up a (free) consultation,
-    or invite us to speak to your company or conference.
+    inquire about `our packages`_,
+    set up a free consultation,
+    or invite us to `speak to your company or conference`_.
     `Miriam Suzanne`_
     will get back to you soon.
 
+    .. _our packages: /work/services/
+    .. _speak to your company or conference: http://oddbird.net/speaking/
     .. _Miriam Suzanne: /birds/#bird-miriam
 
 
