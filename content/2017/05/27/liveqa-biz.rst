@@ -6,16 +6,11 @@ image:
   - src: 'blog/2017/liveqa-biz/desk-mobile.jpg'
 summary: |
   Are you a startup founder
-  looking to develop a new web app
+  looking to develop a new web app,
   or a company interested in expanding your web services?
   Here's your chance
   to ask all those questions
   that keep you up at night.
-
-  .. callmacro:: content.macros.j2#link_button
-    :url: 'http://friends.oddbird.net'
-
-    Join the channel for our Q&A
 
 
 Event: Live Q&A with OddBird
@@ -31,6 +26,21 @@ Location: `OddFriends Slack`_
 
   <br/>
 
+OddBird is holding an open question and answer session
+on a free slack channel
+to talk with you about
+developing a web app
+from start to finish – the decisions you need to make
+about team and technology and testing,
+budget and development costs,
+and how to build a user-base
+without relying on "viral" mysticism.
+**Join channel #q-a on the OddBird Friends Slack.**
+
+.. callmacro:: content.macros.j2#link_button
+  :url: 'http://friends.oddbird.net'
+
+  Join the channel for our Q&A
 
 Questions like:
 ...............
@@ -45,7 +55,7 @@ Questions like:
 
 It's your hour.
 What do you want to know,
-from a web-product experts in the field?
+from web-product experts in the field?
 
 Who Are These Experts?
 ......................
@@ -60,33 +70,32 @@ and huge enterprise companies
 through the web app development process —
 from branding and naming
 to content strategy and information architecture
-to project estimatation and MVP.
+to project estimation and MVP.
 Recently, one of our clients' companies
 was acquired!
-Feel free to check out the `CoachHub`_ web app
-
-.. _coachhub: /work/coachhub/
-
+Feel free to check out the CoachHub web app
 and many other samples of our `work`_.
 
 .. _work: /work/
 
 Tips to Save Money on Development
----------------------------------
+.................................
 
 1. If you don't have the budget
 to develop a full MVP or even a prototype
 of your web application,
-one option is to start with a hi-def mockup.
+one option is to start with a hi-fidelity mockup.
 Mockups look great in a professional pitch
 and take a fraction of the time and money to create.
 
-2. Considering hiring a user experience designer
+2. Consider hiring a user experience designer
 to create an interactive mockup
-in Adobe Xd or Invision
+in Adobe Xd or InVision,
 and without paying for a single line of code,
 you can rapidly test your ideas with users
 and update the features to fit their needs.
+
+**Join channel #q-a on the OddBird Friends Slack.**
 
 .. callmacro:: content.macros.j2#link_button
   :url: 'http://friends.oddbird.net'
