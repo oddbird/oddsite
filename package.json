@@ -60,7 +60,7 @@
     "mathsass": "0.9.5",
     "mocha": "3.2.0",
     "node-object-hash": "1.2.0",
-    "node-sass": "4.5.0",
+    "node-sass": "4.5.3",
     "phantomjs-prebuilt": "2.1.14",
     "postcss-loader": "1.3.1",
     "prettier": "1.1.0",
