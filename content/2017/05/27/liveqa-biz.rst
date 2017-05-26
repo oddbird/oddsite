@@ -6,28 +6,31 @@ image:
   - src: 'blog/2017/liveqa-biz/desk-mobile.jpg'
 summary: |
   Are you a startup founder
-looking to develop a new web app
-or a company interested in expanding your web services?
-Here's your chance
-to ask all those questions
-that keep you up at night.
+  looking to develop a new web app
+  or a company interested in expanding your web services?
+  Here's your chance
+  to ask all those questions
+  that keep you up at night.
+
+  .. callmacro:: content.macros.j2#link_button
+    :url: 'http://friends.oddbird.net'
+
+    Join the channel for our Q&A
 
 
 Event: Live Q&A with OddBird
 ============================
 
-Date: **Thursday, June 1**
-
-Time: **11:30am - 12:30pm** (MST)
-
+Date: **Thursday, June 1** |br|
+Time: **11:30am - 12:30pm** (MST) |br|
 Location: `OddFriends Slack`_
 
 .. _OddFriends Slack: http://friends.oddbird.net
 
-.. callmacro:: content.macros.j2#link_button
-  :url: 'http://friends.oddbird.net'
+.. |br| raw:: html
 
-  Join the Q&A
+  <br/>
+
 
 Questions like:
 ...............
@@ -88,4 +91,4 @@ and update the features to fit their needs.
 .. callmacro:: content.macros.j2#link_button
   :url: 'http://friends.oddbird.net'
 
-  Join the Q&A
+  Join the channel for our Q&A
