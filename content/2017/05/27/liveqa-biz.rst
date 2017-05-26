@@ -1,7 +1,7 @@
 public: yes
 author: sondra
 type: event
-tags: [Event, Q&A, Tips, Slack, Startup, Business Development]
+tags: [Events, 'Q&A', Tips, Slack, Startups, 'Business Development']
 image:
   - src: 'blog/2017/liveqa-biz/desk-mobile.jpg'
 summary: |
@@ -45,30 +45,31 @@ Questions like:
 
 It's your hour.
 What do you want to know,
-from a web-product experts in the field?
+from web-product experts in the field?
 
 Who Are These Experts?
 ......................
 
-As core devs on Django Project, Susy, & Plone —
-we're `experts`_ in tool building.
+As core developers on `Django`_, `Susy`_, & `Plone`_ –
+we're `experts`_ in tool-building.
 
+.. _Django: https://www.djangoproject.com/
+.. _Susy: http://susy.oddbird.net/
+.. _Plone: https://plone.org/
 .. _experts: /birds/
 
 We lead many teams, both tiny startups
-and huge enterprise companies
-through the web app development process —
-from branding and naming
-to content strategy and information architecture
-to project estimatation and MVP.
+and huge enterprise companies,
+through the web app development process –
+from branding and naming,
+to content strategy and information architecture,
+to project estimation and MVP development.
 Recently, one of our clients' companies
 was acquired!
 Feel free to check out the `CoachHub`_ web app
-
-.. _coachhub: /work/coachhub/
-
 and many other samples of our `work`_.
 
+.. _coachhub: /work/coachhub/
 .. _work: /work/
 
 Tips to Save Money on Development
@@ -78,15 +79,18 @@ Tips to Save Money on Development
 to develop a full MVP or even a prototype
 of your web application,
 one option is to start with a hi-def mockup.
-Mockups look great in a professional pitch
+Mockups look great in a professional pitch,
 and take a fraction of the time and money to create.
 
-2. Considering hiring a user experience designer
+2. Consider hiring a user experience designer
 to create an interactive mockup
-in Adobe Xd or Invision
-and without paying for a single line of code,
-you can rapidly test your ideas with users
-and update the features to fit their needs.
+in `Adobe Xd`_ or `Invision`_,
+and without paying for a single line of code
+you can rapidly test your ideas with users,
+updating the features to fit their needs.
+
+.. _Adobe Xd: http://www.adobe.com/products/experience-design.html
+.. _Invision: https://www.invisionapp.com/
 
 .. callmacro:: content.macros.j2#link_button
   :url: 'http://friends.oddbird.net'
