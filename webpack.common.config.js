@@ -58,12 +58,25 @@ SassdocPlugin.prototype.apply = compiler => {
     sassdoc('./static/sass/**/*.scss', {
       dest: sassdocPath,
       theme: 'herman',
-      customCSS: cssPath,
-      customHead: '<script src="https://use.typekit.net/slx1xnq.js"></script>' +
-        '<script>try{Typekit.load({ async: true });}catch(e){}</script>',
-      descriptionPath: path.join(__dirname, 'STYLEGUIDE.md'),
       homepage: '/',
-      sassjsonfile: jsonPath,
+      descriptionPath: path.join(__dirname, 'STYLEGUIDE.md'),
+      herman: {
+        customCSS: cssPath,
+        customHead: '<script src="https://use.typekit.net/slx1xnq.js"></script>' +
+          '<script>try{Typekit.load({ async: true });}catch(e){}</script>',
+        minifiedIcons: '_icons.svg',
+        templatepath: path.join(__dirname, 'templates'),
+        sass: {
+          jsonfile: jsonPath,
+          includepaths: [path.join(__dirname, 'static/sass')],
+          includes: ['config/manifest']
+        },
+        subprojects: [
+          'accoutrement-color',
+          'accoutrement-scale',
+          'accoutrement-type'
+        ]
+      },
       shortcutIcon: path.join(
         __dirname,
         'content',
@@ -72,8 +85,6 @@ SassdocPlugin.prototype.apply = compiler => {
         'favicons',
         'favicon.ico'
       ),
-      templatepath: path.join(__dirname, 'templates'),
-      minifiedIcons: '_icons.svg',
       display: { access: ['public'] },
       groups: { undefined: 'general' }
     }).then(
