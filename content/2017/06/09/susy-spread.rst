@@ -77,7 +77,7 @@ as it relates to internal grid-spanning elements.
 In most systems,
 including the new CSS Grids,
 all spans are ``narrow`` –
-meaning they only span intermedite gutters.
+meaning they only span intermediate gutters.
 
 .. image:: /static/images/blog/2017/spread/span-narrow.jpg
    :alt: spread: narrow
