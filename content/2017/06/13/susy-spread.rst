@@ -1,10 +1,10 @@
 public: yes
 author: miriam
-tags: [Susy, CSS, Sass, Grids]
+tags: [Susy, CSS, Sass, Grids, Code]
 image:
   - src: 'blog/2017/spread/susy-spread.jpg'
 summary: |
-  **Susy 3.0** will be released next week,
+  **Susy 3.0** will be released in the next week,
   if all goes well,
   and there's a lot to write about it.
   I wanted to start with a detailed overview
@@ -17,29 +17,24 @@ Understanding ``Spread`` in Susy3
 Spread isn't new to Susy3,
 `or even to Susy generally`_,
 but its full power is usually hidden behind
-other settings (like ``gutter-position``),
+other settings (like ``gutter-position`` in Susy2),
 or opinionated assumptions about your grid.
-In Susy3 we've gone the other direction,
-making it central to the API,
-and giving you full control over the math.
+We didn't invent the idea behind spread –
+every grid system has to make these decisions –
+but we haven't seen anyone else talking about it explicitly.
+
+In Susy3 we've tried to move in the other direction –
+naming spread, and making it central to the API –
+giving you full control over the math.
 
 .. _or even to Susy generally: http://susydocs.oddbird.net/en/latest/settings/#spread
 
 
-What is spread?
----------------
+Spread on Containers
+--------------------
 
-We didn't invent the idea,
-but we did come up with the term,
-because I haven't seen anyone else talking about it.
-
-
-On Containers
-~~~~~~~~~~~~~
-
-Container-spread describes how a grid-parent
-handles available gutters:
-
+Container-spread describes how a grid-parent (or container)
+handles available gutters.
 Most grids only put gutters between the columns.
 That means there will be one less gutter than there are columns.
 We call that a ``narrow`` container-spread, and make it the default.
@@ -69,13 +64,13 @@ We call that a ``wider`` spread.
    :class: extend-small
 
 
-On Spans
-~~~~~~~~
+Spread on Spans
+---------------
 
 Spread describes the same concept
 as it relates to internal grid-spanning elements.
 In most systems,
-including the new CSS Grids,
+including the new CSS Grid module,
 all spans are ``narrow`` –
 meaning they only span intermediate gutters.
 
@@ -109,8 +104,8 @@ In Susy3 there is no single grid "container" element
 that receives special treatment.
 Instead, container spans are described
 in the same syntax as any other span –
-and any element containing other grid elements
-is a container for those elements.
+and any element containing other grid-aligned elements
+is a container.
 
 Fluid-span calculations require understanding
 both the container width and span-width.
@@ -122,7 +117,8 @@ The Sass math looks like this:
 
 For that reason,
 it's important to be explicit with Susy
-about the spread of both containers and spans.
+about the spread of both containers and spans,
+when you are building fluid grids.
 In the Susy3 syntax, that looks like:
 
 .. code:: scss
@@ -132,8 +128,8 @@ In the Susy3 syntax, that looks like:
 If it comes before ``of``, it describes the span.
 If it comes after ``of``, it describes the container.
 In most cases,
-there will be sensible default for both values,
-and you can set those in the global settings:
+there will be a sensible default for both values,
+which you can set in the global settings:
 
 .. code:: scss
 
@@ -149,8 +145,8 @@ Common Use Cases
 ----------------
 
 Commonly, all spans have a ``narrow`` spread.
-In fact, CSS Grid doesn't provide any way
-to span across extra edge gutters.
+In fact, the CSS Grid module doesn't provide any way
+to span across extra gutters.
 You would have to achieve a ``wide`` or ``wider`` span
 using negative ``grid-gap``-sized margins.
 
@@ -191,7 +187,7 @@ Split Gutters
 ~~~~~~~~~~~~~
 
 Some grid systems use "split" gutters,
-with half a gutter on either some of an element.
+with half a gutter on either side of an element.
 That will add an extra gutter to your total grid width,
 giving your common ``container`` a ``wide`` spread.
 If you are using split gutters,
