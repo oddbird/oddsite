@@ -44,7 +44,7 @@ We call that a ``narrow`` container-spread, and make it the default.
    :class: extend-small
 
 Some grids use "split" gutters,
-with half of a gutter on either size of a column –
+with half of a gutter on either side of a column –
 forming full-gutters between columns,
 and an extra half at the edges.
 Mathematically, that means we have an equal number
@@ -70,9 +70,11 @@ Spread on Spans
 Spread describes the same concept
 as it relates to internal grid-spanning elements.
 In most systems,
-including the new CSS Grid module,
+including the new `CSS Grid module`_,
 all spans are ``narrow`` –
 meaning they only span intermediate gutters.
+
+.. _CSS Grid module: /2016/09/19/css-grid-layout/
 
 .. image:: /static/images/blog/2017/spread/span-narrow.jpg
    :alt: spread: narrow
