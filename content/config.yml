@@ -21,6 +21,16 @@ contact:
 
 events:
 
+  - venue: 'Sass Hack Denver'
+    url: 'https://www.meetup.com/Sass-Hack-Denver/events/239687418/'
+    date: ['6', '1', '2017']
+    adr:
+      city: 'Denver'
+      state: 'CO'
+    who:
+      - author: 'miriam'
+        title: 'Code Patterns for Pattern Making'
+
   - venue: 'Front-End Camp'
     url: 'http://chicagocamps.org/events/2017/front-end-camp/'
     date: ['6', '3', '2017']
@@ -439,7 +449,12 @@ events_past:
 
 nav:
   - text: 'work'
-    url: '/work/'
+    subnav:
+      - text: 'case-studies'
+        display_text: 'case studies'
+        url: '/work/'
+      - text: 'services'
+        url: '/work/services/'
   - text: 'open-source'
     display_text: 'open source'
     url: '/open-source/'
@@ -465,7 +480,7 @@ nav:
 susy_nav:
   - text: 'susysite-docs'
     display_text: 'docs'
-    url: '#@@@'
+    url: 'http://susydocs.oddbird.net/'
   - text: 'susysite-tutorials'
     display_text: 'tutorials'
     url: '#@@@'
@@ -473,7 +488,7 @@ susy_nav:
     subnav:
       - text: 'github'
         display_text: 'github issues'
-        url: 'http://stackoverflow.com/questions/tagged/susy-sass'
+        url: 'https://github.com/oddbird/susy/issues'
       - text: 'stack-overflow'
         display_text: 'stack overflow'
         url: 'http://stackoverflow.com/questions/tagged/susy-sass'

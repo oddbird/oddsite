@@ -59,6 +59,8 @@ $pattern-colors: (
   'tag-bg': 'brand-orange' ('rgba': 0.1),
 
   'callout': 'brand-blue' ('tint': 80%),
+  'section-bg': 'brand-blue' ('saturate': 70%, 'lighten': 65%),
+
   'invert': 'brand-blue',
   'invert-link-hover': 'brand-blue' ('lighten': 55%, 'saturate': 100%),
   'quote': 'brand-orange',

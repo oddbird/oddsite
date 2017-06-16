@@ -83,12 +83,13 @@
 
 // Map nav locations for highlighting active page
 $nav-locations: (
-  'projects': 'work',
+  'case-studies': 'work',
+  'services': 'work',
   'open-source': null,
+  'blog': null,
   'birds': 'about',
   'speaking': 'about',
   'community': 'about',
-  'blog': null,
   'contact': 'about',
 );
 

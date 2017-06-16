@@ -42,6 +42,7 @@
 
 {% macro get_bird_name(name) -%}
   {%- set page = all_pages|filter_pages('bird', 'eq', name)|get_page -%}
+  {%- set name = 'OddBird' if (name == 'oddbird') else name -%}
   {{ page.title or name }}
 {%- endmacro %}
 

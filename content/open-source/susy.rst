@@ -3,7 +3,7 @@ location: susysite
 template: 'susysite/layout.html'
 grid_template: true
 image:
-  - src: 'blog/susy.jpg'
+  - src: 'projects/susy.png'
 project:
   - name: 'Susy'
     tagline: 'Your layout, our math'
@@ -19,7 +19,7 @@ quotes:
     name: 'Chris Coyier'
     role: 'CSS Tricks'
     url: 'http://css-tricks.com/build-web-layouts-easily-susy/'
-  - text: 'Susy and Zendesk have been getting along magically…
+  - text: '<b>Susy</b> and <b>Zendesk</b> have been getting along magically…
            It’s precisely what you need and nothing more.'
     name: 'Stephany Varga'
     role: 'Zendesk Creative Collection'
@@ -31,12 +31,13 @@ quotes:
     url: 'http://www.sitepoint.com/my-favorite-sass-tools/'
 summary: |
   **Rapid prototypes are only the start to a long process**
-  of development, changes, handoffs, and maintenance.
+  with customization, revisions, handoffs, and ongoing maintenance.
   Susy is built to evolve with your project over the long haul.
   In a world of agile development
   and super-tablet-multi-magic-laptop-phones,
   the best layouts can’t be contained in a single framework or technique.
-  With Susy, you get to be the expert.
+  With Susy, you're the expert.
+  We're just here to make it easier.
 
 
 Susy
@@ -46,6 +47,7 @@ Susy
 .. callmacro:: content.macros.j2#get_quotes
   :slug: 'open-source/susy'
   :index: 1
+.. callmacro:: content.macros.j2#divider
 
 
 .. ---------------------------------
@@ -90,21 +92,32 @@ when you need it:
     @include span(isolate 9 at 4 no-gutters);
   }
 
+
 .. _Get started: http://susydocs.oddbird.net/en/latest/install/
+
+
+For more details,
+`check out our reference documentation`_.
+
+.. _check out our reference documentation: http://susydocs.oddbird.net/en/latest/install/
+
 
 .. callmacro:: content.macros.j2#rst
   :tag: 'end'
 .. ---------------------------------
 
 
+.. callmacro:: content.macros.j2#divider
 .. callmacro:: content.macros.j2#get_quotes
   :slug: 'open-source/susy'
   :index: 2
+.. callmacro:: content.macros.j2#divider
 
 
 .. ---------------------------------
 .. callmacro:: content.macros.j2#rst
   :tag: 'start'
+
 
 Better Together
 ---------------
@@ -154,9 +167,11 @@ We'd love to `hear your ideas`_ as well.
 .. ---------------------------------
 
 
+.. callmacro:: content.macros.j2#divider
 .. callmacro:: content.macros.j2#get_quotes
   :slug: 'open-source/susy'
   :index: 3
+.. callmacro:: content.macros.j2#divider
 
 
 .. ---------------------------------

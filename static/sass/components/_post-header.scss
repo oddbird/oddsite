@@ -44,7 +44,7 @@
     justify-content: space-between;
   }
 
-  [data-location='work'] & {
+  .work-layout & {
     @include above('full-content') {
       margin-top: negative('gutter');
       position: relative;

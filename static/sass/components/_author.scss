@@ -1,26 +1,11 @@
 // Author Box
 // ==========
 
-[data-module='rst-author'] {
-  border-top: 0;
-  margin-top: size('bird-face');
-  padding-top: 0;
-}
-
 .author-summary {
+  margin-top: size('bird-face');
   max-width: 100%;
-}
 
-// crop triangle out of svg for birds page
-.bird-face {
-  float: left;
-  height: size('bird-face');
-  margin-right: size('half-shim');
-  overflow: hidden;
-}
-
-.h-card {
-  [data-module='rst-author'] & {
+  .h-card {
     margin-left: auto;
     margin-right: auto;
     max-width: size('full-content');
@@ -31,6 +16,14 @@
       transform: translateX(negative('half-bird-face'));
     }
   }
+}
+
+// crop triangle out of svg for birds page
+.bird-face {
+  float: left;
+  height: size('bird-face');
+  margin-right: size('half-shim');
+  overflow: hidden;
 }
 
 .bio {
@@ -48,7 +41,7 @@
   height: size('bird-face-tall');
   width: size('bird-face');
 
-  [data-module='rst-author'] & {
+  .author-summary & {
     shape-outside: polygon(0 0, size('bird-face') 0, size('half-bird-face') size('half-bird-face'));
     transform: translateY(-65%);
   }

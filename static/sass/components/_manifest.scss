@@ -1,6 +1,7 @@
 // Component Manifest
 // ==================
 
+@import 'archives';
 @import 'author';
 @import 'contact';
 @import 'intro';
@@ -8,8 +9,9 @@
 @import 'pagination';
 @import 'post-header';
 @import 'post-content';
-@import 'projects';
+@import 'services';
 @import 'social';
+@import 'splash';
 
 // Less used, load later
 @import 'charts';
