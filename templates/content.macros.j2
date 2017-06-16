@@ -42,9 +42,7 @@
   {% set data = page.config[data] %}
 
   <section class="icon-blocks-container">
-    {% if title %}
-      <h2>{{ title|safe }}</h2>
-    {% endif %}
+    <h2>{{ title|safe }}</h2>
 
     {% for item in data %}
       <div class="icon-blocks">
@@ -109,14 +107,51 @@
 {% endmacro %}
 
 
+{% macro gallery(title, slug, data, caption=none, module=false, class=none, min_image=none, duo=false) %}
+  {% set page = all_pages|filter_pages('slug', 'eq', slug)|get_page %}
+  {% set data = page.config[data] %}
+
+  <section class="gallery-container" {% if module %}data-module="gallery"{% endif %}>
+    <h2>{{ title|safe }}</h2>
+
+    {% set class = ['gallery', class]|join(' ') if class else 'gallery' %}
+    {% set class = (class + ' duo') if duo else class %}
+    {% set style = ('--min-image: ' + min_image + ';') if min_image else none %}
+
+    <figure class="{{ class }}" {{ utility.attr_if('style', style) }}>
+      {% for item in data %}
+        {% set img = item.image if ('://' in item.image) else ['/static/images/', item.image]|join('') %}
+        {% set img = '<img src="' + img + '" alt="' + item.alt + '" class="gallery-image" />' %}
+
+        <div class="gallery-item">
+          {{ utility.link_if(img|safe, item.target, 'gallery-link') }}
+          {% if duo %}
+            <div class="duo-overlay">{{ item.alt }}</div>
+          {% endif %}
+        </div>
+
+      {% endfor %}
+
+      {% if caption %}
+        <figcaption class="gallery-caption">
+          {{ caption|safe }}
+        </figcaption>
+      {% endif %}
+    </figure>
+  </section>
+{% endmacro %}
+
+
 {#
   Buttons
   -------
 #}
-{% macro link_button(url, class=none) %}
+{% macro link_button(url, content=none, class=none) %}
+  {% set content = content if (content != none) else caller() %}
   {% set class = [class, 'btn']|join(' ') if class else 'btn' %}
+
   <a href="{{ url }}" {% for k in kwargs %} {{ k }}="{{ kwargs[k] }}"{% endfor %} class="{{ class }}">
-    {{ caller() }}
+    {{ content|safe }}
   </a>
 {% endmacro %}
 

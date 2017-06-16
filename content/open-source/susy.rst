@@ -29,24 +29,106 @@ quotes:
     name: 'Hugo Giraudel'
     role: 'SitePoint'
     url: 'http://www.sitepoint.com/my-favorite-sass-tools/'
+screenshots:
+  - image: 'susy/screenshots/sasslang.jpg'
+    alt: 'Sass'
+    target: 'http://sass-lang.com/'
+  - image: 'susy/screenshots/virginamerica.jpg'
+    alt: 'Virgin America'
+    target: 'https://www.virginamerica.com/'
+  - image: 'susy/screenshots/squaremarket.jpg'
+    alt: 'Square Market'
+    target: 'http://squareup.com/market'
+  - image: 'susy/screenshots/esquire.jpg'
+    alt: 'Esquire UK'
+    target: 'http://www.esquire.co.uk'
+  - image: 'susy/screenshots/python.jpg'
+    alt: 'Python'
+    target: 'http://python.org/'
+  - image: 'susy/screenshots/mediamolecule.jpg'
+    alt: 'Media Molecule'
+    target: 'http://mediamolecule.com'
+  - image: 'susy/screenshots/simple.jpg'
+    alt: 'Simple'
+    target: 'http://simple.com/'
+  - image: 'susy/screenshots/smithsonian.jpg'
+    alt: 'Smithsonian'
+    target: 'http://smithsonian.com/'
 summary: |
   **Rapid prototypes are only the start to a long process**
   with customization, revisions, handoffs, and ongoing maintenance.
   Susy is built to evolve with your project over the long haul.
-  In a world of agile development
-  and super-tablet-multi-magic-laptop-phones,
-  the best layouts can’t be contained in a single framework or technique.
-  With Susy, you're the expert.
-  We're just here to make it easier.
+  You're the expert,
+  we're just here to make your job easier.
 
 
 Susy
 ====
 
+.. ---------------------------------
+.. callmacro:: content.macros.j2#rst
+  :tag: 'start'
 
+Lightweight & Flexible
+----------------------
+
+.. image:: https://badge.fury.io/js/susy.svg
+  :alt: 'npm package'
+  :target: https://www.npmjs.com/package/susy
+
+.. image:: https://travis-ci.org/oddbird/susy.svg
+  :alt: 'build status'
+  :target: https://travis-ci.org/oddbird/susy
+
+With the advent of `flexbox`_
+and the `CSS Grid module`_,
+there are less reasons to use a grid library like Susy –
+*and that's wonderful*!
+Grid libraries were always a temporary fix,
+waiting for the browser to take over.
+Still,
+not everyone can play with the latest specs,
+and there will always be edge-cases
+that require manual grid-math.
+
+Susy Three is trimmed down to the most basic features:
+a lightweight library of functions
+that can be used along with ``float``,
+or ``flexbox``
+or any other CSS –
+anywhere, any time.
+
+.. _flexbox: #@@@
+.. _CSS Grid module: #@@@
+
+.. callmacro:: content.macros.j2#link_button
+  :url: '#@@@'
+
+  Read the article
+
+.. callmacro:: content.macros.j2#rst
+  :tag: 'end'
+.. ---------------------------------
+
+
+.. callmacro:: content.macros.j2#divider
 .. callmacro:: content.macros.j2#get_quotes
   :slug: 'open-source/susy'
   :index: 1
+.. callmacro:: content.macros.j2#divider
+
+.. callmacro:: content.macros.j2#gallery
+  :title: 'Featured Sites'
+  :slug: 'open-source/susy'
+  :data: 'screenshots'
+  :caption: '<a href="#@@@">See the full list, and add your site »</a>'
+  :module: true
+  :duo: true
+
+.. callmacro:: content.macros.j2#divider
+.. callmacro:: content.macros.j2#get_quotes
+  :slug: 'open-source/susy'
+  :index: 2
 .. callmacro:: content.macros.j2#divider
 
 
@@ -57,8 +139,7 @@ Susy
 Getting Started
 ---------------
 
-`Get started`_ quickly
-with the flexible ``span`` mixin:
+
 
 .. code-block:: scss
 
@@ -110,66 +191,6 @@ For more details,
 .. callmacro:: content.macros.j2#divider
 .. callmacro:: content.macros.j2#get_quotes
   :slug: 'open-source/susy'
-  :index: 2
-.. callmacro:: content.macros.j2#divider
-
-
-.. ---------------------------------
-.. callmacro:: content.macros.j2#rst
-  :tag: 'start'
-
-
-Better Together
----------------
-
-*Responsive Design* —
-Susy integrates smoothly with `Breakpoint`_
-for powerful media-query controls.
-See the `documentation`_ for details.
-
-*Vertical Rhythms* —
-If you're using the `Compass`_,
-we add support for ``$rem-with-px-fallback``,
-and show your baseline grids for debugging.
-
-*Package Managers* —
-We love `Compass`_ and highly recommend it,
-but you can use Susy 2 anywhere `Sass`_ is compiled.
-Try it with `Bundler`_, `Bower`_, `Yeoman`_, `Bourbon`_,
-or copied directly into your project.
-Then check out `Sache.in`_ for more great Sass extensions.
-
-*Community Effort* —
-Susy was originaly based on Natalie Downe's `CSS Systems`_,
-but has grown much more powerful and flexible than any one system.
-For Susy 2 we joined forces with `Salsa`_,
-and borrowed back from `Singularity`_, `Zen Grids`_, and elsewhere.
-We'd love to `hear your ideas`_ as well.
-
-.. _Breakpoint: http://breakpoint-sass.com
-.. _documentation: http://susydocs.oddbird.net/
-.. _Compass: http://compass-style.org/
-.. _Sass: http://sass-lang.com/
-.. _Bundler: http://bundler.io/
-.. _Bower: http://bower.io/
-.. _Yeoman: http://yeoman.io/
-.. _Bourbon: http://bourbon.io/
-.. _`Sache.in`: http://sache.in/
-.. _CSS Systems: http://www.slideshare.net/nataliedowne/css-systems-presentation
-.. _Salsa: http://tsi.github.io/Salsa/
-.. _Singularity: http://singularity.gs/
-.. _Zen Grids: http://next.zengrids.com/
-.. _hear your ideas: http://github.com/oddbird/susy/issues
-
-
-.. callmacro:: content.macros.j2#rst
-  :tag: 'end'
-.. ---------------------------------
-
-
-.. callmacro:: content.macros.j2#divider
-.. callmacro:: content.macros.j2#get_quotes
-  :slug: 'open-source/susy'
   :index: 3
 .. callmacro:: content.macros.j2#divider
 
@@ -179,14 +200,12 @@ We'd love to `hear your ideas`_ as well.
   :tag: 'start'
 
 
-Read the Book!
---------------
+Read the (Susy 2) Book!
+-----------------------
 
 `Zell Liew`_ wrote a great book to get you started with Susy.
 You can even `Get the first five chapters for free`_!
 Here are some of the things that you'll learn:
-
-.. or use the discout code ``oddbirds`` for 20% off the entire package!
 
 - How to use the **Span Mixin**
 - How to output the **Background Grid**
