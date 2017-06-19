@@ -139,48 +139,111 @@ anywhere, any time.
 Getting Started
 ---------------
 
+Susy3 has two primary functions,
+``span`` and ``gutter``,
+which can be used anywhere
+you need to calculate grid math:
 
+.. code:: scss
 
-.. code-block:: scss
-
-  nav { @include span(25%); }
-  main { @include span(75%); }
-
-Then stick around for fully customizable grids:
-
-.. code-block:: scss
-
-  $susy: (
-    columns: 12,
-    gutter-position: inside,
-    math: fluid,
-    output: float,
-    flow: rtl,
-  );
-
-And take complete control of the math
-when you need it:
-
-.. code-block:: scss
-
-  nav {
-    float: left;
+  .float {
     width: span(3);
     margin-right: gutter();
   }
 
-  main {
-    @include span(isolate 9 at 4 no-gutters);
+  .flexbox {
+    flex: 1 1 span(3);
+    padding: 0 gutter() / 2;
   }
 
+  .push-3 {
+    margin-left: span(3 wide);
+  }
 
-.. _Get started: http://susydocs.oddbird.net/en/latest/install/
+All functions draw on the same shorthand syntax,
+which consists of two parts,
+seperated by the word ``of``.
+The first part describes the
+**span** ``width``, ``location`` (if needed), and ``spread`` in any order.
+Only the width is required:
 
+.. code:: scss
+
+  // <width> at <location> <spread>
+  $span: span(2);
+  $span-spread: span(3 wide);
+
+  // location is only needed with asymmetrical grids
+  $span-location-spread: span(3 at 2 narrow);
+
+The second half of Susy's shorthand
+describes the grid-**context**
+``columns``, ``container-spread``, and ``gutters``
+in any order.
+None are required:
+
+.. code:: scss
+
+  // of <columns> <container-spread> set-gutters <gutters>
+  $columns: of 6;
+  $spread: of 12 wide;
+  $gutters: of 12 set-gutters 2em;
+
+Except for span-width and location,
+all of those settings have global default,
+which can be set in the ``$susy`` configuration map:
+
+.. code:: scss
+
+  // default settings
+  $susy: (
+    'columns': susy-repeat(4),
+    'gutters': 0.25,
+    'spread': 'narrow',
+    'container-spread': 'narrow',
+  );
+
+Note that the ``columns`` setting
+no longer accepts a single number (e.g. ``12``)
+to represent 12 equal columns.
+Instead, we've borrowed syntax from the official CSS Grid module,
+requiring a list of column widths,
+with the ``susy-repeat`` function to help
+when your list is repetative.
+
+You can also pass in new configurations
+to a function on-the-fly:
+
+.. code:: scss
+
+  $large-screens: (
+    'columns': susy-repeat(12, 4em),
+    'gutters': 1em,
+  );
+
+  nav {
+    @media (min-width: 40em) {
+      width: span(3 wide, $large-screens);
+    }
+  }
+
+You can also mix-and match non-comparable
+static and fluid units in your grid,
+and Susy will output a ``calc()`` value
+to make the math work.
+
+.. code:: scss
+
+  // 120px 1 1 1 1 12em
+  $columns: 120px susy-repeat(4) 12em;
+  $calc: span(first 3 of $columns);
 
 For more details,
-`check out our reference documentation`_.
+check out our `introduction to spread`_,
+and `full reference documentation`_.
 
-.. _check out our reference documentation: http://susydocs.oddbird.net/en/latest/install/
+.. _introduction to spread: http://oddbird.net/2017/06/13/susy-spread/
+.. _full reference documentation: http://susydocs.oddbird.net/
 
 
 .. callmacro:: content.macros.j2#rst
