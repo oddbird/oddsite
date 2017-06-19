@@ -139,10 +139,40 @@ anywhere, any time.
 Getting Started
 ---------------
 
-Susy3 has two primary functions,
+All Susy3 API functions draw on the same shorthand syntax,
+which consists of two parts,
+seperated by the word ``of``.
+The first part describes a grid-**span**
+``width``, ``location`` (if needed), and ``spread`` (in any order):
+
+.. code:: scss
+
+  // <width> at <location> <spread>
+  $span: span(2);
+  $span-spread: span(3 wide);
+
+  // location is only needed with asymmetrical grids
+  $span-location-spread: span(3 at 2 narrow);
+
+The second half
+describes the grid-**context**
+``columns``, ``container-spread``, and ``gutters``
+in any order:
+
+.. code:: scss
+
+  // of <columns> <container-spread> set-gutters <gutters>
+  $of-columns: of 6;
+  $of-columns-spread: of 12 wide;
+  $of-columns-gutters: of 12 set-gutters 2em;
+
+There are two primary functions,
 ``span`` and ``gutter``,
 which can be used anywhere
-you need to calculate grid math:
+you need to calculate grid math.
+
+- ``span`` accepts the full shorthand syntax
+- ``gutter`` only uses the second half (with or without ``of``)
 
 .. code:: scss
 
@@ -160,37 +190,8 @@ you need to calculate grid math:
     margin-left: span(3 wide);
   }
 
-All functions draw on the same shorthand syntax,
-which consists of two parts,
-seperated by the word ``of``.
-The first part describes the
-**span** ``width``, ``location`` (if needed), and ``spread`` in any order.
-Only the width is required:
-
-.. code:: scss
-
-  // <width> at <location> <spread>
-  $span: span(2);
-  $span-spread: span(3 wide);
-
-  // location is only needed with asymmetrical grids
-  $span-location-spread: span(3 at 2 narrow);
-
-The second half of Susy's shorthand
-describes the grid-**context**
-``columns``, ``container-spread``, and ``gutters``
-in any order.
-None are required:
-
-.. code:: scss
-
-  // of <columns> <container-spread> set-gutters <gutters>
-  $columns: of 6;
-  $spread: of 12 wide;
-  $gutters: of 12 set-gutters 2em;
-
 Except for span-width and location,
-all of those settings have global default,
+all of those settings have global defaults,
 which can be set in the ``$susy`` configuration map:
 
 .. code:: scss
