@@ -16,25 +16,12 @@ summary: |
 Sites Using Susy
 ================
 
-.. ---------------------------------
-.. callmacro:: content.macros.j2#rst
-  :tag: 'start'
+|hack|
 
-There's no way to keep a perfect list –
-we're trusting developers to keep us informed –
-so some sites might be out-of-date,
-and many aren't listed.
-Feel free to
-`add your own or make corrections on GitHub`_!
+.. rstBlog requires content before a subheader…
+.. |hack| raw:: html
 
-.. _add your own or make corrections on GitHub: https://github.com/oddbird/oddsite/tree/master/content/susy/sites.rst
-
-.. callmacro:: content.macros.j2#rst
-  :tag: 'end'
-.. ---------------------------------
-
-
-.. callmacro:: content.macros.j2#divider
+  <span></span>
 
 .. callmacro:: content.macros.j2#gallery
   :title: 'Featured Sites'
@@ -44,11 +31,9 @@ Feel free to
   :duo: true
 
 .. callmacro:: content.macros.j2#divider
-
 .. callmacro:: content.macros.j2#get_quotes
   :slug: 'susy/index'
   :index: 4
-
 .. callmacro:: content.macros.j2#divider
 
 
@@ -58,6 +43,15 @@ Feel free to
 
 All Known Sites
 ---------------
+
+There's no way to keep a perfect list –
+we're trusting developers to keep us informed –
+so some sites might be out-of-date,
+and many aren't listed.
+Feel free to
+`add your own or make corrections on GitHub`_!
+
+.. _add your own or make corrections on GitHub: https://github.com/oddbird/oddsite/tree/master/content/susy/sites.rst
 
 - `Sass <http://sass-lang.com>`_
 - `Python <http://python.org>`_

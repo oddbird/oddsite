@@ -6,12 +6,15 @@ hide_title: true
 headline:
   - type: 'Susy'
     tagline: 'What people are saying about Susy…'
-susythree: []
-susytwo:
-  - title: 'Getting Started'
-    url: 'http://susy.readthedocs.io/en/latest/install/'
+susythree:
+  - title: 'Full Susy Three Reference'
+    url: 'http://susy.oddbird.net/'
     type: 'official documentation'
-  - title: 'Upgrade Path'
+susytwo:
+  - title: 'Full Susy Two Reference'
+    url: 'http://susy.readthedocs.io/en/latest/'
+    type: 'official documentation'
+  - title: 'Upgrade Path from Susy One'
     url: 'http://susy.readthedocs.io/en/latest/upgrade/'
     type: 'official documentation'
   - title: 'CSS Grid Layout - creating complex grids'
@@ -42,6 +45,15 @@ susytwo:
     author: 'Kyle Shevlin'
     url: 'https://github.com/kyleshevlin/susy-snippets'
     type: 'sublime snippets'
+  - title: 'Susy (For Sass) Now Supported'
+    author: 'Chris Coyier'
+    source: 'CodePen'
+    url: 'http://blog.codepen.io/2014/08/21/susy-sass-now-supported/'
+    type: 'article'
+  - title: 'Fix 90% of Your Problems With Susy by Getting This One Concept Right'
+    author: 'Zell Liew'
+    url: 'http://www.zell-weekeat.com/context-with-susy/'
+    type: tutorial
   - title: 'Keeping your HTML Semantic'
     author: 'Ray Villalobos'
     url: 'https://www.youtube.com/watch?v=DPtcHhd1tsI&index=8&list=PL6WlXq09jd26LbbjWVltrkmVYXJgxI-tu'
@@ -50,14 +62,15 @@ susytwo:
     author: 'James Steinbach'
     url: 'http://www.slideshare.net/JamesSteinbach/breaking-free-from-bootstrap'
     type: slides
-  - title: 'Fix 90% of Your Problems With Susy by Getting This One Concept Right'
-    author: 'Zell Liew'
-    url: 'http://www.zell-weekeat.com/context-with-susy/'
-    type: tutorial
   - title: 'Sass Grids: From Neat To Susy'
     author: 'James Steinbach'
     url: 'http://www.sitepoint.com/sass-grids-neat-susy/'
     type: tutorial
+  - title: 'Creating a Responsive Grid System with Susy and Breakpoint'
+    author: 'James Steinbach'
+    url: 'https://www.sitepoint.com/creating-responsive-grid-system-susy-breakpoint/'
+    source: 'SitePoint'
+    type: 'article'
   - title: 'How to Create Off Canvas Layouts with Susy'
     author: 'Zell Liew'
     url: 'http://www.zell-weekeat.com/off-canvas-layouts-susy/'
@@ -71,10 +84,10 @@ susytwo:
     author: 'Zell Liew'
     url: 'http://www.zell-weekeat.com/smarter-layouts-with-susy/'
     type: 'tutorial'
-  - title: 'Susy (For Sass) Now Supported'
-    author: 'Chris Coyier'
-    source: 'CodePen'
-    url: 'http://blog.codepen.io/2014/08/21/susy-sass-now-supported/'
+  - title: 'How to Use Susy with Bootstrap'
+    author: 'Zell Liew'
+    url: 'https://www.sitepoint.com/use-susy-bootstrap/'
+    source: 'SitePoint'
     type: 'article'
   - title: 'Rapidfire 23'
     source: 'Shop Talk Show'
@@ -127,6 +140,9 @@ susytwo:
     url: 'http://leveluptuts.com/tutorials/susy-tutorials'
     type: 'video'
 susyone:
+  - title: 'Full Susy One Reference'
+    url: 'http://susy.readthedocs.io/en/latest/susyone/'
+    type: 'official documentation'
   - title: 'Susy 102 - Breakpoints'
     author: 'Chris Maxwell'
     url: 'http://blog.chrismaxwell.com/susy-102-breakpoints'
@@ -179,6 +195,10 @@ Articles & Videos
   :slug: 'susy/articles'
   :data: 'susythree'
 
+.. callmacro:: content.macros.j2#divider
+.. callmacro:: content.macros.j2#get_quotes
+  :slug: 'susy/index'
+  :index: 3
 .. callmacro:: content.macros.j2#divider
 
 .. callmacro:: content.macros.j2#link_list

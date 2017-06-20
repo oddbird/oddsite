@@ -121,19 +121,6 @@ anywhere, any time.
   :index: 1
 .. callmacro:: content.macros.j2#divider
 
-.. callmacro:: content.macros.j2#gallery
-  :title: 'Featured Sites'
-  :slug: 'susy/index'
-  :data: 'screenshots'
-  :caption: 'See the <a href="sites/#all-known-sites">full list »</a>'
-  :duo: true
-
-.. callmacro:: content.macros.j2#divider
-.. callmacro:: content.macros.j2#get_quotes
-  :slug: 'susy/index'
-  :index: 2
-.. callmacro:: content.macros.j2#divider
-
 
 .. ---------------------------------
 .. callmacro:: content.macros.j2#rst
@@ -258,7 +245,7 @@ and `full reference documentation`_.
 .. callmacro:: content.macros.j2#divider
 .. callmacro:: content.macros.j2#get_quotes
   :slug: 'susy/index'
-  :index: 3
+  :index: 2
 .. callmacro:: content.macros.j2#divider
 
 
