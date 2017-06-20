@@ -19,16 +19,20 @@ quotes:
     name: 'Chris Coyier'
     role: 'CSS Tricks'
     url: 'http://css-tricks.com/build-web-layouts-easily-susy/'
-  - text: '<b>Susy</b> and <b>Zendesk</b> have been getting along magically…
-           It’s precisely what you need and nothing more.'
-    name: 'Stephany Varga'
-    role: 'Zendesk Creative Collection'
-    url: 'https://medium.com/zendesk-creative-blog/responsive-a-harrowing-meditation-on-the-brutal-realities-of-web-content-organization-in-5-acts-1d33ce25f062'
+  - text: 'My experiments have left me impressed. The current state of CSS layout means that unless you like to spend a lot of time doing calculations something like Susy is really useful. The output CSS is pretty much what I’d come up with myself, which to me is the acid test for tool use.'
+    name: 'Rachel Andrew'
+    role: 'Invited Expert to the CSS Working Group'
+    url: 'https://rachelandrew.co.uk/archives/2015/02/04/css-grid-layout-creating-complex-grids/'
   - text: 'If you’re interested in reading Sass poetry,
            be sure to look at Susy’s source code!'
     name: 'Hugo Giraudel'
     role: 'SitePoint'
     url: 'http://www.sitepoint.com/my-favorite-sass-tools/'
+  - text: '<b>Susy</b> and <b>Zendesk</b> have been getting along magically…
+           It’s precisely what you need and nothing more.'
+    name: 'Stephany Varga'
+    role: 'Zendesk Creative Collection'
+    url: 'https://medium.com/zendesk-creative-blog/responsive-a-harrowing-meditation-on-the-brutal-realities-of-web-content-organization-in-5-acts-1d33ce25f062'
 screenshots:
   - image: 'susy/screenshots/sasslang.jpg'
     alt: 'Sass'
@@ -113,21 +117,20 @@ anywhere, any time.
 
 .. callmacro:: content.macros.j2#divider
 .. callmacro:: content.macros.j2#get_quotes
-  :slug: 'open-source/susy'
+  :slug: 'susy/index'
   :index: 1
 .. callmacro:: content.macros.j2#divider
 
 .. callmacro:: content.macros.j2#gallery
   :title: 'Featured Sites'
-  :slug: 'open-source/susy'
+  :slug: 'susy/index'
   :data: 'screenshots'
-  :caption: '<a href="#@@@">See the full list, and add your site »</a>'
-  :module: true
+  :caption: 'See the <a href="sites/#all-known-sites">full list »</a>'
   :duo: true
 
 .. callmacro:: content.macros.j2#divider
 .. callmacro:: content.macros.j2#get_quotes
-  :slug: 'open-source/susy'
+  :slug: 'susy/index'
   :index: 2
 .. callmacro:: content.macros.j2#divider
 
@@ -254,7 +257,7 @@ and `full reference documentation`_.
 
 .. callmacro:: content.macros.j2#divider
 .. callmacro:: content.macros.j2#get_quotes
-  :slug: 'open-source/susy'
+  :slug: 'susy/index'
   :index: 3
 .. callmacro:: content.macros.j2#divider
 

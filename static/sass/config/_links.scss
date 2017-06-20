@@ -26,3 +26,44 @@ $link: '&:link, &:visited';
 ///     }
 ///   }
 $focus: '&:hover, &:focus, &:active';
+
+
+//
+// @TODO: Add docs to link-color!
+//
+@mixin link-color-for(
+  $background
+) {
+  $contrast: contrast($background);
+  $hover: color($background ('lighten': 55%, 'saturate': 100%));
+
+  a {
+    &,
+    #{$link}  {
+      @include text-underline($contrast, $background);
+    }
+
+    #{$focus} {
+      @include text-underline-color($hover);
+    }
+
+    &.icon-link {
+      // no underline on whole link. Going to target text only.
+      #{$link} {
+        background-image: none;
+      }
+
+      // change underline color when hover over icon too
+      #{$focus} {
+        .icon-text {
+          @include text-underline-color($hover);
+        }
+      }
+
+      // target only text within these svg icon links
+      .icon-text {
+        @include text-underline($contrast, $background);
+      }
+    }
+  }
+}

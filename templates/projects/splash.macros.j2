@@ -25,7 +25,8 @@
   {% set client = page.config.client[0] if page.config.client else none %}
   {% set contrib = page.config.contributors[0] if page.config.contributors else none %}
 
-  {% set link = ['/', page.slug, '/']|join('') if (project.owner or project.case_study) else '/work/' %}
+  {% set slug = ('/' + page.slug|replace('index', '')) if ('index' in page.slug) else ('/' + page.slug + '/') %}
+  {% set link = slug if (project.owner or project.case_study) else '/work/' %}
   {% set link = '/open-source/' if (contrib and link == '/work/') else link %}
 
   {% set images = page.config.image or none %}

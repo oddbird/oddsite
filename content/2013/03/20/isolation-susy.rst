@@ -1,6 +1,8 @@
 public: yes
-tags: [Susy, Layout, Grids, 'Sub-pixel Rounding', Code]
+tags: [Susy, Susy2, Layout, Grids, 'Sub-pixel Rounding', Code]
 author: miriam
+location: 'susysite-articles'
+template: 'susysite/layout.html'
 image:
   - src: 'blog/susy.jpg'
 summary: |

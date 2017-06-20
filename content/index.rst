@@ -81,7 +81,7 @@ of an internal team.*
 .. callmacro:: content.macros.j2#divider
 .. callmacro:: projects/splash.macros.j2#splash_list
   :slugs: [
-    'open-source/susy',
+    'susy/index',
     'open-source/django',
     'open-source/true',
     'open-source/plone'
@@ -119,7 +119,7 @@ at the center of everything we do.
 .. ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. callmacro:: content.macros.j2#get_quotes
-  :slug: 'open-source/susy'
+  :slug: 'susy/index'
   :index: 1
 
 

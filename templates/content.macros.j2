@@ -1,4 +1,5 @@
 {% import 'utility.macros.j2' as utility %}
+{% import "blog/utility.macros.j2" as blog %}
 
 
 {#
@@ -29,7 +30,7 @@
 #}
 
 {% macro divider() %}
-  <div class="separator extend-full"></div>
+  <div class="separator"></div>
 {% endmacro %}
 
 
@@ -107,38 +108,80 @@
 {% endmacro %}
 
 
-{% macro gallery(title, slug, data, caption=none, module=false, class=none, min_image=none, duo=false) %}
+{% macro gallery(title, slug, data, caption=none, class=none, min_image=none, duo=false) %}
   {% set page = all_pages|filter_pages('slug', 'eq', slug)|get_page %}
   {% set data = page.config[data] %}
 
-  <section class="gallery-container" {% if module %}data-module="gallery"{% endif %}>
-    <h2>{{ title|safe }}</h2>
+  <section class="gallery-container content-block">
+    <div class="content-block-inner">
+      <h2>{{ title|safe }}</h2>
 
-    {% set class = ['gallery', class]|join(' ') if class else 'gallery' %}
-    {% set class = (class + ' duo') if duo else class %}
-    {% set style = ('--min-image: ' + min_image + ';') if min_image else none %}
+      {% set class = ['gallery', class]|join(' ') if class else 'gallery' %}
+      {% set class = (class + ' duo') if duo else class %}
+      {% set style = ('--min-image: ' + min_image + ';') if min_image else none %}
 
-    <figure class="{{ class }}" {{ utility.attr_if('style', style) }}>
-      {% for item in data %}
-        {% set img = item.image if ('://' in item.image) else ['/static/images/', item.image]|join('') %}
-        {% set img = '<img src="' + img + '" alt="' + item.alt + '" class="gallery-image" />' %}
+      <figure class="{{ class }}" {{ utility.attr_if('style', style) }}>
+        {% for item in data %}
+          {% set img = item.image if ('://' in item.image) else ['/static/images/', item.image]|join('') %}
+          {% set img = '<img src="' + img + '" alt="' + item.alt + '" class="gallery-image" />' %}
 
-        <div class="gallery-item">
-          {{ utility.link_if(img|safe, item.target, 'gallery-link') }}
-          {% if duo %}
-            <div class="duo-overlay">{{ item.alt }}</div>
-          {% endif %}
-        </div>
+          <div class="gallery-item">
+            {{ utility.link_if(img|safe, item.target, 'gallery-link') }}
+            {% if duo %}
+              <div class="duo-overlay">{{ item.alt }}</div>
+            {% endif %}
+          </div>
 
-      {% endfor %}
+        {% endfor %}
 
-      {% if caption %}
-        <figcaption class="gallery-caption">
-          {{ caption|safe }}
-        </figcaption>
-      {% endif %}
-    </figure>
+        {% if caption %}
+          <figcaption class="gallery-caption">
+            {{ caption|safe }}
+          </figcaption>
+        {% endif %}
+      </figure>
+    </div>
   </section>
+{% endmacro %}
+
+
+{% macro link_list(title, tag=none, slug=none, data=none) %}
+  {% set entries = get_blog_entries_by_tag(tag) if tag else [] %}
+  {% set page = all_pages|filter_pages('slug', 'eq', slug)|get_page if slug else none %}
+  {% set data = page.config[data] if (page and data) else [] %}
+
+  <section class="link-list content-block">
+    <div class="content-block-inner">
+      <h2>{{ title|safe }}</h2>
+
+      {% if (entries|length > 0) %}
+        <h3>On our blog…</h3>
+        <ul>
+          {% for entry in entries %}
+            <li>
+              {{ blog.link(entry) }}
+            </li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+
+      {% if (data|length > 0) %}
+        <h3>Elsewhere…</h3>
+        <ul>
+          {% for item in data %}
+            {% set source = (' [' + item.source + ']') if item.source else '' %}
+            {% set author = (' by ' + item.author) if item.author else '' %}
+
+            <li>
+              {{ utility.link_if(item.title, item.url) }}
+              – {{ item.type }} {{ author }} {{ source }}
+            </li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    </div>
+  </section>
+
 {% endmacro %}
 
 

@@ -478,23 +478,28 @@ nav:
 
 
 susy_nav:
-  - text: 'susysite-docs'
-    display_text: 'docs'
-    url: 'http://susydocs.oddbird.net/'
-  - text: 'susysite-tutorials'
-    display_text: 'tutorials'
-    url: '#@@@'
+  - text: 'susysite-articles'
+    display_text: 'articles'
+    url: '/susy/articles/'
   - text: 'support'
     subnav:
+      - text: 'docs'
+        display_text: 'reference documentation »'
+        url: 'http://susydocs.oddbird.net/'
       - text: 'github'
-        display_text: 'github issues'
+        display_text: 'github issues »'
         url: 'https://github.com/oddbird/susy/issues'
       - text: 'stack-overflow'
-        display_text: 'stack overflow'
+        display_text: 'stack overflow »'
         url: 'http://stackoverflow.com/questions/tagged/susy-sass'
       - text: 'twitter'
+        display_text: 'twitter »'
         url: 'http://twitter.com/sasssusy/'
+  - text: 'susysite-sites'
+    display_text: 'live sites'
+    url: '/susy/sites/'
   - text: 'oddbird'
+    display_text: 'oddbird »'
     url: '/'
 
 
