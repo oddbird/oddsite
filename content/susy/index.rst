@@ -102,13 +102,8 @@ or ``flexbox``
 or any other CSS –
 anywhere, any time.
 
-.. _flexbox: #@@@
-.. _CSS Grid module: #@@@
-
-.. callmacro:: content.macros.j2#link_button
-  :url: '#@@@'
-
-  Read the article
+.. _flexbox: https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+.. _CSS Grid module: https://css-tricks.com/snippets/css/complete-guide-grid/
 
 .. callmacro:: content.macros.j2#rst
   :tag: 'end'
