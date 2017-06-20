@@ -8,13 +8,23 @@
     {% for link in yaml %}
       <li class="nav-item">
         {% if link.url %}
-          <a href="{{ link.url }}" class="nav-link nav-link-main" data-active="{{ link.text }}">{{ link.display_text or link.text }}</a>
+          {% set icon = 'external' if ('://' in link.url) else none %}
+
+          <a href="{{ link.url }}" class="nav-link nav-link-main" data-active="{{ link.text }}">
+            {{ link.display_text or link.text }}
+            {% if icon %}{{ utility.icon(icon, size='text-small') }}{% endif %}
+          </a>
         {% elif link.subnav %}
           <span class="nav-link nav-link-main" data-active="{{ link.text }}" {{ utility.toggle_button(link.text) }}>{{ link.display_text or link.text }}</span>
           <ul class="is-dropdown" {{ utility.toggle_target(link.text, auto_closing=true) }}>
             {% for sub in link.subnav %}
+              {% set icon = 'external' if ('://' in sub.url) else none %}
+
               <li>
-                <a href="{{ sub.url }}" class="nav-link nav-link-sub" data-active="{{ sub.text }}">{{ sub.display_text or sub.text }}</a>
+                <a href="{{ sub.url }}" class="nav-link nav-link-sub" data-active="{{ sub.text }}">
+                  {{ sub.display_text or sub.text }}
+                  {% if icon %}{{ utility.icon(icon, size='text-small') }}{% endif %}
+                </a>
               </li>
             {% endfor %}
           </ul>
