@@ -2,11 +2,14 @@ public: yes
 location: susysite
 template: 'susysite/layout.html'
 grid_template: true
+headline:
+  - title: 'Susy: Web Layout Toolkit'
+    type: 'An <strong>OddBird</strong> Project'
 image:
   - src: 'projects/susy.png'
 project:
   - name: 'Susy'
-    tagline: 'Your layout, our math'
+    tagline: 'Your design, our math'
     source: 'https://github.com/oddbird/susy'
     years: '2009-present'
     status: 'public'
@@ -68,8 +71,8 @@ summary: |
   we're just here to make your job easier.
 
 
-Susy
-====
+Susy: Your Layout, *Our Math*
+=============================
 
 .. ---------------------------------
 .. callmacro:: content.macros.j2#rst
