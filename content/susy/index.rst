@@ -59,9 +59,11 @@ screenshots:
     alt: 'Smithsonian'
     target: 'http://smithsonian.com/'
 summary: |
-  **Rapid prototypes are only the start to a long process**
-  with customization, revisions, handoffs, and ongoing maintenance.
-  Susy is built to evolve with your project over the long haul.
+  **Susy is a lightweight grid-layout engine for Sass**,
+  designed to simplify and clarify responsive grid layouts
+  without ever getting in your way.
+  You can use Susy with floats, flexbox, tables,
+  or any other CSS technique.
   You're the expert,
   we're just here to make your job easier.
 
@@ -86,7 +88,7 @@ Lightweight & Flexible
 
 With the advent of `flexbox`_
 and the `CSS Grid module`_,
-there are less reasons to use a grid library like Susy –
+there are fewer and fewer reasons to use a grid library like Susy –
 *and that's wonderful*!
 Grid libraries were always a temporary fix,
 waiting for the browser to take over.
@@ -124,7 +126,7 @@ anywhere, any time.
 Getting Started
 ---------------
 
-All Susy3 API functions draw on the same shorthand syntax,
+All Susy Three API functions draw on the same shorthand syntax,
 which consists of two parts,
 seperated by the word ``of``.
 The first part describes a grid-**span**
@@ -249,8 +251,8 @@ and `full reference documentation`_.
   :tag: 'start'
 
 
-Read the (Susy 2) Book!
------------------------
+Read the (Susy Two) Book!
+-------------------------
 
 `Zell Liew`_ wrote a great book to get you started with Susy.
 You can even `Get the first five chapters for free`_!

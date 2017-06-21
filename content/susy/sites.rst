@@ -9,8 +9,9 @@ headline:
 summary: |
   **Susy has been around since 2009**,
   with well over 2 million downloads.
-  Over the years, we've been taking notes
-  on sites of all the sites we know are built with Susy.
+  Over the years,
+  we've been taking note of
+  all the sites we know are built with Susy.
 
 
 Sites Using Susy
