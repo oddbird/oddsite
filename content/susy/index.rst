@@ -97,15 +97,29 @@ not everyone can play with the latest specs,
 and there will always be edge-cases
 that require manual grid-math.
 
-Susy Three is trimmed down to the most basic features:
+Susy3 is trimmed down to the most basic features:
 a lightweight library of functions
 that can be used along with ``float``,
 or ``flexbox``
 or any other CSS –
 anywhere, any time.
 
+.. code:: bash
+
+  npm install susy
+
 .. _flexbox: https://css-tricks.com/snippets/css/a-guide-to-flexbox/
 .. _CSS Grid module: https://css-tricks.com/snippets/css/complete-guide-grid/
+
+.. callmacro:: content.macros.j2#link_button
+  :url: 'http://susydocs.oddbird.net'
+
+  Susy3 Documentation
+
+.. callmacro:: content.macros.j2#link_button
+  :url: 'http://susy.readthedocs.io/'
+
+  Susy2 Documentation
 
 .. callmacro:: content.macros.j2#rst
   :tag: 'end'
@@ -126,7 +140,7 @@ anywhere, any time.
 Getting Started
 ---------------
 
-All Susy Three API functions draw on the same shorthand syntax,
+All Susy3 API functions draw on the same shorthand syntax,
 which consists of two parts,
 seperated by the word ``of``.
 The first part describes a grid-**span**
@@ -251,8 +265,16 @@ and `full reference documentation`_.
   :tag: 'start'
 
 
-Read the (Susy Two) Book!
--------------------------
+Read the (Susy2) Book!
+----------------------
+
+.. image:: /static/images/susy/book-cover.png
+  :alt: 'Learning Susy'
+  :class: 'susy-book'
+  :target: http://zell-weekeat.com/learnsusy/#signup
+
+Learning Susy
+~~~~~~~~~~~~~
 
 `Zell Liew`_ wrote a great book to get you started with Susy.
 You can even `Get the first five chapters for free`_!
