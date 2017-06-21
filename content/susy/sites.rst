@@ -6,6 +6,31 @@ hide_title: true
 headline:
   - type: 'Susy'
     tagline: 'Examples of Susy in the wild…'
+screenshots:
+  - image: 'susy/screenshots/sasslang.jpg'
+    alt: 'Sass'
+    target: 'http://sass-lang.com/'
+  - image: 'susy/screenshots/virginamerica.jpg'
+    alt: 'Virgin America'
+    target: 'https://www.virginamerica.com/'
+  - image: 'susy/screenshots/squaremarket.jpg'
+    alt: 'Square Market'
+    target: 'http://squareup.com/market'
+  - image: 'susy/screenshots/esquire.jpg'
+    alt: 'Esquire UK'
+    target: 'http://www.esquire.co.uk'
+  - image: 'susy/screenshots/python.jpg'
+    alt: 'Python'
+    target: 'http://python.org/'
+  - image: 'susy/screenshots/mediamolecule.jpg'
+    alt: 'Media Molecule'
+    target: 'http://mediamolecule.com'
+  - image: 'susy/screenshots/simple.jpg'
+    alt: 'Simple'
+    target: 'http://simple.com/'
+  - image: 'susy/screenshots/smithsonian.jpg'
+    alt: 'Smithsonian'
+    target: 'http://smithsonian.com/'
 summary: |
   **Susy has been around since 2009**,
   with well over 2 million downloads.
@@ -26,7 +51,7 @@ Sites Using Susy
 
 .. callmacro:: content.macros.j2#gallery
   :title: 'Featured Sites'
-  :slug: 'susy/index'
+  :slug: 'susy/sites'
   :data: 'screenshots'
   :caption: '<a href="https://github.com/oddbird/oddsite/tree/master/content/susy/sites.rst">Add your site on GitHub »</a>'
   :duo: true
