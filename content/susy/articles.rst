@@ -4,7 +4,7 @@ template: 'susysite/layout.html'
 grid_template: true
 hide_title: true
 headline:
-  - type: 'Susy'
+  - type: 'Susy Articles'
     tagline: 'What people are saying about Susy…'
 susythree:
   - title: 'Full Susy Three Reference'
@@ -186,8 +186,8 @@ summary: |
   with the proper version listed.
 
 
-Articles & Videos
-=================
+Articles, Podcasts, & Tutorials
+===============================
 
 .. callmacro:: content.macros.j2#link_list
   :title: 'Susy Three'

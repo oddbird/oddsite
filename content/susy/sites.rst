@@ -4,7 +4,7 @@ template: 'susysite/layout.html'
 grid_template: true
 hide_title: true
 headline:
-  - type: 'Susy'
+  - type: 'Susy Sites'
     tagline: 'Examples of Susy in the wild…'
 screenshots:
   - image: 'susy/screenshots/sasslang.jpg'

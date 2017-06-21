@@ -4,6 +4,7 @@ template: 'susysite/layout.html'
 grid_template: true
 headline:
   - tagline: 'How to talk about Susy…'
+    type: 'Susy Support'
 logos:
   - image: 'susy/susy-logos/logo.svg'
     alt: 'Susy logo'
@@ -16,8 +17,8 @@ summary: |
   Here are a few things to keep in mind…
 
 
-Style Guide
-===========
+Brand Style Guide
+=================
 
 .. ---------------------------------
 .. callmacro:: content.macros.j2#rst
