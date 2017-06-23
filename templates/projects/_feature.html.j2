@@ -1,9 +1,17 @@
 {% import 'utility.macros.j2' as utility %}
 {% import 'projects/macros.j2' as work %}
 
-{% set pages = all_pages|filter_pages(module.has)|filter_pages('public', 'neq', false) %}
+{% set pages = all_pages|filter_pages('public', 'neq', false) %}
+{% set pages = pages|filter_pages(module.has) if module.has else pages %}
 
-{% if pages|length() > 0 %}
+{% if module.slugs %}
+  {% for slug in module.slugs %}
+    {% set page = pages|filter_pages('slug', 'eq', slug)|get_page %}
+    {% if page %}
+      {{ work.feature(page) }}
+    {% endif %}
+  {% endfor %}
+{% else %}
   {% for page in pages %}
     {{ work.feature(page) }}
   {% endfor %}

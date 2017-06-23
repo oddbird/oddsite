@@ -1,0 +1,19 @@
+{% extends "rst_display.html" %}
+
+{% import 'utility.macros.j2' as utility %}
+{% import 'layout/macros.j2' as layout %}
+
+{% block favicons %}
+  <link rel="shortcut icon" href="/static/images/favicons/favicon-susy.ico" />
+  <link rel="apple-touch-icon" href="/static/images/favicons/apple-touch-icon-susy.png" />
+{% endblock %}
+
+{% block banner_logo %}
+  <a href="/susy/" class="logo-link">
+    {{ utility.icon('susy', alt='Susy', class='logo-icon') }}
+  </a>
+{% endblock %}
+
+{% block banner_nav %}
+  {{ layout.main_nav(config.susy_nav) }}
+{% endblock %}

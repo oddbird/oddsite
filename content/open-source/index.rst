@@ -6,6 +6,17 @@ headline:
 after:
   - include: 'projects/_feature.html.j2'
     has: 'contributors'
+    slugs:
+      - 'susy/index'
+      - 'open-source/django'
+      - 'open-source/plone'
+      - 'open-source/herman'
+      - 'open-source/accoutrement'
+      - 'open-source/true'
+      - 'open-source/nunjucks'
+      - 'open-source/virtualenv'
+      - 'open-source/pip'
+      - 'open-source/compass'
 summary: |
   **We use open source software regularly**
   in our personal and professional work,

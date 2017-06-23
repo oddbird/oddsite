@@ -8,7 +8,8 @@
   {% set client = page.config.client[0] if page.config.client else null %}
   {% set contributors = page.config.contributors if page.config.contributors else null %}
   {% set project = page.config.project[0] %}
-  {% set link = ['/', page.slug, '/']|join('') if project.owner or project.case_study %}
+  {% set slug = ('/' + page.slug|replace('index', '')) if ('index' in page.slug) else ('/' + page.slug + '/') %}
+  {% set link = slug if (project.owner or project.case_study) else none %}
   {% set link = link if project.case_study else (project.url or link or project.source) %}
 
   <article class='project-feature grid-template'>
@@ -32,8 +33,10 @@
             {% endcall %}
           {% endif %}
           {% if project.url or project.owner %}
-            {% call content.link_button(project.url or ['/', page.slug, '/']|join('')) %}
-              View app
+            {% set slug = ('/' + page.slug|replace('index', '')) if ('index' in page.slug) else ('/' + page.slug + '/') %}
+
+            {% call content.link_button(project.url or slug) %}
+              Go to project
             {% endcall %}
           {% endif %}
           {% if project.source %}
@@ -42,8 +45,6 @@
             {% endcall %}
           {% endif %}
         </aside>
-
-
       </header>
 
       {% if page.summary %}

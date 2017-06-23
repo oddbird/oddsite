@@ -13,17 +13,27 @@
 // -----
 .brand {
   margin: 0 auto; // @@@ bottom: negative('rhythm') * 1.5
+}
 
-  [rel='home'] {
+.logo-link {
+  #{$link} {
+    background-image: none;
+    color: color('brand-blue');
+    display: inline-block;
+    transition: color 250ms;
+  }
+
+  #{$focus} {
+    color: color('brand-orange');
+  }
+
+  [data-location*='susysite'] & {
     #{$link} {
-      background-image: none;
-      color: color('brand-blue');
-      display: inline-block;
-      transition: color 250ms;
+      color: color('brand-pink');
     }
 
     #{$focus} {
-      color: color('brand-orange');
+      color: color('brand-blue');
     }
   }
 }
@@ -53,7 +63,7 @@
   }
 }
 
-[data-icon='logo'] {
+.logo-icon {
   height: 6rem;
   width: 13rem;
 
@@ -61,11 +71,22 @@
     width: 10rem;
   }
 
-  [data-location='home'] & {
+  [data-location='home'] &,
+  [data-location='susysite'] & {
     animation: draw-logo 3s 1 ease-out both, fill-logo 3s 2s 1 ease-in-out both, fade-logo-outline 2s 2s 1 ease-in-out both;
+  }
+
+  [data-location='home'] & {
     stroke: color('brand-orange');
     stroke-dasharray: 500;
     stroke-dashoffset: 500;
     stroke-width: 1;
+  }
+
+  [data-location='susysite'] & {
+    stroke: color('brand-pink');
+    stroke-dasharray: 5000;
+    stroke-dashoffset: 5000;
+    stroke-width: 10;
   }
 }
