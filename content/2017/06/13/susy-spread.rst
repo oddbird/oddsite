@@ -1,8 +1,8 @@
 public: yes
+tags: [Susy, Susy3, CSS, Sass, Grids, Code]
 author: miriam
 location: 'susysite-articles'
 template: 'susysite/layout.html'
-tags: [Susy, Susy3, CSS, Sass, Grids, Code]
 image:
   - src: 'blog/2017/spread/susy-spread.jpg'
 summary: |
