@@ -35,10 +35,10 @@ to start freelancing.
 A year later, I joined forces with `Carl`_ and then `Jonny`_
 to form OddBird.
 
-.. _Blueprint: #@@@
-.. _`Eric Meyer’s Reset`: #@@@
-.. _Carl: #@@@
-.. _Jonny: #@@@
+.. _Blueprint: http://www.blueprintcss.org/
+.. _`Eric Meyer’s Reset`: https://meyerweb.com/eric/tools/css/reset/
+.. _Carl: http://oddbird.net/birds/#bird-carl
+.. _Jonny: http://oddbird.net/birds/#bird-jonny
 
 At that point,
 every layout required extensive hacks
@@ -52,10 +52,10 @@ and `Chris Eppstein`_ was pushing hard
 to show how `Sass`_ and `Compass`_
 could revolutionize CSS-sharing and tool APIs.
 
-.. _Natalie Downe: #@@@
-.. _Chris Eppstein: #@@@
-.. _Sass: #@@@
-.. _Compass: #@@@
+.. _Natalie Downe: http://blog.natbat.net/post/46614243624/css-systems
+.. _Chris Eppstein: http://chriseppstein.github.io/blog/
+.. _Sass: http://sass-lang.com/
+.. _Compass: http://compass-style.org/
 
 Susy came out of that mix in July, 2009.
 Nothing terribly original,
@@ -126,15 +126,20 @@ even CSS Grids (though there's no reason for it).
 CSS Grids
 ---------
 
-If you have the browser-support matrix
-to start using CSS Grids directly,
+If you have the `browser-support matrix`_
+to start using the `CSS Grid module`_ directly,
 you should do it,
 and foret about Susy.
 Brilliant developers
-like Rachel Andrew and Jen Simmons
+like `Rachel Andrew`_ and `Jen Simmons`_
 have been working hard to provide tutorials,
 so I won't go into detail –
 but the results really do feel like magic.
+
+.. _browser-support matrix: http://caniuse.com/#feat=css-grid
+.. _CSS Grid module: https://css-tricks.com/snippets/css/complete-guide-grid/
+.. _Rachel Andrew: https://gridbyexample.com/
+.. _Jen Simmons: http://jensimmons.com/post/feb-27-2017/learn-css-grid
 
 Remember the old 3-column "Holy Grail" layout,
 with equal height fixed-width sidebars
@@ -257,7 +262,7 @@ Box-Sizing: Border-Box
 First, fix the browser `box-model`_
 by set a global ``box-sizing``:
 
-.. _box-model: #@@@
+.. _box-model: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model
 
 .. code:: css
 
@@ -310,7 +315,7 @@ If you want to get real clever,
 you can build your own grid-system out of
 CSS `custom properties`_ (aka variables):
 
-.. _custom properties: #@@@
+.. _custom properties: https://developer.mozilla.org/en-US/docs/Web/CSS/--*
 
 .. raw:: html
 
