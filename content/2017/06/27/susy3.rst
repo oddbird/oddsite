@@ -5,7 +5,7 @@ template: 'susysite/layout.html'
 tags: [Susy, Susy3, CSS, Sass, Grids, Code]
 headline:
   - type: 'Tutorial'
-    tagline: 'Make grid systems the fallback plan'
+    tagline: 'Make grid systems your fallback plan'
 image:
   - src: 'blog/2017/spread/susy-spread.jpg'
 summary: |
@@ -15,76 +15,87 @@ summary: |
   Susy was designed to make layout math easy,
   without forcing you into generic patterns
   and ugly markup.
-  But we also want to show you a few ways
-  to avoid using grid-systems all-together.
+  But grid systems are on the way out,
+  replaced by real CSS layout specs
+  that live in the browser.
+  With Susy3,
+  we want to help make that a smooth transition.
 
 
-Using (And Avoiding) Susy3
-==========================
+Welcome to Susy3!
+=================
 
 I remember when `Blueprint`_ first came out.
-Besides `Eric Meyer's Reset`_,
+Besides `Eric Meyer’s Reset`_,
 it was one of the first open-source CSS libraries
 that our industry started using en-masse.
 That's how I remember things, at least.
 I had just quit my day job as junior print designer
 to start freelancing.
-A year later, I'd join forces with `Carl`_ and then `Jonny`_
+A year later, I joined forces with `Carl`_ and then `Jonny`_
 to form OddBird.
+
+.. _Blueprint: #@@@
+.. _`Eric Meyer’s Reset`: #@@@
+.. _Carl: #@@@
+.. _Jonny: #@@@
 
 At that point,
 every layout required extensive hacks
-to work across browsers.
-All CSS was a mess,
-but having someone else write your hacks for you
-felt like a game-changer.
-
-A year later,
-CSS frameworks had taken over the world,
-but there are some things you can't do
+to work across browsers,
+and CSS frameworks quickly took over.
+But there are some things you can't do
 in a pure CSS API based on classes.
-Natalie Downe was proposing
+`Natalie Downe`_ was proposing
 a more flexible approach to grids and toolkits,
-and Chris Eppstein was pushing hard
-to show how Sass and Compass
+and `Chris Eppstein`_ was pushing hard
+to show how `Sass`_ and `Compass`_
 could revolutionize CSS-sharing and tool APIs.
+
+.. _Natalie Downe: #@@@
+.. _Chris Eppstein: #@@@
+.. _Sass: #@@@
+.. _Compass: #@@@
 
 Susy came out of that mix in July, 2009.
 Nothing terribly original,
 just putting the pieces together.
 I didn't have a github account at the time,
-and Carl had to publish it on my behalf.
+so Carl published Susy on my behalf.
 The first draft was kinda ugly –
 but a few people took interest,
 and helped me clean it up.
 Three years later,
-it had become the baseline
+it had become the inspiration
 for an entire genre of Sass grid systems –
-some creative adaptations like `Singularity`_,
-and some direct ripoffs with marketing teams behind them.
+with several creative adaptations like `Singularity`_
+to keep us on our toes.
+
+.. _Singularity: https://github.com/at-import/Singularity
 
 
 A Whole New World
 -----------------
 
-We work in a different web now.
+We work on a different web now.
 Browser-hacks are mostly a thing of the past,
 and we have real control over the box-model
 (one thing IE got right the first time).
 Flexbox and the CSS Grid module are providing
 real layout tools in the browser,
 with flexibility baked in.
-Singularity recently `shut down development`_,
-and I understand why.
-I considered doing the same thing.
 
-Our tools are on the decline,
-for good reason.
-It's time to start moving away from grid systems,
-and put your layouts back in the browser.
-Instead of shutting the doors, though,
-I thought we'd provide one more update
-truely designed for the edge-cases.
+Singularity recently `shut down development`_,
+and we considered doing the same thing.
+Grid systems are on the decline for a good reason.
+It's time to move away from these tools,
+and put our layouts back in the browser.
+Instead of closing shop, though,
+we wanted to provide one more major update
+truely designed for the edge-cases
+that remain.
+
+.. _shut down development: https://snugug.com/musings/saying-goodbye-to-singularity/
 
 Susy3 is stripped down to the core –
 a grid-math module we call ``Su``,
@@ -95,37 +106,30 @@ and a total of 4 configuration settings.
 
 That's right, Susy3 has no mixins.
 When we wrote the mixins for Susy1 and Susy2,
-floats were (practically) the only option for layout,
+floats were (practically) the only option,
 and required a fair amount of hacking help.
 Mixins provided those shortcuts,
-at the expense of flexibility.
-But the core of Susy is the math,
-and accessing that math with functions
-allows Susy to get out of your way,
-and work with any layout technique you need:
+at the expense of user flexibility.
+But mixins also created a black-box of CSS output,
+that made it more difficult for users
+to understand the code they were writing.
+
+But the core of Susy has always been the math,
+and the "natural-language" API.
+Accessing that math through functions only
+will allow Susy to get out of your way,
+and work with any future layout technique you need:
 floats, flexbox, tables, inline-block,
 even CSS Grids (though there's no reason for it).
 
 
-Don't Assume You Need Susy
---------------------------
-
-Susy3 is available,
-but it's not the right place to start your layout.
-Let's look at some simpler options,
-before we get a third-party toolkit involved.
-
-
-Flexbox and CSS Grids
-~~~~~~~~~~~~~~~~~~~~~
+CSS Grids
+---------
 
 If you have the browser-support matrix
 to start using CSS Grids directly,
-you should do it.
-In most cases,
-you can also provide a float, flexbox, or css-table fallback
-by wrapping your grid code in the ``@supports (display: grid) {}``
-feature-query.
+you should do it,
+and foret about Susy.
 Brilliant developers
 like Rachel Andrew and Jen Simmons
 have been working hard to provide tutorials,
@@ -141,213 +145,49 @@ in a few lines of code:
 .. raw:: html
 
   <figure class="extend-small">
-    <p data-height="600" data-theme-id="0" data-slug-hash="0229f885f9a574c6d049b9d30dffc609" data-default-tab="result" data-user="mirisuzanne" data-embed-version="2" data-pen-title="CSS Grid Demo" class="codepen">See the Pen <a href="https://codepen.io/mirisuzanne/pen/0229f885f9a574c6d049b9d30dffc609/">CSS Grid Demo</a> by Miriam Suzanne (<a href="https://codepen.io/mirisuzanne">@mirisuzanne</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+    <p data-height="450" data-theme-id="0" data-slug-hash="0229f885f9a574c6d049b9d30dffc609" data-default-tab="result" data-user="mirisuzanne" data-embed-version="2" data-pen-title="CSS Grid Demo" class="codepen">See the Pen <a href="https://codepen.io/mirisuzanne/pen/0229f885f9a574c6d049b9d30dffc609/">CSS Grid Demo</a> by Miriam Suzanne (<a href="https://codepen.io/mirisuzanne">@mirisuzanne</a>) on <a href="https://codepen.io">CodePen</a>.</p>
     <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
   </figure>
 
-If you can't use CSS Grid yet,
-maybe flexbox will do the trick.
-
-.. raw:: html
-
-  <figure class="extend-small">
-    <p data-height="265" data-theme-id="0" data-slug-hash="657a71f05b9c044d0235bab212abdbdc" data-default-tab="css,result" data-user="mirisuzanne" data-embed-version="2" data-pen-title="Full-height Flexbox" class="codepen">See the Pen <a href="https://codepen.io/mirisuzanne/pen/657a71f05b9c044d0235bab212abdbdc/">Full-height Flexbox</a> by Miriam Suzanne (<a href="https://codepen.io/mirisuzanne">@mirisuzanne</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
-  </figure>
-
-Both grid and flexbox offer way more
-power and flexibility
-than any external toolkit can provide.
-If you are able to use both,
-They do solve slightly different problems.
-I think of flexbox as a more powerful variation on floating –
-great for allowing content to flow and flex –
-while grids provide a better tool for broad layouts
-and image galleries.
+In most cases,
+you can also provide a float, flexbox, or css-table fallback
+by wrapping your grid code in the ``@supports (display: grid) {}``
+feature-query.
+You may still want Susy around
+to help with the fallback options,
+until all your required browsers catch up.
 
 
-Simplify Your Math
-~~~~~~~~~~~~~~~~~~
+Susy Columns & ``grid-template-columns``
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Grid math is only complex
-when you add margin-gutters to the equation.
-With gutters, fluid grid math looks somthing like this:
+The Susy3 syntax has a lot in common with CSS Grid,
+because we want to start moving people in that direction.
+
+Our ``columns`` setting now matches
+the basic features of CSS ``grid-template-columns`` –
+requiring a list of column-sizes,
+with the optional ``susy-repeat()`` shortcut function,
+matching the CSS ``repeat()`` option:
 
 .. code:: scss
 
-  $columns: 12;
-  $gutter-width: 0.25;
-  $span: 3;
+  // Symmetrical layouts
+  $grid-template-columns: repeat(12, 120px);
+  $columns: susy-repeat(12, 120px);
 
-  $width: ($span + (($span - 1) * $gutter-width)) / ($columns + (($columns - 1) * $gutter-width));
+  // Asymmetrical and mixed-unit layouts
+  $grid-template-columns: 120px repeat(4, 1fr) 30em;
+  $columns: 120px susy-repeat(4) 30em;
 
-Without gutters in the way,
-spanning ``3`` columns out of ``12`` is a simple fraction:
-``percentage(3/12)`` in Sass.
-If you are able to drop the gutters,
-or even move them into ``padding`` rather than ``margins``,
-you can avoid grid math entirely.
-
-To safely move your gutters from ``margin`` to ``padding``,
-you'll want to set a global ``box-sizing: border-box``.
-I recommend doing this everywhere by default,
-no matter how you handle layouts.
-Border-box sizing means you can set a width,
-without worrying that padding or borders will ruin the calculation.
-
-.. code:: css
-
-  * { box-sizing: border-box; }
-
-I've seen other global box-sizing snippets that use ``inherit``.
-Please don't do that.
-There are good reasons that box-related properties
-don't inherit the way fonts and colors do.
-Inheriting layout properties will only cause problems later.
-
-With your box-model fixed,
-fluid grids can be handled in a readable way
-without any outside tools or complex calculations:
-
-.. code:: scss
-
-  // With Sass
-  .simple-grid {
-    float: left;
-    width: percentage(3/12);
-  }
-
-  /* Without Sass */
-  .simple-grid {
-    float: left;
-    width: calc(3/12 * 100%);
-  }
-
-That will also work with flexbox, css-tables, etc.
-Add any padding you like,
-and you're good to go with Susy-less fluid grids.
-
-Calc can also help you with mixed-unit grids,
-combining fluid and fixed.
-Because ``calc`` has access to the DOM,
-it provides much more power than any pre-compiled toolkit.
-This is a bit more fragile and manual
-than allowing grid or flexbox to do the work for you,
-but it can be a powerful fallback:
-
-.. raw:: html
-
-  <figure class="extend-small">
-    <p data-height="265" data-theme-id="0" data-slug-hash="70b5a2cf411542e74d1cd42d5ddbe446" data-default-tab="result" data-user="mirisuzanne" data-embed-version="2" data-pen-title="Floats with Calc" class="codepen">See the Pen <a href="https://codepen.io/mirisuzanne/pen/70b5a2cf411542e74d1cd42d5ddbe446/">Floats with Calc</a> by Miriam Suzanne (<a href="https://codepen.io/mirisuzanne">@mirisuzanne</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
-  </figure>
-
-If you want to get real wild with `calc()` and CSS variables,
-also known as custom properties,
-you can build a relatively simple grid syntax of your own
-directly in the browser:
-
-.. raw:: html
-
-  <figure class="extend-small">
-    <p data-height="265" data-theme-id="0" data-slug-hash="d05d2ea9339419df7070f9c393a9c080" data-default-tab="css,result" data-user="mirisuzanne" data-embed-version="2" data-pen-title="Calc() + Custom Properties" data-editable="true" class="codepen">See the Pen <a href="https://codepen.io/mirisuzanne/pen/d05d2ea9339419df7070f9c393a9c080/">Calc() + Custom Properties</a> by Miriam Suzanne (<a href="https://codepen.io/mirisuzanne">@mirisuzanne</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
-  </figure>
-
-We've even built a nearly-complete Susy3
-in pure CSS variables,
-though I don't recommend using it.
-This is way more complexity than you should need
-on any one site:
-
-.. raw:: html
-
-  <figure class="extend-small">
-    <p data-height="600" data-theme-id="0" data-slug-hash="PboVrw" data-default-tab="result" data-user="mirisuzanne" data-embed-version="2" data-pen-title="SusyCSS Demo" data-editable="true" class="codepen">See the Pen <a href="https://codepen.io/mirisuzanne/pen/PboVrw/">SusyCSS Demo</a> by Miriam Suzanne (<a href="https://codepen.io/mirisuzanne">@mirisuzanne</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
-  </figure>
-
-
-Last Resort: Susy3
-------------------
-
-Now that you have some tools for avoiding grid-systems,
-you still may run into special cases
-where a grid tool really is the best option.
-Susy3 can help calculate margin-gutters,
-asymmetrical grids,
-and mixed-unit calculations.
-
-We recommend installing Susy as an npm/yarn module:
-
-.. code:: bash
-
-  # npm
-  npm install susy
-
-  # yarn
-  yarn add susy
-
-There are two imports to choose from.
-The default ``susy`` import
-comes with un-prefixed versions
-of the core API functions.
-If you want Susy to be name-spaced,
-import ``susy-prefix`` instead.
-
-.. code:: scss
-
-  // un-prefixed functions
-  @import '<path-to>/susy/sass/susy';
-
-  // susy-prefixed functions
-  @import '<path-to>/susy/sass/susy-prefix';
-
-`See the documentation`_ for more
-installation/setup options.
-
-Global settings are still stored
-in the `$susy` map variable,
-just like Susy2,
-but now we only have 4 total settings.
-Here they are, with their default values:
-
-.. code:: scss
-
-$susy: (
-  'columns': susy-repeat(4),
-  'gutters': 0.25,
-  'spread': 'narrow',
-  'container-spread': 'narrow',
-);
-
-By pulling out the mixins,
-we've vastly reduced the configuration options
-while expanding the possible configurations.
-That sounds great, technically,
-but it also requires a bit more knowledge of the options.
-I believe you can get the hang of it.
-
-In Susy3 there is no single ``container`` element.
-Every grid element acts as a container for its contents.
-When we talk about containers in Susy3,
-we're referring to the parent context
-for a given element.
-
-
-"Columns" Setting
-~~~~~~~~~~~~~~~~~
-
-The ``columns`` setting requires a list of column-sizes,
-similar to `grid-template-columns`_ in the CSS Grid module.
-Since that can sometimes get repetative,
-we've added a ``susy-repeat`` function
-which works exactly like the new CSS ``repeat``.
+Where CSS Grid uses the ``fr`` unit
+for fluid columns,
+we use unitless numbers.
+A column of width ``2`` in Susy
+will work similarly to a ``2fr`` column in CSS.
 The default setting (``susy-repeat(4)``)
-generates a list of 4 equal fluid columns,
+defines a grid of 4 fluid columns,
 identical to a setting of ``1 1 1 1``.
-Unitless grid values in Susy
-work much the same as ``fr`` units in CSS grids.
 
 Here are a few examples of different column settings:
 
@@ -368,24 +208,29 @@ Here are a few examples of different column settings:
   $columns: susy-repeat(3, 8em 200px);
   $columns: 8em 200px 8em 200px 8em 200px;
 
-The ``columns`` setting no longer accepts a single number, like ``12``,
+This is a breaking change from Susy2,
+which allowed a single number ``12``
 to represent 12 equal-and-fluid columns.
-That has been replaced with ``susy-repeat(12)`` for clarity.
+That has been replaced with ``susy-repeat(12)``
+for clarity and consistency with CSS.
 
-When you mix non-comparable units,
-or units with untiless fractions,
-Susy will generate ``calc()`` output
-for the browser to handle.
+Since Susy does not have direct access to the DOM,
+we generate ``calc()`` output
+for non-comparable and mixed fluid/static grids.
 
 
-"Gutters" Setting
-~~~~~~~~~~~~~~~~~
+Susy Gutters & ``grid-column-gap``
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The ``gutters`` setting hasn't changed from Susy2,
-though you are no longer restricted to comparable units.
+Susy gutters haven't changed at all since version two,
+although our new ``calc`` output
+allows you to mix units in new ways.
+This is similar to the CSS ``grid-column-gap`` property,
+accepting any gutter-length
+to place between columns.
 A unitless gutter setting will act as a fraction,
 on the same scale as any unitless columns.
-Gutters with units will remain static.
+Gutters with units will remain static:
 
 .. code:: scss
 
@@ -395,9 +240,317 @@ Gutters with units will remain static.
   // static gutters…
   $gutters: 10px;
 
-Any number or length is valid.
-If Susy can't compare the gutter units to column unties,
-we'll trigger ``calc()`` output again.
+
+Simplify Your Math
+------------------
+
+If you can't use CSS Grids yet,
+you might want Susy to help simplify grid-math calculations.
+Or you might be able to avoid that with a few tricks
+to simplify your math,
+and handle it manually.
+
+
+Box-Sizing: Border-Box
+~~~~~~~~~~~~~~~~~~~~~~
+
+First, fix the browser `box-model`_
+by set a global ``box-sizing``:
+
+.. _box-model: #@@@
+
+.. code:: css
+
+  * { box-sizing: border-box; }
+
+I recommend setting this globally by default,
+no matter how you handle layouts.
+Border-box sizing means you can set a width,
+without worrying that padding or borders will ruin the calculation.
+
+
+I've seen other global box-sizing snippets
+based on a value of ``inherit``,
+and I strongly advise against it.
+There are good reasons that box-related properties
+like ``width``, ``padding``, and ``box-sizing``
+don't inherit the way fonts and colors do.
+Inheriting layout properties will only cause problems later.
+
+
+Use Padding for Gutters
+~~~~~~~~~~~~~~~~~~~~~~~
+
+In reality, grid math is only complex
+when you add margin-gutters to the equation.
+With gutters, fluid grid math looks somthing like this:
+
+Without gutters in the way,
+spanning ``3`` columns out of ``12`` is a simple fraction:
+``percentage(3/12)`` in Sass.
+If you are able to drop the gutters,
+or even move them into ``padding`` rather than ``margins``,
+you can avoid grid math entirely:
+
+.. code:: scss
+
+  // With Sass
+  .simple-grid {
+    float: left;
+    width: percentage(3/12);
+  }
+
+  /* Without Sass */
+  .simple-grid {
+    float: left;
+    width: calc(3/12 * 100%);
+  }
+
+If you want to get real clever,
+you can build your own grid-system out of
+CSS `custom properties`_ (aka variables):
+
+.. _custom properties: #@@@
+
+.. raw:: html
+
+  <figure class="extend-small">
+    <p data-height="300" data-theme-id="0" data-slug-hash="d05d2ea9339419df7070f9c393a9c080" data-default-tab="css,result" data-user="mirisuzanne" data-embed-version="2" data-pen-title="Calc() + Custom Properties" data-editable="true" class="codepen">See the Pen <a href="https://codepen.io/mirisuzanne/pen/d05d2ea9339419df7070f9c393a9c080/">Calc() + Custom Properties</a> by Miriam Suzanne (<a href="https://codepen.io/mirisuzanne">@mirisuzanne</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+  </figure>
+
+That will also work with css-tables, etc.
+Add any padding you like,
+and you have on-the-fly fluid grids
+without any third-party tools.
+
+We've even built a nearly-complete Susy3
+in pure CSS.
+This is a fun experiment,
+but I don't recommend using it
+in production:
+
+.. raw:: html
+
+  <figure class="extend-small">
+    <p data-height="500" data-theme-id="0" data-slug-hash="PboVrw" data-default-tab="result" data-user="mirisuzanne" data-embed-version="2" data-pen-title="SusyCSS Demo" data-editable="true" class="codepen">See the Pen <a href="https://codepen.io/mirisuzanne/pen/PboVrw/">SusyCSS Demo</a> by Miriam Suzanne (<a href="https://codepen.io/mirisuzanne">@mirisuzanne</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+  </figure>
+
+Susy is designed to handle any layout,
+but if you are designing grids in pure CSS,
+it's better to describe your actual needs
+more simply.
+Why solve all layut problems,
+when you can solve only the problems you have?
+
+
+Use Flexbox
+~~~~~~~~~~~
+
+The great thing about flexbox
+is that it allows items to flex in specific relationship
+with each-other,
+including equal-height columns and vertical centering.
+I often find that I don't need Susy for a flexbox layout,
+because I'd rather define relationships
+instead of explicit grid-columns.
+
+Here's an example flexbox layout,
+without Susy:
+
+.. raw:: html
+
+  <figure class="extend-small">
+    <p data-height="450" data-theme-id="0" data-slug-hash="657a71f05b9c044d0235bab212abdbdc" data-default-tab="css,result" data-user="mirisuzanne" data-embed-version="2" data-pen-title="Full-height Flexbox" class="codepen">See the Pen <a href="https://codepen.io/mirisuzanne/pen/657a71f05b9c044d0235bab212abdbdc/">Full-height Flexbox</a> by Miriam Suzanne (<a href="https://codepen.io/mirisuzanne">@mirisuzanne</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+  </figure>
+
+If you do want to use Susy with flexbox
+to achieve more consistent grids,
+you only need to replace any ``flex-basis`` values
+with Susy's ``span()`` function.
+
+.. code:: scss
+
+  .flex {
+    flex: 1 1 span(3 of 12);
+  }
+
+I can't think of any way to improve that with mixins,
+unless you want a few flexing defaults:
+
+.. code:: scss
+
+  @mixin span(
+    $span,
+    $config: ()
+  ) {
+    flex: 1 1 span($span, $config);
+    // split the gutter on each side of the element…
+    padding: gutter($span, $config) / 2;
+  }
+
+
+Use Calc to Mix Units
+~~~~~~~~~~~~~~~~~~~~~
+
+Calc can also help you with mixed-unit grids,
+combining fluid and fixed columns and gutters.
+Because ``calc`` has access to the DOM in the browser,
+it can calculate the results of otherwise non-cmoparable units.
+This is a bit more fragile and manual
+than allowing grid or flexbox to do that work for you,
+but it can be a powerful fallback:
+
+.. raw:: html
+
+  <figure class="extend-small">
+    <p data-height="350" data-theme-id="0" data-slug-hash="70b5a2cf411542e74d1cd42d5ddbe446" data-default-tab="css,result" data-user="mirisuzanne" data-embed-version="2" data-pen-title="Floats with Calc" class="codepen">See the Pen <a href="https://codepen.io/mirisuzanne/pen/70b5a2cf411542e74d1cd42d5ddbe446/">Floats with Calc</a> by Miriam Suzanne (<a href="https://codepen.io/mirisuzanne">@mirisuzanne</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+  </figure>
+
+
+Introducing Susy3
+-----------------
+
+If you can't simplify your math
+with pading-gutters and flexbox,
+you may still run into some difficult calculations,
+that require complex grid math.
+
+Susy3 is here to help calculate margin-gutters,
+asymmetrical grids,
+and mixed-unit calculations
+that are still hard to handle without CSS Grid.
+
+This is what a Susy's math looks like
+most of the time:
+
+.. code:: scss
+
+  // Without Susy…
+  $columns: 12;
+  $gutter-width: 0.25;
+  $span: 3;
+
+  $width: ($span + (($span - 1) * $gutter-width)) / ($columns + (($columns - 1) * $gutter-width));
+
+  // With Susy…
+  $susy: (
+    'columns': 12,
+    'gutters': 0.25,
+  );
+
+  $width: span(3);
+
+One user asked if Susy3
+forces you to build
+"an entire grid system from scratch".
+While Susy certainly allows and facilitates that option,
+we're really suggesting
+that you might not need an entire system
+when you can access Susy's math directly, on-the-fly.
+
+The primary API of Susy3
+consists of 2 functions,
+``span`` and ``gutter``,
+which you can use anywhere.
+Why build an entire system of mixins or classes,
+when you can simply use these two functions
+wherever you need to align with the grid?
+This is more readable
+and more flexible than most grid systems,
+because no CSS properties are hidden
+from view:
+
+.. code:: scss
+
+  // class names are for demonstration only…
+  .float {
+    width: span(3);
+    margin-right: gutter();
+  }
+
+  .flexbox {
+    flex: 1 1 span(3);
+    padding: 0 gutter() / 2;
+  }
+
+  .push-3 {
+    margin-left: span(3 wide);
+  }
+
+If you do find that too repetative for your needs,
+you can build mixins to manage a few common patterns.
+Here's a simple ``span`` mixin for floated grids,
+with margin-gutters on the right:
+
+.. code:: scss
+
+  @mixin span(
+    $span,
+    $config: $susy
+  ) {
+    width: span($span, $config);
+
+    @if index($span, 'last') {
+      float: right;
+    } @else {
+      float: left;
+      margin-right: gutter();
+    }
+  }
+
+You can also build a class system of your own,
+like you might find in other grid frameworks:
+
+.. code:: scss
+
+  .span {
+    float: left;
+    margin-right: gutter();
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  @for $span from 1 through length(susy-get('columns')) {
+    .span-#{$span} {
+      width: span($span);
+    }
+  }
+
+Only users with very-specific and complicated needs
+may still want to "build an entire system"
+on top of Susy,
+in which case we'll provide the syntax and math,
+but most use-cases should be handled by the functions
+we provide.
+
+
+Susy3 Configuration
+-------------------
+
+Global settings are still stored
+in the `$susy` map variable,
+just like Susy2,
+but now we only have 4 total settings.
+Here they are, with their default values:
+
+.. code:: scss
+
+  $susy: (
+    'columns': susy-repeat(4),
+    'gutters': 0.25,
+    'spread': 'narrow',
+    'container-spread': 'narrow',
+  );
+
+We've alreay introduced you to
+``columns`` and ``gutters``,
+so let's take a look at the remaining options.
 
 
 "Spread" & "Container-Spread"
@@ -424,6 +577,12 @@ and most people will only use two of them:
 
 Susy needs to know how an element spreads,
 and also how containers spread.
+Note that Susy3 has no single ``container`` element.
+Every grid element acts as a container for its contents.
+When we talk about containers in Susy3,
+we're referring to the parent context
+for a given element.
+
 In Susy2,
 we would generate both spread values based on ``gutter-position``,
 using roughly this logic:
@@ -448,10 +607,38 @@ using roughly this logic:
     'container-spread': 'wide',
   );
 
+We also override those options
+when pushing, pulling, padding, and bleeding:
+
+.. code:: scss
+
+  .push-3 {
+    margin-left: span(3 wide);
+  }
+
+  .pull-3 {
+    margin-left: 0 - span(3 wide);
+  }
+
+  .pad-left-3 {
+    padding-left: span(3 wide);
+  }
+
+  .bleed-left-3 {
+    margin-left: 0 - span(3 wide);
+    padding-left: span(3 wide);
+  }
+
+Susy3 defaults both values to ``narrow``,
+which will work the same as CSS Grid,
+and most other grid systems.
+If you're not doing anything special,
+you can probably ignore these settings
+and move on.
+
 Those are great defaults,
 but there are many reasons to override those settings on-the-fly –
-from pushing and pulling elements,
-to allowing more flexibility in where gutters are used.
+to allow more flexibility where gutters are used.
 Learning to mange ``spead`` and ``container-spread`` in Susy3
 will give you much more control over your layout experience.
 
@@ -524,8 +711,8 @@ rather than a calculated width:
   $meaning: of (1 1 2 3);
 
 
-Function API
-------------
+Primary API Functions
+---------------------
 
 Use the ``span()`` and ``gutter()`` functions
 to build the grid system that fits you best.
@@ -569,97 +756,34 @@ with or without ``of``:
   $padding: gutter(of 4);
   $same-meaning: gutter(4);
 
-With those two functions, you can build anything – using floats, flexbox, tables, inline-block, or any other layout technique you love.
 
-.float {
-  width: span(3);
-  margin-right: gutter();
-}
+Installation & Other Options
+----------------------------
 
-.flexbox {
-  flex: 1 1 span(3);
-  padding: 0 gutter() / 2;
-}
+There are full installation instructions
+in the `reference docs`_,
+but you should note that we now provide the Susy API
+with or without prefixes:
 
-.push-3 {
-  margin-left: span(3 wide);
-}
-Here's a real-quick class system, like you might find in one of the other frameworks:
-
-.span {
-  float: left;
-  margin-right: gutter();
-
-  &:last-child {
-    margin-right: 0;
-  }
-}
-
-@for $span from 1 through length(susy-get('columns')) {
-  .span-#{$span} {
-    width: span($span);
-  }
-}
-Read the docs for more details on configuration and available functions.
-
-
-Putting It All Together
------------------------
-
-With those two functions,
-you can build anything –
-using floats, flexbox, tables, inline-block,
-or any other layout technique you love.
+.. _reference docs: http://susydocs.oddbird.net/
 
 .. code:: scss
 
-  // class names are for demonstration only…
-  .float {
-    width: span(3);
-    margin-right: gutter();
-  }
+  // unprefixed
+  @import '<path-to>/susy/sass/susy';
 
-  .flexbox {
-    flex: 1 1 span(3);
-    padding: 0 gutter() / 2;
-  }
+  // prefixed
+  @import '<path-to>/susy/sass/susy-prefix';
 
-  .push-3 {
-    margin-left: span(3 wide);
-  }
-
-You can build mixins to manage the most common patterns:
-
-.. raw:: html
-
-  <figure class="extend-small">
-    <p data-height="300" data-theme-id="0" data-slug-hash="VWzwXj" data-default-tab="css,result" data-user="mirisuzanne" data-embed-version="2" data-pen-title="Susy3: Making Mixins" class="codepen">See the Pen <a href="https://codepen.io/mirisuzanne/pen/VWzwXj/">Susy3: Making Mixins</a> by Miriam Suzanne (<a href="https://codepen.io/mirisuzanne">@mirisuzanne</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
-  </figure>
-
-Or build a class system of your own,
-like you might find in one of the other grid frameworks:
-
-.. code:: scss
-
-  .span {
-    float: left;
-    margin-right: gutter();
-
-    &:last-child {
-      margin-right: 0;
-    }
-  }
-
-  @for $span from 1 through length(susy-get('columns')) {
-    .span-#{$span} {
-      width: span($span);
-    }
-  }
+By default we assume you want Susy without any prefix,
+but importing ``susy-prefix`` will include
+``susy-`` before all function names.
+You can use that if you are worried about name collisions
+with other functions in your project.
 
 
-SVG Grids for Debugging
------------------------
+SVG grids for debugging
+~~~~~~~~~~~~~~~~~~~~~~~
 
 If you want help visualizing and debugging your grids
 import the SVG Grid Plugin:
@@ -685,16 +809,59 @@ for use on the background of an element:
     background: susy-svg-grid() no-repeat scroll;
   }
 
+SVG grids are much more reliable
+than the old background-image gradient,
+because background gradients have subpixel rounding issues.
 
-Build Your Own System
----------------------
+
+Building your own Susy system
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Once you get the basics,
 Susy3 also provides tools to help you
 build your own mixins
-and define your own system.
+and define your own system,
+if that's something you need.
 See the `Plugin Utilities`_
 for more detail.
 
 .. _Plugin Utilities: http://susydocs.oddbird.net/plugin-utils.html
 
+
+Feedback is Always Welcome
+--------------------------
+
+We know we're taking some risks with this release,
+not providing what most people expect from a grid system.
+Some may prefer working with Susy2,
+and that's a solid option as well.
+Over time,
+we hope the CSS Grid module
+will replace all third-party systems.
+
+While we're confident that this is a step forward for Susy,
+we never claim to know what's best for you.
+We'd love your feedback,
+and real-world examples of how you
+make Susy work for you.
+
+We'll keep providing our own tutorials and demos,
+based on the questions we hear most,
+but we alsp love linking to your
+`sites built with Susy`_,
+and any `third-party tutorials`_
+that we hear about.
+`Contact us`_,
+or `submit a pull request`_.
+You can also
+talk to `SassSusy`_ or `OddBird`_ on twitter,
+or join our `public Slack`_ (with a #Susy channel).
+We're excited to hear from you!
+
+.. _sites built with Susy: http://oddbird.net/susy/sites/
+.. _third-party tutorials: http://oddbird.net/susy/articles/
+.. _Contact us: /contact/
+.. _submit a pull request: https://github.com/oddbird/oddsite/tree/master/content/susy
+.. _OddBird: https://twitter.com/oddbird
+.. _SassSusy: https://twitter.com/sasssusy
+.. _public Slack: http://friends.oddbird.net
