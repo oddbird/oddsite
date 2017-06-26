@@ -30,7 +30,7 @@ Besides `Eric Meyer’s Reset`_,
 it was one of the first open-source CSS libraries
 that our industry started using en-masse.
 That's how I remember things, at least.
-I had just quit my day job as junior print designer
+I had just quit my day job as a junior print designer
 to start freelancing.
 A year later, I joined forces with `Carl`_ and then `Jonny`_
 to form OddBird.
@@ -62,7 +62,7 @@ Nothing terribly original,
 just putting the pieces together.
 I didn't have a GitHub account at the time,
 so Carl published Susy on my behalf.
-The first draft was kinda ugly –
+The first draft was kind of ugly –
 but a few people took interest,
 and helped me clean it up.
 Three years later,
@@ -102,7 +102,7 @@ a grid-math module we call ``Su``,
 and a syntax module to add API sugar over top.
 There are two primary API functions,
 ``span()`` and ``gutter()``,
-and a total of 4 configuration settings.
+and a total of four configuration settings.
 
 That's right, Susy3 has no mixins.
 When we wrote the mixins for Susy1 and Susy2,
@@ -111,12 +111,12 @@ and required a fair amount of hacking help.
 Mixins provided those shortcuts,
 at the expense of user flexibility.
 But mixins also created a black-box of CSS output,
-that made it more difficult for users
+which made it more difficult for users
 to understand the code they were writing.
 
-But the core of Susy has always been the math,
+The core of Susy has always been the math,
 and the "natural-language" API.
-Accessing that math through functions only
+Accessing that math only through functions
 will allow Susy to get out of your way,
 and work with any future layout technique you need:
 floats, flexbox, tables, inline-block,
@@ -129,7 +129,7 @@ CSS Grids
 If you have the `browser-support matrix`_
 to start using the `CSS Grid module`_ directly,
 you should do it,
-and foret about Susy.
+and forget about Susy.
 Brilliant developers
 like `Rachel Andrew`_ and `Jen Simmons`_
 have been working hard to provide tutorials,
@@ -142,7 +142,7 @@ but the results really do feel like magic.
 .. _Jen Simmons: http://jensimmons.com/post/feb-27-2017/learn-css-grid
 
 Remember the old 3-column "Holy Grail" layout,
-with equal height fixed-width sidebars
+with equal-height fixed-width sidebars
 and a fluid center?
 Here it is,
 in a few lines of code:
@@ -170,8 +170,8 @@ The Susy3 syntax has a lot in common with CSS Grid,
 because we want to start moving people in that direction.
 
 Our ``columns`` setting now matches
-the basic features of CSS ``grid-template-columns`` –
-requiring a list of column-sizes,
+the basic features of CSS ``grid-template-columns``
+– requiring a list of column-sizes,
 with the optional ``susy-repeat()`` shortcut function,
 matching the CSS ``repeat()`` option:
 
@@ -260,7 +260,7 @@ Box-Sizing: Border-Box
 ~~~~~~~~~~~~~~~~~~~~~~
 
 First, fix the browser `box-model`_
-by set a global ``box-sizing``:
+by setting a global ``box-sizing``:
 
 .. _box-model: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model
 
@@ -272,7 +272,6 @@ I recommend setting this globally by default,
 no matter how you handle layouts.
 Border-box sizing means you can set a width,
 without worrying that padding or borders will ruin the calculation.
-
 
 I've seen other global box-sizing snippets
 based on a value of ``inherit``,
@@ -311,7 +310,7 @@ you can avoid grid math entirely:
     width: calc(3/12 * 100%);
   }
 
-If you want to get real clever,
+If you want to get really clever,
 you can build your own grid-system out of
 CSS `custom properties`_ (aka variables):
 
@@ -355,7 +354,7 @@ Use Flexbox
 
 The great thing about flexbox
 is that it allows items to flex in specific relationship
-with each-other,
+with each other,
 including equal-height columns and vertical centering.
 I often find that I don't need Susy for a flexbox layout,
 because I'd rather define relationships
@@ -421,15 +420,15 @@ Introducing Susy3
 
 If you can't simplify your math
 with padding-gutters and flexbox,
-you may still run into some difficult calculations,
+you may still run into some difficult calculations
 that require complex grid math.
 
 Susy3 is here to help calculate margin-gutters,
 asymmetrical grids,
 and mixed-unit calculations
-that are still hard to handle without CSS Grid.
+that are difficult to handle without CSS Grid.
 
-This is what a Susy's math looks like
+This is what Susy's math looks like
 most of the time:
 
 .. code:: scss
@@ -461,7 +460,7 @@ The primary API of Susy3
 consists of 2 functions,
 ``span`` and ``gutter``,
 which you can use anywhere.
-Why build an entire system of mixins or classes,
+Why build an entire system of mixins or classes
 when you can simply use these two functions
 wherever you need to align with the grid?
 This is more readable
@@ -486,7 +485,7 @@ from view:
     margin-left: span(3 wide);
   }
 
-If you do find that too repetitive for your needs,
+If you find that too repetitive for your needs,
 you can build mixins to manage a few common patterns.
 Here's a simple ``span`` mixin for floated grids,
 with margin-gutters on the right:
@@ -527,10 +526,10 @@ like you might find in other grid frameworks:
     }
   }
 
-Only users with very-specific and complicated needs
+Only users with very specific and complicated needs
 may still want to "build an entire system"
 on top of Susy,
-in which case we'll provide the syntax and math,
+in which case we'll provide the syntax and math –
 but most use-cases should be handled by the functions
 we provide.
 
@@ -539,9 +538,9 @@ Susy3 Configuration
 -------------------
 
 Global settings are still stored
-in the `$susy` map variable,
+in the ``$susy`` map variable,
 just like Susy2,
-but now we only have 4 total settings.
+but now we only have four total settings.
 Here they are, with their default values:
 
 .. code:: scss
@@ -635,16 +634,16 @@ when pushing, pulling, padding, and bleeding:
   }
 
 Susy3 defaults both values to ``narrow``,
-which will work the same as CSS Grid,
+which will work the same as CSS Grid
 and most other grid systems.
 If you're not doing anything special,
 you can probably ignore these settings
 and move on.
 
 Those are great defaults,
-but there are many reasons to override those settings on-the-fly –
+but there are many reasons to override those settings on-the-fly
 to allow more flexibility where gutters are used.
-Learning to mange ``spread`` and ``container-spread`` in Susy3
+Learning to manage ``spread`` and ``container-spread`` in Susy3
 will give you much more control over your layout experience.
 
 
@@ -706,7 +705,7 @@ will be treated as a slice of the parent grid:
 If you are using asymmetrical grids,
 Susy can't slice it for you.
 We provide a slice function with exactly the same shorthand syntax,
-but it returns a list of columns,
+but it returns a list of columns
 rather than a calculated width:
 
 .. code:: scss
@@ -726,7 +725,7 @@ Span
 ~~~~
 
 The ``span()`` function will return the width of a span
-across grid-columns,
+across grid-columns
 and any intermediate gutters.
 Apply the results to a ``width`` or ``flex-basis`` property
 to size your grid elements –
@@ -790,7 +789,7 @@ with other functions in your project.
 SVG grids for debugging
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-If you want help visualizing and debugging your grids
+If you want help visualizing and debugging your grids,
 import the SVG Grid Plugin:
 
 .. code:: scss
