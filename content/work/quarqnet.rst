@@ -59,14 +59,17 @@ planning:
   - title: 'User Stories'
     icon: 'theater'
     text: |
-      Each user story
-      defined one task
+      We created an itemized list of user stories -
+      a representation of all the user interactions.
+      Each user story defined one task
       that an athlete, coach, or friend
       might want to accomplish on QuarqNet.
-      Before beginning development
-      we estimated users stories
+      Before beginning development,
+      we estimated the users stories
       and Quarq prioritized them.
-      This process continued throughout the project
+      The process of
+      creating, estimating, and prioritizing users stories
+      continued throughout the project,
       allowing Quarq to remain up-to-date
       and in control of the project cost and scope.
   - title: 'Data Models'
@@ -147,17 +150,11 @@ UX Design & Development Process
 User Story
 ~~~~~~~~~~
 
-OddBird's user experience design process
-always begins with a "User Story,"
+OddBird's user experience
+design and development process
+always begins with a user story,
 written from the perspective of a single user.
-During an initial Planning and Discovery Phase
-for the QuarqNet.com project,
-we created an itemized list of User Stories -
-a representation of all the user interactions -
-along with cost estimates.
-In collaboration with Quarq,
-we prioritized the User Stories in Pivotal Tracker.
-One of the first user stories
+One of the very first user stories
 on the list for QuarqNet was:
 
 *As an athlete, I can view my activity (map & data).*
@@ -173,7 +170,7 @@ for designers, developers, and clients -
 a shared Slack channel
 for daily communication and
 a schedule for weekly video meetings.
-User Stories are prioritized in Pivotal Tracker
+User stories are prioritized in Pivotal Tracker
 and contain scope goals and a task list.
 To establish color patterns for QuarqNet,
 OddBird designers started with
@@ -186,12 +183,20 @@ as well as an automated "living" `style guide`_.
 
 .. _style guide: http://quarqnet.com/styleguide/config-colors.html
 
+.. figure:: /static/images/work/quarqnet/communication.jpg
+   :class: extend-large
+   :alt: user story in Pivotal Tracker and Sass color maps
+
 Initial Sketches
 ~~~~~~~~~~~~~~~~
 
+.. image:: /static/images/work/quarqnet/activity.jpg
+   :class: extend-left img-shadow
+   :alt: initial sketch of activity map and data
+
 Because of our focus on users,
 OddBird's development process
-for each User Story
+for each user story
 begins with rough sketches
 showing the flow of the user
 through the content.
@@ -209,7 +214,7 @@ Hi-Fi Mockups
 ~~~~~~~~~~~~~
 
 After the design direction
-for a User Story is approved,
+for a user story is approved,
 we create static or interactive mockups
 often using Adobe Xd.
 These mockups allow us
@@ -224,6 +229,10 @@ We don't linger too long on this step
 or attempt pixel perfection
 as new UX problems nearly always present themselves
 during implementation.
+
+.. image:: /static/images/work/quarqnet/mockup1.jpg
+   :class: extend-large
+   :alt: initial mockups of activity map and data
 
 Implementation
 ~~~~~~~~~~~~~~
@@ -244,11 +253,15 @@ we improved the dotted line, font size, and spacing
 of the activity data
 within the browser.
 
+.. image:: /static/images/work/quarqnet/implementation1.jpg
+   :class: extend-small img-shadow
+   :alt: initial implementation of activity map and data
+
 Bug Story
 ~~~~~~~~~
 
 As we work our way
-through the list of User Stories
+through the list of user stories
 and test the implemented features with users,
 bugs and user flow issues are identified.
 The activity data box on QuarqNet
@@ -271,6 +284,10 @@ are not clear enough.*
 Iteration - Sketches
 ~~~~~~~~~~~~~~~~~~~~
 
+.. image:: /static/images/work/quarqnet/tabs.jpg
+   :class: extend-left img-shadow
+   :alt: sketch to clarifty click targets
+
 Again, we began with rough sketches.
 Our designers proposed clearly labeled tabs
 as a solution
@@ -285,8 +302,16 @@ for active and inactive tabs,
 and a button
 for minimizing the activity list.
 
+.. image:: /static/images/work/quarqnet/mockup2.jpg
+   :class: extend-large
+   :alt: mockup for tab navigation
+
 Implementation
 ~~~~~~~~~~~~~~
+
+.. image:: /static/images/work/quarqnet/implementation2.jpg
+   :class: extend-large
+   :alt: implementation of tab navigation
 
 User Story
 ~~~~~~~~~~
@@ -317,6 +342,10 @@ Make the tabs more compact,
 and move navigation
 to the bottom of the activity box.
 
+.. image:: /static/images/work/quarqnet/compact.jpg
+   :class: extend-full
+   :alt: sketch of new, compact navigation
+
 Interactive Sketch
 ~~~~~~~~~~~~~~~~~~
 
@@ -331,6 +360,10 @@ Play with the interactive `InVision sketch`_.
 
 .. _InVision sketch: https://invis.io/YC8PAW1K3#/191020362_Map_Only
 
+.. image:: /static/images/work/quarqnet/interactive.jpg
+   :class: extend-large
+   :alt: interactive sketch of new, compact navigation
+
 Iteration - Hi-Fi Mockup
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -339,6 +372,10 @@ defining colors, shadows, icons,
 and other visual clues
 to improve user comprehension
 of the new flow.
+
+.. image:: /static/images/work/quarqnet/mockup3.jpg
+   :class: extend-large img-shadow
+   :alt: mockup of new, compact navigation
 
 Implementation
 ~~~~~~~~~~~~~~
@@ -349,6 +386,10 @@ View the current, live application
 at `QuarqNet.com`_.
 
 .. _QuarqNet.com: https://www.quarq.com
+
+.. image:: /static/images/work/quarqnet/implementation3.jpg
+   :class: extend-large
+   :alt: current, live application tab navigation
 
 .. callmacro:: content.macros.j2#rst
   :tag: 'end'
