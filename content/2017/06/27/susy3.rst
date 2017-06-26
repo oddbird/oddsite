@@ -11,7 +11,7 @@ image:
 summary: |
   **We're excited to introduce Susy 3.0**,
   a major update to our popular grid-math calculator –
-  now more focussed and flexible than ever.
+  now more focused and flexible than ever.
   Susy was designed to make layout math easy,
   without forcing you into generic patterns
   and ugly markup.
@@ -60,7 +60,7 @@ could revolutionize CSS-sharing and tool APIs.
 Susy came out of that mix in July, 2009.
 Nothing terribly original,
 just putting the pieces together.
-I didn't have a github account at the time,
+I didn't have a GitHub account at the time,
 so Carl published Susy on my behalf.
 The first draft was kinda ugly –
 but a few people took interest,
@@ -92,7 +92,7 @@ It's time to move away from these tools,
 and put our layouts back in the browser.
 Instead of closing shop, though,
 we wanted to provide one more major update
-truely designed for the edge-cases
+truly designed for the edge-cases
 that remain.
 
 .. _shut down development: https://snugug.com/musings/saying-goodbye-to-singularity/
@@ -288,7 +288,7 @@ Use Padding for Gutters
 
 In reality, grid math is only complex
 when you add margin-gutters to the equation.
-With gutters, fluid grid math looks somthing like this:
+With gutters, fluid grid math looks something like this:
 
 Without gutters in the way,
 spanning ``3`` columns out of ``12`` is a simple fraction:
@@ -346,7 +346,7 @@ Susy is designed to handle any layout,
 but if you are designing grids in pure CSS,
 it's better to describe your actual needs
 more simply.
-Why solve all layut problems,
+Why solve all layout problems,
 when you can solve only the problems you have?
 
 
@@ -403,7 +403,7 @@ Use Calc to Mix Units
 Calc can also help you with mixed-unit grids,
 combining fluid and fixed columns and gutters.
 Because ``calc`` has access to the DOM in the browser,
-it can calculate the results of otherwise non-cmoparable units.
+it can calculate the results of otherwise non-comparable units.
 This is a bit more fragile and manual
 than allowing grid or flexbox to do that work for you,
 but it can be a powerful fallback:
@@ -420,7 +420,7 @@ Introducing Susy3
 -----------------
 
 If you can't simplify your math
-with pading-gutters and flexbox,
+with padding-gutters and flexbox,
 you may still run into some difficult calculations,
 that require complex grid math.
 
@@ -486,7 +486,7 @@ from view:
     margin-left: span(3 wide);
   }
 
-If you do find that too repetative for your needs,
+If you do find that too repetitive for your needs,
 you can build mixins to manage a few common patterns.
 Here's a simple ``span`` mixin for floated grids,
 with margin-gutters on the right:
@@ -553,7 +553,7 @@ Here they are, with their default values:
     'container-spread': 'narrow',
   );
 
-We've alreay introduced you to
+We've already introduced you to
 ``columns`` and ``gutters``,
 so let's take a look at the remaining options.
 
@@ -644,7 +644,7 @@ and move on.
 Those are great defaults,
 but there are many reasons to override those settings on-the-fly –
 to allow more flexibility where gutters are used.
-Learning to mange ``spead`` and ``container-spread`` in Susy3
+Learning to mange ``spread`` and ``container-spread`` in Susy3
 will give you much more control over your layout experience.
 
 
@@ -653,7 +653,7 @@ Susy3 Shorthand Syntax
 
 All Susy3 functions
 draw on the same shorthand syntax in two parts –
-seperated by the word ``of``.
+separated by the word ``of``.
 The first part describes a **span**
 ``width``, ``location``, and ``spread`` (in any order):
 
@@ -852,7 +852,7 @@ make Susy work for you.
 
 We'll keep providing our own tutorials and demos,
 based on the questions we hear most,
-but we alsp love linking to your
+but we also love linking to your
 `sites built with Susy`_,
 and any `third-party tutorials`_
 that we hear about.
