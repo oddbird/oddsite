@@ -8,7 +8,7 @@ headline:
     tagline: 'What people are saying about Susy…'
 susythree:
   - title: 'Full Susy Three Reference'
-    url: 'http://susy.oddbird.net/'
+    url: 'http://susydocs.oddbird.net/'
     type: 'official documentation'
 susytwo:
   - title: 'Full Susy Two Reference'
