@@ -51,7 +51,7 @@ planning:
       to track routes and stats
       in real time,
       connect with other athletes,
-      or share stats on 3rd party sites.
+      or share stats on third-party sites.
       A friend may want to
       check an athlete's location
       to meet up for an activity,
@@ -60,16 +60,16 @@ planning:
   - title: 'User Stories'
     icon: 'theater'
     text: |
-      We created an itemized list of user stories -
+      We created an itemized list of user stories –
       a representation of all the user interactions.
       Each user story defined one task
       that an athlete, coach, or friend
       might want to accomplish on QuarqNet.
       Before beginning development,
-      we estimated the users stories
+      we estimated the user stories
       and Quarq prioritized them.
       The process of
-      creating, estimating, and prioritizing users stories
+      creating, estimating, and prioritizing user stories
       continued throughout the project,
       allowing Quarq to remain up-to-date
       and in control of the project cost and scope.
@@ -77,7 +77,7 @@ planning:
     icon: 'site-map'
     text: |
       The data model provides a sense
-      of backend database structure
+      of back-end database structure
       and object-relationships,
       built around conversations with the entire team
       to determine not just *what is included*
@@ -112,7 +112,7 @@ What They Needed
 ----------------
 
 `Quarq`_ partnered with OddBird to
-to redesign and refactor Quarqnet,
+to redesign and refactor QuarqNet,
 their existing activity tracking web application
 for professional athletes –
 making it responsive and user-friendly.
@@ -122,7 +122,7 @@ making it responsive and user-friendly.
 QuarqNet needed to integrate
 with Quarq's existing brand,
 both the e-commerce site
-and the packaging and printed collatoral
+and the packaging and printed collateral
 for the Qollector,
 Quarq's wearable tracking hardware.
 QuarqNet also matches `Quarq Race Intelligence`_,
@@ -167,7 +167,7 @@ Before diving into process details,
 a word about communication.
 At the beginning of each project,
 we establish a communication system
-for designers, developers, and clients -
+for designers, developers, and clients –
 a shared Slack channel
 for daily communication and
 a schedule for weekly video meetings.
@@ -216,24 +216,26 @@ Hi-Fi Mockups
 
 After the design direction
 for a user story is approved,
-we create static or interactive mockups
-often using Adobe Xd.
+we create static or interactive mockups,
+often using `Adobe Xd`_.
 These mockups allow us
 to experiment with brand implementation
-as well as clarify user flow and interaction -
+as well as clarify user flow and interaction –
 identifying sticking points
 and iterating quickly.
 In conversation with Quarq,
 it became clear that activity data needed a new layout
 to improve scannability.
 We don't linger too long on this step
-or attempt pixel perfection
+or attempt pixel perfection,
 as new UX problems nearly always present themselves
 during implementation.
 
 .. image:: /static/images/work/quarqnet/mockup1.jpg
    :class: extend-large
    :alt: initial mockups of activity map and data
+
+.. _Adobe Xd: http://www.adobe.com/products/experience-design.html
 
 Implementation
 ~~~~~~~~~~~~~~
@@ -282,20 +284,20 @@ around an activity
 (switch to list, hide/show details)
 are not clear enough.*
 
-Iteration - Sketches
+Iteration – Sketches
 ~~~~~~~~~~~~~~~~~~~~
 
 .. image:: /static/images/work/quarqnet/tabs.jpg
    :class: extend-left img-shadow
-   :alt: sketch to clarifty click targets
+   :alt: sketch to clarify click targets
 
 Again, we began with rough sketches.
 Our designers proposed clearly labeled tabs
 as a solution
 to the Bug Story.
 
-Iteration - Hi-Fi Mockups
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+Iteration – Hi-Fi Mockups
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Hi-fi mockups helped us work out specific details
 like wording, icons, colors and styles
@@ -333,7 +335,7 @@ and went back to work:
 *As an athlete, I want to move quickly and easily
 between activity list and detail.*
 
-Iteration - Sketches
+Iteration – Sketches
 ~~~~~~~~~~~~~~~~~~~~
 
 Back to the sketch pad.
@@ -354,7 +356,7 @@ For this complex user experience interaction,
 our designers fleshed out the proposal further
 with a cross between a sketch
 and an interactive mockup.
-The blue boxes above respresent click targets
+The blue boxes below represent click targets
 and demonstrate the user flow
 between activity list, data, and collapsed views.
 Play with the interactive `InVision sketch`_.
@@ -365,7 +367,7 @@ Play with the interactive `InVision sketch`_.
    :class: extend-large
    :alt: interactive sketch of new, compact navigation
 
-Iteration - Hi-Fi Mockup
+Iteration – Hi-Fi Mockup
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 A hi-fi mockup added further detail,
@@ -386,7 +388,7 @@ we had our solution!
 View the current, live application
 at `QuarqNet.com`_.
 
-.. _QuarqNet.com: https://www.quarq.com
+.. _QuarqNet.com: https://www.quarqnet.com/
 
 .. image:: /static/images/work/quarqnet/implementation3.jpg
    :class: extend-large
