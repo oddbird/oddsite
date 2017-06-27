@@ -1,7 +1,5 @@
 public: yes
 author: miriam
-location: 'susysite-articles'
-template: 'susysite/layout.html'
 tags: [Susy, Susy3, CSS, Sass, Grids, Code]
 headline:
   - type: 'Tutorial'
@@ -120,7 +118,7 @@ Accessing that math only through functions
 will allow Susy to get out of your way,
 and work with any future layout technique you need:
 floats, flexbox, tables, inline-block,
-even CSS Grids (though there's no reason for it).
+even CSS Grids.
 
 
 CSS Grids
@@ -287,8 +285,6 @@ Use Padding for Gutters
 
 In reality, grid math is only complex
 when you add margin-gutters to the equation.
-With gutters, fluid grid math looks something like this:
-
 Without gutters in the way,
 spanning ``3`` columns out of ``12`` is a simple fraction:
 ``percentage(3/12)`` in Sass.
@@ -427,33 +423,28 @@ Susy3 is here to help calculate margin-gutters,
 asymmetrical grids,
 and mixed-unit calculations
 that are difficult to handle without CSS Grid.
-
-This is what Susy's math looks like
-most of the time:
+In those cases, Susy can turn this:
 
 .. code:: scss
 
-  // Without Susy…
-  $columns: 12;
-  $gutter-width: 0.25;
-  $span: 3;
-
   $width: ($span + (($span - 1) * $gutter-width)) / ($columns + (($columns - 1) * $gutter-width));
 
-  // With Susy…
-  $susy: (
-    'columns': 12,
-    'gutters': 0.25,
-  );
+Into something more manageable:
+
+.. code:: scss
 
   $width: span(3);
+
+
+Grids on Demand
+---------------
 
 One user asked if Susy3
 forces you to build
 "an entire grid system from scratch".
 While Susy certainly allows and facilitates that option,
 we're really suggesting
-that you might not need an entire system
+that you might not need a more complex system
 when you can access Susy's math directly, on-the-fly.
 
 The primary API of Susy3
