@@ -260,16 +260,29 @@ within the browser.
    :class: extend-small img-shadow
    :alt: initial implementation of activity map and data
 
-Bug Story
-~~~~~~~~~
+Iteration Process
+-----------------
 
-As we work our way
-through the list of user stories
-and test the implemented features with users,
-bugs and user flow issues are identified.
-The activity data box on QuarqNet
-became cluttered over time.
-We needed to use the same box
+User Story
+~~~~~~~~~~
+
+Our process is agile and iterative,
+aiming to deliver usable functionality
+quickly and in small increments.
+The faster our work gets in front of
+stakeholders and alpha-test users,
+the faster we can make adjustments
+and deliver exactly what's required,
+even as feedback along the way
+alters the project requirements
+(which, in our experience, it always does).
+
+As we tested implemented features
+with QuarqNet users,
+we identified bugs and user flow issues.
+The activity data box
+had become quite complex.
+We were using the same box
 to show both activity data,
 a list of past activities,
 and much more.
@@ -277,15 +290,15 @@ During testing,
 users were not able to understand
 how to move quickly
 between the pieces of information they needed.
-A new Bug Story was born:
+A new user story was born:
 
 *The multiple click targets
 around an activity
 (switch to list, hide/show details)
 are not clear enough.*
 
-Iteration – Sketches
-~~~~~~~~~~~~~~~~~~~~
+Sketches
+~~~~~~~~
 
 .. image:: /static/images/work/quarqnet/tabs.jpg
    :class: extend-left img-shadow
@@ -294,10 +307,10 @@ Iteration – Sketches
 Again, we began with rough sketches.
 Our designers proposed clearly labeled tabs
 as a solution
-to the Bug Story.
+to the user story.
 
-Iteration – Hi-Fi Mockups
-~~~~~~~~~~~~~~~~~~~~~~~~~
+Hi-Fi Mockups
+~~~~~~~~~~~~~
 
 Hi-fi mockups helped us work out specific details
 like wording, icons, colors and styles
@@ -319,10 +332,12 @@ Implementation
 User Story
 ~~~~~~~~~~
 
-Our tab solution for the Bug Story
-clarified navigation flow
+Our tab iteration for the previous user story
+successfully clarified navigation flow
 between activity data and list views,
-but created a new UX problem.
+but, not surprisingly,
+usability testing identified
+a new UX problem to solve.
 The tabs hid too much of the map
 from the user's view,
 especially on small, mobile screens.
@@ -335,8 +350,8 @@ and went back to work:
 *As an athlete, I want to move quickly and easily
 between activity list and detail.*
 
-Iteration – Sketches
-~~~~~~~~~~~~~~~~~~~~
+Sketches
+~~~~~~~~
 
 Back to the sketch pad.
 The new proposal?
@@ -352,7 +367,7 @@ to the bottom of the activity box.
 Interactive Sketch
 ~~~~~~~~~~~~~~~~~~
 
-For this complex user experience interaction,
+For this core user experience interaction,
 our designers fleshed out the proposal further
 with a cross between a sketch
 and an interactive mockup.
@@ -367,8 +382,8 @@ Play with the interactive `InVision sketch`_.
    :class: extend-large
    :alt: interactive sketch of new, compact navigation
 
-Iteration – Hi-Fi Mockup
-~~~~~~~~~~~~~~~~~~~~~~~~
+Hi-Fi Mockup
+~~~~~~~~~~~~
 
 A hi-fi mockup added further detail,
 defining colors, shadows, icons,
