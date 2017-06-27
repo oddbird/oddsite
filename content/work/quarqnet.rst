@@ -15,6 +15,7 @@ project:
     tagline: 'Real-Time Telemetry for Athletes'
     url: 'http://quarqnet.com'
     years: '2015–2016'
+    case_study: true
     status: 'live'
 quotes:
   - text: “A mobile-friendly design that will let users see the live tracking
