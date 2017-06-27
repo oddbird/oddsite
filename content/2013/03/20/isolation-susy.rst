@@ -136,5 +136,5 @@ Happy coding!
 .. _Sub-pixel rounding: http://ejohn.org/blog/sub-pixel-problems-in-css/
 .. _demo: http://johnalbin.github.com/fluid-grid-rounding-errors/
 .. _solution: http://palantir.net/blog/responsive-design-s-dirty-little-secret
-.. _isolate any grid element in susy: http://susy.oddbird.net/guides/reference/#ref-helper-isolation
-.. _Bleed: http://susy.oddbird.net/guides/reference/#ref-bleed
+.. _isolate any grid element in susy: http://susyone.oddbird.net/guides/reference/#ref-helper-isolation
+.. _Bleed: http://susyone.oddbird.net/guides/reference/#ref-bleed

@@ -59,6 +59,6 @@ Thanks for asking the questions!
 You can also check out the `summary`_ –
 but it leaves out some good bits.
 
-.. _Susy: http://susy.oddbird.net
+.. _Susy: /susy/
 .. _live Q&A at SitePoint: https://www.sitepoint.com/community/t/live-q-a-miriam-suzanne-on-susy-and-the-need-for-toolkits-on-18th-aug-2pm-pst/232664
 .. _summary: https://www.sitepoint.com/how-to-choose-the-right-css-toolkits-and-frameworks/

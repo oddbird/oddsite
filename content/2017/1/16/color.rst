@@ -257,8 +257,8 @@ discovered, would be a fantastic replacement for our orange. Bright, odd, and
 accessible, it was a good counterpoint to our serious, dark blue. The team
 loved the Susy tie-in, and OddBird’s new brand colors were born – er, hatched.
 
-.. _Susy: http://susy.oddbird.net/
-.. _Miriam: /birds/
+.. _Susy: /susy/
+.. _Miriam: /birds/#bird-miriam
 
 .. image:: /static/images/blog/2017/colors/elementcollage-final.jpg
 

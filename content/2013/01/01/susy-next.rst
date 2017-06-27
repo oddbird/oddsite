@@ -100,7 +100,7 @@ existing frameworks, techniques, and systems.
 We hope you'll get involved, and help make it a community project.
 Stay tuned!
 
-.. _Susy: http://susy.oddbird.net/
+.. _Susy: /susy/
 
 .. _Jina Bolton: http://github.com/jina/
 .. _@jina: http://twitter.com/jina
