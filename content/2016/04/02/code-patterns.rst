@@ -27,11 +27,7 @@ Among other things:
   because data formatting is often a presentation concern,
   and should be accessible to the entire team.
 - We use design-agnostic tools that move with us from project to project,
-  our own modular html/css `system`_,
-  so that we can build `tiny bootstraps for every client`_.
+  our own modular html/css system,
+  so that we can build tiny bootstraps for every client.
 - We discuss naming conventions across the entire team,
   so we're all on the same page, and not stepping on toes.
-
-.. _system: #@@@
-.. _tiny bootstraps for every client: #@@@
-

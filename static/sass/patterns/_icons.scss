@@ -2,13 +2,17 @@
 // ============
 
 [data-icon] {
+  @include square(1em);
   fill: currentColor;
-  height: 1em;
   padding: size('pixel');
-  width: 1em;
 }
 
 // fill classes used when svg requires multiple colors
 .fill-white {
   fill: color('background');
+}
+
+[data-size='text-small'] {
+  @include square(0.75em);
+  vertical-align: baseline;
 }

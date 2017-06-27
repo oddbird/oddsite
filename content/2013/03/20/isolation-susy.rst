@@ -1,6 +1,8 @@
 public: yes
-tags: [Susy, Layout, Grids, 'Sub-pixel Rounding', Code]
+tags: [Susy, Susy1, Layout, Grids, 'Sub-pixel Rounding', Code]
 author: miriam
+location: 'susysite-articles'
+template: 'susysite/layout.html'
 image:
   - src: 'blog/susy.jpg'
 summary: |
@@ -48,56 +50,24 @@ Using John's method,
 you can now `isolate any grid element in susy`_,
 with the simple ``isolate()`` mixin:
 
-.. code:: scss
-
-  .span {
-    @include span-columns(6);
-  }
 
 .. raw:: html
 
-  <div class="subpixel-demo">
-    <div class="span">span 6</div>
-  </div>
+  <figure class="extend-small">
+    <p data-height="265" data-theme-id="0" data-slug-hash="ad41121d402b5faccd1dbee4e88e35d1" data-default-tab="result" data-user="mirisuzanne" data-embed-version="2" data-pen-title="Susy Isolation Demo: Syntax" data-editable="true" class="codepen">See the Pen <a href="https://codepen.io/mirisuzanne/pen/ad41121d402b5faccd1dbee4e88e35d1/">Susy Isolation Demo: Syntax</a> by Miriam Suzanne (<a href="https://codepen.io/mirisuzanne">@mirisuzanne</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+  </figure>
 
-.. code:: scss
-
-  .isolate {
-    @include span-columns(6);
-    @include isolate(3);
-  }
-
-.. raw:: html
-
-  <div class="subpixel-demo">
-    <div class="isolate">span 6 isolate 3</div>
-  </div>
 
 When you put several of those together,
 you can see how they have been removed from the flow:
 
-.. code:: scss
-
-  .first {
-    @include span-columns(3);
-    @include isolate(2);
-  }
-  .second {
-    @include span-columns(4);
-    @include isolate(9);
-  }
-  .third {
-    @include span-columns(6);
-    @include isolate(4);
-  }
-
 .. raw:: html
 
-  <div class="subpixel-demo">
-    <div class="first">first</div>
-    <div class="second">second</div>
-    <div class="third">third</div>
-  </div>
+  <figure class="extend-small">
+    <p data-height="265" data-theme-id="0" data-slug-hash="93faa807c78fb4e9b1e15af2727d22d1" data-default-tab="result" data-user="mirisuzanne" data-embed-version="2" data-pen-title="Susy Isolation Demo: Multiple" data-editable="true" class="codepen">See the Pen <a href="https://codepen.io/mirisuzanne/pen/93faa807c78fb4e9b1e15af2727d22d1/">Susy Isolation Demo: Multiple</a> by Miriam Suzanne (<a href="https://codepen.io/mirisuzanne">@mirisuzanne</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+  </figure>
 
 The items can overlap, and stack in any order –
 almost as though they are positioned absolutely.
@@ -112,79 +82,17 @@ To help with that use-case,
 we've added the ``isolate-grid()`` mixin.
 You just tell us how wide each item should be,
 and we'll calculate the locations,
-applying them with nth-child selectors:
+applying them with nth-child selectors.
 
-.. code:: scss
-
-  .gallery-item {
-    @include isolate-grid(1);
-  }
+Change the span-width, and we'll update everything for you:
 
 .. raw:: html
 
-  <div class="subpixel-demo">
-    <div class="gallery-item">1</div>
-    <div class="gallery-item">2</div>
-    <div class="gallery-item">3</div>
-    <div class="gallery-item">4</div>
-    <div class="gallery-item">5</div>
-    <div class="gallery-item">6</div>
-    <div class="gallery-item">7</div>
-    <div class="gallery-item">8</div>
-    <div class="gallery-item">9</div>
-    <div class="gallery-item">10</div>
-    <div class="gallery-item">11</div>
-    <div class="gallery-item">12</div>
-    <div class="gallery-item">13</div>
-    <div class="gallery-item">14</div>
-    <div class="gallery-item">15</div>
-    <div class="gallery-item">16</div>
-    <div class="gallery-item">17</div>
-    <div class="gallery-item">18</div>
-    <div class="gallery-item">19</div>
-    <div class="gallery-item">20</div>
-    <div class="gallery-item">21</div>
-    <div class="gallery-item">22</div>
-    <div class="gallery-item">23</div>
-    <div class="gallery-item">24</div>
-  </div>
+  <figure class="extend-small">
+    <p data-height="400" data-theme-id="0" data-slug-hash="c891305b8d32d1306fc305846cfd926f" data-default-tab="result" data-user="mirisuzanne" data-embed-version="2" data-pen-title="Susy Isolation Demo: Gallery" data-editable="true" class="codepen">See the Pen <a href="https://codepen.io/mirisuzanne/pen/c891305b8d32d1306fc305846cfd926f/">Susy Isolation Demo: Gallery</a> by Miriam Suzanne (<a href="https://codepen.io/mirisuzanne">@mirisuzanne</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+  </figure>
 
-Change the width, and we'll update everything for you:
-
-.. code:: scss
-
-  .gallery-item2 {
-    @include isolate-grid(3);
-  }
-
-.. raw:: html
-
-  <div class="subpixel-demo">
-    <div class="gallery-item2">1</div>
-    <div class="gallery-item2">2</div>
-    <div class="gallery-item2">3</div>
-    <div class="gallery-item2">4</div>
-    <div class="gallery-item2">5</div>
-    <div class="gallery-item2">6</div>
-    <div class="gallery-item2">7</div>
-    <div class="gallery-item2">8</div>
-    <div class="gallery-item2">9</div>
-    <div class="gallery-item2">10</div>
-    <div class="gallery-item2">11</div>
-    <div class="gallery-item2">12</div>
-    <div class="gallery-item2">13</div>
-    <div class="gallery-item2">14</div>
-    <div class="gallery-item2">15</div>
-    <div class="gallery-item2">16</div>
-    <div class="gallery-item2">17</div>
-    <div class="gallery-item2">18</div>
-    <div class="gallery-item2">19</div>
-    <div class="gallery-item2">20</div>
-    <div class="gallery-item2">21</div>
-    <div class="gallery-item2">22</div>
-    <div class="gallery-item2">23</div>
-    <div class="gallery-item2">24</div>
-  </div>
 
 Bleed
 -----
@@ -195,17 +103,14 @@ it just happened to appear in the same update.
 to let an element's background "bleed" outside
 the area it would normally occupy.
 
-Here's an element bleeding 1-column outside our 9-column page layout:
-
-.. code:: scss
-
-  .bleed-demo {
-    @include bleed(1 of 9);
-  }
+Here's an element bleeding 1-column outside our 6-column page layout:
 
 .. raw:: html
 
-  <div class="bleed-demo"><span>bleed!</span></div>
+  <figure class="extend-small">
+    <p data-height="265" data-theme-id="0" data-slug-hash="351a144615300d48574188af838764ea" data-default-tab="result" data-user="mirisuzanne" data-embed-version="2" data-pen-title="Susy1 Bleed Demo: Syntax" data-editable="true" class="codepen">See the Pen <a href="https://codepen.io/mirisuzanne/pen/351a144615300d48574188af838764ea/">Susy1 Bleed Demo: Syntax</a> by Miriam Suzanne (<a href="https://codepen.io/mirisuzanne">@mirisuzanne</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+  </figure>
 
 You'll notice that the context syntax is a bit different here:
 ``(1 of 9)`` instead of ``(1,9)``.
@@ -216,18 +121,12 @@ Use the second argument to list which sides should do the bleeding
 (defaults to "left right").
 You can also pass arbitrary widths in the first argument:
 
-.. code:: scss
-
-  .bleed-sides-demo {
-    @include bleed(3 of 9, left);
-    @include bleed(3em, top);
-    @include bleed(6px, right bottom);
-  }
-
 .. raw:: html
 
-  <div class="bleed-sides-demo"><span>bleed all the sides!</span></div>
-  <br />
+  <figure class="extend-small">
+    <p data-height="265" data-theme-id="0" data-slug-hash="c8eb354821f8441e8c4b28864f92a8dd" data-default-tab="result" data-user="mirisuzanne" data-embed-version="2" data-pen-title="Susy1 Bleed Demo: Sides" data-editable="true" class="codepen">See the Pen <a href="https://codepen.io/mirisuzanne/pen/c8eb354821f8441e8c4b28864f92a8dd/">Susy1 Bleed Demo: Sides</a> by Miriam Suzanne (<a href="https://codepen.io/mirisuzanne">@mirisuzanne</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+  </figure>
 
 This can be especially useful to bleed across ``$grid-padding``.
 Simply ``bleed($grid-padding)`` and you're there.

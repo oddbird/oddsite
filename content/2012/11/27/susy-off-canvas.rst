@@ -1,6 +1,8 @@
 public: yes
-tags: [Susy, Demos, Layout, Code]
+tags: [Susy, Susy1, Demos, Layout, Code]
 author: miriam
+location: 'susysite-articles'
+template: 'susysite/layout.html'
 image:
   - src: 'blog/susy.jpg'
 summary: |
@@ -8,13 +10,13 @@ summary: |
   for responsive web design
   has been getting all the attention lately,
   and I've had several people ask
-  how `Susy`_ might play along.
+  how `Susy One`_ might play along.
   I'll show you how easy it is,
   and how much flexibility Susy can add
   along the way.
 
   .. _off-canvas: http://jasonweaver.name/lab/offcanvas/
-  .. _Susy: http://susy.oddbird.net/
+  .. _Susy One: http://susyone.oddbird.net/
 
 
 Off-Canvas Layout with Susy
@@ -58,8 +60,9 @@ that require the `latest Susy release`_
 but the concepts remain true
 in older versions as well.
 
-.. _demo: /demos/susy-off-canvas/
+.. _demo: https://codepen.io/mirisuzanne/pen/c84837d2f8c478b6a3accca409c790eb
 .. _latest Susy release: http://rubygems.org/gems/susy
+
 
 Basic Markup:
 -------------
@@ -193,6 +196,7 @@ our main section only as far as it needs to go:
 a given number of ``columns()``
 with the final ``gutter()`` included.
 
+
 Medium Layout:
 --------------
 
@@ -242,6 +246,7 @@ We also hide the left toggle
 ( ``[href="#left"]`` )
 as it is no longer needed.
 
+
 Large Layout:
 -------------
 
@@ -281,6 +286,14 @@ make sure everything stays put
 even if we have leftover classes,
 and you're done.
 
+.. raw:: html
+
+  <figure class="extend-small">
+    <p data-height="500" data-theme-id="0" data-slug-hash="c84837d2f8c478b6a3accca409c790eb" data-default-tab="result" data-user="mirisuzanne" data-embed-version="2" data-pen-title="Susy1 Off-Canvas Demo" class="codepen">See the Pen <a href="https://codepen.io/mirisuzanne/pen/c84837d2f8c478b6a3accca409c790eb/">Susy1 Off-Canvas Demo</a> by Miriam Suzanne (<a href="https://codepen.io/mirisuzanne">@mirisuzanne</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+  </figure>
+
+
 Final Tweaks
 ------------
 
@@ -296,9 +309,3 @@ Play around with all the numbers;
 it's amazingly flexible.
 It works the same as any other Susy grid:
 any reasonable settings should work.
-
-Feel free to peruse the full `sass`_
-and `js`_ source at your leisure.
-
-.. _sass: https://github.com/oddbird/oddsite/blob/master/static/sass/pages/susy-off-canvas.scss
-.. _js: https://github.com/oddbird/oddsite/blob/master/static/js/pages/susy-off-canvas.js

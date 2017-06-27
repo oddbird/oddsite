@@ -61,8 +61,10 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
   <!-- favicon.ico -->
+  {% block favicons %}
   <link rel="shortcut icon" href="/static/images/favicons/favicon.ico" />
   <link rel="apple-touch-icon" href="/static/images/favicons/apple-touch-icon.png" />
+  {% endblock %}
 
   <!-- Styles -->
   {% block styles %}
@@ -103,6 +105,5 @@
 
   <!-- JavaScript -->
   <script src="{{ get_asset('app') }}"></script>
-  {% block extrajs %}{% endblock extrajs %}
 </body>
 </html>

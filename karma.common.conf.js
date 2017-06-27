@@ -17,8 +17,8 @@ webpackConf.plugins = [
     /#$/,
     // don't watch the context directories we add in test/js/index.js; see
     // https://github.com/webpack/webpack/issues/2156
-    /test\/js\/(app|pages)$/,
-    /static\/js\/(app|pages)$/
+    /test\/js\/app$/,
+    /static\/js\/app$/
   ]),
   new webpack.ProvidePlugin({
     $: 'jquery',

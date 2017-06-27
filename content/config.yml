@@ -5,6 +5,7 @@
 
 contact:
   - title: 'Let’s Build Something Together!'
+    susytitle: 'Partner with OddBird on Your Next Project!'
     content: |
       <strong>We want to hear all about your software ideas.</strong>
       Fill out our
@@ -21,15 +22,51 @@ contact:
 
 events:
 
-  - venue: 'Sass Hack Denver'
-    url: 'https://www.meetup.com/Sass-Hack-Denver/events/239687418/'
-    date: ['6', '1', '2017']
+  - venue: 'Develop Denver'
+    url: 'https://developdenver.org/'
+    date: ['8', '10', '2017']
     adr:
       city: 'Denver'
       state: 'CO'
     who:
       - author: 'miriam'
-        title: 'Code Patterns for Pattern Making'
+        title: 'Practical Layouts, Past & Future'
+
+  - venue: 'DjangoCon'
+    url: 'https://2017.djangocon.us/'
+    date: ['8', '14', '2017']
+    adr:
+      city: 'Spokane'
+      state: 'WA'
+    who:
+      - author: 'miriam'
+        title: 'Don’t Use My Grid System (or any others)'
+
+  - venue: 'CSS Dev Conf'
+    url: 'http://2017.cssdevconf.com/'
+    date: ['10', '9', '2017']
+    adr:
+      city: 'New Orleans'
+      state: 'LA'
+    who:
+      - author: 'miriam'
+        title: 'Don’t Use My Grid System (or any others)'
+
+
+# Past Talks
+# ----------
+
+events_past:
+
+  - venue: 'Refresh Denver'
+    url: 'https://www.meetup.com/refreshdenver/events/239219853/'
+    date: ['6', '14', '2017']
+    adr:
+      city: 'Denver'
+      state: 'CO'
+    who:
+      - author: 'miriam'
+        title: 'Practical Layouts, Past & Future'
 
   - venue: 'Front-End Camp'
     url: 'http://chicagocamps.org/events/2017/front-end-camp/'
@@ -41,11 +78,15 @@ events:
       - author: 'stacy'
         title: 'The Great State of Design with CSS Grid Layout & Friends'
 
-
-# Past Talks
-# ----------
-
-events_past:
+  - venue: 'Sass Hack Denver'
+    url: 'https://www.meetup.com/Sass-Hack-Denver/events/239687418/'
+    date: ['6', '1', '2017']
+    adr:
+      city: 'Denver'
+      state: 'CO'
+    who:
+      - author: 'miriam'
+        title: 'Code Patterns for Pattern Making'
 
   - venue: 'WordPress Naperville'
     url: 'https://www.meetup.com/WordPress-Naperville/events/236903886/'
@@ -475,6 +516,36 @@ nav:
       - text: 'contact'
         display_text: 'contact us'
         url: '/contact/'
+
+
+susy_nav:
+  - text: 'susysite-articles'
+    display_text: 'articles'
+    url: '/susy/articles/'
+  - text: 'susysite-support'
+    display_text: 'support'
+    subnav:
+      - text: 'docs'
+        display_text: 'reference documentation'
+        url: 'http://susydocs.oddbird.net/'
+      - text: 'github'
+        display_text: 'github issues'
+        url: 'https://github.com/oddbird/susy/issues'
+      - text: 'stack-overflow'
+        display_text: 'stack overflow'
+        url: 'http://stackoverflow.com/questions/tagged/susy-sass'
+      - text: 'twitter'
+        display_text: 'twitter'
+        url: 'http://twitter.com/sasssusy/'
+      - text: 'susysite-styleguide'
+        display_text: 'brand styleguide'
+        url: '/susy/styleguide/'
+  - text: 'susysite-sites'
+    display_text: 'sites'
+    url: '/susy/sites/'
+  - text: 'oddbird'
+    display_text: 'oddbird'
+    url: '/'
 
 
 # Site Settings
