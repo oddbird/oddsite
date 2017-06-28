@@ -11,6 +11,9 @@
 
 [data-module='rst-body'] {
   section {
+    @include clearfix;
+    clear: both;
+
     + section {
       margin-top: size('double-gutter');
     }
