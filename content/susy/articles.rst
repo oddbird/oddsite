@@ -1,5 +1,5 @@
 public: yes
-location: susysite-articles
+location: 'susysite-articles'
 template: 'susysite/layout.html'
 grid_template: true
 hide_title: true
@@ -190,7 +190,7 @@ Articles, Podcasts, & Tutorials
 ===============================
 
 .. callmacro:: content.macros.j2#link_list
-  :title: 'Susy Three'
+  :title: 'Susy3'
   :tag: 'Susy3'
   :slug: 'susy/articles'
   :data: 'susythree'
@@ -202,7 +202,7 @@ Articles, Podcasts, & Tutorials
 .. callmacro:: content.macros.j2#divider
 
 .. callmacro:: content.macros.j2#link_list
-  :title: 'Susy Two'
+  :title: 'Susy2'
   :tag: 'Susy2'
   :slug: 'susy/articles'
   :data: 'susytwo'
@@ -210,7 +210,7 @@ Articles, Podcasts, & Tutorials
 .. callmacro:: content.macros.j2#divider
 
 .. callmacro:: content.macros.j2#link_list
-  :title: 'Susy One'
+  :title: 'Susy1'
   :tag: 'Susy1'
   :slug: 'susy/articles'
   :data: 'susyone'
