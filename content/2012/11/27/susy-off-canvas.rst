@@ -1,8 +1,6 @@
 public: yes
 tags: [Susy, Susy1, Demos, Layout, Code]
 author: miriam
-location: 'susysite-articles'
-template: 'susysite/layout.html'
 image:
   - src: 'blog/susy.jpg'
 summary: |
