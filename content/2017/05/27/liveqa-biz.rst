@@ -64,7 +64,7 @@ As core developers on `Django`_, `Susy`_, & `Plone`_ –
 we're `experts`_ in tool-building.
 
 .. _Django: https://www.djangoproject.com/
-.. _Susy: http://susy.oddbird.net/
+.. _Susy: /susy/
 .. _Plone: https://plone.org/
 .. _experts: /birds/
 

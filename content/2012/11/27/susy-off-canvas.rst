@@ -38,7 +38,7 @@ and I've had several people ask
 how `Susy`_ might play along.
 
 .. _off-canvas: http://jasonweaver.name/lab/offcanvas/
-.. _Susy: http://susy.oddbird.net/
+.. _Susy: /susy/
 
 The truth is,
 Susy handles off-canvas layout the same

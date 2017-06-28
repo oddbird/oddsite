@@ -527,7 +527,7 @@ susy_nav:
     subnav:
       - text: 'docs'
         display_text: 'reference documentation'
-        url: 'http://susydocs.oddbird.net/'
+        url: '/susy/docs/'
       - text: 'github'
         display_text: 'github issues'
         url: 'https://github.com/oddbird/susy/issues'
