@@ -5,7 +5,7 @@ headline:
   - type: 'Tutorial'
     tagline: 'Make grid systems your fallback plan'
 image:
-  - src: 'blog/2017/spread/susy-spread.jpg'
+  - src: 'blog/2017/susy3/susy-ag.jpg'
 summary: |
   **We're excited to introduce Susy 3.0**,
   a major update to our popular grid-math calculator –
@@ -22,6 +22,17 @@ summary: |
 
 Welcome to Susy3!
 =================
+
+
+.. callmacro:: content.macros.j2#link_button
+  :url: '/susy/'
+
+  Susy3 Website
+
+.. callmacro:: content.macros.j2#link_button
+  :url: '/susy/docs/'
+
+  Susy3 Reference Docs
 
 I remember when `Blueprint`_ first came out.
 Besides `Eric Meyer’s Reset`_,
