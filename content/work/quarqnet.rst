@@ -111,7 +111,7 @@ Case Study: QuarqNet
 What They Needed
 ----------------
 
-`Quarq`_ partnered with OddBird to
+`Quarq`_ partnered with OddBird
 to redesign and refactor QuarqNet,
 their existing activity tracking web application
 for professional athletes –
@@ -259,6 +259,7 @@ within the browser.
 .. image:: /static/images/work/quarqnet/implementation1.jpg
    :class: extend-small img-shadow
    :alt: initial implementation of activity map and data
+
 
 Iteration Process
 -----------------
