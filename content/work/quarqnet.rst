@@ -66,7 +66,7 @@ planning:
       that an athlete, coach, or friend
       might want to accomplish on QuarqNet.
       Before beginning development,
-      we estimated the user stories
+      we estimated the user stories,
       and Quarq prioritized them.
       The process of
       creating, estimating, and prioritizing user stories
@@ -80,8 +80,8 @@ planning:
       of back-end database structure
       and object-relationships,
       built around conversations with the entire team
-      to determine not just *what is included*
-      but *how users will interact*
+      to determine not just what is included
+      but how users will interact
       with the available models:
       “An ACTIVITY represents a single timespan
       during which a user’s Qollector was turned on.”
@@ -121,13 +121,15 @@ making it responsive and user-friendly.
 
 QuarqNet needed to integrate
 with Quarq's existing brand,
-both the e-commerce site
+both the e-commerce site,
 and the packaging and printed collateral
 for the Qollector,
-Quarq's wearable tracking hardware.
-QuarqNet also matches `Quarq Race Intelligence`_,
+Quarq's wearable,
+activity-tracking hardware.
+The QuarqNet brand
+also matches `Quarq Race Intelligence`_,
 another Quarq web application
-OddBird had the privilege to develop.
+OddBird had the privilege to design and develop.
 
 .. _Quarq Race Intelligence: https://www.quarqrace.com/
 
@@ -148,18 +150,6 @@ OddBird had the privilege to develop.
 UX Design & Development Process
 -------------------------------
 
-User Story
-~~~~~~~~~~
-
-OddBird's user experience
-design and development process
-always begins with a user story,
-written from the perspective of a single user.
-One of the very first user stories
-on the list for QuarqNet was:
-
-*As an athlete, I can view my activity (map & data).*
-
 Communication
 ~~~~~~~~~~~~~
 
@@ -173,6 +163,7 @@ for daily communication and
 a schedule for weekly video meetings.
 User stories are prioritized in Pivotal Tracker
 and contain scope goals and a task list.
+
 To establish color patterns for QuarqNet,
 OddBird designers started with
 the existing brand colors
@@ -188,6 +179,17 @@ as well as an automated "living" `style guide`_.
    :class: extend-large
    :alt: user story in Pivotal Tracker and Sass color maps
 
+User Story
+~~~~~~~~~~
+
+OddBird's user experience
+design and development process
+always begins with a user story,
+written from the perspective of a single user.
+One of the very first user stories
+on the list for QuarqNet was:
+*As an athlete, I can view my activity (map & data).*
+
 Initial Sketches
 ~~~~~~~~~~~~~~~~
 
@@ -199,12 +201,12 @@ Because of our focus on users,
 OddBird's development process
 for each user story
 begins with rough sketches
-showing the flow of the user
+showing the flow of a specific user
 through the content.
 The athletes using QuarqNet
 needed easy access to the map of their route
 as well as the activity data.
-This initial design proposal
+This initial sketch
 displays the map and activity details together
 in a single view.
 No clicking necessary
@@ -224,8 +226,8 @@ as well as clarify user flow and interaction –
 identifying sticking points
 and iterating quickly.
 In conversation with Quarq,
-it became clear that activity data needed a new layout
-to improve scannability.
+we worked to create a simple, scannable layout
+for the activity data.
 We don't linger too long on this step
 or attempt pixel perfection,
 as new UX problems nearly always present themselves
@@ -240,26 +242,27 @@ during implementation.
 Implementation
 ~~~~~~~~~~~~~~
 
-Additional UX design iteration
-happens during implementation
+Additional UX design changes
+happen during implementation
 as we begin to interact with the new features
 in the context of the browser.
 Whether working with our own internal developers
 or partnering with external developers,
 we maintain a tight a feedback loop
 between designers and developers
-as well as the clients at this stage.
+as well as the clients
+at this stage.
 We have frequent video calls
 to demo, discuss, pair, and re-design features.
-For this QuarqNet feature,
-we improved the dotted line, font size, and spacing
-of the activity data
+For this user story
+we improved the dotted line,
+font size,
+and spacing of the activity data
 within the browser.
 
-.. image:: /static/images/work/quarqnet/implementation1.jpg
-   :class: extend-small img-shadow
+.. image:: /static/images/work/quarqnet/implementation.jpg
+   :class: extend-large
    :alt: initial implementation of activity map and data
-
 
 Iteration Process
 -----------------
@@ -281,83 +284,29 @@ alters the project requirements
 As we tested implemented features
 with QuarqNet users,
 we identified bugs and user flow issues.
-The activity data box
-had become quite complex.
-We were using the same box
-to show both activity data,
+The activity data box had become quite complex.
+The same box displayed
+activity data,
 a list of past activities,
-and much more.
+and more.
 During testing,
-users were not able to understand
-how to move quickly
+users were not able to move quickly
 between the pieces of information they needed.
+Plus, the tab navigation we created
+hid too much of the map on mobile screens,
+a no-go for our active QuarqNet users.
 A new user story was born:
-
-*The multiple click targets
-around an activity
-(switch to list, hide/show details)
-are not clear enough.*
-
-Sketches
-~~~~~~~~
-
-.. image:: /static/images/work/quarqnet/tabs.jpg
-   :class: extend-left img-shadow
-   :alt: sketch to clarify click targets
-
-Again, we began with rough sketches.
-Our designers proposed clearly labeled tabs
-as a solution
-to the user story.
-
-Hi-Fi Mockups
-~~~~~~~~~~~~~
-
-Hi-fi mockups helped us work out specific details
-like wording, icons, colors and styles
-for active and inactive tabs,
-and a button
-for minimizing the activity list.
-
-.. image:: /static/images/work/quarqnet/mockup2.jpg
-   :class: extend-large
-   :alt: mockup for tab navigation
-
-Implementation
-~~~~~~~~~~~~~~
-
-.. image:: /static/images/work/quarqnet/implementation2.jpg
-   :class: extend-large
-   :alt: implementation of tab navigation
-
-User Story
-~~~~~~~~~~
-
-Our tab iteration for the previous user story
-successfully clarified navigation flow
-between activity data and list views,
-but, not surprisingly,
-usability testing identified
-a new UX problem to solve.
-The tabs hid too much of the map
-from the user's view,
-especially on small, mobile screens.
-Because QuarqNet users
-would be using the application
-primarily on mobile screens, this was a no go.
-So, we created a new User Story
-and went back to work:
-
 *As an athlete, I want to move quickly and easily
-between activity list and detail.*
+between activity list, data, and map.*
 
 Sketches
 ~~~~~~~~
 
 Back to the sketch pad.
 The new proposal?
-Remove the bulky circle button.
-Make the tabs more compact,
+Clarify wording,
+add a collapsed view,
+make the tabs more compact,
 and move navigation
 to the bottom of the activity box.
 
