@@ -771,7 +771,7 @@ in the `reference docs`_,
 but you should note that we now provide the Susy API
 with or without prefixes:
 
-.. _reference docs: http://susydocs.oddbird.net/
+.. _reference docs: /susy/docs/
 
 .. code:: scss
 
@@ -831,7 +831,7 @@ if that's something you need.
 See the `Plugin Utilities`_
 for more detail.
 
-.. _Plugin Utilities: http://susydocs.oddbird.net/plugin-utils.html
+.. _Plugin Utilities: /susy/docs/plugin-utils.html
 
 
 Feedback is Always Welcome
