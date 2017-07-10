@@ -27,7 +27,7 @@ In Susy3 we've tried to move in the other direction –
 naming spread, and making it central to the API –
 giving you full control over the math.
 
-.. _or even to Susy generally: /susy/docs/en/latest/settings/#spread
+.. _or even to Susy generally: http://susy.readthedocs.io/settings/#spread
 
 
 Spread on Containers
