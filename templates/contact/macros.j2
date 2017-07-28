@@ -1,0 +1,13 @@
+{% import 'utility.macros.j2' as utility %}
+
+{% macro social(items) %}
+  <ul class="social">
+    {% for item in items %}
+      <li>
+        {% set content = [utility.icon(item.icon), item.text]|join %}
+        {{ utility.link_if(content, item.url, 'social-link') }}
+        {{ item.after }}
+      </li>
+    {% endfor %}
+  </ul>
+{% endmacro %}

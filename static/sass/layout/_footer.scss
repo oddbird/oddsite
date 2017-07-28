@@ -5,7 +5,7 @@
 [data-region='footer'] {
   @include font-family('alt');
   @include font-size('small');
-  margin: size('spacer') auto size('gutter');
+  margin: size('gutter') auto;
   max-width: size('full-content');
   padding: 0 size('gutter');
   text-align: center;

@@ -4,17 +4,38 @@
 # -----------------
 
 contact:
-  - title: 'Let’s Build Something Together!'
-    susytitle: 'Partner with OddBird on Your Next Project!'
+  - title: 'Let’s Talk About Your Web Project'
+    susytitle: 'Partner with OddBird on Your Next Project'
+    subtitle: 'Give Wings to Your Vision'
+    action:
+      text: 'Get a free consulation'
+      url: '/contact/'
     content: |
-      <strong>We want to hear all about your software ideas.</strong>
-      Fill out our
-      <a href="/contact/">contact form</a>,
-      join our
-      <a href="http://friends.oddbird.net">public Slack chat</a>,
-      or tweet
-      <a href="http://twitter.com/oddbird">@oddbird</a>
-      to start the conversation.
+      OddBird is a full-stack design and development agency,
+      partnering with funded startups and enterprise companies.
+      No matter your size,
+      we're ready to help take your project from concept to launch.
+      Reach out any time:
+      inquire about <a href="/work/services/">our services</a>,
+      set up a free consultation,
+      invite us to <a href="/speaking/">speak at your company or event</a>,
+      or just say hello.
+      <a href="/birds/#bird-miriam">Miriam Suzanne</a>
+      will get back to you soon.
+
+social:
+  - icon: 'twitter'
+    text: '@OddBird'
+    url: 'http://twitter.com/oddbird'
+    after: 'on Twitter'
+  - icon: 'slack'
+    text: 'OddBird Friends'
+    url: 'http://twitter.com/oddbird'
+    after: 'public Slack'
+  - icon: 'mail'
+    text: 'birds@oddbird.net'
+    url: 'mailto:birds@oddbird.net'
+    after: 'by Email'
 
 
 # Future Talks

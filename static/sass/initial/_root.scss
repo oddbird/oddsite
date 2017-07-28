@@ -3,4 +3,9 @@
 
 :root {
   @include contrasted('background');
+  background-attachment: scroll;
+  background-image: url('../images/footer-wash.jpg');
+  background-position: bottom right;
+  background-repeat: no-repeat;
+  background-size: calc(#{size('spacer') * 2} + 16vw) auto;
 }

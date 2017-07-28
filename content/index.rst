@@ -1,6 +1,5 @@
 public: yes
 location: home
-hide_contact: true
 grid_template: true
 image:
   - src: 'pages/faces-hero.jpg'
