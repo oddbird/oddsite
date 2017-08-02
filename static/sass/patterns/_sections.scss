@@ -37,7 +37,7 @@
 
   [data-region='main'] & {
     &:last-child {
-      margin-bottom: size('double-gutter');
+      margin-bottom: size('gutter');
     }
   }
 }

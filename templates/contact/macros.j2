@@ -1,13 +1,22 @@
 {% import 'utility.macros.j2' as utility %}
 
-{% macro social(items) %}
-  <ul class="social">
+{% macro social(slug='contact/index', data='social') %}
+  {% set page = all_pages|filter_pages('slug', 'eq', slug)|get_page %}
+  {% set items = page.config[data] %}
+
+  <ul class="contact-social">
     {% for item in items %}
-      <li>
-        {% set content = [utility.icon(item.icon), item.text]|join %}
-        {{ utility.link_if(content, item.url, 'social-link') }}
+      <li class="contact-social-item">
+        {% set content = get_content(item.icon, item.text) %}
+        {{ utility.link_if(content, item.url, 'contact-social-link icon-link') }}
         {{ item.after }}
       </li>
     {% endfor %}
   </ul>
+{% endmacro %}
+
+
+{% macro get_content(icon, text) %}
+  {{ utility.icon(icon) }}
+  <span class="icon-text">{{ text }}</span>
 {% endmacro %}

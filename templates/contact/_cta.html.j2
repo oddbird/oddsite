@@ -24,7 +24,7 @@
         {{ config.contact[0].content|safe }}
       </p>
 
-      {{ contact.social(config.social) }}
+      {{ contact.social() }}
 
       {% set action = config.contact[0].action %}
       {{ content.link_button(action.url, action.text) }}

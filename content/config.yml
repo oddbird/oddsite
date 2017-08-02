@@ -1,7 +1,7 @@
 ---
 
-# Site-Wide Content
-# -----------------
+# Contact CTA Footer
+# ------------------
 
 contact:
   - title: 'Let’s Talk About Your Web Project'
@@ -22,20 +22,6 @@ contact:
       or just say hello.
       <a href="/birds/#bird-miriam">Miriam Suzanne</a>
       will get back to you soon.
-
-social:
-  - icon: 'twitter'
-    text: '@OddBird'
-    url: 'http://twitter.com/oddbird'
-    after: 'on Twitter'
-  - icon: 'slack'
-    text: 'OddBird Friends'
-    url: 'http://twitter.com/oddbird'
-    after: 'public Slack'
-  - icon: 'mail'
-    text: 'birds@oddbird.net'
-    url: 'mailto:birds@oddbird.net'
-    after: 'by Email'
 
 
 # Future Talks

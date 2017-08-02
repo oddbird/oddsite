@@ -8,6 +8,19 @@ before:
   - include: 'contact/_form.html.j2'
     submit: 'Send!'
     next: 'contact/thanks/'
+social:
+  - icon: 'twitter'
+    text: '@OddBird'
+    url: 'http://twitter.com/oddbird'
+    after: 'on Twitter'
+  - icon: 'slack'
+    text: 'OddBird Friends'
+    url: 'http://twitter.com/oddbird'
+    after: 'public Slack'
+  - icon: 'mail'
+    text: 'birds@oddbird.net'
+    url: 'mailto:birds@oddbird.net'
+    after: 'by Email'
 summary: |
   .. wrap:: div
     :class: contact-intro
@@ -36,10 +49,4 @@ Start a Conversation
 There are many ways to start a conversation with us,
 so feel free to pick the one that is most comfortable to you:
 
-- `@OddBird`_ on Twitter
-- `OddBird Friends`_ public Slack chat
-- `birds@oddbird.net`_ by email
-
-.. _@OddBird: http://twitter.com/oddbird
-.. _OddBird Friends: http://friends.oddbird.net/
-.. _birds@oddbird.net: mailto:birds@oddbird.net
+.. callmacro:: contact/macros.j2#social
