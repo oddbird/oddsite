@@ -19,3 +19,13 @@
     margin: 0;
   }
 }
+
+
+// Running Footer
+// --------------
+
+.contact-wrap {
+  @include link-color-for('contact-bg');
+  background: color('contact-bg');
+  padding: size('gutter') 0;
+}

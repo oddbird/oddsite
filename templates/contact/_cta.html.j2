@@ -6,26 +6,28 @@
   <div class="separator"></div>
 {% else %}
   <div class="separator"></div>
-  <section data-module="contact-cta">
-    <h2>
-      {% if ('susysite' in config.location) %}
-        {{ config.contact[0].susytitle }}
-      {% else %}
-        {{ config.contact[0].title }}
-      {% endif %}
-    </h2>
+  <div class="contact-wrap">
+    <section data-module="contact-cta">
+      <h2>
+        {% if ('susysite' in config.location) %}
+          {{ config.contact[0].susytitle }}
+        {% else %}
+          {{ config.contact[0].title }}
+        {% endif %}
+      </h2>
 
-    <h3>
-      {{ config.contact[0].subtitle }}
-    </h3>
+      <h3>
+        {{ config.contact[0].subtitle }}
+      </h3>
 
-    <p>
-      {{ config.contact[0].content|safe }}
-    </p>
+      <p>
+        {{ config.contact[0].content|safe }}
+      </p>
 
-    {{ contact.social(config.social) }}
+      {{ contact.social(config.social) }}
 
-    {% set action = config.contact[0].action %}
-    {{ content.link_button(action.url, action.text) }}
-  </section>
+      {% set action = config.contact[0].action %}
+      {{ content.link_button(action.url, action.text) }}
+    </section>
+  </div>
 {% endif %}
