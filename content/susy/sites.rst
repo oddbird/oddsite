@@ -71,7 +71,7 @@ All Known Sites
 ---------------
 
 There's no way to keep a perfect list –
-we're trusting developers to keep us informed –
+we’re trusting developers to keep us informed –
 so some sites might be out-of-date,
 and many aren't listed.
 Feel free to

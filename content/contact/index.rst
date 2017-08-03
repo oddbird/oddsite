@@ -15,7 +15,7 @@ social:
     after: 'on Twitter'
   - icon: 'slack'
     text: 'OddBird Friends'
-    url: 'http://twitter.com/oddbird'
+    url: 'http://friends.oddbird.net/'
     after: 'public Slack'
   - icon: 'mail'
     text: 'birds@oddbird.net'
@@ -28,7 +28,7 @@ summary: |
     .. callmacro:: birds/utility.macros.j2#face
       :author: 'miriam'
 
-    **We're always happy to talk** –
+    **We’re always happy to talk** –
     whether you have a project in mind,
     or just want to say hi.
     Ask a question,

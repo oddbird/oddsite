@@ -11,7 +11,7 @@ summary: |
   **Technology is only useful
   when it solves real problems for real people.**
   As your partner,
-  we'll help find those opportunities –
+  we’ll help find those opportunities –
   providing `web application design and development`_,
   with a human focus from start to finish.
 
@@ -52,7 +52,7 @@ made up of industry leaders
 across a range of design and code expertise,
 and working together for years
 with a tight-knit, agile, and collaborative process.
-We're able to give every project complete focus,
+We’re able to give every project complete focus,
 putting the needs of your company and users first,
 while integrating design and development from start to finish.
 Whether you're looking for staff-augmentation,
@@ -100,7 +100,7 @@ Founded by a `Django core developer`_
 and the `creator of Susy`_ responsive-layout framework,
 open-source software has always been central
 to the OddBird vision.
-Whether we're building tools for developers like ourselves,
+Whether we’re building tools for developers like ourselves,
 or third-party consumers,
 we keep the needs of real people
 at the center of everything we do.
