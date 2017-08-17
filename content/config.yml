@@ -30,26 +30,6 @@ contact:
 
 events:
 
-  - venue: 'Develop Denver'
-    url: 'https://developdenver.org/'
-    date: ['8', '10', '2017']
-    adr:
-      city: 'Denver'
-      state: 'CO'
-    who:
-      - author: 'miriam'
-        title: 'Practical Layouts, Past & Future'
-
-  - venue: 'DjangoCon'
-    url: 'https://2017.djangocon.us/'
-    date: ['8', '14', '2017']
-    adr:
-      city: 'Spokane'
-      state: 'WA'
-    who:
-      - author: 'miriam'
-        title: 'Don’t Use My Grid System (or any others)'
-
   - venue: 'CSS Dev Conf'
     url: 'http://2017.cssdevconf.com/'
     date: ['10', '9', '2017']
@@ -66,6 +46,28 @@ events:
 
 events_past:
 
+  - venue: 'DjangoCon'
+    url: 'https://2017.djangocon.us/'
+    date: ['8', '14', '2017']
+    adr:
+      city: 'Spokane'
+      state: 'WA'
+    who:
+      - author: 'miriam'
+        title: 'Don’t Use My Grid System (or any others)'
+        slides: 'http://oddbooksapp.com/book/djangocon-layout'
+
+  - venue: 'Develop Denver'
+    url: 'https://developdenver.org/'
+    date: ['8', '10', '2017']
+    adr:
+      city: 'Denver'
+      state: 'CO'
+    who:
+      - author: 'miriam'
+        title: 'Practical Layouts, Past & Future'
+        slides: 'http://oddbooksapp.com/book/layouts'
+
   - venue: 'Refresh Denver'
     url: 'https://www.meetup.com/refreshdenver/events/239219853/'
     date: ['6', '14', '2017']
@@ -75,6 +77,7 @@ events_past:
     who:
       - author: 'miriam'
         title: 'Practical Layouts, Past & Future'
+        slides: 'http://oddbooksapp.com/book/layouts'
 
   - venue: 'Front-End Camp'
     url: 'http://chicagocamps.org/events/2017/front-end-camp/'
@@ -95,6 +98,7 @@ events_past:
     who:
       - author: 'miriam'
         title: 'Code Patterns for Pattern Making'
+        slides: 'http://oddbooksapp.com/book/pattern-making'
 
   - venue: 'WordPress Naperville'
     url: 'https://www.meetup.com/WordPress-Naperville/events/236903886/'
@@ -147,6 +151,7 @@ events_past:
     who:
       - author: 'miriam'
         title: 'Code Patterns for Pattern Making'
+        slides: 'http://oddbooksapp.com/book/pattern-making'
 
   - venue: 'CSSDay.io'
     url: 'http://cssday.io/'
