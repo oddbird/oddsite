@@ -1,7 +1,7 @@
 // Root Initialization
 // ===================
 
-:root {
+[id='oddsite'] {
   @include contrasted('background');
   background-attachment: scroll;
   background-image: url('../images/footer-wash.jpg');

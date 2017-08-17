@@ -1,6 +1,12 @@
 // Icon Pattern
 // ============
 
+/// Basic styles for all icons
+/// @group icons
+/// @icons templates/icons/ utility.macros.j2:icon
+/// @example njk
+///   {% import 'utility.macros.j2' as utility %}
+///   {{ utility.icon('dribbble') }}
 [data-icon] {
   @include square(1em);
   fill: currentColor;

@@ -64,7 +64,7 @@ SassdocPlugin.prototype.apply = compiler => {
         customCSS: cssPath,
         customHead: '<script src="https://use.typekit.net/slx1xnq.js"></script>' +
           '<script>try{Typekit.load({ async: true });}catch(e){}</script>',
-        minifiedIcons: '_icons.svg',
+        minifiedIcons: 'templates/_icons.svg',
         templatepath: path.join(__dirname, 'templates'),
         sass: {
           jsonfile: jsonPath,
