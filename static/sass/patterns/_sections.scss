@@ -25,9 +25,19 @@
   box-shadow: 0 2px 2px color('shadow');
   z-index: 2;
 
+  [data-location*='susysite'] & {
+    @include section-arrow('brand-pink');
+  }
+
   + [data-module] {
     @include before('') {
       display: none;
+    }
+  }
+
+  [data-region='main'] & {
+    &:last-child {
+      margin-bottom: size('gutter');
     }
   }
 }

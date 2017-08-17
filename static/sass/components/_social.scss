@@ -30,3 +30,26 @@
     @include is-hidden;
   }
 }
+
+
+// Contact-Social
+// --------------
+
+.contact-social {
+  align-items: baseline;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: size('social');
+  justify-content: space-between;
+  line-height: size('rhythm');
+
+  // override main ul spacing
+  [data-region='main'] & {
+    margin: size('gutter') 0;
+    padding: 0;
+  }
+}
+
+.contact-social-item {
+  list-style: none;
+}

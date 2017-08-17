@@ -91,10 +91,17 @@ a {
   }
 }
 
-.icon-link {
+.icon-link,
+.image-reference {
   &,
   #{$link} {
     background-image: none;
+  }
+}
+
+.image-reference {
+  object {
+    pointer-events: none;
   }
 }
 

@@ -86,7 +86,11 @@
     "precommit": "lint-staged"
   },
   "lint-staged": {
-    "*.js": [
+    "{static/js/,test/}**/*.js": [
+      "prettier --single-quote --write",
+      "git add"
+    ],
+    "{gulpfile,karma*,postcss.config,webpack*}.js": [
       "prettier --single-quote --write",
       "git add"
     ]

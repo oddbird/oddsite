@@ -1,0 +1,36 @@
+// SusySite Styles
+// ===============
+
+
+// Susy2 Book
+// ----------
+
+[id='read-the-susy2-book'] {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+
+  h2 {
+    flex: 0 0 100%;
+  }
+
+  .image-reference {
+    display: block;
+    flex: 1 1 size('small-page') / 2;
+    padding-right: size(shim);
+    text-align: center;
+
+    @include above('small-page') {
+      max-width: 340px;
+    }
+  }
+}
+
+[id='learning-susy'] {
+  flex: 1 1 size('small-page') / 2;
+  padding-left: size('shim');
+
+  h3 {
+    margin-top: 0;
+  }
+}

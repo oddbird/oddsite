@@ -1,6 +1,5 @@
 public: yes
 location: home
-hide_contact: true
 grid_template: true
 image:
   - src: 'pages/faces-hero.jpg'
@@ -12,7 +11,7 @@ summary: |
   **Technology is only useful
   when it solves real problems for real people.**
   As your partner,
-  we'll help find those opportunities –
+  we’ll help find those opportunities –
   providing `web application design and development`_,
   with a human focus from start to finish.
 
@@ -53,7 +52,7 @@ made up of industry leaders
 across a range of design and code expertise,
 and working together for years
 with a tight-knit, agile, and collaborative process.
-We're able to give every project complete focus,
+We’re able to give every project complete focus,
 putting the needs of your company and users first,
 while integrating design and development from start to finish.
 Whether you're looking for staff-augmentation,
@@ -81,7 +80,7 @@ of an internal team.*
 .. callmacro:: content.macros.j2#divider
 .. callmacro:: projects/splash.macros.j2#splash_list
   :slugs: [
-    'open-source/susy',
+    'susy/index',
     'open-source/django',
     'open-source/true',
     'open-source/plone'
@@ -101,7 +100,7 @@ Founded by a `Django core developer`_
 and the `creator of Susy`_ responsive-layout framework,
 open-source software has always been central
 to the OddBird vision.
-Whether we're building tools for developers like ourselves,
+Whether we’re building tools for developers like ourselves,
 or third-party consumers,
 we keep the needs of real people
 at the center of everything we do.
@@ -119,7 +118,7 @@ at the center of everything we do.
 .. ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. callmacro:: content.macros.j2#get_quotes
-  :slug: 'open-source/susy'
+  :slug: 'susy/index'
   :index: 1
 
 

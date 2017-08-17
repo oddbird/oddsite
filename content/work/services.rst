@@ -64,7 +64,7 @@ pitch:
     icon: 'map'
     text: |
       Your chance to provide a general sense of the goals, scope, and
-      requirements of the project. We'll work with you to gain an
+      requirements of the project. We’ll work with you to gain an
       understanding of your users and the core features that define
       your web app.
   - title: 'Interactive Mockup'
