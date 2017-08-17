@@ -182,7 +182,7 @@ susyone:
 summary: |
   **There are many ways to use Susy**.
   As we write or discover new articles and videos,
-  we'll add them here,
+  we’ll add them here,
   with the proper version listed.
 
 

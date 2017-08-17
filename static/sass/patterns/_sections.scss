@@ -34,6 +34,12 @@
       display: none;
     }
   }
+
+  [data-region='main'] & {
+    &:last-child {
+      margin-bottom: size('gutter');
+    }
+  }
 }
 
 // used when going back and forth between content-blocks and other elements

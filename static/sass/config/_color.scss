@@ -60,6 +60,7 @@ $pattern-colors: (
 
   'callout': 'brand-blue' ('tint': 80%),
   'section-bg': 'brand-blue' ('saturate': 70%, 'lighten': 65%),
+  'contact-bg': 'callout' ('rgba': 0.5),
 
   'invert': 'brand-blue',
   'invert-link-hover': 'brand-blue' ('lighten': 55%, 'saturate': 100%),

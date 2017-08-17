@@ -34,17 +34,20 @@ $focus: '&:hover, &:focus, &:active';
 @mixin link-color-for(
   $background
 ) {
-  $contrast: contrast($background);
+  $contrast: contrast($background, 'contrast-light', 'action');
   $hover: color($background ('lighten': 55%, 'saturate': 100%));
+  $hover: if($contrast == color('action'), color('action-hover'), $hover);
 
   a {
-    &,
-    #{$link}  {
-      @include text-underline($contrast, $background);
-    }
+    &:not(.btn) {
+      &,
+      #{$link}  {
+        @include text-underline($contrast, $background);
+      }
 
-    #{$focus} {
-      @include text-underline-color($hover);
+      #{$focus} {
+        @include text-underline-color($hover);
+      }
     }
 
     &.icon-link {

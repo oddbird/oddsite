@@ -28,6 +28,7 @@ $text-sizes: (
   'medium': 'root' ('text-ratio': 0.7),
   'caption': 'root',
   'task': 'root' ('text-ratio': -0.125),
+  'social': 'root' ('text-ratio': -0.25),
 );
 
 @include herman-add-sizes('text-sizes', $text-sizes);

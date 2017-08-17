@@ -43,7 +43,7 @@ summary: |
   You can use Susy with floats, flexbox, tables,
   or any other CSS technique.
   You're the expert,
-  we're just here to make your job easier.
+  we’re just here to make your job easier.
 
 
 Susy: Your Layout, *Our Math*
