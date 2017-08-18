@@ -3784,14 +3784,14 @@ js-tokens@^3.0.0:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/js-tokens/-/js-tokens-3.0.1.tgz#08e9f132484a2c45a30907e9dc4d5567b7f114d7"
 
-js-yaml@3.x, js-yaml@^3.2.1, js-yaml@^3.5.1, js-yaml@^3.5.4:
+js-yaml@3.x, js-yaml@^3.2.1, js-yaml@^3.4.3, js-yaml@^3.4.6, js-yaml@^3.5.1, js-yaml@^3.5.4:
   version "3.8.2"
   resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-3.8.2.tgz#02d3e2c0f6beab20248d412c352203827d786721"
   dependencies:
     argparse "^1.0.7"
     esprima "^3.1.1"
 
-js-yaml@^3.4.3, js-yaml@^3.4.6, js-yaml@^3.8.4:
+js-yaml@^3.8.4:
   version "3.8.4"
   resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-3.8.4.tgz#520b4564f86573ba96662af85a8cafa7b4b5a6f6"
   dependencies:
@@ -6437,7 +6437,7 @@ sassdoc-theme-default@^2.5.2:
     swig "1.4.0"
     swig-extras "0.0.1"
 
-sassdoc-theme-herman@^1.0.0-alpha.9:
+sassdoc-theme-herman@1.0.0-alpha.9:
   version "1.0.0-alpha.9"
   resolved "https://registry.yarnpkg.com/sassdoc-theme-herman/-/sassdoc-theme-herman-1.0.0-alpha.9.tgz#046a4779ef1da0062edaf0bfd8d76c81dd97e34e"
   dependencies:
