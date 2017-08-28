@@ -82,7 +82,7 @@ of an internal team.*
   :slugs: [
     'susy/index',
     'open-source/django',
-    'open-source/true',
+    'true/index',
     'open-source/plone'
     ]
 
