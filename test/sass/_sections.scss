@@ -13,10 +13,10 @@
 
       @include expect {
         // sass-lint:disable-all
+        @include extend('extend-full');
         border-bottom: size('border') solid #e07;
         display: block;
         position: relative;
-        width: 100%;
 
         &:before,
         &:after {

@@ -25,11 +25,20 @@
   box-shadow: 0 2px 2px color('shadow');
   z-index: 2;
 
+  [data-location*='susysite'] & {
+    @include section-arrow('brand-pink');
+  }
+
   + [data-module] {
     @include before('') {
       display: none;
     }
   }
+}
+
+// used when going back and forth between content-blocks and other elements
+.section-end {
+  margin-bottom: size('double-gutter');
 }
 
 .preview {

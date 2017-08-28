@@ -37,9 +37,9 @@ accoutrement-layout@2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/accoutrement-layout/-/accoutrement-layout-2.1.0.tgz#e0eaf47e4b810c5912e039855dec581610171c1f"
 
-accoutrement-scale@3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/accoutrement-scale/-/accoutrement-scale-3.0.0.tgz#a25e90f8f8154dba8967613c5ecb44fe6c9ce56b"
+accoutrement-scale@3.1.1:
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/accoutrement-scale/-/accoutrement-scale-3.1.1.tgz#bb2a49f6e9d7839be48480c84fdd74ca1134ef0f"
 
 accoutrement-type@2.1.0:
   version "2.1.0"
@@ -3791,6 +3791,13 @@ js-yaml@3.x, js-yaml@^3.2.1, js-yaml@^3.4.3, js-yaml@^3.4.6, js-yaml@^3.5.1, js-
     argparse "^1.0.7"
     esprima "^3.1.1"
 
+js-yaml@^3.8.4:
+  version "3.8.4"
+  resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-3.8.4.tgz#520b4564f86573ba96662af85a8cafa7b4b5a6f6"
+  dependencies:
+    argparse "^1.0.7"
+    esprima "^3.1.1"
+
 js-yaml@~3.7.0:
   version "3.7.0"
   resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-3.7.0.tgz#5c967ddd837a9bfdca5f2de84253abe8a1c03b80"
@@ -5002,9 +5009,9 @@ node-pre-gyp@^0.6.29:
     tar "~2.2.1"
     tar-pack "~3.3.0"
 
-node-sass@4.5.0, node-sass@^4.0.0:
-  version "4.5.0"
-  resolved "https://registry.yarnpkg.com/node-sass/-/node-sass-4.5.0.tgz#532e37bad0ce587348c831535dbc98ea4289508b"
+node-sass@4.5.3, node-sass@^4.0.0, node-sass@^4.5.3:
+  version "4.5.3"
+  resolved "https://registry.yarnpkg.com/node-sass/-/node-sass-4.5.3.tgz#d09c9d1179641239d1b97ffc6231fdcec53e1568"
   dependencies:
     async-foreach "^0.1.3"
     chalk "^1.1.1"
@@ -5021,7 +5028,7 @@ node-sass@4.5.0, node-sass@^4.0.0:
     nan "^2.3.2"
     node-gyp "^3.3.1"
     npmlog "^4.0.0"
-    request "^2.61.0"
+    request "^2.79.0"
     sass-graph "^2.1.1"
     stdout-stream "^1.4.0"
 
@@ -6149,7 +6156,7 @@ request-progress@~2.0.1:
   dependencies:
     throttleit "^1.0.0"
 
-request@2, request@^2.61.0, request@^2.79.0, request@latest:
+request@2, request@^2.79.0, request@latest:
   version "2.81.0"
   resolved "https://registry.yarnpkg.com/request/-/request-2.81.0.tgz#c6928946a0e06c5f8d6f8a9333469ffda46298a0"
   dependencies:
@@ -6430,14 +6437,16 @@ sassdoc-theme-default@^2.5.2:
     swig "1.4.0"
     swig-extras "0.0.1"
 
-sassdoc-theme-herman@0.5.5:
-  version "0.5.5"
-  resolved "https://registry.yarnpkg.com/sassdoc-theme-herman/-/sassdoc-theme-herman-0.5.5.tgz#4d7f62e0d77b3ae458c9ac7e6d80099207c93acb"
+sassdoc-theme-herman@1.0.0-alpha.9:
+  version "1.0.0-alpha.9"
+  resolved "https://registry.yarnpkg.com/sassdoc-theme-herman/-/sassdoc-theme-herman-1.0.0-alpha.9.tgz#046a4779ef1da0062edaf0bfd8d76c81dd97e34e"
   dependencies:
     bluebird "^3.4.6"
     extend "^3.0.0"
     gulp-rename "^1.2.2"
     html-minifier "^3.1.0"
+    js-yaml "^3.8.4"
+    node-sass "^4.5.3"
     nunjucks "^2.5.2"
     sassdoc-extras "^2.4.1"
     through2 "^2.0.1"

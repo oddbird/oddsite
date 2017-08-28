@@ -47,7 +47,7 @@ blockquote, but do not have a source, you can use the following:
 Branding
 --------
 
-- Always capitalize the “O” and “B” in OddBird and OddSite.
+- Always capitalize the “O”, “B”, and “S” in OddBird and OddSite.
 
 
 Commas

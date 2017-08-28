@@ -1,5 +1,6 @@
 public: yes
-location: work
+location: case-studies
+pageclasses: work-layout
 grid_template: true
 image:
   - src: 'projects/trig.jpg'

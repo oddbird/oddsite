@@ -28,6 +28,7 @@ $text-sizes: (
   'medium': 'root' ('text-ratio': 0.7),
   'caption': 'root',
   'task': 'root' ('text-ratio': -0.125),
+  'social': 'root' ('text-ratio': -0.25),
 );
 
 @include herman-add-sizes('text-sizes', $text-sizes);
@@ -61,7 +62,7 @@ $spacing-sizes: (
 /// @link http://oddbird.net/accoutrement-scale/sassdoc/
 ///   Accoutrement Scale
 $pattern-sizes: (
-  'border': 8px ('convert-units': 'rem'),
+  'border': 8px,
   'border-thin': 1px,
   'border-radius': 2rem,
   'bird-face-tall': 8rem,

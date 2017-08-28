@@ -1,6 +1,7 @@
 {
   "name": "oddsite",
   "version": "3.0.0",
+  "homepage": "http://oddbird.net/",
   "engines": {
     "node": "7.7.3",
     "yarn": "0.22.0"
@@ -9,7 +10,7 @@
     "accoutrement-color": "2.1.0",
     "accoutrement-init": "1.1.0",
     "accoutrement-layout": "2.2.0",
-    "accoutrement-scale": "3.0.0",
+    "accoutrement-scale": "3.1.1",
     "accoutrement-type": "2.1.0",
     "assets-webpack-plugin": "3.5.1",
     "autoprefixer": "7.1.1",
@@ -70,7 +71,7 @@
     "sass-loader": "6.0.5",
     "sass-true": "2.2.2",
     "sassdoc": "2.2.2",
-    "sassdoc-theme-herman": "0.5.5",
+    "sassdoc-theme-herman": "1.0.0-alpha.9",
     "sinon": "2.2.0",
     "sinon-chai": "2.10.0",
     "touch": "1.0.0",
@@ -86,7 +87,11 @@
     "precommit": "lint-staged"
   },
   "lint-staged": {
-    "*.js": [
+    "{static/js/,test/}**/*.js": [
+      "prettier --single-quote --write",
+      "git add"
+    ],
+    "{gulpfile,karma*,postcss.config,webpack*}.js": [
       "prettier --single-quote --write",
       "git add"
     ]

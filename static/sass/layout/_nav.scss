@@ -8,17 +8,21 @@
 .main-nav {
   display: flex;
   justify-content: space-between;
-  margin: negative('gutter') auto 0;
+  margin: negative('gutter') auto size('half-shim');
   max-width: calc(19rem + 15vw);
   padding-left: size('half-shim');
   padding-right: size('half-shim');
   width: 100%;
 
+  [data-location*='susysite'] & {
+    margin-top: negative('shim');
+  }
+
   .nav-item {
     display: inline-flex;
 
     &:nth-of-type(2) {
-      flex-grow: 1.5;
+      flex-grow: 2;
     }
 
     @include above('nav-medium') {
@@ -66,7 +70,8 @@
   }
 
   @include above('nav-medium') {
-    padding: size('shim') size('gutter');
+    padding-left: size('gutter');
+    padding-right: size('gutter');
   }
 
   &[aria-pressed='true'] {
@@ -83,13 +88,17 @@
 
 // Map nav locations for highlighting active page
 $nav-locations: (
-  'projects': 'work',
+  'case-studies': 'work',
+  'services': 'work',
   'open-source': null,
+  'blog': null,
   'birds': 'about',
   'speaking': 'about',
   'community': 'about',
-  'blog': null,
   'contact': 'about',
+  'susysite-sites': null,
+  'susysite-articles': null,
+  'susysite-styleguide': 'susysite-support',
 );
 
 // Highlight self and parent (if applicable)
@@ -125,3 +134,34 @@ $nav-locations: (
     min-width: size('dropdown-wide');
   }
 }
+
+// OddBird link from sub-sites
+[data-active='oddbird'] {
+  #{$link} {
+    background-color: color('background');
+    border: 1px solid color('action-border');
+    border-radius: size('border-radius');
+    color: color('action');
+    font-weight: bold;
+    text-decoration: none;
+    text-shadow: none;
+    transition: color 250ms, background-color 250ms;
+  }
+
+  #{$focus} {
+    background-color: color('action');
+    color: color('background');
+
+    &::after {
+      transform: translateX(size('half-shim'));
+    }
+  }
+
+  @include after('»') {
+    font-weight: normal;
+    padding-left: size('half-shim');
+    transition: transform 250ms;
+  }
+}
+
+

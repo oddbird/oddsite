@@ -1,19 +1,28 @@
 ---
 
-# Site-Wide Content
-# -----------------
+# Contact CTA Footer
+# ------------------
 
 contact:
-  - title: 'Let’s Build Something Together!'
+  - title: 'Let’s Talk About Your Web Project'
+    susytitle: 'Partner with OddBird on Your Next Project'
+    subtitle: 'Give Wings to Your Vision'
+    action:
+      text: 'Get a free consulation'
+      url: '/contact/'
     content: |
-      <strong>We want to hear all about your software ideas.</strong>
-      Fill out our
-      <a href="/contact/">contact form</a>,
-      join our
-      <a href="http://friends.oddbird.net">public Slack chat</a>,
-      or tweet
-      <a href="http://twitter.com/oddbird">@oddbird</a>
-      to start the conversation.
+      OddBird is a full-stack design and development agency,
+      partnering with funded startups and enterprise companies
+      to create custom Django web applications.
+      No matter your size,
+      we’re ready to help take your project from concept to launch.
+      Reach out any time:
+      inquire about <a href="/work/services/">our services</a>,
+      set up a free consultation,
+      invite us to <a href="/speaking/">speak at your company or event</a>,
+      or just say hello.
+      <a href="/birds/#bird-miriam">Miriam Suzanne</a>
+      will get back to you soon.
 
 
 # Future Talks
@@ -21,15 +30,54 @@ contact:
 
 events:
 
-  - venue: 'Sass Hack Denver'
-    url: 'https://www.meetup.com/Sass-Hack-Denver/events/239687418/'
-    date: ['6', '1', '2017']
+  - venue: 'CSS Dev Conf'
+    url: 'http://2017.cssdevconf.com/'
+    date: ['10', '9', '2017']
+    adr:
+      city: 'New Orleans'
+      state: 'LA'
+    who:
+      - author: 'miriam'
+        title: 'Don’t Use My Grid System (or any others)'
+
+
+# Past Talks
+# ----------
+
+events_past:
+
+  - venue: 'DjangoCon'
+    url: 'https://2017.djangocon.us/'
+    date: ['8', '14', '2017']
+    adr:
+      city: 'Spokane'
+      state: 'WA'
+    who:
+      - author: 'miriam'
+        title: 'Don’t Use My Grid System (or any others)'
+        slides: 'http://oddbooksapp.com/book/djangocon-layout'
+
+  - venue: 'Develop Denver'
+    url: 'https://developdenver.org/'
+    date: ['8', '10', '2017']
     adr:
       city: 'Denver'
       state: 'CO'
     who:
       - author: 'miriam'
-        title: 'Code Patterns for Pattern Making'
+        title: 'Practical Layouts, Past & Future'
+        slides: 'http://oddbooksapp.com/book/layouts'
+
+  - venue: 'Refresh Denver'
+    url: 'https://www.meetup.com/refreshdenver/events/239219853/'
+    date: ['6', '14', '2017']
+    adr:
+      city: 'Denver'
+      state: 'CO'
+    who:
+      - author: 'miriam'
+        title: 'Practical Layouts, Past & Future'
+        slides: 'http://oddbooksapp.com/book/layouts'
 
   - venue: 'Front-End Camp'
     url: 'http://chicagocamps.org/events/2017/front-end-camp/'
@@ -41,11 +89,16 @@ events:
       - author: 'stacy'
         title: 'The Great State of Design with CSS Grid Layout & Friends'
 
-
-# Past Talks
-# ----------
-
-events_past:
+  - venue: 'Sass Hack Denver'
+    url: 'https://www.meetup.com/Sass-Hack-Denver/events/239687418/'
+    date: ['6', '1', '2017']
+    adr:
+      city: 'Denver'
+      state: 'CO'
+    who:
+      - author: 'miriam'
+        title: 'Code Patterns for Pattern Making'
+        slides: 'http://oddbooksapp.com/book/pattern-making'
 
   - venue: 'WordPress Naperville'
     url: 'https://www.meetup.com/WordPress-Naperville/events/236903886/'
@@ -98,6 +151,7 @@ events_past:
     who:
       - author: 'miriam'
         title: 'Code Patterns for Pattern Making'
+        slides: 'http://oddbooksapp.com/book/pattern-making'
 
   - venue: 'CSSDay.io'
     url: 'http://cssday.io/'
@@ -449,7 +503,12 @@ events_past:
 
 nav:
   - text: 'work'
-    url: '/work/'
+    subnav:
+      - text: 'case-studies'
+        display_text: 'case studies'
+        url: '/work/'
+      - text: 'services'
+        url: '/work/services/'
   - text: 'open-source'
     display_text: 'open source'
     url: '/open-source/'
@@ -470,6 +529,36 @@ nav:
       - text: 'contact'
         display_text: 'contact us'
         url: '/contact/'
+
+
+susy_nav:
+  - text: 'susysite-articles'
+    display_text: 'articles'
+    url: '/susy/articles/'
+  - text: 'susysite-support'
+    display_text: 'support'
+    subnav:
+      - text: 'docs'
+        display_text: 'reference documentation'
+        url: '/susy/docs/'
+      - text: 'github'
+        display_text: 'github issues'
+        url: 'https://github.com/oddbird/susy/issues'
+      - text: 'stack-overflow'
+        display_text: 'stack overflow'
+        url: 'http://stackoverflow.com/questions/tagged/susy-sass'
+      - text: 'twitter'
+        display_text: 'twitter'
+        url: 'http://twitter.com/sasssusy/'
+      - text: 'susysite-styleguide'
+        display_text: 'brand styleguide'
+        url: '/susy/styleguide/'
+  - text: 'susysite-sites'
+    display_text: 'sites'
+    url: '/susy/sites/'
+  - text: 'oddbird'
+    display_text: 'oddbird'
+    url: '/'
 
 
 # Site Settings

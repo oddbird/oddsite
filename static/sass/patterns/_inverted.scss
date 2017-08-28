@@ -2,36 +2,17 @@
 // =================
 
 .inverted {
-  background-color: color('invert');
-  color: color('background');
+  @include contrasted('invert');
+  @include link-color-for('invert');
 
-  a {
-    &,
-    #{$link}  {
-      @include text-underline('background', 'invert');
+  + .separator {
+    @include after(null) {
+      display: none;
     }
+  }
 
-    #{$focus} {
-      @include text-underline-color('invert-link-hover');
-    }
-
-    &.icon-link {
-      // no underline on whole link. Going to target text only.
-      #{$link} {
-        background-image: none;
-      }
-
-      // change underline color when hover over icon too
-      #{$focus} {
-        .icon-text {
-          @include text-underline-color('invert-link-hover');
-        }
-      }
-
-      // target only text within these svg icon links
-      .icon-text {
-        @include text-underline('background', 'invert');
-      }
-    }
+  [data-location*='susysite'] & {
+    @include contrasted('brand-pink');
+    @include link-color-for('brand-pink');
   }
 }

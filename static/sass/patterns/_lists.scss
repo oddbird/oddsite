@@ -18,6 +18,18 @@
   list-style-type: lower-alpha;
 }
 
+.dashed {
+  list-style-type: none;
+
+  li {
+    @include before('–') {
+      margin-left: negative('shim');
+      position: absolute;
+    }
+  }
+}
+
+
 // Simple is a generated class from RST
 .simple {
   .project-tasks & {
