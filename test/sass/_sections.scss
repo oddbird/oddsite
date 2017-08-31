@@ -4,15 +4,14 @@
 
 // section-arrow
 // -------------
-@include test-module('section-arrow [mixin]') {
-  @include test('Creates top border with centered arrow') {
+@include describe('section-arrow [mixin]') {
+  @include it('Creates top border with centered arrow') {
     @include assert {
       @include output {
         @include section-arrow(#e07, #fff);
       }
 
       @include expect {
-        // sass-lint:disable-all
         @include extend('extend-full');
         border-bottom: size('border') solid #e07;
         display: block;
@@ -40,7 +39,6 @@
           border-top-color: #fff;
           transform: translateX(-50%) translateY(-4px);
         }
-        // sass-lint:enable-all
       }
     }
   }
