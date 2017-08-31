@@ -68,6 +68,17 @@ dependencies, run ``pip install -r requirements.txt`` (you may want to run this
 in a `virtualenv`_ to isolate it from other Python projects on your system).
 
 
+Development tasks
+~~~~~~~~~~~~~~~~~
+
+In commit messages or pull request titles, we use the following emojis to label
+which development commands need to be run before serving locally:
+
+- 📦 (``:package:``) -> ``pip install -r requirements.txt``
+- 🐈 (``:cat2:``) -> ``yarn``
+- 🙀 (``:scream_cat:``) -> ``rm -rf node/*; rm -rf node_modules/; bin/unpack-node; yarn``
+
+
 Directory Structure
 ~~~~~~~~~~~~~~~~~~~
 
