@@ -2,7 +2,7 @@ public: yes
 location: open-source
 grid_template: true
 headline:
-  - type: 'Opensource'
+  - type: 'Open Source'
     tagline: 'Unit testing for Sass'
 image:
   - src: 'projects/true.jpg'
@@ -17,12 +17,14 @@ contributors:
     role: 'creator'
   - author: 'carl'
     role: 'core developer'
+  - author: 'jonny'
+    role: 'contributor'
 summary: |
   True is a full-featured unit-testing library for Sass developers.
   The core functionality is written in pure SassScript,
   so it can be used anywhere Sass is compiled.
   Advanced features are available
-  with our test-runner integration, and Mocha.
+  with our test-runner integration and Mocha.
 
 
 True
@@ -146,7 +148,7 @@ in the CSS output and/or the command line:
 
   @include report;
 
-**Or use out Javascript integration**
+**Or use our Javascript integration**
 to run and report tests directly in the command line.
 `Read the docs`_ for more!
 

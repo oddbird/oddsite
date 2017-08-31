@@ -2,7 +2,7 @@ public: no
 tags: [CSS, RST, Code]
 grid_template: true
 headline:
-  - type: 'documentation'
+  - type: 'Documentation'
 project:
   - name: 'Grid Template'
     tagline: 'Sample Documentation'
