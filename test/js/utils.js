@@ -11,7 +11,7 @@ before(function() {
         req.respond(
           status,
           headers || { 'Content-Type': 'application/json' },
-          JSON.stringify(json)
+          JSON.stringify(json),
         );
         break;
       }
@@ -45,7 +45,6 @@ afterEach(function() {
   this.clock.restore();
 });
 
-/* eslint-disable no-underscore-dangle */
 chai.use(_chai => {
   const { Assertion } = _chai;
 
@@ -78,8 +77,7 @@ chai.use(_chai => {
     this.assert(
       found,
       `no ${method} to ${url} found`,
-      `expected ${method} to ${url} not to exist`
+      `expected ${method} to ${url} not to exist`,
     );
   });
 });
-/* eslint-enable no-underscore-dangle */

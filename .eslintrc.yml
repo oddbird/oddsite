@@ -1,18 +1,23 @@
 # http://eslint.org/docs/rules/
 
 root: true
+parser: babel-eslint
 parserOptions:
   ecmaFeatures:
     impliedStrict: true
   ecmaVersion: 2015
+  allowImportExportEverywhere: true
 env:
   es6: true
   node: true
 plugins:
   - prettier
 extends:
+  - eslint:recommended
   - prettier
 rules:
   prettier/prettier:
     - 2
     - singleQuote: true
+      trailingComma: all
+  max-len: 2

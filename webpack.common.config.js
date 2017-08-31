@@ -1,12 +1,10 @@
-/* eslint-disable no-sync */
-
 process.env.BROWSERSLIST_CONFIG = './browserslist';
 
 const AssetsPlugin = require('assets-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const HardSourceWebpackPlugin = require('hard-source-webpack-plugin');
-const nodeObjectHash = require('node-object-hash');
+// const HardSourceWebpackPlugin = require('hard-source-webpack-plugin');
+// const nodeObjectHash = require('node-object-hash');
 const path = require('path');
 const sassdoc = require('sassdoc');
 const touch = require('touch');
@@ -62,20 +60,21 @@ SassdocPlugin.prototype.apply = compiler => {
       descriptionPath: path.join(__dirname, 'STYLEGUIDE.md'),
       herman: {
         customCSS: cssPath,
-        customHead: '<script src="https://use.typekit.net/slx1xnq.js"></script>' +
+        customHead:
+          '<script src="https://use.typekit.net/slx1xnq.js"></script>' +
           '<script>try{Typekit.load({ async: true });}catch(e){}</script>',
         minifiedIcons: 'templates/_icons.svg',
         templatepath: path.join(__dirname, 'templates'),
         sass: {
           jsonfile: jsonPath,
           includepaths: [path.join(__dirname, 'static/sass')],
-          includes: ['config/manifest']
+          includes: ['config/manifest'],
         },
         subprojects: [
           'accoutrement-color',
           'accoutrement-scale',
-          'accoutrement-type'
-        ]
+          'accoutrement-type',
+        ],
       },
       shortcutIcon: path.join(
         __dirname,
@@ -83,10 +82,10 @@ SassdocPlugin.prototype.apply = compiler => {
         'static',
         'images',
         'favicons',
-        'favicon.ico'
+        'favicon.ico',
       ),
       display: { access: ['public'] },
-      groups: { undefined: 'general' }
+      groups: { undefined: 'general' },
     }).then(
       () => {
         /* eslint-disable no-console */
@@ -97,7 +96,7 @@ SassdocPlugin.prototype.apply = compiler => {
         console.error(err);
         cb();
         /* eslint-enable no-console */
-      }
+      },
     );
   });
 };
@@ -111,17 +110,17 @@ module.exports = {
     spam_referrals_blocker: './spamReferralsBlocker.js',
     app_styles: ['screen.scss'],
     styleguide: ['styleguide.scss'],
-    sass_json: ['json.scss']
+    sass_json: ['json.scss'],
   },
   output: {
     path: outputPath,
     publicPath: '/static/assets/',
-    filename: jsOutput
+    filename: jsOutput,
   },
   resolve: {
     // where to look for "required" modules
     modules: ['static/js', 'templates', 'sass', 'static', 'node_modules'],
-    alias: { jquery: 'jquery/dist/jquery.slim.js' }
+    alias: { jquery: 'jquery/dist/jquery.slim.js' },
   },
   plugins: [
     // ignore flycheck and Emacs special files when watching
@@ -131,46 +130,48 @@ module.exports = {
       $: 'jquery',
       jQuery: 'jquery',
       'window.jQuery': 'jquery',
-      'root.jQuery': 'jquery'
+      'root.jQuery': 'jquery',
     }),
     new webpack.LoaderOptionsPlugin({
-      debug: process.env.NODE_ENV !== 'production'
+      debug: process.env.NODE_ENV !== 'production',
     }),
     // pull common js and webpack runtime out of all bundles
     new webpack.optimize.CommonsChunkPlugin({
       name: 'spam_referrals_blocker',
-      minChunks: Infinity
+      minChunks: Infinity,
     }),
     // pull all CSS out of JS bundles
     new ExtractTextPlugin({
       filename: styleOutput,
-      allChunks: true
+      allChunks: true,
     }),
     // save assets.json mapping of names to bundled files
     new AssetsPlugin({
       filename: 'assets.json',
       path: assetsJsonPath,
-      prettyPrint: true
+      prettyPrint: true,
     }),
     new SassdocPlugin(),
     new WebpackShellPlugin({
       onBuildEnd: [buildScript],
-      dev: false
+      dev: false,
     }),
     new CleanWebpackPlugin([outputPath], {
       root: __dirname,
-      verbose: true
+      verbose: true,
     }),
-    new HardSourceWebpackPlugin({
-      cacheDirectory: path.join(__dirname, 'jscache/[confighash]'),
-      recordsPath: path.join(__dirname, 'jscache/[confighash]/records.json'),
-      configHash: webpackConfig => nodeObjectHash().hash(webpackConfig),
-      environmentHash: {
-        root: process.cwd(),
-        directories: ['node_modules'],
-        files: ['package.json']
-      }
-    })
+    // @@@ disable caching for now
+    // see https://github.com/mzgoddard/hard-source-webpack-plugin/issues/142
+    // new HardSourceWebpackPlugin({
+    //   cacheDirectory: path.join(__dirname, 'jscache/[confighash]'),
+    //   recordsPath: path.join(__dirname, 'jscache/[confighash]/records.json'),
+    //   configHash: webpackConfig => nodeObjectHash().hash(webpackConfig),
+    //   environmentHash: {
+    //     root: process.cwd(),
+    //     directories: ['node_modules'],
+    //     files: ['package.json']
+    //   }
+    // })
   ],
   module: {
     rules: [
@@ -180,31 +181,33 @@ module.exports = {
         use: [
           {
             loader: 'babel-loader',
-            options: { cacheDirectory: process.env.NODE_ENV !== 'production' }
-          }
-        ]
+            options: { cacheDirectory: process.env.NODE_ENV !== 'production' },
+          },
+        ],
       },
       {
         test: /\.woff$|\.woff2$|\.ttf$/,
         use: [
           {
             loader: 'file-loader',
-            options: { name: mediaOutput }
-          }
-        ]
+            options: { name: mediaOutput },
+          },
+        ],
       },
       {
         test: /\.jpe?g$|\.gif$|\.png$|\.svg$/,
         use: [
           {
             loader: 'file-loader',
+            options: { name: mediaOutput },
+          },
+          {
+            loader: 'img-loader',
             options: {
-              name: mediaOutput,
-              img: 'progressive',
-              limit: 50000
-            }
-          }
-        ]
+              mozjpeg: { progressive: true },
+            },
+          },
+        ],
       },
       {
         test: /\.scss$/,
@@ -214,18 +217,21 @@ module.exports = {
               loader: 'css-loader',
               options: {
                 sourceMap: true,
-                minimize: process.env.NODE_ENV === 'production'
-              }
+                minimize: process.env.NODE_ENV === 'production',
+              },
             },
-            { loader: 'postcss-loader' },
+            {
+              loader: 'postcss-loader',
+              options: { sourceMap: true },
+            },
             {
               loader: 'sass-loader',
-              options: { sourceMap: true }
-            }
-          ]
-        })
-      }
-    ]
+              options: { sourceMap: true },
+            },
+          ],
+        }),
+      },
+    ],
   },
-  devtool
+  devtool,
 };

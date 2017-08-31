@@ -1,5 +1,3 @@
-// sass-lint:disable no-color-literals
-
 // Code Patterns
 // =============
 
@@ -19,7 +17,7 @@ code {
     color: color('action');
   }
 
-  a:hover & {
+  a:hover & { // sass-lint:disable-line force-pseudo-nesting
     color: color('action-hover');
   }
 }
