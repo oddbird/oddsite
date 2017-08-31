@@ -9,7 +9,7 @@ const gutil = require('gulp-util');
 const KarmaServer = require('karma').Server;
 const mocha = require('gulp-spawn-mocha');
 const path = require('path');
-const prettier = require('gulp-nf-prettier');
+const prettier = require('gulp-prettier-plugin');
 const rename = require('gulp-rename');
 const sasslint = require('gulp-sass-lint');
 const svg = require('gulp-svg-symbols');
@@ -24,9 +24,9 @@ if (process.version !== expectedNodeVersion) {
   process.stdout.write(
     `You are not running node ${expectedNodeVersion}. Make sure that you've ` +
       'run bin/unpack-node and that your $PATH includes ' +
-      `${path.resolve(__dirname, 'bin')}\n`
+      `${path.resolve(__dirname, 'bin')}\n`,
   );
-  process.exit(1); // eslint-disable-line no-process-exit
+  process.exit(1);
 }
 
 const paths = {
@@ -44,14 +44,14 @@ const paths = {
       `${this.SRC_JS_DIR}**/*.js`,
       `${this.JS_TESTS_DIR}**/*.js`,
       `${this.SASS_TESTS_DIR}**/*.js`,
-      '*.js'
+      '*.js',
     ].concat(this.IGNORE);
     this.SASS = [
       `${this.SASS_DIR}**/*.scss`,
-      `${this.SASS_TESTS_DIR}**/*.scss`
+      `${this.SASS_TESTS_DIR}**/*.scss`,
     ].concat(this.IGNORE);
     return this;
-  }
+  },
 }.init();
 
 // Try to ensure that all processes are killed on exit
@@ -76,7 +76,7 @@ const spawnTask = function(command, args, cb) {
         gutil.beep();
         return cb(err);
       })
-      .on('exit', cb)
+      .on('exit', cb),
   );
 };
 
@@ -103,7 +103,7 @@ const prettierTask = (src, log) => {
   }
   return gulp
     .src(src, { base: './' })
-    .pipe(prettier({ singleQuote: true }))
+    .pipe(prettier({ singleQuote: true, trailingComma: 'all' }))
     .pipe(gulp.dest('./'))
     .on('error', onError);
 };
@@ -133,18 +133,6 @@ gulp.task('serve', ['watch', 'runserver']);
 gulp.task('test', ['jstest', 'sasstest']);
 
 gulp.task('watch', ['jstest-watch', 'webpack-watch'], () => {
-  // lint js on changes
-  gulp.watch(paths.ALL_JS, ev => {
-    if (ev.type === 'added' || ev.type === 'changed') {
-      prettierTask(ev.path, true).on('end', () => {
-        eslintTask(ev.path, false, true);
-      });
-    }
-  });
-
-  // lint all js when rules change
-  gulp.watch('**/.eslintrc.yml', ['eslint-nofail']);
-
   // lint scss on changes
   gulp.watch(paths.SASS, ev => {
     if (ev.type === 'added' || ev.type === 'changed') {
@@ -163,9 +151,9 @@ gulp.task('watch', ['jstest-watch', 'webpack-watch'], () => {
     [
       `${paths.ICONS_DIR}**/*.svg`,
       `${paths.SRC_TEMPLATES_DIR}_icon_template.lodash`,
-      './STYLEGUIDE.md'
+      './STYLEGUIDE.md',
     ],
-    ['webpack']
+    ['webpack'],
   );
 
   // compile rstblog assets
@@ -175,9 +163,9 @@ gulp.task('watch', ['jstest-watch', 'webpack-watch'], () => {
       `${paths.SRC_TEMPLATES_DIR}**/*.html`,
       'content/**/*.rst',
       'content/**/*.yml',
-      'content/static/images/**/*'
+      'content/static/images/**/*',
     ],
-    ['dev-rebuild']
+    ['dev-rebuild'],
   );
 });
 
@@ -194,7 +182,7 @@ gulp.task('sasslint-nofail', () => sasslintTask(paths.SASS));
 gulp.task('sasstest', () =>
   gulp
     .src([`${paths.SASS_TESTS_DIR}test_sass.js`], { read: false })
-    .pipe(mocha({ reporter: 'dot' }))
+    .pipe(mocha({ reporter: 'dot' })),
 );
 
 const karmaOnBuild = done => exitCode => {
@@ -203,13 +191,13 @@ const karmaOnBuild = done => exitCode => {
     done(
       new gutil.PluginError('karma', {
         name: 'KarmaError',
-        message: `Failed with exit code: ${exitCode}`
-      })
+        message: `Failed with exit code: ${exitCode}`,
+      }),
     );
   } else {
     done();
   }
-  process.exit(exitCode); // eslint-disable-line no-process-exit
+  process.exit(exitCode);
 };
 
 gulp.task('jstest', cb => {
@@ -222,11 +210,11 @@ gulp.task('jstest-watch', () => {
   const karmaConf = require('./karma.common.conf.js');
   const conf = Object.assign({}, karmaConf, {
     autoWatch: true,
-    singleRun: false
+    singleRun: false,
   });
   conf.coverageReporter.reporters = [
     { type: 'html', dir: 'jscov/' },
-    { type: 'text-summary' }
+    { type: 'text-summary' },
   ];
   new KarmaServer(conf).start();
 });
@@ -244,12 +232,16 @@ gulp.task('sprites', ['sprites-clean'], () =>
         id: 'icon-%f',
         title: '%f icon',
         templates: [
-          path.join(__dirname, paths.SRC_TEMPLATES_DIR, '_icon_template.lodash')
-        ]
-      })
+          path.join(
+            __dirname,
+            paths.SRC_TEMPLATES_DIR,
+            '_icon_template.lodash',
+          ),
+        ],
+      }),
     )
     .pipe(rename('_icons.svg'))
-    .pipe(gulp.dest(paths.SRC_TEMPLATES_DIR))
+    .pipe(gulp.dest(paths.SRC_TEMPLATES_DIR)),
 );
 
 gulp.task('runserver', ['browser-sync']);
@@ -261,7 +253,7 @@ const getServeOpts = dir => ({
   logPrefix: 'oddsite',
   notify: false,
   files: [`${dir}**/*`],
-  reloadDebounce: 500
+  reloadDebounce: 500,
 });
 
 gulp.task('browser-sync', cb => {

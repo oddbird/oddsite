@@ -10,8 +10,8 @@ const webpackConf = extend(true, {}, require('./webpack.common.config.js'));
 
 webpackConf.plugins.push(
   new webpack.optimize.UglifyJsPlugin({
-    sourceMap: true
-  })
+    sourceMap: true,
+  }),
 );
 
 module.exports = webpackConf;

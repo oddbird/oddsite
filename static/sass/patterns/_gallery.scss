@@ -14,7 +14,7 @@ $min-image: 300px;
     display: grid;
     grid-auto-flow: dense;
     grid-auto-rows: auto;
-    grid-gap: size('shim'); // sass-lint:disable-line no-misspelled-properties
+    grid-gap: size('shim');
     grid-template-columns: repeat(auto-fill, minmax($min-image, 1fr));
   }
 

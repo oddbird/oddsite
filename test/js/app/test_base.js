@@ -3,25 +3,25 @@ import * as base from 'js/app/base.js';
 describe('initializeToggles', function() {
   beforeEach(function() {
     this.toggle = $(
-      '<div data-toggle="button" aria-controls="target &foo">'
+      '<div data-toggle="button" aria-controls="target &foo">',
     ).appendTo('body');
     this.toggle2 = $(
       '<div data-toggle="button" aria-controls="target &foo" ' +
-        'aria-pressed="true">'
+        'aria-pressed="true">',
     ).appendTo('body');
     this.syncedToggle = $(
       '<div data-toggle="button" aria-controls="target &foo" ' +
-        'data-toggle-synced="true">'
+        'data-toggle-synced="true">',
     ).appendTo('body');
     this.syncedToggle2 = $(
       '<div data-toggle="button" aria-controls="target &foo" ' +
-        'data-toggle-synced="true">'
+        'data-toggle-synced="true">',
     ).appendTo('body');
     this.target = $(
-      '<div data-toggle="target" data-target-id="target &foo">'
+      '<div data-toggle="target" data-target-id="target &foo">',
     ).appendTo('body');
     this.close = $(
-      '<div data-toggle="close" aria-controls="target &foo">'
+      '<div data-toggle="close" aria-controls="target &foo">',
     ).appendTo('body');
     const toggleClose = (this.toggleClose = sinon.spy());
     const toggleOpen = (this.toggleOpen = sinon.spy());
@@ -65,7 +65,7 @@ describe('initializeToggles', function() {
     expect(this.targetClose).to.have.been.calledOnce;
   });
 
-  it('synced toggles remain in sync (either both open, or both closed)', function() {
+  it('synced toggles remain in sync (both open or both closed)', function() {
     this.syncedToggle.click();
 
     expect(this.syncedToggle).to.have.attr('aria-pressed', 'true');
@@ -95,7 +95,7 @@ describe('initializeToggles', function() {
       expect(targetInner).to.have.attr('aria-expanded', 'false');
       expect(this.target).not.to.have.attr('aria-expanded');
       expect(this.targetClose).to.have.been.calledOnce;
-    }
+    },
   );
 
   it('close click sets aria-pressed and aria-expanded to "false"', function() {
@@ -161,11 +161,11 @@ describe('initializeToggles', function() {
   it('multiple auto-closing toggles work independently', function() {
     const otherTarget = $(
       '<div data-toggle="target" data-target-id="target2"' +
-        ' data-auto-closing="true" aria-expanded="false">'
+        ' data-auto-closing="true" aria-expanded="false">',
     ).appendTo('body');
     const otherToggle = $(
       '<div data-toggle="button" aria-controls="target2" ' +
-        'aria-pressed="false">'
+        'aria-pressed="false">',
     ).appendTo('body');
     this.target.attr('data-auto-closing', 'true');
     this.toggle.click();
