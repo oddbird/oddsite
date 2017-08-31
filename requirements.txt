@@ -4,7 +4,7 @@ rstblog==1.0.obc3
 PyYAML==3.12
 Babel==2.5.0
 blinker==1.4
-docutils==0.9.1
+docutils==0.14
 Jinja2==2.8
 Werkzeug==0.8.3
 Pygments==2.2.0
