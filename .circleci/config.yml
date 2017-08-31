@@ -3,7 +3,7 @@ jobs:
   build:
     working_directory: ~/oddsite
     docker:
-      - image: node:latest
+      - image: node:latest-browsers
     steps:
       - checkout
       - restore_cache:
