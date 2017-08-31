@@ -19,7 +19,7 @@ unpacked inside the repo (in the git-ignored ``node/`` directory), so you don't
 have to install then system-wide (and possibly conflict with other projects
 wanting other Node/yarn versions). Run ``bin/unpack-node`` to unpack into
 ``node/`` (this command also installs `yarn`_ for front-end package
-management).
+management, and wipes the contents of ``node_modules/``).
 
 Next you need to make sure that whenever you are working on OddSite, you use
 that OddSite-specific Node instead of any system-wide Node you may have.
