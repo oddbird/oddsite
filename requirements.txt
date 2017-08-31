@@ -1,12 +1,12 @@
 --find-links ./requirements/
 
 rstblog==1.0.obc3
-PyYAML==3.10
-Babel==0.9.6
-blinker==1.2
-docutils==0.9.1
-Jinja2==2.8
-Werkzeug==0.8.3
+PyYAML==3.12
+Babel==2.5.0
+blinker==1.4
+docutils==0.14
+Jinja2==2.9.6
+Werkzeug==0.12.2
 Pygments==2.2.0
-smartypants==1.6.0.3
-Pillow==4.0.0
+smartypants==2.0.0
+Pillow==4.2.1
