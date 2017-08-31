@@ -4,17 +4,15 @@
 
 // text-outline
 // ------------
-@include test-module('text-outline [mixin]') {
-  @include test('Creates outline using multiple shadows') {
+@include describe('text-outline [mixin]') {
+  @include it('Creates outline using multiple shadows') {
     @include assert {
       @include output {
         @include text-outline(#fff);
       }
 
       @include expect {
-        // sass-lint:disable-all
         text-shadow: 0.1em -1px 0 #fff, 0.1em 0px 0 #fff, 0.1em 1px 0 #fff, 0.05em -1px 0 #fff, 0.05em 0px 0 #fff, 0.05em 1px 0 #fff, 0em -1px 0 #fff, 0em 1px 0 #fff, -0.05em -1px 0 #fff, -0.05em 0px 0 #fff, -0.05em 1px 0 #fff, -0.1em -1px 0 #fff, -0.1em 0px 0 #fff, -0.1em 1px 0 #fff;
-        // sass-lint:enable-all
       }
     }
   }
@@ -22,18 +20,16 @@
 
 // text-underline-color
 // --------------------
-@include test-module('text-underline-color [mixin]') {
-  @include test('Allows you to specify color and underline color') {
+@include describe('text-underline-color [mixin]') {
+  @include it('Allows you to specify color and underline color') {
     @include assert {
       @include output {
         @include text-underline-color(#e07);
       }
 
       @include expect {
-        // sass-lint:disable-all
         background-image: linear-gradient(#e07, #e07);
         color: #e07;
-        // sass-lint:enable-all
       }
     }
   }
@@ -42,22 +38,20 @@
 
 // text-underline
 // --------------
-@include test-module('text-underline [mixin]') {
-  @include test('Creates a positioned underline, clipped by text-outline') {
+@include describe('text-underline [mixin]') {
+  @include it('Creates a positioned underline, clipped by text-outline') {
     @include assert {
       @include output {
         @include text-underline(#e07, #fff);
       }
 
       @include expect {
-        // sass-lint:disable-all
         text-shadow: 0.1em -1px 0 #fff, 0.1em 0px 0 #fff, 0.1em 1px 0 #fff, 0.05em -1px 0 #fff, 0.05em 0px 0 #fff, 0.05em 1px 0 #fff, 0em -1px 0 #fff, 0em 1px 0 #fff, -0.05em -1px 0 #fff, -0.05em 0px 0 #fff, -0.05em 1px 0 #fff, -0.1em -1px 0 #fff, -0.1em 0px 0 #fff, -0.1em 1px 0 #fff;
         background-image: linear-gradient(#e07, #e07);
         color: #e07;
         background-position: 0 calc(1.05em + 1.5px);
         background-repeat: repeat-x;
         background-size: calc(1px + 0.04em) calc(1px + 0.04em);
-        // sass-lint:enable-all
       }
     }
   }

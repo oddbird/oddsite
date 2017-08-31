@@ -75,7 +75,7 @@ Check out the `reference documentation`_.
 .. code-block:: scss
 
   // Testing Functions
-  @include test('Returns the sum of two numeric maps') {
+  @include it('Returns the sum of two numeric maps') {
     $base: (one: 1, two: 1, three: 1);
     $add: (one: 1, two: 2, three: -1);
 
@@ -90,7 +90,7 @@ with the ``assert``, ``output``, and ``expect`` mixins:
 .. code-block:: scss
 
   // Testing Mixins
-  @include test('Font Size mixin') {
+  @include it('Font Size mixin') {
     @include assert('Outputs a font size and line height based on keyword.') {
       @include output {
         @include font-size(large);
@@ -118,9 +118,9 @@ nesting as deep as you need:
 
 .. code-block:: scss
 
-  @include test-module('Math Functions') {
-    @include test-module('Multiply [function]') {
-      @include test('Returns a multiple') {
+  @include describe('Math Functions') {
+    @include describe('Multiply [function]') {
+      @include it('Returns a multiple') {
         @include assert-equal(
           multiply(3, 5),
           3 * 5);

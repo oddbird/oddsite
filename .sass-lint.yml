@@ -2,7 +2,8 @@
 # ------------------------------------------------------------------
 
 files:
-  ignore: '**/susy-off-canvas.scss'
+  ignore:
+    - 'test/sass/**/*.*'
 
 rules:
   # Extends
@@ -29,28 +30,28 @@ rules:
 
   # Disallows
   no-color-keywords: 2
-  no-color-literals: 1
+  no-color-literals: 2
   no-css-comments: 2
   no-debug: 2
-  no-duplicate-properties: 1
+  no-duplicate-properties: 2
   no-empty-rulesets: 2
   no-extends: 0
   no-ids: 0
-  no-important: 1
+  no-important: 2
   no-invalid-hex: 2
-  no-mergeable-selectors: 1
-  no-misspelled-properties: 1
-  no-qualifying-elements: 1
+  no-mergeable-selectors: 2
+  no-misspelled-properties: 2
+  no-qualifying-elements: 2
   no-trailing-zero: 2
   no-transition-all: 0
   no-url-protocols: 2
-  no-vendor-prefixes: 1
-  no-warn: 1
+  no-vendor-prefixes: 2
+  no-warn: 2
 
   # nesting
-  force-attribute-nesting: 1
-  force-element-nesting: 1
-  force-pseudo-nesting: 1
+  force-attribute-nesting: 2
+  force-element-nesting: 2
+  force-pseudo-nesting: 2
 
   # Style Guide
   border-zero: 2
@@ -63,7 +64,7 @@ rules:
   function-name-format: 2
   hex-length: 2
   hex-notation: 2
-  indentation: 1
+  indentation: 2
   leading-zero:
     - 2
     - include: true

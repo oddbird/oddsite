@@ -18,15 +18,15 @@ webpackConf.plugins = [
     // don't watch the context directories we add in test/js/index.js; see
     // https://github.com/webpack/webpack/issues/2156
     /test\/js\/app$/,
-    /static\/js\/app$/
+    /static\/js\/app$/,
   ]),
   new webpack.ProvidePlugin({
     $: 'jquery',
     jQuery: 'jquery',
     'window.jQuery': 'jquery',
-    'root.jQuery': 'jquery'
+    'root.jQuery': 'jquery',
   }),
-  new webpack.LoaderOptionsPlugin({ debug: true })
+  new webpack.LoaderOptionsPlugin({ debug: true }),
 ];
 
 module.exports = {
@@ -60,21 +60,15 @@ module.exports = {
     reporters: [
       { type: 'html', dir: 'jscov/' },
       { type: 'json', dir: 'jscov/' },
-      { type: 'text' }
+      { type: 'text' },
     ],
-    instrumenterOptions: { istanbul: { noCompact: true } }
+    instrumenterOptions: { istanbul: { noCompact: true } },
   },
 
   // results will be saved as $outputDir/$browserName.xml
   junitReporter: { outputDir: 'jscov/' },
 
   webpackMiddleware: { noInfo: true },
-
-  phantomjsLauncher: {
-    // Have phantomjs exit if a ResourceError is encountered
-    // (useful if karma exits without killing phantom)
-    exitOnResourceError: false
-  },
 
   // web server port
   port: 9876,
@@ -92,9 +86,9 @@ module.exports = {
 
   // start these browsers
   // available launchers: https://npmjs.org/browse/keyword/karma-launcher
-  browsers: ['PhantomJS'],
+  browsers: ['ChromeHeadless'],
 
   // Continuous Integration mode
   // if true, Karma captures browsers, runs the tests and exits
-  singleRun: true
+  singleRun: true,
 };

@@ -3,21 +3,30 @@ jobs:
   build:
     working_directory: ~/oddsite
     docker:
-      - image: node:7.7.3
+      - image: circleci/node:latest-browsers
     steps:
       - checkout
       - restore_cache:
           key: oddsite-{{ .Branch }}-{{ checksum "yarn.lock" }}
       - run:
-          name: Install Yarn
-          command: curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 0.22.0
+          name: Install Node & Yarn
+          command: ./bin/unpack-node
+      - run: echo 'export PATH=~/oddsite/node/bin:$PATH' >> $BASH_ENV
       - run:
           name: Install Dependencies
-          command: ~/.yarn/bin/yarn
+          command: yarn
+      - run:
+          name: Check that yarn.lock matches package.json
+          command: |
+            if [[ ! "${CIRCLE_BRANCH}" =~ greenkeeper\/.* ]]; then
+              [[ $(git diff --name-only yarn.lock) == "" ]] && exit 0
+              echo ">> yarn.lock is out of date, run \"yarn\""
+              exit 1
+            fi
       - save_cache:
           key: oddsite-{{ .Branch }}-{{ checksum "yarn.lock" }}
           paths:
-            - "~/.cache/yarn"
+            - ~/.cache/yarn
       - run:
           name: Lint JS
           command: ./node_modules/.bin/gulp eslint
@@ -29,9 +38,20 @@ jobs:
           command: ./node_modules/.bin/gulp sasstest
       - run:
           name: Test JS
-          command: ./node_modules/.bin/karma start --reporters dots,coverage,junit --browsers PhantomJS
+          command: ./node_modules/.bin/karma start --reporters dots,coverage,junit --browsers ChromeHeadless
       - run:
           name: Check JS Test Coverage
           command: ./node_modules/.bin/istanbul check-coverage --root jscov/ --statements=100 --functions=100 --branches=100 --lines=100
+      - deploy:
+          name: Update yarn.lock [greenkeeper]
+          command: |
+            if [[ "${CIRCLE_BRANCH}" =~ greenkeeper\/.* ]]; then
+              yarn global add greenkeeper-lockfile@1
+              greenkeeper-lockfile-update
+              greenkeeper-lockfile-upload
+            fi
+      - store_artifacts:
+          path: jscov
+          destination: js-reports
       - store_test_results:
-          path: jscov/
+          path: jscov

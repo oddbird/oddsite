@@ -11,6 +11,6 @@ appTestsContext.keys().forEach(appTestsContext);
 const appSrcContext = require.context(
   './../../static/js/app/',
   true,
-  /.*\.js$/
+  /.*\.js$/,
 );
 appSrcContext.keys().forEach(appSrcContext);
