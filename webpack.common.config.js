@@ -7,9 +7,9 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 // const nodeObjectHash = require('node-object-hash');
 const path = require('path');
 const sassdoc = require('sassdoc');
+const spawn = require('child_process').spawn;
 const touch = require('touch');
 const webpack = require('webpack');
-const WebpackShellPlugin = require('webpack-shell-plugin');
 
 const outputPath = path.join(__dirname, 'content', 'static', 'assets');
 const sassdocPath = path.join(__dirname, 'content', 'styleguide');
@@ -32,9 +32,27 @@ if (process.env.NODE_ENV === 'production') {
   buildScript = 'python run.py prod';
 }
 
-const SassdocPlugin = function() {
-  // do nothing
+const WebpackShellPlugin = function() {};
+WebpackShellPlugin.prototype.apply = compiler => {
+  let building = false;
+  compiler.plugin('after-emit', (compilation, cb) => {
+    if (!building) {
+      // eslint-disable-next-line no-console
+      console.log('Executing post-build scripts');
+      building = true;
+      const [command, ...args] = buildScript.split(' ');
+      spawn(command, args, { stdio: 'inherit' }).on('close', err => {
+        building = false;
+        if (err) {
+          throw err;
+        }
+      });
+    }
+    cb();
+  });
 };
+
+const SassdocPlugin = function() {};
 const getCSS = function(entry) {
   if (!entry) {
     return undefined;
@@ -152,10 +170,7 @@ module.exports = {
       prettyPrint: true,
     }),
     new SassdocPlugin(),
-    new WebpackShellPlugin({
-      onBuildEnd: [buildScript],
-      dev: false,
-    }),
+    new WebpackShellPlugin(),
     new CleanWebpackPlugin([outputPath], {
       root: __dirname,
       verbose: true,
