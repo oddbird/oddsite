@@ -3,7 +3,8 @@ location: open-source
 grid_template: true
 headline:
   - type: 'Open Source'
-    tagline: 'Unit testing for Sass'
+    title: 'True: Sass Unit Testing'
+    tagline: 'Write your tests in Sass, and report with Mocha'
 image:
   - src: 'projects/true.jpg'
 project:
@@ -121,8 +122,9 @@ or TDD (`test-module`/`test`) syntax:
 
   // Testing Functions
   @include assert-equal(
-    multiple(12, 2),
-    24);
+    multiply(12, 2),
+    24
+  );
 
 **Test CSS output** (mixins)
 with the ``assert``, ``output``, and ``expect`` mixins:
