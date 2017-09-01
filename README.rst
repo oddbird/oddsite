@@ -19,7 +19,7 @@ unpacked inside the repo (in the git-ignored ``node/`` directory), so you don't
 have to install then system-wide (and possibly conflict with other projects
 wanting other Node/yarn versions). Run ``bin/unpack-node`` to unpack into
 ``node/`` (this command also installs `yarn`_ for front-end package
-management).
+management, and wipes the contents of ``node_modules/``).
 
 Next you need to make sure that whenever you are working on OddSite, you use
 that OddSite-specific Node instead of any system-wide Node you may have.
@@ -66,6 +66,17 @@ Install back-end dependencies
 Local development on this project requires `Python`_ 2.7. To install the Python
 dependencies, run ``pip install -r requirements.txt`` (you may want to run this
 in a `virtualenv`_ to isolate it from other Python projects on your system).
+
+
+Development tasks
+~~~~~~~~~~~~~~~~~
+
+In commit messages or pull request titles, we use the following emojis to label
+which development commands need to be run before serving locally:
+
+- 📦 (``:package:``) -> ``pip install -r requirements.txt``
+- 🐈 (``:cat2:``) -> ``yarn``
+- 🙀 (``:scream_cat:``) -> ``rm -rf node/*; rm -rf node_modules/; bin/unpack-node; yarn``
 
 
 Directory Structure
