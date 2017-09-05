@@ -1,0 +1,37 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>accoutrement-type Documentation</title><link href="assets/img/favicon.ico" rel="shortcut icon"><link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700|Source+Sans+Pro:400,400i,700,700i" rel="stylesheet"><link rel="stylesheet" href="assets/css/main.css"></head><body><svg xmlns="http://www.w3.org/2000/svg" hidden><symbol id="icon-menu" viewBox="0 0 24 28"><title>menu icon</title><path d="M24 21v2c0 .547-.453 1-1 1H1c-.547 0-1-.453-1-1v-2c0-.547.453-1 1-1h22c.547 0 1 .453 1 1zm0-8v2c0 .547-.453 1-1 1H1c-.547 0-1-.453-1-1v-2c0-.547.453-1 1-1h22c.547 0 1 .453 1 1zm0-8v2c0 .547-.453 1-1 1H1c-.547 0-1-.453-1-1V5c0-.547.453-1 1-1h22c.547 0 1 .453 1 1z"/></symbol><symbol id="icon-search" viewBox="0 0 24 28"><title>search icon</title><path d="M24 21v2c0 .547-.453 1-1 1H1c-.547 0-1-.453-1-1v-2c0-.547.453-1 1-1h22c.547 0 1 .453 1 1zm0-8v2c0 .547-.453 1-1 1H1c-.547 0-1-.453-1-1v-2c0-.547.453-1 1-1h22c.547 0 1 .453 1 1zm0-8v2c0 .547-.453 1-1 1H1c-.547 0-1-.453-1-1V5c0-.547.453-1 1-1h22c.547 0 1 .453 1 1z"/></symbol></svg><div data-sassdoc-region="app"><header role="banner" data-sassdoc-region="banner"><button data-nav-toggle="small" data-toggle="button" aria-controls="nav-small" aria-pressed="false" data-toggle-synced="false"><svg data-icon="menu" data-icon-size="icon-small"><title>menu</title><use xlink:href="#icon-menu"/></svg></button> <button data-nav-toggle="large" data-toggle="button" aria-controls="nav-large" aria-pressed="true" data-toggle-synced="false"><svg data-icon="menu" data-icon-size="icon-small"><title>menu</title><use xlink:href="#icon-menu"/></svg></button><h1 data-sassdoc="project-title"><a href="index.html" rel="home" data-sassdoc="project-name">accoutrement-type</a> <span data-sassdoc="project-version">2.1.0</span></h1></header><div data-sassdoc-region="container"><nav role="navigation" data-nav-menu="small" data-toggle="target" id="nav-small" data-target-id="nav-small" aria-expanded="false" data-auto-closing="false" data-auto-closing-on-any-click="false"><h3 data-sassdoc="nav-title"><a href="index.html" data-sassdoc-nav="is-active">accoutrement-type</a></h3><ul><li data-sassdoc="nav-item"><a href="a11y.html" data-sassdoc-nav="is-not-active">Accessibility</a></li><li data-sassdoc="nav-item"><a href="config.html" data-sassdoc-nav="is-not-active">Webfont Configuration</a></li><li data-sassdoc="nav-item"><a href="fonts.html" data-sassdoc-nav="is-not-active">Accessing Webfonts</a></li><li data-sassdoc="nav-item"><a href="pseudo.html" data-sassdoc-nav="is-not-active">Pseudo Elements</a></li></ul></nav><nav role="navigation" data-nav-menu="large" data-toggle="target" id="nav-large" data-target-id="nav-large" aria-expanded="true" data-auto-closing="false" data-auto-closing-on-any-click="false"><h3 data-sassdoc="nav-title"><a href="index.html" data-sassdoc-nav="is-active">accoutrement-type</a></h3><ul><li data-sassdoc="nav-item"><a href="a11y.html" data-sassdoc-nav="is-not-active">Accessibility</a></li><li data-sassdoc="nav-item"><a href="config.html" data-sassdoc-nav="is-not-active">Webfont Configuration</a></li><li data-sassdoc="nav-item"><a href="fonts.html" data-sassdoc-nav="is-not-active">Accessing Webfonts</a></li><li data-sassdoc="nav-item"><a href="pseudo.html" data-sassdoc-nav="is-not-active">Pseudo Elements</a></li></ul></nav><main role="main"><div data-sassdoc-region="main" data-sassdoc-page="index"><ul class="project-links"><li class="project-link-item" class="project-link-start"><a href="https://github.com/oddbird/accoutrement-type" class="project-link">View Project</a></li><li class="project-link-item"><a href="git://github.com/oddbird/accoutrement-type.git" class="project-link">View Source</a></li></ul><div class="text-block"><h1 id="accoutrement-type">Accoutrement-Type</h1><p>Sass typography <a href="http://oddbird.net/accoutrement/">Accoutrement</a> by <a href="http://oddbird.net/">OddBird</a>. Gather all your fonts into a single map, access them by name, and easily import the webfonts. Also includes helpers for accessibility and pseudo-elements.</p><h2 id="quick-start">Quick Start</h2><pre><code class="lang-bash">npm install accoutrement-type
+</code></pre><p>Import the library:</p><pre><code class="lang-scss">@import &#39;path/to/accoutrement-type/type&#39;;
+</code></pre><p>Configure your font settings:</p><pre><code class="lang-scss">$font-formats: &#39;woff&#39; &#39;ttf&#39;; // Define what webfont formats need importing
+$font-path: &#39;../fonts/&#39;; // Set the a path to your fonts directory
+
+$fonts: (
+  &#39;heading&#39;: ( // give your font a semantic name for reference
+    &#39;name&#39;: &#39;maven&#39;, // optionally set a different font name
+    &#39;stack&#39;: (&#39;helvetica&#39;, &#39;arial&#39;, sans-serif), // define the stack
+    &#39;normal&#39;: &#39;maven/maven_pro_regular-webfont&#39;, // point to any webfont files
+    &#39;bold&#39;: &#39;maven/maven_pro_bold-webfont&#39;,
+  ),
+
+  &#39;body&#39;: (
+    &#39;name&#39;: &#39;exo&#39;,
+    &#39;stack&#39;: (&#39;helvetica&#39;, &#39;arial&#39;, sans-serif),
+    &#39;normal&#39;: false, // set variant paths to false when using font CDNs...
+    &#39;italic&#39;: false, // ...if you still want to document available styles
+    &#39;bold&#39;: false,
+    &#39;bold&#39; &#39;italic&#39;: false,
+  ),
+
+  &#39;alias&#39;: &#39;body&#39;, // create aliases when useful
+);
+</code></pre><p>Import one font at a time with <code>font-face()</code> or all your webfonts ar once with <code>import-webfonts()</code>:</p><pre><code class="lang-scss">// Import one font by configuration key, with custom formats
+@include font-face(&#39;body&#39;, &#39;otf&#39; &#39;svg&#39;);
+
+// Import all defined fonts, using the same formats
+@include import-webfonts;
+</code></pre><p>And set your font-family anywhere, using the semantic names you set earlier:</p><pre><code class="lang-scss">html {
+  @include font-family(&#39;body&#39;);
+}
+
+h1, h2, h3 {
+  @include font-family(&#39;heading&#39;);
+}
+</code></pre><h2 id="changelog">Changelog</h2><h3 id="2-1-0-2016-12-09">2.1.0 — 2016.12.09</h3><ul><li>Document <code>$font</code> properties</li><li>Add <code>false</code> option for font-variants, to allow documentation without triggering imports</li><li>Test remaining mixins: <code>font-face</code>, <code>import-webfonts</code>, and <code>_import-font-face</code></li></ul></div></div></main></div></div><script type="text/javascript" src="assets/js/jquery-3.1.1.slim.js"></script><script type="text/javascript" src="assets/js/srcdoc-polyfill.min.js"></script><script type="text/javascript" src="assets/js/highlight.js"></script><script type="text/javascript" src="assets/js/base.js"></script><script type="text/javascript" src="assets/js/init.js"></script></body></html>
