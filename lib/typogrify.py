@@ -159,7 +159,7 @@ def smartquotes(text):
     u'The &#8220;Green&#8221; man'
     """
     text = unicode(text)
-    output = smartypants.smartyPants(text)
+    output = smartypants.smartypants(text)
     return output
 
 
