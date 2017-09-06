@@ -1,5 +1,5 @@
 public: yes
-template: layout.html
+location: home
 
 
 Page not found.
