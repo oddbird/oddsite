@@ -1,12 +1,35 @@
 public: yes
 location: home
+headline:
+  - type: '404'
+    tagline: 'That’s odd…'
 
 
-Page not found.
-===============
+Oops, we got lost!
+==================
 
-That's odd.
-You can always return home_
-and explore our site from there.
+Pages usually stay where we put them.
+Don't worry,
+we'll help get you back on track:
 
-.. _home: /
+.. callmacro:: content.macros.j2#link_button
+  :url: '/'
+
+  OddBird home
+
+.. callmacro:: content.macros.j2#link_button
+  :url: '/susy/'
+
+  Susy home
+
+.. callmacro:: content.macros.j2#link_button
+  :url: '/contact/'
+
+  Contact us
+
+|br|
+|br|
+
+.. |br| raw:: html
+
+  <br />
