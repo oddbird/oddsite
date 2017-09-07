@@ -256,12 +256,20 @@ const getServeOpts = dir => ({
   reloadDebounce: 500,
 });
 
+const getBsCb = cb => (err, bs) => {
+  bs.addMiddleware('*', (req, res) => {
+    res.writeHead(302, { location: '404.html' });
+    res.end();
+  });
+  cb(err);
+};
+
 gulp.task('browser-sync', cb => {
-  browserSync.init(getServeOpts(paths.DIST_DIR), cb);
+  browserSync.init(getServeOpts(paths.DIST_DIR), getBsCb(cb));
 });
 
 gulp.task('prod-serve', cb => {
-  browserSync.init(getServeOpts(paths.PROD_DIST_DIR), cb);
+  browserSync.init(getServeOpts(paths.PROD_DIST_DIR), getBsCb(cb));
 });
 
 gulp.task('update-spammers', () => {
