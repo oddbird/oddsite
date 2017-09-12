@@ -8,9 +8,20 @@
 $grid-columns-small: [col1-start] minmax(5vw, 1fr) [col1-end col2-start] minmax(auto, 1fr) [col2-end col3-start] minmax(auto, 1fr) [col3-end col4-start] minmax(auto, 1fr) [col4-end col5-start] minmax(auto, 1fr) [col5-end];
 $grid-columns-large: [col1-start] 1fr [col1-end col2-start] 1fr [col2-end col3-start] minmax(0, size('full-content')) [col3-end col4-start] 1fr [col4-end col5-start] 1fr [col5-end];
 
-// When you need a % and not a rem, like on blockquote and intro
-// -------------------------------------------------------------
 
+// Breakpoints
+// -----------
+/// Breakpoint values, adjusted to the proper units
+/// @group layout
+$breakpoints: (
+  'medium-page': size('medium-page' ('convert-units': 'browser-ems')),
+  'full-content': size('full-content' ('convert-units': 'browser-ems')),
+  'small-page': size('small-page' ('convert-units': 'browser-ems')),
+  'large-page': size('large-page' ('convert-units': 'browser-ems')),
+  'nav-medium': size('nav-medium' ('convert-units': 'browser-ems')),
+  'nav-small': size('nav-small' ('convert-units': 'browser-ems')),
+  'nav-wide': size('nav-wide' ('convert-units': 'browser-ems')),
+);
 
 
 // Center it (horizontally)

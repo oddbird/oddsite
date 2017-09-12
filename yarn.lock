@@ -30,25 +30,25 @@ accepts@~1.3.3:
     mime-types "~2.1.16"
     negotiator "0.6.1"
 
-accoutrement-color@^2.1.2:
-  version "2.1.2"
-  resolved "https://registry.yarnpkg.com/accoutrement-color/-/accoutrement-color-2.1.2.tgz#2a9f4b3701e537ca8608fd8bcd61013f87d122fb"
-
-accoutrement-init@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/accoutrement-init/-/accoutrement-init-1.1.0.tgz#34d3dcb8aeaa4dece5357bafac88acbbf2e572c9"
-
-accoutrement-layout@^2.2.0:
+accoutrement-color@2.2.0:
   version "2.2.0"
-  resolved "https://registry.yarnpkg.com/accoutrement-layout/-/accoutrement-layout-2.2.0.tgz#974d4cc75a6cad10f441ab51f2e68b093667d62c"
+  resolved "https://registry.yarnpkg.com/accoutrement-color/-/accoutrement-color-2.2.0.tgz#c375e73f079f1c201c3f867fb5f69f9e795de8ed"
 
-accoutrement-scale@^3.2.0:
-  version "3.2.0"
-  resolved "https://registry.yarnpkg.com/accoutrement-scale/-/accoutrement-scale-3.2.0.tgz#3b58259fa6ca3a1b77c297d6f3ef56e80a4dbaae"
+accoutrement-init@1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/accoutrement-init/-/accoutrement-init-1.1.1.tgz#6e0b6cc2f3f9ec77867d7298e64b3c76061d55d0"
 
-accoutrement-type@^2.1.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/accoutrement-type/-/accoutrement-type-2.1.0.tgz#871e9163ab377c43bd0ab7ca0b6d718c61d26af2"
+accoutrement-layout@3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/accoutrement-layout/-/accoutrement-layout-3.0.0.tgz#78927ccfd4c309eb35f4d8ec45805d61e4147a65"
+
+accoutrement-scale@4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/accoutrement-scale/-/accoutrement-scale-4.0.0.tgz#b01baea47ec7dbd4bd2091f29aba1f302694257a"
+
+accoutrement-type@3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/accoutrement-type/-/accoutrement-type-3.0.0.tgz#a85747fcf609d7b30176f195edcb9f7a7dca8ffd"
 
 acorn-dynamic-import@^2.0.0:
   version "2.0.2"

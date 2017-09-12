@@ -17,8 +17,8 @@
         display: block;
         position: relative;
 
-        &:before,
-        &:after {
+        &::before,
+        &::after {
           content: " ";
           border: size('gutter') solid transparent;
           border-bottom-width: 0;
@@ -28,13 +28,13 @@
           top: 100%;
         }
 
-        &:before {
+        &::before {
           content: " ";
           margin-top:size('border');
           transform: translateX(-50%) translateY(-2px);
         }
 
-        &:after {
+        &::after {
           content: " ";
           border-top-color: #fff;
           transform: translateX(-50%) translateY(-4px);

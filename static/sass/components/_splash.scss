@@ -58,7 +58,7 @@
 }
 
 .splash-image {
-  @include stretch;
+  @include position(0);
   background: no-repeat scroll left top;
   background-size: cover;
   filter: grayscale(60%);
