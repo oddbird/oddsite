@@ -16,7 +16,8 @@ contributors:
   - author: 'miriam'
     role: 'creator'
 summary: |
-  Sass layout utilities
+  **Accoutrement-Layout provides
+  essential layout utilities** –
   including media-query helpers,
   a clearfix for floated elements,
   global box-sizing,
@@ -31,8 +32,8 @@ Accoutrement Layout
 .. callmacro:: content.macros.j2#rst
   :tag: 'start'
 
-Color Palettes & Accessibility
-------------------------------
+Layout & Positioning
+--------------------
 
 .. image:: https://badge.fury.io/js/accoutrement-layout.svg
   :alt: 'npm package'
@@ -50,6 +51,12 @@ establish intrinsic ratios,
 use our micro-clearfix,
 and organize named z-index values
 with nesting for extra contextual control.
+
+.. _accoutrement-scale: /accoutrement-scale/
+
+.. code:: bash
+
+  npm install accoutrement-layout
 
 .. callmacro:: content.macros.j2#link_button
   :url: 'docs/'

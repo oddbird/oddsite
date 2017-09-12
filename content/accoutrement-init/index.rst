@@ -16,12 +16,12 @@ contributors:
   - author: 'miriam'
     role: 'creator'
 summary: |
-  We try to curate
-  only the most essential and low-impact normalization,
+  **Accoutrement-Init provides lightweight normalization**
   for cross-browser consistency
   at the start of every project.
   This is loosely based on the open-source
-  `Sanitize`_ and `Normalize`_ projects.
+  `Sanitize`_ and `Normalize`_ projects –
+  trimmed down to the most essential and least invasive rules.
 
   .. _Sanitize: http://github.com/10up/sanitize.css
   .. _Normalize: https://github.com/necolas/normalize.css
@@ -47,6 +47,10 @@ media, typography,
 and html5 elements –
 along with global ``border-box`` sizing,
 and other sensible defaults.
+
+.. code:: bash
+
+  npm install accoutrement-init
 
 .. callmacro:: content.macros.j2#link_button
   :url: 'docs/'

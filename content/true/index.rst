@@ -21,7 +21,7 @@ contributors:
   - author: 'jonny'
     role: 'contributor'
 summary: |
-  True is a full-featured unit-testing library for Sass developers.
+  **True is a full-featured unit-testing library for Sass**.
   The core functionality is written in pure SassScript,
   so it can be used anywhere Sass is compiled.
   Advanced features are available

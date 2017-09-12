@@ -16,10 +16,13 @@ contributors:
   - author: 'miriam'
     role: 'creator'
 summary: |
-  Organize all your colors into self-contained objects,
+  **Accoutrement-Color provides essential color-management utilities.**
+  Organize all your colors into self-contained palettes,
   document color relationships directly in the code,
   automate WCAG-appropriate contrast checking,
-  and generate color-palette documentation with Herman.
+  and generate color-palette documentation with `Herman`_.
+
+  .. _Herman: /herman/
 
 
 Accoutrement Color
@@ -48,6 +51,10 @@ Keep your colors in one place,
 generate palettes programatically,
 check contrast-ratios,
 and loop through colors easily.
+
+.. code:: bash
+
+  npm install accoutrement-color
 
 .. callmacro:: content.macros.j2#link_button
   :url: 'docs/'

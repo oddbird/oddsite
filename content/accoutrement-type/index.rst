@@ -16,6 +16,8 @@ contributors:
   - author: 'miriam'
     role: 'creator'
 summary: |
+  **Accoutrement-Type provides typography
+  and font-management utilities.**
   Gather all your webfont data into organized maps,
   access them by name,
   and easily import local font-files.
@@ -30,8 +32,8 @@ Accoutrement Type
 .. callmacro:: content.macros.j2#rst
   :tag: 'start'
 
-Color Palettes & Accessibility
-------------------------------
+Typography Helpers & Webfont Management
+---------------------------------------
 
 .. image:: https://badge.fury.io/js/accoutrement-type.svg
   :alt: 'npm package'
@@ -48,6 +50,10 @@ Fonts can be named and accessed by any alias.
 We also include a small set of utilities
 for managing type-accessability,
 and pseudo-elements with generated content.
+
+.. code:: bash
+
+  npm install accoutrement-type
 
 .. callmacro:: content.macros.j2#link_button
   :url: 'docs/'

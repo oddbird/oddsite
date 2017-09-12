@@ -16,11 +16,14 @@ contributors:
   - author: 'miriam'
     role: 'creator'
 summary: |
+  **Accoutrement-Scale provides size-management utilities.**
   Gather all your sizes into organized maps,
-  generate new sizes based on modular scales
+  generate new sizes based on modular scale ratios
   or arbitrary functions,
-  access them by name,
-  and automate scale previews in Herman.
+  access sizes by name,
+  and automate scale previews in `Herman`_.
+
+  .. _Herman: /herman/
 
 
 Accoutrement Scale
@@ -30,8 +33,8 @@ Accoutrement Scale
 .. callmacro:: content.macros.j2#rst
   :tag: 'start'
 
-Color Palettes & Accessibility
-------------------------------
+Organized Spacing &  Modular Scales
+-----------------------------------
 
 .. image:: https://badge.fury.io/js/accoutrement-scale.svg
   :alt: 'npm package'
@@ -47,6 +50,10 @@ with built-in unit-conversion,
 and ``calc()``-generating options.
 Integrate with `Herman`_ to generate scale-previews
 for an automated pattern library.
+
+.. code:: bash
+
+  npm install accoutrement-scale
 
 .. callmacro:: content.macros.j2#link_button
   :url: 'docs/'

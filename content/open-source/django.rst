@@ -13,7 +13,7 @@ contributors:
   - author: 'carl'
     role: 'core developer'
 summary: |
-  Django is a high-level Python Web framework
+  **Django is a high-level Python Web framework**
   that encourages rapid development and clean, pragmatic design.
   Built by experienced developers,
   it takes care of much of the hassle of Web development,
