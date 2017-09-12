@@ -73,7 +73,7 @@ built on SassDoc.
 - `Layout`_ provides layout utilities such as box-sizing,
   intrinsic ratios, z-index management, named media-queries, and a clearfix
 
-.. _Herman: /open-source/herman/
+.. _Herman: /herman/
 .. _Color: /accoutrement-color/
 .. _Init: /accoutrement-init/
 .. _Scale: /accoutrement-scale/

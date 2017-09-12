@@ -1,7 +1,7 @@
 public: yes
 location: open-source
 image:
-  - src: 'projects/accoutrement-legos.jpg'
+  - src: 'projects/herman.jpg'
 project:
   - name: 'Herman'
     tagline: 'Automated Style Guides'
@@ -12,7 +12,7 @@ contributors:
   - author: 'oddbird'
     role: 'creators'
 summary: |
-  An automatic style-guide generator,
+  **Herman is an automated pattern-library generator,**
   built on top of SassDoc,
   and designed to integrate with OddBird's
   `Sass Accoutrement`_ libraries
@@ -21,7 +21,7 @@ summary: |
   and documentation of UI patterns
   in both Sass and Nunjucks.
 
-  .. _Sass Accoutrement: /open-source/accoutrement/
+  .. _Sass Accoutrement: /accoutrement/
 
 
 Herman

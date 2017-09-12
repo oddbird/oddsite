@@ -97,8 +97,8 @@ along with the code you are testing in Sass:
 
   @import "<path/to/node_modules>/true/sass/true";
 
-**Define tests in Sass** with a BDD (`describe`/`it`)
-or TDD (`test-module`/`test`) syntax:
+**Define tests in Sass** with a BDD (``describe``/``it``)
+or TDD (``test-module``/``test``) syntax:
 
 .. code-block:: scss
 
