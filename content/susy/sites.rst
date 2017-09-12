@@ -147,6 +147,7 @@ Feel free to
 - `Fromagerie Amstutz <http://www.fromagerieamstutz.ch/>`_
 - `Trailpost Outdoors <https://www.trailpost.com/>`_
 - `Heyevent <http://heyevent.com>`_
+- `Teachoo <https://www.teachoo.com>`_
 
 .. callmacro:: content.macros.j2#rst
   :tag: 'end'
