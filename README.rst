@@ -57,7 +57,7 @@ system-wide path. If it doesn't, you may have set your ``PATH`` environment
 variable incorrectly in the last step.
 
 To **add** or **update** a front-end package, install the package with ``yarn
-add <package_name>@<version> --exact [--dev]``.
+add <package_name>@<version> [--dev]``.
 
 
 Install back-end dependencies
