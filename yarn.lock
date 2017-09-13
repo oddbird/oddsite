@@ -30,23 +30,23 @@ accepts@~1.3.3:
     mime-types "~2.1.16"
     negotiator "0.6.1"
 
-accoutrement-color@^2.2.0:
+accoutrement-color@2.2.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/accoutrement-color/-/accoutrement-color-2.2.0.tgz#c375e73f079f1c201c3f867fb5f69f9e795de8ed"
 
-accoutrement-init@^1.1.1:
+accoutrement-init@1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/accoutrement-init/-/accoutrement-init-1.1.1.tgz#6e0b6cc2f3f9ec77867d7298e64b3c76061d55d0"
 
-accoutrement-layout@^3.0.0:
+accoutrement-layout@3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/accoutrement-layout/-/accoutrement-layout-3.0.0.tgz#78927ccfd4c309eb35f4d8ec45805d61e4147a65"
 
-accoutrement-scale@^4.0.0:
+accoutrement-scale@4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/accoutrement-scale/-/accoutrement-scale-4.0.0.tgz#b01baea47ec7dbd4bd2091f29aba1f302694257a"
 
-accoutrement-type@^3.0.0:
+accoutrement-type@3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/accoutrement-type/-/accoutrement-type-3.0.0.tgz#a85747fcf609d7b30176f195edcb9f7a7dca8ffd"
 
@@ -7271,7 +7271,7 @@ sass-loader@^6.0.6:
     lodash.tail "^4.1.1"
     pify "^3.0.0"
 
-sass-true@^3.0.0:
+sass-true@3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/sass-true/-/sass-true-3.0.0.tgz#f266f4bf97b61d05e0599fc04f1d36f9382a809e"
   dependencies:
@@ -7937,6 +7937,10 @@ supports-color@^4.0.0, supports-color@^4.2.1, supports-color@^4.4.0:
   resolved "https://registry.yarnpkg.com/supports-color/-/supports-color-4.4.0.tgz#883f7ddabc165142b2a61427f3352ded195d1a3e"
   dependencies:
     has-flag "^2.0.0"
+
+susy@3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/susy/-/susy-3.0.1.tgz#d8f7942911a1e16ef84dfae2db296cd2058e8b26"
 
 svgo@^0.7.0:
   version "0.7.2"
