@@ -1,29 +1,19 @@
 {% import 'utility.macros.j2' as utility %}
-{% import 'birds/utility.macros.j2' as birds %}
+{% import 'community/event.macros.j2' as show %}
 
-{% macro show_talk(who) %}
-  {% set page = all_pages|filter_pages('bird', 'eq', who.author)|get_page %}
 
-  <li>
-    {{ birds.name_link(who.author, page) }}
-    {% if who.role %}[{{ who.role }}]{% endif %}
-    {% if who.title or who.slides %}
-      {{ utility.link_if(who.title|safe or 'slides', who.slides or who.video) }}
-    {% endif %}
-    {% if who.slides and who.video %}
-      ({{ utility.link_if('video', who.video) }})
-    {% endif %}
-  </li>
-{% endmacro %}
+{% set data = all_pages|filter_pages('slug', 'eq', module.slug)|get_page if module.slug else config %}
+{% set data = data.config if module.slug else data %}
+{% set events = data[module.data or 'events'] %}
 
-{% if config[module.data or 'events']|length %}
+{% if events|length %}
   <section data-module="conferences" {{ utility.attr_if('id', module.id) }}>
     <h2>
       {% set title = module.title or 'Conferences and Events' %}
       {{ utility.link_if(title|safe, module.title_url) }}
     </h2>
 
-    {% for event in config[module.data or 'events'] %}
+    {% for event in events %}
       <div>
         <h3>
           {{ utility.link_if(event.venue, event.url) }}
@@ -46,7 +36,7 @@
 
         <ul>
           {% for who in event.who %}
-            {{ show_talk(who) }}
+            {{ show.talk(who) }}
           {% endfor %}
         </ul>
       </div>
