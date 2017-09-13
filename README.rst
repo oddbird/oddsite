@@ -12,7 +12,7 @@ Development setup
 Install Node.js
 ~~~~~~~~~~~~~~~
 
-OddSite development requires `Node.js`_ 8.4.0 and `yarn`_ 0.27.5.
+OddSite development requires `Node.js`_ 8.5.0 and `yarn`_ 1.0.1.
 
 The right versions of Node and yarn are bundled in the OddSite repo and can be
 unpacked inside the repo (in the git-ignored ``node/`` directory), so you don't
@@ -57,7 +57,7 @@ system-wide path. If it doesn't, you may have set your ``PATH`` environment
 variable incorrectly in the last step.
 
 To **add** or **update** a front-end package, install the package with ``yarn
-add <package_name>@<version> --exact [--dev]``.
+add <package_name>@<version> [--dev]``.
 
 
 Install back-end dependencies

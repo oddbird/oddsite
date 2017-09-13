@@ -19,8 +19,8 @@ else
     arch=x86
 fi
 
-nodefile="../requirements/node-v8.4.0-${platform}-${arch}.tar.xz"
-yarnfile="../requirements/yarn-v0.27.5.tar.gz"
+nodefile="../requirements/node-v8.5.0-${platform}-${arch}.tar.xz"
+yarnfile="../requirements/yarn-v1.0.1.tar.gz"
 
 rm -rf ../node/*
 rm -rf ../node_modules/

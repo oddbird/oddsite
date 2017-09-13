@@ -86,8 +86,15 @@ anywhere, any time.
 
   npm install susy
 
+Susy is also available
+in the `CodeKit`_ editor,
+with 10% of your purchase going to `Black Girls Code`_
+when you follow the link from our site.
+
 .. _flexbox: https://css-tricks.com/snippets/css/a-guide-to-flexbox/
 .. _CSS Grid module: https://css-tricks.com/snippets/css/complete-guide-grid/
+.. _CodeKit: https://codekitapp.com/index.html?referrer=susy
+.. _Black Girls Code: http://blackgirlscode.com
 
 .. callmacro:: content.macros.j2#link_button
   :url: '/susy/docs/'

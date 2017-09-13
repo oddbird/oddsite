@@ -8,7 +8,7 @@ const devHosts = [
 
 window.isDevelopment = () => devHosts.indexOf(window.location.host) !== -1;
 
-window.isSpamReferral = function() {
+window.isSpamReferral = function isSpamReferral() {
   const list = spammers.split('\n');
   const currentReferral = document.referrer;
   if (currentReferral) {

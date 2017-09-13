@@ -1,3 +1,5 @@
+/* eslint-disable no-process-env */
+
 process.env.BROWSERSLIST_CONFIG = './browserslist';
 
 const AssetsPlugin = require('assets-webpack-plugin');
