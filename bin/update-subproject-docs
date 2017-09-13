@@ -1,7 +1,7 @@
 #!/bin/sh
 
 rm -rf ./content/susy/docs; cp -a ./node_modules/susy/docs ./content/susy/
-rm -rf ./content/true/docs; cp -a ./node_modules/sass-true/.sassdoc/ ./content/true/docs/
+rm -rf ./content/true/docs; cp -a ./node_modules/sass-true/docs ./content/true/
 # rm -rf ./content/herman/docs; cp -a ./node_modules/sassdoc-theme-herman/docs ./content/herman/
 rm -rf ./content/accoutrement-color/docs; cp -a ./node_modules/accoutrement-color/docs ./content/accoutrement-color/
 rm -rf ./content/accoutrement-init/docs; cp -a ./node_modules/accoutrement-init/docs ./content/accoutrement-init/

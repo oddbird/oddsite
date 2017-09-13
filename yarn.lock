@@ -30,25 +30,25 @@ accepts@~1.3.3:
     mime-types "~2.1.16"
     negotiator "0.6.1"
 
-accoutrement-color@2.2.0:
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/accoutrement-color/-/accoutrement-color-2.2.0.tgz#c375e73f079f1c201c3f867fb5f69f9e795de8ed"
+accoutrement-color@2.2.1:
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/accoutrement-color/-/accoutrement-color-2.2.1.tgz#42f75f33d0911579b4601e417dc2601d99b23a33"
 
-accoutrement-init@1.1.1:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/accoutrement-init/-/accoutrement-init-1.1.1.tgz#6e0b6cc2f3f9ec77867d7298e64b3c76061d55d0"
+accoutrement-init@1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/accoutrement-init/-/accoutrement-init-1.1.2.tgz#8a08467efef35be8a22b5fc51ea820402abc3c4c"
 
-accoutrement-layout@3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/accoutrement-layout/-/accoutrement-layout-3.0.0.tgz#78927ccfd4c309eb35f4d8ec45805d61e4147a65"
+accoutrement-layout@3.0.2:
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/accoutrement-layout/-/accoutrement-layout-3.0.2.tgz#ee3bd634f6a3a81d7af2d768f91b96c67e35cb2e"
 
-accoutrement-scale@4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/accoutrement-scale/-/accoutrement-scale-4.0.0.tgz#b01baea47ec7dbd4bd2091f29aba1f302694257a"
+accoutrement-scale@5.0.1:
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/accoutrement-scale/-/accoutrement-scale-5.0.1.tgz#2e05f1bcb173df1b4f16f0f172dbd2ffe0f2a4a8"
 
-accoutrement-type@3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/accoutrement-type/-/accoutrement-type-3.0.0.tgz#a85747fcf609d7b30176f195edcb9f7a7dca8ffd"
+accoutrement-type@3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/accoutrement-type/-/accoutrement-type-3.0.1.tgz#b9cab226640179a9af7df967f8456a0ab2ecd96b"
 
 acorn-dynamic-import@^2.0.0:
   version "2.0.2"
@@ -7271,9 +7271,9 @@ sass-loader@^6.0.6:
     lodash.tail "^4.1.1"
     pify "^3.0.0"
 
-sass-true@3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/sass-true/-/sass-true-3.0.0.tgz#f266f4bf97b61d05e0599fc04f1d36f9382a809e"
+sass-true@3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/sass-true/-/sass-true-3.0.1.tgz#d868e0b16f546c56dda42aab05780e41bd36d02b"
   dependencies:
     css "^2.2.1"
     css-selector-parser "^1.1.0"
