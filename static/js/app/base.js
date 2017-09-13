@@ -1,7 +1,7 @@
 export const initializeToggles = function() {
   const body = $('body');
 
-  body.on('toggle:close', '[data-toggle="button"]', function() {
+  body.on('toggle:close', '[data-toggle="button"]', function cb() {
     const id = $(this).attr('aria-controls');
     const target = $(`[data-target-id="${id}"]`);
     const openToggles = $(
@@ -11,7 +11,7 @@ export const initializeToggles = function() {
     target.trigger('target:close');
   });
 
-  body.on('toggle:open', '[data-toggle="button"]', function() {
+  body.on('toggle:open', '[data-toggle="button"]', function cb() {
     const toggle = $(this);
     const targetID = toggle.attr('aria-controls');
     const target = $(`[data-target-id="${targetID}"]`);
@@ -33,7 +33,7 @@ export const initializeToggles = function() {
     target.trigger('target:open');
   });
 
-  body.on('target:close', '[data-toggle="target"]', function(evt) {
+  body.on('target:close', '[data-toggle="target"]', function cb(evt) {
     const target = $(this);
     // Prevent event firing on multiple nested targets
     if ($(evt.target).is(target)) {
@@ -68,7 +68,7 @@ export const initializeToggles = function() {
     }
   };
 
-  body.on('target:open', '[data-toggle="target"]', function(evt) {
+  body.on('target:open', '[data-toggle="target"]', function cb(evt) {
     const target = $(this);
     // Prevent event firing on multiple nested targets
     if ($(evt.target).is(target)) {
@@ -81,7 +81,7 @@ export const initializeToggles = function() {
     }
   });
 
-  body.on('click', '[data-toggle="button"]', function(evt) {
+  body.on('click', '[data-toggle="button"]', function cb(evt) {
     evt.preventDefault();
     const toggle = $(this);
     if (toggle.attr('aria-pressed') === 'true') {
@@ -91,7 +91,7 @@ export const initializeToggles = function() {
     }
   });
 
-  body.on('click', '[data-toggle="close"]', function(evt) {
+  body.on('click', '[data-toggle="close"]', function cb(evt) {
     evt.preventDefault();
     const target = $(`[data-target-id="${$(this).attr('aria-controls')}"]`);
     closeTarget(target);

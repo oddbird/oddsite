@@ -1,3 +1,5 @@
+/* eslint-disable no-process-env */
+
 process.env.BABEL_ENV = 'test';
 
 const extend = require('extend');

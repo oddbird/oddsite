@@ -1,3 +1,5 @@
+const karmaConf = require('./karma.common.conf.js');
+
 module.exports = config => {
-  config.set(require('./karma.common.conf.js'));
+  config.set(karmaConf);
 };

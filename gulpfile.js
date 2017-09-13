@@ -1,3 +1,5 @@
+/* eslint-disable no-process-exit, global-require */
+
 const browserSync = require('browser-sync').create();
 const chalk = require('chalk');
 const del = require('del');
