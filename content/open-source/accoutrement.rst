@@ -27,9 +27,11 @@ are designed around the idea that code should be
 meaningful to both humans and machines –
 opening the door for automation,
 while improving or maintaining readability.
-These tools integrate with Herman,
-our automated living patter-library generator
+These tools integrate with `Herman`_,
+our automated living pattern-library generator
 built on SassDoc.
+
+.. _Herman: /herman/
 
 
 `Color Module`_

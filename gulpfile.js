@@ -258,7 +258,7 @@ const getServeOpts = dir => ({
 
 const getBsCb = cb => (err, bs) => {
   bs.addMiddleware('*', (req, res) => {
-    res.writeHead(302, { location: '404.html' });
+    res.writeHead(302, { location: '/404.html' });
     res.end();
   });
   cb(err);

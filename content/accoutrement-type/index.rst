@@ -44,11 +44,11 @@ Typography Helpers & Webfont Management
   :target: https://travis-ci.org/oddbird/accoutrement-type
 
 Organize all your webfont data in organized maps,
-to automate local font-file imports,
+automate local font-file imports,
 and generate full font-specimens with `Herman`_.
 Fonts can be named and accessed by any alias.
 We also include a small set of utilities
-for managing type-accessability,
+for managing type-accessibility
 and pseudo-elements with generated content.
 
 .. code:: bash
@@ -70,11 +70,11 @@ meaningful to both humans and machines –
 opening the door for automation,
 while maintaining and improving readability.
 These tools also integrate with `Herman`_,
-our automated living patter-library generator
+our automated living pattern-library generator
 built on SassDoc.
 
 - `Color`_ helps manage color-palettes and color-accessibility patterns
-- `Init`_ provides light-weight browser-normalization.
+- `Init`_ provides lightweight browser-normalization.
 - `Scale`_ helps manage sizing patterns like font-scales, margins, and gutters
 - `Type`_ provides webfont management tools, and other typography helpers
 - `Layout`_ provides layout utilities such as box-sizing,

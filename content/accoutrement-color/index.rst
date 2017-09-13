@@ -48,7 +48,7 @@ we can improve both organization and automation –
 making our color-palettes meaningful to
 both developers and the Sass language.
 Keep your colors in one place,
-generate palettes programatically,
+generate palettes programmatically,
 check contrast-ratios,
 and loop through colors easily.
 
@@ -71,11 +71,11 @@ meaningful to both humans and machines –
 opening the door for automation,
 while maintaining and improving readability.
 These tools also integrate with `Herman`_,
-our automated living patter-library generator
+our automated living pattern-library generator
 built on SassDoc.
 
 - `Color`_ helps manage color-palettes and color-accessibility patterns
-- `Init`_ provides light-weight browser-normalization.
+- `Init`_ provides lightweight browser-normalization.
 - `Scale`_ helps manage sizing patterns like font-scales, margins, and gutters
 - `Type`_ provides webfont management tools, and other typography helpers
 - `Layout`_ provides layout utilities such as box-sizing,
