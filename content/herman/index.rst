@@ -20,7 +20,7 @@ summary: |
   for quick theme configuration,
   color palettes, font specimens, icon libraries,
   and documentation of UI patterns
-  in both Sass and Nunjucks.
+  in both CSS and HTML.
 
   .. _Sass Accoutrement: /open-source/accoutrement/
 
@@ -44,10 +44,10 @@ Make Documentation the Default
   :target: https://circleci.com/gh/oddbird/sassdoc-theme-herman
 
 Pattern libraries and style guides help
-keep the code and style of your site consistent,
+keep the code and design of your site consistent,
 while facilitating communication between designers and developers.
-But documentation can be difficult,
-especially if it lives outside the source code being documented –
+But documentation can be difficult to maintain,
+especially if it lives too far from the code –
 and there's nothing worse than an out-of-date pattern library.
 Herman is here to help make documentation simple,
 keeping it inline with the source code of the project,
@@ -63,32 +63,8 @@ and updating pattern libraries on-the-fly.
 
   Read The Docs
 
-
-Accoutrement Integration
-------------------------
-
-OddBird's Accoutrement toolkits
-are designed around the idea that code should be
-meaningful to both humans and machines –
-opening the door for automation,
-while maintaining and improving readability.
-These tools also integrate with Herman,
-our automated living pattern-library generator
-built on SassDoc.
-
-- `Color`_ helps manage color-palettes and color-accessibility patterns
-- `Init`_ provides lightweight browser-normalization
-- `Scale`_ helps manage sizing patterns like font-scales, margins, and gutters
-- `Type`_ provides webfont management tools, and other typography helpers
-- `Layout`_ provides layout utilities such as box-sizing,
-  intrinsic ratios, z-index management, named media-queries, and a clearfix
-
-.. _Color: /accoutrement-color/
-.. _Init: /accoutrement-init/
-.. _Scale: /accoutrement-scale/
-.. _Type: /accoutrement-type/
-.. _Layout: /accoutrement-layout/
-
 .. callmacro:: content.macros.j2#rst
   :tag: 'end'
 .. ---------------------------------
+
+.. callmacro:: content.macros.j2#accoutrement
