@@ -23,7 +23,7 @@ accoutrement_modules:
   - title: 'Init'
     url: '/accoutrement-init/'
     icon: 'accoutrement_init'
-    text: 'Lightweight, un-opinionated browser-normalization.
+    text: 'Lightweight browser normalization.
           This is the only Accoutrement library
           with direct CSS output when imported.'
   - title: 'Color'
