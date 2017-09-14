@@ -63,33 +63,8 @@ with nesting for extra contextual control.
 
   Read The Docs
 
-
-More Accoutrement
------------------
-
-OddBird's Accoutrement toolkits
-are designed around the idea that code should be
-meaningful to both humans and machines –
-opening the door for automation,
-while maintaining and improving readability.
-These tools also integrate with `Herman`_,
-our automated living pattern-library generator
-built on SassDoc.
-
-- `Color`_ helps manage color-palettes and color-accessibility patterns
-- `Init`_ provides lightweight browser-normalization
-- `Scale`_ helps manage sizing patterns like font-scales, margins, and gutters
-- `Type`_ provides webfont management tools, and other typography helpers
-- `Layout`_ provides layout utilities such as box-sizing,
-  intrinsic ratios, z-index management, named media-queries, and a clearfix
-
-.. _Herman: /herman/
-.. _Color: /accoutrement-color/
-.. _Init: /accoutrement-init/
-.. _Scale: /accoutrement-scale/
-.. _Type: /accoutrement-type/
-.. _Layout: /accoutrement-layout/
-
 .. callmacro:: content.macros.j2#rst
   :tag: 'end'
 .. ---------------------------------
+
+.. callmacro:: content.macros.j2#accoutrement

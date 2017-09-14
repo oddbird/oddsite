@@ -4,18 +4,18 @@
 .icon-blocks-container {
   @include center('medium-page');
   @include grid;
+}
 
-  h2 {
-    @supports not (display: grid) {
-      @include center('full-content');
-    }
+.icon-block-header {
+  @supports not (display: grid) {
+    @include center('full-content');
+  }
 
-    @supports (display: grid) {
-      grid-column: col1-start / -1;
+  @supports (display: grid) {
+    grid-column: col1-start / -1;
 
-      @include above('medium-page') {
-        grid-column: col3-start / span 1;
-      }
+    @include above('medium-page') {
+      grid-column: col3-start / span 1;
     }
   }
 }
@@ -34,6 +34,7 @@
 }
 
 .icon-block {
+  color: color('icon-block');
   margin-top: 1.5rem; // match margin from h2
 
   @supports not (display: grid) {
@@ -54,8 +55,14 @@
     }
   }
 
+  a {
+    #{$link},
+    #{$focus} {
+      background: none;
+    }
+  }
+
   [data-icon] {
-    color: color('icon-block');
     height: calc(2.5rem + 2vw);
     width: calc(2.5rem + 2vw);
   }

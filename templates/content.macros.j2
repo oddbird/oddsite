@@ -38,28 +38,52 @@
   Icon Blocks
   -----------
 #}
-{% macro icon_block(title, slug, data) %}
+{% macro icon_block(title, slug, data, intro=none) %}
   {% set page = all_pages|filter_pages('slug', 'eq', slug)|get_page %}
   {% set data = page.config[data] %}
+  {% set intro = page.config[intro] if page.config[intro] else intro %}
+  {% set intro = page.render_summary() if (intro == 'summary') else intro %}
 
   <section class="icon-blocks-container">
-    <h2>{{ title|safe }}</h2>
+    <header class="icon-block-header">
+      <h2>{{ title|safe }}</h2>
+
+      {% if intro %}
+        {{ intro|safe }}
+      {% endif %}
+    </header>
 
     {% for item in data %}
-      <div class="icon-blocks">
-        <div class="icon-block">
-          {{ utility.icon(item.icon) }}
-        </div>
-        <div class="icon-block-text">
-          {% if item.title %}
-            <h3>{{ item.title|safe }}</h3>
-          {% endif %}
-
-          <p>{{ item.text|safe }}</p>
-        </div>
-      </div>
+      {{ icon_block_item(item) }}
     {% endfor %}
   </section>
+{% endmacro %}
+
+
+{% macro icon_block_item(item) %}
+  <div class="icon-blocks">
+    <div class="icon-block">
+      {% set icon = utility.icon(item.icon) %}
+      {{ utility.link_if(icon|safe, item.url) }}
+    </div>
+    <div class="icon-block-text">
+      {% if item.title %}
+        <h3>{{ utility.link_if(item.title|safe, item.url) }}</h3>
+      {% endif %}
+
+      <p>{{ item.text|safe }}</p>
+    </div>
+  </div>
+{% endmacro %}
+
+
+{% macro accoutrement() %}
+  {{ icon_block(
+    title='Accoutrement Modules',
+    slug='open-source/accoutrement',
+    data='accoutrement_modules',
+    intro='accoutrement_intro'
+  ) }}
 {% endmacro %}
 
 
