@@ -7,7 +7,7 @@
 /// Freight Text Pro is the primary font of the OddBird brand.
 /// @group fonts
 /// @preview font-specimen; key: body; show: regular, italic, bold, bold italic
-/// @link http://oddbird.net/accoutrement-type/sassdoc/
+/// @link http://oddbird.net/accoutrement-type/docs/
 ///   Accoutrement Type
 $body-font: (
   'name': 'freight-text-pro',
@@ -15,7 +15,7 @@ $body-font: (
   'source': 'https://typekit.com/fonts/freight-text',
 );
 
-@include herman-add-font('body', $body-font);
+@include accoutrement-add('font', 'body', $body-font);
 
 
 // Alt Font
@@ -24,7 +24,7 @@ $body-font: (
 /// still in the same family as our primary font.
 /// @group fonts
 /// @preview font-specimen; key: alt; show: regular, italic, bold, bold italic
-/// @link http://oddbird.net/accoutrement-type/sassdoc/
+/// @link http://oddbird.net/accoutrement-type/docs/
 ///   Accoutrement Type
 $alt-font: (
   'name': 'freight-sans-pro',
@@ -32,7 +32,7 @@ $alt-font: (
   'source': 'https://typekit.com/fonts/freight-sans',
 );
 
-@include herman-add-font('alt', $alt-font);
+@include accoutrement-add('font', 'alt', $alt-font);
 
 
 // Code Font
@@ -41,7 +41,7 @@ $alt-font: (
 /// for code samples across the site.
 /// @group fonts
 /// @preview font-specimen; key: code; show: regular, italic, bold, bold italic
-/// @link http://oddbird.net/accoutrement-type/sassdoc/
+/// @link http://oddbird.net/accoutrement-type/docs/
 ///   Accoutrement Type
 $code-font: (
   'name': 'SourceCodePro',
@@ -49,4 +49,4 @@ $code-font: (
   'source': 'https://typekit.com/fonts/source-code-pro',
 );
 
-@include herman-add-font('code', $code-font);
+@include accoutrement-add('font', 'code', $code-font);

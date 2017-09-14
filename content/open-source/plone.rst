@@ -13,7 +13,7 @@ contributors:
   - author: 'david'
     role: 'core developer'
 summary: |
-  Plone is a mature content management platform
+  **Plone is a mature content management platform**
   written in Python
   and developed by an international open source community.
   It has particular strengths

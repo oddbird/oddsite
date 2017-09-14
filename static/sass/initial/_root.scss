@@ -9,3 +9,8 @@
   background-repeat: no-repeat;
   background-size: calc(#{size('spacer') * 2} + 16vw) auto;
 }
+
+// this could be a candidate for accoutrement-init…
+object {
+  vertical-align: middle;
+}

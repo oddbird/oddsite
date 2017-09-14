@@ -9,10 +9,10 @@ after:
     slugs:
       - 'susy/index'
       - 'open-source/django'
-      - 'open-source/plone'
-      - 'open-source/herman'
-      - 'open-source/accoutrement'
       - 'true/index'
+      - 'open-source/plone'
+      - 'herman/index'
+      - 'open-source/accoutrement'
       - 'open-source/nunjucks'
       - 'open-source/virtualenv'
       - 'open-source/pip'

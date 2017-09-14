@@ -382,9 +382,9 @@ style guide generator
 we'll develop later.
 
 .. _Accoutrement: /open-source/accoutrement/
-.. _color: http://oddbird.net/accoutrement-color/sassdoc/
-.. _scale: http://oddbird.net/accoutrement-scale/sassdoc/
-.. _type: http://oddbird.net/accoutrement-type/sassdoc/
+.. _color: /accoutrement-color/docs/
+.. _scale: /accoutrement-scale/docs/
+.. _type: /accoutrement-type/docs/
 
 
 The Theming Option
