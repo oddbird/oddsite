@@ -33,8 +33,8 @@ Accoutrement Scale
 .. callmacro:: content.macros.j2#rst
   :tag: 'start'
 
-Organized Spacing &  Modular Scales
------------------------------------
+Organized Spacing & Modular Scales
+----------------------------------
 
 .. image:: https://badge.fury.io/js/accoutrement-scale.svg
   :alt: 'npm package'
