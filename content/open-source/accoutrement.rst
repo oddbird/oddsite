@@ -11,7 +11,8 @@ project:
 contributors:
   - author: 'miriam'
     role: 'creator'
-accoutrement_intro: 'OddBird’s Accoutrement toolkits
+accoutrement_intro: 'OddBird’s
+  <a href="/open-source/accoutrement/">Accoutrement</a> toolkits
   are designed around the idea that code should be
   meaningful to both humans and machines –
   opening the door for automation,

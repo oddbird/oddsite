@@ -51,6 +51,8 @@ We also include a small set of utilities
 for managing type-accessibility
 and pseudo-elements with generated content.
 
+.. _Herman: /herman/
+
 .. code:: bash
 
   npm install accoutrement-type

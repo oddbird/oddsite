@@ -51,6 +51,8 @@ and ``calc()``-generating options.
 Integrate with `Herman`_ to generate scale-previews
 for an automated pattern library.
 
+.. _Herman: /herman/
+
 .. code:: bash
 
   npm install accoutrement-scale
