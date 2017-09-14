@@ -51,8 +51,8 @@ accoutrement_modules:
   - title: 'Layout'
     url: '/accoutrement-layout/'
     icon: 'accoutrement_layout'
-    text: 'Layout utilities for
-          media-queries, positioning,
+    text: 'Layout utilities including
+          named media-queries, shorthand positioning,
           fluid aspect-ratios, box-sizing,
           and float-clearing.'
 summary: |
