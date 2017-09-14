@@ -13,7 +13,7 @@ $modular-scale: (
   'text-ratio': 1.4,
 );
 
-@include herman-add-ratios('modular-scale', $modular-scale);
+@include accoutrement-add('ratios', 'modular-scale', $modular-scale);
 
 
 // Text Sizes
@@ -31,7 +31,7 @@ $text-sizes: (
   'social': 'root' ('text-ratio': -0.25),
 );
 
-@include herman-add-sizes('text-sizes', $text-sizes);
+@include accoutrement-add('sizes', 'text-sizes', $text-sizes);
 
 
 // Spacing Sizes
@@ -52,7 +52,7 @@ $spacing-sizes: (
   'pixel': 1px,
 );
 
-@include herman-add-sizes('spacing-sizes', $spacing-sizes);
+@include accoutrement-add('sizes', 'spacing-sizes', $spacing-sizes);
 
 
 // Pattern Sizes
@@ -78,7 +78,7 @@ $pattern-sizes: (
   'menu-more-space': 'menu-more' ('multiple': 0.25),
 );
 
-@include herman-add-sizes('pattern-sizes', $pattern-sizes);
+@include accoutrement-add('sizes', 'pattern-sizes', $pattern-sizes);
 
 
 // Page Sizes
@@ -94,7 +94,7 @@ $page-sizes: (
   'large-page': 75rem,
 );
 
-@include herman-add-sizes('page-sizes', $page-sizes);
+@include accoutrement-add('sizes', 'page-sizes', $page-sizes);
 
 
 // Column Sizes
@@ -113,4 +113,4 @@ $column-sizes: (
   'wide-column': 90%,
 );
 
-@include herman-add-sizes('column-sizes', $column-sizes);
+@include accoutrement-add('sizes', 'column-sizes', $column-sizes);

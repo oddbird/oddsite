@@ -4,4 +4,4 @@
 @import '~sass-json-export/stylesheets/sass-json-export';
 @import 'config/manifest';
 
-@include json-encode($json, comment);
+@include json-encode($herman, comment);

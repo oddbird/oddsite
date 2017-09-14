@@ -15,7 +15,7 @@ $brand-colors: (
   'brand-pink': hsl(330, 100%, 45%),
 );
 
-@include herman-add-colors('brand-colors', $brand-colors);
+@include accoutrement-add('colors', 'brand-colors', $brand-colors);
 
 
 // Contrast Colors
@@ -32,7 +32,7 @@ $contrast-colors: (
   'contrast-dark': 'brand-blue' ('shade': 50%),
 );
 
-@include herman-add-colors('contrast-colors', $contrast-colors);
+@include accoutrement-add('colors', 'contrast-colors', $contrast-colors);
 
 
 // Pattern Colors
@@ -68,7 +68,7 @@ $pattern-colors: (
   'icon-block': 'brand-orange',
 );
 
-@include herman-add-colors('pattern-colors', $pattern-colors);
+@include accoutrement-add('colors', 'pattern-colors', $pattern-colors);
 
 
 // Code Highlighting Colors
@@ -150,4 +150,4 @@ $highlight-colors: (
   'code-gen-subhead': hsl(165, 58%, 42%),
 );
 
-@include herman-add-colors('highlight-colors', $highlight-colors);
+@include accoutrement-add('colors', 'highlight-colors', $highlight-colors);
