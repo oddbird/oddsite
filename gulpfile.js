@@ -128,7 +128,7 @@ const sasslintTask = (src, failOnError, log) => {
 
 gulp.task('default', ['eslint', 'sasslint', 'test']);
 gulp.task('dev', ['eslint', 'sasslint', 'sasstest', 'serve']);
-gulp.task('prod', ['webpack-prod']);
+gulp.task('prod', ['webpack-prod', 'update-subproject-docs']);
 
 gulp.task('serve', ['watch', 'runserver']);
 
@@ -333,6 +333,10 @@ gulp.task('prod-clean', cb => {
 
 gulp.task('dev-styleguide-clean', cb => {
   fs.emptyDir(`${paths.DIST_DIR}styleguide`, cb);
+});
+
+gulp.task('update-subproject-docs', cb => {
+  spawnTask('bin/update-subproject-docs', [], cb);
 });
 
 // @@@ Sassdoc does not properly update the st_mtime (modified time) on
