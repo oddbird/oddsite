@@ -71,7 +71,7 @@
     "sass-loader": "^6.0.6",
     "sass-true": "^3.0.0",
     "sassdoc": "^2.3.0",
-    "sassdoc-theme-herman": "1.0.0-alpha.9",
+    "sassdoc-theme-herman": "1.0.0-alpha.10",
     "sinon": "^3.2.1",
     "sinon-chai": "^2.13.0",
     "touch": "^3.1.0",
