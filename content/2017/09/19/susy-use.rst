@@ -2,7 +2,7 @@ public: yes
 tags: [Susy, Susy3, CSS, Sass, Grids, Code]
 author: miriam
 image:
-  - src: 'projects/susy.jpg'
+  - src: 'projects/susy.png'
 headline:
   - type: 'Code Snippets'
     tagline: 'Practical media helpers for Susy3'
@@ -54,9 +54,10 @@ We can pair that with a media-query
 to define the proper settings for a particular screen:
 
 .. code:: scss
+
   $medium: (
-    columns: susy-repeat(8),
-    gutters: 1em,
+    'columns': susy-repeat(8),
+    'gutters': 1em,
   );
 
   // any code out here uses the global $susy settings…
@@ -102,11 +103,12 @@ Each breakpoint will need a map of Susy settings,
 as well as the media-query values (e.g. `min-width: 30em`):
 
 .. code:: scss
+
   // it is safe to add non-Susy data to Susy maps
   $medium: (
-    min-width: 30em,
-    columns: susy-repeat(8),
-    gutters: 1em,
+    'min-width': 30em,
+    'columns': susy-repeat(8),
+    'gutters': 1em,
   );
 
   // any code out here uses the global $susy settings…
@@ -169,5 +171,5 @@ or `contact us`_ online.
 We're excited to hear from you!
 
 .. _Twitter: https://twitter.com/oddbird
-.. _public Slack channel: http://friends.oddbird.net
+.. _public Slack chat: http://friends.oddbird.net
 .. _contact us: /contact/
