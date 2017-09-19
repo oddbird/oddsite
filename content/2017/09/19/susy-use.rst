@@ -40,8 +40,13 @@ We'd have to use `CSS variables to achieve that`_.
 In Sass
 we have to apply the *results* of our variable-changes explicitly,
 anywhere we want them used.
-Only the functions given new settings
-will generate CSS output based on those settings.
+Rather than simply setting a new variable at our desired query,
+we also have to explicitly call any grid-functions
+like ``span`` or ``gutter``
+that will generate new output with the new settings.
+If we set width using ``span``,
+and expect that width to change,
+we'll have to call ``span`` again to get the new output.
 
 
 Susy-Use Mixin
