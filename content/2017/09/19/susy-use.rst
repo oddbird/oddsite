@@ -20,7 +20,7 @@ summary: |
 Susy3 Media-Queries & Grid Settings
 ===================================
 
-Since Sass in not aware of the browser or DOM,
+Since Sass is not aware of the browser or DOM,
 there is no way to change Susy settings in the browser dynamically –
 where the adjusted variables would apply automatically
 at screen-widths.
@@ -96,11 +96,11 @@ so we'll have to add one:
 Susy-At Mixin
 -------------
 
-If you want to get more explicit
+If you want to be more explicit
 about linking specific breakpoints to specific settings,
 we can write another mixin to associate the two.
 Each breakpoint will need a map of Susy settings,
-as well as the media-query values (e.g. `min-width: 30em`):
+as well as the media-query values (e.g. ``min-width: 30em``):
 
 .. code:: scss
 
@@ -161,12 +161,12 @@ but we recommend playing around,
 and making it fit your own project and processes.
 
 If you have more snippets that you've written for Susy3,
-send them are way!
+send them our way!
 We love to see how other people are using these tools,
 and we're always happy to share the shortcuts you find most useful.
 
 Follow us on `Twitter`_, join our `public Slack chat`_
-(there's even a #susy channel),
+(there's even a **#susy** channel),
 or `contact us`_ online.
 We're excited to hear from you!
 
