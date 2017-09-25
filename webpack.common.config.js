@@ -106,7 +106,6 @@ SassdocPlugin.prototype.apply = compiler => {
           'accoutrement-layout',
           'accoutrement-scale',
           'accoutrement-type',
-          'sassdoc-theme-herman',
         ],
       },
       shortcutIcon: path.join(
