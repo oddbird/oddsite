@@ -31,12 +31,12 @@ with CSS variables,
 where the change can be scoped to DOM states,
 like viewport width:
 
-.. code:: scss
+.. code:: css
 
-  // ideal setup, using CSS variables
+  /* ideal setup, using CSS variables */
   @media (min-width: 30em) {
-    // the new settings will apply to all elements
-    // above a viewport width of 30em
+    /* the new settings will apply to all elements */
+    /* above a viewport width of 30em */
     :root { --columns: 5; }
   }
 
