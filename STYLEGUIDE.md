@@ -1,5 +1,5 @@
-Style Guide *&* Pattern Library
-===============================
+Style Guide & Pattern Library
+=============================
 
 This is the living style guide for
 [OddSite](/)
@@ -7,13 +7,14 @@ and associated OddBird branding materials.
 
 It is still in development,
 using OddBird's
-[Accoutrement](/open-source/accoutrement/) and
-[Herman](https://github.com/oddbird/sassdoc-theme-herman/)
+[Accoutrement](/accoutrement/) and
+[Herman](/herman/)
 open source toolkits
 to automate as much living documentation as possible.
 
+
 Writing Content
-===============
+---------------
 
 When creating content it is important to stay consistent. Review a
 [sample blog post](/docs/sample), and keep in mind the following guidelines:

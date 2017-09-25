@@ -7,7 +7,7 @@
     "yarn": "1.0.1"
   },
   "devDependencies": {
-    "accoutrement-color": "2.2.1",
+    "accoutrement-color": "2.2.2",
     "accoutrement-init": "1.1.2",
     "accoutrement-layout": "3.0.2",
     "accoutrement-scale": "5.0.1",
@@ -70,7 +70,7 @@
     "sass-loader": "^6.0.6",
     "sass-true": "3.0.1",
     "sassdoc": "^2.3.0",
-    "sassdoc-theme-herman": "1.0.0-alpha.10",
+    "sassdoc-theme-herman": "1.0.0-alpha.13",
     "sinon": "^3.2.1",
     "sinon-chai": "^2.13.0",
     "susy": "3.0.1",

@@ -78,6 +78,15 @@ SassdocPlugin.prototype.apply = compiler => {
       theme: 'herman',
       homepage: '/',
       descriptionPath: path.join(__dirname, 'STYLEGUIDE.md'),
+      groups: {
+        'config-color': 'Color Palettes',
+        'config-fonts': 'Webfonts',
+        'config-layout': 'Layout',
+        'config-scale': 'Sizes & Spacing',
+        icons: 'Icons',
+        sections: 'Page Sections',
+        typography: 'Typography',
+      },
       herman: {
         customCSS: cssPath,
         customHead:
@@ -85,6 +94,7 @@ SassdocPlugin.prototype.apply = compiler => {
           '<script>try{Typekit.load({ async: true });}catch(e){}</script>',
         minifiedIcons: 'templates/_icons.svg',
         templatepath: path.join(__dirname, 'templates'),
+        displayColors: ['hex', 'hsl'],
         sass: {
           jsonfile: jsonPath,
           includepaths: [path.join(__dirname, 'static/sass')],
@@ -92,8 +102,11 @@ SassdocPlugin.prototype.apply = compiler => {
         },
         subprojects: [
           'accoutrement-color',
+          'accoutrement-init',
+          'accoutrement-layout',
           'accoutrement-scale',
           'accoutrement-type',
+          'sassdoc-theme-herman',
         ],
       },
       shortcutIcon: path.join(
@@ -105,7 +118,6 @@ SassdocPlugin.prototype.apply = compiler => {
         'favicon.ico',
       ),
       display: { access: ['public'] },
-      groups: { undefined: 'general' },
     }).then(
       () => {
         /* eslint-disable no-console */
