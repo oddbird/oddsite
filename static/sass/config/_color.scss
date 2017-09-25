@@ -6,7 +6,7 @@
 // ------------
 /// The brand is defined by our primary brand blue,
 /// along with secondary pink and orange base colors.
-/// @group color
+/// @group config-color
 /// @preview color-palette
 /// @type Map
 $brand-colors: (
@@ -22,7 +22,7 @@ $brand-colors: (
 // ---------------
 /// The light and dark contrast colors act as
 /// the high and low range of our palette.
-/// @group color
+/// @group config-color
 /// @preview color-palette
 /// @type Map
 /// @link http://oddbird.net/accoutrement-color/docs/
@@ -38,7 +38,7 @@ $contrast-colors: (
 // Pattern Colors
 // --------------
 /// Re-usable color patterns for application in different components.
-/// @group color
+/// @group config-color
 /// @preview color-palette
 /// @type Map
 $pattern-colors: (
@@ -74,7 +74,7 @@ $pattern-colors: (
 // Code Highlighting Colors
 // ------------------------
 /// Colors used with pygments
-/// @group color
+/// @group config-color
 /// @preview color-palette
 /// @type Map
 $highlight-colors: (
