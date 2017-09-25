@@ -220,8 +220,8 @@ but here's my first attempt
   }
 
 
-Adjust to your liking
----------------------
+Adjust for Your Project
+-----------------------
 
 Since this is not core Susy code,
 we can change the syntax however we like
@@ -246,8 +246,9 @@ rather than storing them inside the same map:
 
 That's a bit more flexible –
 allowing you to associate any breakpoint
-with ny configuration on-the-fly –
+with any layout configuration on-the-fly –
 but I'm not sure that flexibility is very useful.
+In most cases, the two should remain connected.
 
 Your milage will almost certainly vary,
 so we recommend experimenting
