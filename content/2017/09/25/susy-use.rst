@@ -2,7 +2,7 @@ public: yes
 tags: [Susy, Susy3, CSS, Sass, Grids, Code]
 author: miriam
 image:
-  - src: 'projects/susy.png'
+  - src: 'blog/2017/susy3/media.jpg'
 headline:
   - type: 'Code Snippets'
     tagline: 'Practical media helpers for Susy3'
@@ -17,8 +17,8 @@ summary: |
   working with Susy across different media queries.
 
 
-Susy3 Media-Queries & Grid Settings
-===================================
+Media Queries & Grid Settings
+=============================
 
 CSS Variables & Media Queries
 -----------------------------
