@@ -25,24 +25,24 @@ CSS Variables & Media Queries
 
 The ideal combination of media queries and grid-changes
 would automatically apply changed variables
-at different screen-widths.
+at different screen widths.
 We can actually see that ideal in action
 with CSS variables,
 where the change can be scoped to DOM states,
-like viewport-width:
+like viewport width:
 
-.. code:: css
+.. code:: scss
 
-  /* ideal setup, using CSS variables */
+  // ideal setup, using CSS variables
   @media (min-width: 30em) {
-    /* the new settings will apply to all elements */
-    /* above a viewport width of 30em */
+    // the new settings will apply to all elements
+    // above a viewport width of 30em
     :root { --columns: 5; }
   }
 
 Because CSS variables inherit in the DOM
 like any other CSS property,
-the effects of a variable-change propogate out
+the effects of a variable-change propagate out
 to each grid element.
 Here's a more complete example of
 CSS-Variable grids and breakpoints in action:
@@ -60,13 +60,13 @@ Sass Limitations
 
 In Sass,
 variables inherit based on source order rather than DOM structure.
-That means variables are not able to propogate
+That means variables are not able to propagate
 based on a DOM concept like viewport width.
 We have to apply the *results* of our variable-changes explicitly
 anywhere we want them used.
 
 Rather than simply setting a new variable at our desired query,
-we also have to explicitly call any grid-functions –
+we also have to explicitly call any grid functions –
 like ``span`` or ``gutter`` –
 that will generate new output with those new settings.
 We have to reset the variables *and* redo the math.
@@ -74,7 +74,7 @@ If we set width earlier using ``span``
 and expect that width to change,
 we'll have to call ``span`` again to get the new output:
 
-.. code:: css
+.. code:: scss
 
   // Initial Sass Layout
   $susy: (
@@ -87,7 +87,7 @@ we'll have to call ``span`` again to get the new output:
     padding: gutter(); // 0.5rem
   }
 
-  // Sass Media-Query
+  // Sass Media Query
   @media (min-width: 30em) {
     // We have to change the global variable
     $susy: (
@@ -95,7 +95,7 @@ we'll have to call ``span`` again to get the new output:
       'gutters': 1rem,
     );
 
-    // And explicitly re-do all the math…
+    // And explicitly redo all the math…
     .item {
       width: span(2); // 2 of 6
       padding: gutter(); // 1rem
@@ -235,9 +235,9 @@ and add an argument for cleanly overriding
 
   @mixin with-layout($config, $clean: false) { /* … */ }
 
-For the Susy2 media-query syntax,
+For the Susy2 media query syntax,
 we would rename ``susy-at`` to ``susy-breakpoint``
-and separing the media-query from the Susy settings,
+and separate the media query from the Susy settings,
 rather than storing them inside the same map:
 
 .. code:: scss
@@ -250,7 +250,7 @@ with any layout configuration on-the-fly –
 but I'm not sure that flexibility is very useful.
 In most cases, the two should remain connected.
 
-Your milage will almost certainly vary,
+Your mileage will almost certainly vary,
 so we recommend experimenting
 to find an approach that works for you.
 
