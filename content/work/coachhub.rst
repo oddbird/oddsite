@@ -4,6 +4,7 @@ pageclasses: work-layout
 grid_template: true
 image:
   - src: 'projects/coachhub.jpg'
+logo: 'coachhub'
 client:
   - name: 'ORCAS'
     url: 'http://orcasinc.com'
@@ -24,11 +25,24 @@ tasks:
   - Project Architecture
   - User Experience Design
   - WCAG & HIPPA Compliant
+brag: |
+  We help health-coaching experts at ORCAS
+  develop their unique web platform –
+  now used by the **US Military**,
+  **Coast Guard**,
+  and **National Institutes of Health** –
+  leading ORCAS to a **successful acquisition**.
 quotes:
   - text: 'OddBird really changed my thinking about
-      how successful outsourcing software development can be.'
+      how successful remote development can be –
+      like working with an in-house team,
+      complete and ready to go.'
     name: 'Sara Taillon'
-    role: 'Chief Technical Officer at ORCAS'
+    role: 'CTO at ORCAS'
+  - text: 'I’m glad OddBird never negotiated the 100% test coverage.
+      Maintainability has been fantastic!'
+    name: 'Sara Taillon'
+    role: 'CTO at ORCAS'
 planning:
   - title: 'App Goals'
     icon: 'map'

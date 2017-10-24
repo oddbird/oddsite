@@ -4,38 +4,49 @@ grid_template: true
 image:
   - src: 'pages/faces-hero.jpg'
 headline:
-  - title: 'You have a brilliant idea.'
-    tagline: 'We’ll make it fly.'
-    type: 'Oddly Human Design & Development'
+  - title: 'We help you meet your goals'
+    tagline: 'Integrated strategy, design, & development'
+    type: 'We don’t just write the code…'
 summary: |
-  **Technology is only useful
-  when it solves real problems for real people.**
-  As your partner,
-  we’ll help find those opportunities –
-  providing `web application design and development`_,
-  with a human focus from start to finish.
+  **As an integrated team,
+  we provide the full range of**
+  `web application strategy, design, and development`_ –
+  focusing every decision around
+  the goals and needs of your users,
+  so that business strategy and user-experience
+  align for long-term success.
+
+  .. callmacro:: content.macros.j2#link_button
+    :url: '/work/services/'
+
+    Understand our capabilities
 
   .. callmacro:: content.macros.j2#link_button
     :url: '/contact/'
 
-    Get a free consultation
+    Schedule a consultation
 
-  .. _web application design and development: /work/
+  .. _`web application strategy, design, and development`: /work/
 
 
-Software for Humans
-===================
+OddBird
+=======
 
 
 .. callmacro:: content.macros.j2#get_quotes
   :slug: 'work/coachhub'
   :index: 1
 
+.. -------------------------------------
+.. callmacro:: content.macros.j2#divider
+
+
+.. callmacro:: projects/splash.macros.j2#splash_list
 
 
 .. -------------------------------------
 .. callmacro:: content.macros.j2#divider
-.. callmacro:: projects/splash.macros.j2#splash_list
+
 
 .. ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 .. callmacro:: content.macros.j2#rst

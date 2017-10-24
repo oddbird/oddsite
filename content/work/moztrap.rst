@@ -4,6 +4,7 @@ pageclasses: work-layout
 grid_template: true
 image:
   - src: 'projects/moztrap.jpg'
+logo: 'mozilla'
 client:
   - name: 'Mozilla'
     url: 'https://www.mozilla.org/'
@@ -18,6 +19,13 @@ tasks:
   - User Experience Design
   - Project Architecture
   - Responsive Styles
+brag: |
+  We helped Mozilla manage
+  their complex, distributed
+  **quality assurance** process –
+  making international volunteer
+  **software-testing & reporting** a breeze
+  across languages and operating systems.
 quotes:
   - text: 'I consider <b>Mozilla’s MozTrap</b> to be one of the best
       open source test case management systems out there.'

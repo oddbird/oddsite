@@ -10,11 +10,13 @@
         {{ splash(page) }}
       {% endfor %}
     {% else %}
-      {% set pages = all_pages|filter_pages(has)|filter_pages('public', 'neq', false) %}
+      {% set pages = all_pages|filter_pages(has) %}
+      {% set pages = pages|filter_pages('public', 'neq', false) %}
+      {% set pages = pages|filter_pages('brag') %}
 
-        {% for page in pages %}
-          {{ splash(page) }}
-        {% endfor %}
+      {% for page in pages %}
+        {{ splash(page) }}
+      {% endfor %}
     {% endif %}
   </section>
 {% endmacro %}
@@ -25,27 +27,22 @@
   {% set client = page.config.client[0] if page.config.client else none %}
   {% set contrib = page.config.contributors[0] if page.config.contributors else none %}
 
-  {% set slug = ('/' + page.slug|replace('index', '')) if ('index' in page.slug) else ('/' + page.slug + '/') %}
-  {% set link = slug if (project.owner or project.case_study) else '/work/' %}
-  {% set link = '/open-source/' if (contrib and link == '/work/') else link %}
+  {% set url = ('/' + page.slug|replace('index', '') + '/') %}
+  {% set type = '/open-source/' if contrib else '/work/' %}
+  {% set link = url if (project.owner or project.case_study) else type %}
 
-  {% set images = page.config.image or none %}
+  <article class="splash-project">
+    {% include 'projects/_%s.svg' % (page.config.logo or 'mozilla') %}
 
-  {% if images %}
-    {% set splash = images|selectattr('type', 'equalto', 'splash')|list or none %}
-    {% set image = splash[0].src if splash else images[0].src %}
-    {% set image = image if '://' in image else ['/static/images/', image]|join('') %}
+    <h2 class="splash-title">
+      {% if client %}
+        <b>{{ client.name }}</b>:
+      {% endif %}
+      <span>{{ project.name }}</span>
+    </h2>
 
-    <a href="{{ link }}" class="splash-project">
-      <div class="splash-image" style="background-image: url('{{ image }}');"></div>
-
-      <h2 class="splash-client">
-        {{ client.name if client else project.name }}
-      </h2>
-
-      <h3 class="splash-title">
-        {{ project.name if client else [birds.get_bird_name(contrib.author), contrib.role]|join(', ') }}
-      </h3>
-    </a>
-  {% endif %}
+    <p class="splash-brag">
+      {{ page.config.brag }}
+    </p>
+  </article>
 {% endmacro %}
