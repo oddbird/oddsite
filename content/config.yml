@@ -105,6 +105,7 @@ comments: false
 active_modules: [
   jinja_macros,
   typogrify,
+  rst,
   images,
   denormalize_config,
   tags,
