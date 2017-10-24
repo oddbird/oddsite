@@ -33,11 +33,12 @@ like viewport width:
 
 .. code:: css
 
-  /* ideal setup, using CSS variables */
+  :root { --columns: 2; }
+
   @media (min-width: 30em) {
     /* the new settings will apply to all elements */
     /* above a viewport width of 30em */
-    :root { --columns: 5; }
+    :root { --columns: 6; }
   }
 
 Because CSS variables inherit in the DOM
