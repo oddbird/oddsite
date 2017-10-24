@@ -25,7 +25,7 @@
   {% set client = page.config.client[0] if page.config.client else none %}
   {% set contrib = page.config.contributors[0] if page.config.contributors else none %}
 
-  {% set slug = ('/' + page.slug|replace('index', '')) if ('index' in page.slug) else ('/' + page.slug + '/') %}
+  {% set slug = ['/', page.slug[:-6] if page.slug.endswith('/index') else page.slug, '/']|join %}
   {% set link = slug if (project.owner or project.case_study) else '/work/' %}
   {% set link = '/open-source/' if (contrib and link == '/work/') else link %}
 

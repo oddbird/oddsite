@@ -8,7 +8,7 @@
   {% set client = page.config.client[0] if page.config.client else null %}
   {% set contributors = page.config.contributors if page.config.contributors else null %}
   {% set project = page.config.project[0] %}
-  {% set slug = ('/' + page.slug|replace('index', '')) if ('index' in page.slug) else ('/' + page.slug + '/') %}
+  {% set slug = ['/', page.slug[:-6] if page.slug.endswith('/index') else page.slug, '/']|join %}
   {% set link = slug if (project.owner or project.case_study) else none %}
   {% set link = link if project.case_study else (project.url or link or project.source) %}
 
@@ -33,8 +33,6 @@
             {% endcall %}
           {% endif %}
           {% if project.url or project.owner %}
-            {% set slug = ('/' + page.slug|replace('index', '')) if ('index' in page.slug) else ('/' + page.slug + '/') %}
-
             {% call content.link_button(project.url or slug) %}
               Go to project
             {% endcall %}
