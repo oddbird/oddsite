@@ -36,6 +36,21 @@
   }
 }
 
+
+hr {
+  background: linear-gradient(
+    to right,
+    color('border' ('rgba': 0)),
+    color('border'),
+    color('border' ('rgba': 0))
+  );
+  clear: both;
+  display: block;
+  height: size('border-thin');
+  margin: size('gutter') 0;
+}
+
+
 // used when going back and forth between content-blocks and other elements
 .section-end {
   margin-bottom: size('double-gutter');

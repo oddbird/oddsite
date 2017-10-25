@@ -169,6 +169,21 @@
 {% endmacro %}
 
 
+{% macro image_block(image, alt='', content=none) %}
+  {% set content = content if (content != none) else caller() %}
+
+  <div class="image-block extend-left">
+    <img src="{{ image }}"
+      alt="{{ alt }}"
+      class="imageblock-image" />
+
+    <div class="imageblock-content">
+      {{ content }}
+    </div>
+  </div>
+{% endmacro %}
+
+
 {% macro link_list(title, tag=none, slug=none, data=none) %}
   {% set entries = get_blog_entries_by_tag(tag) if tag else [] %}
   {% set page = all_pages|filter_pages('slug', 'eq', slug)|get_page if slug else none %}

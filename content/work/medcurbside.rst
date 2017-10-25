@@ -19,12 +19,12 @@ tasks:
   - Responsive Styles
 quotes:
   - text: 'OddBird always thinks about the project goals.
-      They might say,
-      “you are asking for A, but B would better meet your goals.”
+      When I ask for **A**, they might say
+      “We think **B** would better meet your goals.”
       I defer to the team expertise now,
       which makes a better result.'
     name: 'Rohit Puranic'
-    role: 'Product Owner & Physician'
+    role: 'Lab06 Founder'
 summary: |
   MedCurbside was started by practicing physicians
   who want a more modern way

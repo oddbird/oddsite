@@ -43,6 +43,13 @@ quotes:
       Maintainability has been fantastic!'
     name: 'Sara Taillon'
     role: 'CTO at ORCAS'
+  - text: 'Carl may be the best developer I’ve ever worked with.
+    Deep expertise and knowledge,
+    combined with incredible communication
+    and easy-going style.
+    A superstar, without the ego.'
+    name: 'Sara Taillon'
+    role: 'CTO at ORCAS'
 planning:
   - title: 'App Goals'
     icon: 'map'

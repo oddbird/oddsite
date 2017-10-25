@@ -8,7 +8,7 @@
   flex-wrap: wrap;
   justify-content: space-around;
   justify-content: space-evenly; //sass-lint:disable-line no-duplicate-properties
-  padding: size('double-gutter') 0 size('gutter');
+  padding-top: size('double-gutter');
 
   // clearfix breaking the layout…
   @include after(null) {
@@ -60,15 +60,31 @@
 // Book
 // ----
 
-.jssass-book-cover {
-  float: left;
-  margin-right: size('pad');
-  max-width: 45%;
+.image-block {
+  text-align: center;
+
+  @include above('small-page') {
+    align-items: center;
+    display: flex;
+    display: grid; // sass-lint:disable-line no-duplicate-properties
+    grid-template-columns: auto minmax(0, 1fr);
+    text-align: left;
+  }
 }
 
 
-.jssass-book-summary {
+.imageblock-image {
+  flex: 0 1 45%;
+  margin: 0 auto;
+  max-width: size('imageblock-image');
+}
+
+
+.imageblock-content {
+  padding-top: size('gutter');
+  text-align: left;
+
   @include above('small-page') {
-    padding-top: size('gutter');
+    margin-left: size('pad');
   }
 }

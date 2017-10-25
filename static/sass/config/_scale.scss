@@ -65,21 +65,27 @@ $pattern-sizes: (
   'border': 8px,
   'border-thin': 1px,
   'border-radius': 2rem,
+
   'bird-face-tall': 8rem,
   'bird-face': 6rem,
   'half-bird-face': 'bird-face' ('multiple': 0.5),
+
   'intro-text': 'medium' ('convert-units': 'rem'),
+
   'nav-small': 20rem,
   'nav-medium': 35rem,
   'nav-wide': 50rem,
+
   'dropdown-narrow': 9rem,
   'dropdown-wide': 14rem,
   'menu-more': 12px,
   'menu-more-space': 'menu-more' ('multiple': 0.25),
+
   'splash-items': 18rem,
   'splash-items-max': 24rem,
   'splash-logo-x': 14rem,
   'splash-logo-y': 'spacer',
+  'imageblock-image': 'splash-logo-x',
 );
 
 @include accoutrement-add('sizes', 'pattern-sizes', $pattern-sizes);
