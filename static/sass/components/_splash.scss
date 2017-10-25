@@ -2,13 +2,70 @@
 // ==================
 
 
+.splash-projects {
+  align-items: stretch;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  justify-content: space-evenly; //sass-lint:disable-line no-duplicate-properties
+  padding: size('double-gutter') 0 size('gutter');
 
+  // clearfix breaking the layout…
+  @include after(null) {
+    position: absolute;
+  }
+}
+
+
+.splash-project {
+  display: grid;
+  flex: 1 1 size('splash-items');
+  grid-template-columns: 100%;
+  grid-template-rows: size('splash-logo-y') auto;
+  max-width: size('splash-items-max');
+  padding: size('shim');
+
+  @include above('medium-page') {
+    padding: size('shim') size('double-gutter');
+  }
+}
+
+
+.splash-logo {
+  #{$link} {
+    align-items: center;
+    align-self: center;
+    background-image: none; // remove link underline
+    color: color('caption');
+    display: flex;
+    justify-content: center;
+    padding-bottom: size('shim');
+    transition: transform 300ms $ease-back, fill 200ms ease;
+  }
+
+  #{$focus} {
+    color: color('action-hover');
+    transform: scale(1.1);
+  }
+
+  svg {
+    flex: 0 1 size('splash-logo-x');
+    height: size('splash-logo-y');
+    margin: 0 auto;
+    overflow: hidden;
+  }
+}
+
+
+// Book
+// ----
 
 .jssass-book-cover {
   float: left;
   margin-right: size('pad');
   max-width: 45%;
 }
+
 
 .jssass-book-summary {
   @include above('small-page') {

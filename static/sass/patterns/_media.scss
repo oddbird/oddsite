@@ -8,6 +8,10 @@ video {
   margin-bottom: size('gutter');
 }
 
+svg {
+  fill: currentColor;
+}
+
 // For those images that have text and need separation from content
 .img-border {
   border: 1px solid color('border-img');

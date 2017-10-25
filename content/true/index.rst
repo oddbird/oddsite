@@ -5,6 +5,7 @@ headline:
   - type: 'Open Source'
     title: 'True: Sass Unit Testing'
     tagline: 'Write your tests in Sass, and report with Mocha'
+logo: 'true'
 image:
   - src: 'projects/true.jpg'
 project:
@@ -20,6 +21,12 @@ contributors:
     role: 'core developer'
   - author: 'jonny'
     role: 'contributor'
+brag: |
+  Created by Miriam,
+  True is the most comprehensive
+  Sass testing framework,
+  allowing developers to write and run their tests
+  directly in SassScript.
 summary: |
   **True is a full-featured unit-testing library for Sass**.
   The core functionality is written in pure SassScript,

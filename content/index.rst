@@ -90,12 +90,7 @@ of an internal team.*
 .. -------------------------------------
 .. callmacro:: content.macros.j2#divider
 .. callmacro:: projects/splash.macros.j2#splash_list
-  :slugs: [
-    'susy/index',
-    'open-source/django',
-    'true/index',
-    'open-source/plone'
-    ]
+  :has: 'contributors'
 
 .. ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 .. callmacro:: content.macros.j2#rst

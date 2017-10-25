@@ -5,6 +5,7 @@ grid_template: true
 headline:
   - title: 'Susy: Web Layout Toolkit'
     type: 'An <strong>OddBird</strong> Project'
+logo: 'susy'
 image:
   - src: 'projects/susy.png'
 project:
@@ -17,6 +18,15 @@ project:
 contributors:
   - author: 'miriam'
     role: 'creator'
+brag: |
+  Created by Miriam,
+  Susy is a powerful and flexible
+  Sass layout framework –
+  defining the genre since 2009,
+  and used by **Virgin America**,
+  **The Smithsonian**,
+  **Esquire UK**,
+  and more.
 quotes:
   - text: 'I like the idea of grids-on-demand, rather than a strict framework.'
     name: 'Chris Coyier'

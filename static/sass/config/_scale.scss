@@ -76,6 +76,10 @@ $pattern-sizes: (
   'dropdown-wide': 14rem,
   'menu-more': 12px,
   'menu-more-space': 'menu-more' ('multiple': 0.25),
+  'splash-items': 18rem,
+  'splash-items-max': 24rem,
+  'splash-logo-x': 14rem,
+  'splash-logo-y': 'spacer',
 );
 
 @include accoutrement-add('sizes', 'pattern-sizes', $pattern-sizes);
