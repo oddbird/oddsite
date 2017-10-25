@@ -8,7 +8,7 @@ from jinja2 import Markup
 
 
 def rst_filter(s):
-    return Markup(publish_parts(source=s, writer_name='html')['body'])
+    return Markup(publish_parts(source=s, writer_name='html5writer')['body'])
 
 
 def setup(builder):

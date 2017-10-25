@@ -65,13 +65,13 @@
 {% macro show_headline(main, sub=none, type=none) %}
   <header class="title">
     {% if type %}
-      <div class="title-post-type">{{ type|safe }}</div>
+      <div class="title-post-type">{{ type|rst }}</div>
     {% endif %}
 
     <h1 class="title-main">{{ main|safe }}</h1>
 
     {% if sub %}
-      <div class="title-sub">{{ sub|safe }}</div>
+      <div class="title-sub">{{ sub|rst }}</div>
     {% endif %}
   </header>
 {% endmacro %}

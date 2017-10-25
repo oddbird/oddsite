@@ -8,6 +8,12 @@
   margin-top: size('gutter');
   max-width: size('full-content');
   padding: size('shim') size('gutter');
+
+  p {
+    display: inline;
+    margin: 0;
+    padding: 0;
+  }
 }
 
 .title-post-type {

@@ -4,7 +4,7 @@ template: 'susysite/layout.html'
 grid_template: true
 headline:
   - title: 'Susy: Web Layout Toolkit'
-    type: 'An <strong>OddBird</strong> Project'
+    type: An **OddBird** Project
 image:
   - src: 'projects/susy.png'
 project:
@@ -31,8 +31,9 @@ quotes:
     name: 'Hugo Giraudel'
     role: 'SitePoint'
     url: 'http://www.sitepoint.com/my-favorite-sass-tools/'
-  - text: '<b>Susy</b> and <b>Zendesk</b> have been getting along magically…
-           It’s precisely what you need and nothing more.'
+  - text: |
+      **Susy** & **Zendesk** have been getting along magically…
+      It’s precisely what you need and nothing more.
     name: 'Stephany Varga'
     role: 'Zendesk Creative Collection'
     url: 'https://medium.com/zendesk-creative-blog/responsive-a-harrowing-meditation-on-the-brutal-realities-of-web-content-organization-in-5-acts-1d33ce25f062'
