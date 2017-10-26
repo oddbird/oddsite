@@ -3,7 +3,7 @@ location: speaking
 image:
   - src: 'pages/speaking.jpg'
 headline:
-  - tagline: 'Sharing what we’ve learned…'
+  - tagline: "Sharing what we’ve learned…"
     type: 'About Us'
 after:
   - include: 'community/_events.html.j2'
@@ -490,7 +490,7 @@ events_past: # Past Talks
         video: 'http://pyvideo.org/video/389/pycon-2011--reverse-engineering-ian-bicking--39-s'
 
 summary: |
-  **We’re constantly learning**
+  **We're constantly learning**
   from the `freely-shared`_ inspiration and mentoring of others –
   through blogs, podcasts, and conference talks –
   so we'd like to pass that generosity along:

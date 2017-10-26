@@ -4,7 +4,7 @@ template: 'susysite/layout.html'
 grid_template: true
 headline:
   - title: 'Susy: Web Layout Toolkit'
-    type: 'An <strong>OddBird</strong> Project'
+    type: 'An **OddBird** Project'
 logo: 'susy'
 image:
   - src: 'projects/susy.png'
@@ -32,17 +32,25 @@ quotes:
     name: 'Chris Coyier'
     role: 'CSS Tricks'
     url: 'http://css-tricks.com/build-web-layouts-easily-susy/'
-  - text: 'My experiments have left me impressed. The current state of CSS layout means that unless you like to spend a lot of time doing calculations something like Susy is really useful. The output CSS is pretty much what I’d come up with myself, which to me is the acid test for tool use.'
+  - text: |
+      My experiments have left me impressed.
+      The current state of CSS layout
+      means that unless you like to spend a lot of time doing calculations
+      something like Susy is really useful.
+      The output CSS is pretty much what I'd come up with myself,
+      which to me is the acid test for tool use.
     name: 'Rachel Andrew'
     role: 'Invited Expert to the CSS Working Group'
     url: 'https://rachelandrew.co.uk/archives/2015/02/04/css-grid-layout-creating-complex-grids/'
-  - text: 'If you’re interested in reading Sass poetry,
-           be sure to look at Susy’s source code!'
+  - text: |
+      If you're interested in reading Sass poetry,
+      be sure to look at Susy's source code!
     name: 'Hugo Giraudel'
     role: 'SitePoint'
     url: 'http://www.sitepoint.com/my-favorite-sass-tools/'
-  - text: '<b>Susy</b> and <b>Zendesk</b> have been getting along magically…
-           It’s precisely what you need and nothing more.'
+  - text: |
+      **Susy** & **Zendesk** have been getting along magically…
+      It's precisely what you need and nothing more.
     name: 'Stephany Varga'
     role: 'Zendesk Creative Collection'
     url: 'https://medium.com/zendesk-creative-blog/responsive-a-harrowing-meditation-on-the-brutal-realities-of-web-content-organization-in-5-acts-1d33ce25f062'
@@ -53,7 +61,7 @@ summary: |
   You can use Susy with floats, flexbox, tables,
   or any other CSS technique.
   You're the expert,
-  we’re just here to make your job easier.
+  we're just here to make your job easier.
 
 
 Susy: Your Layout, *Our Math*

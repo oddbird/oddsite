@@ -33,10 +33,11 @@ brag: |
   and **National Institutes of Health** –
   leading ORCAS to a **successful acquisition**.
 quotes:
-  - text: 'OddBird really changed my thinking about
+  - text: |
+      OddBird really changed my thinking about
       how successful remote development can be –
       like working with an in-house team,
-      complete and ready to go.'
+      complete and ready to go.
     name: 'Sara Taillon'
     role: 'CTO at ORCAS'
   - text: 'I’m glad OddBird never negotiated the 100% test coverage.
@@ -135,7 +136,7 @@ What They Needed
 responsive web application –
 a hub to connect clients with health coaches
 for easy access to personalized wellness guidance and support.
-The new software needed to fit with ORCAS’s existing suite of apps,
+The new software needed to fit with ORCAS's existing suite of apps,
 especially `MoodHacker`_,
 a tool for self-management of emotional well-being.
 
@@ -291,7 +292,7 @@ Accessibility is built into the core technologies and techniques we use on
 every project: accessible HTML5, unobtrusive Javascript, and mobile-responsive
 CSS styles. We make it a priority from the beginning of each project – using
 progressive enhancement and responsive design to support a broad range of
-users, devices, and browsers. For CoachHub we also used Lea Verou’s `Contrast
+users, devices, and browsers. For CoachHub we also used Lea Verou's `Contrast
 Ratio`_ tool to select colors for text that passed WCAG AA level at all sizes.
 We also built a WCAG contrast test into our `Sass Accoutrement toolkits`_.
 
@@ -302,7 +303,7 @@ We also built a WCAG contrast test into our `Sass Accoutrement toolkits`_.
 Landing Pages
 ~~~~~~~~~~~~~
 
-In conversation with ORCAS’s internal team, we designed graphics, recommended
+In conversation with ORCAS's internal team, we designed graphics, recommended
 and edited text, and identified important “call to action” steps to create a
 relevant and compelling landing pages for different users.
 
@@ -315,7 +316,7 @@ On-Going Design
 ---------------
 
 CoachHub launched with a minimum viable set of features, and room to grow. We
-continue to work periodically with ORCAS’s internal development team,
+continue to work periodically with ORCAS's internal development team,
 consulting on the design and flow of new features as CoachHub expands to
 accommodate the needs of their growing user-base – people who use it every day
 to improve their health and wellness, or as part of their work coaching others.

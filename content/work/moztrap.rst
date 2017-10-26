@@ -26,8 +26,9 @@ brag: |
   **software-testing & reporting** a breeze
   across languages and operating systems.
 quotes:
-  - text: 'I consider <b>Mozilla’s MozTrap</b> to be one of the best
-      open source test case management systems out there.'
+  - text: |
+      I consider **Mozilla's MozTrap** to be one of the best
+      open source test case management systems out there.
     name: 'Frank O’Hara'
     role: 'MozTrap User'
 summary: |

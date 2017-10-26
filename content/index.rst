@@ -5,7 +5,7 @@ image:
   - src: 'pages/faces-hero.jpg'
 headline:
   - title: 'We help you meet your goals'
-    type: 'We don’t just write the code…'
+    type: "We don't just write the code…"
 summary: |
   **We provide the full range of**
   `web application strategy, design, and development`_ –
@@ -56,21 +56,23 @@ OddBird
 
 ------
 
-Are We The Right Fit For You?
------------------------------
+.. callmacro:: content.macros.j2#image_block
+  :image: '/static/images/pages/jssass.png'
+  :url: '#@@@'
+  :headline: 'Are We The Right Fit For You?'
 
-At OddBird,
-we never negotiate on user experience,
-quality code, or documentation.
-We know software is only successful
-when it solves real problems in peoples lives,
-and all code becomes legacy code over time.
-We're looking for clients with a strong vision
-for helping their users solve complex problems –
-partners who will work with us
-to find the best solutions in
-an agile and collaborative process –
-clients who want to build it right the first time.
+  At OddBird,
+  we never negotiate on user experience,
+  quality code, or documentation.
+  We know software is only successful
+  when it solves real problems in peoples lives,
+  and all code becomes legacy code over time.
+  We're looking for clients with a strong vision
+  for helping their users solve complex problems –
+  partners who will work with us
+  to find the best solutions in
+  an agile and collaborative process –
+  clients who want to build it right the first time.
 
 ------
 
