@@ -148,7 +148,7 @@
 
   {% if ctx.config.summary %}
     <div class="rst-summary">
-      {{ ctx.render_summary() }}
+      {{ ctx.render_summary()|typogrify }}
     </div>
   {% endif %}
 {% endmacro %}

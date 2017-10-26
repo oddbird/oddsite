@@ -50,39 +50,40 @@ OddBird
   :slug: 'work/medcurbside'
   :index: 1
 
-.. ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-.. callmacro:: content.macros.j2#rst
-  :tag: 'start'
-
-------
-
 .. callmacro:: content.macros.j2#image_block
-  :image: '/static/images/pages/jssass.png'
-  :url: '#@@@'
+  :image: '/static/images/projects/trig-mobile.jpg'
   :headline: 'Are We The Right Fit For You?'
 
-  At OddBird,
-  we never negotiate on user experience,
-  quality code, or documentation.
-  We know software is only successful
-  when it solves real problems in peoples lives,
-  and all code becomes legacy code over time.
-  We're looking for clients with a strong vision
-  for helping their users solve complex problems –
-  partners who will work with us
-  to find the best solutions in
-  an agile and collaborative process –
-  clients who want to build it right the first time.
+  **Software is successful
+  when it solves real problems in people's lives.**
+  Do you have a vision
+  for helping users handle complex issues?
+  Let's work together to find the best solutions
+  using an agile and collaborative process.
+  With 100% test coverage,
+  robust architecture,
+  and living style guides,
+  *you'll have low on-going maintenance,
+  and significant savings for years.*
 
-------
+  .. callmacro:: content.macros.j2#link_button
+    :url: '/contact/'
 
-.. callmacro:: content.macros.j2#rst
-  :tag: 'end'
-.. ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Start the conversation
 
 .. callmacro:: content.macros.j2#get_quotes
   :slug: 'work/coachhub'
   :index: 2
+
+
+.. -------------------------------------
+.. callmacro:: content.macros.j2#divider
+.. -------------------------------------
+
+
+.. callmacro:: projects/splash.macros.j2#splash_list
+  :has: 'contributors'
+  :headline: 'Open Source Leadership'
 
 
 .. -------------------------------------
@@ -97,26 +98,21 @@ OddBird
   :role: 'Sass Core Developer'
   :url: 'http://sass-lang.com/'
 
-.. ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-.. callmacro:: content.macros.j2#rst
-  :tag: 'start'
-
-------
-
 .. callmacro:: content.macros.j2#image_block
   :image: '/static/images/pages/jssass.png'
   :url: 'https://www.sitepoint.com/premium/books/jump-start-sass'
   :headline: 'Industry-Leading Expertise'
 
-  OddBird founders `Miriam`_ and `Carl`_
-  are internationally known for their open source
+  **Founders `Miriam`_ and `Carl`_
+  are internationally known**
+  for their open source
   contributions to `Sass/CSS`_ and `Django/Python`_,
   respectively.
   We've written the books,
   contributed to the languages,
   and created the web development tools.
-  **We don't just follow best-practice,
-  we help define it.**
+  *We don't just follow best-practice,
+  we help define it.*
 
   .. _Miriam: #@@@
   .. _Carl: #@@@
@@ -126,24 +122,8 @@ OddBird
   .. callmacro:: content.macros.j2#link_button
     :url: '/contact/'
 
-    Jump Start Your Project with OddBird
-
-------
-
-.. callmacro:: content.macros.j2#rst
-  :tag: 'end'
-.. ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Jump Start Your Project
 
 .. callmacro:: content.macros.j2#get_quotes
   :slug: 'work/coachhub'
   :index: 3
-
-
-.. -------------------------------------
-.. callmacro:: content.macros.j2#divider
-.. -------------------------------------
-
-
-.. callmacro:: projects/splash.macros.j2#splash_list
-  :has: 'contributors'
-  :headline: 'Open Source Leadership'

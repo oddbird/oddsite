@@ -45,7 +45,7 @@
 
     @include above('medium-page') {
       background-image: linear-gradient(50deg, color('background') 60%, transparent 60%);
-      margin-top: negative('spacer');
+      margin-top: negative('tripple-gutter');
       padding-bottom: size('gutter');
       padding-right: calc(40% + #{size('double-gutter')}); // 100% - 60% (angle) = 40% then add padding
       padding-top: size('gutter');

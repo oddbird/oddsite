@@ -3,6 +3,7 @@
 
 
 .image-block {
+  margin: size('gutter') 0;
   text-align: center;
 
   @include above('small-page') {
@@ -16,13 +17,13 @@
 
 
 .imageblock-link {
-  #{$link} {
+  &[href] {
     background-image: none; // remove link underline
     transition: transform 300ms $ease-back;
-  }
 
-  #{$focus} {
-    transform: scale(1.1) translateX(negative('shim'));
+    #{$focus} {
+      transform: scale(1.1) translateX(negative('shim'));
+    }
   }
 }
 
@@ -34,9 +35,11 @@
   max-width: size('imageblock-image');
 }
 
+.imageblock-image {
+  margin: negative('double-gutter') 0;
+}
 
 .imageblock-content {
-  padding-top: size('gutter');
   text-align: left;
 
   @include above('small-page') {

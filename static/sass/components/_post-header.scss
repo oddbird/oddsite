@@ -3,7 +3,6 @@
 
 .title {
   @include text-shadow;
-  @include title;
   margin-bottom: size('gutter');
   margin-top: size('gutter');
   max-width: size('full-content');
@@ -17,7 +16,6 @@
 }
 
 .title-post-type {
-  @include font-family('body');
   background-color: color('invert');
   clip-path: polygon(100% 0%, calc(100% - 0.5rem) 50%, 100% 100%, 0 100%, 0% 50%, 0 0);
   color: color('background');
@@ -29,8 +27,11 @@
   text-shadow: none;
 }
 
+.title-main {
+  @include title;
+}
+
 .title-sub {
-  @include font-family('body');
   display: block;
   font-size: calc(1rem + 1vw);
   font-style: italic;

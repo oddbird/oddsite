@@ -44,12 +44,15 @@ $spacing-sizes: (
   'rhythm': 'root' ('text-ratio': 1, 'convert-units': 'rem'),
   'gutter': 'rhythm',
   'double-gutter': 'gutter' ('multiple': 2),
-  'spacer': 'gutter' ('multiple': 4),
+  'tripple-gutter': 'gutter' ('multiple': 3),
   'shim': 'gutter' ('multiple': 0.5),
   'half-shim': 'shim' ('multiple': 0.5),
   'quarter-shim': 'shim' ('multiple': 0.25),
   'pad': 1rem,
   'pixel': 1px,
+
+  // responsive spacing
+  'spacer': calc(%s + %s) ('double-gutter', 3vw),
 );
 
 @include accoutrement-add('sizes', 'spacing-sizes', $spacing-sizes);
@@ -62,6 +65,7 @@ $spacing-sizes: (
 /// @link http://oddbird.net/accoutrement-scale/docs/
 ///   Accoutrement Scale
 $pattern-sizes: (
+  'background': calc(%s + %s) ('rhythm' ('times': 6), 16vw),
   'border': 8px,
   'border-thin': 1px,
   'border-radius': 2rem,
