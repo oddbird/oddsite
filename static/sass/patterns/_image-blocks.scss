@@ -1,0 +1,45 @@
+// Image Blocks
+// ============
+
+
+.image-block {
+  text-align: center;
+
+  @include above('small-page') {
+    align-items: center;
+    display: flex;
+    display: grid; // sass-lint:disable-line no-duplicate-properties
+    grid-template-columns: auto minmax(0, 1fr);
+    text-align: left;
+  }
+}
+
+
+.imageblock-link {
+  #{$link} {
+    background-image: none; // remove link underline
+    transition: transform 300ms $ease-back;
+  }
+
+  #{$focus} {
+    transform: scale(1.1) translateX(negative('shim'));
+  }
+}
+
+
+.imageblock-link,
+.imageblock-image {
+  flex: 0 1 45%;
+  margin: 0 auto;
+  max-width: size('imageblock-image');
+}
+
+
+.imageblock-content {
+  padding-top: size('gutter');
+  text-align: left;
+
+  @include above('small-page') {
+    margin-left: size('pad');
+  }
+}

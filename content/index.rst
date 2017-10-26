@@ -5,21 +5,15 @@ image:
   - src: 'pages/faces-hero.jpg'
 headline:
   - title: 'We help you meet your goals'
-    tagline: 'Integrated strategy, design, & development'
     type: 'We don’t just write the code…'
 summary: |
-  **As an integrated team,
-  we provide the full range of**
+  **We provide the full range of**
   `web application strategy, design, and development`_ –
-  focusing every decision around
+  integrating with your company to
+  focus every decision around
   the goals and needs of your users,
   so that business strategy and user-experience
   align for long-term success.
-
-  .. callmacro:: content.macros.j2#link_button
-    :url: '/work/services/'
-
-    Understand our capabilities
 
   .. callmacro:: content.macros.j2#link_button
     :url: '/contact/'
@@ -44,6 +38,7 @@ OddBird
 
 
 .. callmacro:: projects/splash.macros.j2#splash_list
+  :headline: 'Featured Partners'
 
 
 .. -------------------------------------
@@ -115,10 +110,11 @@ clients who want to build it right the first time.
   are internationally known for their open source
   contributions to `Sass/CSS`_ and `Django/Python`_,
   respectively.
-  Both have created and maintained popular tools,
-  while also contributing to the underlying languages.
-  We don't just follow best-practice,
-  we help define it.
+  We've written the books,
+  contributed to the languages,
+  and created the web development tools.
+  **We don't just follow best-practice,
+  we help define it.**
 
   .. _Miriam: #@@@
   .. _Carl: #@@@
@@ -148,3 +144,4 @@ clients who want to build it right the first time.
 
 .. callmacro:: projects/splash.macros.j2#splash_list
   :has: 'contributors'
+  :headline: 'Open Source Leadership'

@@ -15,7 +15,7 @@ contributors:
     role: 'creators'
 brag: |
   Created by OddBird,
-  Herman provide fully-integrated
+  Herman provides fully-integrated
   style documentation –
   from Sass abstracts to
   nunjucks and vue components,

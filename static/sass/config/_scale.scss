@@ -44,7 +44,7 @@ $spacing-sizes: (
   'rhythm': 'root' ('text-ratio': 1, 'convert-units': 'rem'),
   'gutter': 'rhythm',
   'double-gutter': 'gutter' ('multiple': 2),
-  'spacer': 'gutter' ('multiple': 3),
+  'spacer': 'gutter' ('multiple': 4),
   'shim': 'gutter' ('multiple': 0.5),
   'half-shim': 'shim' ('multiple': 0.5),
   'quarter-shim': 'shim' ('multiple': 0.25),

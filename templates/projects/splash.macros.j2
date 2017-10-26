@@ -2,8 +2,14 @@
 {% import 'birds/utility.macros.j2' as birds %}
 
 
-{% macro splash_list(has='client', slugs=none) %}
+{% macro splash_list(has='client', headline=none, slugs=none) %}
   <section class='splash-projects extend-full'>
+    {% if headline %}
+      <h2 class="splash-headline">
+        {{ headline }}
+      </h2>
+    {% endif %}
+
     {% if slugs %}
       {% for slug in slugs %}
         {% set page = all_pages|filter_pages('slug', 'eq', slug)|get_page %}
