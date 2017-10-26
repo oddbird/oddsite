@@ -4,7 +4,7 @@ template: 'susysite/layout.html'
 grid_template: true
 headline:
   - title: 'Susy: Web Layout Toolkit'
-    type: An **OddBird** Project
+    type: 'An **OddBird** Project'
 image:
   - src: 'projects/susy.png'
 project:
