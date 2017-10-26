@@ -95,7 +95,7 @@
   {% set content = content if (content != none) else caller() %}
 
   <blockquote>
-    {{ content|rst|safe|typogrify }}
+    {{ content|rst }}
 
     {% if name or url or role %}
       <footer class="attribution">

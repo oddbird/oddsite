@@ -1,7 +1,7 @@
 public: yes
 author: miriam
 headline:
-  - tagline: 'You don’t need safe-get-function utilities'
+  - tagline: "You don't need safe-get-function utilities"
     type: 'Code Sample'
 tags: [
   Sass,

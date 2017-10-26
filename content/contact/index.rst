@@ -2,7 +2,7 @@ public: yes
 location: contact
 hide_contact: true
 headline:
-  - tagline: 'Let’s get to know each other…'
+  - tagline: "Let's get to know each other…"
     type: 'Contact Us'
 before:
   - include: 'contact/_form.html.j2'
@@ -28,7 +28,7 @@ summary: |
     .. callmacro:: birds/utility.macros.j2#face
       :author: 'miriam'
 
-    **We’re always happy to talk** –
+    **We're always happy to talk** –
     whether you have a project in mind,
     or just want to say hi.
     Ask a question,
