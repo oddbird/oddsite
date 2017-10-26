@@ -26,8 +26,8 @@ tasks:
   - User Experience Design
   - WCAG & HIPPA Compliant
 brag: |
-  We help health-coaching experts at ORCAS
-  develop their unique web platform –
+  We helped health-coaching experts at ORCAS
+  develop a web platform –
   now used by the **US Military**,
   **Coast Guard**,
   and **National Institutes of Health** –

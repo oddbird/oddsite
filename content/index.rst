@@ -108,18 +108,22 @@ clients who want to build it right the first time.
 
 .. callmacro:: content.macros.j2#image_block
   :image: '/static/images/pages/jssass.png'
-
-  Industry-Leading Expertise
-  --------------------------
+  :url: 'https://www.sitepoint.com/premium/books/jump-start-sass'
+  :headline: 'Industry-Leading Expertise'
 
   OddBird founders `Miriam`_ and `Carl`_
   are internationally known for their open source
   contributions to `Sass/CSS`_ and `Django/Python`_,
   respectively.
-  Both have contributed and maintained popular tools,
+  Both have created and maintained popular tools,
   while also contributing to the underlying languages.
   We don't just follow best-practice,
   we help define it.
+
+  .. _Miriam: #@@@
+  .. _Carl: #@@@
+  .. _Sass/CSS: #@@@
+  .. _Django/Python: #@@@
 
   .. callmacro:: content.macros.j2#link_button
     :url: '/contact/'

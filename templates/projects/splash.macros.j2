@@ -36,8 +36,8 @@
       {% include 'projects/_%s.svg' % (page.config.logo or 'mozilla') %}
     </a>
 
-    <p class="splash-brag">
-      {{ page.config.brag }}
-    </p>
+    <div class="splash-brag">
+      {{ page.config.brag|rst }}
+    </div>
   </article>
 {% endmacro %}

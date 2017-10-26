@@ -20,9 +20,8 @@ tasks:
   - Project Architecture
   - Responsive Styles
 brag: |
-  We helped Mozilla manage
-  their complex, distributed
-  **quality assurance** process –
+  We helped Mozilla **Quality Assurance** manage
+  their distributed process –
   making international volunteer
   **software-testing & reporting** a breeze
   across languages and operating systems.
