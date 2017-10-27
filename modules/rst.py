@@ -14,8 +14,8 @@ from typogrify import typogrify_filter
 def rst_filter(config, s):
     settings = {
         'initial_header_level': config.get('rst_header_level', 2),
-        'smart_quotes':         config.get('smart_quotes', False),
-        'syntax_highlight':     'short'
+        'smart_quotes': config.get('smart_quotes', False),
+        'syntax_highlight': 'short'
     }
     parts = publish_parts(
         source=s,
