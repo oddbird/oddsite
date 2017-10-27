@@ -22,14 +22,16 @@ tasks:
   - Project Architecture
   - Responsive Styles
 quotes:
-  - text: 'Just like the Quarq power meters
+  - text: |
+      Just like the Quarq power meters
       changed the playing field for power measurement,
-      this new technology is going to change the way people watch races.'
+      this new technology is going to change the way people watch races.
     name: 'Triathlon Magazine'
     role: 'Quarq Race Intelligence Review'
     url: 'http://triathlonmagazine.ca/feature/introducing-quarq-race-intelligence-quollectors/'
-  - text: 'Seguimiento GPS de atletas en <b>IronMan Kona</b>
-      gracias a <b>Quarq Race Intelligence</b>.'
+  - text: |
+      Seguimiento GPS de atletas en **IronMan Kona**
+      gracias a **Quarq Race Intelligence**.
     name: 'Eduardo Mateos'
     role: 'Quarq Race Intelligence User'
 summary: |
@@ -38,8 +40,8 @@ summary: |
   and delivers that data in real time to spectators,
   commentators, race officials,
   third-party analysis software and visualization tools.
-  Integrating with Quarq’s telemetry and reporting hardware,
-  the app shows racers’ positions, direction, speed, heart-rate,
+  Integrating with Quarq's telemetry and reporting hardware,
+  the app shows racers' positions, direction, speed, heart-rate,
   and a number of other statistics in real time.
   Our mobile-optimized web interface has been used for bicycle races,
   triathlons, and non-competitive events,

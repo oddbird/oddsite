@@ -6,6 +6,10 @@ from rstblog.programs import RSTProgram
 import typogrify
 
 
+def typogrify_filter(s):
+    return Markup(typogrify.typogrify(s))
+
+
 class TypogrifyRSTProgram(RSTProgram):
     def get_fragments(self):
         if self._fragment_cache is not None:
@@ -19,4 +23,6 @@ class TypogrifyRSTProgram(RSTProgram):
 
 
 def setup(builder):
+    env = builder.jinja_env
+    env.filters['typogrify'] = typogrify_filter
     builder.programs['rst'] = TypogrifyRSTProgram

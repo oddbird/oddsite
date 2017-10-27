@@ -16,9 +16,10 @@ tasks:
   - Branding
   - Responsive front-end architecture
 quotes:
-  - text: 'The brand creation and development process
-           flowed well into one another.'
-    name: 'Anna Tudor'
+  - text: |
+      The brand creation and development process
+      flowed well into one another.
+    name: 'Anna Rafferty'
     url: 'https://turing.mathcs.carleton.edu/production/AlgebraSolving.html#about'
     role: 'Founder'
 summary: |

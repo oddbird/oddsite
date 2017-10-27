@@ -1,7 +1,7 @@
 public: yes
 location: contact
 headline:
-  - tagline: 'We’ll be in touch soon!'
+  - tagline: "We'll be in touch soon!"
     type: 'Contact Us'
 after:
   - include: 'blog/_recent-posts.html.j2'

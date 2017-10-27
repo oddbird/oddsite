@@ -2,7 +2,7 @@ public: yes
 location: home
 headline:
   - type: '404'
-    tagline: 'That’s odd…'
+    tagline: "That's odd…"
 
 
 Oops, we got lost!
