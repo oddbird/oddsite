@@ -103,14 +103,14 @@ OddBird
   :url: 'https://www.sitepoint.com/premium/books/jump-start-sass'
   :headline: 'Industry-Leading Expertise'
 
-  **Founders `Miriam`_ and `Carl`_
-  are internationally known**
+  **Founders** `Miriam`_ **and** `Carl`_
+  **are internationally known**
   for their open source
   contributions to `Sass/CSS`_ and `Django/Python`_,
   respectively.
   We've written the books,
   contributed to the languages,
-  and created the web development tools.
+  and built the tools for other developers.
   *We don't just follow best-practice,
   we help define it.*
 

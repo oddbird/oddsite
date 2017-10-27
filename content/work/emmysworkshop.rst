@@ -17,11 +17,24 @@ tasks:
   - Responsive front-end architecture
 quotes:
   - text: |
-      The brand creation and development process
-      flowed well into one another.
+      The first meeting I had with Miriam helped me decide.
+      She was excited about the project
+      but also realistic about potential issues with the codebase.
+  - text: |
+      The OddBird team did a great job
+      developing the brand for my algebra website
+      and revamping the site to reflect both new aesthetics
+      and better practices for making it look wonderful
+      on a variety of devices.
     name: 'Anna Rafferty'
-    url: 'https://turing.mathcs.carleton.edu/production/AlgebraSolving.html#about'
-    role: 'Founder'
+    role: "Emmy's Workshop Founder"
+  - text: |
+      I appreciated how professional the team was –
+      keeping me informed about the process
+      and offering me excellent choices
+      about what direction to go at key points.
+    name: 'Anna Rafferty'
+    role: "Emmy's Workshop Founder"
 summary: |
   Emmy's Workshop is part of a research project
   on how to improve computer-based educational systems

@@ -1,6 +1,7 @@
 // Media
 // =====
 
+
 audio,
 canvas,
 iframe,
@@ -47,4 +48,24 @@ h6 {
     margin-bottom: size('spacer');
     margin-top: size('spacer');
   }
+}
+
+
+// Media Blocks
+// ------------
+
+.media-block {
+  align-items: flex-start;
+  display: flex;
+  padding-bottom: size('shim');
+}
+
+.media-image {
+  flex: 0 0 auto;
+  margin-right: size('shim');
+}
+
+.media-content {
+  align-self: center;
+  flex: 1 1 0;
 }

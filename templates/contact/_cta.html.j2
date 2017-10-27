@@ -1,33 +1,9 @@
 {% import 'content.macros.j2' as content %}
 {% import 'contact/macros.j2' as contact %}
 
-
 {% if config.hide_contact %}
-  <div class="separator"></div>
+  {{ content.divider() }}
 {% else %}
-  <div class="separator"></div>
-  <div class="contact-wrap">
-    <section data-module="contact-cta">
-      <h2>
-        {% if ('susysite' in config.location) %}
-          {{ config.contact[0].susytitle }}
-        {% else %}
-          {{ config.contact[0].title }}
-        {% endif %}
-      </h2>
-
-      <h3>
-        {{ config.contact[0].subtitle }}
-      </h3>
-
-      <p>
-        {{ config.contact[0].content|safe }}
-      </p>
-
-      {{ contact.social() }}
-
-      {% set action = config.contact[0].action %}
-      {{ content.link_button(action.url, action.text) }}
-    </section>
-  </div>
+  {{ content.divider() }}
+  {{ contact.footer(config.location) }}
 {% endif %}

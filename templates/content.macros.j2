@@ -231,6 +231,16 @@
 {% endmacro %}
 
 
+{% macro media_block(media, content=none) %}
+  {% set content = content if (content != none) else caller() %}
+
+  <div class="media-block">
+    <div class="media-image">{{ media }}</div>
+    <div class="media-content">{{ content }}</div>
+  </div>
+{% endmacro %}
+
+
 {#
   Link Lists
   ----------

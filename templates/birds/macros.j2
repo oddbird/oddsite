@@ -1,27 +1,30 @@
 {% import "utility.macros.j2" as utility %}
 {% import "blog/utility.macros.j2" as blog %}
 {% import "birds/utility.macros.j2" as birds %}
+{% import "content.macros.j2" as content %}
 
 
 {% macro section(author=none, page=none) %}
   {% set page = page or all_pages|filter_pages('bird', 'eq', author)|get_page %}
   {% set author = author or page.config.bird %}
 
-  <div data-module='bird' class="h-card" id="bird-{{ author }}">
-    {{ birds.face(author) }}
+  <div data-module="bird" class="h-card" id="bird-{{ author }}">
+    {% call content.media_block(
+      media=birds.face(author)
+    ) %}
+      <header>
+        <h2 class="name">
+          {{ birds.name_link(author) }}
+        </h2>
 
-    <header>
-      <h2 class="h-card">
-        {{ birds.name_link(author) }}
-      </h2>
-
-      <ul class="socials">
-        {% set links = page.config.social[0] %}
-        {% for link in links %}
-          <li>{{ birds.get_social(link, links[link]) }}</li>
-        {% endfor %}
-      </ul>
-    </header>
+        <ul class="socials">
+          {% set links = page.config.social[0] %}
+          {% for link in links %}
+            <li>{{ birds.get_social(link, links[link]) }}</li>
+          {% endfor %}
+        </ul>
+      </header>
+    {% endcall %}
 
     <div class="bio">
       {{ page.render_contents() }}

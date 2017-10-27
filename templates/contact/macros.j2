@@ -1,4 +1,7 @@
 {% import 'utility.macros.j2' as utility %}
+{% import 'content.macros.j2' as content %}
+{% import 'birds/utility.macros.j2' as birds %}
+
 
 {% macro social(slug='contact/index', data='social') %}
   {% set page = all_pages|filter_pages('slug', 'eq', slug)|get_page %}
@@ -19,4 +22,39 @@
 {% macro get_content(icon, text) %}
   {{ utility.icon(icon) }}
   <span class="icon-text">{{ text }}</span>
+{% endmacro %}
+
+
+{% macro footer(location) %}
+  {% set contact_page = all_pages|filter_pages('slug', 'eq', 'contact/index')|get_page %}
+  {% set cta = contact_page.config.cta_footer[0] if contact_page.config.cta_footer %}
+
+  <div class="contact-wrap">
+    <section data-module="contact-cta">
+      <h2>
+        {% if ('susysite' in location) %}
+          {{ cta.susytitle }}
+        {% else %}
+          {{ cta.title }}
+        {% endif %}
+      </h2>
+
+      {% set name = birds.name_link(cta.contact) %}
+      {% set main_content = cta.content|rst|replace('%s', name) %}
+      {% set action = cta.action %}
+
+      <div class="contact-miriam media-block">
+        {{ birds.face(cta.contact, 'media-image') }}
+        <div class="media-content">
+          {{ main_content }}
+          {{ content.link_button(
+            action.url,
+            action.text|replace('%s', cta.contact|capitalize)
+          ) }}
+        </div>
+      </div>
+
+      {{ social() }}
+    </section>
+  </div>
 {% endmacro %}

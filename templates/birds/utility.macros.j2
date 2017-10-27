@@ -2,20 +2,20 @@
 
 {% macro card(page, details=false) %}
   {% if details %}
-    <div class="h-card">
-      {{ utility.icon(page.config.bird, size='face') }}
+    <div class="h-card media-block">
+      {{ face(page.config.bird, 'media-image') }}
 
-      <div class="bio-short">
+      <div class="bio-short media-content">
         {{ page.render_summary() }}
-      </div>
 
-      <ul class="socials">
-        {% for link in page.config.social[0] %}
-          {% if link in ['twitter', 'github'] %}
-            <li>{{ get_social(link, page.config.social[0][link]) }}</li>
-          {% endif %}
-        {% endfor %}
-      </ul>
+        <ul class="socials">
+          {% for link in page.config.social[0] %}
+            {% if link in ['twitter', 'github'] %}
+              <li>{{ get_social(link, page.config.social[0][link]) }}</li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </div>
     </div>
   {% else %}
     <span class="h-card">
@@ -25,8 +25,8 @@
 {% endmacro %}
 
 
-{% macro face(author) %}
-  <div class="bird-face">
+{% macro face(author, class=none) %}
+  <div class='bird-face' {{ utility.attr_if('class', class) }}>
     {{ utility.icon(author, size='face') }}
   </div>
 {% endmacro %}
