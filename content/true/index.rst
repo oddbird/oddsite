@@ -22,12 +22,14 @@ contributors:
   - author: 'jonny'
     role: 'contributor'
 brag: |
-  Created by Miriam,
-  True is the most comprehensive
-  Sass testing framework,
+  Created by `Miriam`_,
+  True is the most
+  **comprehensive Sass testing framework**,
   allowing developers to write and run their tests
-  directly in SassScript,
+  **directly in SassScript**,
   or integrate with existing JS test-runners.
+
+  .. _Miriam: /birds/#bird-miriam
 summary: |
   **True is a full-featured unit-testing library for Sass**.
   The core functionality is written in pure SassScript,

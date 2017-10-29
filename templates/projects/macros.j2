@@ -52,9 +52,7 @@
       {% endif %}
     {% endcall %}
 
-    {% for quote in page.config.quotes %}
-      {{ content.blockquote(quote.text, quote.name, quote.url, quote.role) }}
-    {% endfor %}
+    {{ content.get_quotes(page, count=2) }}
 
     {{ content.divider()}}
   </article>

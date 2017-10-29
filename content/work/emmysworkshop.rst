@@ -20,6 +20,9 @@ quotes:
       The first meeting I had with Miriam helped me decide.
       She was excited about the project
       but also realistic about potential issues with the codebase.
+    name: 'Anna Rafferty'
+    role: 'Assistant Professor of Computer Science'
+    slug: 'realistic'
   - text: |
       The OddBird team did a great job
       developing the brand for my algebra website
@@ -27,14 +30,16 @@ quotes:
       and better practices for making it look wonderful
       on a variety of devices.
     name: 'Anna Rafferty'
-    role: "Emmy's Workshop Founder"
+    role: 'Assistant Professor of Computer Science'
+    slug: 'great'
   - text: |
       I appreciated how professional the team was –
       keeping me informed about the process
       and offering me excellent choices
       about what direction to go at key points.
     name: 'Anna Rafferty'
-    role: "Emmy's Workshop Founder"
+    role: 'Assistant Professor of Computer Science'
+    slug: 'informed'
 summary: |
   Emmy's Workshop is part of a research project
   on how to improve computer-based educational systems

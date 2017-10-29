@@ -14,12 +14,14 @@ contributors:
   - author: 'david'
     role: 'core developer'
 brag: |
-  David is a core developer
+  `David`_ is a **core developer**
   on the popular Plone
   **content management platform**
   written in Python,
-  with flexible themeing
-  and developer customization.
+  with **flexible theming**
+  and **developer customization**.
+
+  .. _David: /birds/#bird-david
 summary: |
   **Plone is a mature content management platform**
   written in Python

@@ -18,13 +18,23 @@ tasks:
   - Project Architecture
   - Responsive Styles
 quotes:
-  - text: 'OddBird always thinks about the project goals.
-      When I ask for **A**, they might say
-      “We think **B** would better meet your goals.”
+  - text: |
+      Other developers build exactly what you say,
+      or they don’t understand,
+      and develop the wrong thing.
+      **OddBird always thinks about the project goals.**
       I defer to the team expertise now,
-      which makes a better result.'
+      which makes a better result.
     name: 'Rohit Puranic'
-    role: 'Lab06 Founder'
+    role: 'Founder'
+    slug: 'goals'
+  - text: |
+      I liked the way OddBird presented themselves.
+      **They were curious and asked detailed questions
+      to really understand what was needed.**
+    name: 'Rohit Puranic'
+    role: 'Founder'
+    slug: 'curious'
 summary: |
   MedCurbside was started by practicing physicians
   who want a more modern way

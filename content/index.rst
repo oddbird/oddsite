@@ -28,8 +28,8 @@ OddBird
 
 
 .. callmacro:: content.macros.j2#get_quotes
-  :slug: 'work/coachhub'
-  :index: 1
+  :page: 'work/coachhub'
+  :slug: 'remote'
 
 
 .. -------------------------------------
@@ -47,8 +47,8 @@ OddBird
 
 
 .. callmacro:: content.macros.j2#get_quotes
-  :slug: 'work/medcurbside'
-  :index: 1
+  :page: 'work/medcurbside'
+  :slug: 'goals'
 
 .. callmacro:: content.macros.j2#image_block
   :image: '/static/images/projects/trig-mobile.jpg'
@@ -72,8 +72,8 @@ OddBird
     Start the conversation
 
 .. callmacro:: content.macros.j2#get_quotes
-  :slug: 'work/coachhub'
-  :index: 2
+  :page: 'work/coachhub'
+  :slug: 'handoff'
 
 
 .. -------------------------------------
@@ -114,10 +114,10 @@ OddBird
   *We don't just follow best-practice,
   we help define it.*
 
-  .. _Miriam: #@@@
-  .. _Carl: #@@@
-  .. _Sass/CSS: #@@@
-  .. _Django/Python: #@@@
+  .. _Miriam: /birds/#bird-miriam
+  .. _Carl: /birds/#bird-carl
+  .. _Sass/CSS: http://sass-lang.com
+  .. _Django/Python: https://www.djangoproject.com/
 
   .. callmacro:: content.macros.j2#link_button
     :url: '/contact/'
@@ -125,5 +125,5 @@ OddBird
     Jump Start Your Project
 
 .. callmacro:: content.macros.j2#get_quotes
-  :slug: 'work/coachhub'
-  :index: 3
+  :page: 'work/timedesigner'
+  :slug: 'innovative'

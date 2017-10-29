@@ -58,8 +58,8 @@ Sites Using Susy
 
 .. callmacro:: content.macros.j2#divider
 .. callmacro:: content.macros.j2#get_quotes
-  :slug: 'susy/index'
-  :index: 4
+  :page: 'susy/index'
+  :slug: 'zendesk'
 .. callmacro:: content.macros.j2#divider
 
 

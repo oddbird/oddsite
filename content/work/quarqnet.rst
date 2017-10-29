@@ -23,8 +23,9 @@ quotes:
       and performance data, even on the go, making it easy to connect up
       with others while out on a ride.
     name: 'BikeRumor'
-    role: 'QuarqNet Review'
+    role: 'Review'
     url: 'https://www.bikerumor.com/2016/09/28/share-ride-real-time-quarq-qollector/'
+    slug: 'mobile'
   - text: |
       **QuarqNet** captures the data
       and seamlessly synchronizes activities
@@ -32,8 +33,9 @@ quotes:
       Athletes get unaltered, high-definition data
       and training log perfection.
     name: 'AeroGeeks'
-    role: 'QuarqNet Review'
+    role: 'Review'
     url: 'http://aerogeeks.com/2016/10/09/10-9-2016-wir-the-kona-edition/'
+    slug: 'data'
 tasks:
   - Product Branding
   - User Experience Design
@@ -105,7 +107,7 @@ Case Study: QuarqNet
 ====================
 
 .. callmacro:: content.macros.j2#get_quotes
-  :slug: 'work/quarqnet'
+  :page: 'work/quarqnet'
 
 .. callmacro:: content.macros.j2#rst
   :tag: 'start'

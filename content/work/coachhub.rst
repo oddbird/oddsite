@@ -36,25 +36,25 @@ quotes:
   - text: |
       OddBird really changed my thinking about
       how successful remote development can be –
-      like working with an in-house team,
+      **like working with an in-house team**,
       complete and ready to go.
     name: 'Sara Taillon'
-    role: 'CTO at ORCAS'
+    role: 'CTO'
+    slug: 'remote'
   - text: |
       Since OddBird thinks about handoff from the beginning,
-      maintenance has been super easy.
+      **maintenance has been super easy**.
       I’m glad OddBird never negotiated
       the 100% test coverage.
     name: 'Sara Taillon'
-    role: 'CTO at ORCAS'
+    role: 'CTO'
+    slug: 'handoff'
   - text: |
-      Carl may be the best developer I’ve ever worked with.
-      Deep expertise and knowledge,
-      combined with incredible communication
-      and easy-going style.
-      A superstar, without the ego.
+      OddBird brings **deep expertise and knowledge**,
+      combined with **incredible communication** and easy-going style.
     name: 'Sara Taillon'
-    role: 'CTO at ORCAS'
+    role: 'CTO'
+    slug: 'experts'
 planning:
   - title: 'App Goals'
     icon: 'map'
@@ -127,7 +127,7 @@ Case Study: CoachHub
 ====================
 
 .. callmacro:: content.macros.j2#get_quotes
-  :slug: 'work/coachhub'
+  :page: 'work/coachhub'
 
 
 .. callmacro:: content.macros.j2#rst

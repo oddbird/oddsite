@@ -35,13 +35,15 @@ quotes:
       changed the playing field for power measurement,
       this new technology is going to change the way people watch races.
     name: 'Triathlon Magazine'
-    role: 'Quarq Race Intelligence Review'
+    role: 'Review'
     url: 'http://triathlonmagazine.ca/feature/introducing-quarq-race-intelligence-quollectors/'
+    slug: 'change'
   - text: |
       Seguimiento GPS de atletas en **IronMan Kona**
       gracias a **Quarq Race Intelligence**.
     name: 'Eduardo Mateos'
-    role: 'Quarq Race Intelligence User'
+    role: 'User'
+    slug: 'gracias'
 summary: |
   Quarq Race Intelligence captures and interprets
   race performance and state-of-play information,

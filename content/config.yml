@@ -85,7 +85,6 @@ active_modules: [
   images,
   denormalize_config,
   tags,
-  rst,
   blog,
   author,
   pages,

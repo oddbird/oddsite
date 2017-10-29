@@ -15,12 +15,12 @@ contributors:
     role: 'creators'
 brag: |
   Created by OddBird,
-  Herman provides fully-integrated
-  style documentation –
+  Herman provides
+  **fully-integrated style documentation** –
   from Sass abstracts to
-  nunjucks and vue components,
-  pattern libraries,
-  and style guides.
+  nunjucks and vue components –
+  for **automated pattern libraries**,
+  and **style guides**.
 summary: |
   **Herman is an automated pattern-library generator,**
   built on top of SassDoc,

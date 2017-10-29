@@ -115,7 +115,10 @@
       <footer class="attribution">
       <cite>
         {% set display_name = name if role else utility.link_if(name, url) %}
-        —{{ display_name }}{% if role %}, {{ utility.link_if(role, url) }}{% endif %}
+        —{{ display_name }}
+        {%- if role -%},
+          <b>{{ utility.link_if(role, url) }}</b>
+        {%- endif -%}
       </cite>
       </footer>
     {% endif %}
@@ -135,19 +138,31 @@
 
 
 {% macro get_quotes(
-  slug,
-  index=none
+  page,
+  slug=none,
+  count=none
 ) %}
-  {% set page = all_pages|filter_pages('slug', 'eq', slug)|get_page %}
+  {% set page = all_pages|filter_pages('slug', 'eq', page)|get_page if (page is string) else page %}
+  {% set client = page.config.client[0] if page.config.client else none %}
 
-  {% if index %}
-    {% set quote = page.config.quotes[index - 1] %}
-    {{ blockquote(quote.text, quote.name, quote.url, quote.role) }}
+  {% if slug %}
+    {% set quote = page.config.quotes|selectattr('slug', 'equalto', slug)|list %}
+    {% set quote = quote[0] %}
+    {% set role = get_role(quote.role, client.name) %}
+    {{ blockquote(quote.text, quote.name, quote.url or client.url, role) }}
   {% else %}
     {% for quote in page.config.quotes %}
-      {{ blockquote(quote.text, quote.name, quote.url, quote.role) }}
+      {% if (count == none) or (loop.index0 < count) %}
+        {% set role = get_role(quote.role, client.name) %}
+        {{ blockquote(quote.text, quote.name, quote.url or client.url, role) }}
+      {% endif %}
     {% endfor %}
   {% endif %}
+{% endmacro %}
+
+
+{% macro get_role(role, client=none) %}
+  {{ [role, 'at', client]|join(' ') if client else role }}
 {% endmacro %}
 
 

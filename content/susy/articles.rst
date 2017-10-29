@@ -197,8 +197,8 @@ Articles, Podcasts, & Tutorials
 
 .. callmacro:: content.macros.j2#divider
 .. callmacro:: content.macros.j2#get_quotes
-  :slug: 'susy/index'
-  :index: 3
+  :page: 'susy/index'
+  :slug: 'poetry'
 .. callmacro:: content.macros.j2#divider
 
 .. callmacro:: content.macros.j2#link_list

@@ -11,8 +11,10 @@ quotes:
     name: 'Sara Taillon'
     url: 'http://orcasinc.com'
     role: 'ORCAS CTO'
+    slug: 'outsource'
   - text: 'Another Great quote.'
     name: 'Some Client'
+    slug: 'great'
 summary: |
   This is that short summary that appears on archive pages and as the default
   summary when shared on social media.
@@ -151,15 +153,15 @@ but doesn't imply citation from another source:
 
 The `get_quotes` macro can be used to access `quotes`,
 in the YAML page metadata.
-This requires a ``:slug:`` argument (see below)
+This requires a ``:page:`` argument (see below)
 to access the correct page data.
-You can also pass an ``:index:`` argument
-to select a specific quote by number (1-indexed),
+You can also pass an ``:slug:`` argument
+to select a specific quote by name,
 or set the index to ``none | false``
 to get a list of all quotes (default).
 
 .. callmacro:: content.macros.j2#get_quotes
-  :slug: 'docs/sample'
+  :page: 'docs/sample'
 
 The YAML data should be structured as follows:
 
@@ -171,8 +173,11 @@ The YAML data should be structured as follows:
       name: 'Sara Taillon'
       url: 'http://orcasinc.com'
       role: 'ORCAS CTO'
+      slug: 'outsource'
+
     - text: 'Another Great quote.'
       name: 'Some Client'
+      slug: 'great'
 
 
 Using Macros

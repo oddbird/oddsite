@@ -5,7 +5,7 @@ grid_template: true
 image:
   - src: 'projects/trop.jpg'
 client:
-  - name: 'Tom Dibblee'
+  - name: 'Trop Magazine'
 project:
   - name: 'Trop'
     tagline: 'A cool little lit mag from Los Angeles.'
@@ -20,7 +20,7 @@ quotes:
       you guys were by far the best, the nicest,
       and the most fun to work with.
     name: 'Tom Dibblee'
-    role: 'Editor at Trop Magazine'
+    role: 'Editor'
 summary: |
   Trop is a cool little lit mag that lives in Los Angeles
   and publishes on the internet.

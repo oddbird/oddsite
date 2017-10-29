@@ -19,19 +19,22 @@ contributors:
   - author: 'miriam'
     role: 'creator'
 brag: |
-  Created by Miriam,
+  Created by `Miriam`_,
   Susy is a powerful and flexible
-  Sass layout framework –
+  **CSS layout framework** –
   defining the genre since 2009,
   and used by **Virgin America**,
   **The Smithsonian**,
   **Esquire UK**,
   and more.
+
+  .. _Miriam: /birds/#bird-miriam
 quotes:
   - text: 'I like the idea of grids-on-demand, rather than a strict framework.'
     name: 'Chris Coyier'
     role: 'CSS Tricks'
     url: 'http://css-tricks.com/build-web-layouts-easily-susy/'
+    slug: 'on-demand'
   - text: |
       My experiments have left me impressed.
       The current state of CSS layout
@@ -42,18 +45,21 @@ quotes:
     name: 'Rachel Andrew'
     role: 'Invited Expert to the CSS Working Group'
     url: 'https://rachelandrew.co.uk/archives/2015/02/04/css-grid-layout-creating-complex-grids/'
+    slug: 'impressed'
   - text: |
       If you're interested in reading Sass poetry,
       be sure to look at Susy's source code!
     name: 'Hugo Giraudel'
     role: 'SitePoint'
     url: 'http://www.sitepoint.com/my-favorite-sass-tools/'
+    slug: 'poetry'
   - text: |
       **Susy** & **Zendesk** have been getting along magically…
       It's precisely what you need and nothing more.
     name: 'Stephany Varga'
     role: 'Zendesk Creative Collection'
     url: 'https://medium.com/zendesk-creative-blog/responsive-a-harrowing-meditation-on-the-brutal-realities-of-web-content-organization-in-5-acts-1d33ce25f062'
+    slug: 'zendesk'
 summary: |
   **Susy is a lightweight grid-layout engine for Sass**,
   designed to simplify and clarify responsive grid layouts
@@ -131,8 +137,8 @@ when you follow the link from our site.
 
 .. callmacro:: content.macros.j2#divider
 .. callmacro:: content.macros.j2#get_quotes
-  :slug: 'susy/index'
-  :index: 1
+  :page: 'susy/index'
+  :slug: 'on-demand'
 .. callmacro:: content.macros.j2#divider
 
 
@@ -258,8 +264,8 @@ and `full reference documentation`_.
 
 .. callmacro:: content.macros.j2#divider
 .. callmacro:: content.macros.j2#get_quotes
-  :slug: 'susy/index'
-  :index: 2
+  :page: 'susy/index'
+  :slug: 'impressed'
 .. callmacro:: content.macros.j2#divider
 
 
