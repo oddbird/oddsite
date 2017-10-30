@@ -34,24 +34,26 @@ brag: |
   leading ORCAS to a **successful acquisition**.
 quotes:
   - text: |
-      OddBird really changed my thinking about
-      how successful remote development can be –
-      **like working with an in-house team**,
-      complete and ready to go.
+      OddBird really changed my thinking
+      about how successful remote development can be.
+      We were able to hire them as a complete team,
+      **ready to start adding value immediately**,
+      working as closely as an internal team.
     name: 'Sara Taillon'
     role: 'CTO'
     slug: 'remote'
   - text: |
       Since OddBird thinks about handoff from the beginning,
       **maintenance has been super easy**.
-      I’m glad OddBird never negotiated
-      on 100% test coverage.
+      For example, 100% unit test coverage was a given.
+      I never had to ask for it.
     name: 'Sara Taillon'
     role: 'CTO'
     slug: 'handoff'
   - text: |
-      OddBird brings **deep expertise and knowledge**,
-      combined with **incredible communication** and easy-going style.
+      **Deep expertise and knowledge**,
+      combined with **incredible communication**
+      and an easy-going style.
     name: 'Sara Taillon'
     role: 'CTO'
     slug: 'experts'
