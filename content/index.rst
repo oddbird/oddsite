@@ -111,7 +111,7 @@ OddBird
   We've written the books,
   contributed to the languages,
   and built the tools for other developers.
-  *We don't just follow best-practice,
+  *We don't just follow best-practice –
   we help define it.*
 
   .. _Miriam: /birds/#bird-miriam

@@ -39,9 +39,9 @@ quotes:
   - text: |
       OddBird allowed me to **transform my vision
       into an MVP that has momentum**.
-      I’m confident I’ll be able to land big venture capital,
-      increase my revenue from courses,
-      because the tool has speed up the process.
+      I’m confident I’ll be able to land big venture capital
+      and increase my revenue from courses,
+      because the tool has sped up the process.
     name: 'Furman Brown'
     role: 'Founder'
     slug: 'mvp'

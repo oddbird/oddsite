@@ -31,7 +31,7 @@ cta_footer:
     content: |
       **Interested in a chat with %s to find out more?**
       Ask us anything;
-      We're happy to answer your questions,
+      we're happy to answer your questions,
       big or small.
       If your business is a good fit,
       we'll offer a free in-depth project assessment!

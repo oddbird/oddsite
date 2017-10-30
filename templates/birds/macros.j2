@@ -67,7 +67,7 @@
           <li>
             {{ utility.link_if(
               project.name or item.title,
-              project.url or ['/', item.slug[:-6] if item.slug.endswith('/index') else item.slug, '/']|join('')
+              project.url or ['/', item.slug[:-6] if item.slug.endswith('/index') else item.slug, '/']|join
               ) }}
             [{{ contrib[0].role }}]
           </li>

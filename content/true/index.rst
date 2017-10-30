@@ -27,7 +27,7 @@ brag: |
   **comprehensive Sass testing framework**,
   allowing developers to write and run their tests
   **directly in SassScript**,
-  or integrate with existing JS test-runners.
+  or integrate with existing JavaScript test-runners.
 
   .. _Miriam: /birds/#bird-miriam
 summary: |

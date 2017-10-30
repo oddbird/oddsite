@@ -33,7 +33,7 @@
   {% set client = page.config.client[0] if page.config.client else none %}
   {% set contrib = page.config.contributors[0] if page.config.contributors else none %}
 
-  {% set url = ('/' + page.slug|replace('/index', '') + '/') %}
+  {% set url = ['/', page.slug[:-6] if page.slug.endswith('/index') else page.slug, '/']|join %}
   {% set type = '/open-source/' if contrib else '/work/' %}
   {% set link = url if (project.owner or project.case_study) else type %}
 

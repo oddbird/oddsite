@@ -192,7 +192,7 @@
 
       <figure class="{{ class }}" {{ utility.attr_if('style', style) }}>
         {% for item in data %}
-          {% set img = item.image if ('://' in item.image) else ['/static/images/', item.image]|join('') %}
+          {% set img = item.image if ('://' in item.image) else ['/static/images/', item.image]|join %}
           {% set img = '<img src="' + img + '" alt="' + item.alt + '" class="gallery-image" />' %}
 
           <div class="gallery-item">
