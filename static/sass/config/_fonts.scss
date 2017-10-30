@@ -6,7 +6,9 @@
 // ---------
 /// Freight Text Pro is the primary font of the OddBird brand.
 /// @group config-fonts
-/// @preview font-specimen; key: body; show: regular, italic, bold, bold italic
+/// @font 'body' (regular, italic, bold, bold italic)
+///   <script src="https://use.typekit.net/slx1xnq.js"></script>
+///   <script>try{Typekit.load({ async: true });}catch(e){}</script>
 /// @link http://oddbird.net/accoutrement-type/docs/
 ///   Accoutrement Type
 $body-font: (
@@ -15,7 +17,8 @@ $body-font: (
   'source': 'https://typekit.com/fonts/freight-text',
 );
 
-@include accoutrement-add('font', 'body', $body-font);
+@include add-font('body', $body-font);
+@include herman-add('font', 'body', $body-font);
 
 
 // Alt Font
@@ -23,7 +26,9 @@ $body-font: (
 /// Freight Sans Pro provides a sans-serif alternative,
 /// still in the same family as our primary font.
 /// @group config-fonts
-/// @preview font-specimen; key: alt; show: regular, italic, bold, bold italic
+/// @font 'alt' (regular, italic, bold, bold italic)
+///   <script src="https://use.typekit.net/slx1xnq.js"></script>
+///   <script>try{Typekit.load({ async: true });}catch(e){}</script>
 /// @link http://oddbird.net/accoutrement-type/docs/
 ///   Accoutrement Type
 $alt-font: (
@@ -32,7 +37,8 @@ $alt-font: (
   'source': 'https://typekit.com/fonts/freight-sans',
 );
 
-@include accoutrement-add('font', 'alt', $alt-font);
+@include add-font('alt', $alt-font);
+@include herman-add('font', 'alt', $alt-font);
 
 
 // Code Font
@@ -40,7 +46,9 @@ $alt-font: (
 /// Source Code Pro provides a nice-looking monospace option
 /// for code samples across the site.
 /// @group config-fonts
-/// @preview font-specimen; key: code; show: regular, italic, bold, bold italic
+/// @font 'code' (regular, italic, bold, bold italic)
+///   <script src="https://use.typekit.net/slx1xnq.js"></script>
+///   <script>try{Typekit.load({ async: true });}catch(e){}</script>
 /// @link http://oddbird.net/accoutrement-type/docs/
 ///   Accoutrement Type
 $code-font: (
@@ -49,4 +57,5 @@ $code-font: (
   'source': 'https://typekit.com/fonts/source-code-pro',
 );
 
-@include accoutrement-add('font', 'code', $code-font);
+@include add-font('code', $code-font);
+@include herman-add('font', 'code', $code-font);

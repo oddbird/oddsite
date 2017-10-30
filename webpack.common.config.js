@@ -1,12 +1,10 @@
 /* eslint-disable no-process-env */
 
-process.env.BROWSERSLIST_CONFIG = './browserslist';
+process.env.BROWSERSLIST_CONFIG = './.browserslistrc';
 
 const AssetsPlugin = require('assets-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-// const HardSourceWebpackPlugin = require('hard-source-webpack-plugin');
-// const nodeObjectHash = require('node-object-hash');
 const path = require('path');
 const sassdoc = require('sassdoc');
 const spawn = require('child_process').spawn;
@@ -33,6 +31,24 @@ if (process.env.NODE_ENV === 'production') {
   devtool = 'source-map';
   buildScript = 'python run.py prod';
 }
+
+const scssLoaders = [
+  {
+    loader: 'css-loader',
+    options: {
+      sourceMap: true,
+      minimize: process.env.NODE_ENV === 'production',
+    },
+  },
+  {
+    loader: 'postcss-loader',
+    options: { sourceMap: true },
+  },
+  {
+    loader: 'sass-loader',
+    options: { sourceMap: true },
+  },
+];
 
 const WebpackShellPlugin = function() {};
 WebpackShellPlugin.prototype.apply = compiler => {
@@ -89,9 +105,6 @@ SassdocPlugin.prototype.apply = compiler => {
       },
       herman: {
         customCSS: cssPath,
-        customHead:
-          '<script src="https://use.typekit.net/slx1xnq.js"></script>' +
-          '<script>try{Typekit.load({ async: true });}catch(e){}</script>',
         minifiedIcons: 'templates/_icons.svg',
         templatepath: path.join(__dirname, 'templates'),
         displayColors: ['hex', 'hsl'],
@@ -188,18 +201,6 @@ module.exports = {
       root: __dirname,
       verbose: true,
     }),
-    // @@@ disable caching for now
-    // see https://github.com/mzgoddard/hard-source-webpack-plugin/issues/142
-    // new HardSourceWebpackPlugin({
-    //   cacheDirectory: path.join(__dirname, 'jscache/[confighash]'),
-    //   recordsPath: path.join(__dirname, 'jscache/[confighash]/records.json'),
-    //   configHash: webpackConfig => nodeObjectHash().hash(webpackConfig),
-    //   environmentHash: {
-    //     root: process.cwd(),
-    //     directories: ['node_modules'],
-    //     files: ['package.json']
-    //   }
-    // })
   ],
   module: {
     rules: [
@@ -239,24 +240,17 @@ module.exports = {
       },
       {
         test: /\.scss$/,
+        exclude: /styleguide\.scss$/,
         use: ExtractTextPlugin.extract({
-          use: [
-            {
-              loader: 'css-loader',
-              options: {
-                sourceMap: true,
-                minimize: process.env.NODE_ENV === 'production',
-              },
-            },
-            {
-              loader: 'postcss-loader',
-              options: { sourceMap: true },
-            },
-            {
-              loader: 'sass-loader',
-              options: { sourceMap: true },
-            },
-          ],
+          use: scssLoaders,
+        }),
+      },
+      {
+        test: /styleguide\.scss$/,
+        use: ExtractTextPlugin.extract({
+          use: scssLoaders,
+          // Disable publicPath prefix for `url()` in styleguide CSS
+          publicPath: '',
         }),
       },
     ],
