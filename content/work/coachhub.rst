@@ -45,7 +45,7 @@ quotes:
       Since OddBird thinks about handoff from the beginning,
       **maintenance has been super easy**.
       I’m glad OddBird never negotiated
-      the 100% test coverage.
+      on 100% test coverage.
     name: 'Sara Taillon'
     role: 'CTO'
     slug: 'handoff'
