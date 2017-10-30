@@ -17,8 +17,8 @@ brag: |
   Created by OddBird,
   Herman provides
   **fully-integrated style documentation** –
-  from Sass abstracts to
-  nunjucks and vue components –
+  from **font specimens** and **color palettes** to
+  nunjucks macros and rendered components –
   for **automated pattern libraries**,
   and **style guides**.
 summary: |

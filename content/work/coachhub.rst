@@ -4,7 +4,7 @@ pageclasses: work-layout
 grid_template: true
 image:
   - src: 'projects/coachhub.jpg'
-logo: 'coachhub'
+logo: 'orcas'
 client:
   - name: 'ORCAS'
     url: 'http://orcasinc.com'

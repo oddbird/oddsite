@@ -1,5 +1,6 @@
 {% import 'utility.macros.j2' as utility %}
 {% import 'birds/utility.macros.j2' as birds %}
+{% import 'content.macros.j2' as content %}
 
 
 {% macro splash_list(has='client', headline=none, slugs=none) %}
@@ -30,16 +31,10 @@
 
 {% macro splash(page) %}
   {% set project = page.config.project[0] %}
-  {% set client = page.config.client[0] if page.config.client else none %}
-  {% set contrib = page.config.contributors[0] if page.config.contributors else none %}
-
-  {% set url = ['/', page.slug[:-6] if page.slug.endswith('/index') else page.slug, '/']|join %}
-  {% set type = '/open-source/' if contrib else '/work/' %}
-  {% set link = url if (project.owner or project.case_study) else type %}
 
   <article class="splash-project">
-    <a href="{{ link }}" class="splash-logo">
-      {% include 'projects/_%s.svg' % (page.config.logo or 'mozilla') %}
+    <a href="{{ content.project_link(page) }}" class="splash-logo">
+      {% include 'projects/_%s.svg' % page.config.logo %}
     </a>
 
     <div class="splash-brag">

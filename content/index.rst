@@ -7,7 +7,7 @@ headline:
   - title: 'We help you meet your goals'
     type: "We don't just write the code…"
 summary: |
-  **We provide the full range of**
+  **OddBird provides the full range of**
   `web application strategy, design, and development`_ –
   integrating with your company to
   focus every decision around
@@ -96,7 +96,7 @@ OddBird
              creators of Sass plugins and best practices.'
   :name: 'Chris Eppstein'
   :role: 'Sass Core Developer'
-  :url: 'http://sass-lang.com/'
+  :url: '/open-source/'
 
 .. callmacro:: content.macros.j2#image_block
   :image: '/static/images/pages/jssass.png'

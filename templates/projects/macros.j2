@@ -5,12 +5,9 @@
 
 
 {% macro feature(page) %}
-  {% set client = page.config.client[0] if page.config.client else null %}
-  {% set contributors = page.config.contributors if page.config.contributors else null %}
   {% set project = page.config.project[0] %}
-  {% set slug = ['/', page.slug[:-6] if page.slug.endswith('/index') else page.slug, '/']|join %}
-  {% set link = slug if (project.owner or project.case_study) else none %}
-  {% set link = link if project.case_study else (project.url or link or project.source) %}
+  {% set link = content.project_link(page, allow_fallback=false) %}
+  {% set link = none if ('None' in link) else link %}
 
   <article class='project-feature grid-template'>
     {{ layout.header_image(page, class='project-cover-image') }}
@@ -33,7 +30,7 @@
             {% endcall %}
           {% endif %}
           {% if project.url or project.owner %}
-            {% call content.link_button(project.url or slug) %}
+            {% call content.link_button(project.url or link) %}
               Go to project
             {% endcall %}
           {% endif %}

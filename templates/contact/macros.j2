@@ -39,7 +39,7 @@
         {% endif %}
       </h2>
 
-      {% set name = birds.name_link(cta.contact) %}
+      {% set name = birds.name_link(cta.contact, full_name=false) %}
       {% set main_content = cta.content|rst|replace('%s', name) %}
       {% set action = cta.action %}
 

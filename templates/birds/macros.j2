@@ -14,7 +14,7 @@
     ) %}
       <header>
         <h2 class="name">
-          {{ birds.name_link(author) }}
+          {{ birds.name_link(author, page) }}
         </h2>
 
         <ul class="socials">
@@ -67,7 +67,7 @@
           <li>
             {{ utility.link_if(
               project.name or item.title,
-              project.url or ['/', item.slug[:-6] if item.slug.endswith('/index') else item.slug, '/']|join
+              content.project_link(item, allow_external=true)
               ) }}
             [{{ contrib[0].role }}]
           </li>
