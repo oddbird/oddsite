@@ -144,27 +144,26 @@
 ) %}
   {% set page = all_pages|filter_pages('slug', 'eq', page)|get_page if (page is string) else page %}
   {% set client = page.config.client[0] if page.config.client else none %}
-  {% set link = project_link(page) %}
 
   {% if slug %}
     {% set quote = page.config.quotes|selectattr('slug', 'equalto', slug)|list %}
     {% set quote = quote[0] %}
     {% set role = get_role(quote.role, client.name) %}
-    {{ blockquote(quote.text, quote.name, quote.url or link, role) }}
+    {{ blockquote(quote.text, quote.name, quote.url, role) }}
   {% else %}
     {% for quote in page.config.quotes %}
       {% if (count == none) or (loop.index0 < count) %}
         {% set role = get_role(quote.role, client.name) %}
-        {{ blockquote(quote.text, quote.name, quote.url or link, role) }}
+        {{ blockquote(quote.text, quote.name, quote.url, role) }}
       {% endif %}
     {% endfor %}
   {% endif %}
 {% endmacro %}
 
 
-{% macro get_role(role, client=none) %}
-  {{ [role, 'at', client]|join(' ') if client else role }}
-{% endmacro %}
+{% macro get_role(role=none, client=none) -%}
+  {{ [role, 'at', client]|join(' ') if (role and client and role != 'User') else role }}
+{%- endmacro %}
 
 
 {#
@@ -332,7 +331,7 @@
   {%- set has_page = true if (project.owner or project.case_study) else false -%}
   {%- set fallback = '/open-source/' if page.config.contributors else '/work/' -%}
   {%- set fallback = fallback if allow_fallback else none -%}
-  {%- set local = '/' if (page.slug == 'index') else ['/', page.slug|replace('/index', ''), '/']|join -%}
+  {%- set local = '/' if (page.slug == 'index') else ['/', page.slug[:-6] if page.slug.endswith('/index') else page.slug, '/']|join -%}
   {%- set local = local if (project and has_page) else none -%}
   {%- set external = project.url if (project and allow_external) else none -%}
   {{ local or external or fallback }}

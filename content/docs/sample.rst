@@ -6,11 +6,12 @@ headline:
 image:
   - src: 'blog/2017/initial-letter/drop-caps.jpg'
 quotes:
-  - text: 'OddBird really changed my thinking about
-      how successful outsourcing software development can be.'
+  - text: |
+      OddBird really changed my thinking about
+      how successful outsourcing software development can be.
     name: 'Sara Taillon'
     url: 'http://orcasinc.com'
-    role: 'ORCAS CTO'
+    role: 'CTO'
     slug: 'outsource'
   - text: 'Another Great quote.'
     name: 'Some Client'
@@ -175,7 +176,7 @@ The YAML data should be structured as follows:
         how successful outsourcing software development can be.
       name: 'Sara Taillon'
       url: 'http://orcasinc.com'
-      role: 'ORCAS CTO'
+      role: 'CTO'
       slug: 'outsource'
 
     - text: 'Another Great quote.'

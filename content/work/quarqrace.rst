@@ -35,7 +35,6 @@ quotes:
       changed the playing field for power measurement,
       this new technology is going to change the way people watch races.
     name: 'Triathlon Magazine'
-    role: 'Review'
     url: 'http://triathlonmagazine.ca/feature/introducing-quarq-race-intelligence-quollectors/'
     slug: 'change'
   - text: |
