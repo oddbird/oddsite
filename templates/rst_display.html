@@ -5,8 +5,15 @@
 {% import "blog/utility.macros.j2" as blog %}
 {% import 'birds/utility.macros.j2' as birds %}
 
-{% block title %}{{ rst.title }}{% endblock %}
+{% block title -%}
+  {%- if config.location == 'home' -%}
+    OddBird: {{ rst.title }}
+  {%- else -%}
+    {{ rst.title }} | {{ super() }}
+  {%- endif -%}
+{%- endblock %}
 
+{% block og_title %}{{ rst.title }}{% endblock %}
 {% block og_type %}{{ 'article' if ctx.pub_date else 'website' }}{% endblock %}
 {% block og_url %}{{ get_full_canonical_url(ctx.builder, slug=ctx.slug) }}{% endblock %}
 {% block og_summary %}{{ ctx.render_summary()|striptags }}{% endblock %}

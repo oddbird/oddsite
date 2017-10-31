@@ -5,7 +5,8 @@
 
 {% set name = utility.get_bird_name(author.name) %}
 
-{% block title %}Entries by {{ name }}{% endblock %}
+{% block title %}Entries by {{ name }} | {{ super() }}{% endblock %}
+{% block og_title %}Entries by {{ name }}{% endblock %}
 {% block og_url %}{{ get_full_canonical_url(builder, slug=['/authors', author.name]|join('/')) }}{% endblock %}
 {% block bodyclasses %}blog archive{% endblock %}
 

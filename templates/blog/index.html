@@ -3,7 +3,8 @@
 {% import "blog/macros.j2" as blog %}
 {% import "layout/macros.j2" as layout %}
 
-{% block title %}Blog{% endblock %}
+{% block title %}Blog | {{ super() }}{% endblock %}
+{% block og_title %}Blog{% endblock %}
 {% block og_url %}{{ get_full_canonical_url(builder, slug='/blog/') }}{% endblock %}
 
 {% block list_intro %}

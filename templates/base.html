@@ -7,13 +7,13 @@
   {% block htmlhead %}
 
   <!-- Page Info -->
-  <title>{% block title %}Home{% endblock title %} | OddBird</title>
+  <title>{% block title %}OddBird{% endblock title %}</title>
   <meta name="description" content="{% block description %}Custom-built web tools for humans{% endblock description %}" />
 
   <!-- Site Info -->
   {% block robots %}<meta name="robots" content="{{ 'noindex, nofollow' if config.public == false else 'index, follow' }}" />{% endblock robots %}
   <meta name="author" content="OddBird" />
-  <meta name="keywords" content="custom web development, web tools, open source, python, django, sass, scss, susy, javascript, jquery, js" />
+  <meta name="keywords" content="custom web development, web tools, software, design, open source, python, django, sass, scss, susy, javascript, jquery, js" />
   <meta name="language" content="en-us" />
 
   {% block feedlinks %}
@@ -43,7 +43,7 @@
   {% if config.facebook_id %}
     <meta property="fb:app_id" content="{{ config.facebook_id }}" />
   {% endif %}
-  <meta property="og:title" content="{{ self.title() }}" />
+  <meta property="og:title" content="{% block og_title %}{{ self.title() }}{% endblock og_title %}" />
   <meta property="og:site_name" content="OddBird" />
   <meta property="og:type" content="{% block og_type %}website{% endblock og_type %}" />
   <meta property="og:image" content="{{ image }}" />

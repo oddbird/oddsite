@@ -2,7 +2,8 @@
 
 {% import "birds/utility.macros.j2" as birds %}
 
-{% block title %}Authors{% endblock %}
+{% block title %}Authors | {{ super() }}{% endblock %}
+{% block og_title %}Authors{% endblock %}
 {% block og_url %}{{ get_full_canonical_url(builder, slug='/authors/') }}{% endblock %}
 {% block archivetype %}authors{% endblock archivetype %}
 

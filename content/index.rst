@@ -23,8 +23,8 @@ summary: |
   .. _`web application strategy, design, and development`: /work/
 
 
-OddBird
-=======
+Software for Humans
+===================
 
 
 .. callmacro:: content.macros.j2#get_quotes
