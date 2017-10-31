@@ -41,7 +41,6 @@ export const initializeToggles = function() {
     }
   });
 
-  let counter = 0;
   const closeTarget = function(target) {
     // Close a target and update any attached toggles
     const id = target.attr('data-target-id');
@@ -54,30 +53,12 @@ export const initializeToggles = function() {
       target.trigger('target:close');
     }
   };
-  const autoClose = function(evtName, evt) {
-    // "this" is bound to the original target
-    const targetID = this.attr('data-target-id');
-    const newTarget = $(evt.target);
-    if (
-      this.data('auto-closing-on-any-click') ||
-      !newTarget.closest(this).length ||
-      newTarget.closest(`[data-close-toggle="${targetID}"]`).length
-    ) {
-      body.off(evtName);
-      closeTarget(this);
-    }
-  };
 
   body.on('target:open', '[data-toggle="target"]', function cb(evt) {
     const target = $(this);
     // Prevent event firing on multiple nested targets
     if ($(evt.target).is(target)) {
       target.attr('aria-expanded', 'true');
-      if (target.data('auto-closing')) {
-        counter = counter + 1;
-        const evtName = `click.toggle_${counter}`;
-        body.on(evtName, autoClose.bind(target, evtName));
-      }
     }
   });
 
@@ -95,5 +76,33 @@ export const initializeToggles = function() {
     evt.preventDefault();
     const target = $(`[data-target-id="${$(this).attr('aria-controls')}"]`);
     closeTarget(target);
+  });
+
+  const autoClose = function(newTarget, target) {
+    const targetID = target.attr('data-target-id');
+    const toggleClicked = newTarget.closest(`[aria-controls="${targetID}"]`)
+      .length;
+    const clickedElInDOM = document.contains(newTarget.get(0));
+    const clickedOutsideTarget = !newTarget.closest(target).length;
+    const exception = target.attr('data-auto-closing-exception');
+    const clickedException = exception
+      ? newTarget.closest(exception).length
+      : false;
+    if (
+      !toggleClicked &&
+      (target.data('auto-closing-on-any-click') ||
+        (clickedElInDOM && clickedOutsideTarget && !clickedException))
+    ) {
+      closeTarget(target);
+    }
+  };
+
+  body.on('click', evt => {
+    const openTargets = $(
+      '[data-toggle="target"][aria-expanded="true"][data-auto-closing="true"]',
+    );
+    openTargets.each((index, target) => {
+      autoClose($(evt.target), $(target));
+    });
   });
 };

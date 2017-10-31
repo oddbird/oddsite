@@ -47,6 +47,7 @@ const paths = {
       `${this.JS_TESTS_DIR}**/*.js`,
       `${this.SASS_TESTS_DIR}**/*.js`,
       '*.js',
+      '.*.js',
     ].concat(this.IGNORE);
     this.SASS = [
       `${this.SASS_DIR}**/*.scss`,
@@ -131,6 +132,7 @@ gulp.task('dev', ['eslint', 'sasslint', 'sasstest', 'serve']);
 gulp.task('prod', ['webpack-prod', 'update-subproject-docs']);
 
 gulp.task('serve', ['watch', 'runserver']);
+gulp.task('quick-serve', ['runserver', 'webpack']);
 
 gulp.task('test', ['jstest', 'sasstest']);
 

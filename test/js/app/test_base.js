@@ -116,28 +116,53 @@ describe('initializeToggles', function() {
     expect(this.targetClose).to.have.been.calledOnce;
   });
 
-  it('auto-closing toggle closes on any click outside the target', function() {
-    this.target.attr('data-auto-closing', 'true');
-    this.toggle.click();
+  describe('auto-closing', function() {
+    beforeEach(function() {
+      this.target.attr('data-auto-closing', 'true');
+      this.toggle.click();
+    });
 
-    expect(this.toggle).to.have.attr('aria-pressed', 'true');
-    expect(this.target).to.have.attr('aria-expanded', 'true');
-    expect(this.toggleOpen).to.have.been.calledOnce;
-    expect(this.targetOpen).to.have.been.calledOnce;
+    it('closes on any click outside the target', function() {
+      this.target.click();
 
-    this.target.click();
+      expect(this.toggle).to.have.attr('aria-pressed', 'true');
+      expect(this.target).to.have.attr('aria-expanded', 'true');
+      expect(this.toggleClose).not.to.have.been.called;
+      expect(this.targetClose).not.to.have.been.called;
 
-    expect(this.toggle).to.have.attr('aria-pressed', 'true');
-    expect(this.target).to.have.attr('aria-expanded', 'true');
-    expect(this.toggleClose).not.to.have.been.called;
-    expect(this.targetClose).not.to.have.been.called;
+      $('body').click();
 
-    $('body').click();
+      expect(this.toggle).to.have.attr('aria-pressed', 'false');
+      expect(this.target).to.have.attr('aria-expanded', 'false');
+      expect(this.toggleClose).to.have.been.calledOnce;
+      expect(this.targetClose).to.have.been.calledOnce;
+    });
 
-    expect(this.toggle).to.have.attr('aria-pressed', 'false');
-    expect(this.target).to.have.attr('aria-expanded', 'false');
-    expect(this.toggleClose).to.have.been.calledOnce;
-    expect(this.targetClose).to.have.been.calledOnce;
+    it('does not close if clicked el is removed from DOM', function() {
+      const el = $('div').appendTo('body');
+      el.on('click', () => {
+        el.remove();
+      });
+      el.click();
+
+      expect(this.toggle).to.have.attr('aria-pressed', 'true');
+      expect(this.target).to.have.attr('aria-expanded', 'true');
+      expect(this.toggleClose).not.to.have.been.called;
+      expect(this.targetClose).not.to.have.been.called;
+    });
+
+    it('does not close if exception is clicked', function() {
+      this.target.attr('data-auto-closing-exception', '.exception');
+      const el = $('<div class="exception">').appendTo('body');
+      el.click();
+
+      expect(this.toggle).to.have.attr('aria-pressed', 'true');
+      expect(this.target).to.have.attr('aria-expanded', 'true');
+      expect(this.toggleClose).not.to.have.been.called;
+      expect(this.targetClose).not.to.have.been.called;
+
+      el.remove();
+    });
   });
 
   it('auto-closing-on-any-click toggle closes on any click', function() {

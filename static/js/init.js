@@ -1,5 +1,5 @@
 // Add ES2015 polyfills
-import 'core-js/shim';
+import 'babel-polyfill';
 
 import { initializeToggles } from 'app/base';
 

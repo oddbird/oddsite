@@ -13,7 +13,8 @@ $modular-scale: (
   'text-ratio': 1.4,
 );
 
-@include accoutrement-add('ratios', 'modular-scale', $modular-scale);
+$ratios: map-merge($ratios, $modular-scale);
+@include herman-add('ratios', 'modular-scale', $modular-scale, 'ratio');
 
 
 // Text Sizes
@@ -31,7 +32,8 @@ $text-sizes: (
   'social': 'root' ('text-ratio': -0.25),
 );
 
-@include accoutrement-add('sizes', 'text-sizes', $text-sizes);
+$sizes: map-merge($sizes, $text-sizes);
+@include herman-add('sizes', 'text-sizes', $text-sizes, 'size');
 
 
 // Spacing Sizes
@@ -55,7 +57,8 @@ $spacing-sizes: (
   'spacer': calc(%s + %s) ('double-gutter', 3vw),
 );
 
-@include accoutrement-add('sizes', 'spacing-sizes', $spacing-sizes);
+$sizes: map-merge($sizes, $spacing-sizes);
+@include herman-add('sizes', 'spacing-sizes', $spacing-sizes, 'size');
 
 
 // Pattern Sizes
@@ -91,7 +94,8 @@ $pattern-sizes: (
   'imageblock-image': 'splash-logo-x',
 );
 
-@include accoutrement-add('sizes', 'pattern-sizes', $pattern-sizes);
+$sizes: map-merge($sizes, $pattern-sizes);
+@include herman-add('sizes', 'pattern-sizes', $pattern-sizes, 'size');
 
 
 // Page Sizes
@@ -107,7 +111,8 @@ $page-sizes: (
   'large-page': 75rem,
 );
 
-@include accoutrement-add('sizes', 'page-sizes', $page-sizes);
+$sizes: map-merge($sizes, $page-sizes);
+@include herman-add('sizes', 'page-sizes', $page-sizes, 'size');
 
 
 // Column Sizes
@@ -126,4 +131,5 @@ $column-sizes: (
   'wide-column': 90%,
 );
 
-@include accoutrement-add('sizes', 'column-sizes', $column-sizes);
+$sizes: map-merge($sizes, $column-sizes);
+@include herman-add('sizes', 'column-sizes', $column-sizes, 'size');
