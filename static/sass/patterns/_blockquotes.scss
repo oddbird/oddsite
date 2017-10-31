@@ -9,8 +9,8 @@ blockquote {
   @include center('medium-page');
   font-size: calc(1.125rem + 0.5vw);
   font-style: italic;
-  margin-bottom: size('double-gutter');
-  margin-top: size('double-gutter');
+  margin-bottom: size('spacer');
+  margin-top: size('spacer');
   position: relative;
 
   @include above('medium-page') {

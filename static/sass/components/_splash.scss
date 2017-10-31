@@ -1,103 +1,75 @@
 // Home Page Projects
 // ==================
 
+
 .splash-projects {
   align-items: stretch;
+  background-image: url('../images/wash-background.jpg');
+  background-size: cover;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  justify-content: space-evenly; //sass-lint:disable-line no-duplicate-properties
+  margin-top: -1px; // fix a rounding error
+  padding-bottom: size('gutter');
 
-  @include above('small-page') {
-    flex-direction: row;
-    min-height: 55vh;
+  // clearfix breaking the layout…
+  @include after(null) {
+    position: absolute;
   }
 }
 
-.splash-project {
-  & + & {
-    @include above('small-page') {
-      border-left: 2px solid color('background');
-    }
-  }
 
+.splash-headline {
+  @include contrasted('invert');
+  background-image: linear-gradient(
+    to top,
+    color('shadow'),
+    transparent size('quarter-shim')
+  );
+  flex: 0 0 100%;
+  font-size: inherit;
+  margin: 0 0 size('double-gutter');
+  opacity: 0.95;
+  padding: size('shim') size('gutter');
+}
+
+
+.splash-project {
+  display: grid;
+  flex: 1 1 size('splash-items');
+  grid-template-columns: 100%;
+  grid-template-rows: size('splash-logo-y') auto;
+  max-width: size('splash-items-max');
+  padding: size('shim');
+
+  @include above('medium-page') {
+    padding: size('shim') size('double-gutter');
+  }
+}
+
+
+.splash-logo {
   #{$link} {
-    align-items: flex-start;
-    background: color('background');
+    align-items: center;
+    align-self: center;
+    background-image: none; // remove link underline
+    color: color('caption');
     display: flex;
-    flex: 1 0 10%;
-    flex-direction: column;
     justify-content: center;
-    overflow: hidden;
-    padding: size('spacer') 0;
-    position: relative;
-    text-shadow: none;
-    transition: flex 250ms;
+    padding-bottom: size('shim');
+    transition: transform 300ms $ease-back, fill 200ms ease;
   }
 
   #{$focus} {
-    border-left: 2px solid color('invert');
-    z-index: 1;
-
-    @include above('small-page') {
-      flex: 10 0 20%;
-    }
-
-    @include above('medium-page') {
-      flex: 5 0 20%;
-    }
-
-    .splash-image {
-      filter: grayscale(0);
-      transform: translate3d(0, 0, 0) scale(1.05);
-    }
-
-    .splash-client,
-    .splash-title {
-      opacity: 1;
-    }
+    color: color('action-hover');
+    transform: scale(1.1);
   }
-}
 
-.splash-image {
-  @include position(0);
-  background: no-repeat scroll left top;
-  background-size: cover;
-  filter: grayscale(60%);
-  transition: all 200ms;
-}
-
-.splash-client,
-.splash-title {
-  @include contrasted('invert');
-  margin: 0;
-  padding: 0 size('gutter');
-  position: relative;
-  transition: opacity 200ms;
-  white-space: nowrap;
-
-  @include above('small-page') {
-    opacity: 0;
-  }
-}
-
-.splash-client {
-  @include title;
-  box-shadow: size('half-shim') negative('half-shim') size('half-shim') color('shadow');
-  margin-bottom: negative('half-shim');
-  z-index: 2;
-}
-
-.splash-title {
-  box-shadow: size('half-shim') size('half-shim') size('half-shim') color('shadow');
-}
-
-.jssass-book-cover {
-  float: left;
-  margin-right: size('pad');
-  max-width: 45%;
-}
-
-.jssass-book-summary {
-  @include above('small-page') {
-    padding-top: size('gutter');
+  svg {
+    flex: 0 1 size('splash-logo-x');
+    height: size('splash-logo-y');
+    margin: 0 auto;
+    overflow: hidden;
   }
 }

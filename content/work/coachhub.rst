@@ -4,6 +4,7 @@ pageclasses: work-layout
 grid_template: true
 image:
   - src: 'projects/coachhub.jpg'
+logo: 'orcas'
 client:
   - name: 'ORCAS'
     url: 'http://orcasinc.com'
@@ -24,12 +25,38 @@ tasks:
   - Project Architecture
   - User Experience Design
   - WCAG & HIPPA Compliant
+brag: |
+  We helped health-coaching experts at ORCAS
+  develop a web platform –
+  now used by the **US Military**,
+  **Coast Guard**,
+  and **National Institutes of Health** –
+  leading ORCAS to a **successful acquisition**.
 quotes:
   - text: |
-      OddBird really changed my thinking about
-      how successful outsourcing software development can be.
+      OddBird really changed my thinking
+      about how successful remote development can be.
+      We were able to hire them as a complete team,
+      **ready to start adding value immediately**,
+      working as closely as an internal team.
     name: 'Sara Taillon'
-    role: 'Chief Technical Officer at ORCAS'
+    role: 'CTO'
+    slug: 'remote'
+  - text: |
+      Since OddBird thinks about handoff from the beginning,
+      **maintenance has been super easy**.
+      For example, 100% unit test coverage was a given.
+      I never had to ask for it.
+    name: 'Sara Taillon'
+    role: 'CTO'
+    slug: 'handoff'
+  - text: |
+      **Deep expertise and knowledge**,
+      combined with **incredible communication**
+      and an easy-going style.
+    name: 'Sara Taillon'
+    role: 'CTO'
+    slug: 'experts'
 planning:
   - title: 'App Goals'
     icon: 'map'
@@ -102,7 +129,7 @@ Case Study: CoachHub
 ====================
 
 .. callmacro:: content.macros.j2#get_quotes
-  :slug: 'work/coachhub'
+  :page: 'work/coachhub'
 
 
 .. callmacro:: content.macros.j2#rst

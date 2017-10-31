@@ -1,6 +1,7 @@
 public: yes
 location: open-source
 grid_template: true
+logo: 'herman'
 image:
   - src: 'projects/herman.jpg'
 project:
@@ -12,6 +13,14 @@ project:
 contributors:
   - author: 'oddbird'
     role: 'creators'
+brag: |
+  Created by OddBird,
+  Herman provides
+  **fully-integrated style documentation** –
+  from **font specimens** and **color palettes** to
+  nunjucks macros and rendered components –
+  for **automated pattern libraries**,
+  and **style guides**.
 summary: |
   **Herman is an automated pattern-library generator,**
   built on top of SassDoc,

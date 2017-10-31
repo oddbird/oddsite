@@ -16,7 +16,7 @@
   {% set page = all_pages|filter_pages('index', 'eq', 'blog')|get_page %}
   {{ layout.header_image(page) }}
   {{ layout.show_headline(
-    main=['Posts Tagged ‘', tag.name, '’']|join(''),
+    main=['Posts Tagged ‘', tag.name, '’']|join,
     sub='More articles on the topic…',
     type=page.config.headline.type if page.config.headline else none) }}
 {% endblock list_intro %}

@@ -4,9 +4,8 @@
 .socials {
   // override main ul spacing
   [data-region='main'] & {
-    margin: 0 0 0 size('half-bird-face');
-    padding-bottom: size('shim');
-    padding-left: 0;
+    margin: 0;
+    padding: 0;
   }
 
   li {
@@ -26,6 +25,10 @@
 
 // Don't show the username for social icons in long bio
 [data-module='bird'] {
+  .name {
+    margin: 0;
+  }
+
   .icon-text {
     @include is-hidden;
   }
@@ -45,7 +48,7 @@
 
   // override main ul spacing
   [data-region='main'] & {
-    margin: size('gutter') 0;
+    margin: size('shim') 0;
     padding: 0;
   }
 }

@@ -4,6 +4,7 @@ pageclasses: work-layout
 grid_template: true
 image:
   - src: 'projects/moztrap.jpg'
+logo: 'mozilla'
 client:
   - name: 'Mozilla'
     url: 'https://www.mozilla.org/'
@@ -18,12 +19,19 @@ tasks:
   - User Experience Design
   - Project Architecture
   - Responsive Styles
+brag: |
+  We helped Mozilla **Quality Assurance** manage
+  their distributed process –
+  making international volunteer
+  **software-testing & reporting** a breeze
+  across languages and operating systems.
 quotes:
   - text: |
       I consider **Mozilla's MozTrap** to be one of the best
       open source test case management systems out there.
     name: 'Frank O’Hara'
-    role: 'MozTrap User'
+    role: 'User'
+    slug: 'best'
 summary: |
   Mozilla's next-generation test case management system,
   MozTrap manages extensive test suites

@@ -7,6 +7,7 @@ image:
     type: 'hero'
   - src: 'projects/trig-splash.jpg'
     type: 'splash'
+logo: 'sram'
 client:
   - name: 'SRAM'
     url: 'http://sram.com/'
@@ -21,19 +22,27 @@ tasks:
   - User Experience Design
   - Project Architecture
   - Responsive Styles
+brag: |
+  We worked with athletic professionals
+  at SRAM and Quarq
+  to deliver **real-time race analytics**
+  for spectators, commentators, and coaches –
+  now used by **IronMan** and **Enduro** races
+  around the world.
 quotes:
   - text: |
       Just like the Quarq power meters
       changed the playing field for power measurement,
       this new technology is going to change the way people watch races.
     name: 'Triathlon Magazine'
-    role: 'Quarq Race Intelligence Review'
     url: 'http://triathlonmagazine.ca/feature/introducing-quarq-race-intelligence-quollectors/'
+    slug: 'change'
   - text: |
       Seguimiento GPS de atletas en **IronMan Kona**
       gracias a **Quarq Race Intelligence**.
     name: 'Eduardo Mateos'
-    role: 'Quarq Race Intelligence User'
+    role: 'User'
+    slug: 'gracias'
 summary: |
   Quarq Race Intelligence captures and interprets
   race performance and state-of-play information,

@@ -4,6 +4,7 @@
 .author-summary {
   margin-top: size('bird-face');
   max-width: 100%;
+  padding-bottom: size('shim');
 
   .h-card {
     margin-left: auto;
@@ -16,33 +17,47 @@
       transform: translateX(negative('half-bird-face'));
     }
   }
+
+  .bird-face {
+    margin-right: negative('half-bird-face');
+    position: relative;
+    transform: translateY(-90%);
+
+    @include before('') {
+      @include position(85% 0 null);
+      background-color: color('background');
+      clip-path: polygon(0 0, 50% 100%, 100% 0);
+      height: size('half-bird-face');
+      z-index: -1;
+    }
+  }
 }
 
-// crop triangle out of svg for birds page
+
 .bird-face {
-  float: left;
-  height: size('bird-face');
-  margin-right: size('half-shim');
-  overflow: hidden;
+  color: color('text');
+
+  svg {
+    position: relative;
+    z-index: 1;
+  }
 }
+
+
+.bio-short {
+  @include before('') {
+    @include square('half-bird-face');
+    float: left;
+    shape-outside: polygon(0 0, 0% 100%, 100% 0);
+  }
+}
+
 
 .bio {
   clear: both;
 }
 
-.bio-short {
-  padding-left: size('half-bird-face');
-  padding-top: size('pixel'); // hack to get margin to to work
-}
 
 [data-size='face'] {
-  color: color('text');
-  float: left;
-  height: size('bird-face-tall');
-  width: size('bird-face');
-
-  .author-summary & {
-    shape-outside: polygon(0 0, size('bird-face') 0, size('half-bird-face') size('half-bird-face'));
-    transform: translateY(-65%);
-  }
+  @include square('bird-face');
 }

@@ -6,13 +6,16 @@ headline:
 image:
   - src: 'blog/2017/initial-letter/drop-caps.jpg'
 quotes:
-  - text: 'OddBird really changed my thinking about
-      how successful outsourcing software development can be.'
+  - text: |
+      OddBird really changed my thinking about
+      how successful outsourcing software development can be.
     name: 'Sara Taillon'
     url: 'http://orcasinc.com'
-    role: 'ORCAS CTO'
+    role: 'CTO'
+    slug: 'outsource'
   - text: 'Another Great quote.'
     name: 'Some Client'
+    slug: 'great'
 summary: |
   This is that short summary that appears on archive pages and as the default
   summary when shared on social media.
@@ -151,28 +154,34 @@ but doesn't imply citation from another source:
 
 The `get_quotes` macro can be used to access `quotes`,
 in the YAML page metadata.
-This requires a ``:slug:`` argument (see below)
+This requires a ``:page:`` argument (see below)
 to access the correct page data.
-You can also pass an ``:index:`` argument
-to select a specific quote by number (1-indexed),
-or set the index to ``none | false``
-to get a list of all quotes (default).
+You can also pass a ``:slug:`` argument
+to select a specific quote by name,
+or a ``:count:`` argument
+to get a list of that many quotes.
+If neither ``:slug:`` or ``:count:`` are provided,
+a list of all quotes will be returned by default.
 
 .. callmacro:: content.macros.j2#get_quotes
-  :slug: 'docs/sample'
+  :page: 'docs/sample'
 
 The YAML data should be structured as follows:
 
 .. code:: yaml
 
   quotes:
-    - text: 'OddBird really changed my thinking about
-        how successful outsourcing software development can be.'
+    - text: |
+        OddBird really changed my thinking about
+        how successful outsourcing software development can be.
       name: 'Sara Taillon'
       url: 'http://orcasinc.com'
-      role: 'ORCAS CTO'
+      role: 'CTO'
+      slug: 'outsource'
+
     - text: 'Another Great quote.'
       name: 'Some Client'
+      slug: 'great'
 
 
 Using Macros

@@ -6,14 +6,17 @@
   RST Content Blocks
   ------------------
 #}
-{% macro rst(content=none, tag=none) %}
+{% macro rst(
+  content=none,
+  tag=none
+) %}
   {% if (tag == none) or (tag == 'start') %}
     <div class="content-block">
       <div class="content-block-inner">
   {% endif %}
 
   {% if (tag == none) %}
-    {% set content = content if (content != none) else caller() %}
+    {% set content = content|rst if (content != none) else caller() %}
     {{ content|safe }}
   {% endif %}
 
@@ -28,7 +31,6 @@
   Dividers
   --------
 #}
-
 {% macro divider() %}
   <div class="separator"></div>
 {% endmacro %}
@@ -38,7 +40,12 @@
   Icon Blocks
   -----------
 #}
-{% macro icon_block(title, slug, data, intro=none) %}
+{% macro icon_block(
+  title,
+  slug,
+  data,
+  intro=none
+) %}
   {% set page = all_pages|filter_pages('slug', 'eq', slug)|get_page %}
   {% set data = page.config[data] %}
   {% set intro = page.config[intro] if page.config[intro] else intro %}
@@ -60,7 +67,9 @@
 {% endmacro %}
 
 
-{% macro icon_block_item(item) %}
+{% macro icon_block_item(
+  item
+) %}
   <div class="icon-blocks">
     <div class="icon-block">
       {% set icon = utility.icon(item.icon) %}
@@ -91,7 +100,12 @@
   Quotes
   ------
 #}
-{% macro blockquote(content=none, name=none, url=none, role=none) %}
+{% macro blockquote(
+  content=none,
+  name=none,
+  url=none,
+  role=none
+) %}
   {% set content = content if (content != none) else caller() %}
 
   <blockquote>
@@ -101,7 +115,10 @@
       <footer class="attribution">
       <cite>
         {% set display_name = name if role else utility.link_if(name, url) %}
-        —{{ display_name }}{% if role %}, {{ utility.link_if(role, url) }}{% endif %}
+        —{{ display_name }}
+        {%- if role -%},
+          <b>{{ utility.link_if(role, url) }}</b>
+        {%- endif -%}
       </cite>
       </footer>
     {% endif %}
@@ -109,30 +126,59 @@
 {% endmacro %}
 
 
-{% macro pullquote(content=none) %}
+{% macro pullquote(
+  content=none
+) %}
   {% set content = content if (content != none) else caller() %}
 
   <div class="pullquote">
-    <p>{{ content|safe }}</p>
+    {{ content|rst }}
   </div>
 {% endmacro %}
 
 
-{% macro get_quotes(slug, index=none) %}
-  {% set page = all_pages|filter_pages('slug', 'eq', slug)|get_page %}
+{% macro get_quotes(
+  page,
+  slug=none,
+  count=none
+) %}
+  {% set page = all_pages|filter_pages('slug', 'eq', page)|get_page if (page is string) else page %}
+  {% set client = page.config.client[0] if page.config.client else none %}
 
-  {% if index %}
-    {% set quote = page.config.quotes[index - 1] %}
-    {{ blockquote(quote.text, quote.name, quote.url, quote.role) }}
+  {% if slug %}
+    {% set quote = page.config.quotes|selectattr('slug', 'equalto', slug)|list %}
+    {% set quote = quote[0] %}
+    {% set role = get_role(quote.role, client.name) %}
+    {{ blockquote(quote.text, quote.name, quote.url, role) }}
   {% else %}
     {% for quote in page.config.quotes %}
-      {{ blockquote(quote.text, quote.name, quote.url, quote.role) }}
+      {% if (count == none) or (loop.index0 < count) %}
+        {% set role = get_role(quote.role, client.name) %}
+        {{ blockquote(quote.text, quote.name, quote.url, role) }}
+      {% endif %}
     {% endfor %}
   {% endif %}
 {% endmacro %}
 
 
-{% macro gallery(title, slug, data, caption=none, class=none, min_image=none, duo=false) %}
+{% macro get_role(role=none, client=none) -%}
+  {{ [role, 'at', client]|join(' ') if (role and client and role != 'User') else role }}
+{%- endmacro %}
+
+
+{#
+  Image Galleries
+  ---------------
+#}
+{% macro gallery(
+  title,
+  slug,
+  data,
+  caption=none,
+  class=none,
+  min_image=none,
+  duo=false
+) %}
   {% set page = all_pages|filter_pages('slug', 'eq', slug)|get_page %}
   {% set data = page.config[data] %}
 
@@ -146,7 +192,7 @@
 
       <figure class="{{ class }}" {{ utility.attr_if('style', style) }}>
         {% for item in data %}
-          {% set img = item.image if ('://' in item.image) else ['/static/images/', item.image]|join('') %}
+          {% set img = item.image if ('://' in item.image) else ['/static/images/', item.image]|join %}
           {% set img = '<img src="' + img + '" alt="' + item.alt + '" class="gallery-image" />' %}
 
           <div class="gallery-item">
@@ -169,6 +215,49 @@
 {% endmacro %}
 
 
+{#
+  Image Blocks
+  ------------
+#}
+{% macro image_block(
+  image,
+  alt='',
+  headline=none,
+  url=none,
+  content=none
+) %}
+  {% set content = content if (content != none) else caller() %}
+
+  {% call rst() %}
+    <div class="image-block extend-left">
+      {% set img = '<img src="' + image + '" alt="' + alt + '" class="imageblock-image" />' %}
+      {{ utility.link_if(img|safe, url, 'imageblock-link') }}
+
+      <div class="imageblock-content">
+        {% if headline %}
+          <h2 class="imageblock-title">{{ headline }}</h2>
+        {% endif %}
+        {{ content|rst }}
+      </div>
+    </div>
+  {% endcall %}
+{% endmacro %}
+
+
+{% macro media_block(media, content=none) %}
+  {% set content = content if (content != none) else caller() %}
+
+  <div class="media-block">
+    <div class="media-image">{{ media }}</div>
+    <div class="media-content">{{ content }}</div>
+  </div>
+{% endmacro %}
+
+
+{#
+  Link Lists
+  ----------
+#}
 {% macro link_list(title, tag=none, slug=none, data=none) %}
   {% set entries = get_blog_entries_by_tag(tag) if tag else [] %}
   {% set page = all_pages|filter_pages('slug', 'eq', slug)|get_page if slug else none %}
@@ -205,7 +294,6 @@
       {% endif %}
     </div>
   </section>
-
 {% endmacro %}
 
 
@@ -228,3 +316,23 @@
     {{ caller() }}
   </button>
 {% endmacro %}
+
+
+{#
+  Project Links
+  -------------
+#}
+{%- macro project_link(
+  page,
+  allow_external=false,
+  allow_fallback=true
+) -%}
+  {%- set project = page.config.project[0] if page.config.project else none -%}
+  {%- set has_page = true if (project.owner or project.case_study) else false -%}
+  {%- set fallback = '/open-source/' if page.config.contributors else '/work/' -%}
+  {%- set fallback = fallback if allow_fallback else none -%}
+  {%- set local = '/' if (page.slug == 'index') else ['/', page.slug[:-6] if page.slug.endswith('/index') else page.slug, '/']|join -%}
+  {%- set local = local if (project and has_page) else none -%}
+  {%- set external = project.url if (project and allow_external) else none -%}
+  {{ local or external or fallback }}
+{%- endmacro -%}

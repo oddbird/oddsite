@@ -2,20 +2,20 @@
 
 {% macro card(page, details=false) %}
   {% if details %}
-    <div class="h-card">
-      {{ utility.icon(page.config.bird, size='face') }}
+    <div class="h-card media-block">
+      {{ face(page.config.bird, 'media-image') }}
 
-      <div class="bio-short">
+      <div class="bio-short media-content">
         {{ page.render_summary() }}
-      </div>
 
-      <ul class="socials">
-        {% for link in page.config.social[0] %}
-          {% if link in ['twitter', 'github'] %}
-            <li>{{ get_social(link, page.config.social[0][link]) }}</li>
-          {% endif %}
-        {% endfor %}
-      </ul>
+        <ul class="socials">
+          {% for link in page.config.social[0] %}
+            {% if link in ['twitter', 'github'] %}
+              <li>{{ get_social(link, page.config.social[0][link]) }}</li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </div>
     </div>
   {% else %}
     <span class="h-card">
@@ -25,8 +25,8 @@
 {% endmacro %}
 
 
-{% macro face(author) %}
-  <div class="bird-face">
+{% macro face(author, class=none) %}
+  <div class='bird-face' {{ utility.attr_if('class', class) }}>
     {{ utility.icon(author, size='face') }}
   </div>
 {% endmacro %}
@@ -40,11 +40,37 @@
 {% endmacro %}
 
 
-{% macro get_bird_name(name) -%}
-  {%- set page = all_pages|filter_pages('bird', 'eq', name)|get_page -%}
-  {%- set name = 'OddBird' if (name == 'oddbird') else name -%}
-  {{ page.title or name }}
+{% macro get_bird_name(
+  author=none,
+  page=none,
+  full_name=true
+) -%}
+  {%- set page = page if page else all_pages|filter_pages('bird', 'eq', author)|get_page -%}
+  {%- set author = author if author else page.config.bird -%}
+  {%- set name = 'OddBird' if (author == 'oddbird') else author|capitalize -%}
+  {%- set name = page.title if (full_name and page) else name -%}
+  {{ name }}
 {%- endmacro %}
+
+
+{% macro get_bird_url(
+  author=none,
+  page=none,
+  blog=false
+) %}
+  {%- set page = page if page else all_pages|filter_pages('bird', 'eq', author)|get_page -%}
+  {%- set author = author if author else page.config.bird -%}
+  {%- set former = page.config.former[0] if page.config.former else none -%}
+  {%- set bio = former.url if former else ['/birds/#bird', author]|join('-') -%}
+
+  {%- if blog -%}
+    {%- set has_posts = get_blog_entries_by_bird(author)|length -%}
+    {%- set blog_url = link_to('author', author=author) if has_posts else none -%}
+    {{ blog_url or bio }}
+  {%- else -%}
+    {{ bio }}
+  {%- endif -%}
+{% endmacro %}
 
 
 {% macro get_og_author(author) -%}
@@ -63,19 +89,17 @@
 {%- endmacro %}
 
 
-{% macro name_link(author, page=none, fallback=none) %}
-  {# Get the birds's page #}
-  {% set page = page if page else all_pages|filter_pages('bird', 'eq', author)|get_page %}
-  {# Set their name, if it's available #}
-  {% set name = 'OddBird' if (author == 'oddbird') else page.title or author %}
-  {# Find out if they've written any posts #}
-  {% set has_posts = get_blog_entries_by_bird(author)|length %}
-  {# Get their author-url, if it's available #}
-  {% set blog_url = link_to('author', author=author) if has_posts else none %}
-  {# Link to blog-archive, birds-section, or none #}
-  {% set url = blog_url or fallback or (['/birds/#bird', author]|join('-') if page else '/') %}
+{% macro name_link(
+  author=none,
+  page=none,
+  blog=false,
+  full_name=true
+) %}
+  {% set name = get_bird_name(author, page, full_name) %}
+  {% set url = get_bird_url(author, page, blog) %}
+  {% set url = none if ('None' in url) else url %}
 
-  {{ utility.link_if(name, url) }}
+  {{ utility.link_if(name, url, class='hcard') }}
 {% endmacro %}
 
 
