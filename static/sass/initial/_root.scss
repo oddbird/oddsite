@@ -8,6 +8,9 @@
   background-position: bottom right;
   background-repeat: no-repeat;
   background-size: size('background') auto;
+  // .separator and .extend-full cause scroll issues in some browsers
+  max-width: 100vw;
+  overflow-x: hidden;
 }
 
 // this could be a candidate for accoutrement-init…
