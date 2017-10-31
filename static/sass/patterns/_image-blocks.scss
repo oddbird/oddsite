@@ -19,6 +19,7 @@
 .imageblock-link {
   &[href] {
     background-image: none; // remove link underline
+    display: block;
     transition: transform 300ms $ease-back;
 
     #{$focus} {
@@ -36,7 +37,11 @@
 }
 
 .imageblock-image {
-  margin: negative('double-gutter') 0;
+  margin-bottom: size('shim');
+
+  @include above('small-page') {
+    margin: negative('double-gutter') 0;
+  }
 }
 
 .imageblock-content {
