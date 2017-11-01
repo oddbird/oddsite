@@ -2,7 +2,10 @@
 Denormalize some data in `config` for easier access from templates.
 """
 
-from collections import defaultdict
+from collections import (
+    OrderedDict,
+    defaultdict,
+)
 
 
 def setup(builder):
@@ -18,5 +21,11 @@ def setup(builder):
     for page in pages:
         for author in page.config.get('contributors', []):
             author_projects[author['author']].append(page)
+
+    author_projects = OrderedDict([
+        (k, sorted(author_projects[k], key=lambda x: x.title))
+        for k
+        in sorted(author_projects.keys())
+    ])
 
     builder.config.stack[-1]['oss_by_author'] = author_projects
