@@ -18,7 +18,7 @@ summary: |
   .. callmacro:: content.macros.j2#link_button
     :url: '/contact/'
 
-    Schedule a consultation
+    Schedule a free consultation
 
   .. _`web application strategy, design, and development`: /work/
 
