@@ -1,21 +1,16 @@
 public: yes
 location: speaking
-image:
-  - src: 'pages/speaking.jpg'
-headline:
-  - tagline: "Sharing what we’ve learned…"
-    type: 'About Us'
-after:
-  - include: 'community/_events.html.j2'
-    title: 'Upcoming Events'
-    slug: 'speaking'
-    data: 'events'
-  - include: 'community/_events.html.j2'
-    title: 'Speaking History'
-    slug: 'speaking'
-    data: 'events_past'
+events:
+  - venue: 'CSS Dev Conf'
+    url: 'http://2017.cssdevconf.com/'
+    date: ['10', '9', '2017']
+    adr:
+      city: 'New Orleans'
+      state: 'LA'
+    who:
+      - author: 'miriam'
+        title: 'Don’t Use My Grid System (or any others)'
 
-events: # Future Talks
   - venue: 'Refresh Denver'
     url: 'https://www.meetup.com/refreshdenver/events/241230495/?from=ref'
     date: ['09', '13', '2017']
@@ -27,17 +22,17 @@ events: # Future Talks
         title: 'Code Patterns for Pattern Making'
         slides: 'http://oddbooksapp.com/book/pattern-making'
 
-  - venue: 'CSS Dev Conf'
-    url: 'http://2017.cssdevconf.com/'
-    date: ['10', '9', '2017']
+  - venue: 'Women Who Code Fort Collins'
+    url: 'https://www.meetup.com/Women-Who-Code-Fort-Collins/events/242033627/'
+    date: ['08', '30', '2017']
     adr:
-      city: 'New Orleans'
-      state: 'LA'
+      city: 'Fort Collins'
+      state: 'CO'
     who:
       - author: 'miriam'
-        title: 'Don’t Use My Grid System (or any others)'
+        title: 'Practical Layouts, Past & Future'
+        slides: 'https://oddbooksapp.com/book/wwc-layout'
 
-events_past: # Past Talks
   - venue: 'DjangoCon'
     url: 'https://2017.djangocon.us/'
     date: ['8', '14', '2017']
@@ -81,7 +76,7 @@ events_past: # Past Talks
       - author: 'stacy'
         title: 'The Great State of Design with CSS Grid Layout & Friends'
 
-  - venue: 'Sass Hack Denver'
+  - venue: 'Front Range Front End'
     url: 'https://www.meetup.com/Sass-Hack-Denver/events/239687418/'
     date: ['6', '1', '2017']
     adr:
@@ -489,24 +484,6 @@ events_past: # Past Talks
         title: "Reverse-engineering Ian Bicking's brain: inside pip and virtualenv"
         video: 'http://pyvideo.org/video/389/pycon-2011--reverse-engineering-ian-bicking--39-s'
 
-summary: |
-  **We're constantly learning**
-  from the `freely-shared`_ inspiration and mentoring of others –
-  through blogs, podcasts, and conference talks –
-  so we'd like to pass that generosity along:
-  talking and writing
-  about the tools and practices
-  that have helped improve our work,
-  how we think and experiment,
-  and everything we've learned along the way.
 
-  .. callmacro:: content.macros.j2#link_button
-    :url: '/contact/'
-
-    Bring a bird to your conference, team, or meetup
-
-  .. _freely-shared: /open-source/
-
-
-Speaking Engagements
-====================
+Speaking History
+================

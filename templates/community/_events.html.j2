@@ -6,7 +6,7 @@
 {% set data = data.config if module.slug else data %}
 {% set events = data[module.data or 'events'] %}
 
-{% if events|length %}
+{% if events and events|length %}
   <section data-module="conferences" {{ utility.attr_if('id', module.id) }}>
     <h2>
       {% set title = module.title or 'Conferences and Events' %}
