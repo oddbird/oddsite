@@ -25,14 +25,14 @@ quotes:
       **OddBird always thinks about the project goals.**
       I defer to the team expertise now,
       which makes a better result.
-    name: 'Rohit Puranic'
+    name: 'Rohit Puranik'
     role: 'Founder'
     slug: 'goals'
   - text: |
       I liked the way OddBird presented themselves.
       **They were curious and asked detailed questions
       to really understand what was needed.**
-    name: 'Rohit Puranic'
+    name: 'Rohit Puranik'
     role: 'Founder'
     slug: 'curious'
 summary: |
