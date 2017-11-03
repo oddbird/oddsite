@@ -3,13 +3,13 @@ speakers: [miriam]
 events:
   - venue: 'CSS Dev Conf'
     url: 'http://2017.cssdevconf.com/'
-    date: [10, 9, 2017]
+    date: [2017, 10, 9]
     adr: 'New Orleans, LA'
     note: '"Best Of" Audience-Choice Award'
     slides: 'https://www.oddbooksapp.com/book/css-layout'
   - venue: 'DjangoCon US'
     url: 'https://2017.djangocon.us/'
-    date: [8, 14, 2017]
+    date: [2017, 8, 14]
     adr: 'Spokane, WA'
     slides: 'https://www.oddbooksapp.com/book/djangocon-layout'
 brag: |

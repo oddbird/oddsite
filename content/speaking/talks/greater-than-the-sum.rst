@@ -1,10 +1,10 @@
 public: yes
-speaker: [david]
+speakers: [david]
 slides: 'https://www.oddbooksapp.com/book/web-projects'
 events:
   - venue: 'Plone Digital Experience Conference'
     url: 'http://2016.ploneconf.org/'
-    date: [10, 20, 2016]
+    date: [2016, 10, 20]
     adr: 'Boston, MA'
 summary: |
   Greater than the sum of the parts:

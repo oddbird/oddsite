@@ -4,6 +4,7 @@
 {% import "layout/macros.j2" as page %}
 {% import "blog/utility.macros.j2" as blog %}
 {% import 'birds/utility.macros.j2' as birds %}
+{% import 'community/events.macros.j2' as events %}
 
 {% block title -%}
   {%- if config.location == 'home' -%}
@@ -46,6 +47,10 @@
     <div data-module="rst-body" {% if config.grid_template %}class="grid-template"{% endif %}>
       {{ rst.fragment }}
     </div>
+  {% endif %}
+
+  {% if config.speakers and config.events %}
+    {{ events.list(config.events) }}
   {% endif %}
 
   {% if ctx.author %}

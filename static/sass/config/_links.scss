@@ -32,30 +32,31 @@ $focus: '&:hover, &:focus, &:active';
 // @TODO: Add docs to link-color!
 //
 @mixin link-color-for(
-  $background
+  $background: 'background'
 ) {
   $contrast: contrast($background, 'contrast-light', 'action');
   $hover: color($background ('lighten': 55%, 'saturate': 100%));
   $hover: if($contrast == color('action'), color('action-hover'), $hover);
 
   a {
-    &:not(.btn) {
-      &,
-      #{$link}  {
-        @include text-underline($contrast, $background);
-      }
-
-      #{$focus} {
-        @include text-underline-color($hover);
-      }
+    #{$link}  {
+      @include text-underline($contrast, $background);
     }
 
+    #{$focus} {
+      @include text-underline-color($hover);
+    }
+
+    &.btn,
     &.icon-link {
       // no underline on whole link. Going to target text only.
       #{$link} {
         background-image: none;
+        text-shadow: none;
       }
+    }
 
+    &.icon-link {
       // change underline color when hover over icon too
       #{$focus} {
         .icon-text {

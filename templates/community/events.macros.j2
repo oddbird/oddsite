@@ -1,0 +1,46 @@
+{% import "utility.macros.j2" as utility %}
+
+{% macro speaking(author=none, range='future') %}
+  {% set events = all_pages|filter_pages('speakers')|filter_pages('events') %}
+  {% set events = events|filter_pages('speakers', 'has', author) if (author and events|length) else events %}
+  {% set events = events|map(attribute='config')|map(attribute='events') if events else none %}
+
+  {% if events %}
+    <section data-module="events" class="{{ range }}-events">
+      {% for event in events %}
+        {{ event|pprint }}
+        <br><br>
+      {% endfor %}
+    </section>
+  {% endif %}
+{% endmacro %}
+
+
+{% macro list(events, all=true) %}
+  {% for event in events|sort(attribute='date') %}
+    {% if all or ('true' in is_future(event)) %}
+      <article class="event">
+        <time>{{ event.date|join('/') }}</time>
+        {{ utility.link_if(event.venue, event.url) }}
+      </article>
+    {% endif %}
+  {% endfor %}
+{% endmacro %}
+
+
+{% macro is_future(event) %}
+  {% set year = event.date[2] %}
+  {% set month = event.date[0] %}
+  {% set day = event.date[1] %}
+
+  {% set year_now = true if (year == current_time.year) else false %}
+  {% set month_now = true if (month == current_time.month) else false %}
+  {% set day_now = true if (day == current_time.day) else false %}
+  {% set future = true if (year > current_time.year) else false %}
+  {% set future = future or (year_now and (month > current_time.month)) %}
+  {% set future = future or (year_now and month_now and (day > current_time.day)) %}
+
+  {% if future %}
+    true
+  {% endif %}
+{% endmacro %}

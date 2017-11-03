@@ -29,7 +29,7 @@ $text-sizes: (
   'medium': 'root' ('text-ratio': 0.7),
   'caption': 'root',
   'task': 'root' ('text-ratio': -0.125),
-  'social': 'root' ('text-ratio': -0.25),
+  'social': 'task',
 );
 
 $sizes: map-merge($sizes, $text-sizes);

@@ -1,13 +1,15 @@
 {% import "utility.macros.j2" as utility %}
+{% import "content.macros.j2" as content %}
 {% import "blog/utility.macros.j2" as blog %}
 {% import "birds/utility.macros.j2" as birds %}
-{% import "content.macros.j2" as content %}
+{% import "community/events.macros.j2" as events %}
 
 
 {% macro details(page) %}
-  <div data-module="rst-body" class="grid-template">
-    HELLO WORLD
-  </div>
+  {% set author = page.config.bird %}
+  {{ events.speaking(author) }}
+  {{ feature_talks(author) }}
+  {{ oss_list(author, page) }}
 {% endmacro %}
 
 
@@ -16,25 +18,52 @@
   {% set author = author or page.config.bird %}
 
   <div data-module="bird" class="h-card" id="bird-{{ author }}">
+    <h2 class="name">
+      {{ birds.name_link(author, page) }}
+    </h2>
+
     {% call content.media_block(
       media=birds.face(author)
     ) %}
-      <header>
-        <h2 class="name">
-          {{ birds.name_link(author, page) }}
-        </h2>
-
-        {{ birds.social_list(page.config.social) }}
-      </header>
+      {{ birds.social_list(
+        data=page.config.social,
+        bird_name=author|capitalize
+        ) }}
     {% endcall %}
 
     <div class="bio">
-      {{ page.render_contents() }}
+      {{ page.render_summary() }}
     </div>
 
-    {{ oss_list(author, page) }}
-    {{ blog_list(posts=get_blog_entries_by_bird(author)) }}
+    {{ content.link_button(
+      url=birds.get_bird_url(author, page),
+      content="See %s's activity" % author|capitalize
+      ) }}
   </div>
+{% endmacro %}
+
+
+{% macro feature_talks(author=none) %}
+  {% set talks = all_pages|filter_pages('speakers')|filter_pages('brag') %}
+  {% set talks = talks|filter_pages('speakers', 'has', author) if author else talks %}
+
+  {% if talks|length %}
+    <section data-module="feature-talks">
+      {% for talk in talks %}
+        <article class="feature-talk">
+          <h3 class="feature-talk-title">
+            {{ utility.link_if(
+              url=content.page_link(talk),
+              content=talk.title
+              ) }}
+          </h3>
+          <div class="feature-talk-brag">
+            {{ talk.config.brag|rst }}
+          </div>
+        </article>
+      {% endfor %}
+    </section>
+  {% endif %}
 {% endmacro %}
 
 
@@ -61,7 +90,7 @@
 
   {% if oss %}
     <div class="bird-posts">
-      <h3>Open Source</h3>
+      <h3>Open Source Contributions</h3>
       <ul class="title-list">
         {% for item in oss %}
           {% set project = item.config.project[0] %}

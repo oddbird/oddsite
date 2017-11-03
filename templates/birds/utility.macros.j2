@@ -1,8 +1,8 @@
 {% import "utility.macros.j2" as utility %}
 
-{% macro card(page, details=false) %}
+{% macro card(page, details=false, class=none) %}
   {% if details %}
-    <div class="h-card media-block">
+    <div class="h-card media-block{{ [' ', class]|join if class else '' }}">
       {{ face(page.config.bird, 'media-image') }}
 
       <div class="bio-short media-content">
@@ -52,7 +52,7 @@
 {% macro get_bird_url(
   author=none,
   page=none,
-  blog=false
+  blog=true
 ) %}
   {%- set page = page if page else all_pages|filter_pages('bird', 'eq', author)|get_page -%}
   {%- set author = author if author else page.config.bird -%}
@@ -88,7 +88,7 @@
 {% macro name_link(
   author=none,
   page=none,
-  blog=false,
+  blog=true,
   full_name=true
 ) %}
   {% set name = get_bird_name(author, page, full_name) %}
@@ -99,15 +99,15 @@
 {% endmacro %}
 
 
-{% macro social_list(data, filters=none) %}
+{% macro social_list(data, filters=none, bird_name=none) %}
   {% set data = data[0] if data else none %}
 
   {% if data %}
     <ul class="socials">
       {% for link in data %}
         {% if (not filters) or (link in filters) %}
-          <li>
-            {{ get_social(link, data[link]) }}
+          <li class="social-item">
+            {{ get_social(link, data[link], bird_name) }}
           </li>
         {% endif %}
       {% endfor %}
@@ -116,27 +116,30 @@
 {% endmacro %}
 
 
-{% macro get_social(name, user) %}
+{% macro get_social(name, user, bird_name=none) %}
   {% set locations = {
     'twitter': 'https://twitter.com/%s/',
     'github': 'https://github.com/%s/',
-    'lanyrd': 'https://lanyrd.com/profile/%s/',
     'stackoverflow': 'https://stackoverflow.com/users/%s/',
     'dribbble': 'https://dribbble.com/%s/',
-    'codepen': 'https://codepen.io/%s/'
+    'codepen': 'https://codepen.io/%s/',
   } %}
 
   {% set displays = {
     'twitter': '@%s',
     'github': '%s',
-    'dribbble': '%s'
+    'dribbble': '%s',
+    'codepen': '%s',
   } %}
 
   {% set url = locations[name]|format(user) if locations[name] else none %}
-  {% set username = displays[name]|format(user) if displays[name] else name %}
+  {% set username = displays[name]|format(user) if displays[name] else (bird_name or user) %}
 
-  <a class="icon-link" href="{{ url }}" rel="me">
-    {{ utility.icon(name) }}
-    <span class="icon-text">{{ username or user }}</span>
-  </a>
+  <span class="social-item">
+    <a class="icon-link" href="{{ url }}" rel="me">
+      {{ utility.icon(name) }}
+      <span class="icon-text">{{ username }}</span></a>
+    <span class="meta-preposition">on</span>
+    {{ name|capitalize }}
+  </span>
 {% endmacro %}

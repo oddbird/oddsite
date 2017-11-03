@@ -338,8 +338,14 @@
   {%- set has_page = true if (project.owner or project.case_study) else false -%}
   {%- set fallback = '/open-source/' if page.config.contributors else '/work/' -%}
   {%- set fallback = fallback if allow_fallback else none -%}
-  {%- set local = '/' if (page.slug == 'index') else ['/', page.slug[:-6] if page.slug.endswith('/index') else page.slug, '/']|join -%}
-  {%- set local = local if (project and has_page) else none -%}
   {%- set external = project.url if (project and allow_external) else none -%}
+  {%- set local = page_link(page) if (project and has_page) else none -%}
   {{ local or external or fallback }}
 {%- endmacro -%}
+
+
+{%- macro page_link(page) -%}
+  {%- set url = '/' if (page.slug == 'index') else ['/', page.slug[:-6] if page.slug.endswith('/index') else page.slug, '/']|join -%}
+  {{ url }}
+{%- endmacro -%}
+

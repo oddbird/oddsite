@@ -80,6 +80,7 @@ comments: false
 
 active_modules: [
   jinja_macros,
+  current,
   typogrify,
   rst,
   images,

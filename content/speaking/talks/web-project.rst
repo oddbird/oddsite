@@ -1,5 +1,5 @@
 public: yes
-speaker: [miriam]
+speakers: [miriam]
 slides: 'https://www.oddbooksapp.com/book/web-projects'
 brag: |
   Designed for **non-technical founders**,

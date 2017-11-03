@@ -3,11 +3,11 @@ speakers: [stacy]
 events:
   - venue: 'Front-End Camp'
     url: 'http://chicagocamps.org/events/2017/front-end-camp/'
-    date: [6, 3, 2017]
+    date: [2017, 6, 3]
     adr: 'Chicago, IL'
   - venue: 'CSSDay.io'
     url: 'http://cssday.io/'
-    date: [12, 3, 2016]
+    date: [2016, 12, 3]
     adr: 'Chandler, AZ'
     slides: https://www.slideshare.net/Funstacy/the-great-state-of-design-with-css-grid-layout-and-friends
 brag: |
