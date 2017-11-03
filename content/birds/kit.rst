@@ -1,9 +1,11 @@
 public: yes
-bird: kit
-role: 'server-side developer'
-adr:
-  - city: 'Boulder'
-    state: 'CO'
+bird: 'kit'
+headline:
+  - tagline: 'Senior Python Developer'
+    type: 'Meet The Birds…'
+adr: 'Boulder, CO'
+image:
+  - src: 'pages/faces-hero.jpg'
 social:
   - twitter: 'wlonk'
     github: 'wlonk'

@@ -31,20 +31,8 @@ Software for Humans
   :page: 'work/coachhub'
   :slug: 'remote'
 
-
-.. -------------------------------------
-.. callmacro:: content.macros.j2#divider
-.. -------------------------------------
-
-
 .. callmacro:: projects/splash.macros.j2#splash_list
   :headline: 'Featured Partners'
-
-
-.. -------------------------------------
-.. callmacro:: content.macros.j2#divider
-.. -------------------------------------
-
 
 .. callmacro:: content.macros.j2#get_quotes
   :page: 'work/medcurbside'
@@ -75,21 +63,9 @@ Software for Humans
   :page: 'work/coachhub'
   :slug: 'handoff'
 
-
-.. -------------------------------------
-.. callmacro:: content.macros.j2#divider
-.. -------------------------------------
-
-
 .. callmacro:: projects/splash.macros.j2#splash_list
   :has: 'contributors'
   :headline: 'Open Source Leadership'
-
-
-.. -------------------------------------
-.. callmacro:: content.macros.j2#divider
-.. -------------------------------------
-
 
 .. callmacro:: content.macros.j2#blockquote
   :content: 'Miriam has become one of the most notable

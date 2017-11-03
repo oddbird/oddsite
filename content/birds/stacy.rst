@@ -1,9 +1,11 @@
 public: yes
-bird: stacy
-role: 'user-experience developer'
-adr:
-  - city: 'Aurora'
-    state: 'IL'
+bird: 'stacy'
+headline:
+  - tagline: 'Senior User Experience Designer & Developer'
+    type: 'Meet The Birds…'
+image:
+  - src: 'pages/faces-hero.jpg'
+adr: 'Aurora, IL'
 social:
   - twitter: 'stacykvernmo'
     github: 'stacyk'

@@ -1,9 +1,11 @@
 public: yes
 bird: 'david'
-role: 'server-side developer'
-adr:
-  - city: 'Seattle'
-    state: 'WA'
+headline:
+  - tagline: 'Senior Python Developer'
+    type: 'Meet The Birds…'
+image:
+  - src: 'birds/david.jpg'
+adr: 'Goshen, IN'
 social:
   - twitter: 'davisagli'
     github: 'davisagli'

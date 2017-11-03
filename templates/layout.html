@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 
 {% import 'utility.macros.j2' as utility %}
+{% import 'content.macros.j2' as content %}
 {% import 'layout/macros.j2' as layout %}
 
 {% block layout %}
@@ -18,10 +19,14 @@
         {{ layout.main_nav(config.nav) }}
       {% endblock %}
     </nav>
-    <div class="separator"></div>
+
+    {{ content.divider() }}
   </header>
 
-  <main data-region="main" class="{% if config.pageclasses %}{{ config.pageclasses }} {% endif %}{% if config.image %}has-image{% else %}no-image{% endif %}">
+  <main
+    data-region="main"
+    {{ utility.attr_if('class', config.pageclasses) }}
+    data-hero="{% block has_image %}{{ 'yes' if config.image else 'no' }}{% endblock %}">
     {% block body %}{% endblock body %}
 
     {% include 'contact/_cta.html.j2' %}

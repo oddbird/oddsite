@@ -20,21 +20,6 @@
 }
 
 
-.splash-headline {
-  @include contrasted('invert');
-  background-image: linear-gradient(
-    to top,
-    color('shadow'),
-    transparent size('quarter-shim')
-  );
-  flex: 0 0 100%;
-  font-size: inherit;
-  margin: 0 0 size('double-gutter');
-  opacity: 0.95;
-  padding: size('shim') size('gutter');
-}
-
-
 .splash-project {
   display: grid;
   flex: 1 1 size('splash-items');

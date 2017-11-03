@@ -1,9 +1,11 @@
 public: yes
-bird: sondra
-role: 'user-experience designer'
-adr:
-  - city: 'Denver'
-    state: 'CO'
+bird: 'sondra'
+headline:
+  - tagline: 'Senior User Experience & Brand Designer'
+    type: 'Meet The Birds…'
+image:
+  - src: 'blog/2017/typography/type.jpg'
+adr: 'Denver, CO'
 social:
   - twitter: 'sondraeby'
     github: 'sondrae'

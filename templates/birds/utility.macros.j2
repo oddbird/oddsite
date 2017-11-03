@@ -6,15 +6,11 @@
       {{ face(page.config.bird, 'media-image') }}
 
       <div class="bio-short media-content">
-        {{ page.render_summary() }}
-
-        <ul class="socials">
-          {% for link in page.config.social[0] %}
-            {% if link in ['twitter', 'github'] %}
-              <li>{{ get_social(link, page.config.social[0][link]) }}</li>
-            {% endif %}
-          {% endfor %}
-        </ul>
+        {{ page.config.short_bio|rst if page.config.short_bio else page.render_summary() }}
+        {{ social_list(
+          data=page.config.social,
+          filters=['twitter', 'github']
+          ) }}
       </div>
     </div>
   {% else %}
@@ -100,6 +96,23 @@
   {% set url = none if ('None' in url) else url %}
 
   {{ utility.link_if(name, url, class='hcard') }}
+{% endmacro %}
+
+
+{% macro social_list(data, filters=none) %}
+  {% set data = data[0] if data else none %}
+
+  {% if data %}
+    <ul class="socials">
+      {% for link in data %}
+        {% if (not filters) or (link in filters) %}
+          <li>
+            {{ get_social(link, data[link]) }}
+          </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  {% endif %}
 {% endmacro %}
 
 

@@ -1,15 +1,15 @@
 public: yes
-bird: jonny
-role: 'co-founder and front-end lead'
-adr:
-  - city: Goshen
-    state: IN
+bird: 'jonny'
+headline:
+  - tagline: 'Co-Founder & Front-End Lead'
+    type: 'Meet The Birds…'
+adr: 'Goshen, IN'
 social:
-  - twitter: jgerigmeyer
-    github: jgerigmeyer
+  - twitter: 'jgerigmeyer'
+    github: 'jgerigmeyer'
 og:
-  - facebook: jgerigmeyer
-    twitter: jgerigmeyer
+  - facebook: 'jgerigmeyer'
+    twitter: 'jgerigmeyer'
 summary: |
   `Jonny Gerig Meyer`_
   is an architect of clean,

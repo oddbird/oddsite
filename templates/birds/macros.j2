@@ -4,7 +4,14 @@
 {% import "content.macros.j2" as content %}
 
 
-{% macro section(author=none, page=none) %}
+{% macro details(page) %}
+  <div data-module="rst-body" class="grid-template">
+    HELLO WORLD
+  </div>
+{% endmacro %}
+
+
+{% macro list(author=none, page=none) %}
   {% set page = page or all_pages|filter_pages('bird', 'eq', author)|get_page %}
   {% set author = author or page.config.bird %}
 
@@ -17,12 +24,7 @@
           {{ birds.name_link(author, page) }}
         </h2>
 
-        <ul class="socials">
-          {% set links = page.config.social[0] %}
-          {% for link in links %}
-            <li>{{ birds.get_social(link, links[link]) }}</li>
-          {% endfor %}
-        </ul>
+        {{ birds.social_list(page.config.social) }}
       </header>
     {% endcall %}
 

@@ -1,5 +1,7 @@
 public: yes
 bird: 'claudina'
+image:
+  - src: 'pages/faces-hero.jpg'
 former:
   - dates: '2013-2015'
     url: 'https://twitter.com/itsmisscs'

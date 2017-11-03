@@ -1,92 +1,6 @@
 public: yes
 location: speaking
 events:
-  - venue: 'CSS Dev Conf'
-    url: 'http://2017.cssdevconf.com/'
-    date: ['10', '9', '2017']
-    adr:
-      city: 'New Orleans'
-      state: 'LA'
-    who:
-      - author: 'miriam'
-        title: 'Don’t Use My Grid System (or any others)'
-
-  - venue: 'Refresh Denver'
-    url: 'https://www.meetup.com/refreshdenver/events/241230495/?from=ref'
-    date: ['09', '13', '2017']
-    adr:
-      city: 'Denver'
-      state: 'CO'
-    who:
-      - author: 'miriam'
-        title: 'Code Patterns for Pattern Making'
-        slides: 'http://oddbooksapp.com/book/pattern-making'
-
-  - venue: 'Women Who Code Fort Collins'
-    url: 'https://www.meetup.com/Women-Who-Code-Fort-Collins/events/242033627/'
-    date: ['08', '30', '2017']
-    adr:
-      city: 'Fort Collins'
-      state: 'CO'
-    who:
-      - author: 'miriam'
-        title: 'Practical Layouts, Past & Future'
-        slides: 'https://oddbooksapp.com/book/wwc-layout'
-
-  - venue: 'DjangoCon'
-    url: 'https://2017.djangocon.us/'
-    date: ['8', '14', '2017']
-    adr:
-      city: 'Spokane'
-      state: 'WA'
-    who:
-      - author: 'miriam'
-        title: 'Don’t Use My Grid System (or any others)'
-        slides: 'http://oddbooksapp.com/book/djangocon-layout'
-
-  - venue: 'Develop Denver'
-    url: 'https://developdenver.org/'
-    date: ['8', '10', '2017']
-    adr:
-      city: 'Denver'
-      state: 'CO'
-    who:
-      - author: 'miriam'
-        title: 'Practical Layouts, Past & Future'
-        slides: 'http://oddbooksapp.com/book/layouts'
-
-  - venue: 'Refresh Denver'
-    url: 'https://www.meetup.com/refreshdenver/events/239219853/'
-    date: ['6', '14', '2017']
-    adr:
-      city: 'Denver'
-      state: 'CO'
-    who:
-      - author: 'miriam'
-        title: 'Practical Layouts, Past & Future'
-        slides: 'http://oddbooksapp.com/book/layouts'
-
-  - venue: 'Front-End Camp'
-    url: 'http://chicagocamps.org/events/2017/front-end-camp/'
-    date: ['6', '3', '2017']
-    adr:
-      city: 'Chicago'
-      state: 'IL'
-    who:
-      - author: 'stacy'
-        title: 'The Great State of Design with CSS Grid Layout & Friends'
-
-  - venue: 'Front Range Front End'
-    url: 'https://www.meetup.com/Sass-Hack-Denver/events/239687418/'
-    date: ['6', '1', '2017']
-    adr:
-      city: 'Denver'
-      state: 'CO'
-    who:
-      - author: 'miriam'
-        title: 'Code Patterns for Pattern Making'
-        slides: 'http://oddbooksapp.com/book/pattern-making'
-
   - venue: 'WordPress Naperville'
     url: 'https://www.meetup.com/WordPress-Naperville/events/236903886/'
     date: ['3', '21', '2017']
@@ -129,41 +43,6 @@ events:
         title: 'From Scratch to Launch: Planning Phase'
         slides: 'https://www.slideshare.net/Funstacy/from-scratch-to-launch-series-part1-planning-phase'
 
-  - venue: 'Gotham Sass'
-    url: 'https://www.meetup.com/gothamsass/events/235946893/'
-    date: ['01', '12', '2017']
-    adr:
-      city: 'New York'
-      state: 'NY'
-    who:
-      - author: 'miriam'
-        title: 'Code Patterns for Pattern Making'
-        slides: 'http://oddbooksapp.com/book/pattern-making'
-
-  - venue: 'CSSDay.io'
-    url: 'http://cssday.io/'
-    date: ['12', '03', '2016']
-    adr:
-      city: 'Chandler'
-      state: 'AZ'
-    who:
-      - author: 'miriam'
-        title: 'Code Patterns for Pattern-Making'
-        slides: 'http://oddbooksapp.com/book/pattern-making'
-      - author: 'stacy'
-        title: 'The Great State of Design (with CSS Grid Layout and Friends)'
-        slides: 'https://www.slideshare.net/Funstacy/the-great-state-of-design-with-css-grid-layout-and-friends'
-
-  - venue: 'Plone Digital Experience Conference'
-    url: 'http://2016.ploneconf.org/'
-    date: ['10', '20', '2016']
-    adr:
-      city: 'Boston'
-      state: 'MA'
-    who:
-      - author: 'david'
-        title: 'Greater than the sum of the parts: Lessons from integrating Pyramid, React, and Plone'
-
   - venue: 'CSSConf 2016'
     url: 'http://2016.cascadiafest.org/'
     date: ['09', '26', '2016']
@@ -173,22 +52,6 @@ events:
     who:
       - author: 'miriam'
         title: 'Sass Map Magic'
-
-  - venue: 'CascadiaFest'
-    url: 'http://2016.cascadiafest.org/'
-    date: ['08', '03', '2016']
-    who:
-      - author: 'miriam'
-        title: 'Code Patterns for Pattern-Making'
-        slides: 'http://oddbooksapp.com/book/pattern-making'
-
-  - venue: 'CSS Summit'
-    url: 'http://environmentsforhumans.com/2016/css-summit/'
-    date: ['07', '26', '2016']
-    who:
-      - author: 'miriam'
-        title: 'Code Patterns for Pattern-Making'
-        slides: 'http://oddbooksapp.com/book/pattern-making'
 
   - venue: 'DublinCSS'
     url: 'http://www.meetup.com/DublinCSS/events/230011902/'
@@ -213,14 +76,6 @@ events:
       - author: 'stacy'
         title: 'Curing Design Complacency'
         slides: 'http://www.slideshare.net/Funstacy/curing-design-complacency-61550889'
-
-  - venue: 'Clarity Conference'
-    url: 'http://clarityconf.com/'
-    date: ['03', '31', '2016']
-    who:
-      - author: 'miriam'
-        title: 'Code Patterns for Pattern-Making'
-        slides: 'http://oddbooksapp.com/book/pattern-making'
 
   - venue: 'Parent Programming'
     url: 'http://parentprogramming.libsyn.com/'

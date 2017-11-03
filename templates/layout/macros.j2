@@ -125,7 +125,7 @@
 {% endmacro %}
 
 
-{% macro header(rst, ctx) %}
+{% macro header(rst, ctx, show_summary=true) %}
   {% set headline = ctx.config.headline[0] if ctx.config.headline else none %}
   {% set project = ctx.config.project[0] if ctx.config.project else none %}
   {% set client = ctx.config.client[0] if ctx.config.client else none %}
@@ -146,7 +146,7 @@
   {{ show_headline(main, sub, type) }}
   {{ rst_meta(ctx, project) }}
 
-  {% if ctx.config.summary %}
+  {% if ctx.config.summary and show_summary %}
     <div class="rst-summary">
       {{ ctx.render_summary()|typogrify }}
     </div>
