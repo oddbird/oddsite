@@ -1,9 +1,7 @@
 {% import "utility.macros.j2" as utility %}
 
 {% macro speaking(author=none, range='future') %}
-  {% set events = all_pages|filter_pages('speakers')|filter_pages('events') %}
-  {% set events = events|filter_pages('speakers', 'has', author) if (author and events|length) else events %}
-  {% set events = events|map(attribute='config')|map(attribute='events') if events else none %}
+  {% set events = get_events_by_bird(author) %}
 
   {% if events %}
     <section data-module="events" class="{{ range }}-events">

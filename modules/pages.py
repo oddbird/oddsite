@@ -8,6 +8,7 @@ Use like:
 
 from functools import partial
 from rstblog.modules.blog import get_all_entries
+import operator
 
 
 def is_blog_post(page):
@@ -127,6 +128,21 @@ def get_blog_entries_by_tag(builder, tag):
     ]
 
 
+def get_events(builder):
+    events = []
+    for page in builder.iter_contexts():
+        events.extend(page.config.get('events', []))
+    return events
+
+
+def get_events_by_bird(builder, bird):
+    events = []
+    for page in builder.iter_contexts():
+        if bird is None or bird in page.config.get('speakers', []):
+            events.extend(page.config.get('events', []))
+    return events
+
+
 def setup(builder):
     env = builder.jinja_env
     env.filters['show_all_attrs'] = show_all_attrs
@@ -142,6 +158,9 @@ def setup(builder):
         builder,
     )
     env.globals['all_pages'] = get_pages(builder)
+    env.globals['all_events'] = get_events(builder)
+    env.globals['get_events_by_bird'] = partial(
+        get_events_by_bird, builder)
     page_configs = {}
     for page in get_pages(builder):
         page_config = get_page_context(page)
