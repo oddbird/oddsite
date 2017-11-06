@@ -25,7 +25,11 @@
 {% block list_intro %}
   {% set is_index = not pagination.has_prev %}
 
-  {{ layout.header(bird_page, bird_page, show_summary=is_index) }}
+  {{ layout.header(
+    bird_page,
+    bird_page,
+    show_summary=is_index
+    ) }}
 
   {% if is_index %}
     {{ birds.details(bird_page) }}

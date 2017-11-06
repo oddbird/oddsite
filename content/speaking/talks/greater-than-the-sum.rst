@@ -11,7 +11,7 @@ summary: |
   `David`_ reviews the lessons learned
   from integrating Pyramid, React, and Plone.
 
-  .. David: /authors/david/
+  .. _David: /authors/david/
 
 
 Greater Than The Sum of Parts: Integrating Pyramid, React, & Plone

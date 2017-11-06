@@ -16,6 +16,8 @@ brag: |
   from Grid Layout to typography –
   with **design inspiration**
   and **practical advice on getting started**.
+
+  .. _Stacy: /authors/stacy
 summary: |
   For far too long we've been forced to reuse layout patterns
   that have worked in the past,
@@ -34,6 +36,8 @@ summary: |
   Finally having a true,
   2 dimensional grid will give our layouts much more flexibility
   and it is on us to explore the possibilities.
+
+  .. _Stacy: /authors/stacy
 
 
 The Great State of Design (with CSS Grid Layout and Friends)

@@ -2,7 +2,7 @@
 // ==================
 
 
-.splash-projects {
+.splash-section {
   align-items: stretch;
   background-image: url('../images/wash-background.jpg');
   background-size: cover;
@@ -19,18 +19,27 @@
   }
 }
 
-
-.splash-project {
-  display: grid;
+.splash-project,
+.splash-talk {
   flex: 1 1 size('splash-items');
-  grid-template-columns: 100%;
-  grid-template-rows: size('splash-logo-y') auto;
   max-width: size('splash-items-max');
   padding: size('shim');
 
   @include above('medium-page') {
     padding: size('shim') size('double-gutter');
   }
+}
+
+
+.splash-project {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: size('splash-logo-y') auto;
+}
+
+
+.splash-title {
+  margin: 0;
 }
 
 

@@ -36,12 +36,12 @@ events:
     adr: 'San Francisco, CA'
     slides: 'https://oddbooksapp.com/release/ab1987b6-7d5f-42e4-b0ff-e7312cb345f6'
 brag: |
-  Have you ever struggled to develop
-  a pattern library or style guide,
-  and keep it up-to-date without a dedicated team?
-  We'll show you the techniques and tools we use
-  to deliver **automated style-guides with minimal effort** –
-  building patterns directly into the code.
+  Have you struggled to keep
+  a pattern library or style guide up-to-date,
+  without a dedicated team?
+  Learn how to
+  **automate style documentation** by
+  building patterns directly into your code.
 summary: |
   **Style Guides & Pattern Libraries are great tools**
   for documenting the relationships between code and design,
@@ -58,5 +58,5 @@ summary: |
   - Examples of what we've done, where we've failed, and where we're headed.
 
 
-Code Patterns for Pattern-Making
+Code Patterns for Pattern Making
 ================================

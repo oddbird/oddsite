@@ -7,9 +7,10 @@
 
 {% macro details(page) %}
   {% set author = page.config.bird %}
-  {{ events.speaking(author) }}
   {{ feature_talks(author) }}
+  {{ events.speaking(author) }}
   {{ oss_list(author, page) }}
+  {{ events.speaking(author, past=true) }}
 {% endmacro %}
 
 
@@ -48,21 +49,23 @@
   {% set talks = talks|filter_pages('speakers', 'has', author) if author else talks %}
 
   {% if talks|length %}
-    <section data-module="feature-talks">
+    {{ content.divider(title='Featured Talks') }}
+    <section class="splash-section">
       {% for talk in talks %}
-        <article class="feature-talk">
-          <h3 class="feature-talk-title">
+        <article class="splash-talk">
+          <h3 class="splash-title">
             {{ utility.link_if(
               url=content.page_link(talk),
-              content=talk.title
+              content=talk.title|typogrify
               ) }}
           </h3>
-          <div class="feature-talk-brag">
+          <div class="splash-brag">
             {{ talk.config.brag|rst }}
           </div>
         </article>
       {% endfor %}
     </section>
+    {{ content.divider() }}
   {% endif %}
 {% endmacro %}
 
@@ -89,8 +92,8 @@
   {% set oss = page.config.oss_by_author[author] %}
 
   {% if oss %}
-    <div class="bird-posts">
-      <h3>Open Source Contributions</h3>
+    <section data-module="contributions">
+      <h2>Open Source Contributions</h2>
       <ul class="title-list">
         {% for item in oss %}
           {% set project = item.config.project[0] %}
@@ -104,6 +107,6 @@
           </li>
         {% endfor %}
       </ul>
-    </div>
+    </section>
   {% endif %}
 {% endmacro %}

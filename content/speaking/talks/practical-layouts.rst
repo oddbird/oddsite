@@ -37,6 +37,8 @@ summary: |
   - How to make grid-math simple, and lose the grid-system.
   - How to make grid-systems work for you when you need them.
 
+  .. _Susy: /susy/
+
 
 Practical Layouts, Past & Future
 ================================

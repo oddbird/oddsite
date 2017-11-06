@@ -1,44 +1,32 @@
 {% import "utility.macros.j2" as utility %}
 
-{% macro speaking(author=none, range='future') %}
-  {% set events = get_events_by_bird(author) %}
+
+{% macro speaking(author=none, past=none) %}
+  {% set range = 'past' if past else 'future' %}
+  {% set reverse = past %}
+  {% set events = get_events_by_bird(author) if author else get_events() %}
+  {% set events = events|filter_events(past) %}
 
   {% if events %}
-    <section data-module="events" class="{{ range }}-events">
-      {% for event in events %}
-        {{ event|pprint }}
-        <br><br>
-      {% endfor %}
+    <section data-module="events" data-events="{{ range }}">
+      {% set title = 'Speaking History' if past else 'Upcoming Talks' %}
+      <h2>{{ title }}</h2>
+
+      {{ list(
+        events=events|sort(reverse=reverse, attribute='date')
+      ) }}
     </section>
   {% endif %}
 {% endmacro %}
 
 
-{% macro list(events, all=true) %}
-  {% for event in events|sort(attribute='date') %}
-    {% if all or ('true' in is_future(event)) %}
-      <article class="event">
-        <time>{{ event.date|join('/') }}</time>
-        {{ utility.link_if(event.venue, event.url) }}
-      </article>
-    {% endif %}
+{% macro list(events) %}
+  {% for event in events %}
+    {% set event_date = event.date|make_date %}
+
+    <article class="event">
+      <time>{{ event_date|format_date('%B %-d, %Y') }}</time>
+      {{ utility.link_if(event.venue, event.url) }}
+    </article>
   {% endfor %}
-{% endmacro %}
-
-
-{% macro is_future(event) %}
-  {% set year = event.date[2] %}
-  {% set month = event.date[0] %}
-  {% set day = event.date[1] %}
-
-  {% set year_now = true if (year == current_time.year) else false %}
-  {% set month_now = true if (month == current_time.month) else false %}
-  {% set day_now = true if (day == current_time.day) else false %}
-  {% set future = true if (year > current_time.year) else false %}
-  {% set future = future or (year_now and (month > current_time.month)) %}
-  {% set future = future or (year_now and month_now and (day > current_time.day)) %}
-
-  {% if future %}
-    true
-  {% endif %}
 {% endmacro %}

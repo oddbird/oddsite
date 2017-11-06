@@ -5,7 +5,7 @@
 
 {% macro splash_list(has='client', headline=none, slugs=none) %}
   {{ content.divider(title=headline) }}
-  <section class='splash-projects extend-full'>
+  <section class='splash-section extend-full'>
     {% if slugs %}
       {% for slug in slugs %}
         {% set page = all_pages|filter_pages('slug', 'eq', slug)|get_page %}

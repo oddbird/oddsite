@@ -94,5 +94,9 @@
     display: block;
     flex: 0 0 100%;
     margin: size('double-gutter') 0;
+
+    .blog-archive & {
+      display: none;
+    }
   }
 }
