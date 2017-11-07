@@ -130,14 +130,14 @@ def get_blog_entries_by_tag(builder, tag):
 
 def get_events(builder):
     events = []
-    for page in builder.iter_contexts():
+    for page in builder.iter_contexts(prepare=False):
         events.extend(page.config.get('events', []))
     return events
 
 
 def get_events_by_bird(builder, bird):
     events = []
-    for page in builder.iter_contexts():
+    for page in builder.iter_contexts(prepare=False):
         if bird is None or bird in page.config.get('speakers', []):
             events.extend(page.config.get('events', []))
     return events
