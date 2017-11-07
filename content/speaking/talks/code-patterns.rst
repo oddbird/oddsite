@@ -4,7 +4,7 @@ slides: 'http://oddbooksapp.com/book/pattern-making'
 events:
   - venue: 'Refresh Denver'
     url: 'https://www.meetup.com/refreshdenver/events/241230495/?from=ref'
-    date: [2017, 9, 13]
+    date: [2017, 12, 13]
     adr: 'Denver, CO'
     slides: 'https://oddbooksapp.com/release/7564d481-b132-4636-be3b-0907452955c7'
   - venue: 'Front Range Front End'

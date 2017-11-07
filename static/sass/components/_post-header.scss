@@ -87,16 +87,5 @@
   line-height: 1.5;
   margin: 0 auto;
   max-width: calc(#{size('full-content')} + 10vw);
-  padding: size('shim') size('gutter') 0;
-
-  @include after('') {
-    border-top: size('border-thin') solid color('border-light');
-    display: block;
-    flex: 0 0 100%;
-    margin: size('double-gutter') 0;
-
-    .blog-archive & {
-      display: none;
-    }
-  }
+  padding: size('shim') size('gutter') size('double-gutter');
 }

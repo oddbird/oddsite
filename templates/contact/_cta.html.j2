@@ -2,8 +2,8 @@
 {% import 'contact/macros.j2' as contact %}
 
 {% if config.hide_contact %}
-  {{ content.divider() }}
+  {{ content.divider(small=false) }}
 {% else %}
-  {{ content.divider() }}
+  {{ content.divider(small=false) }}
   {{ contact.footer(config.location) }}
 {% endif %}

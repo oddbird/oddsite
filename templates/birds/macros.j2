@@ -18,7 +18,7 @@
   {% set page = page or all_pages|filter_pages('bird', 'eq', author)|get_page %}
   {% set author = author or page.config.bird %}
 
-  <div data-module="bird" class="h-card" id="bird-{{ author }}">
+  <article data-module="bird" class="h-card" id="bird-{{ author }}">
     <h2 class="name">
       {{ birds.name_link(author, page) }}
     </h2>
@@ -40,7 +40,7 @@
       url=birds.get_bird_url(author, page),
       content="See %s's activity" % author|capitalize
       ) }}
-  </div>
+  </article>
 {% endmacro %}
 
 

@@ -47,6 +47,12 @@ $focus: '&:hover, &:focus, &:active';
       @include text-underline-color($hover);
     }
 
+    &.btn {
+      #{$focus} {
+        color: contrast('action-hover');
+      }
+    }
+
     &.btn,
     &.icon-link {
       // no underline on whole link. Going to target text only.

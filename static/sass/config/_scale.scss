@@ -47,6 +47,7 @@ $spacing-sizes: (
   'gutter': 'rhythm',
   'double-gutter': 'gutter' ('multiple': 2),
   'triple-gutter': 'gutter' ('multiple': 3),
+  'shim-plus': 'gutter' ('multiple': 0.75),
   'shim': 'gutter' ('multiple': 0.5),
   'half-shim': 'shim' ('multiple': 0.5),
   'quarter-shim': 'shim' ('multiple': 0.25),

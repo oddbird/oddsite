@@ -5,7 +5,9 @@
 .splash-section {
   align-items: stretch;
   background-image: url('../images/wash-background.jpg');
-  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;

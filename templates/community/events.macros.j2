@@ -1,11 +1,10 @@
 {% import "utility.macros.j2" as utility %}
 
 
-{% macro speaking(author=none, past=none) %}
+{% macro speaking(author=none, past=false) %}
   {% set range = 'past' if past else 'future' %}
-  {% set reverse = past %}
   {% set events = get_events_by_bird(author) if author else get_events() %}
-  {% set events = events|filter_events(past) %}
+  {% set events = events|filter_events(past)|sort(reverse=past, attribute='date') %}
 
   {% if events %}
     <section data-module="events" data-events="{{ range }}">
@@ -13,7 +12,7 @@
       <h2>{{ title }}</h2>
 
       {{ list(
-        events=events|sort(reverse=reverse, attribute='date')
+        events=events
       ) }}
     </section>
   {% endif %}

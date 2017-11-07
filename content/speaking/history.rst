@@ -1,6 +1,6 @@
 public: yes
 location: speaking
-events:
+non_events:
   - venue: 'WordPress Naperville'
     url: 'https://www.meetup.com/WordPress-Naperville/events/236903886/'
     date: ['3', '21', '2017']

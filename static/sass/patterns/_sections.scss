@@ -7,11 +7,11 @@
   max-width: size('full-content');
   padding: 0 size('gutter');
 
-  & + & {
-    @include before('') {
-      border-top: size('border-thin') solid color('border-light');
-      display: block;
-      margin: size('double-gutter') 0;
+  @include before('') {
+    @include small-divider;
+
+    [divider] + & {
+      display: none;
     }
   }
 }
@@ -21,12 +21,46 @@
 }
 
 
-.divider {
+// Dividers
+// --------
+
+[divider-title] {
+  font-size: inherit;
+}
+
+
+// Small Dividers
+// --------------
+
+[divider='small'] {
+  @include extend('extend-small');
+  margin: size('double-gutter') 0;
+  text-align: center;
+}
+
+[divider-line='small'] {
+  @include small-divider;
+}
+
+[divider-title='small'] {
+  background: color('background');
+  display: inline-block;
+  margin: 0;
+  padding: 0 size('shim');
+  position: relative;
+  transform: translateY(-50%);
+}
+
+
+// Large Dividers
+// --------------
+
+[divider='large'] {
   @include extend('extend-full');
 }
 
 
-.divider-line {
+[divider-line='large'] {
   @include section-arrow;
   box-shadow: 0 2px 2px color('shadow');
   overflow: visible;
@@ -38,26 +72,13 @@
 }
 
 
-.divider-title {
-  @include contrasted('invert');
+[divider-title='large'] {
   background-image: linear-gradient(
-    to top,
-    color('shadow'),
-    transparent size('quarter-shim')
+    to bottom,
+    color('callout'),
+    transparent
   );
-  border-top: 1px solid color('invert');
-  font-size: inherit;
+  border-top: 1px solid color('callout');
   margin: -1px 0 size('double-gutter');
-  opacity: 0.95;
-  padding: size('half-shim') size('gutter');
-}
-
-
-// used when going back and forth between content-blocks and other elements
-.section-end {
-  margin-bottom: size('double-gutter');
-}
-
-.preview {
-  margin: size('double-gutter') auto;
+  padding: size('shim') size('gutter');
 }
