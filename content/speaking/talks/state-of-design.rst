@@ -14,7 +14,7 @@ brag: |
   An overview
   of the new features in CSS –
   from **Grid layout** to **typography**.
-summary: |
+summary:
   For far too long we've been forced to reuse layout patterns
   that have worked in the past,
   creating a web full of sites that all look the same.
@@ -23,18 +23,18 @@ summary: |
   and lack of a true grid systems
   have led us to create work that is "good enough".
 
-  `Stacy`_ spent years exploring
-  how we can make the web a more unique space.
-  With some of the newer CSS techniques available,
-  we can start to make more creative designs.
-  CSS Grid Layout is on the horizon
-  and will play a major role in the design of our sites.
-  Finally having a true,
-  2 dimensional grid will give our layouts much more flexibility
-  and it is on us to explore the possibilities.
-
-  .. _Stacy: /authors/stacy
-
 
 The Great State of Design (with CSS Grid Layout and Friends)
 ============================================================
+
+`Stacy`_ spent years exploring
+how we can make the web a more unique space.
+With some of the newer CSS techniques available,
+we can start to make more creative designs.
+CSS Grid Layout is on the horizon
+and will play a major role in the design of our sites.
+Finally having a true,
+2 dimensional grid will give our layouts much more flexibility
+and it is on us to explore the possibilities.
+
+.. _Stacy: /authors/stacy

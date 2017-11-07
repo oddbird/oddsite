@@ -22,6 +22,11 @@ summary: |
   compounded by responsive design,
   web application needs,
   and the desire for consistency.
+
+
+Practical Layouts, Past & Future
+================================
+
   Join the creator of the `Susy`_ grid system
   for a review of layout and grid techniques —
   when to use them,
@@ -38,8 +43,3 @@ summary: |
   - How to make grid-systems work for you when you need them.
 
   .. _Susy: /susy/
-
-
-Practical Layouts, Past & Future
-================================
-

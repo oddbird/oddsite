@@ -88,4 +88,8 @@
   margin: 0 auto size('spacer');
   max-width: calc(#{size('full-content')} + 10vw);
   padding: size('shim') size('gutter') 0;
+
+  .h-card {
+    margin-bottom: size('gutter');
+  }
 }

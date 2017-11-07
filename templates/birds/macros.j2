@@ -60,7 +60,9 @@
               ) }}
           </h3>
           <div class="splash-brag">
-            {{ talk.config.brag|rst }}
+            {% set brag = talk.config.brag %}
+            {% set brag = talk.render_summary() if (brag == 'summary') else brag|rst %}
+            {{ brag }}
           </div>
         </article>
       {% endfor %}

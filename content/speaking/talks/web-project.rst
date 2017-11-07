@@ -21,4 +21,3 @@ summary: |
 
 Planning Your Web Project
 =========================
-
