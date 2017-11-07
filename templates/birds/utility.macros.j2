@@ -1,7 +1,18 @@
 {% import "utility.macros.j2" as utility %}
 
 {% macro card(page, details=false, class=none) %}
-  {% if details %}
+  {% if details == 'birdpage' %}
+    <div class="h-card media-block birdpage-social">
+      {{ face(page.config.bird, 'media-image') }}
+
+      <div class="media-content">
+        {{ social_list(
+          data=page.config.social,
+          bird_name=page.config.bird|capitalize
+          ) }}
+      </div>
+    </div>
+  {% elif details %}
     <div class="h-card media-block{{ [' ', class]|join if class else '' }}">
       {{ face(page.config.bird, 'media-image') }}
 

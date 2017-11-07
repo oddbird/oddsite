@@ -2,7 +2,7 @@
 // ==========
 
 .author-summary {
-  margin-top: size('bird-face');
+  margin-top: size('bird-face') + size('shim');
   max-width: 100%;
   padding-bottom: size('shim');
 
@@ -31,6 +31,14 @@
       z-index: -1;
     }
   }
+
+  .bio-short {
+    @include before('') {
+      @include square('half-bird-face');
+      float: left;
+      shape-outside: polygon(0 0, 0% 100%, 100% 0);
+    }
+  }
 }
 
 
@@ -40,15 +48,6 @@
   svg {
     position: relative;
     z-index: 1;
-  }
-}
-
-
-.bio-short {
-  @include before('') {
-    @include square('half-bird-face');
-    float: left;
-    shape-outside: polygon(0 0, 0% 100%, 100% 0);
   }
 }
 

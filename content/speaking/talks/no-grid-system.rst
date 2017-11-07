@@ -13,15 +13,11 @@ events:
     adr: 'Spokane, WA'
     slides: 'https://www.oddbooksapp.com/book/djangocon-layout'
 brag: |
-  `Miriam`_ is the creator of `Susy`_,
-  the genre-defining Sass meta-grid system –
-  but it's time to move our layouts
-  back in the browser.
-  Full of web-layout history,
-  and **practical ways to take back control**,
-  this talk won **"Best Of" CSS Dev Conf, 2017**.
+  The creator of `Susy`_,
+  provides **practical techniques**
+  for avoiding grid systems.
+  **"Best Of" CSS Dev Conf, 2017**.
 
-  .. _Miriam: /birds/#bird-miriam
   .. _Susy: /susy/
 summary: |
   We built `Susy`_,

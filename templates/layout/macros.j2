@@ -127,6 +127,16 @@
 {% endmacro %}
 
 
+{%- macro speaker_list(speakers) -%}
+  {{- 'by ' -}}
+  {%- for speaker in speakers -%}
+    {{- '& '|safe if loop.last and not loop.first -}}
+    {{- speaker|capitalize -}}
+    {{- ', ' if not loop.last -}}
+  {%- endfor -%}
+{%- endmacro -%}
+
+
 {% macro header(rst, ctx, show_summary=true) %}
   {% set headline = ctx.config.headline[0] if ctx.config.headline else none %}
   {% set project = ctx.config.project[0] if ctx.config.project else none %}
@@ -137,8 +147,10 @@
   {% set main = project.name if (project and project.name and not main) else main %}
   {% set main = main or rst.title %}
 
-  {% set sub = headline.tagline if (headline and headline.tagline) else none %}
-  {% set sub = project.tagline if (project and project.tagline and not sub) else sub %}
+  {% set page_sub = headline.tagline if (headline and headline.tagline) else none %}
+  {% set proj_sub = project.tagline if (project and project.tagline) else none %}
+  {% set by_sub = speaker_list(ctx.config.speakers) if ctx.config.speakers else none %}
+  {% set sub = page_sub or proj_sub or by_sub %}
 
   {% set type = headline.type if (headline and headline.type) else none %}
   {% set type = 'Case Study' if (project and client and not type) else type %}
@@ -153,17 +165,19 @@
   {% if ctx.config.summary and show_summary %}
     <div class="rst-summary">
       {% if ctx.config.bird %}
-        <div class="media-block birdpage-social">
-          {{ birds_util.face(ctx.config.bird, 'media-image') }}
-
-          <div class="media-content">
-            {{ birds_util.social_list(
-              data=ctx.config.social,
-              bird_name=ctx.config.bird|capitalize
-              ) }}
-          </div>
-        </div>
+        {{ birds_util.card(
+          ctx,
+          details='birdpage'
+          ) }}
       {% endif %}
+
+      {% for bird in ctx.config.speakers %}
+        {% set birdpage = all_pages|filter_pages('bird', 'eq', bird)|get_page %}
+        {{ birds_util.card(
+          birdpage,
+          details=true
+          ) }}
+      {% endfor %}
 
       {{ ctx.render_summary()|typogrify }}
     </div>

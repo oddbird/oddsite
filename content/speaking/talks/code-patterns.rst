@@ -36,9 +36,6 @@ events:
     adr: 'San Francisco, CA'
     slides: 'https://oddbooksapp.com/release/ab1987b6-7d5f-42e4-b0ff-e7312cb345f6'
 brag: |
-  Have you struggled to keep
-  a pattern library or style guide up-to-date,
-  without a dedicated team?
   Learn how to
   **automate style documentation** by
   building patterns directly into your code.

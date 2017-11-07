@@ -11,13 +11,9 @@ events:
     adr: 'Chandler, AZ'
     slides: https://www.slideshare.net/Funstacy/the-great-state-of-design-with-css-grid-layout-and-friends
 brag: |
-  `Stacy`_ provides an overview
+  An overview
   of the new features in CSS –
-  from Grid Layout to typography –
-  with **design inspiration**
-  and **practical advice on getting started**.
-
-  .. _Stacy: /authors/stacy
+  from **Grid layout** to **typography**.
 summary: |
   For far too long we've been forced to reuse layout patterns
   that have worked in the past,

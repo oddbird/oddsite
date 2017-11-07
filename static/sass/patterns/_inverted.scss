@@ -5,8 +5,10 @@
   @include contrasted('invert');
   @include link-color-for('invert');
 
-  + .divider {
-    .divider-line {
+  + [divider] {
+    margin-top: 0;
+
+    [divider-line='large'] {
       @include after(null) {
         display: none;
       }

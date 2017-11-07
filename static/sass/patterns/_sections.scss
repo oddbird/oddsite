@@ -9,7 +9,7 @@
 
   @include before('') {
     @include small-divider;
-    margin: size('double-gutter') auto;
+    margin: size('spacer') auto;
 
     [divider] + & {
       display: none;
@@ -40,7 +40,7 @@
 
 [divider='small'] {
   @include extend('extend-small');
-  margin: size('double-gutter') 0;
+  margin: size('spacer') 0;
   text-align: center;
 }
 
@@ -63,6 +63,11 @@
 
 [divider='large'] {
   @include extend('extend-full');
+  margin-top: size('spacer');
+
+  [data-region='banner'] & {
+    margin-top: 0;
+  }
 }
 
 
@@ -85,6 +90,10 @@
     transparent
   );
   border-top: 1px solid color('callout');
-  margin: -1px 0 size('double-gutter');
-  padding: size('shim') size('gutter');
+  margin: -1px 0 size('spacer');
+  padding: size('shim') size('gutter') 0;
+
+  @include above('small-page') {
+    padding-top: size('half-shim');
+  }
 }

@@ -2,14 +2,9 @@ public: yes
 speakers: [miriam]
 slides: 'https://www.oddbooksapp.com/book/web-projects'
 brag: |
-  Designed for **non-technical founders**,
-  `Miriam`_ provides insight into the
-  full process –
-  taking your application from
-  concept to launch,
-  without losing sight of your goals.
-
-  .. _Miriam: /authors/miriam/
+  A **non-technical guide**
+  for taking your project from concept to launch,
+  without ever losing site of the goals.
 summary: |
   **Are you looking to expand your web presence,
   or develop a new application?**

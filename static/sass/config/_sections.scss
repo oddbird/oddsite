@@ -30,14 +30,14 @@
   @include wrap-content(' ') {
     border: size('shim') solid transparent;
     border-top-color: color($color);
-    border-width: size('shim-plus') size('gutter') 0;
+    border-width: size('shim') size('shim-plus') 0;
     left: 50%;
     position: absolute;
     top: 100%;
-    transition: border-width 200ms;
+    transition: border-width 300ms;
 
     @include above('small-page') {
-      border-top-width: size('gutter');
+      border-width: size('gutter') size('gutter') 0;
     }
   }
 

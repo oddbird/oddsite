@@ -40,7 +40,7 @@
   margin-bottom: size('shim');
 
   @include above('small-page') {
-    margin: negative('double-gutter') 0;
+    margin: 0;
   }
 }
 
