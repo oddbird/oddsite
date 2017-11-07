@@ -85,7 +85,7 @@
 .rst-summary {
   font-size: size('intro-text');
   line-height: 1.5;
-  margin: 0 auto;
+  margin: 0 auto size('spacer');
   max-width: calc(#{size('full-content')} + 10vw);
-  padding: size('shim') size('gutter') size('double-gutter');
+  padding: size('shim') size('gutter') 0;
 }

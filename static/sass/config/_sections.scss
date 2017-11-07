@@ -63,6 +63,7 @@
     color($color),
     color($color ('rgba': 0))
   );
+  display: block;
   height: size('border-thin');
   margin: 0 auto;
   max-width: size('full-content');

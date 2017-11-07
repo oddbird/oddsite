@@ -12,12 +12,13 @@
   flex-wrap: wrap;
   justify-content: space-around;
   justify-content: space-evenly; //sass-lint:disable-line no-duplicate-properties
-  margin-top: -1px; // fix a rounding error
-  padding-bottom: size('gutter');
+  margin-bottom: negative('double-gutter');
+  margin-top: negative('double-gutter');
+  padding: size('double-gutter') 0;
 
   // clearfix breaking the layout…
   @include after(null) {
-    position: absolute;
+    display: none;
   }
 }
 

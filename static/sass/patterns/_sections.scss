@@ -9,6 +9,7 @@
 
   @include before('') {
     @include small-divider;
+    margin: size('double-gutter') auto;
 
     [divider] + & {
       display: none;
@@ -23,6 +24,11 @@
 
 // Dividers
 // --------
+
+[divider] {
+  position: relative;
+  z-index: 5;
+}
 
 [divider-title] {
   font-size: inherit;
