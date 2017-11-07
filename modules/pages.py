@@ -98,7 +98,7 @@ def filter_pages(values, key, operator=None, value=None):
         if operator == 'neq':
             return value != (getattr(x, key, None) or x.config.get(key))
         if operator == 'has':
-            return value in (getattr(x, key, None) or x.config.get(key))
+            return value in (getattr(x, key, None) or x.config.get(key, []))
 
     return [
         x
@@ -128,19 +128,11 @@ def get_blog_entries_by_tag(builder, tag):
     ]
 
 
-def get_events(builder):
-    events = []
-    for page in builder.iter_contexts(prepare=False):
-        events.extend(page.config.get('events', []))
-    return events
-
-
-def get_events_by_bird(builder, bird):
-    events = []
-    for page in builder.iter_contexts(prepare=False):
-        if bird is None or bird in page.config.get('speakers', []):
-            events.extend(page.config.get('events', []))
-    return events
+def collect(pages, key):
+    result = []
+    for page in pages:
+        result.extend(page.config.get(key, []))
+    return result
 
 
 def setup(builder):
@@ -148,6 +140,7 @@ def setup(builder):
     env.filters['show_all_attrs'] = show_all_attrs
     env.filters['show_config'] = show_config
     env.filters['filter_pages'] = filter_pages
+    env.filters['collect'] = collect
     env.filters['get_page'] = get_page
     env.globals['get_blog_entries_by_bird'] = partial(
         get_blog_entries_by_bird,
@@ -158,9 +151,6 @@ def setup(builder):
         builder,
     )
     env.globals['all_pages'] = get_pages(builder)
-    env.globals['all_events'] = get_events(builder)
-    env.globals['get_events_by_bird'] = partial(
-        get_events_by_bird, builder)
     page_configs = {}
     for page in get_pages(builder):
         page_config = get_page_context(page)
