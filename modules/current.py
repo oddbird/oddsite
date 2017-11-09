@@ -14,16 +14,16 @@ def make_date(value):
     return datetime(year, month, day)
 
 
-def filter_events(event_list, show_past=None):
-    future = []
-    past = []
+def filter_events(event_list, past=None):
+    future_list = []
+    past_list = []
     for event in event_list:
         date = make_date(event['date'])
         if date >= datetime.now():
-            future.append(event)
+            future_list.append(event)
         else:
-            past.append(event)
-    return past if show_past else future
+            past_list.append(event)
+    return past_list if past else future_list
 
 
 def format_date(value, format='%B %-d, %Y'):

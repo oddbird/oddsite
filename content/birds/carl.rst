@@ -13,7 +13,9 @@ social:
     stackoverflow: '3207'
 short_bio: |
   `Carl Meyer`_
-  is an active owner,
+  is an active owner
+  providing oversight and counsel
+  to the development team,
   and core developer of the
   `Django`_ Python web framework.
 

@@ -1,31 +1,59 @@
 {% import "utility.macros.j2" as utility %}
+{% import "content.macros.j2" as content %}
 
 
-{% macro speaking(author=none, past=false) %}
-  {% set range = 'past' if past else 'future' %}
-  {% set pages = all_pages|filter_pages('speakers', 'has', author) if author else all_pages %}
-  {% set events = pages|collect('events', label_with='slug')|filter_events(past)|sort(reverse=past, attribute='date') %}
+{% macro by_author(author=none) %}
+  {% set pages = all_pages|filter_pages('speakers', 'has', author) if author else all_pages|filter_pages('speakers') %}
+  {% set events = pages|collect('events', label_with='slug')|sort(attribute='date') %}
+  {% set future = events|filter_events(past=false) %}
+  {% set past = events|filter_events(past=true)|reverse %}
 
   {% if events %}
-    <section data-module="events" data-events="{{ range }}">
-      {% set title = 'Speaking History' if past else 'Upcoming Talks' %}
-      <h2>{{ title }}</h2>
+    <section data-module="events-by-author">
+      {{ content.divider(title='Speaking Schedule') }}
+      {% if future %}
+        <div class="future-list">
+          {{ list(future) }}
+        </div>
+      {% endif %}
 
-      {{ list(
-        events=events
-      ) }}
+      {% if past %}
+        <div class="past-list">
+          {{ list(past, talk=false) }}
+        </div>
+      {% endif %}
     </section>
   {% endif %}
+ {% endmacro %}
+
+
+{% macro feature(author) %}
+  <article class="feature-event">
+    {% set talks = all_pages|filter_pages('speakers', 'has', author) %}
+    {% set talks = talks|collect('events')|sort(attribute='date') %}
+
+    <time>{{ event_date|format_date('%B %-d, %Y') }}</time>
+    {{ utility.link_if(event.venue, event.url) }}
+  </article>
 {% endmacro %}
 
 
-{% macro list(events) %}
+{% macro list(events, talk=true) %}
   {% for event in events %}
     {% set event_date = event.date|make_date %}
 
     <article class="event">
       <time>{{ event_date|format_date('%B %-d, %Y') }}</time>
+      <span class="meta-preposition">at</span>
       {{ utility.link_if(event.venue, event.url) }}
+
+      {% if talk %}
+        {% set talk = all_pages|filter_pages('slug', 'eq', event.slug)|get_page %}
+        {{ utility.link_if(
+          content=talk.title|typogrify,
+          url=content.page_link(talk) if talk else none
+          )  }}
+      {% endif %}
     </article>
   {% endfor %}
 {% endmacro %}

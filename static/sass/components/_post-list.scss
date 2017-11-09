@@ -1,0 +1,13 @@
+// Post List
+// =========
+
+
+[data-module='blog-post'] {
+  & + & {
+    @include before('') {
+      @include extend('extend-small');
+      @include small-divider;
+      display: block;
+    }
+  }
+}

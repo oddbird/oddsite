@@ -34,6 +34,8 @@ Software for Humans
 .. callmacro:: projects/splash.macros.j2#splash_list
   :headline: 'Featured Partners'
 
+.. callmacro:: content.macros.j2#divider
+
 .. callmacro:: content.macros.j2#get_quotes
   :page: 'work/medcurbside'
   :slug: 'goals'
@@ -65,7 +67,9 @@ Software for Humans
 
 .. callmacro:: projects/splash.macros.j2#splash_list
   :has: 'contributors'
-  :headline: 'Open Source Leadership'
+  :headline: 'Building the Tools Developers Use'
+
+.. callmacro:: content.macros.j2#divider
 
 .. callmacro:: content.macros.j2#blockquote
   :content: 'Miriam has become one of the most notable

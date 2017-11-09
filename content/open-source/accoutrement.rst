@@ -1,4 +1,4 @@
-public: yes
+public: no
 location: open-source
 grid_template: true
 image:

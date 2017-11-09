@@ -6,15 +6,6 @@
   margin: size('gutter') auto;
   max-width: size('full-content');
   padding: 0 size('gutter');
-
-  @include before('') {
-    @include small-divider;
-    margin: size('spacer') auto;
-
-    [divider] + & {
-      display: none;
-    }
-  }
 }
 
 .grid-template {

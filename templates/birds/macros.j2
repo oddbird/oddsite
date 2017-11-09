@@ -8,9 +8,8 @@
 {% macro details(page) %}
   {% set author = page.config.bird %}
   {{ feature_talks(author) }}
-  {{ events.speaking(author) }}
+  {{ events.by_author(author) }}
   {{ oss_list(author, page) }}
-  {{ events.speaking(author, past=true) }}
 {% endmacro %}
 
 
@@ -49,25 +48,26 @@
   {% set talks = talks|filter_pages('speakers', 'has', author) if author else talks %}
 
   {% if talks|length %}
-    {{ content.divider(title='Featured Talks') }}
-    <section class="splash-section">
-      {% for talk in talks %}
-        <article class="splash-talk">
-          <h3 class="splash-title">
-            {{ utility.link_if(
-              url=content.page_link(talk),
-              content=talk.title|typogrify
-              ) }}
-          </h3>
-          <div class="splash-brag">
-            {% set brag = talk.config.brag %}
-            {% set brag = talk.render_summary() if (brag == 'summary') else brag|rst %}
-            {{ brag }}
-          </div>
-        </article>
-      {% endfor %}
+    <section class="splash-talks">
+      {{ content.divider(title='Featured Talks') }}
+      <div class="splash-section">
+        {% for talk in talks %}
+          <article class="splash-talk">
+            <h3 class="splash-title">
+              {{ utility.link_if(
+                url=content.page_link(talk),
+                content=talk.title|typogrify
+                ) }}
+            </h3>
+            <div class="splash-brag">
+              {% set brag = talk.config.brag %}
+              {% set brag = talk.render_summary() if (brag == 'summary') else brag|rst %}
+              {{ brag }}
+            </div>
+          </article>
+        {% endfor %}
+      </div>
     </section>
-    {{ content.divider() }}
   {% endif %}
 {% endmacro %}
 
@@ -92,10 +92,11 @@
 
 {% macro oss_list(author, page) %}
   {% set oss = page.config.oss_by_author[author] %}
+  {% set oss = oss|filter_pages('public', 'neq', false) %}
 
-  {% if oss %}
+  {% if oss and (oss|length > 0) %}
     <section data-module="contributions">
-      <h2>Open Source Contributions</h2>
+      {{ content.divider(title='Open Source Contributions') }}
       <ul class="title-list">
         {% for item in oss %}
           {% set project = item.config.project[0] %}
