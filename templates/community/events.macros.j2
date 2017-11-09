@@ -4,7 +4,7 @@
 {% macro speaking(author=none, past=false) %}
   {% set range = 'past' if past else 'future' %}
   {% set pages = all_pages|filter_pages('speakers', 'has', author) if author else all_pages %}
-  {% set events = pages|collect('events')|filter_events(past)|sort(reverse=past, attribute='date') %}
+  {% set events = pages|collect('events', label_with='slug')|filter_events(past)|sort(reverse=past, attribute='date') %}
 
   {% if events %}
     <section data-module="events" data-events="{{ range }}">

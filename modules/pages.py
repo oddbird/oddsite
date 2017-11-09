@@ -128,10 +128,18 @@ def get_blog_entries_by_tag(builder, tag):
     ]
 
 
-def collect(pages, key):
+def collect(pages, key, label_with=None):
     result = []
     for page in pages:
-        result.extend(page.config.get(key, []))
+        for item in page.config.get(key, []):
+            if label_with:
+                label = (
+                    getattr(page, label_with, None) or
+                    page.config.get(label_with)
+                )
+                item = item.copy()
+                item[label_with] = label
+            result.append(item)
     return result
 
 
