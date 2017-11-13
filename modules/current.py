@@ -10,7 +10,7 @@ from datetime import datetime
 def make_date(value):
     year = value[0]
     month = value[1]
-    day = value [2]
+    day = value[2]
     return datetime(year, month, day)
 
 

@@ -5,55 +5,107 @@
 {% macro by_author(author=none) %}
   {% set pages = all_pages|filter_pages('speakers', 'has', author) if author else all_pages|filter_pages('speakers') %}
   {% set events = pages|collect('events', label_with='slug')|sort(attribute='date') %}
-  {% set future = events|filter_events(past=false) %}
-  {% set past = events|filter_events(past=true)|reverse %}
+  {% set future = events|filter_events(past=false)|list %}
+  {% set past = events|filter_events(past=true)|reverse|list %}
+  {% set highlight = future[0] or past[0] or none %}
 
   {% if events %}
-    <section data-module="events-by-author">
+    <section class="events-by-author">
       {{ content.divider(title='Speaking Schedule') }}
-      {% if future %}
-        <div class="future-list">
-          {{ list(future) }}
-        </div>
+
+      {% if highlight %}
+        {{ feature(highlight) }}
+      {% endif %}
+
+      {% if (future|length > 1) %}
+        <section data-module="future-events">
+          <h3>Upcoming Talks</h3>
+          {% for event in future %}
+            {{ '' if loop.first else list(event) }}
+          {% endfor %}
+        </section>
       {% endif %}
 
       {% if past %}
-        <div class="past-list">
-          {{ list(past, talk=false) }}
-        </div>
+        <section data-module="past-events">
+          <h3>Past Talks</h3>
+          {% for event in past %}
+            {% set skip = loop.first and not future.first %}
+            {{ '' if skip else list(event, talk=false) }}
+          {% endfor %}
+        </section>
       {% endif %}
     </section>
   {% endif %}
  {% endmacro %}
 
 
-{% macro feature(author) %}
-  <article class="feature-event">
-    {% set talks = all_pages|filter_pages('speakers', 'has', author) %}
-    {% set talks = talks|collect('events')|sort(attribute='date') %}
+{% macro feature(event) %}
+  <article class="feature-event rst-summary">
+    {% set talk = all_pages|filter_pages('slug', 'eq', event.slug)|get_page %}
+    {% set talk_url = content.page_link(talk) %}
 
-    <time>{{ event_date|format_date('%B %-d, %Y') }}</time>
-    {{ utility.link_if(event.venue, event.url) }}
+    <h4 class="event-venue">
+      {{ utility.link_if(
+        content=event.venue,
+        url=event.url
+        ) }}
+    </h4>
+
+    {{ utility.link_if(
+      content=talk.title|typogrify,
+      url=talk_url,
+      class='event-talk'
+      )  }}
+
+    {{ meta(event) }}
+
+    <div class="event-summary">
+      {{ talk.render_summary() }}
+    </div>
   </article>
 {% endmacro %}
 
 
-{% macro list(events, talk=true) %}
-  {% for event in events %}
-    {% set event_date = event.date|make_date %}
+{% macro list(event, talk=true) %}
+  {% set event_date = event.date|make_date %}
 
-    <article class="event">
-      <time>{{ event_date|format_date('%B %-d, %Y') }}</time>
-      <span class="meta-preposition">at</span>
-      {{ utility.link_if(event.venue, event.url) }}
+  <article class="event">
+    <h5 class="event-venue">
+      {{ event.venue }}
 
-      {% if talk %}
-        {% set talk = all_pages|filter_pages('slug', 'eq', event.slug)|get_page %}
+      {% if event.url %}
         {{ utility.link_if(
-          content=talk.title|typogrify,
-          url=content.page_link(talk) if talk else none
+          content=utility.icon('external'),
+          url=event.url,
+          class='icon-link'
           )  }}
       {% endif %}
-    </article>
-  {% endfor %}
+    </h5>
+
+    {% if talk %}
+      {% set talk = all_pages|filter_pages('slug', 'eq', event.slug)|get_page %}
+      {{ utility.link_if(
+        content=talk.title|typogrify,
+        url=content.page_link(talk),
+        class='event-talk'
+        )  }}
+    {% endif %}
+
+    {{ meta(event) }}
+  </article>
+{% endmacro %}
+
+
+{% macro meta(event) %}
+  {% set event_date = event.date|make_date %}
+
+  <div class="event-meta">
+    <span class="meta-preposition">on</span>
+    <time datetime="{{ event_date }}">
+      {{ event_date|format_date('%B %-d, %Y') }}
+    </time>
+    <span class="meta-preposition">in</span>
+    <span class="adr">{{ event.adr }}</span>
+  </div>
 {% endmacro %}
