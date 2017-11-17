@@ -48,17 +48,25 @@
 
 
 {% macro header_image(post, class='') %}
-  {% set images = post.config.image or none %}
+  {% set image = get_image(post.config.image, 'hero', 'hero-image') %}
 
-  {% if images %}
-    {% set hero = images|selectattr('type', 'equalto', 'hero')|list or none %}
-    {% set image = hero[0].src if hero else images[0].src %}
-    {% set image = image if '://' in image else ['/static/images/', image]|join %}
-
+  {% if image %}
     <figure class="{{ ['hero', class]|join(' ') if class else 'hero' }}">
-      <img src="{{ image }}" class="hero-image">
+      {{ image }}
     </figure>
   {% endif %}
+{% endmacro %}
+
+
+{% macro get_image(images, type=none, class=none) %}
+  {%- if images -%}
+    {%- set type = images|selectattr('type', 'equalto', type)|list or none -%}
+    {%- set image = type[0] if type else images[0] -%}
+    {%- set src = image.src -%}
+    {%- set alt = image.alt or '' -%}
+    {%- set src = src if '://' in src else ['/static/images/', src]|join -%}
+    <img src="{{ src }}" alt="{{ alt }}" {{ utility.attr_if('class', class) }}>
+  {%- endif -%}
 {% endmacro %}
 
 

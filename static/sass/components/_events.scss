@@ -1,0 +1,42 @@
+// Event Styles
+// ============
+
+.feature-event {
+  @include feature;
+}
+
+
+[data-module='past-events'] {
+  .feature-event + & {
+    .event-venue,
+    .event-meta {
+      display: inline-block;
+    }
+  }
+}
+
+
+.event-image {
+  max-width: size('spacer');
+}
+
+
+.event {
+  margin: size('shim') 0;
+}
+
+
+.event-venue {
+  margin: 0;
+}
+
+
+.event-talk {
+  @include font-family('alt');
+}
+
+
+.event-talk,
+.event-meta {
+  font-size: size('rel-small');
+}

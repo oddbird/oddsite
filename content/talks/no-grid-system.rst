@@ -1,5 +1,7 @@
 public: yes
 speakers: [miriam]
+image:
+  - src: 'pages/devconf-best.jpg'
 events:
   - venue: 'CSS Dev Conf'
     url: 'http://2017.cssdevconf.com/'
@@ -7,6 +9,9 @@ events:
     adr: 'New Orleans, LA'
     note: '"Best Of" Audience-Choice Award'
     slides: 'https://www.oddbooksapp.com/book/css-layout'
+    image:
+      - src: 'talks/css-dev-conf.jpg'
+        type: 'thumbnail'
   - venue: 'DjangoCon US'
     url: 'https://2017.djangocon.us/'
     date: [2017, 8, 14]

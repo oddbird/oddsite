@@ -1,5 +1,6 @@
 {% import "utility.macros.j2" as utility %}
 {% import "content.macros.j2" as content %}
+{% import "layout/macros.j2" as layout %}
 
 
 {% macro by_author(author=none) %}
@@ -41,22 +42,17 @@
 
 
 {% macro feature(event) %}
-  <article class="feature-event rst-summary">
+  <article class="feature-event">
     {% set talk = all_pages|filter_pages('slug', 'eq', event.slug)|get_page %}
-    {% set talk_url = content.page_link(talk) %}
+    {% set images = event.image or talk.config.image %}
+    {% set image = layout.get_image(images, 'thumbnail', 'event-image') %}
+    {% set head = feature_head(event, talk) %}
 
-    <h4 class="event-venue">
-      {{ utility.link_if(
-        content=event.venue,
-        url=event.url
-        ) }}
-    </h4>
-
-    {{ utility.link_if(
-      content=talk.title|typogrify,
-      url=talk_url,
-      class='event-talk'
-      )  }}
+    {% if image %}
+      {{ content.media_block(image, head) }}
+    {% else %}
+      {{ head }}
+    {% endif %}
 
     {{ meta(event) }}
 
@@ -67,21 +63,44 @@
 {% endmacro %}
 
 
+{% macro feature_head(event, talk) %}
+  {% set talk_url = content.page_link(talk) %}
+
+  <h3 class="event-venue">
+    {{ utility.link_if(
+      content=event.venue,
+      url=event.url
+      ) }}
+  </h3>
+
+  {{ utility.link_if(
+    content=talk.title|typogrify,
+    url=talk_url,
+    class='event-talk'
+    )  }}
+{% endmacro %}
+
+
 {% macro list(event, talk=true) %}
   {% set event_date = event.date|make_date %}
 
   <article class="event">
-    <h5 class="event-venue">
-      {{ event.venue }}
+    <h4 class="event-venue">
 
-      {% if event.url %}
+      {% if '://' in event.url %}
+        {{ event.venue }}
         {{ utility.link_if(
-          content=utility.icon('external'),
+          content=utility.icon('external', size='text-small'),
           url=event.url,
           class='icon-link'
           )  }}
+      {% else %}
+        {{ utility.link_if(
+          content=event.venue,
+          url=event.url
+          )  }}
       {% endif %}
-    </h5>
+    </h4>
 
     {% if talk %}
       {% set talk = all_pages|filter_pages('slug', 'eq', event.slug)|get_page %}

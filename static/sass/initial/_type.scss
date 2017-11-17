@@ -41,12 +41,12 @@ h2 {
 }
 
 h2 {
-  font-size: calc(1rem + 1vw);
+  font-size: size('h2');
   margin: 1.5rem 0 0.75rem;
 }
 
 h3 {
-  font-size: calc(1rem + 0.5vw);
+  font-size: size('h3');
   font-style: italic;
   margin-bottom: 0.75rem;
   margin-top: 1.5rem;
