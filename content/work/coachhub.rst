@@ -291,8 +291,8 @@ to users and partners.
    coaches and clients.
 
 
-Accessibilty
-~~~~~~~~~~~~
+Accessibility
+~~~~~~~~~~~~~
 
 Accessibility is built into the core technologies and techniques we use on
 every project: accessible HTML5, unobtrusive Javascript, and mobile-responsive
