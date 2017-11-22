@@ -18,7 +18,7 @@ events:
     adr: 'Denver, CO'
     slides: 'https://oddbooksapp.com/release/543aea12-2264-4794-867d-d01fbf3a79c9'
 summary: |
-  Web layout has always been a hack —
+  *Web layout has always been a hack* —
   compounded by responsive design,
   web application needs,
   and the desire for consistency.

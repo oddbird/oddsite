@@ -1,25 +1,9 @@
 // Event Styles
 // ============
 
-.feature-event {
-  @include feature;
-}
 
-
-[data-module='past-events'] {
-  .feature-event + & {
-    .event-venue,
-    .event-meta {
-      display: inline-block;
-    }
-  }
-}
-
-
-.event-image {
-  max-width: size('spacer');
-}
-
+// Components
+// ----------
 
 .event {
   margin: size('shim') 0;
@@ -36,7 +20,45 @@
 }
 
 
-.event-talk,
 .event-meta {
   font-size: size('rel-small');
+
+  time,
+  .adr {
+    font-weight: bold;
+  }
+}
+
+
+// Feature
+// -------
+
+.feature-event {
+  @include feature;
+
+  .event-meta {
+    margin-bottom: size('shim');
+  }
+
+  .event-talk {
+    float: left;
+    margin-right: size('half-shim');
+  }
+
+  .event-summary {
+    :first-child {
+      margin-top: 0;
+    }
+  }
+}
+
+
+// List
+// ----
+
+[data-module='events-list'] {
+  .event-venue,
+  .event-meta {
+    display: inline-block;
+  }
 }

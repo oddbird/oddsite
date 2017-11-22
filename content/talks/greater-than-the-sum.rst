@@ -7,7 +7,6 @@ events:
     date: [2016, 10, 20]
     adr: 'Boston, MA'
 summary: |
-  Greater than the sum of the parts:
   `David`_ reviews the lessons learned
   from integrating Pyramid, React, and Plone.
 

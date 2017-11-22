@@ -14,102 +14,83 @@
     <section class="events-by-author">
       {{ content.divider(title='Speaking Schedule') }}
 
-      {% if highlight %}
-        {{ feature(highlight) }}
-      {% endif %}
+      {{ feature(highlight) }}
 
-      {% if (future|length > 1) %}
-        <section data-module="future-events">
-          <h3>Upcoming Talks</h3>
-          {% for event in future %}
-            {{ '' if loop.first else list(event) }}
-          {% endfor %}
-        </section>
-      {% endif %}
+      {{ list(
+        events=future,
+        title="Upcoming Appearances",
+        remove_first=true if future[0] else false
+        ) }}
 
-      {% if past %}
-        <section data-module="past-events">
-          <h3>Past Talks</h3>
-          {% for event in past %}
-            {% set skip = loop.first and not future.first %}
-            {{ '' if skip else list(event, talk=false) }}
-          {% endfor %}
-        </section>
-      {% endif %}
+      {{ list(
+        events=past,
+        title="Speaking History",
+        remove_first=false if future[0] else true
+        ) }}
     </section>
   {% endif %}
  {% endmacro %}
 
 
 {% macro feature(event) %}
-  <article class="feature-event">
-    {% set talk = all_pages|filter_pages('slug', 'eq', event.slug)|get_page %}
-    {% set images = event.image or talk.config.image %}
-    {% set image = layout.get_image(images, 'thumbnail', 'event-image') %}
-    {% set head = feature_head(event, talk) %}
+  {% if event %}
+    <article class="feature-event">
+      {% set talk = all_pages|filter_pages('slug', 'eq', event.slug)|get_page %}
+      {% set talk_url = content.page_link(talk) %}
 
-    {% if image %}
-      {{ content.media_block(image, head) }}
-    {% else %}
-      {{ head }}
-    {% endif %}
-
-    {{ meta(event) }}
-
-    <div class="event-summary">
-      {{ talk.render_summary() }}
-    </div>
-  </article>
-{% endmacro %}
-
-
-{% macro feature_head(event, talk) %}
-  {% set talk_url = content.page_link(talk) %}
-
-  <h3 class="event-venue">
-    {{ utility.link_if(
-      content=event.venue,
-      url=event.url
-      ) }}
-  </h3>
-
-  {{ utility.link_if(
-    content=talk.title|typogrify,
-    url=talk_url,
-    class='event-talk'
-    )  }}
-{% endmacro %}
-
-
-{% macro list(event, talk=true) %}
-  {% set event_date = event.date|make_date %}
-
-  <article class="event">
-    <h4 class="event-venue">
-
-      {% if '://' in event.url %}
-        {{ event.venue }}
-        {{ utility.link_if(
-          content=utility.icon('external', size='text-small'),
-          url=event.url,
-          class='icon-link'
-          )  }}
-      {% else %}
+      <h3 class="event-venue">
         {{ utility.link_if(
           content=event.venue,
           url=event.url
-          )  }}
-      {% endif %}
-    </h4>
+          ) }}
+      </h3>
 
-    {% if talk %}
-      {% set talk = all_pages|filter_pages('slug', 'eq', event.slug)|get_page %}
+      {{ meta(event) }}
+
+      <div class="event-summary">
+        {{ utility.link_if(
+          content=talk.title|typogrify + ':',
+          url=talk_url,
+          class='event-talk'
+          ) }}
+
+        {{ talk.render_summary() }}
+      </div>
+    </article>
+  {% endif %}
+{% endmacro %}
+
+
+{% macro list(events, title, remove_first=false) %}
+  {% set has_clip = (events|length > 1) and remove_first %}
+  {% set has_all = events|length and not remove_first %}
+
+  {% if has_clip or has_all %}
+    <section data-module="events-list">
+      <h3>{{ title }}</h3>
+
+      {% for event in events %}
+        {% if not (loop.first and remove_first) %}
+          {{ item(event) }}
+        {% endif %}
+      {% endfor %}
+    </section>
+  {% endif %}
+{% endmacro %}
+
+
+{% macro item(event) %}
+  {% set event_date = event.date|make_date %}
+  {% set talk = all_pages|filter_pages('slug', 'eq', event.slug)|get_page %}
+  {% set talk_url = content.page_link(talk) %}
+
+  <article class="event">
+    <h4 class="event-venue">
       {{ utility.link_if(
-        content=talk.title|typogrify,
-        url=content.page_link(talk),
-        class='event-talk'
+        content=event.venue,
+        url=talk_url
         )  }}
-    {% endif %}
+    </h4>
 
     {{ meta(event) }}
   </article>

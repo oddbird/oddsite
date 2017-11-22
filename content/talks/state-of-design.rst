@@ -14,8 +14,8 @@ brag: |
   An overview
   of the new features in CSS –
   from **Grid layout** to **typography**.
-summary:
-  For far too long we've been forced to reuse layout patterns
+summary: |
+  *For far too long we've been forced to reuse layout patterns*
   that have worked in the past,
   creating a web full of sites that all look the same.
   Narrow timelines,

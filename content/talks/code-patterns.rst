@@ -30,6 +30,10 @@ events:
     url: 'http://environmentsforhumans.com/2016/css-summit/'
     date: [2016, 7, 26]
     slides: 'https://oddbooksapp.com/release/1f76aa54-df02-4f83-8a7b-c54e1c745fbf'
+  - venue: 'DublinCSS'
+    url: 'http://www.meetup.com/DublinCSS/events/230011902/'
+    date: [2016, 05, 19]
+    slides: 'http://oddbooksapp.com/book/sass-patterns'
   - venue: 'Clarity Conference'
     url: 'http://clarityconf.com/'
     date: [2016, 3, 31]
@@ -40,7 +44,7 @@ brag: |
   **automate style documentation** by
   building patterns directly into your code.
 summary: |
-  **Style Guides & Pattern Libraries are great tools**
+  *Style Guides & Pattern Libraries are great tools*
   for documenting the relationships between code and design,
   but beautiful docs are only half the battle.
   Behind the scenes those patterns have to live in our code,

@@ -10,11 +10,16 @@ events:
     date: [2017, 2, 21]
     adr: 'Naperville, IL'
     slides: 'https://www.slideshare.net/Funstacy/from-scratch-to-launch-2-design-phase'
+  - venue: 'WordPress Naperville'
+    url: 'https://www.meetup.com/WordPress-Naperville/events/236485707/'
+    date: [2017, 1, 17]
+    adr: 'Naperville, IL'
+    slides: 'https://www.slideshare.net/Funstacy/from-scratch-to-launch-series-part1-planning-phase'
 summary: |
   This series of related talks
   helps you take a project
-  **from scartch to launch with WordPress** –
-  from planning, to design, and theme-building.
+  from scartch to launch with WordPress –
+  with planning, design, and theme-building.
 
 
 From Scratch to Launch
