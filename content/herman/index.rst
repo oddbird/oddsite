@@ -1,9 +1,26 @@
 public: yes
-location: open-source
+location: 'hermansite'
+template: 'hermansite/layout.html'
 grid_template: true
+headline:
+  - title: 'Herman: Automated Pattern Libraries'
+    type: 'An **OddBird** Project'
+    tagline: "Documentation, or it didn't happen"
 logo: 'herman'
 image:
   - src: 'projects/herman.jpg'
+nav:
+  - text: 'hermansite-articles'
+    display_text: 'articles'
+    url: '/herman/articles/'
+  - text: 'source'
+    url: 'https://github.com/oddbird/sassdoc-theme-herman/issues'
+  - text: 'hermansite-docs'
+    display_text: 'docs'
+    url: '/herman/docs/'
+  - text: 'oddbird'
+    display_text: 'oddbird'
+    url: '/'
 project:
   - name: 'Herman'
     tagline: 'Automated Style Guides'
@@ -13,6 +30,13 @@ project:
 contributors:
   - author: 'oddbird'
     role: 'creators'
+quotes:
+  - text:
+      'Herman is my documentation dream come true,
+      especially when it comes to systems design'
+    name: 'Claudina Sarahe'
+    role: 'Frontend Architect'
+    slug: 'dream'
 brag: |
   Created by OddBird,
   Herman provides
@@ -34,8 +58,8 @@ summary: |
   .. _Sass Accoutrement: /open-source/accoutrement/
 
 
-Herman
-======
+Herman: Automated Pattern Libraries
+===================================
 
 .. ---------------------------------
 .. callmacro:: content.macros.j2#rst

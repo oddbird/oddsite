@@ -36,6 +36,16 @@
       color: color('brand-blue');
     }
   }
+
+  [data-location*='hermansite'] & {
+    #{$link} {
+      color: color('action-hover');
+    }
+
+    #{$focus} {
+      color: color('brand-blue');
+    }
+  }
 }
 
 
@@ -72,7 +82,8 @@
   }
 
   [data-location='home'] &,
-  [data-location='susysite'] & {
+  [data-location='susysite'] & ,
+  [data-location='hermansite'] & {
     animation: draw-logo 3s 1 ease-out both, fill-logo 3s 2s 1 ease-in-out both, fade-logo-outline 2s 2s 1 ease-in-out both;
   }
 
@@ -85,6 +96,13 @@
 
   [data-location='susysite'] & {
     stroke: color('brand-pink');
+    stroke-dasharray: 5000;
+    stroke-dashoffset: 5000;
+    stroke-width: 10;
+  }
+
+  [data-location='hermansite'] & {
+    stroke: color('action-hover');
     stroke-dasharray: 5000;
     stroke-dashoffset: 5000;
     stroke-width: 10;
