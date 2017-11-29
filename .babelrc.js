@@ -10,7 +10,7 @@ module.exports = {
   plugins,
   presets: [
     [
-      'env',
+      '@babel/env',
       {
         modules: false,
         useBuiltIns: 'entry',

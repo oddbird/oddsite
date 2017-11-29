@@ -3,7 +3,7 @@
 
 /// Basic styles for all icons
 /// @group icons
-/// @icons templates/icons/ utility.macros.j2:icon
+/// @icons templates/icons/
 /// @example njk -
 ///   {% import 'utility.macros.j2' as utility %}
 ///   {{ utility.icon('dribbble') }}

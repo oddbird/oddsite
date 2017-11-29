@@ -257,7 +257,7 @@ const getServeOpts = dir => ({
   logPrefix: 'oddsite',
   notify: false,
   files: [`${dir}**/*`],
-  reloadDebounce: 500,
+  reloadDebounce: 1000,
 });
 
 const getBsCb = cb => (err, bs) => {
