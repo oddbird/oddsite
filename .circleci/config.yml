@@ -45,7 +45,7 @@ jobs:
           command: karma start --reporters dots,coverage,junit --browsers ChromeHeadless
       - run:
           name: Check JS Test Coverage
-          command: istanbul check-coverage --root jscov/ --statements=100 --functions=100 --branches=100 --lines=100
+          command: nyc check-coverage --temp-directory ./jscov/ --statements=100 --functions=100 --branches=100 --lines=100
       - deploy:
           name: Update yarn.lock [greenkeeper]
           command: |

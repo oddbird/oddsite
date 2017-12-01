@@ -1,6 +1,3 @@
-// Add ES2015 polyfills
-import '@babel/polyfill';
-
 import './utils';
 
 // require all test modules
