@@ -4,21 +4,21 @@ slides: 'https://www.oddbooksapp.com/book/sass-map-magic'
 events:
   - venue: 'CSSConf 2016'
     url: 'https://2016.cssconf.com/'
-    date: [2016, 09, 26]
+    date: [2016, 9, 26]
     adr: 'Boston, MA'
     slides: 'https://oddbooksapp.com/release/b71e6e5d-e956-42ff-a4dd-b70bf3b13a2a'
     video: 'https://www.youtube.com/watch?v=MdwtoFt2LOI'
   - venue: 'CSS Summit'
     url: 'http://environmentsforhumans.com/2015/css-summit/'
-    date: [2015, 07, 07]
+    date: [2015, 7, 7]
   - venue: 'Future Insights Live'
-    date: [2015, 06, 02]
+    date: [2015, 6, 2]
   - venue: 'SassConf 2014 [Unconference Day]'
     url: 'http://sassconf.com'
-    date: [2014, 10, 02]
+    date: [2014, 10, 2]
   - venue: 'BlendConf'
     url: 'http://www.blendconf.com/'
-    date: [2014, 09, 12]
+    date: [2014, 9, 12]
     video: 'http://teamtreehouse.com/library/sass-map-magic'
 summary: |
   *Maps are a powerful data type in Sass* —

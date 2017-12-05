@@ -8,7 +8,7 @@ tags: [Speaking]
     author: miriam
     events:
       - venue: 'Clarity Conference'
-        date: [04, 01, 2016]
+        date: [04, 1, 2016]
         video: 'https://www.sitepoint.com/premium/courses/clarity-conference-2016-2925/lesson/4/step/1'
 
 

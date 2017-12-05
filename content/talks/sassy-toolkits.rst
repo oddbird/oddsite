@@ -4,11 +4,11 @@ slides: 'https://www.oddbooksapp.com/book/sassy-toolkits'
 events:
   - venue: 'Frontend Conference Zurich'
     url: 'http://frontendconf.ch'
-    date: [2015, 08, 28]
+    date: [2015, 8, 28]
     video: 'https://www.youtube.com/watch?v=9w0pgUTYy5k'
   - venue: 'WordCamp Denver'
     url: 'http://denver.wordcamp.org/2015/'
-    date: [2015, 06, 13]
+    date: [2015, 6, 13]
   - venue: 'SassConf 2013'
     url: 'http://sassconf.com/2013/'
     date: [2013, 10, 12]
@@ -16,7 +16,7 @@ events:
     video: 'https://vimeo.com/channels/sassconf2013/86306775'
   - venue: 'Camp Sass'
     url: 'http://campsass.com/2014/'
-    date: [2014, 04, 19]
+    date: [2014, 4, 19]
     slides: 'http://miriamsuzanne.com/pres/show-yr-work/'
 summary: |
   *The web is littered with opinionated CSS frameworks*

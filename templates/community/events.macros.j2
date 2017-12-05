@@ -18,14 +18,13 @@
 
       {{ list(
         events=future,
-        title="Upcoming Appearances",
-        remove_first=true if future[0] else false
+        title="Upcoming Appearances"
         ) }}
 
       {{ list(
         events=past,
         title="Speaking History",
-        remove_first=false if future[0] else true
+        slice=5
         ) }}
     </section>
   {% endif %}
@@ -61,17 +60,25 @@
 {% endmacro %}
 
 
-{% macro list(events, title, remove_first=false) %}
-  {% set has_clip = (events|length > 1) and remove_first %}
-  {% set has_all = events|length and not remove_first %}
-
-  {% if has_clip or has_all %}
+{% macro list(events, title, slice=none) %}
+  {% if events %}
     <section data-module="events-list">
       <h3>{{ title }}</h3>
 
+      {% if slice %}
+        <button class="btn" {{ utility.toggle_button('more-events') }}>
+          show all events
+        </button>
+      {% endif %}
+
       {% for event in events %}
-        {% if not (loop.first and remove_first) %}
-          {{ item(event) }}
+        {{ item(event) }}
+
+        {% if loop.index == slice %}
+          <div {{ utility.toggle_target('more-events') }}>
+        {% endif %}
+        {% if loop.last and slice %}
+          </div>
         {% endif %}
       {% endfor %}
     </section>

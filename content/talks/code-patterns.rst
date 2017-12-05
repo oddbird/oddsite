@@ -32,7 +32,7 @@ events:
     slides: 'https://oddbooksapp.com/release/1f76aa54-df02-4f83-8a7b-c54e1c745fbf'
   - venue: 'DublinCSS'
     url: 'http://www.meetup.com/DublinCSS/events/230011902/'
-    date: [2016, 05, 19]
+    date: [2016, 5, 19]
     slides: 'http://oddbooksapp.com/book/sass-patterns'
   - venue: 'Clarity Conference'
     url: 'http://clarityconf.com/'

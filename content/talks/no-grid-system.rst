@@ -1,17 +1,20 @@
 public: yes
 speakers: [miriam]
+slides: 'https://www.oddbooksapp.com/book/css-layout'
 image:
   - src: 'pages/devconf-best.jpg'
 events:
+  - venue: 'Clarity Conference'
+    url: 'https://www.clarityconf.com/2017'
+    date: [2017, 11, 28]
+    adr: 'San Francisco, CA'
+    slides: 'https://oddbooksapp.com/release/ae641b90-8efa-4b1e-8da8-16940edf420d'
   - venue: 'CSS Dev Conf'
     url: 'http://2017.cssdevconf.com/'
     date: [2017, 10, 9]
     adr: 'New Orleans, LA'
-    note: '"Best Of" Audience-Choice Award'
-    slides: 'https://www.oddbooksapp.com/book/css-layout'
-    image:
-      - src: 'talks/css-dev-conf.jpg'
-        type: 'thumbnail'
+    note: "Audience-Choice 'Best Of' Award"
+    slides: 'https://oddbooksapp.com/release/0434d9c1-4e89-4827-abfc-4d3942fa305d'
   - venue: 'DjangoCon US'
     url: 'https://2017.djangocon.us/'
     date: [2017, 8, 14]

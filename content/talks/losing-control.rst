@@ -4,7 +4,7 @@ slides: 'https://www.oddbooksapp.com/book/losing-control'
 events:
   - venue: 'UVA Scholars’ Lab'
     url: 'http://cal.lib.virginia.edu/event/3088981'
-    date: [2017, 01, 23]
+    date: [2017, 1, 23]
     adr: 'Charlottesville, VA'
 summary: |
   *As creators, it’s tempting to grab and consolidate our power*,
