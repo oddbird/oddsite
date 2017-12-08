@@ -17,7 +17,7 @@ summary: |
   .. callmacro:: content.macros.j2#link_button
     :url: '/contact/'
 
-    Bring us to your conference, comany, or meetup
+    Bring us to your conference, company, or meetup
 
   .. _freely-shared: /open-source/
   .. _writing: /blog/
