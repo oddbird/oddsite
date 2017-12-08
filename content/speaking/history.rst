@@ -55,25 +55,6 @@ talks:
     title: 'Evolving the Design Process'
     slides: 'http://www.slideshare.net/Funstacy/exploring-the-design-process-wcchi'
     video: 'http://wordpress.tv/2014/07/05/stacy-kvernmo-exploring-the-design-process/'
-  - venue: 'PyCon'
-    url: 'https://us.pycon.org/2014/'
-    date: [2014, 4, 13]
-    author: 'carl'
-    title: 'Set Your Code Free'
-    slides: '/set-your-code-free-preso/'
-    video: 'http://pyvideo.org/video/2637/set-your-code-free-releasing-and-maintaining-an'
-  - venue: 'ConFoo'
-    url: 'http://confoo.ca/'
-    date: [2014, 2, 28]
-    author: 'carl'
-    title: 'Python Testing Tools'
-    slides: '/python-testing-tools-preso/'
-  - venue: 'ConFoo'
-    url: 'http://confoo.ca/'
-    date: [2014, 2, 27]
-    author: 'carl'
-    title: 'Advanced Python'
-    slides: '/advanced-python-preso/'
   - venue: 'NYCSass Meetup'
     url: 'http://www.meetup.com/nyc-sass/events/146898452/'
     date: [2013, 11, 19]
@@ -91,31 +72,7 @@ talks:
     date: [2013, 9, 17]
     author: 'stacy'
     title: 'A development site. Why do I need one?'
-  - venue: 'PyCon'
-    url: 'https://us.pycon.org/2013/'
-    date: [2013, 3, 16]
-    author: 'carl'
-    title: 'Getting Started with Automated Testing'
-    slides: '/start-testing-preso/'
-    video: 'http://pyvideo.org/video/1674/getting-started-with-automated-testing'
-  - venue: 'DjangoCon'
-    url: 'https://djangocon.us'
-    date: [2016, 9, 7]
-    author: 'carl'
-    title: 'Taming dependencies with pip'
-    video: 'http://pyvideo.org/video/69/djangocon-2011--taming-dependencies-with-pip'
-  - venue: 'PyCon'
-    url: 'https://us.pycon.org/2012/'
-    date: [2012, 3, 10]
-    author: 'carl'
-    title: 'Testing and Django'
-    video: 'http://pyvideo.org/video/699/testing-and-django'
-  - venue: 'PyCon'
-    url: 'https://us.pycon.org/2011/'
-    date: [2011, 3, 12]
-    author: 'carl'
-    title: "Reverse-engineering Ian Bicking's brain: inside pip and virtualenv"
-    video: 'http://pyvideo.org/video/389/pycon-2011--reverse-engineering-ian-bicking--39-s'
+
 
 
 Speaking History
