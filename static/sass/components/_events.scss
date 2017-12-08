@@ -61,4 +61,8 @@
   .event-meta {
     display: inline-block;
   }
+
+  & + & {
+    margin-top: size('double-gutter');
+  }
 }
