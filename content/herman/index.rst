@@ -86,14 +86,22 @@ Herman is designed to grow with you,
 and keep everything in one place.
 
 
-Are we dropping benefits?
+Design System Documentation Benefits
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+- Streamlines designer/developer communication
+-	Standardizes onboarding
+-	Standardizes handoff
+-	Drives consistent design across an application
+-	Speeds processes with existing patterns
+-	Helps you scale an application
+-	Reduces technical debt
+-	Fixes performance issues
+-	Minimizes maintenance
+
+
+Herman's Current Features
 ~~~~~~~~~~~~~~~~~~~~~~~~~
-
-If not, those would go here according to the prototype.
-
-
-Current Features
-~~~~~~~~~~~~~~~~
 
 - Supports all `SassDoc`_ annotations and configuration settings
 - Integrated with Sass/CSS for better automation
