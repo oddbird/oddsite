@@ -65,6 +65,8 @@ Herman: Automated Pattern Libraries
 .. callmacro:: content.macros.j2#rst
   :tag: 'start'
 
+-
+
 
 Give your design system a home
 ------------------------------
@@ -84,20 +86,6 @@ while reducing technical debt and
 minimizing long-term maintainance.
 Herman is designed to grow with you,
 and keep everything in one place.
-
-
-Design System Documentation Benefits
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-- Streamlines designer/developer communication
--	Standardizes onboarding
--	Standardizes handoff
--	Drives consistent design across an application
--	Speeds processes with existing patterns
--	Helps you scale an application
--	Reduces technical debt
--	Fixes performance issues
--	Minimizes maintenance
 
 
 Herman's Current Features
