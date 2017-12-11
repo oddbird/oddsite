@@ -41,3 +41,10 @@
     margin-left: size('half-shim');
   }
 }
+
+
+.content-img {
+  + .btn {
+    margin-top: size('gutter');
+  }
+}
