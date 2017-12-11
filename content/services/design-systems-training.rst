@@ -19,6 +19,9 @@ summary: |
   .. _with link: /work/
 
 
+Design Systems Training
+=======================
+
 .. callmacro:: content.macros.j2#rst
   :tag: 'start'
 
