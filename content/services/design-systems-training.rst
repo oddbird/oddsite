@@ -4,19 +4,15 @@ pageclasses: services-layout
 grid_template: true
 headline:
   - title: 'Design Systems Training'
-    tagline: 'Tagline'
+    tagline: 'Want to reduce technical debt and scale your applications?'
     type: 'Services'
+image:
+  - src: '/herman/stacy-design-systems-training.jpg'
 summary: |
-  **OddBird provides ...**
-  regular intro text `with link`_ –
-
-  .. callmacro:: content.macros.j2#link_button
-    :url: '/contact/'
-    :class: 'section-end'
-
-    CTA Button
-
-  .. _with link: /work/
+  **Oddbird provides training and implementation consulting in
+  style guides, pattern libraries, layout design, and architecture.**
+  If you're a prefect manager, SCRUM masters, or team leader,
+  why not make your job easier?
 
 
 Design Systems Training
@@ -28,30 +24,38 @@ Design Systems Training
 We'll teach your design and development teams to:
 -------------------------------------------------
 
-- list item
-- list item
+- maintain consistent design across an application
+-	speed up processes
+-	communicate
 
 
 .. callmacro:: content.macros.j2#link_button
   :url: '/contact/'
-  :class: 'section-end'
 
-  Contact us to learn more
+  Let's chat about training
 
 
 
 Herman Automated Style Guide
--------------------------------------------------------
+----------------------------
 
-Test goes here.
+Herman is a free OddBird tool that standardizes designer/developer
+communication, onboarding, and handoff to save time.
+An automated pattern libraries for long-term maintainability.
+Herman makes life simple, changing and growing with you.
 
-.. figure:: /static/images/work/quarqnet/communication.jpg
-   :class: extend-large
-   :alt: user story in Pivotal Tracker and Sass color maps
+
+Depending on your needs, Herman may be included in a
+design systems training and implementation project.
+We will work with you to determine the best tools for your company.
+
+.. image:: /static/images/herman/herman-color-palette.jpg
+   :class: extend-large content-img
+   :alt: screenshot showing Herman color palette pattern functionality
+
 
 .. callmacro:: content.macros.j2#link_button
   :url: '/herman/'
-  :class: 'section-end'
 
   Check out Herman
 
