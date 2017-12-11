@@ -3,12 +3,12 @@ location: 'hermansite'
 template: 'hermansite/layout.html'
 grid_template: true
 headline:
-  - title: 'Herman: Automated Pattern Libraries'
+  - title: 'Herman: Automated Style Guides'
     type: 'An **OddBird** Project'
-    tagline: "Documentation, or it didn't happen"
+    tagline: 'Get your design & development teams on the same page'
 logo: 'herman'
 image:
-  - src: 'projects/herman.jpg'
+  - src: 'herman/herman-hero.jpg'
 nav:
   - text: 'hermansite-articles'
     display_text: 'articles'
@@ -46,58 +46,70 @@ brag: |
   for **automated pattern libraries**,
   and **style guides**.
 summary: |
-  **Herman is an automated pattern-library generator,**
-  built on top of SassDoc,
-  and designed to integrate with OddBird's
-  `Sass Accoutrement`_ libraries
-  for quick theme configuration,
-  color palettes, font specimens, icon libraries,
-  and documentation of UI patterns
-  in both CSS and HTML.
-
-  .. _Sass Accoutrement: /open-source/accoutrement/
+  **Design systems streamline development,
+  communication, and consistency**
+  -- but often rely on dedicated
+  teams and extended budgets.
+  We wanted a tool that helps create and maintain
+  living style guides & pattern libraries in an
+  agile process, and on a budget.
+  Herman helps us keep our development process simple,
+  and our UX consistent, as we iterate on patterns
+  and scale over time.
 
 
 Herman: Automated Pattern Libraries
 ===================================
 
-.. ---------------------------------
+
 .. callmacro:: content.macros.j2#rst
   :tag: 'start'
 
-Make Documentation the Default
+
+Give your design system a home
 ------------------------------
 
-.. image:: https://badge.fury.io/js/sassdoc-theme-herman.svg
-  :alt: 'npm package'
-  :target: https://www.npmjs.com/package/sassdoc-theme-herman
+Documentation should be the default option --
+the path of least resistence for developers.
+Herman combines documentation of design tokens
+and system guidelines, with code patterns, components,
+and rendered visual examples -- all driven by Sass and CSS.
+By automating as much of the documentation as possible,
+we can help ensure that everything stays up to date for
+long-term maintainability.
 
-.. image:: https://circleci.com/gh/oddbird/sassdoc-theme-herman.svg?style=shield
-  :alt: 'build-status'
-  :target: https://circleci.com/gh/oddbird/sassdoc-theme-herman
+Help improve communication across stakeholders,
+with consistency in UX, performance, and accessibility --
+while reducing technical debt and
+minimizing long-term maintainance.
+Herman is designed to grow with you,
+and keep everything in one place.
 
-Pattern libraries and style guides help
-keep the code and design of your site consistent,
-while facilitating communication between designers and developers.
-But documentation can be difficult to maintain,
-especially if it lives too far from the code –
-and there's nothing worse than an out-of-date pattern library.
-Herman is here to help make documentation simple,
-keeping it inline with the source code of the project,
-and updating pattern libraries on-the-fly.
 
-.. code:: bash
+Are we dropping benefits?
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
-  npm install sassdoc
-  npm install sassdoc-theme-herman
+If not, those would go here according to the prototype.
 
-.. callmacro:: content.macros.j2#link_button
-  :url: 'docs/'
 
-  Read The Docs
+Current Features
+~~~~~~~~~~~~~~~~
+
+- Supports all `SassDoc`_ annotations and configuration settings
+- Integrated with Sass/CSS for better automation
+- Visualize design tokens like fonts, colors, sizes, ratios, and icons
+- Display Sass mixins and Nunjucks macros with expected input and rendered examples
+- Include additional prose, pages, and link to third-party docs
+- Encourage self-documenting patterns, without locking you in
+- Optionally integrate with OddBird's `Sass Accoutrement`_ libraries
+
+.. _SassDoc: http://sassdoc.com/
+.. _Sass Accoutrement: /open-source/accoutrement/
+
+
 
 .. callmacro:: content.macros.j2#rst
   :tag: 'end'
-.. ---------------------------------
+
 
 .. callmacro:: content.macros.j2#accoutrement
