@@ -5,7 +5,7 @@ grid_template: true
 headline:
   - title: 'Packages and Services'
     tagline: 'Helping you launch your idea quickly'
-    type: 'Client Work'
+    type: 'Services'
 after:
   - include: 'projects/_process.html.j2'
     title: 'The OddBird Process is...'
@@ -232,5 +232,4 @@ Along the way, we’ll deliver:
 
 .. callmacro:: content.macros.j2#rst
   :tag: 'end'
-
 
