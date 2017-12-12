@@ -269,7 +269,7 @@ const getBsCb = cb => (err, bs) => {
 };
 
 gulp.task('browser-sync', cb => {
-  browserSync.init(getServeOpts(paths.DIST_DIR), getBsCb(cb));
+  browserSync.init(getServeOpts(paths.DIST_DIR), cb);
 });
 
 gulp.task('prod-serve', cb => {
