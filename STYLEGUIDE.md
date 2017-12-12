@@ -28,7 +28,7 @@ The CSS does the styling.
 - Blockquotes should be used when quoting another source. Blockquotes require 4
 spaces.
 
-```nohighlight
+```rst
     This is a blockquote with citation. Vestibulum tortor quam, feugiat vitae,
     ultricies eget, tempor sit amet, ante.
 
@@ -38,7 +38,7 @@ spaces.
 - If you want to highlight something and make it look similar to a
 blockquote, but do not have a source, you can use the following:
 
-```nohighlight
+```rst
 .. callmacro:: content-macros.j2#pullquote
 
   This is the best piece of content. It isn't quoting an external source,
@@ -112,7 +112,7 @@ and outputs as a class.
 Below are a few examples when adding alignment, alt text, classes and links to
 images in RST:
 
-```nohighlight
+```rst
 .. image:: /static/images/blog/miko.jpg
    :align: right
    :alt: Miko smiling while playing outside
@@ -156,7 +156,7 @@ on content to social sites.
 - The summary should not be repeated as the intro in the post.
 - It is created near the top of the document and format is as follows:
 
-```nohighlight
+```rst
 summary: |
   This is your short summary. You can include a excerpt that will appear
   on the archive pages and as the default social media summary.
@@ -175,7 +175,7 @@ tags to use in order to avoid variations of the same topic.
 - Tags with multiple words should have spaces instead of dashes unless the
 phrase is hyphenated. Multi-word tags need to be declared as a string:
 
-```nohighlight
+```rst
 tag: ['Open Design', OddSite]
 ```
 
@@ -192,7 +192,7 @@ Whitespace
 - No whitespace at the end of lines. In Sublime Text, we strongly recommend the
   following settings:
 
-```nohighlight
+```json
 "rulers": [79],
 "default_line_ending": "unix",
 "ensure_newline_at_eof_on_save": true,

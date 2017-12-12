@@ -9,7 +9,7 @@ const fs = require('fs-extra');
 const gulp = require('gulp');
 const gutil = require('gulp-util');
 const KarmaServer = require('karma').Server;
-const mocha = require('gulp-spawn-mocha');
+const mocha = require('gulp-mocha');
 const path = require('path');
 const prettier = require('gulp-prettier-plugin');
 const rename = require('gulp-rename');
@@ -257,7 +257,7 @@ const getServeOpts = dir => ({
   logPrefix: 'oddsite',
   notify: false,
   files: [`${dir}**/*`],
-  reloadDebounce: 500,
+  reloadDebounce: 1000,
 });
 
 const getBsCb = cb => (err, bs) => {
@@ -269,7 +269,7 @@ const getBsCb = cb => (err, bs) => {
 };
 
 gulp.task('browser-sync', cb => {
-  browserSync.init(getServeOpts(paths.DIST_DIR), getBsCb(cb));
+  browserSync.init(getServeOpts(paths.DIST_DIR), cb);
 });
 
 gulp.task('prod-serve', cb => {

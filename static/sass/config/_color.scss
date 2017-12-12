@@ -7,7 +7,7 @@
 /// The brand is defined by our primary brand blue,
 /// along with secondary pink and orange base colors.
 /// @group config-color
-/// @preview color-palette
+/// @colors
 /// @type Map
 $brand-colors: (
   'brand-blue': hsl(195, 52%, 31%),
@@ -24,7 +24,7 @@ $brand-colors: (
 /// The light and dark contrast colors act as
 /// the high and low range of our palette.
 /// @group config-color
-/// @preview color-palette
+/// @colors
 /// @type Map
 /// @link http://oddbird.net/accoutrement-color/docs/
 ///   Accoutrement Colors
@@ -41,7 +41,7 @@ $contrast-colors: (
 // --------------
 /// Re-usable color patterns for application in different components.
 /// @group config-color
-/// @preview color-palette
+/// @colors
 /// @type Map
 $pattern-colors: (
   'text': 'contrast-dark',
@@ -78,7 +78,7 @@ $pattern-colors: (
 // ------------------------
 /// Colors used with pygments
 /// @group config-color
-/// @preview color-palette
+/// @colors
 /// @type Map
 $highlight-colors: (
   'code-punct': hsl(250, 5%, 20%),
