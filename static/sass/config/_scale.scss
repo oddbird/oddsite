@@ -5,7 +5,7 @@
 // Ratios
 // ------
 /// @group config-scale
-/// @preview ratios
+/// @ratios
 /// @link http://oddbird.net/accoutrement-scale/docs/
 ///   Accoutrement Scale
 $modular-scale: (
@@ -20,7 +20,7 @@ $ratios: map-merge($ratios, $modular-scale);
 // Text Sizes
 // ----------
 /// @group config-scale
-/// @preview sizes;
+/// @sizes
 /// @link http://oddbird.net/accoutrement-scale/docs/
 ///   Accoutrement Scale
 $text-sizes: (
@@ -39,7 +39,7 @@ $sizes: map-merge($sizes, $text-sizes);
 // Spacing Sizes
 // -------------
 /// @group config-scale
-/// @preview sizes; style: ruler
+/// @sizes {ruler}
 /// @link http://oddbird.net/accoutrement-scale/docs/
 ///   Accoutrement Scale
 $spacing-sizes: (
@@ -64,7 +64,7 @@ $sizes: map-merge($sizes, $spacing-sizes);
 // Pattern Sizes
 // -------------
 /// @group config-scale
-/// @preview sizes; style: output-only
+/// @sizes {output-only}
 /// @link http://oddbird.net/accoutrement-scale/docs/
 ///   Accoutrement Scale
 $pattern-sizes: (
@@ -102,7 +102,7 @@ $sizes: map-merge($sizes, $pattern-sizes);
 // ----------
 // Mostly used as breakpoints when content is asking for css edits
 /// @group config-scale
-/// @preview sizes; style: output-only
+/// @sizes {output-only}
 /// @link http://oddbird.net/accoutrement-scale/docs/
 ///   Accoutrement Scale
 $page-sizes: (
@@ -119,7 +119,7 @@ $sizes: map-merge($sizes, $page-sizes);
 // ------------
 // Columns are used mostly in extend mixin and to declare size of content containers
 /// @group config-scale
-/// @preview sizes; style: output-only
+/// @sizes {output-only}
 /// @link http://oddbird.net/accoutrement-scale/docs/
 ///   Accoutrement Scale
 $column-sizes: (
