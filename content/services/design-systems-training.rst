@@ -27,7 +27,7 @@ Design Systems Training
 .. callmacro:: content.macros.j2#rst
   :tag: 'start'
 
-Your team will learn how to:
+Your Team Will Learn How To:
 ----------------------------
 
 - maintain consistent design across an application
