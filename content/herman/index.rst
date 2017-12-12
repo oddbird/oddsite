@@ -53,9 +53,15 @@ summary: |
   We wanted a tool that helps create and maintain
   living style guides & pattern libraries in an
   agile process, and on a budget.
-  Herman helps us keep our development process simple,
-  and our UX consistent, as we iterate on patterns
+  Herman helps you keep your development process simple,
+  and your UX consistent, as you iterate on patterns
   and scale over time.
+
+  Start `using Herman`_ or `hire us`_
+  for design systems training.
+
+  .. _`using Herman`: https://github.com/oddbird/sassdoc-theme-herman
+  .. _`hire us`: /contact/
 
 
 Herman: Automated Pattern Libraries
@@ -65,10 +71,8 @@ Herman: Automated Pattern Libraries
 .. callmacro:: content.macros.j2#rst
   :tag: 'start'
 
--
 
-
-Give your design system a home
+Give Your Design System a Home
 ------------------------------
 
 Documentation should be the default option --
@@ -77,7 +81,7 @@ Herman combines documentation of design tokens
 and system guidelines, with code patterns, components,
 and rendered visual examples -- all driven by Sass and CSS.
 By automating as much of the documentation as possible,
-we can help ensure that everything stays up to date for
+you can help ensure that everything stays up to date for
 long-term maintainability.
 
 Help improve communication across stakeholders,
@@ -101,7 +105,6 @@ Herman's Current Features
 
 .. _SassDoc: http://sassdoc.com/
 .. _Sass Accoutrement: /open-source/accoutrement/
-
 
 
 .. callmacro:: content.macros.j2#rst
