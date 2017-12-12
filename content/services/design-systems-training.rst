@@ -11,29 +11,31 @@ image:
 summary: |
   **Oddbird provides training and implementation consulting in
   style guides, pattern libraries, layout design, and architecture.**
-  If you're a prefect manager, SCRUM masters, or team leader,
+  If you're a project manager, scrum master, or team leader,
   why not make your job easier?
+
+  .. callmacro:: content.macros.j2#link_button
+    :url: '/contact/'
+
+    Let's chat about training
 
 
 Design Systems Training
 =======================
 
+
 .. callmacro:: content.macros.j2#rst
   :tag: 'start'
 
-We'll teach your design and development teams to:
--------------------------------------------------
+Your team will learn how to:
+----------------------------
 
 - maintain consistent design across an application
--	speed up processes
--	communicate
-
-
-.. callmacro:: content.macros.j2#link_button
-  :url: '/contact/'
-
-  Let's chat about training
-
+- build a foundation that leads to a scalable code base
+- discover and create meaningful patterns
+- speed up processes
+- communicate effectively as a team
+- find bugs before committing code
 
 
 Herman Automated Style Guide
