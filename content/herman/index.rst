@@ -67,13 +67,12 @@ summary: |
 Herman: Automated Pattern Libraries
 ===================================
 
-
 .. callmacro:: content.macros.j2#rst
   :tag: 'start'
 
+.. raw:: html
 
-Give Your Design System a Home
-------------------------------
+  <h2>Give Your Design System a Home</h2>
 
 Documentation should be the default option --
 the path of least resistence for developers.
@@ -91,9 +90,9 @@ minimizing long-term maintainance.
 Herman is designed to grow with you,
 and keep everything in one place.
 
+.. raw:: html
 
-Herman's Current Features
-~~~~~~~~~~~~~~~~~~~~~~~~~
+  <h3>Herman's Current Features</h3>
 
 - Supports all `SassDoc`_ annotations and configuration settings
 - Integrated with Sass/CSS for better automation
