@@ -39,7 +39,7 @@ summary: |
   .. _Herman: /herman/
   .. _full documentation: /herman/docs/
   .. _contact us: /contact/
-  .. _putting your design system in place: #@@@
+  .. _putting your design system in place: /services/design-systems-training/
 
 
 Herman Style Guides
@@ -172,7 +172,7 @@ so documentation is more likely to stay up-to-date.
 
 .. image:: /static/images/blog/2017/herman-intro/sassdoc.jpg
    :alt: SassDoc screenshot
-   :class: extend-small img-border img-shadow img-spacing
+   :class: extend-small img-border img-shadow
    :target: http://sassdoc.com/
 
 Those tools are great,
@@ -232,15 +232,15 @@ before any UI components have been built.
 This is a good place to start defining your system,
 and Herman can help you visualize these abstractions.
 
-.. image:: /static/images/blog/2017/herman-intro/sizes.jpg
-   :alt: Herman size palettes
-   :class: extend-large img-border img-shadow img-spacing
-   :target: /herman/docs/demo_sizes.html
-
 .. image:: /static/images/blog/2017/herman-intro/colors.jpg
    :alt: Herman color palettes
-   :class: extend-small img-border img-shadow img-spacing
+   :class: extend-large img-border img-shadow img-spacing
    :target: /herman/docs/demo_colors.html
+
+.. image:: /static/images/blog/2017/herman-intro/sizes.jpg
+   :alt: Herman size palettes
+   :class: extend-small img-border img-shadow
+   :target: /herman/docs/demo_sizes.html
 
 Herman adds annotations for colors (``@colors``),
 fonts (``@fonts``), sizes (``@sizes``), and ratios (``@ratios``).
@@ -278,7 +278,7 @@ to display all the SVG icons in a given folder:
 
 .. image:: /static/images/blog/2017/herman-intro/icons.jpg
    :alt: Herman icon palettes
-   :class: extend-small img-border img-shadow img-spacing
+   :class: extend-small img-border img-shadow
    :target: /herman/docs/demo_icons.html
 
 
@@ -296,7 +296,7 @@ Herman allows
 
 .. image:: /static/images/blog/2017/herman-intro/examples.jpg
    :alt: Herman rendered example
-   :class: extend-small img-border img-shadow img-spacing
+   :class: extend-small img-border img-shadow
    :target: /herman/docs/demo_examples.html
 
 We've extended SassDoc's ``@example`` annotation,
@@ -427,4 +427,4 @@ We're excited to hear from you!
 .. _contact form: /contact/
 .. _`@OddBird`: https://twitter.com/oddbird
 .. _public Slack: http://friends.oddbird.net
-.. _`a range of support, training, and consulting`: #@@@
+.. _`a range of support, training, and consulting`: /services/design-systems-training/
