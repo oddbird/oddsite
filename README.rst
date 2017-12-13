@@ -76,7 +76,7 @@ which development commands need to be run before serving locally:
 
 - 📦 (``:package:``) -> ``pip install -r requirements.txt``
 - 🐈 (``:cat2:``) -> ``yarn``
-- 🙀 (``:scream_cat:``) -> ``rm -rf node/*; rm -rf node_modules/; bin/unpack-node; yarn``
+- 🙀 (``:scream_cat:``) -> ``bin/unpack-node; yarn``
 
 After upgrading any of the OddBird-owned packages (Susy, True, Herman, or
 Accoutrement-*), run ``bin/update-subproject-docs`` to pull their updated
