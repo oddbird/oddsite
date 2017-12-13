@@ -5,6 +5,19 @@ image:
   - src: 'blog/2017/herman-intro/header.jpg'
 headline:
   - tagline: 'An agile approach to design systems'
+tokens:
+  - image: 'blog/2017/herman-intro/sizes.jpg'
+    alt: 'Herman size-preview screenshot'
+    target: '/herman/docs/demo_sizes.html'
+  - image: 'blog/2017/herman-intro/fonts.jpg'
+    alt: 'Herman font-preview screenshot'
+    target: '/herman/docs/demo_fonts.html'
+  - image: 'blog/2017/herman-intro/ratios.jpg'
+    alt: 'Herman ratio-preview screenshot'
+    target: '/herman/docs/demo_ratios.html'
+  - image: 'blog/2017/herman-intro/icons.jpg'
+    alt: 'Herman icon-preview screenshot'
+    target: '/herman/docs/demo_icons.html'
 summary: |
   **Design systems streamline development, communication, and consistency** --
   but often rely on dedicated teams and extended budgets.
@@ -28,10 +41,10 @@ attending (and `accidentally speaking at`_)
 a "`Design Systems`_" conference
 organized by the wonderful `Jina Anne`_.
 
-.. _accidentally speaking at: #@@@
-.. _Clarity: #@@@
-.. _Design Systems: #@@@
-.. _Jina Anne: #@@@
+.. _accidentally speaking at: https://twitter.com/jina/status/935566434700222465
+.. _Clarity: https://www.clarityconf.com/2017
+.. _Design Systems: https://www.designbetter.co/design-systems-handbook/
+.. _Jina Anne: https://www.patreon.com/sushiandrobots
 
 I'm always curious how many attendees at a conference
 are working on enterprise projects
@@ -49,7 +62,7 @@ Creating the beautiful `Salesforce Lightning Design System`_
 required a full-time dedicated team and budget.
 Those of us doing agency work don't often have that luxury.
 
-.. _Salesforce Lightning Design System: #@@@
+.. _Salesforce Lightning Design System: https://www.lightningdesignsystem.com/
 
 So how can we make design systems part of an agile process --
 growing slowly along-side the application,
@@ -58,7 +71,9 @@ as part of any project?
 How do we make documentation and design consistency
 the path of least resistance?
 
-    If it's not documented, it doesn't exist.
+    **If it's not documented, it doesn't exist.**
+    Documentation should become the default,
+    an integrated part of the development process.
 
     --Miriam Suzanne (me)
 
@@ -69,54 +84,47 @@ before expanding into `practical patterns and components`_,
 and with guides and systems that scale along with us.
 
 .. _Herman: /herman/
-.. _colors: #@@@
-.. _fonts: #@@@
-.. _sizes: #@@@
-.. _ratios: #@@@
-.. _icons: #@@@
-.. _practical patterns and components: #@@@
+.. _colors: /herman/docs/demo_colors.html
+.. _fonts: /herman/docs/demo_fonts.html
+.. _sizes: /herman/docs/demo_sizes.html
+.. _ratios: /herman/docs/demo_sizes.html
+.. _icons: /herman/docs/demo_icons.html
+.. _practical patterns and components: /herman/docs/demo_examples.html
 
 
 Shared problems, unique constraints
 -----------------------------------
 
-There have been a number of terms
-floating around the design community,
-and some very strong opinions
-about how different terms are used --
-hard boundaries on what counts and what *isn't good enough*.
-I don't find that helpful,
-as different clients have different needs.
-Our problems aren't all-or-nothing,
-and there is room for flexibility
-in our approaches to this problem.
-
 The term "design system" refers generally
-to designing & distributing
+to documenting & distributing
 isolated patterns and components
 that can be used across one or more applications
-for consistent code and feel.
+for consistent user experience.
 That usually involves some combination of
 "style guides" and/or "pattern libraries" --
-the detailed documentation of patterns and components --
-along with broader instructions on
-why and how the components can be used and combined.
+the detailed documentation of design tokens,
+UI patterns, components, and overall system guidelines.
 
 Lightning Design and other massive projects
 can make this goal feel daunting,
 but we've found it useful to build what we can,
 as we go,
 even when the results are incomplete by comparison.
-Not everyone needs to be Salesforce --
-we have different constraints to worry about.
+These problems aren't all-or-nothing.
+There is room for flexibility in our approaches,
+from one project to the next.
+The important question is not *which one*
+but *where can I start*
+improving design communication, clarity, and consistency?
 
-Our first style guide attempts failed
+At OddBird, our first style guide attempts failed
 because they required too much maintenance and attention.
 So we scaled back to automating color-palettes,
 and not much else.
 Over time we've added support
-for a wide array of features integrating with Sass --
-as Herman evolves into a full-featured tool
+for a wide array of features
+integrating with our Sass tooling,
+and Herman has evolved into a full-featured tool
 for agile design systems.
 
 Now we use Herman across a range of products,
@@ -149,8 +157,13 @@ When a pattern changes,
 all the edits can be made in a single location,
 so documentation is more likely to stay up-to-date.
 
-.. _KSS: #@@@
-.. _SassDoc: #@@@
+.. _KSS: http://warpspire.com/kss/
+.. _SassDoc: http://sassdoc.com/
+
+.. image:: /static/images/blog/2017/herman-intro/sassdoc.jpg
+   :alt: SassDoc screenshot
+   :class: extend-small img-border img-shadow
+   :target: http://sassdoc.com/
 
 Those tools are great,
 but neither one is built to handle more complex design systems,
@@ -209,6 +222,11 @@ before any UI components have been built.
 This is a good place to start defining your system,
 and Herman can help you visualize these abstractions.
 
+.. image:: /static/images/blog/2017/herman-intro/colors.jpg
+   :alt: Herman color palettes
+   :class: extend-small img-border img-shadow
+   :target: /herman/docs/demo_colors.html
+
 Herman adds annotations for colors (``@colors``),
 fonts (``@fonts``), sizes (``@sizes``), and ratios (``@ratios``).
 In order to display the data,
@@ -228,8 +246,6 @@ but you can find full details in our `Herman documentation`_.
   /// @sizes my-spacing
   /// @ratios my-modular-scale
 
-.. @@@ images
-
 
 SVG icons
 ---------
@@ -245,20 +261,30 @@ to display all the SVG icons in a given folder:
 
   /// @icons path-to/my-assets/svg/
 
-.. @@@ images
-
-At the pattern level,
-we provide more robust tools
-for rendering code examples and live patterns.
+.. image:: /static/images/blog/2017/herman-intro/icons.jpg
+   :alt: Herman icon palettes
+   :class: extend-small img-border img-shadow
+   :target: /herman/docs/demo_icons.html
 
 
 Rendered output & examples
 --------------------------
 
+At the pattern level,
+we provide more robust tools
+for rendering code examples and live patterns.
 While SassDoc only documents Sass abstractions,
-Herman also allows documentation of CSS selectors
-and other patterns.
-We've also extended SassDoc's ``@example`` annotation,
+Herman allows
+`documentation of CSS selectors and markup patterns`_.
+
+.. _documentation of CSS selectors and markup patterns: /herman/docs/demo_examples.html
+
+.. image:: /static/images/blog/2017/herman-intro/examples.jpg
+   :alt: Herman rendered example
+   :class: extend-small img-border img-shadow
+   :target: /herman/docs/demo_examples.html
+
+We've extended SassDoc's ``@example`` annotation,
 allowing you to see both input and compiled code
 for languages like Sass and `Nunjucks`_
 (we're working on support for Vue components).
@@ -279,8 +305,6 @@ Herman will even render any examples that produce HTML output:
       display: inline-block;
       padding: 0.25em 1em;
     }
-
-.. @@@ images
 
 
 Prose, pages, and third-party links
@@ -309,22 +333,27 @@ including the Herman design-token annotations.
 Additional markdown pages
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
-You can add any number of markdown documents
+You can add any number of `markdown documents`_
 to your style guide navigation,
-by defining ``extraDocs`` in your Herman configuration.
+by defining ``extraDocs`` in your `Herman configuration`_.
 We use this to create an introduction to our design systems,
 provide quick access to a changelog,
 or document patterns that are not directly attached to Sass code.
+
+.. _markdown documents: /herman/docs/CONFIGURATION.html#extradocs
+.. _Herman configuration: /herman/docs/CONFIGURATION.html
 
 
 Third-party links
 ^^^^^^^^^^^^^^^^^
 
-You can also add external links
+You can also add `external links`_
 to third-party dependencies -
 so all relevant documentation is accessible in one place.
 Define ``extraLinks`` in your Herman configuration,
 and we'll add links to the bottom of the sidebar.
+
+.. _external links: /herman/docs/CONFIGURATION.html#extralinks
 
 
 Open-source, and actively developed
@@ -342,8 +371,8 @@ or send us your pull requests.
 
 We'll keep providing our own tutorials and demos
 based on the questions we hear most,
-but we'd also love to list any of your
-`sites built with Herman`_,
+but we'd also love to list any
+style guides or pattern librariea you build with Herman,
 or any `tutorials`_ you've written.
 
 We're always excited to collaborate,
@@ -351,39 +380,37 @@ and we've provided some `"contributing" documentation`_
 to help you get involved.
 
 .. _available on GitHub: https://github.com/oddbird/sassdoc-theme-herman
-.. _sites built with Herman: #@@@
-.. _tutorials: #@@@
-.. _"contributing" documentation: /herman/docs/CONTRIBUTING.html
+.. _tutorials: /herman/articles/
+.. _`"contributing" documentation`: /herman/docs/CONTRIBUTING.html
 
 
-OddBird is happy to help
-^^^^^^^^^^^^^^^^^^^^^^^^
+Need help with your design system?
+----------------------------------
 
 At OddBird,
 we care deeply about test-coverage and documentation,
 accessibility, performance, and UX clarity.
-We also work with a small team,
-often on a tight timeline and budget.
 Herman is one part of our solution,
 but no tool can provide the magic bullet.
 
-If you need help with a refactor to
+**If you need help with a refactor** to
 improve design systems, performance, testing,
 documentation, and accessibility --
-or help eliminating technical debt,
-and putting better processes in place --
+or eliminate technical debt,
+and put better processes in place --
 we're here to help.
 Our team of experts
 can provide a range of support, training, and consulting
-across the full stack of product design & development.
+across the full stack of product design & development --
+helping find *the solution that best fits your team*.
 Don't hesitate to reach out.
 
 You can use our handy `contact form`_,
 talk to `@OddBird`_ on Twitter,
 or join our `public Slack`_
-(with a dedicated *#herman* channel).
+(with a dedicated ``#herman`` channel).
 We're excited to hear from you!
 
 .. _contact form: /contact/
-.. _@OddBird: https://twitter.com/oddbird
+.. _`@OddBird`: https://twitter.com/oddbird
 .. _public Slack: http://friends.oddbird.net
