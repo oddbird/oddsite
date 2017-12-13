@@ -4,7 +4,7 @@ author: miriam
 image:
   - src: 'blog/2017/herman-intro/header.jpg'
 headline:
-  - tagline: 'An agile approach to design systems'
+  - tagline: 'An agile approach to design systems on a budget'
 tokens:
   - image: 'blog/2017/herman-intro/sizes.jpg'
     alt: 'Herman size-preview screenshot'
@@ -29,7 +29,17 @@ summary: |
   as we iterate on patterns
   and scale over time.
 
+  *Today we're launching Herman 1.0
+  as a free, open source project
+  for anyone to use and make contributions.*
+  Check out the `full documentation`_,
+  or `contact us`_ for help
+  `putting your design system in place`_.
+
   .. _Herman: /herman/
+  .. _full documentation: /herman/docs/
+  .. _contact us: /contact/
+  .. _putting your design system in place: #@@@
 
 
 Herman Style Guides
@@ -48,7 +58,7 @@ organized by the wonderful `Jina Anne`_.
 
 I'm always curious how many attendees at a conference
 are working on enterprise projects
-over a long period of time,
+over a long period of time
 vs. those of us who do consulting
 for multiple clients each year.
 These different contexts can lead to very different solutions --
@@ -162,7 +172,7 @@ so documentation is more likely to stay up-to-date.
 
 .. image:: /static/images/blog/2017/herman-intro/sassdoc.jpg
    :alt: SassDoc screenshot
-   :class: extend-small img-border img-shadow
+   :class: extend-small img-border img-shadow img-spacing
    :target: http://sassdoc.com/
 
 Those tools are great,
@@ -222,9 +232,14 @@ before any UI components have been built.
 This is a good place to start defining your system,
 and Herman can help you visualize these abstractions.
 
+.. image:: /static/images/blog/2017/herman-intro/sizes.jpg
+   :alt: Herman size palettes
+   :class: extend-large img-border img-shadow img-spacing
+   :target: /herman/docs/demo_sizes.html
+
 .. image:: /static/images/blog/2017/herman-intro/colors.jpg
    :alt: Herman color palettes
-   :class: extend-small img-border img-shadow
+   :class: extend-small img-border img-shadow img-spacing
    :target: /herman/docs/demo_colors.html
 
 Herman adds annotations for colors (``@colors``),
@@ -263,7 +278,7 @@ to display all the SVG icons in a given folder:
 
 .. image:: /static/images/blog/2017/herman-intro/icons.jpg
    :alt: Herman icon palettes
-   :class: extend-small img-border img-shadow
+   :class: extend-small img-border img-shadow img-spacing
    :target: /herman/docs/demo_icons.html
 
 
@@ -281,7 +296,7 @@ Herman allows
 
 .. image:: /static/images/blog/2017/herman-intro/examples.jpg
    :alt: Herman rendered example
-   :class: extend-small img-border img-shadow
+   :class: extend-small img-border img-shadow img-spacing
    :target: /herman/docs/demo_examples.html
 
 We've extended SassDoc's ``@example`` annotation,
@@ -315,8 +330,6 @@ from basic reference docs to extensive design systems --
 we often find it useful to include additional prose
 and links to third-party docs for dependencies.
 There are several ways to do this in Herman:
-
-.. @@@ images
 
 
 Free-floating prose
@@ -398,9 +411,9 @@ improve design systems, performance, testing,
 documentation, and accessibility --
 or eliminate technical debt,
 and put better processes in place --
-we're here to help.
+we're here for you.
 Our team of experts
-can provide a range of support, training, and consulting
+can provide `a range of support, training, and consulting`_
 across the full stack of product design & development --
 helping find *the solution that best fits your team*.
 Don't hesitate to reach out.
@@ -414,3 +427,4 @@ We're excited to hear from you!
 .. _contact form: /contact/
 .. _`@OddBird`: https://twitter.com/oddbird
 .. _public Slack: http://friends.oddbird.net
+.. _`a range of support, training, and consulting`: #@@@

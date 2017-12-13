@@ -14,6 +14,11 @@ svg {
 }
 
 // For those images that have text and need separation from content
+.img-spacing {
+  margin-bottom: size('shim');
+  margin-top: size('shim');
+}
+
 .img-border {
   border: 1px solid color('border-light');
 }
