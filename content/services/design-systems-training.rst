@@ -36,6 +36,7 @@ Your Team Will Learn How To:
 - speed up processes
 - communicate effectively as a team
 - find bugs before committing code
+- create a layout system that works for your audience
 
 
 Herman Automated Style Guide
