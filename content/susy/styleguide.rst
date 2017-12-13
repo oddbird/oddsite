@@ -60,6 +60,5 @@ Logo & Brand
 .. callmacro:: content.macros.j2#divider
 .. callmacro:: content.macros.j2#gallery
   :title: 'Logo Files'
-  :slug: 'susy/styleguide'
-  :data: 'logos'
+  :data: page.config.logos
   :caption: '<a href="/static/images/susy/susy-logos.zip">Download the SVG files »</a>'

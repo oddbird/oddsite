@@ -172,16 +172,12 @@
 #}
 {% macro gallery(
   title,
-  slug,
   data,
   caption=none,
   class=none,
   min_image=none,
   duo=false
 ) %}
-  {% set page = all_pages|filter_pages('slug', 'eq', slug)|get_page %}
-  {% set data = page.config[data] %}
-
   <section class="gallery-container content-block">
     <div class="content-block-inner">
       <h2>{{ title|safe }}</h2>
