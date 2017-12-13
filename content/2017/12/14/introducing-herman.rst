@@ -5,19 +5,6 @@ image:
   - src: 'blog/2017/herman-intro/header.jpg'
 headline:
   - tagline: 'An agile approach to design systems on a budget'
-tokens:
-  - image: 'blog/2017/herman-intro/sizes.jpg'
-    alt: 'Herman size-preview screenshot'
-    target: '/herman/docs/demo_sizes.html'
-  - image: 'blog/2017/herman-intro/fonts.jpg'
-    alt: 'Herman font-preview screenshot'
-    target: '/herman/docs/demo_fonts.html'
-  - image: 'blog/2017/herman-intro/ratios.jpg'
-    alt: 'Herman ratio-preview screenshot'
-    target: '/herman/docs/demo_ratios.html'
-  - image: 'blog/2017/herman-intro/icons.jpg'
-    alt: 'Herman icon-preview screenshot'
-    target: '/herman/docs/demo_icons.html'
 summary: |
   **Design systems streamline development, communication, and consistency** --
   but often rely on dedicated teams and extended budgets.
