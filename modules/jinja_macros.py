@@ -63,10 +63,25 @@ class CallMacro(Directive):
             call=call,
         )
 
+    def get_slug(self):
+        url = self.options.get('url', '')
+        if not url:
+            return url
+        url = url[2:-2]
+        return '{}/index'.format(url)
+
     def run(self):
+        pages = [
+            page
+            for page
+            in self.builder.iter_contexts()
+            if page.slug == self.get_slug()
+        ]
+        page = pages[0] if len(pages) else None
         template = self.get_macro()
         html = self.builder.jinja_env.from_string(template).render({
             'config': self.builder.config,
+            'page': page,
         })
         # We need to return a single Raw node with the rendered HTML in it.
         node = nodes.raw(html, html, format='html')
