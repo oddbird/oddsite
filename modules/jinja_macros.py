@@ -6,6 +6,9 @@ from docutils import nodes
 from docutils.parsers.rst import Directive, directives
 
 
+PAGES_CACHE = {}
+
+
 class TolerantOptionSpec(object):
 
     # Use str to convert any and all options
@@ -48,7 +51,9 @@ class CallMacro(Directive):
                 u'{}={}'.format(
                     k,
                     v.decode('utf-8')
-                ) for k, v in self.options.items(),
+                )
+                for k, v
+                in self.options.items()
             ),
             content=content,
         )
@@ -63,11 +68,29 @@ class CallMacro(Directive):
             call=call,
         )
 
+    def get_slug(self):
+        return self.options.get('slug', '')[1:-1]
+
+    def get_page(self, slug):
+        global PAGES_CACHE
+        if not PAGES_CACHE:
+            PAGES_CACHE = {
+                page.slug: page
+                for page
+                in self.builder.iter_contexts()
+            }
+        return PAGES_CACHE.get(slug, None)
+
     def run(self):
-        template = self.get_macro()
-        html = self.builder.jinja_env.from_string(template).render({
+        page = self.get_page(self.get_slug())
+        context = {
             'config': self.builder.config,
-        })
+        }
+        if page:
+            context['page'] = page
+
+        template = self.get_macro()
+        html = self.builder.jinja_env.from_string(template).render(context)
         # We need to return a single Raw node with the rendered HTML in it.
         node = nodes.raw(html, html, format='html')
         return [node]

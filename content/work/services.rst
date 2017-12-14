@@ -177,12 +177,10 @@ investors:
 
 .. callmacro:: content.macros.j2#icon_block
   :slug: 'work/services'
-  :data: 'pitch'
-
+  :data: page.config.pitch
 
 .. callmacro:: content.macros.j2#rst
   :tag: 'start'
-
 
 .. callmacro:: content.macros.j2#link_button
   :url: '/contact/'
@@ -215,11 +213,9 @@ Along the way, we’ll deliver:
 .. callmacro:: content.macros.j2#rst
   :tag: 'end'
 
-
 .. callmacro:: content.macros.j2#icon_block
   :slug: 'work/services'
-  :data: 'planning'
-
+  :data: 'page.config.planning'
 
 .. callmacro:: content.macros.j2#rst
   :tag: 'start'

@@ -44,13 +44,11 @@
   title,
   slug,
   data,
+  actual_page=none,
   intro=none
 ) %}
-  {% set page = all_pages|filter_pages('slug', 'eq', slug)|get_page %}
-  {% set data = page.config[data] %}
-  {% set intro = page.config[intro] if page.config[intro] else intro %}
-  {% set intro = page.render_summary() if (intro == 'summary') else intro %}
-
+  {% set intro = actual_page.config[intro] if actual_page and actual_page.config[intro] else intro %}
+  {% set intro = actual_page.render_summary() if actual_page and intro == 'summary' else intro %}
   <section class="icon-blocks-container">
     <header class="icon-block-header">
       <h2>{{ title|safe }}</h2>
@@ -91,6 +89,7 @@
     title='Accoutrement Modules',
     slug='open-source/accoutrement',
     data='accoutrement_modules',
+    actual_page=page,
     intro='accoutrement_intro'
   ) }}
 {% endmacro %}
@@ -172,16 +171,13 @@
 #}
 {% macro gallery(
   title,
-  slug,
   data,
   caption=none,
   class=none,
   min_image=none,
-  duo=false
+  duo=false,
+  slug=none
 ) %}
-  {% set page = all_pages|filter_pages('slug', 'eq', slug)|get_page %}
-  {% set data = page.config[data] %}
-
   <section class="gallery-container content-block">
     <div class="content-block-inner">
       <h2>{{ title|safe }}</h2>

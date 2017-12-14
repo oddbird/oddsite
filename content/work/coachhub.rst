@@ -163,7 +163,7 @@ to quickly and easily access one another in dynamic and effective ways.
 .. callmacro:: content.macros.j2#icon_block
   :title: 'Planning & Discovery Phase'
   :slug: 'work/coachhub'
-  :data: 'planning'
+  :data: page.config.planning
 
 
 .. callmacro:: content.macros.j2#rst

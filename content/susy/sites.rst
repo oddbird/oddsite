@@ -50,9 +50,9 @@ Sites Using Susy
   <span></span>
 
 .. callmacro:: content.macros.j2#gallery
-  :title: 'Featured Sites'
   :slug: 'susy/sites'
-  :data: 'screenshots'
+  :title: 'Featured Sites'
+  :data: page.config.screenshots
   :caption: '<a href="https://github.com/oddbird/oddsite/tree/master/content/susy/sites.rst">Add your site on GitHub »</a>'
   :duo: true
 
