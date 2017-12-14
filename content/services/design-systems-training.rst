@@ -30,7 +30,7 @@ Design Systems Training
 Your Team Will Learn How To:
 ----------------------------
 
-- maintain consistentcy in the design throughout an application
+- maintain consistency in the design throughout an application
 - build a foundation that leads to a scalable code base
 - discover and create meaningful patterns
 - speed up processes
@@ -42,8 +42,9 @@ Your Team Will Learn How To:
 Herman Automated Style Guide
 ----------------------------
 
-`Herman`_ is a free OddBird tool that standardizes designer/developer
-communication, on-boarding, and hand-off to save time.
+`Herman`_ is a free OddBird tool that helps standardize
+designer/developer communication, on-boarding, and hand-off --
+saving you time and money.
 As an automated pattern library, we built it to ensure
 long-term maintainability of your projects.
 Herman makes life simple, changing and growing with you.
