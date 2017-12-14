@@ -1,5 +1,5 @@
 {% import 'utility.macros.j2' as utility %}
-{% import "blog/utility.macros.j2" as blog %}
+{% import 'blog/utility.macros.j2' as blog %}
 
 
 {#
@@ -104,11 +104,12 @@
   content=none,
   name=none,
   url=none,
-  role=none
+  role=none,
+  section=true
 ) %}
   {% set content = content if (content != none) else caller() %}
 
-  <blockquote>
+  <blockquote {{ utility.attr_if('data-quote-section', section) }}>
     {{ content|rst }}
 
     {% if name or url or role %}
@@ -127,11 +128,12 @@
 
 
 {% macro pullquote(
-  content=none
+  content=none,
+  section=true
 ) %}
   {% set content = content if (content != none) else caller() %}
 
-  <div class="pullquote">
+  <div class="pullquote" {{ utility.attr_if('data-quote-section', section) }}>
     {{ content|rst }}
   </div>
 {% endmacro %}
@@ -142,7 +144,7 @@
   slug=none,
   count=none
 ) %}
-  {% set page = all_pages|filter_pages('slug', 'eq', page)|get_page if (page is string) else page %}
+  {% set page = all_pages|filter_pages('slug', 'eq', page)|get_page if (page|is_string) else page %}
   {% set client = page.config.client[0] if page.config.client else none %}
 
   {% if slug %}
@@ -172,19 +174,21 @@
 #}
 {% macro gallery(
   title,
-  slug,
   data,
+  slug=none,
   caption=none,
   class=none,
   min_image=none,
   duo=false
 ) %}
-  {% set page = all_pages|filter_pages('slug', 'eq', slug)|get_page %}
-  {% set data = page.config[data] %}
+  {% set page = all_pages|filter_pages('slug', 'eq', slug)|get_page if slug else none %}
+  {% set data = page.config[data] if page else data %}
 
-  <section class="gallery-container content-block">
+  <div class="gallery-container content-block">
     <div class="content-block-inner">
-      <h2>{{ title|safe }}</h2>
+      {% if title %}
+        <h2>{{ title|safe }}</h2>
+      {% endif %}
 
       {% set class = ['gallery', class]|join(' ') if class else 'gallery' %}
       {% set class = (class + ' duo') if duo else class %}
@@ -211,7 +215,7 @@
         {% endif %}
       </figure>
     </div>
-  </section>
+  </div>
 {% endmacro %}
 
 
@@ -301,19 +305,29 @@
   Buttons
   -------
 #}
-{% macro link_button(url, content=none, class=none) %}
+{% macro link_button(
+  url,
+  content=none,
+  class=none,
+  attrs={}
+) %}
   {% set content = content if (content != none) else caller() %}
   {% set class = [class, 'btn']|join(' ') if class else 'btn' %}
 
-  <a href="{{ url }}" {% for k in kwargs %} {{ k }}="{{ kwargs[k] }}"{% endfor %} class="{{ class }}">
+  <a href="{{ url }}" class="{{ class }}" {{ utility.show_attrs(attrs) }}>
     {{ content|safe }}
   </a>
 {% endmacro %}
 
-{% macro button(class=none) %}
+{% macro button(
+  content=none,
+  class=none,
+  attrs={}
+) %}
+  {% set content = content if (content != none) else caller() %}
   {% set class = [class, 'btn']|join(' ') if class else 'btn' %}
-  <button {% for k in kwargs %} {{ k }}="{{ kwargs[k] }}"{% endfor %} class="{{ class }}">
-    {{ caller() }}
+  <button class="{{ class }}" {{ utility.show_attrs(attrs) }}>
+    {{ content|safe }}
   </button>
 {% endmacro %}
 
@@ -322,7 +336,7 @@
   Project Links
   -------------
 #}
-{%- macro project_link(
+{% macro project_link(
   page,
   allow_external=false,
   allow_fallback=true
@@ -331,8 +345,8 @@
   {%- set has_page = true if (project.owner or project.case_study) else false -%}
   {%- set fallback = '/open-source/' if page.config.contributors else '/work/' -%}
   {%- set fallback = fallback if allow_fallback else none -%}
-  {%- set local = '/' if (page.slug == 'index') else ['/', page.slug[:-6] if page.slug.endswith('/index') else page.slug, '/']|join -%}
+  {%- set local = '/' if (page.slug == 'index') else ['/', page.slug|replace('/index', '') if page.slug.endswith('/index') else page.slug, '/']|join -%}
   {%- set local = local if (project and has_page) else none -%}
   {%- set external = project.url if (project and allow_external) else none -%}
   {{ local or external or fallback }}
-{%- endmacro -%}
+{%- endmacro %}
