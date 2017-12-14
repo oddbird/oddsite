@@ -9,6 +9,19 @@ headline:
 logo: 'herman'
 image:
   - src: 'herman/herman-hero.jpg'
+screenshots:
+  - image: 'herman/screenshots/sq-colors.jpg'
+    alt: 'Color Palettes'
+  - image: 'herman/screenshots/sq-icons.jpg'
+    alt: 'Icons'
+  - image: 'herman/screenshots/sq-ratios.jpg'
+    alt: 'Ratio Previews'
+  - image: 'herman/screenshots/sq-sizes.jpg'
+    alt: 'Size Previews'
+  - image: 'herman/screenshots/sq-fonts.jpg'
+    alt: 'Typefaces'
+  - image: 'herman/screenshots/sq-example.jpg'
+    alt: 'Example Code Blocks'
 nav:
   - text: 'hermansite-articles'
     display_text: 'articles'
@@ -70,9 +83,16 @@ Herman: Automated Pattern Libraries
 .. callmacro:: content.macros.j2#rst
   :tag: 'start'
 
-.. raw:: html
+|hack|
 
-  <h2>Give Your Design System a Home</h2>
+.. rstBlog requires content before a subheader…
+.. |hack| raw:: html
+
+  <span></span>
+
+
+Give Your Design System a Home
+------------------------------
 
 Documentation should be the default option --
 the path of least resistence for developers.
@@ -90,17 +110,23 @@ minimizing long-term maintainance.
 Herman is designed to grow with you,
 and keep everything in one place.
 
-.. raw:: html
-
-  <h3>Herman's Current Features</h3>
+Herman's Current Features
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 - Supports all `SassDoc`_ annotations and configuration settings
 - Integrated with Sass/CSS for better automation
-- Visualize design tokens like fonts, colors, sizes, ratios, and icons
+- Visualize design tokens like colors, fonts, sizes, ratios, and icons
 - Display Sass mixins and Nunjucks macros with expected input and rendered examples
 - Include additional prose, pages, and link to third-party docs
 - Encourage self-documenting patterns, without locking you in
 - Optionally integrate with OddBird's `Sass Accoutrement`_ libraries
+
+
+.. callmacro:: content.macros.j2#gallery
+  :slug: 'herman/index'
+  :data: 'screenshots'
+  :class: 'extend-large img-border'
+
 
 .. _SassDoc: http://sassdoc.com/
 .. _Sass Accoutrement: /open-source/accoutrement/
