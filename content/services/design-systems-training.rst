@@ -42,11 +42,11 @@ Your Team Will Learn How To:
 Herman Automated Style Guide
 ----------------------------
 
-`Herman`_ is a free OddBird tool that standardizes designer/developer
-communication, on-boarding, and hand-off to save time.
-As an automated pattern library, we built it to ensure
-long-term maintainability of your projects.
-Herman makes life simple, changing and growing with you.
+`Herman`_ is a free tool made by OddBird which creates a
+living pattern library from the code in your CSS files.
+It saves time by standardizing designer/developer communication,
+on-boarding, and hand-off, helping to make your life a little
+easier.
 
 .. _Herman: /herman/
 
