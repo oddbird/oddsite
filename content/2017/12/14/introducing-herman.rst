@@ -288,10 +288,11 @@ Herman allows
 
 We've extended SassDoc's ``@example`` annotation,
 allowing you to see both input and compiled code
-for languages like Sass and `Nunjucks`_
+for languages like `Sass`_ and `Nunjucks`_
 (we're working on support for Vue components).
 Herman will even render any examples that produce HTML output:
 
+.. _Sass: http://sass-lang.com
 .. _Nunjucks: https://mozilla.github.io/nunjucks/
 
 .. code:: scss

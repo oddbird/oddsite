@@ -35,7 +35,7 @@
     ) }}
 
     <div class="form-actions">
-      {% call content.button(type='submit') %}
+      {% call content.button(attrs={'type': 'submit'}) %}
         {{ module.submit or 'submit' }}
       {% endcall %}
     </div>

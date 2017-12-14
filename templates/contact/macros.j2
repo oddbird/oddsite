@@ -48,8 +48,8 @@
         <div class="media-content">
           {{ main_content }}
           {{ content.link_button(
-            action.url,
-            action.text|replace('%s', cta.contact|capitalize)
+            url=action.url,
+            content=action.text|replace('%s', cta.contact|capitalize)
           ) }}
         </div>
       </div>

@@ -24,8 +24,8 @@
 
     {% call content.link_button(
       url=link_to('page', slug=post.slug),
-      rel='bookmark'
-      ) %}
+      attrs={'rel': 'bookmark'}
+    ) %}
       Read More
     {% endcall %}
 

@@ -4,7 +4,7 @@
 /// Basic styles for all icons
 /// @group icons
 /// @icons templates/icons/
-/// @example njk -
+/// @example njk
 ///   {% import 'utility.macros.j2' as utility %}
 ///   {{ utility.icon('dribbble') }}
 [data-icon] {
