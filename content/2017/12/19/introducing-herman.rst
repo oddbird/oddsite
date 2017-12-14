@@ -1,5 +1,5 @@
-public: yes
-tags: [Herman, CSS, Sass, 'Design Systems', Code, 'Style Guides']
+public: no
+tags: [Herman, Herman1, CSS, Sass, 'Design Systems', Code, 'Style Guides']
 author: miriam
 image:
   - src: 'blog/2017/herman-intro/header.jpg'
