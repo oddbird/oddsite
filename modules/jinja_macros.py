@@ -48,7 +48,9 @@ class CallMacro(Directive):
                 u'{}={}'.format(
                     k,
                     v.decode('utf-8')
-                ) for k, v in self.options.items(),
+                )
+                for k, v
+                in self.options.items()
             ),
             content=content,
         )
@@ -64,11 +66,7 @@ class CallMacro(Directive):
         )
 
     def get_slug(self):
-        url = self.options.get('url', '')
-        if not url:
-            return url
-        url = url[2:-2]
-        return '{}/index'.format(url)
+        return self.options.get('slug', '')[1:-1]
 
     def run(self):
         pages = [
@@ -78,11 +76,24 @@ class CallMacro(Directive):
             if page.slug == self.get_slug()
         ]
         page = pages[0] if len(pages) else None
-        template = self.get_macro()
-        html = self.builder.jinja_env.from_string(template).render({
+        context = {
             'config': self.builder.config,
-            'page': page,
-        })
+        }
+        if page:
+            context['page'] = page
+            print("Found a page")
+        else:
+            print("Found no page")
+
+        ## TODO:
+        # I cut this from the icon_block macro:
+        # {% set intro = page.config[intro] if page.config[intro] else intro %}
+        # {% set intro = page.render_summary() if (intro == 'summary') else intro %}
+        # Because it was causing problems. But it seems like it's never used
+        # anyway, so.
+
+        template = self.get_macro()
+        html = self.builder.jinja_env.from_string(template).render(context)
         # We need to return a single Raw node with the rendered HTML in it.
         node = nodes.raw(html, html, format='html')
         return [node]

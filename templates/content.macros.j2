@@ -43,21 +43,11 @@
 {% macro icon_block(
   title,
   slug,
-  data,
-  intro=none
+  data
 ) %}
-  {% set page = all_pages|filter_pages('slug', 'eq', slug)|get_page %}
-  {% set data = page.config[data] %}
-  {% set intro = page.config[intro] if page.config[intro] else intro %}
-  {% set intro = page.render_summary() if (intro == 'summary') else intro %}
-
   <section class="icon-blocks-container">
     <header class="icon-block-header">
       <h2>{{ title|safe }}</h2>
-
-      {% if intro %}
-        {{ intro|safe }}
-      {% endif %}
     </header>
 
     {% for item in data %}
@@ -176,7 +166,8 @@
   caption=none,
   class=none,
   min_image=none,
-  duo=false
+  duo=false,
+  slug=none
 ) %}
   <section class="gallery-container content-block">
     <div class="content-block-inner">
