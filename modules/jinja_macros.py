@@ -6,6 +6,9 @@ from docutils import nodes
 from docutils.parsers.rst import Directive, directives
 
 
+PAGES_CACHE = {}
+
+
 class TolerantOptionSpec(object):
 
     # Use str to convert any and all options
@@ -68,30 +71,30 @@ class CallMacro(Directive):
     def get_slug(self):
         return self.options.get('slug', '')[1:-1]
 
+    def get_page(self, slug):
+        global PAGES_CACHE
+        if not PAGES_CACHE:
+            PAGES_CACHE = {
+                page.slug: page
+                for page
+                in self.builder.iter_contexts()
+            }
+        return PAGES_CACHE.get(slug, None)
+
     def run(self):
-        pages = [
-            page
-            for page
-            in self.builder.iter_contexts()
-            if page.slug == self.get_slug()
-        ]
-        page = pages[0] if len(pages) else None
+        page = self.get_page(self.get_slug())
         context = {
             'config': self.builder.config,
         }
         if page:
             context['page'] = page
-            print("Found a page")
-        else:
-            print("Found no page")
 
         ## TODO:
         # I cut this from the icon_block macro:
         # {% set intro = page.config[intro] if page.config[intro] else intro %}
         # {% set intro = page.render_summary() if (intro == 'summary') else intro %}
-        # Because it was causing problems. But it seems like it's never used
-        # anyway, so.
-
+        # Because it was causing problems. So I still need to find a good way
+        # to handle that.
         template = self.get_macro()
         html = self.builder.jinja_env.from_string(template).render(context)
         # We need to return a single Raw node with the rendered HTML in it.
