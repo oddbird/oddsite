@@ -1,9 +1,39 @@
 public: yes
-location: open-source
+location: 'hermansite'
+template: 'hermansite/layout.html'
 grid_template: true
+headline:
+  - title: 'Herman: Automated Style Guides'
+    type: 'An **OddBird** Project'
+    tagline: 'Get your design & development teams on the same page'
 logo: 'herman'
 image:
-  - src: 'projects/herman.jpg'
+  - src: 'herman/herman-hero.jpg'
+screenshots:
+  - image: 'herman/screenshots/sq-colors.jpg'
+    alt: 'Color Palettes'
+  - image: 'herman/screenshots/sq-icons.jpg'
+    alt: 'Icons'
+  - image: 'herman/screenshots/sq-ratios.jpg'
+    alt: 'Ratio Previews'
+  - image: 'herman/screenshots/sq-sizes.jpg'
+    alt: 'Size Previews'
+  - image: 'herman/screenshots/sq-fonts.jpg'
+    alt: 'Typefaces'
+  - image: 'herman/screenshots/sq-example.jpg'
+    alt: 'Example Code Blocks'
+nav:
+  - text: 'hermansite-articles'
+    display_text: 'articles'
+    url: '/herman/articles/'
+  - text: 'training'
+    url: '/services/design-systems-training'
+  - text: 'hermansite-docs'
+    display_text: 'docs'
+    url: '/herman/docs/'
+  - text: 'oddbird'
+    display_text: 'oddbird'
+    url: '/'
 project:
   - name: 'Herman'
     tagline: 'Automated Style Guides'
@@ -13,67 +43,98 @@ project:
 contributors:
   - author: 'oddbird'
     role: 'creators'
+quotes:
+  - text: |
+      Herman is my documentation dream come true,
+      especially when it comes to systems design.
+    name: 'Claudina Sarahe'
+    role: 'Frontend Architect'
+    slug: 'dream'
 brag: |
   Created by OddBird,
   Herman provides
   **fully-integrated style documentation** –
   from **font specimens** and **color palettes** to
-  nunjucks macros and rendered components –
+  Nunjucks macros and rendered components –
   for **automated pattern libraries**,
   and **style guides**.
 summary: |
-  **Herman is an automated pattern-library generator,**
-  built on top of SassDoc,
-  and designed to integrate with OddBird's
-  `Sass Accoutrement`_ libraries
-  for quick theme configuration,
-  color palettes, font specimens, icon libraries,
-  and documentation of UI patterns
-  in both CSS and HTML.
+  **Design systems streamline development,
+  communication, and consistency** --
+  but often rely on dedicated
+  teams and extended budgets.
+  We wanted a tool that helps create and maintain
+  living style guides & pattern libraries in an
+  agile process, and on a budget.
+  Herman helps you keep your development process simple --
+  and your UX consistent --
+  as you iterate on patterns and scale over time.
 
-  .. _Sass Accoutrement: /open-source/accoutrement/
+  Start `using Herman`_ or `hire us`_
+  for design systems training.
+
+  .. _`using Herman`: /herman/docs/
+  .. _`hire us`: /contact/
 
 
-Herman
-======
+Herman: Automated Pattern Libraries
+===================================
 
-.. ---------------------------------
 .. callmacro:: content.macros.j2#rst
   :tag: 'start'
 
-Make Documentation the Default
+|hack|
+
+.. rstBlog requires content before a subheader…
+.. |hack| raw:: html
+
+  <span></span>
+
+
+Give Your Design System a Home
 ------------------------------
 
-.. image:: https://badge.fury.io/js/sassdoc-theme-herman.svg
-  :alt: 'npm package'
-  :target: https://www.npmjs.com/package/sassdoc-theme-herman
+Documentation should be the default option --
+the path of least resistance for developers.
+Herman combines documentation of design tokens
+and system guidelines, with code patterns, components,
+and rendered visual examples -- all driven by Sass and CSS.
+By automating as much of the documentation as possible,
+you can help ensure that everything stays up-to-date for
+long-term maintainability.
 
-.. image:: https://circleci.com/gh/oddbird/sassdoc-theme-herman.svg?style=shield
-  :alt: 'build-status'
-  :target: https://circleci.com/gh/oddbird/sassdoc-theme-herman
+Help improve communication across stakeholders,
+with consistency in UX, performance, and accessibility --
+while reducing technical debt and
+minimizing long-term maintenance.
+Herman is designed to grow with you,
+and keep everything in one place.
 
-Pattern libraries and style guides help
-keep the code and design of your site consistent,
-while facilitating communication between designers and developers.
-But documentation can be difficult to maintain,
-especially if it lives too far from the code –
-and there's nothing worse than an out-of-date pattern library.
-Herman is here to help make documentation simple,
-keeping it inline with the source code of the project,
-and updating pattern libraries on-the-fly.
+Herman's Current Features
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. code:: bash
+- Supports all `SassDoc`_ annotations and configuration settings
+- Integrated with Sass/CSS for better automation
+- Visualize design tokens like fonts, colors, sizes, ratios, and icons
+- Display Sass mixins and `Nunjucks`_ macros with expected input and rendered examples
+- Include additional prose, pages, and links to third-party docs
+- Encourage self-documenting patterns, without locking yourself in
+- Optionally integrate with OddBird's `Sass Accoutrement`_ libraries
 
-  npm install sassdoc
-  npm install sassdoc-theme-herman
 
-.. callmacro:: content.macros.j2#link_button
-  :url: 'docs/'
+.. callmacro:: content.macros.j2#gallery
+  :slug: 'herman/index'
+  :data: 'screenshots'
+  :class: 'extend-large img-border'
 
-  Read The Docs
+
+.. _SassDoc: http://sassdoc.com/
+.. _Nunjucks: https://mozilla.github.io/nunjucks/
+.. _Sass Accoutrement: /open-source/accoutrement/
+
 
 .. callmacro:: content.macros.j2#rst
   :tag: 'end'
-.. ---------------------------------
+
 
 .. callmacro:: content.macros.j2#accoutrement

@@ -91,7 +91,9 @@ soon. Currently, you can use the following:
   - ``size-full``
   - ``img-border`` adds a hairline, helpful when using a screenshot with a
   white background.
-  - ``img-shadow`` adds a slight drop shadow to images
+  - ``img-shadow`` adds a slight drop shadow to images.
+  - ``content-img`` declares a location for the image,
+  which allows you to more easily target only certain images in content area.
 
 *Note:* If declaring a size, it remains this size regardless of screen size.
 

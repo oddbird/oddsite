@@ -23,7 +23,7 @@ social:
     after: 'by Email'
 cta_footer:
   - title: 'Start the conversation…'
-    susytitle: 'Partner with OddBird on Your Next Project'
+    project_title: 'Partner with OddBird on Your Next Project'
     contact: 'miriam'
     action:
       text: 'Schedule a call with %s'

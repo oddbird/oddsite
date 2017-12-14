@@ -32,8 +32,8 @@
   <div class="contact-wrap">
     <section data-module="contact-cta">
       <h2>
-        {% if ('susysite' in location) %}
-          {{ cta.susytitle }}
+        {% if ('susysite' in location) or ('hermansite' in location) %}
+          {{ cta.project_title }}
         {% else %}
           {{ cta.title }}
         {% endif %}

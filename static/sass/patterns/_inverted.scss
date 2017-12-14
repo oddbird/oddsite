@@ -15,4 +15,9 @@
     @include contrasted('brand-pink');
     @include link-color-for('brand-pink');
   }
+
+  [data-location*='hermansite'] & {
+    @include contrasted('action-hover');
+    @include link-color-for('action-hover');
+  }
 }

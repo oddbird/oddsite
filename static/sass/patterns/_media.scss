@@ -16,6 +16,14 @@ svg {
 // For those images that have text and need separation from content
 .img-border {
   border: 1px solid color('border-img');
+
+  &.gallery {
+    border: 0;
+
+    .gallery-image {
+      border: 1px solid color('border-img');
+    }
+  }
 }
 
 .img-shadow {
