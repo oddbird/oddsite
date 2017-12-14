@@ -30,7 +30,7 @@ Design Systems Training
 Your Team Will Learn How To:
 ----------------------------
 
-- maintain consistentcy in the design throughout an application
+- maintain consistency in the design throughout an application
 - build a foundation that leads to a scalable code base
 - discover and create meaningful patterns
 - speed up processes
