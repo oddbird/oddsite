@@ -43,11 +43,19 @@
 {% macro icon_block(
   title,
   slug,
-  data
+  data,
+  actual_page=none,
+  intro=none
 ) %}
+  {% set intro = actual_page.config[intro] if actual_page and actual_page.config[intro] else intro %}
+  {% set intro = actual_page.render_summary() if actual_page and intro == 'summary' else intro %}
   <section class="icon-blocks-container">
     <header class="icon-block-header">
       <h2>{{ title|safe }}</h2>
+
+      {% if intro %}
+        {{ intro|safe }}
+      {% endif %}
     </header>
 
     {% for item in data %}
@@ -81,6 +89,7 @@
     title='Accoutrement Modules',
     slug='open-source/accoutrement',
     data='accoutrement_modules',
+    actual_page=page,
     intro='accoutrement_intro'
   ) }}
 {% endmacro %}

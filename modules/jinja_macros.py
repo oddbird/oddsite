@@ -89,12 +89,6 @@ class CallMacro(Directive):
         if page:
             context['page'] = page
 
-        ## TODO:
-        # I cut this from the icon_block macro:
-        # {% set intro = page.config[intro] if page.config[intro] else intro %}
-        # {% set intro = page.render_summary() if (intro == 'summary') else intro %}
-        # Because it was causing problems. So I still need to find a good way
-        # to handle that.
         template = self.get_macro()
         html = self.builder.jinja_env.from_string(template).render(context)
         # We need to return a single Raw node with the rendered HTML in it.
