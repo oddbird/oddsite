@@ -89,7 +89,7 @@ and with guides and systems that scale along with us.
 .. _practical patterns and components: /herman/docs/demo_examples.html
 
 
-Shared problems, unique constraints
+Shared Problems, Unique Constraints
 -----------------------------------
 
 The term "design system" refers generally
@@ -137,7 +137,7 @@ more complex, and more automated --
 with support for additional languages.
 
 
-Integrated syntax, built on SassDoc
+Integrated Syntax, Built on SassDoc
 -----------------------------------
 
 Style documentation tools
@@ -206,7 +206,7 @@ variables, functions, and mixins.
 From there, we've been adding style guide features of our own.
 
 
-Visualizing design tokens
+Visualizing Design Tokens
 -------------------------
 
 A "design token" is an abstract bit of design language
@@ -249,7 +249,7 @@ but you can find full details in our `Herman documentation`_.
   /// @ratios my-modular-scale
 
 
-SVG icons
+SVG Icons
 ---------
 
 Icons live somewhere between design tokens
@@ -269,7 +269,7 @@ to display all the SVG icons in a given folder:
    :target: /herman/docs/demo_icons.html
 
 
-Rendered output & examples
+Rendered Output & Examples
 --------------------------
 
 At the pattern level,
@@ -309,7 +309,7 @@ Herman will even render any examples that produce HTML output:
     }
 
 
-Prose, pages, and third-party links
+Prose, Pages, and Third-Party Links
 -----------------------------------
 
 In building documentation --
@@ -319,7 +319,7 @@ and links to third-party docs for dependencies.
 There are several ways to do this in Herman:
 
 
-Free-floating prose
+Free-floating Prose
 ^^^^^^^^^^^^^^^^^^^
 
 Any SassDoc comments (``///``)
@@ -330,7 +330,7 @@ such as ``@group``, ``@example``, ``@link``, etc. --
 including the Herman design-token annotations.
 
 
-Additional markdown pages
+Additional Markdown Pages
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
 You can add any number of `markdown documents`_
@@ -344,7 +344,7 @@ or document patterns that are not directly attached to Sass code.
 .. _Herman configuration: /herman/docs/CONFIGURATION.html
 
 
-Third-party links
+Third-party Links
 ^^^^^^^^^^^^^^^^^
 
 You can also add `external links`_
@@ -356,8 +356,8 @@ and we'll add links to the bottom of the sidebar.
 .. _external links: /herman/docs/CONFIGURATION.html#extralinks
 
 
-Open-source, and actively developed
------------------------------------
+Open Source & Actively Developed
+--------------------------------
 
 We're using Herman on many of our production projects,
 and we have big plans for Herman's future.
