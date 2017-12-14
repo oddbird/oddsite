@@ -1,5 +1,5 @@
 public: yes
-location: services
+location: design-development
 pageclasses: services-layout
 grid_template: true
 headline:

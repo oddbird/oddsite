@@ -281,7 +281,7 @@ For more details,
 check out our `introduction to spread`_,
 and `full reference documentation`_.
 
-.. _introduction to spread: http://oddbird.net/2017/06/13/susy-spread/
+.. _introduction to spread: /2017/06/13/susy-spread/
 .. _full reference documentation: /susy/docs/
 
 
