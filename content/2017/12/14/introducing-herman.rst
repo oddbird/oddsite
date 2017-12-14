@@ -69,7 +69,7 @@ How do we make documentation and design consistency
 the path of least resistance?
 
     **If it's not documented, it doesn't exist.**
-    Documentation should become the default,
+    Documentation should become the default --
     an integrated part of the development process.
 
     --Miriam Suzanne (me)
@@ -372,7 +372,7 @@ or send us your pull requests.
 We'll keep providing our own tutorials and demos
 based on the questions we hear most,
 but we'd also love to list any
-style guides or pattern librariea you build with Herman,
+style guides or pattern libraries you build with Herman,
 or any `tutorials`_ you've written.
 
 We're always excited to collaborate,
@@ -412,6 +412,6 @@ or join our `public Slack`_
 We're excited to hear from you!
 
 .. _contact form: /contact/
-.. _`@OddBird`: https://twitter.com/oddbird
+.. _@OddBird: https://twitter.com/oddbird
 .. _public Slack: http://friends.oddbird.net
 .. _`a range of support, training, and consulting`: /services/design-systems-training/
