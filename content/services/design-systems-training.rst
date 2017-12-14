@@ -1,5 +1,5 @@
 public: yes
-location: services
+location: design-systems-training
 pageclasses: services-layout
 grid_template: true
 headline:
@@ -9,7 +9,7 @@ headline:
 image:
   - src: '/herman/stacy-design-systems-training.jpg'
 summary: |
-  **Oddbird provides training and implementation consulting in
+  **OddBird provides training and implementation consulting in
   style guides, pattern libraries, layout design, and architecture.**
   If you're a project manager, scrum master, or team leader,
   why not make your job easier?
@@ -23,9 +23,9 @@ summary: |
 Design Systems Training
 =======================
 
-
 .. callmacro:: content.macros.j2#rst
   :tag: 'start'
+
 
 Your Team Will Learn How To:
 ----------------------------
@@ -42,20 +42,20 @@ Your Team Will Learn How To:
 Herman Automated Style Guide
 ----------------------------
 
-Herman is a free OddBird tool that standardizes designer/developer
-communication, onboarding, and handoff to save time.
+`Herman`_ is a free OddBird tool that standardizes designer/developer
+communication, on-boarding, and hand-off to save time.
 An automated pattern libraries for long-term maintainability.
 Herman makes life simple, changing and growing with you.
 
+.. _Herman: /herman/
 
 Depending on your needs, Herman may be included in a
 design systems training and implementation project.
-We will work with you to determine the best tools for your company.
+We work with you to determine the best tools for your company.
 
 .. image:: /static/images/herman/herman-color-palette.jpg
    :class: extend-large content-img
    :alt: screenshot showing Herman color palette pattern functionality
-
 
 .. callmacro:: content.macros.j2#link_button
   :url: '/herman/'

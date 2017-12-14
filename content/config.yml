@@ -15,7 +15,7 @@ nav:
         url: '/open-source/'
   - text: 'services'
     subnav:
-      - text: 'services'
+      - text: 'design-development'
         display_text: 'design & development'
         url: '/work/services/'
       - text: 'design-systems-training'
