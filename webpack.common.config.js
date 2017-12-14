@@ -143,6 +143,7 @@ SassdocPlugin.prototype.apply = compiler => {
         'config-layout': 'Layout',
         'config-scale': 'Sizes & Spacing',
         icons: 'Icons',
+        buttons: 'Buttons',
         sections: 'Page Sections',
         typography: 'Typography',
       },

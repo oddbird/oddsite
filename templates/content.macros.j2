@@ -305,7 +305,11 @@
   Buttons
   -------
 #}
-{% macro link_button(url, content=none, class=none) %}
+{% macro link_button(
+  url,
+  content=none,
+  class=none
+) %}
   {% set content = content if (content != none) else caller() %}
   {% set class = [class, 'btn']|join(' ') if class else 'btn' %}
 
@@ -314,10 +318,14 @@
   </a>
 {% endmacro %}
 
-{% macro button(class=none) %}
+{% macro button(
+  content=none,
+  class=none
+) %}
+  {% set content = content if (content != none) else caller() %}
   {% set class = [class, 'btn']|join(' ') if class else 'btn' %}
   <button {% for k in kwargs %} {{ k }}="{{ kwargs[k] }}"{% endfor %} class="{{ class }}">
-    {{ caller() }}
+    {{ content|safe }}
   </button>
 {% endmacro %}
 
