@@ -73,7 +73,7 @@ summary: |
   Start `using Herman`_ or `hire us`_
   for design systems training.
 
-  .. _`using Herman`: https://github.com/oddbird/sassdoc-theme-herman
+  .. _`using Herman`: /herman/docs/
   .. _`hire us`: /contact/
 
 
