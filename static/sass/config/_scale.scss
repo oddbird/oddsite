@@ -30,6 +30,9 @@ $text-sizes: (
   'caption': 'root',
   'task': 'root' ('text-ratio': -0.125),
   'social': 'root' ('text-ratio': -0.25),
+
+  'h2': calc(1rem + 1vw),
+  'h3': calc(1rem + 0.5vw),
 );
 
 $sizes: map-merge($sizes, $text-sizes);

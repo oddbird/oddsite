@@ -8,7 +8,10 @@
 /// @group buttons
 /// @example njk - submit button
 ///   {% import 'content.macros.j2' as content %}
-///   {{ content.button(content='Submit') }}
+///   {{ content.button(
+///     content='Submit',
+///     attrs={'type': 'submit'}
+///   ) }}
 /// @example njk - link button
 ///   {% import 'content.macros.j2' as content %}
 ///   {{ content.link_button(
