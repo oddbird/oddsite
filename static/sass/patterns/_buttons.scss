@@ -13,7 +13,8 @@
 ///   {% import 'content.macros.j2' as content %}
 ///   {{ content.link_button(
 ///     url='/herman/docs/',
-///     content='Read the docs'
+///     content='Read the docs',
+///     attrs={'target': '_parent'}
 ///   ) }}
 .btn {
   &,

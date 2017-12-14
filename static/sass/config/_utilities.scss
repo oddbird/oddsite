@@ -21,9 +21,9 @@
 /// @link https://eager.io/blog/smarter-link-underlines/
 ///   Smarter Text Underlines
 /// @see text-underline
-/// @example njk -
+/// @example html
 ///   <a href="#" data-styleguide="text-outline">
-///     text outline (decenders: Qhghjhqhy)
+///     text outline (descenders: Qhghjhqhy)
 ///   </a>
 @mixin text-outline(
   $background: 'background',
@@ -54,9 +54,9 @@
 ///   Color (or Accoutrement color-key) to use for color and
 ///   linear-gradient colors which make the underline
 /// @see text-underline
-/// @example njk -
+/// @example html
 ///   <a href="#" data-styleguide="text-outline">
-///     text outline (decenders: Qhghjhqhy)
+///     text outline (descenders: Qhghjhqhy)
 ///   </a>
 @mixin text-underline-color(
   $color: 'action'
@@ -84,9 +84,9 @@
 ///   Smarter Text Underlines
 /// @see text-outline
 /// @see text-underline-color
-/// @example njk -
+/// @example html
 ///   <a href="#" data-styleguide="text-outline">
-///     text underline (decenders: Qhghjhqhy)
+///     text underline (descenders: Qhghjhqhy)
 ///   </a>
 @mixin text-underline(
   $color: 'action',
@@ -109,7 +109,7 @@
 /// @group typography
 /// @link http://www.sassmeister.com/gist/069480556e17107cb8d33a9d5db2f5db
 ///   Text Outline vs Text-Shadow
-/// @example njk -
+/// @example html
 ///   <h1 class="title" data-styleguide="text-shadow">
 ///     Text Shadow
 ///   </h1>

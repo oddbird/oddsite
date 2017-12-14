@@ -30,7 +30,7 @@ $breakpoints: (
 /// @group config-layout
 /// @parameter $max-width -
 ///   Optional max-width for centered item
-/// @example scss -
+/// @example scss
 ///   .foo {
 ///     @include center;
 ///   }
@@ -55,7 +55,7 @@ $breakpoints: (
 // --------------
 /// Shortcut for declaring shared grid container styles
 /// @group config-layout
-/// @example scss -
+/// @example scss
 ///   .foo {
 ///     @include grid;
 ///   }
@@ -113,7 +113,7 @@ $breakpoints: (
 ///   Target viewport-width for the element.
 ///   For consistency, options include
 ///   `'extend-small'`, `'extend-large'` or `'extend-full'`.
-/// @example scss -
+/// @example scss
 ///   .foo {
 ///     @include extend('extend-small');
 ///   }
@@ -145,7 +145,7 @@ $breakpoints: (
 ///   Target viewport-width for the element.
 ///   For consistency, options include
 ///   `'extend-small'`, `'extend-large'` or `'extend-full'`.
-/// @example scss -
+/// @example scss
 ///   .foo {
 ///     @include extend('extend-small');
 ///   }
@@ -183,7 +183,7 @@ $breakpoints: (
 /// @link http://www.sassmeister.com/gist/96e88c4ecba8716397bd8c6c19887fb0 -
 ///    Sample Sassmeister SCSS/CSS with Accoutrement
 /// @parameter {Side | String} $side - Choose right or left
-/// @example scss -
+/// @example scss
 ///   .foo {
 ///     @include extend-side(left);
 ///   }

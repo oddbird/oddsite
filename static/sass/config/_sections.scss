@@ -12,11 +12,11 @@
 /// @parameter $background ['background'] -
 ///   The background color above the border/arrow,
 ///   used to make it an arrow-outline rather than a solid triangle
-/// @example scss -
+/// @example scss
 ///   [data-styleguide='section-arrow'] {
 ///     @include section-arrow;
 ///   }
-/// @example njk -
+/// @example html
 ///   <div data-styleguide="section-arrow">Section Arrow</div>
 @mixin section-arrow(
   $color: 'border',
