@@ -1,0 +1,20 @@
+{% extends "rst_display.html" %}
+
+{% import 'utility.macros.j2' as utility %}
+{% import 'layout/macros.j2' as layout %}
+
+{% block favicons %}
+  <link rel="shortcut icon" href="/static/images/favicons/favicon-herman.ico" />
+{% endblock %}
+
+{% block banner_logo %}
+  <a href="/herman/" class="logo-link">
+    {{ utility.icon('herman', alt='Herman', class='logo-icon') }}
+  </a>
+{% endblock %}
+
+{% block banner_nav %}
+  {% set nav = all_pages|filter_pages('slug', 'eq', 'herman/index')|get_page %}
+  {% set nav = nav.config.nav %}
+  {{ layout.main_nav(nav) }}
+{% endblock %}

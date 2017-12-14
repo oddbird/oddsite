@@ -21,6 +21,14 @@ svg {
 
 .img-border {
   border: 1px solid color('border-light');
+
+  &.gallery {
+    border: 0;
+
+    .gallery-image {
+      border: 1px solid color('border-light');
+    }
+  }
 }
 
 .img-shadow {
