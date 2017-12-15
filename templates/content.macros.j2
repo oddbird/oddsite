@@ -47,7 +47,7 @@
   intro=none
 ) %}
   {% set page = all_pages|filter_pages('slug', 'eq', slug)|get_page %}
-  {% set data = page.config[data] %}
+  {% set data = slug|get_config(data) %}
   {% set intro = page.config[intro] if page.config[intro] else intro %}
   {% set intro = page.render_summary() if (intro == 'summary') else intro %}
 
@@ -60,9 +60,11 @@
       {% endif %}
     </header>
 
-    {% for item in data %}
-      {{ icon_block_item(item) }}
-    {% endfor %}
+    {% if data %}
+      {% for item in data %}
+        {{ icon_block_item(item) }}
+      {% endfor %}
+    {% endif %}
   </section>
 {% endmacro %}
 

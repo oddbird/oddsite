@@ -127,12 +127,31 @@ def get_blog_entries_by_tag(builder, tag):
     ]
 
 
+def build_get_config(builder):
+    all_pages = {
+        p.slug: p
+        for p
+        in builder.iter_contexts()
+    }
+
+    def get_config(slug, key=None):
+        page = all_pages.get(slug, None)
+        if page is None:
+            return page
+        if key is not None:
+            return getattr(page, key, None)
+        return page
+
+    return get_config
+
+
 def setup(builder):
     env = builder.jinja_env
     env.filters['show_all_attrs'] = show_all_attrs
     env.filters['show_config'] = show_config
     env.filters['filter_pages'] = filter_pages
     env.filters['get_page'] = get_page
+    env.filters['get_config'] = build_get_config(builder)
     env.globals['get_blog_entries_by_bird'] = partial(
         get_blog_entries_by_bird,
         builder,
