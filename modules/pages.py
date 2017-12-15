@@ -127,8 +127,13 @@ def get_blog_entries_by_tag(builder, tag):
     ]
 
 
+def is_string(obj):
+    return isinstance(obj, basestring)
+
+
 def setup(builder):
     env = builder.jinja_env
+    env.filters['is_string'] = is_string
     env.filters['show_all_attrs'] = show_all_attrs
     env.filters['show_config'] = show_config
     env.filters['filter_pages'] = filter_pages

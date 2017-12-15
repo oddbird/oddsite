@@ -6,7 +6,7 @@
 // ----
 /// Shortcut for `link` and `visited` pseudo-classes.
 /// @group typography
-/// @example scss -
+/// @example scss
 ///   a {
 ///     #{$link} {
 ///       color: blue;
@@ -19,7 +19,7 @@ $link: '&:link, &:visited';
 // -----
 /// Shortcut for `hover`, `focus`, and `active` pseudo-classes.
 /// @group typography
-/// @example scss -
+/// @example scss
 ///   a {
 ///     #{$focus} {
 ///       color: red;

@@ -4,11 +4,16 @@
 
 
 {% macro attr_if(attr, value=none) %}
-  {%- if value == true -%}
+  {%- if value == true and value|string == 'true' -%}
     {{ attr }}
   {%- elif value -%}
     {{ attr }}="{{ value }}"
   {%- endif -%}
+{% endmacro %}
+
+
+{% macro show_attrs(attrs) %}
+  {%- for name, value in attrs.items() %}{{ attr_if(name, value) }} {% endfor -%}
 {% endmacro %}
 
 

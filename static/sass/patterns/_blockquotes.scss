@@ -6,12 +6,19 @@ $quote-circle-type: calc(5rem + 2vw);
 
 .pullquote,
 blockquote {
-  @include center('medium-page');
+  @include extend('extend-small');
   font-size: calc(1.125rem + 0.5vw);
   font-style: italic;
-  margin-bottom: size('spacer');
-  margin-top: size('spacer');
+  margin-bottom: size('gutter');
+  margin-top: size('gutter');
   position: relative;
+
+
+  &[data-quote-section] {
+    @include center('medium-page');
+    margin-bottom: size('spacer');
+    margin-top: size('spacer');
+  }
 
   @include above('medium-page') {
     @include grid;
@@ -51,7 +58,7 @@ blockquote {
     }
   }
 
-  footer,
+  .attribution,
   p {
     @include above('medium-page') {
       margin-top: 0;
@@ -68,11 +75,9 @@ blockquote {
     }
   }
 
-  footer {
+  .attribution {
     font-size: 1rem;
-  }
-
-  cite {
     font-style: normal;
+    margin-bottom: 0;
   }
 }
