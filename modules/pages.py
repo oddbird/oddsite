@@ -139,7 +139,11 @@ def build_get_config(builder):
         if page is None:
             return page
         if key is not None:
-            return getattr(page, key, None)
+            return getattr(
+                getattr(page, 'config', None)
+                key
+                None,
+            )
         return page
 
     return get_config
