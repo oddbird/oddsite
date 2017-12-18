@@ -55,18 +55,6 @@ talks:
     title: 'Evolving the Design Process'
     slides: 'http://www.slideshare.net/Funstacy/exploring-the-design-process-wcchi'
     video: 'http://wordpress.tv/2014/07/05/stacy-kvernmo-exploring-the-design-process/'
-  - venue: 'NYCSass Meetup'
-    url: 'http://www.meetup.com/nyc-sass/events/146898452/'
-    date: [2013, 11, 19]
-    author: 'miriam'
-    title: 'Organizing Sass Partials'
-    slides: 'http://miriamsuzanne.com/pres/sass-partials/'
-  - venue: 'Brakhage Center Media Arts'
-    url: 'http://www.colorado.edu/brakhagecenter/2013/08/10/bc-luncheon-series-welcomes-eric-meyer-october-7th'
-    date: [2013, 10, 7]
-    author: 'miriam'
-    title: 'Art is for People'
-    slides: 'http://miriamsuzanne.com/art-is-for-people/'
   - venue: 'WordPress Naperville'
     url: 'http://www.meetup.com/WordPress-Naperville'
     date: [2013, 9, 17]

@@ -39,10 +39,6 @@ events:
     date: [2016, 3, 31]
     adr: 'San Francisco, CA'
     slides: 'https://oddbooksapp.com/release/ab1987b6-7d5f-42e4-b0ff-e7312cb345f6'
-brag: |
-  Learn how to
-  **automate style documentation** by
-  building patterns directly into your code.
 summary: |
   *Style Guides & Pattern Libraries are great tools*
   for documenting the relationships between code and design,
