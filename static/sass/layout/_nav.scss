@@ -94,13 +94,16 @@
 $nav-locations: (
   'case-studies': 'work',
   'open-source': 'work',
+  'blog': 'work',
+
   'design-development': 'services',
   'design-systems-training': 'services',
-  'blog': null,
+  'speaking': 'services',
+
   'birds': 'about',
-  'speaking': 'about',
   'community': 'about',
-  'contact': 'about',
+
+  'contact': null,
 
   'susysite-sites': null,
   'susysite-articles': null,
