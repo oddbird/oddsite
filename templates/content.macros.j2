@@ -41,24 +41,28 @@
   -----------
 #}
 {% macro icon_block(
-  title,
-  slug,
-  data,
+  title=none,
+  slug=none,
+  data=none,
   intro=none
 ) %}
-  {% set page = all_pages|filter_pages('slug', 'eq', slug)|get_page %}
-  {% set data = slug|get_config(data) %}
+  {% set page = slug|get_config %}
+  {% set data = page.config[data] %}
   {% set intro = page.config[intro] if page.config[intro] else intro %}
   {% set intro = page.render_summary() if (intro == 'summary') else intro %}
 
   <section class="icon-blocks-container">
-    <header class="icon-block-header">
-      <h2>{{ title|safe }}</h2>
+    {% if title or intro %}
+      <header class="icon-block-header">
+        {% if title %}
+          <h2>{{ title|safe }}</h2>
+        {% endif %}
 
-      {% if intro %}
-        {{ intro|safe }}
-      {% endif %}
-    </header>
+        {% if intro %}
+          {{ intro|safe }}
+        {% endif %}
+      </header>
+    {% endif %}
 
     {% if data %}
       {% for item in data %}
@@ -144,7 +148,7 @@
   slug=none,
   count=none
 ) %}
-  {% set page = all_pages|filter_pages('slug', 'eq', page)|get_page if (page is string) else page %}
+  {% set page = page|get_config or page %}
   {% set client = page.config.client[0] if page.config.client else none %}
 
   {% if slug %}
@@ -181,7 +185,7 @@
   min_image=none,
   duo=false
 ) %}
-  {% set page = all_pages|filter_pages('slug', 'eq', slug)|get_page %}
+  {% set page = slug|get_config %}
   {% set data = page.config[data] %}
 
   <section class="gallery-container content-block">
@@ -262,7 +266,7 @@
 #}
 {% macro link_list(title, tag=none, slug=none, data=none) %}
   {% set entries = get_blog_entries_by_tag(tag) if tag else [] %}
-  {% set page = all_pages|filter_pages('slug', 'eq', slug)|get_page if slug else none %}
+  {% set page = slug|get_config if slug else none %}
   {% set data = page.config[data] if (page and data) else [] %}
 
   <section class="link-list content-block">

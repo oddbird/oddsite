@@ -14,7 +14,7 @@
 {% endblock feedlinks %}
 
 {% block list_intro %}
-  {% set page = all_pages|filter_pages('index', 'eq', 'blog')|get_page %}
+  {% set page = 'blog-index'|get_config %}
   {{ layout.header_image(page) }}
   {{ layout.show_headline(
     main=['Posts Tagged ‘', tag.name, '’']|join,
