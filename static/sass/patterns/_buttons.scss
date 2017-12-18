@@ -2,17 +2,30 @@
 // ========================
 
 
+/// The `btn` class provides a button-like
+/// call-to-action style
+/// that can be applied to `link` or `button` elements.
+/// @group buttons
+/// @example njk - submit button
+///   {% import 'content.macros.j2' as content %}
+///   {{ content.button(
+///     content='Submit',
+///     attrs={'type': 'submit'}
+///   ) }}
+/// @example njk - link button
+///   {% import 'content.macros.j2' as content %}
+///   {{ content.link_button(
+///     url='/herman/docs/',
+///     content='Read the docs'
+///   ) }}
 .btn {
   &,
   #{$link} {
     @include font-family('alt');
     align-items: center;
-    background-color: color('background');
-    background-image: none; // remove link underline when styling as button...
-    border-color: color('action-border');
+    background: color('background'); // remove link underline when styling as button...
+    border: 1px solid color('action-border');
     border-radius: size('border-radius');
-    border-style: solid;
-    border-width: 1px;
     color: color('action');
     display: inline-flex;
     font-weight: bold;
@@ -39,5 +52,12 @@
 
   + .btn {
     margin-left: size('half-shim');
+  }
+}
+
+
+.content-img {
+  + .btn {
+    margin-top: size('gutter');
   }
 }

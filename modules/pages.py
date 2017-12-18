@@ -143,8 +143,20 @@ def collect(pages, key, label_with=None):
     return result
 
 
+def is_string(obj):
+    return isinstance(obj, basestring)
+
+
+def remove_index(str):
+    if str.endswith('/index'):
+        return str[:-6]
+    return str
+
+
 def setup(builder):
     env = builder.jinja_env
+    env.filters['is_string'] = is_string
+    env.filters['remove_index'] = remove_index
     env.filters['show_all_attrs'] = show_all_attrs
     env.filters['show_config'] = show_config
     env.filters['filter_pages'] = filter_pages

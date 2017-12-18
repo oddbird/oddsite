@@ -71,6 +71,16 @@
   [data-location*='susysite'] & {
     @include section-arrow('brand-pink');
   }
+
+  [data-location*='hermansite'] & {
+    @include section-arrow('action-hover');
+  }
+
+  // + [data-module] {
+  //   @include before('') {
+  //     display: none;
+  //   }
+  // }
 }
 
 

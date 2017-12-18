@@ -46,8 +46,8 @@ to form OddBird.
 
 .. _Blueprint: http://www.blueprintcss.org/
 .. _`Eric Meyer’s Reset`: https://meyerweb.com/eric/tools/css/reset/
-.. _Carl: http://oddbird.net/birds/#bird-carl
-.. _Jonny: http://oddbird.net/birds/#bird-jonny
+.. _Carl: /birds/#bird-carl
+.. _Jonny: /birds/#bird-jonny
 
 At that point,
 every layout required extensive hacks
@@ -864,8 +864,8 @@ talk to `SassSusy`_ or `OddBird`_ on twitter,
 or join our `public Slack`_ (with a #Susy channel).
 We're excited to hear from you!
 
-.. _sites built with Susy: http://oddbird.net/susy/sites/
-.. _third-party tutorials: http://oddbird.net/susy/articles/
+.. _sites built with Susy: /susy/sites/
+.. _third-party tutorials: /susy/articles/
 .. _Contact us: /contact/
 .. _submit a pull request: https://github.com/oddbird/oddsite/tree/master/content/susy
 .. _OddBird: https://twitter.com/oddbird

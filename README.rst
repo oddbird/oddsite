@@ -12,7 +12,7 @@ Development setup
 Install Node.js
 ~~~~~~~~~~~~~~~
 
-OddSite development requires `Node.js`_ 8.8.1 and `yarn`_ 1.2.1.
+OddSite development requires `Node.js`_ 8.9.1 and `yarn`_ 1.3.2.
 
 The right versions of Node and yarn are bundled in the OddSite repo and can be
 unpacked inside the repo (in the git-ignored ``node/`` directory), so you don't
@@ -76,7 +76,7 @@ which development commands need to be run before serving locally:
 
 - 📦 (``:package:``) -> ``pip install -r requirements.txt``
 - 🐈 (``:cat2:``) -> ``yarn``
-- 🙀 (``:scream_cat:``) -> ``rm -rf node/*; rm -rf node_modules/; bin/unpack-node; yarn``
+- 🙀 (``:scream_cat:``) -> ``bin/unpack-node; yarn``
 
 After upgrading any of the OddBird-owned packages (Susy, True, Herman, or
 Accoutrement-*), run ``bin/update-subproject-docs`` to pull their updated

@@ -18,6 +18,10 @@
     margin-top: negative('shim');
   }
 
+  [data-location*='hermansite'] & {
+    margin-top: 0;
+  }
+
   .nav-item {
     display: inline-flex;
 
@@ -89,16 +93,20 @@
 // Map nav locations for highlighting active page
 $nav-locations: (
   'case-studies': 'work',
-  'services': 'work',
-  'open-source': null,
+  'open-source': 'work',
+  'design-development': 'services',
+  'design-systems-training': 'services',
   'blog': null,
   'birds': 'about',
   'speaking': 'about',
   'community': 'about',
   'contact': 'about',
+
   'susysite-sites': null,
   'susysite-articles': null,
   'susysite-styleguide': 'susysite-support',
+
+  'hermansite-articles': null,
 );
 
 // Highlight self and parent (if applicable)

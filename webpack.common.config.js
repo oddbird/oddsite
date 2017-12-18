@@ -92,34 +92,41 @@ SassdocPlugin.prototype.apply = compiler => {
     sassdoc('./static/sass/**/*.scss', {
       dest: sassdocPath,
       theme: 'herman',
-      homepage: '/',
       descriptionPath: path.join(__dirname, 'STYLEGUIDE.md'),
-      groups: {
-        'config-color': 'Color Palettes',
-        'config-fonts': 'Webfonts',
-        'config-layout': 'Layout',
-        'config-scale': 'Sizes & Spacing',
-        icons: 'Icons',
-        sections: 'Page Sections',
-        typography: 'Typography',
-      },
       herman: {
-        customCSS: cssPath,
-        minifiedIcons: 'templates/_icons.svg',
-        templatepath: path.join(__dirname, 'templates'),
+        extraLinks: [
+          {
+            name: 'Accoutrement-Init',
+            url: 'http://oddbird.net/accoutrement-init/',
+          },
+          {
+            name: 'Accoutrement-Color',
+            url: 'http://oddbird.net/accoutrement-color/',
+          },
+          {
+            name: 'Accoutrement-Layout',
+            url: 'http://oddbird.net/accoutrement-layout/',
+          },
+          {
+            name: 'Accoutrement-Scale',
+            url: 'http://oddbird.net/accoutrement-scale/',
+          },
+          {
+            name: 'Accoutrement-Type',
+            url: 'http://oddbird.net/accoutrement-type/',
+          },
+        ],
         displayColors: ['hex', 'hsl'],
+        customCSS: cssPath,
+        customHTML: path.join(__dirname, 'templates', '_icons.svg'),
+        nunjucks: {
+          templatepath: path.join(__dirname, 'templates'),
+        },
         sass: {
           jsonfile: jsonPath,
           includepaths: [path.join(__dirname, 'static/sass')],
           includes: ['config/manifest'],
         },
-        subprojects: [
-          'accoutrement-color',
-          'accoutrement-init',
-          'accoutrement-layout',
-          'accoutrement-scale',
-          'accoutrement-type',
-        ],
       },
       shortcutIcon: path.join(
         __dirname,
@@ -130,6 +137,16 @@ SassdocPlugin.prototype.apply = compiler => {
         'favicon.ico',
       ),
       display: { access: ['public'] },
+      groups: {
+        'config-color': 'Color Palettes',
+        'config-fonts': 'Webfonts',
+        'config-layout': 'Layout',
+        'config-scale': 'Sizes & Spacing',
+        icons: 'Icons',
+        buttons: 'Buttons',
+        sections: 'Page Sections',
+        typography: 'Typography',
+      },
     }).then(
       () => {
         /* eslint-disable no-console */

@@ -32,8 +32,8 @@
   <div class="contact-wrap">
     <section data-module="contact-cta">
       <h2>
-        {% if ('susysite' in location) %}
-          {{ cta.susytitle }}
+        {% if ('susysite' in location) or ('hermansite' in location) %}
+          {{ cta.project_title }}
         {% else %}
           {{ cta.title }}
         {% endif %}
@@ -48,8 +48,8 @@
         <div class="media-content">
           {{ main_content }}
           {{ content.link_button(
-            action.url,
-            action.text|replace('%s', cta.contact|capitalize)
+            url=action.url,
+            content=action.text|replace('%s', cta.contact|capitalize)
           ) }}
         </div>
       </div>

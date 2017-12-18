@@ -8,10 +8,7 @@ const webpack = require('webpack');
 // because we're modifying nested properties on the new object.
 const webpackConf = extend(true, {}, require('./webpack.common.config.js'));
 
-Reflect.deleteProperty(webpackConf.entry, 'app_styles');
-Reflect.deleteProperty(webpackConf.entry, 'styleguide');
-Reflect.deleteProperty(webpackConf.entry, 'susy_off_canvas_styles');
-Reflect.deleteProperty(webpackConf.entry, 'sass_json');
+Reflect.deleteProperty(webpackConf, 'entry');
 webpackConf.plugins = [
   new webpack.WatchIgnorePlugin([
     /flycheck_/,

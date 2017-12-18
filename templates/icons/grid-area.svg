@@ -1,12 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 501 393.32">
-<title>grid area</title>
-<g id="grid-area">
-  <rect class="chart-highlight" x="250.47" y="32.82" width="250.03" height="240"/>
-  <polygon class="chart-triangle" points="375.49 24.88 370.56 20.62 365.64 16.35 375.49 16.35 385.33 16.35 380.41 20.62 375.49 24.88"/>
-  <text class="chart-text" transform="translate(351.8 10.28)">Grid area</text>
-  <rect class="chart-line" x="-117.01" y="150.33" width="360" height="124.98" transform="translate(275.81 149.83) rotate(90)"/>
-  <rect class="chart-line" x="0.5" y="272.82" width="500" height="120"/>
-  <rect class="chart-line" x="0.5" y="32.82" width="500" height="120"/>
-  <rect class="chart-line" x="132.96" y="150.33" width="360" height="124.98" transform="translate(525.78 -100.14) rotate(90)"/>
-</g>
+  <path d="M250.47 32.82H500.5v240H250.47z" class="chart-highlight"/>
+  <path d="M375.49 24.88l-4.93-4.26-4.92-4.27h19.69l-4.92 4.27-4.92 4.26" class="chart-triangle"/>
+  <text class="chart-text" transform="translate(351.8 10.28)">
+    Grid area
+  </text>
+  <path d="M125.48 32.82v360H.5v-360z" class="chart-line"/>
+  <path d="M.5 272.82h500v120H.5zm0-240h500v120H.5z" class="chart-line"/>
+  <path d="M375.45 32.82v360H250.47v-360z" class="chart-line"/>
 </svg>
