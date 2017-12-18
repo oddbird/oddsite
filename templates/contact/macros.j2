@@ -4,8 +4,7 @@
 
 
 {% macro social(slug='contact/index', data='social') %}
-  {% set page = slug|get_config %}
-  {% set items = page.config[data] %}
+  {% set items = slug|get_config(data) %}
 
   <ul class="contact-social">
     {% for item in items %}
