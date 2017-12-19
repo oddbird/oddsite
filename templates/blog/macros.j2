@@ -9,9 +9,14 @@
     {% set heading = 'h2' if section else 'h3' %}
     <{{ heading }} class="post-title">
       <a href="{{ link_to('page', slug=post.slug) }}" rel="bookmark">
-        {{ post.title }}
+        {{ post.title|typogrify }}
       </a>
     </{{ heading }}>
+
+    {% set subtitle = post.config.headline[0].tagline if post.config.headline else none %}
+    {% if subtitle %}
+      <div class="post-subtitle">{{ subtitle|rst }}</div>
+    {% endif %}
 
     {{ page.rst_meta(post) }}
     {{ page.header_image(post, class='extend-small') }}
@@ -24,8 +29,8 @@
 
     {% call content.link_button(
       url=link_to('page', slug=post.slug),
-      rel='bookmark'
-      ) %}
+      attrs={'rel': 'bookmark'}
+    ) %}
       Read More
     {% endcall %}
 
