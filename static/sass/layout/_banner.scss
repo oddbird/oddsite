@@ -17,9 +17,9 @@
 
 .logo-link {
   #{$link} {
-    background-image: none;
     color: color('brand-blue');
     display: inline-block;
+    text-decoration: none;
     transition: color 250ms;
   }
 

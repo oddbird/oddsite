@@ -170,7 +170,6 @@ module.exports = {
     app: './init.js',
     spam_referrals_blocker: './spamReferralsBlocker.js',
     app_styles: ['screen.scss'],
-    styleguide: ['styleguide.scss'],
     sass_json: ['json.scss'],
   },
   output: {
