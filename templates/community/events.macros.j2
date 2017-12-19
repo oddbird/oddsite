@@ -1,25 +1,35 @@
 {% import "utility.macros.j2" as utility %}
 {% import "content.macros.j2" as content %}
 {% import "layout/macros.j2" as layout %}
+{% import "birds/utility.macros.j2" as birds %}
 
 
-{% macro by_author(author=none) %}
-  {% set pages = all_pages|filter_pages('speakers', 'has', author) if author else all_pages|filter_pages('speakers') %}
-  {% set events = pages|collect('events', label_with='slug')|sort(attribute='date') %}
+{% macro by_author(
+  author=none
+) %}
+  {% set talks = all_pages|filter_pages('speakers', 'has', author) if author else all_pages|filter_pages('speakers') %}
+  {% set events = talks|collect('events', label_with='slug')|sort(attribute='date') %}
   {% set future = events|filter_events(past=false)|list %}
   {% set past = events|filter_events(past=true)|reverse|list %}
   {% set highlight = future[0] or past[0] or none %}
+  {% set show_author = false if author else true %}
+
+  {{ splash(talks) }}
 
   {% if events %}
-    <section class="events-by-author">
+    <section class="events-by-author extend-full">
       {{ content.divider(title='Speaking Schedule') }}
 
-      {{ feature(highlight) }}
+      {{ feature(
+        event=highlight,
+        show_author=show_author
+        ) }}
 
       {% if future|length > 1 %}
         {{ list(
           events=future,
-          title="Upcoming Appearances"
+          title="Upcoming Appearances",
+          show_author=show_author
           ) }}
       {% endif %}
 
@@ -27,15 +37,49 @@
         {{ list(
           events=past,
           title="Speaking History",
+          show_author=show_author,
           slice=5
           ) }}
       {% endif %}
     </section>
   {% endif %}
- {% endmacro %}
+{% endmacro %}
 
 
-{% macro feature(event) %}
+{% macro splash(
+  talks
+) %}
+  {% set talks = talks|filter_pages('brag') %}
+
+  {% if talks|length %}
+    <section class="splash-talks">
+      {{ content.divider(title='Featured Talks & Workshops') }}
+      <div class="splash-section">
+        {% for talk in talks %}
+          <article class="splash-talk">
+            <h3 class="splash-title">
+              {{ utility.link_if(
+                url=content.page_link(talk),
+                content=talk.title|typogrify
+                ) }}
+            </h3>
+            <div class="splash-brag">
+              {% set brag = talk.config.brag %}
+              {% set brag = talk.render_summary() if (brag == 'summary') else brag|rst %}
+              {{ brag }}
+            </div>
+          </article>
+        {% endfor %}
+      </div>
+    </section>
+  {% endif %}
+{% endmacro %}
+
+
+{% macro feature(
+  event,
+  show_author=false
+) %}
   {% if event %}
     <article class="feature-event">
       {% set talk = all_pages|filter_pages('slug', 'eq', event.slug)|get_page %}
@@ -58,7 +102,10 @@
           ) }}
       </h3>
 
-      {{ meta(event) }}
+      {{ meta(
+        event=event,
+        show_author=show_author
+        ) }}
 
       <div class="event-summary">
         {{ talk.render_summary() }}
@@ -68,7 +115,12 @@
 {% endmacro %}
 
 
-{% macro list(events, title, slice=none) %}
+{% macro list(
+  events,
+  title,
+  show_author=false,
+  slice=none
+) %}
   {% if events %}
     <section data-module="events-list">
       <h3 class="events-list-title">{{ title }}</h3>
@@ -80,7 +132,10 @@
       {% endif %}
 
       {% for event in events %}
-        {{ item(event) }}
+        {{ item(
+          event=event,
+          show_author=show_author
+          ) }}
 
         {% if loop.index == slice %}
           <div {{ utility.toggle_target('more-events') }}>
@@ -94,7 +149,10 @@
 {% endmacro %}
 
 
-{% macro item(event) %}
+{% macro item(
+  event,
+  show_author=false
+) %}
   {% set event_date = event.date|make_date %}
   {% set talk = all_pages|filter_pages('slug', 'eq', event.slug)|get_page %}
   {% set talk_url = content.page_link(talk) %}
@@ -107,19 +165,35 @@
         )  }}
     </h4>
 
-    {{ meta(event) }}
+    {{ meta(
+      event=event,
+      show_author=show_author
+      ) }}
   </article>
 {% endmacro %}
 
 
-{% macro meta(event) %}
+{% macro meta(
+  event,
+  show_author=none
+) %}
   {% set event_date = event.date|make_date %}
+  {% set talk = all_pages|filter_pages('slug', 'eq', event.slug)|get_page %}
+  {% set authors = talk.config.speakers if show_author else none %}
 
   <div class="event-meta">
     <span class="meta-preposition">on</span>
     <time datetime="{{ event_date }}">
       {{ event_date|format_date('%B %-d, %Y') }}
     </time>
+    {% if authors %}
+      <span class="meta-preposition">with</span>
+      {% for author in authors %}
+        {{ 'and' if (loop.last and not loop.first) else '' }}
+        {{ birds.name_link(author) -}}
+        {{- '' if loop.last else ',' }}
+      {% endfor %}
+    {% endif %}
     {% if event.adr %}
       <span class="meta-preposition">in</span>
       <span class="adr">{{ event.adr }}</span>

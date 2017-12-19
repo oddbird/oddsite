@@ -35,19 +35,27 @@
     transition: color 250ms, background-color 250ms;
   }
 
-  #{$focus} {
+  @include after('»') {
+    font-weight: normal;
+    padding: 0 size('quarter-shim');
+    transform-origin: 50% 60%;
+    transition: transform 250ms;
+  }
+
+  #{$focus},
+  &[aria-pressed='true'] {
     background-color: color('action');
     color: color('background');
 
     &::after {
-      transform: translateX(size('half-shim'));
+      transform: translateX(size('quarter-shim'));
     }
   }
 
-  @include after('»') {
-    font-weight: normal;
-    padding-left: size('half-shim');
-    transition: transform 250ms;
+  &[aria-pressed='true'] {
+    &::after {
+      transform: rotate(180deg);
+    }
   }
 
   + .btn {

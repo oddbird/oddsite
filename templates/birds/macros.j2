@@ -7,7 +7,6 @@
 
 {% macro details(page) %}
   {% set author = page.config.bird %}
-  {{ feature_talks(author) }}
   {{ events.by_author(author) }}
   {{ oss_list(author, page) }}
 {% endmacro %}
@@ -38,35 +37,6 @@
       content="See %s's activity" % author|capitalize
       ) }}
   </article>
-{% endmacro %}
-
-
-{% macro feature_talks(author=none) %}
-  {% set talks = all_pages|filter_pages('speakers')|filter_pages('brag') %}
-  {% set talks = talks|filter_pages('speakers', 'has', author) if author else talks %}
-
-  {% if talks|length %}
-    <section class="splash-talks">
-      {{ content.divider(title='Featured Talks & Workshops') }}
-      <div class="splash-section">
-        {% for talk in talks %}
-          <article class="splash-talk">
-            <h3 class="splash-title">
-              {{ utility.link_if(
-                url=content.page_link(talk),
-                content=talk.title|typogrify
-                ) }}
-            </h3>
-            <div class="splash-brag">
-              {% set brag = talk.config.brag %}
-              {% set brag = talk.render_summary() if (brag == 'summary') else brag|rst %}
-              {{ brag }}
-            </div>
-          </article>
-        {% endfor %}
-      </div>
-    </section>
-  {% endif %}
 {% endmacro %}
 
 
