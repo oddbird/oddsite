@@ -10,7 +10,7 @@ events:
     url: 'https://themixin.eventbrite.com/'
     date: [2014, 4, 16]
 summary: |
-  *Susy isn't a grid-system like most others*,
+  **Susy isn't a grid-system like most others**,
   providing out-of-the box layouts.
   Instead, we've abstracted grid-calculations
   to build a meta-grid system --

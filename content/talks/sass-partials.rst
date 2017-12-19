@@ -6,7 +6,7 @@ events:
     url: 'http://www.meetup.com/nyc-sass/events/146898452/'
     date: [2013, 11, 19]
 summary: |
-  A nation-wide panel of Sass enthusiasts
+  **A nation-wide panel of Sass enthusiasts**
   talk about their partial and folder organizational structure.
 
 

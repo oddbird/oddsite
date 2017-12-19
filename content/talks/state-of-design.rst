@@ -1,5 +1,7 @@
 public: yes
 speakers: [stacy]
+headline:
+  - tagline: 'with CSS Grid Layout and Friends'
 events:
   - venue: 'Front-End Camp'
     url: 'http://chicagocamps.org/events/2017/front-end-camp/'
@@ -15,7 +17,7 @@ brag: |
   of the new features in CSS –
   from **Grid layout** to **typography**.
 summary: |
-  *For far too long we've been forced to reuse layout patterns*
+  **For far too long we've been forced to reuse layout patterns**
   that have worked in the past,
   creating a web full of sites that all look the same.
   Narrow timelines,
@@ -24,8 +26,8 @@ summary: |
   have led us to create work that is "good enough".
 
 
-The Great State of Design (with CSS Grid Layout and Friends)
-============================================================
+The Great State of Design
+=========================
 
 `Stacy`_ spent years exploring
 how we can make the web a more unique space.

@@ -29,7 +29,7 @@
     color: color('action');
     display: inline-flex;
     font-weight: bold;
-    padding: size('half-shim') 1rem;
+    padding: size('half-shim') size('gutter');
     text-decoration: none;
     text-shadow: none;
     transition: color 250ms, background-color 250ms;
@@ -53,6 +53,12 @@
   + .btn {
     margin-left: size('half-shim');
   }
+}
+
+
+.small-btn {
+  font-size: size('small');
+  padding: size('half-shim') size('shim');
 }
 
 

@@ -7,7 +7,7 @@ events:
     date: [2017, 1, 23]
     adr: 'Charlottesville, VA'
 summary: |
-  *As creators, it’s tempting to grab and consolidate our power*,
+  **As creators, it’s tempting to grab and consolidate our power**,
   but sometimes the medium or audience has a different opinion.
   Maybe we’ll look at my experiences of chaos
   as a professional web developer and mixed-media artist —

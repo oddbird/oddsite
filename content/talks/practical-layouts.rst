@@ -27,19 +27,19 @@ summary: |
 Practical Layouts, Past & Future
 ================================
 
-  Join the creator of the `Susy`_ grid system
-  for a review of layout and grid techniques —
-  when to use them,
-  what to consider,
-  and how to roll your own layouts with minimum code.
-  We'll look at everything from floats to CSS Grid,
-  flexbox, and even custom properties —
-  and how to start using the new toys right away,
-  with only a few lines of code.
+Join the creator of the `Susy`_ grid system
+for a review of layout and grid techniques —
+when to use them,
+what to consider,
+and how to roll your own layouts with minimum code.
+We'll look at everything from floats to CSS Grid,
+flexbox, and even custom properties —
+and how to start using the new toys right away,
+with only a few lines of code.
 
-  - When to use floats, CSS Grid, flexbox,
-    custom properties, and other techniques.
-  - How to make grid-math simple, and lose the grid-system.
-  - How to make grid-systems work for you when you need them.
+- When to use floats, CSS Grid, flexbox,
+  custom properties, and other techniques.
+- How to make grid-math simple, and lose the grid-system.
+- How to make grid-systems work for you when you need them.
 
-  .. _Susy: /susy/
+.. _Susy: /susy/

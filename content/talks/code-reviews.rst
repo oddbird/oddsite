@@ -11,12 +11,16 @@ events:
     date: [2015, 10, 27]
     slides: 'http://www.slideshare.net/Funstacy/no-pain-no-gain-css-code-reviews-ftw'
 summary: |
-  Sure, you can write CSS
-  but can you describe each decision you made with confidence?
+  **Sure, you can write CSS
+  but can you describe each decision you made with confidence?**
   While there are many ways to do the same thing,
   having a true understanding of CSS properties
   will help you write better code and faster.
   Code reviews to the rescue!
+
+
+No Pain No Gain; CSS Code Reviews
+=================================
 
   - Expose additional ways to solve a problem
     that you may not have thought about yourself
@@ -27,7 +31,3 @@ summary: |
 
   We will go over the different ways to conduct a code review
   and begin your journey to greatness!
-
-
-No Pain No Gain; CSS Code Reviews
-=================================

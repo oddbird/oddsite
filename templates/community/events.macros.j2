@@ -16,16 +16,20 @@
 
       {{ feature(highlight) }}
 
-      {{ list(
-        events=future,
-        title="Upcoming Appearances"
-        ) }}
+      {% if future|length > 1 %}
+        {{ list(
+          events=future,
+          title="Upcoming Appearances"
+          ) }}
+      {% endif %}
 
-      {{ list(
-        events=past,
-        title="Speaking History",
-        slice=5
-        ) }}
+      {% if future or (past|length > 1) %}
+        {{ list(
+          events=past,
+          title="Speaking History",
+          slice=5
+          ) }}
+      {% endif %}
     </section>
   {% endif %}
  {% endmacro %}
@@ -36,23 +40,27 @@
     <article class="feature-event">
       {% set talk = all_pages|filter_pages('slug', 'eq', event.slug)|get_page %}
       {% set talk_url = content.page_link(talk) %}
+      {% set talk_url = talk_url if (talk_url != '/talks/tbd/') else none %}
 
-      <h3 class="event-venue">
+      <h3 class="event-title">
+        {% if talk %}
+          {{ utility.link_if(
+            content=talk.title|typogrify,
+            url=talk_url,
+            class='event-talk'
+            ) }}
+          <span class="meta-preposition">at</span>
+        {% endif %}
         {{ utility.link_if(
           content=event.venue,
-          url=event.url
+          url=event.url,
+          class='event-venue'
           ) }}
       </h3>
 
       {{ meta(event) }}
 
       <div class="event-summary">
-        {{ utility.link_if(
-          content=talk.title|typogrify + ':',
-          url=talk_url,
-          class='event-talk'
-          ) }}
-
         {{ talk.render_summary() }}
       </div>
     </article>
@@ -63,10 +71,10 @@
 {% macro list(events, title, slice=none) %}
   {% if events %}
     <section data-module="events-list">
-      <h3>{{ title }}</h3>
+      <h3 class="events-list-title">{{ title }}</h3>
 
-      {% if slice %}
-        <button class="btn" {{ utility.toggle_button('more-events') }}>
+      {% if slice and (events|length > slice) %}
+        <button class="btn small-btn more-events" {{ utility.toggle_button('more-events') }}>
           show all events
         </button>
       {% endif %}
@@ -112,7 +120,9 @@
     <time datetime="{{ event_date }}">
       {{ event_date|format_date('%B %-d, %Y') }}
     </time>
-    <span class="meta-preposition">in</span>
-    <span class="adr">{{ event.adr }}</span>
+    {% if event.adr %}
+      <span class="meta-preposition">in</span>
+      <span class="adr">{{ event.adr }}</span>
+    {% endif %}
   </div>
 {% endmacro %}

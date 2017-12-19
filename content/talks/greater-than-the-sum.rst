@@ -6,6 +6,8 @@ events:
     url: 'http://2016.ploneconf.org/'
     date: [2016, 10, 20]
     adr: 'Boston, MA'
+headline:
+  - tagline: 'Integrating Pyramid, React, & Plone'
 summary: |
   `David`_ reviews the lessons learned
   from integrating Pyramid, React, and Plone.
@@ -13,6 +15,6 @@ summary: |
   .. _David: /authors/david/
 
 
-Greater Than The Sum of Parts: Integrating Pyramid, React, & Plone
-==================================================================
+Greater Than The Sum of Parts
+=============================
 

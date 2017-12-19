@@ -6,7 +6,7 @@ events:
     url: 'http://sassconf.com'
     date: [2015, 11, 11]
 summary: |
-  *The web is more than a technology platform*,
+  **The web is more than a technology platform**,
   it was created with a mission statement,
   and a clear philosophy of inclusive diversity.
   One web, for everyone, from any device,

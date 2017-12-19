@@ -19,7 +19,7 @@ events:
     date: [2014, 4, 19]
     slides: 'http://miriamsuzanne.com/pres/show-yr-work/'
 summary: |
-  *The web is littered with opinionated CSS frameworks*
+  **The web is littered with opinionated CSS frameworks**
   that can rapidly back you into a corner.
   Now pre-processors like Sass
   have opened the door for more flexible toolkits,

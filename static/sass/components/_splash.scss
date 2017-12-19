@@ -3,6 +3,7 @@
 
 
 .splash-section {
+  @include text-shadow;
   align-items: stretch;
   background-image: url('../images/wash-background.jpg');
   background-position: center;

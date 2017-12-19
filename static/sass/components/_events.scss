@@ -6,17 +6,14 @@
 // ----------
 
 .event {
+  clear: both;
   margin: size('shim') 0;
 }
 
 
+.event-title,
 .event-venue {
   margin: 0;
-}
-
-
-.event-talk {
-  @include font-family('alt');
 }
 
 
@@ -39,17 +36,6 @@
   .event-meta {
     margin-bottom: size('shim');
   }
-
-  .event-talk {
-    float: left;
-    margin-right: size('half-shim');
-  }
-
-  .event-summary {
-    :first-child {
-      margin-top: 0;
-    }
-  }
 }
 
 
@@ -65,4 +51,14 @@
   & + & {
     margin-top: size('double-gutter');
   }
+}
+
+
+.events-list-title {
+  float: left;
+  margin-top: 0;
+}
+
+.more-events {
+  float: right;
 }

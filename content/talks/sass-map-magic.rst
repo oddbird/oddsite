@@ -21,19 +21,19 @@ events:
     date: [2014, 9, 12]
     video: 'http://teamtreehouse.com/library/sass-map-magic'
 summary: |
-  *Maps are a powerful data type in Sass* —
+  **Maps are a powerful data type in Sass** —
   perfect for managing color and scale palettes,
   framework configuration, data storage, and more.
   We'll find ways to integrate maps into any project
   before we push them to their limits.
 
-  - What are Sass Maps, and how do I use them?
-  - Organizing variables with maps.
-  - Manipulating maps programmatically.
-  - The main problems with maps, and how we work around them.
-  - Automating pattern libraries and style guides based on maps.
-  - Fun with maps for data-storage, and natural-language syntax.
-
 
 Sass Map Magic
 ==============
+
+- What are Sass Maps, and how do I use them?
+- Organizing variables with maps.
+- Manipulating maps programmatically.
+- The main problems with maps, and how we work around them.
+- Automating pattern libraries and style guides based on maps.
+- Fun with maps for data-storage, and natural-language syntax.

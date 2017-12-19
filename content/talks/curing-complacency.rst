@@ -9,7 +9,7 @@ events:
     url: 'http://chicagocamps.org/events/2016/ux-camp/'
     date: [2016, 4, 30]
 summary: |
-  *It's easy to fall into old habits…*
+  **It's easy to fall into old habits…**
 
 
 Curing Design Complacency

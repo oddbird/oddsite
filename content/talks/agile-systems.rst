@@ -10,7 +10,7 @@ brag: |
   **automate style documentation** by
   building patterns directly into your code.
 summary: |
-  *Style Guides & Pattern Libraries are great tools*
+  **Style Guides & Pattern Libraries are great tools**
   for documenting the relationships between code and design,
   but beautiful docs are only half the battle.
   We don’t all have dedicated teams and budgets
