@@ -4,7 +4,7 @@
 
 
 {% macro social(slug='contact/index', data='social') %}
-  {% set items = slug|get_config(data) %}
+  {% set items = slug|get_config(data) or [] %}
 
   <ul class="contact-social">
     {% for item in items %}
@@ -28,32 +28,34 @@
   {% set contact_page = 'contact/index'|get_config %}
   {% set cta = contact_page.config.cta_footer[0] if contact_page.config.cta_footer %}
 
-  <div class="contact-wrap">
-    <section data-module="contact-cta">
-      <h2>
-        {% if ('susysite' in location) or ('hermansite' in location) %}
-          {{ cta.project_title }}
-        {% else %}
-          {{ cta.title }}
-        {% endif %}
-      </h2>
+  {% if cta %}
+    <div class="contact-wrap">
+      <section data-module="contact-cta">
+        <h2>
+          {% if ('susysite' in location) or ('hermansite' in location) %}
+            {{ cta.project_title }}
+          {% else %}
+            {{ cta.title }}
+          {% endif %}
+        </h2>
 
-      {% set name = birds.name_link(cta.contact, full_name=false) %}
-      {% set main_content = cta.content|rst|replace('%s', name) %}
-      {% set action = cta.action %}
+        {% set name = birds.name_link(cta.contact, full_name=false) %}
+        {% set main_content = cta.content|rst|replace('%s', name) %}
+        {% set action = cta.action %}
 
-      <div class="contact-miriam media-block">
-        {{ birds.face(cta.contact, 'media-image') }}
-        <div class="media-content">
-          {{ main_content }}
-          {{ content.link_button(
-            url=action.url,
-            content=action.text|replace('%s', cta.contact|capitalize)
-          ) }}
-        </div>
+        <div class="contact-miriam media-block">
+          {{ birds.face(cta.contact, 'media-image') }}
+          <div class="media-content">
+            {{ main_content }}
+            {{ content.link_button(
+              url=action.url,
+              content=action.text|replace('%s', cta.contact|capitalize)
+            ) }}
+          </div>
 
-        {{ social() }}
-      </section>
+          {{ social() }}
+        </section>
+      </div>
     </div>
   {% endif %}
 {% endmacro %}
