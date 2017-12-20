@@ -39,21 +39,25 @@ $focus: '&:hover, &:focus, &:active';
   $hover: if($contrast == color('action'), color('action-hover'), $hover);
 
   a {
-    &:not(.btn) {
-      &,
-      #{$link}  {
-        color: color($contrast);
-      }
+    #{$link}  {
+      color: color($contrast);
     }
 
     #{$focus} {
-      @include text-underline-color($hover);
+      color: color($hover);
+
+    }
+  }
+
+  .btn {
+    &,
+    #{$link} {
+      color: color($contrast);
     }
 
-    &.btn {
-      #{$focus} {
-        color: color($hover);
-      }
+    #{$focus} {
+      background-color: color($contrast);
+      color: color($background);
     }
   }
 }
