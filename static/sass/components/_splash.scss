@@ -53,11 +53,11 @@
   #{$link} {
     align-items: center;
     align-self: center;
-    background-image: none; // remove link underline
     color: color('caption');
     display: flex;
     justify-content: center;
     padding-bottom: size('shim');
+    text-decoration: none;
     transition: transform 300ms $ease-back, fill 200ms ease;
   }
 

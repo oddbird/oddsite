@@ -14,8 +14,8 @@
   }
 
   a {
-    background-image: none;
     margin-right: size('shim');
+    text-decoration: none;
 
     [data-icon] {
       padding: size('pixel'); // avoid social icons getting cropped

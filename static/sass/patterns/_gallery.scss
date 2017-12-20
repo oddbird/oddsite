@@ -44,9 +44,8 @@ $min-image: 300px;
   display: block;
 
   #{$link} {
-    background: none;
     border: 1px solid color('action');
-    text-shadow: none;
+    text-decoration: none;
   }
 
   #{$focus} {

@@ -18,8 +18,8 @@
 
 .imageblock-link {
   &[href] {
-    background-image: none; // remove link underline
     display: block;
+    text-decoration: none;
     transition: transform 300ms $ease-back;
 
     #{$focus} {

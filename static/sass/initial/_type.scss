@@ -66,6 +66,10 @@ h6 {
   [data-module='rst-body'] & {
     clear: both;
   }
+
+  [href] {
+    text-decoration: none;
+  }
 }
 
 // Links
@@ -73,21 +77,15 @@ h6 {
 
 a {
   #{$link} {
-    @include text-underline('action');
     color: color('action');
     font-weight: bold;
-    text-decoration: none;
+    text-decoration: underline;
+    text-decoration-skip: ink;
     transition: color 150ms;
-
-    h1 &,
-    h2 &,
-    h3 & {
-      background-image: none; // remove link underline for headlines
-    }
   }
 
   #{$focus} {
-    @include text-underline-color('action-hover');
+    color: color('action-hover');
   }
 }
 
@@ -95,8 +93,13 @@ a {
 .image-reference {
   &,
   #{$link} {
-    background-image: none;
+    text-decoration: none;
   }
+}
+
+.icon-text {
+  text-decoration: underline;
+  text-decoration-skip: ink;
 }
 
 .image-reference {
