@@ -34,7 +34,7 @@
 
     {{ content.link_button(
       url=birds.get_bird_url(author, page),
-      content="See %s's activity" % author|capitalize
+      content="See %s's activity" % author|capitalize|typogrify
       ) }}
   </article>
 {% endmacro %}
@@ -61,23 +61,27 @@
 {% macro oss_list(author, page) %}
   {% set oss = page.config.oss_by_author[author] %}
   {% set oss = oss|filter_pages('public', 'neq', false) %}
+  {% set oss = oss|collect('contributors', label_with='slug') %}
+  {% set oss = oss|selectattr('author', 'equalto', author)|list %}
 
   {% if oss and (oss|length > 0) %}
     <section data-module="contributions">
       {{ content.divider(title='Open Source Contributions') }}
-      <ul class="title-list">
-        {% for item in oss %}
-          {% set project = item.config.project[0] %}
-          {% set contrib = item.config.contributors|selectattr('author', 'equalto', author)|list %}
-          <li>
-            {{ utility.link_if(
-              project.name or item.title,
-              content.project_link(item, allow_external=true)
-              ) }}
-            [{{ contrib[0].role }}]
-          </li>
-        {% endfor %}
-      </ul>
+      {% for group in oss|groupby('role') %}
+        <h3 class="oss-role">{{ group.grouper }}</h3>
+        <ul class="title-list">
+          {% for item in group.list %}
+            {% set page = all_pages|filter_pages('slug', 'eq', item.slug)|get_page %}
+            {% set project = page.config.project[0] %}
+            <li>
+              {{ utility.link_if(
+                project.name or project.title,
+                content.project_link(page, allow_external=true)
+                ) }}
+            </li>
+          {% endfor %}
+        </ul>
+      {% endfor %}
     </section>
   {% endif %}
 {% endmacro %}

@@ -46,6 +46,10 @@
   padding: 0 size('shim');
   position: relative;
   transform: translateY(-50%);
+
+  a {
+    text-decoration: none;
+  }
 }
 
 
@@ -75,12 +79,6 @@
   [data-location*='hermansite'] & {
     @include section-arrow('action-hover');
   }
-
-  // + [data-module] {
-  //   @include before('') {
-  //     display: none;
-  //   }
-  // }
 }
 
 
