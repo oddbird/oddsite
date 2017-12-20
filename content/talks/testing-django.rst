@@ -5,7 +5,8 @@ events:
     url: 'https://us.pycon.org/2012/'
     date: [2012, 3, 10]
     adr: 'Santa Clara, CA'
-    video: 'http://pyvideo.org/pycon-us-2012/testing-and-django.html'
+    video: '<iframe width="560" height="315" src="https://www.youtube.com/embed/ickNQcNXiS4" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>'
+    feature: true
 summary: |
   Django has a fair bit of custom test code: a custom TestSuiteRunner, custom TestCase subclasses, some test-only monkeypatches to core Django code, and a raft of testing utilities. I'll cover as much of that code as I find interesting and non-trivial, taking a close look at what it's actually doing and what that means for your tests.
 

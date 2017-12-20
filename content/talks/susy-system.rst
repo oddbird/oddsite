@@ -5,7 +5,7 @@ events:
   - venue: 'Bmore Sass'
     url: 'http://bmore-sass.com/'
     date: [2014, 4, 24]
-    video: 'http://vimeo.com/miriamsuzanne/susy-2-system'
+    video_link: 'http://vimeo.com/miriamsuzanne/susy-2-system'
   - venue: 'The Mixin'
     url: 'https://themixin.eventbrite.com/'
     date: [2014, 4, 16]

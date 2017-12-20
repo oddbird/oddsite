@@ -16,6 +16,11 @@
 
   {{ splash(talks) }}
 
+  {{ videos(
+    talks=talks,
+    slice=2
+    ) }}
+
   {% if events %}
     <section class="events-by-author extend-full">
       {{ content.divider(title='Speaking Schedule') }}
@@ -52,7 +57,7 @@
   {% set talks = talks|filter_pages('brag') %}
 
   {% if talks|length %}
-    <section class="splash-talks">
+    <section class="splash-talks extend-full">
       {{ content.divider(title='Featured Talks & Workshops') }}
       <div class="splash-section">
         {% for talk in talks %}
@@ -71,6 +76,33 @@
           </article>
         {% endfor %}
       </div>
+    </section>
+  {% endif %}
+{% endmacro %}
+
+
+{% macro videos(
+  talks=none,
+  slice=10
+) %}
+  {% set events = talks|collect('events', label_with='slug') %}
+  {% set events = events|selectattr('feature')|sort(attribute='date')|reverse|list %}
+
+  {% if events|length %}
+    <section class="talk-videos">
+      {{ content.divider(title='Featured Videos') }}
+
+      <figure class='video-gallery extend-large'>
+        {% for event in events %}
+          {% if (loop.index <= slice) %}
+            <div class="video-item">
+              <div class="video">
+                {{ event.video|safe }}
+              </div>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </figure>
     </section>
   {% endif %}
 {% endmacro %}

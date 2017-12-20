@@ -6,7 +6,7 @@ events:
     date: [2013, 3, 16]
     adr: 'Santa Clara, CA'
     slides: '/start-testing-preso/'
-    video: 'http://pyvideo.org/pycon-us-2013/getting-started-with-automated-testing.html'
+    video: '<iframe width="560" height="315" src="https://www.youtube.com/embed/ukm64IUANwE" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>'
 summary: |
   **The hardest part of testing is getting the ball rolling.**
   Once you've picked your tools and started writing tests,

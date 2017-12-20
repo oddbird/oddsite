@@ -20,6 +20,8 @@ events:
     date: [2017, 8, 14]
     adr: 'Spokane, WA'
     slides: 'https://www.oddbooksapp.com/book/djangocon-layout'
+    video: '<iframe width="560" height="315" src="https://www.youtube.com/embed/mDRfFEcj3-Q" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>'
+    feature: true
 brag: |
   The creator of `Susy`_,
   provides **practical techniques**

@@ -6,7 +6,7 @@ events:
     date: [2011, 9, 8]
     adr: 'Portland, OR'
     slides: 'http://carljm.github.io/tamingdeps/'
-    video: 'http://pyvideo.org/djangocon-us-2011/djangocon-2011--taming-dependencies-with-pip.html'
+    video_link: 'http://pyvideo.org/djangocon-us-2011/djangocon-2011--taming-dependencies-with-pip.html'
 summary: |
   **Dependency management sucks.**
   Pip provides some options for making it suck a bit less,

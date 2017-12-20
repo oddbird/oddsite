@@ -4,7 +4,7 @@ headline:
   - tagline: 'Senior User Experience Designer & Developer'
     type: 'Meet The Birds…'
 image:
-  - src: 'pages/faces-hero.jpg'
+  - src: 'herman/stacy-design-systems-training.jpg'
 adr: 'Aurora, IL'
 social:
   - twitter: 'stacykvernmo'

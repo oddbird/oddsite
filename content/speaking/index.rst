@@ -16,11 +16,10 @@ summary: |
   We also provide workshops and in-house trainings --
   to help `improve design systems`_,
   designer-developer communication,
-  site `performance, and accessibility`_.
+  site performance, and accessibility.
 
   .. _writing: /blog/
   .. _improve design systems: /talks/agile-systems-workshop/
-  .. _`performance, and accessibility`: /services/performance-a11y/
 
 
 Speaking Engagements

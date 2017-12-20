@@ -1,5 +1,7 @@
 public: yes
 bird: 'jonny'
+image:
+  - src: 'birds/jonny.jpg'
 headline:
   - tagline: 'Co-Founder & Front-End Lead'
     type: 'Meet The Birds…'

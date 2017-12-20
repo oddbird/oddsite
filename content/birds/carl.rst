@@ -4,7 +4,7 @@ headline:
   - tagline: 'Co-Founder & Python Consultant'
     type: 'Meet The Birds…'
 image:
-  - src: 'pages/faces-hero.jpg'
+  - src: 'birds/carl.jpg'
 adr: 'Rapid City, SD'
 social:
   - twitter: 'carljm'

@@ -2,6 +2,7 @@ public: yes
 speakers: [stacy]
 headline:
   - tagline: 'with CSS Grid Layout and Friends'
+slides: 'https://www.slideshare.net/Funstacy/the-great-state-of-design-with-css-grid-layout-and-friends'
 events:
   - venue: 'Front-End Camp'
     url: 'http://chicagocamps.org/events/2017/front-end-camp/'
@@ -11,7 +12,9 @@ events:
     url: 'http://cssday.io/'
     date: [2016, 12, 3]
     adr: 'Chandler, AZ'
-    slides: https://www.slideshare.net/Funstacy/the-great-state-of-design-with-css-grid-layout-and-friends
+    slides: 'https://www.slideshare.net/Funstacy/the-great-state-of-design-with-css-grid-layout-and-friends'
+    video: '<iframe width="560" height="315" src="https://www.youtube.com/embed/pnbT4HdcSwM" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>'
+    feature: true
 brag: |
   An overview
   of the new features in CSS –

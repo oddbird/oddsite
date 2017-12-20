@@ -95,7 +95,7 @@
           <p class="byline">
             {% if ctx.author %}
               <span class="meta-preposition">by</span>
-              {{ birds_util.name_link(ctx.author, blog=true) }}
+              {{ birds_util.name_link(ctx.author) }}
             {% endif %}
             <span class="meta-preposition">on</span>
             {{ utility.datetime(ctx.pub_date) }}
@@ -138,8 +138,8 @@
 {%- macro speaker_list(speakers) -%}
   {{- 'by ' -}}
   {%- for speaker in speakers -%}
-    {{- '& '|safe if loop.last and not loop.first -}}
-    {{- speaker|capitalize -}}
+    {{- 'and '|safe if loop.last and not loop.first -}}
+    {{- birds_util.get_bird_name(speaker) -}}
     {{- ', ' if not loop.last -}}
   {%- endfor -%}
 {%- endmacro -%}

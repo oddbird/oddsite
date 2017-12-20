@@ -7,7 +7,7 @@ events:
     date: [2016, 9, 26]
     adr: 'Boston, MA'
     slides: 'https://oddbooksapp.com/release/b71e6e5d-e956-42ff-a4dd-b70bf3b13a2a'
-    video: 'https://www.youtube.com/watch?v=MdwtoFt2LOI'
+    video: '<iframe width="560" height="315" src="https://www.youtube.com/embed/MdwtoFt2LOI" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>'
   - venue: 'CSS Summit'
     url: 'http://environmentsforhumans.com/2015/css-summit/'
     date: [2015, 7, 7]
@@ -19,7 +19,7 @@ events:
   - venue: 'BlendConf'
     url: 'http://www.blendconf.com/'
     date: [2014, 9, 12]
-    video: 'http://teamtreehouse.com/library/sass-map-magic'
+    video_link: 'http://teamtreehouse.com/library/sass-map-magic'
 summary: |
   **Maps are a powerful data type in Sass** —
   perfect for managing color and scale palettes,

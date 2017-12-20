@@ -5,7 +5,7 @@ events:
   - venue: 'Frontend Conference Zurich'
     url: 'http://frontendconf.ch'
     date: [2015, 8, 28]
-    video: 'https://www.youtube.com/watch?v=9w0pgUTYy5k'
+    video_link: 'https://www.youtube.com/watch?v=9w0pgUTYy5k'
   - venue: 'WordCamp Denver'
     url: 'http://denver.wordcamp.org/2015/'
     date: [2015, 6, 13]
@@ -13,7 +13,7 @@ events:
     url: 'http://sassconf.com/2013/'
     date: [2013, 10, 12]
     slides: 'http://miriamsuzanne.com/pres/show-yr-work/'
-    video: 'https://vimeo.com/channels/sassconf2013/86306775'
+    video_link: 'https://vimeo.com/channels/sassconf2013/86306775'
   - venue: 'Camp Sass'
     url: 'http://campsass.com/2014/'
     date: [2014, 4, 19]
