@@ -78,6 +78,10 @@
                 project.name or project.title,
                 content.project_link(page, allow_external=true)
                 ) }}
+
+                {% if item.dates %}
+                  [{{ item.dates }}]
+                {% endif %}
             </li>
           {% endfor %}
         </ul>
