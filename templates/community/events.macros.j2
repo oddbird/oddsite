@@ -23,26 +23,59 @@
 
   {% if events %}
     <section class="events-by-author extend-full">
-      {{ content.divider(title='Speaking Schedule') }}
+      {{ content.divider(title='Event Schedule') }}
 
       {{ feature(
         event=highlight,
         show_author=show_author
         ) }}
 
-      {% if future|length > 1 %}
-        {{ list(
-          events=future,
-          title="Upcoming Appearances",
-          show_author=show_author
-          ) }}
-      {% endif %}
+      {{ list(
+        events=future,
+        title="Upcoming Appearances",
+        show_author=show_author
+        ) }}
 
       {% if future or (past|length > 1) %}
         {{ list(
           events=past,
           title="Speaking History",
           show_author=show_author,
+          slice=5
+          ) }}
+      {% endif %}
+    </section>
+  {% endif %}
+{% endmacro %}
+
+
+{% macro by_talk(ctx) %}
+  {% set events = ctx.config.events|sort(attribute='date') %}
+  {% set future = events|filter_events(past=false)|list %}
+  {% set past = events|filter_events(past=true)|reverse|list %}
+
+  {{ videos(
+    talks=[ctx],
+    slice=1
+    ) }}
+
+  {% if events %}
+    <section class="events-by-talk extend-full">
+      {{ content.divider(title='Event Schedule') }}
+
+      {{ list(
+        events=future,
+        talk=ctx,
+        title="Upcoming Appearances",
+        show_author=false
+        ) }}
+
+      {% if past|length > 0 %}
+        {{ list(
+          events=past,
+          talk=ctx,
+          title="Past Events",
+          show_author=false,
           slice=5
           ) }}
       {% endif %}
@@ -87,10 +120,11 @@
 ) %}
   {% set events = talks|collect('events', label_with='slug') %}
   {% set events = events|selectattr('feature')|sort(attribute='date')|reverse|list %}
+  {% set title = 'Featured Videos' if (slice > 1) else 'Featured Video' %}
 
   {% if events|length %}
     <section class="talk-videos">
-      {{ content.divider(title='Featured Videos') }}
+      {{ content.divider(title=title) }}
 
       <figure class='video-gallery extend-large'>
         {% for event in events %}
@@ -110,12 +144,13 @@
 
 {% macro feature(
   event,
+  talk=none,
   show_author=false
 ) %}
   {% if event %}
     <article class="feature-event">
-      {% set talk = all_pages|filter_pages('slug', 'eq', event.slug)|get_page %}
-      {% set talk_url = content.page_link(talk) %}
+      {% set talk = talk if talk else all_pages|filter_pages('slug', 'eq', event.slug)|get_page %}
+      {% set talk_url = content.page_link(talk) if talk else none %}
       {% set talk_url = talk_url if (talk_url != '/talks/tbd/') else none %}
 
       <h3 class="event-title">
@@ -136,6 +171,7 @@
 
       {{ meta(
         event=event,
+        talk=talk,
         show_author=show_author
         ) }}
 
@@ -150,11 +186,12 @@
 {% macro list(
   events,
   title,
+  talk=none,
   show_author=false,
   slice=none
 ) %}
-  {% if events %}
-    <section data-module="events-list">
+  <section data-module="events-list">
+    {% if events %}
       <h3 class="events-list-title">{{ title }}</h3>
 
       {% if slice and (events|length > slice) %}
@@ -166,6 +203,7 @@
       {% for event in events %}
         {{ item(
           event=event,
+          talk=talk,
           show_author=show_author
           ) }}
 
@@ -176,29 +214,36 @@
           </div>
         {% endif %}
       {% endfor %}
-    </section>
-  {% endif %}
+    {% else %}
+      <h3 class="events-list-title no-events">No events scheduled</h3>
+
+      <a href="/contact/" class="btn">
+        Invite us to present
+      </a>
+    {% endif %}
+  </section>
 {% endmacro %}
 
 
 {% macro item(
   event,
+  talk=none,
   show_author=false
 ) %}
   {% set event_date = event.date|make_date %}
-  {% set talk = all_pages|filter_pages('slug', 'eq', event.slug)|get_page %}
-  {% set talk_url = content.page_link(talk) %}
+  {% set talk = talk if talk else all_pages|filter_pages('slug', 'eq', event.slug)|get_page %}
 
   <article class="event">
     <h4 class="event-venue">
       {{ utility.link_if(
         content=event.venue,
-        url=talk_url
+        url=content.page_link(talk)
         )  }}
     </h4>
 
     {{ meta(
       event=event,
+      talk=talk,
       show_author=show_author
       ) }}
   </article>
@@ -207,10 +252,11 @@
 
 {% macro meta(
   event,
+  talk=none,
   show_author=none
 ) %}
   {% set event_date = event.date|make_date %}
-  {% set talk = all_pages|filter_pages('slug', 'eq', event.slug)|get_page %}
+  {% set talk = talk if talk else all_pages|filter_pages('slug', 'eq', event.slug)|get_page %}
   {% set authors = talk.config.speakers if show_author else none %}
 
   <div class="event-meta">

@@ -85,8 +85,13 @@
 {% endmacro %}
 
 
-{% macro rst_meta(ctx, project=none) %}
-  {% set has_actions = ctx.config.actions or project.url or project.source %}
+{% macro rst_meta(
+  ctx,
+  project=none,
+  slides=none
+) %}
+  {% set project_actions = project.url or project.source %}
+  {% set has_actions = ctx.config.actions or project_actions or slides %}
 
   {% if ctx.pub_date or ctx.tags or has_actions %}
     <div class="rst-meta">
@@ -105,15 +110,25 @@
         {{ tags(ctx.tags) }}
       </div>
 
-      {% if ctx.config.actions %}
-        {{ header_actions(ctx.config.actions) }}
-      {% elif project %}
-        {% set actions = [
-          {'text': 'View app', 'url': project.url},
-          {'text': 'View source', 'url': project.source}
-        ] %}
+      {% if has_actions %}
+        <div class="header-actions">
+          {% if project_actions %}
+            {% set actions = [
+              {'text': 'View app', 'url': project.url},
+              {'text': 'View source', 'url': project.source}
+            ] %}
 
-        {{ header_actions(actions) }}
+            {{ header_actions(actions) }}
+          {% elif slides %}
+            {% set actions = [
+              {'text': 'View slides', 'url': slides}
+            ] %}
+
+            {{ header_actions(actions) }}
+          {% endif %}
+
+          {{ header_actions(ctx.config.actions) }}
+        </div>
       {% endif %}
     </div>
   {% endif %}
@@ -124,7 +139,6 @@
   {% set links = links|selectattr('url')|list %}
 
   {% if links|length > 0 %}
-    <div class="header-actions">
       {% for link in links %}
         {% call content.link_button(link.url) %}
           {{ link.text }}
@@ -150,6 +164,7 @@
   {% set project = ctx.config.project[0] if ctx.config.project else none %}
   {% set client = ctx.config.client[0] if ctx.config.client else none %}
   {% set contributors = ctx.config.contributors if ctx.config.contributors else none %}
+  {% set slides = ctx.config.slides or none %}
 
   {% set main = headline.title if (headline and headline.title) else none %}
   {% set main = project.name if (project and project.name and not main) else main %}
@@ -168,7 +183,7 @@
 
   {{ header_image(ctx) }}
   {{ show_headline(main, sub, type) }}
-  {{ rst_meta(ctx, project) }}
+  {{ rst_meta(ctx, project, slides) }}
 
   {% if ctx.config.summary and show_summary %}
     <div class="rst-summary">
