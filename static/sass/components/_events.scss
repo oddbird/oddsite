@@ -43,13 +43,26 @@
 // ----
 
 [data-module='events-list'] {
+  & + & {
+    margin-top: size('double-gutter');
+  }
+
   .event-venue,
   .event-meta {
     display: inline-block;
   }
 
+}
+
+
+.event-list-links {
+  @include before('»');
+
+}
+
+.event-list-link {
   & + & {
-    margin-top: size('double-gutter');
+    @include before(' | ');
   }
 }
 
@@ -62,6 +75,7 @@
     float: none;
   }
 }
+
 
 .more-events {
   float: right;

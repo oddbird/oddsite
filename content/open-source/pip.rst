@@ -1,5 +1,4 @@
 public: yes
-location: open-source
 project:
   - name: 'Pip'
     tagline: 'Python package installer'

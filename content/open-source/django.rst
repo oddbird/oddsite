@@ -1,5 +1,4 @@
 public: yes
-location: open-source
 logo: 'django'
 image:
   - src: 'projects/django.jpg'

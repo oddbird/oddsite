@@ -1,5 +1,4 @@
 public: yes
-location: open-source
 project:
   - name: 'Compass'
     tagline: 'CSS-authoring framework and Sass library'

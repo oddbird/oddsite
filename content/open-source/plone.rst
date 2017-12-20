@@ -1,5 +1,4 @@
 public: yes
-location: open-source
 logo: 'plone'
 image:
   - src: 'projects/plone.jpg'

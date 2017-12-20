@@ -76,6 +76,7 @@
           talk=ctx,
           title="Past Events",
           show_author=false,
+          details=true,
           slice=5
           ) }}
       {% endif %}
@@ -188,6 +189,7 @@
   title,
   talk=none,
   show_author=false,
+  details=none,
   slice=none
 ) %}
   <section data-module="events-list">
@@ -204,7 +206,8 @@
         {{ item(
           event=event,
           talk=talk,
-          show_author=show_author
+          show_author=show_author,
+          details=details
           ) }}
 
         {% if loop.index == slice %}
@@ -228,16 +231,18 @@
 {% macro item(
   event,
   talk=none,
-  show_author=false
+  show_author=false,
+  details=none
 ) %}
   {% set event_date = event.date|make_date %}
   {% set talk = talk if talk else all_pages|filter_pages('slug', 'eq', event.slug)|get_page %}
+  {% set url = event.url if details else content.page_link(talk) %}
 
   <article class="event">
     <h4 class="event-venue">
       {{ utility.link_if(
         content=event.venue,
-        url=content.page_link(talk)
+        url=url
         )  }}
     </h4>
 
@@ -246,6 +251,10 @@
       talk=talk,
       show_author=show_author
       ) }}
+
+      {% if details %}
+        {{ show_links(event) }}
+      {% endif %}
   </article>
 {% endmacro %}
 
@@ -277,4 +286,29 @@
       <span class="adr">{{ event.adr }}</span>
     {% endif %}
   </div>
+{% endmacro %}
+
+
+{% macro show_links(
+  event
+) %}
+  {% set links = {
+    'slides': 'slides',
+    'video_link': 'video',
+    'transcript': 'transcript'
+  } %}
+
+  {% if event.slides or event.video_link or event.transcript %}
+    <div class="event-list-links">
+      {% for link in links %}
+        {% if event[link] %}
+          {{ utility.link_if(
+            url=event[link],
+            content=links[link],
+            class='event-list-link'
+            ) }}
+        {% endif %}
+      {% endfor %}
+    </div>
+  {% endif %}
 {% endmacro %}

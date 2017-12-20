@@ -1,6 +1,4 @@
 public: yes
-location: case-studies
-pageclasses: work-layout
 headline:
   - title: 'Custom Web Software'
     tagline: 'Solving real problems for real users…'

@@ -1,5 +1,4 @@
 public: yes
-location: open-source
 project:
   - name: 'Virtualenv'
     tagline: 'Virtual Python Environment builder'

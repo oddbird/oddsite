@@ -6,6 +6,7 @@
 {% import 'birds/utility.macros.j2' as birds %}
 {% import 'community/events.macros.j2' as events %}
 
+
 {% block title -%}
   {%- if config.location == 'home' -%}
     OddBird: {{ rst.title }}
@@ -13,6 +14,7 @@
     {{ rst.title }} | {{ super() }}
   {%- endif -%}
 {%- endblock %}
+
 
 {% block og_title %}{{ rst.title }}{% endblock %}
 {% block og_type %}{{ 'article' if ctx.pub_date else 'website' }}{% endblock %}
@@ -34,8 +36,17 @@
   {% endif %}
 {% endblock %}
 
-{% block body %}
 
+{% block location -%}
+  {%- set override = 'blog' if ctx.author else none -%}
+  {%- set override = 'speaking' if config.speakers else override -%}
+  {%- set override = 'open-source' if config.contributors else override -%}
+  {%- set override = 'case-studies' if config.client else override -%}
+  {{- override or super() -}}
+{%- endblock %}
+
+
+{% block body %}
   {{ page.header(rst, ctx) }}
   {{ blog.intro(ctx) }}
 

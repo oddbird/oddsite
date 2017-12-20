@@ -1,5 +1,4 @@
 public: yes
-location: home
 grid_template: true
 image:
   - src: 'pages/faces-hero.jpg'

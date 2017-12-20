@@ -1,5 +1,4 @@
 public: yes
-location: open-source
 headline:
   - tagline: 'Giving back to the community…'
     type: 'Open Source Contributions'

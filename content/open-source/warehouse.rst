@@ -1,5 +1,4 @@
 public: yes
-location: open-source
 project:
   - name: 'Warehouse'
     tagline: 'Next Generation Python Package Repository'

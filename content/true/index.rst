@@ -1,5 +1,4 @@
 public: yes
-location: open-source
 grid_template: true
 headline:
   - type: 'Open Source'
