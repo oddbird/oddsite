@@ -15,6 +15,12 @@
   }
 }
 
+.header-actions {
+  font-size: 1rem;
+  margin-top: size('gutter');
+  text-align: right;
+}
+
 .title-post-type {
   background-color: color('invert');
   clip-path: polygon(100% 0%, calc(100% - 0.5rem) 50%, 100% 100%, 0 100%, 0% 50%, 0 0);
@@ -39,33 +45,13 @@
 }
 
 .rst-meta {
-  align-items: flex-end;
-  display: flex;
-  flex-wrap: wrap;
   margin-bottom: size('gutter');
   margin-top: 0;
   max-width: none;
   padding: 0 size('gutter');
 
-  @include above('full-content') {
-    justify-content: space-between;
-  }
-
   [data-module] & {
     padding: 0;
-  }
-
-  .work-layout & {
-    @include above('full-content') {
-      margin-top: negative('gutter');
-      position: relative;
-
-      .header-actions {
-        position: absolute;
-        right: size('gutter');
-        z-index: 2;
-      }
-    }
   }
 }
 
@@ -76,10 +62,6 @@
 .meta-preposition {
   font-style: italic;
   font-weight: 300;
-}
-
-.header-actions {
-  text-align: right;
 }
 
 .rst-summary {
