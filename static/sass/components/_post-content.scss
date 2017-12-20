@@ -23,10 +23,3 @@
     grid-column: col3-start / span 1;
   }
 }
-
-.linked-post-title {
-  &,
-  #{$link} {
-    text-decoration: none;
-  }
-}
