@@ -23,10 +23,3 @@
     grid-column: col3-start / span 1;
   }
 }
-
-.linked-post-title {
-  &,
-  #{$link} {
-    background-image: none; // no underlines on related post title links
-  }
-}
