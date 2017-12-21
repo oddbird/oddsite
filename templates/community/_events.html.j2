@@ -2,7 +2,7 @@
 {% import 'community/event.macros.j2' as show %}
 
 
-{% set data = all_pages|filter_pages('slug', 'eq', module.slug)|get_page if module.slug else config %}
+{% set data = module.slug|get_config if module.slug else config %}
 {% set data = data.config if module.slug else data %}
 {% set events = data[module.data or 'events'] %}
 
