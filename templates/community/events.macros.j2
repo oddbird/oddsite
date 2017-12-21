@@ -59,29 +59,27 @@
     slice=1
     ) }}
 
-  {% if events %}
-    <section class="events-by-talk extend-full">
-      {{ content.divider(title='Event Schedule') }}
+  <section class="events-by-talk extend-full">
+    {{ content.divider(title='Event Schedule') }}
 
+    {{ list(
+      events=future,
+      talk=ctx,
+      title="Upcoming Appearances…",
+      show_author=false
+      ) }}
+
+    {% if past|length > 0 %}
       {{ list(
-        events=future,
+        events=past,
         talk=ctx,
-        title="Upcoming Appearances…",
-        show_author=false
+        title="Previously Presented At…",
+        show_author=false,
+        details=true,
+        slice=5
         ) }}
-
-      {% if past|length > 0 %}
-        {{ list(
-          events=past,
-          talk=ctx,
-          title="Previously Presented At…",
-          show_author=false,
-          details=true,
-          slice=5
-          ) }}
-      {% endif %}
-    </section>
-  {% endif %}
+    {% endif %}
+  </section>
 {% endmacro %}
 
 
@@ -196,12 +194,6 @@
     {% if events %}
       <h3 class="events-list-title">{{ title }}</h3>
 
-      {% if slice and (events|length > slice) %}
-        <button class="btn small-btn more-events" {{ utility.toggle_button('more-events') }}>
-          show all events
-        </button>
-      {% endif %}
-
       {% for event in events %}
         {{ item(
           event=event,
@@ -217,6 +209,12 @@
           </div>
         {% endif %}
       {% endfor %}
+
+      {% if slice and (events|length > slice) %}
+        <button class="btn small-btn more-events" {{ utility.toggle_button('more-events') }}>
+          show all events
+        </button>
+      {% endif %}
     {% else %}
       <h3 class="events-list-title no-events">No events scheduled</h3>
 

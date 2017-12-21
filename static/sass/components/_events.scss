@@ -6,7 +6,6 @@
 // ----------
 
 .event {
-  clear: both;
   margin: size('shim') 0;
 }
 
@@ -60,6 +59,7 @@
 
 }
 
+
 .event-list-link {
   & + & {
     @include before(' | ');
@@ -67,16 +67,8 @@
 }
 
 
-.events-list-title {
-  float: left;
-  margin-top: 0;
-
-  &.no-events {
-    float: none;
-  }
-}
-
-
 .more-events {
-  float: right;
+  &[aria-pressed='true'] {
+    display: none;
+  }
 }
