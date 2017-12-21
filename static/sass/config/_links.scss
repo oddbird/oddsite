@@ -42,30 +42,11 @@ $focus: '&:hover, &:focus, &:active';
     &:not(.btn) {
       &,
       #{$link}  {
-        @include text-underline($contrast, $background);
+        color: color($contrast);
       }
 
       #{$focus} {
-        @include text-underline-color($hover);
-      }
-    }
-
-    &.icon-link {
-      // no underline on whole link. Going to target text only.
-      #{$link} {
-        background-image: none;
-      }
-
-      // change underline color when hover over icon too
-      #{$focus} {
-        .icon-text {
-          @include text-underline-color($hover);
-        }
-      }
-
-      // target only text within these svg icon links
-      .icon-text {
-        @include text-underline($contrast, $background);
+        color: color($hover);
       }
     }
   }
