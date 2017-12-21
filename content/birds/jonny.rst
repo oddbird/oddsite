@@ -18,7 +18,7 @@ short_bio: |
   well-tested JavaScript web applications,
   and a brewer of delicious IPA's.
 
-  .. _Jonny Gerig Meyer: /birds/#bird-jonny
+  .. _Jonny Gerig Meyer: /authors/jonny/
 summary: |
   **Jonny leads the front-end development process**,
   turning your ideas into functional interactions.

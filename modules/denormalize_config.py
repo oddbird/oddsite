@@ -9,7 +9,7 @@ from collections import (
 
 
 def setup(builder):
-    config = builder.config  # noqa
+    config = builder.config
 
     pages = [
         page

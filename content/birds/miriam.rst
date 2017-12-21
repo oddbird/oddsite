@@ -9,9 +9,9 @@ adr: 'Denver, CO'
 social:
   - twitter: 'mirisuzanne'
     github: 'mirisuzanne'
-    dribbble: 'miriamsuzanne'
-    stackoverflow: '1930386'
     codepen: 'mirisuzanne'
+    stackoverflow: '1930386'
+    dribbble: 'miriamsuzanne'
     lanyrd: 'miriamsuzanne'
 og:
   - facebook: 'mirisuzanne'
@@ -23,7 +23,7 @@ short_bio: |
   writer, speaker,
   and open source developer.
 
-  .. _Miriam Suzanne: /birds/#bird-miriam
+  .. _Miriam Suzanne: /authors/miriam/
 summary: |
   **Miriam leads the OddBird process**,
   working with clients and users to set priorities

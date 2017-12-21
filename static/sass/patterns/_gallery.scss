@@ -95,6 +95,7 @@ $min-image: 300px;
 
 .video-gallery {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-evenly;
 }
 
@@ -102,7 +103,7 @@ $min-image: 300px;
   border: 1px solid color('border');
   flex: 1 1 size('splash-items');
   margin: size('shim');
-  max-width: size('small-page');
+  max-width: 100%;
 }
 
 .video {

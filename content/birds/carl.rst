@@ -9,8 +9,8 @@ adr: 'Rapid City, SD'
 social:
   - twitter: 'carljm'
     github: 'carljm'
-    lanyrd: 'carljm'
     stackoverflow: '3207'
+    lanyrd: 'carljm'
 short_bio: |
   `Carl Meyer`_
   is an active owner
@@ -19,7 +19,7 @@ short_bio: |
   and core developer of the
   `Django`_ Python web framework.
 
-  .. _Carl Meyer: /birds/#bird-carl
+  .. _Carl Meyer: /authors/carl/
   .. _Django: https://www.djangoproject.com/
 summary: |
   **Carl is an active owner and developer-emeritus**,

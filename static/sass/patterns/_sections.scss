@@ -59,6 +59,7 @@
 [divider='large'] {
   @include extend('extend-full');
   margin-top: size('spacer');
+  text-align: center;
 
   [data-region='banner'] & {
     margin-top: 0;
@@ -83,14 +84,7 @@
 
 
 [divider-title='large'] {
-  background-image: linear-gradient(
-    to bottom,
-    color('callout'),
-    transparent
-  );
-  border-top: 1px solid color('callout');
-  margin: -1px 0 size('spacer');
-  padding: size('shim') size('gutter') 0;
+  margin: size('gutter') size('gutter') size('spacer');
 
   @include above('small-page') {
     padding-top: size('half-shim');

@@ -16,7 +16,7 @@ short_bio: |
   Linux system administrator,
   and game designer.
 
-  .. _Kit La Touche: /birds/#bird-kit
+  .. _Kit La Touche: /authors/kit/
 summary: |
   **Kit co-leads our server-side development**,
   managing code architecture,

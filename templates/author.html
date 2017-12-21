@@ -34,10 +34,7 @@
   {% if is_index %}
     {{ birds.details(bird_page) }}
 
-    {{ content.divider(
-      title='Articles by %s' % name,
-      small=false
-      ) }}
+    {{ content.divider(small=false) }}
   {% endif %}
 
 {% endblock list_intro %}

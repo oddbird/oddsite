@@ -9,9 +9,9 @@ adr: 'Aurora, IL'
 social:
   - twitter: 'stacykvernmo'
     github: 'stacyk'
-    lanyrd: 'stacy'
     codepen: 'stacy'
     stackoverflow: '7033764'
+    lanyrd: 'stacy'
 short_bio: |
   `Stacy Kvernmo`_
   is a user experience designer,
@@ -19,7 +19,7 @@ short_bio: |
   speaker,
   and podcast superfan.
 
-  .. _Stacy Kvernmo: /birds/#bird-stacy
+  .. _Stacy Kvernmo: /authors/stacy/
 summary: |
   With over 15 years of experience,
   Stacy takes the lead on interface development,

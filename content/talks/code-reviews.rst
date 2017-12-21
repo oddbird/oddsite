@@ -22,12 +22,12 @@ summary: |
 No Pain No Gain; CSS Code Reviews
 =================================
 
-  - Expose additional ways to solve a problem
-    that you may not have thought about yourself
-  - Help you write better code
-  - Help you developer faster
-  - Reveal code smells
-  - Increase your overall knowledge of your language of choice
+- Expose additional ways to solve a problem
+  that you may not have thought about yourself
+- Help you write better code
+- Help you developer faster
+- Reveal code smells
+- Increase your overall knowledge of your language of choice
 
-  We will go over the different ways to conduct a code review
-  and begin your journey to greatness!
+We will go over the different ways to conduct a code review
+and begin your journey to greatness!

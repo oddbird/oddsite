@@ -16,7 +16,7 @@ short_bio: |
   user-tester,
   author, and musician.
 
-  .. _Sondra Eby: /birds/#bird-sondra
+  .. _Sondra Eby: /authors/sondra/
 summary: |
   **Sondra spearheads our design process**
   through brand development, user experience design, and usability testing.

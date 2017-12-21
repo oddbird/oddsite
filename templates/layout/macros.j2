@@ -156,7 +156,7 @@
   {%- for speaker in speakers -%}
     {{- 'and '|safe if loop.last and not loop.first -}}
     {{- birds_util.get_bird_name(speaker) -}}
-    {{- ', ' if not loop.last -}}
+    {{- ', ' if (speakers|length > 2) and (not loop.last) else ' ' -}}
   {%- endfor -%}
 {%- endmacro -%}
 

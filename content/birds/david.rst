@@ -9,15 +9,15 @@ adr: 'Goshen, IN'
 social:
   - twitter: 'davisagli'
     github: 'davisagli'
-    lanyrd: 'davisagli'
     stackoverflow: '212493'
+    lanyrd: 'davisagli'
 short_bio: |
   `David Glick`_
   is a Python and JavaScript developer,
   database designer,
   and prolific core-contributor to the Plone CMS.
 
-  .. _David Glick: /birds/#bird-david
+  .. _David Glick: /authors/david/
 summary: |
   **David co-leads our server-side development**,
   managing code architecture,
