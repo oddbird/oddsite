@@ -45,8 +45,8 @@
   page=none,
   full_name=true
 ) -%}
-  {%- set page = page if page else all_pages|filter_pages('bird', 'eq', author)|get_page -%}
-  {%- set author = author if author else page.config.bird -%}
+  {%- set page = page or all_pages|filter_pages('bird', 'eq', author)|get_page -%}
+  {%- set author = author or page.config.bird -%}
   {%- set name = 'OddBird' if (author == 'oddbird') else author|capitalize -%}
   {%- set name = page.title if (full_name and page) else name -%}
   {{ name }}
@@ -58,8 +58,8 @@
   page=none,
   blog=false
 ) %}
-  {%- set page = page if page else all_pages|filter_pages('bird', 'eq', author)|get_page -%}
-  {%- set author = author if author else page.config.bird -%}
+  {%- set page = page or all_pages|filter_pages('bird', 'eq', author)|get_page -%}
+  {%- set author = author or page.config.bird -%}
   {%- set former = page.config.former[0] if page.config.former else none -%}
   {%- set bio = former.url if former else ['/birds/#bird', author]|join('-') -%}
 
