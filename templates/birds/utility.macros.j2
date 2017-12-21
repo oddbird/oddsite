@@ -145,6 +145,11 @@
     'codepen': '%s',
   } %}
 
+  {% set display_names = {
+    'codepen': 'CodePen',
+    'stackoverflow': 'Stack Overflow',
+  } %}
+
   {% set url = locations[name]|format(user) if locations[name] else none %}
   {% set username = displays[name]|format(user) if displays[name] else (bird_name or user) %}
 
@@ -153,6 +158,6 @@
       {{ utility.icon(name) }}
       <span class="icon-text">{{ username }}</span></a>
     <span class="meta-preposition">on</span>
-    {{ name|capitalize }}
+    {{ display_names[name] or name|capitalize }}
   </span>
 {% endmacro %}

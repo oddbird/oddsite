@@ -3,11 +3,14 @@
 
 
 [data-module='blog-post'] {
+  margin-top: size('spacer');
+
   & + & {
     @include before('') {
       @include extend('extend-small');
       @include small-divider;
       display: block;
+      margin-bottom: size('spacer');
     }
   }
 }

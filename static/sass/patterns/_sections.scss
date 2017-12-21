@@ -31,7 +31,7 @@
 
 [divider='small'] {
   @include extend('extend-small');
-  margin: size('spacer') 0;
+  margin: size('spacer') 0 size('gutter');
   text-align: center;
 }
 

@@ -96,7 +96,7 @@ $min-image: 300px;
 .video-gallery {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: space-around;
 }
 
 .video-item {
