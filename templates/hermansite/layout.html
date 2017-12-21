@@ -14,7 +14,7 @@
 {% endblock %}
 
 {% block banner_nav %}
-  {% set nav = all_pages|filter_pages('slug', 'eq', 'herman/index')|get_page %}
+  {% set nav = 'herman/index'|get_config %}
   {% set nav = nav.config.nav %}
   {{ layout.main_nav(nav) }}
 {% endblock %}

@@ -211,8 +211,8 @@ and user experience
 as it moves from a static mockup
 to the interactive and responsive web.
 
-.. _Stacy: /birds/#bird-stacy
-.. _Miriam: /birds/#bird-miriam
+.. _Stacy: /authors/stacy/
+.. _Miriam: /authors/miriam/
 
 
 Banner

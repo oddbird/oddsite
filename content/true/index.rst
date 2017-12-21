@@ -28,7 +28,7 @@ brag: |
   **directly in SassScript**,
   or integrate with existing JavaScript test-runners.
 
-  .. _Miriam: /birds/#bird-miriam
+  .. _Miriam: /authors/miriam/
 summary: |
   **True is a full-featured unit-testing library for Sass**.
   The core functionality is written in pure SassScript,

@@ -9,7 +9,7 @@
     <div class='splash-section extend-full'>
       {% if slugs %}
         {% for slug in slugs %}
-          {% set page = all_pages|filter_pages('slug', 'eq', slug)|get_page %}
+          {% set page = slug|get_config %}
           {{ splash(page) }}
         {% endfor %}
       {% else %}

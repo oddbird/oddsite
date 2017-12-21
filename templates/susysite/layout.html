@@ -15,7 +15,7 @@
 {% endblock %}
 
 {% block banner_nav %}
-  {% set nav = all_pages|filter_pages('slug', 'eq', 'susy/index')|get_page %}
+  {% set nav = 'susy/index'|get_config %}
   {% set nav = nav.config.nav %}
   {{ layout.main_nav(nav) }}
 {% endblock %}

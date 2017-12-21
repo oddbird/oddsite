@@ -4,8 +4,7 @@
 
 
 {% macro social(slug='contact/index', data='social') %}
-  {% set page = all_pages|filter_pages('slug', 'eq', slug)|get_page %}
-  {% set items = page.config[data] %}
+  {% set items = slug|get_config(data) %}
 
   <ul class="socials">
     {% for item in items %}
@@ -26,35 +25,37 @@
 
 
 {% macro footer(location) %}
-  {% set contact_page = all_pages|filter_pages('slug', 'eq', 'contact/index')|get_page %}
+  {% set contact_page = 'contact/index'|get_config %}
   {% set cta = contact_page.config.cta_footer[0] if contact_page.config.cta_footer %}
 
-  <div class="contact-wrap">
-    <section data-module="contact-cta">
-      <h2>
-        {% if ('susysite' in location) or ('hermansite' in location) %}
-          {{ cta.project_title }}
-        {% else %}
-          {{ cta.title }}
-        {% endif %}
-      </h2>
+  {% if cta %}
+    <div class="contact-wrap">
+      <section data-module="contact-cta">
+        <h2>
+          {% if ('susysite' in location) or ('hermansite' in location) %}
+            {{ cta.project_title }}
+          {% else %}
+            {{ cta.title }}
+          {% endif %}
+        </h2>
 
-      {% set name = birds.name_link(cta.contact, full_name=false) %}
-      {% set main_content = cta.content|rst|replace('%s', name) %}
-      {% set action = cta.action %}
+        {% set name = birds.name_link(cta.contact, full_name=false) %}
+        {% set main_content = cta.content|rst|replace('%s', name) %}
+        {% set action = cta.action %}
 
-      <div class="contact-miriam media-block">
-        {{ birds.face(cta.contact, 'media-image') }}
-        <div class="media-content">
-          {{ main_content }}
-          {{ content.link_button(
-            url=action.url,
-            content=action.text|replace('%s', cta.contact|capitalize)
-          ) }}
+        <div class="contact-miriam media-block">
+          {{ birds.face(cta.contact, 'media-image') }}
+          <div class="media-content">
+            {{ main_content }}
+            {{ content.link_button(
+              url=action.url,
+              content=action.text|replace('%s', cta.contact|capitalize)
+            ) }}
+          </div>
         </div>
-      </div>
 
-      {{ social() }}
-    </section>
-  </div>
+        {{ social() }}
+      </section>
+    </div>
+  {% endif %}
 {% endmacro %}

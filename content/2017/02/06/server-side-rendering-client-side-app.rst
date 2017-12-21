@@ -47,7 +47,7 @@ code/logic duplication in the API layer. That's a great start, but we still
 need to turn that server-rendered markup into an interactive single-page
 application.
 
-.. _Kit: /birds/#bird-kit
+.. _Kit: /authors/kit/
 .. _already laid out: /2016/12/16/server-side-rendering-spa/
 
 

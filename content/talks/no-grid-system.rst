@@ -42,7 +42,7 @@ summary: |
   from flexbox to CSS Grid —
   and how to get started with only a few lines of code.
 
-  .. _Miriam: /birds/#bird-miriam
+  .. _Miriam: /authors/miriam/
   .. _Susy: /susy/
 
 

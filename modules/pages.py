@@ -143,6 +143,28 @@ def collect(pages, key, label_with=None):
     return result
 
 
+def build_get_config(builder):
+    all_pages = {
+        p.slug: p
+        for p
+        in builder.iter_contexts()
+    }
+
+    def get_config(slug, key=None):
+        page = all_pages.get(slug, None)
+        if page is None:
+            return page
+        if key is not None:
+            page_config = getattr(page, 'config', None)
+            return (
+                getattr(page_config, key, None) or
+                page_config.get(key, None)
+            )
+        return page
+
+    return get_config
+
+
 def is_string(obj):
     return isinstance(obj, basestring)
 
@@ -162,6 +184,7 @@ def setup(builder):
     env.filters['filter_pages'] = filter_pages
     env.filters['collect'] = collect
     env.filters['get_page'] = get_page
+    env.filters['get_config'] = build_get_config(builder)
     env.globals['get_blog_entries_by_bird'] = partial(
         get_blog_entries_by_bird,
         builder,

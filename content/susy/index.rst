@@ -56,7 +56,7 @@ brag: |
   **Esquire UK**,
   and more.
 
-  .. _Miriam: /birds/#bird-miriam
+  .. _Miriam: /authors/miriam/
 quotes:
   - text: 'I like the idea of grids-on-demand, rather than a strict framework.'
     name: 'Chris Coyier'

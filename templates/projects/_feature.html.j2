@@ -5,7 +5,7 @@
 
 {% if module.slugs %}
   {% for slug in module.slugs %}
-    {% set page = pages|filter_pages('slug', 'eq', slug)|get_page %}
+    {% set page = slug|get_config %}
     {% if page %}
       {{ work.feature(page) }}
     {% endif %}

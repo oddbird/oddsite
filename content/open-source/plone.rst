@@ -20,7 +20,7 @@ brag: |
   with **flexible theming**
   and **developer customization**.
 
-  .. _David: /birds/#bird-david
+  .. _David: /authors/david/
 summary: |
   **Plone is a mature content management platform**
   written in Python

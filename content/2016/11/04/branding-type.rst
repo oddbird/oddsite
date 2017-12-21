@@ -135,9 +135,9 @@ brought years of varied experience, methods, tools, and questions. This would
 be Miriam’s and Sondra’s first time working on brand design with Stacy, and we
 were all excited to get started!
 
-.. _Miriam: /birds/#bird-miriam
-.. _Sondra: /birds/#bird-sondra
-.. _Stacy: /birds/#bird-stacy
+.. _Miriam: /authors/miriam/
+.. _Sondra: /authors/sondra/
+.. _Stacy: /authors/stacy/
 
 
 Element Collages, Moodboards, and Style Tiles? Oh my!

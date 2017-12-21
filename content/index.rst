@@ -93,8 +93,8 @@ Software for Humans
   *We don't just follow best-practice –
   we help define it.*
 
-  .. _Miriam: /birds/#bird-miriam
-  .. _Carl: /birds/#bird-carl
+  .. _Miriam: /authors/miriam/
+  .. _Carl: /authors/carl/
   .. _Sass/CSS: http://sass-lang.com
   .. _Django/Python: https://www.djangoproject.com/
 
