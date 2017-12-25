@@ -8,5 +8,5 @@ docutils==0.14
 Jinja2==2.10
 Werkzeug==0.13
 Pygments==2.2.0
-smartypants==2.0.0
+smartypants==2.0.1
 Pillow==4.3.0
