@@ -1,4 +1,4 @@
-public: no
+public: yes
 tags: [Herman, Herman1, CSS, Sass, 'Design Systems', Code, 'Style Guides']
 author: miriam
 image:
@@ -8,10 +8,10 @@ headline:
 summary: |
   **Design systems streamline development, communication, and consistency** --
   but often rely on dedicated teams and extended budgets.
-  We wanted a tool to help us create and maintain
+  We wanted a tool to create and maintain
   living style guides & pattern libraries
   in an agile process, and on a budget.
-  `Herman`_ keeps our development flow simple,
+  `Herman`_ helps keep our development flow simple,
   and our UX consistent,
   as we iterate on patterns
   and scale over time.
@@ -37,11 +37,16 @@ attending (and `accidentally speaking at`_)
 `Clarity`_ --
 a "`Design Systems`_" conference
 organized by the wonderful `Jina Anne`_.
+If you don't have experience with design systems,
+I highly recommend the `Handbook`_
+which Jina co-authored --
+available free online.
 
 .. _accidentally speaking at: https://twitter.com/jina/status/935566434700222465
 .. _Clarity: https://www.clarityconf.com/2017
 .. _Design Systems: https://www.designbetter.co/design-systems-handbook/
 .. _Jina Anne: https://www.patreon.com/sushiandrobots
+.. _Handbook: https://www.designbetter.co/design-systems-handbook/
 
 I'm always curious how many attendees at a conference
 are working on enterprise projects
@@ -53,11 +58,12 @@ affecting team size, budget, process, architecture,
 and technical requirements.
 
 I don't know the exact mix at Clarity,
-but I get the sense that design systems generally
+but I think that design systems generally
 skew towards the enterprise projects for one reason: budget.
 Creating the beautiful `Salesforce Lightning Design System`_
-required a full-time dedicated team and budget.
-Those of us doing agency work don't often have that luxury.
+requires an ongoing full-time dedicated team.
+Those of us doing agency work don't often have that luxury,
+but our clients still need a system that will work for them.
 
 .. _Salesforce Lightning Design System: https://www.lightningdesignsystem.com/
 
@@ -74,11 +80,15 @@ the path of least resistance?
 
     --Miriam Suzanne (me)
 
-With `Herman`_ we can start small,
+Design Systems can include a wide array of features,
+more than just a pattern library,
+and Herman does not cover the full gamut --
+but it doesn't have to.
+With `Herman`_ we start small,
 documenting brand design tokens --
 `colors`_, `fonts`_, `sizes`_, `ratios`_, and `icons`_ --
 before expanding into `practical patterns and components`_,
-and with guides and systems that scale along with us.
+with automation to help us scale.
 
 .. _Herman: /herman/
 .. _colors: /herman/docs/demo_colors.html
@@ -110,8 +120,7 @@ even when the results are incomplete by comparison.
 These problems aren't all-or-nothing.
 There is room for flexibility in our approaches,
 from one project to the next.
-The important question is not *which one*
-but *where can I start*
+The important question is *where can I start*
 improving design communication, clarity, and consistency?
 
 At OddBird, our first style guide attempts failed
@@ -128,8 +137,16 @@ Now we use Herman across a range of products,
 from large client applications
 to our own internal toolkits.
 While there are a number of possible configuration options,
-the initial setup can be quite streamlined
+the initial setup can be streamlined
 to make sense on even the smallest projects.
+We've even used Herman to `begin documenting itself`_ --
+from design language to components and API.
+
+.. _begin documenting itself: /herman/docs/
+
+The project is not complete --
+and never will be --
+but that's the point.
 As time goes on,
 we'll keep adding features
 that allow our systems to become larger,
@@ -181,7 +198,7 @@ to explicitly mark documentation for parsing:
 
     // Normal Sass comments are ignored by SassDoc
 
-    /// But comments that begin with 3 slashes
+    /// Comments that begin with 3 slashes
     /// will be parsed as SassDoc documentation.
 
 In addition to allowing prose descriptions
@@ -200,10 +217,10 @@ Here are just a few of their options:
     ///     @include call-to-action(red);
     ///   }
 
-Herman supports all the SassDoc annotations,
-which focus on documenting Sass abstractions:
-variables, functions, and mixins.
-From there, we've been adding style guide features of our own.
+Herman supports `all SassDoc annotations`_,
+and we've added style guide features of our own...
+
+.. _all SassDoc annotations: http://sassdoc.com/annotations/
 
 
 Visualizing Design Tokens
@@ -219,6 +236,17 @@ before any UI components have been built.
 This is a good place to start defining your system,
 and Herman can help you visualize these abstractions.
 
+Herman provides display annotations for `colors`_ (``@colors``),
+`fonts`_ (``@fonts``), `sizes`_ (``@sizes``), and `ratios`_ (``@ratios``):
+
+.. code:: scss
+
+  /// @colors brand-primaries
+  /// @font my-font (regular, bold)
+  ///   <any html head required for CDN font imports>
+  /// @sizes my-spacing
+  /// @ratios my-modular-scale
+
 .. image:: /static/images/blog/2017/herman-intro/colors.jpg
    :alt: Herman color palettes
    :class: extend-large img-border img-shadow img-spacing
@@ -229,34 +257,15 @@ and Herman can help you visualize these abstractions.
    :class: extend-small img-border img-shadow
    :target: /herman/docs/demo_sizes.html
 
-Herman adds annotations for colors (``@colors``),
-fonts (``@fonts``), sizes (``@sizes``), and ratios (``@ratios``).
-In order to display the data,
-you will need to export all your Sass tokens to json --
-using our provided Sass utilities.
-We'll continue working to make this step
-as smooth and automated as possible,
-but you can find full details in our `Herman documentation`_.
+In order to display that data,
+you will need to export all your Sass tokens to json,
+using our provided `Sass export utilities`_.
+We're working to make this step even more simple and automatic.
 
-.. _Herman documentation: /herman/docs/
-
-.. code:: scss
-
-  /// @colors brand-primaries
-  /// @font my-font (regular, bold)
-  ///   <any html head required for CDN font imports>
-  /// @sizes my-spacing
-  /// @ratios my-modular-scale
+.. _Sass export utilities: /herman/docs/api_json-export.html
 
 
-SVG Icons
----------
-
-Icons live somewhere between design tokens
-(the icons that are available)
-and atomic patterns
-(how icons are added to the markup).
-At the token level, we provide an ``@icons`` annotation
+We also provide an ``@icons`` annotation
 to display all the SVG icons in a given folder:
 
 .. code:: scss
@@ -273,7 +282,7 @@ Rendered Output & Examples
 --------------------------
 
 At the pattern level,
-we provide more robust tools
+we include more robust tools
 for rendering code examples and live patterns.
 While SassDoc only documents Sass abstractions,
 Herman allows
@@ -281,16 +290,11 @@ Herman allows
 
 .. _documentation of CSS selectors and markup patterns: /herman/docs/demo_examples.html
 
-.. image:: /static/images/blog/2017/herman-intro/examples.jpg
-   :alt: Herman rendered example
-   :class: extend-small img-border img-shadow
-   :target: /herman/docs/demo_examples.html
-
-We've extended SassDoc's ``@example`` annotation,
-allowing you to see both input and compiled code
+We've extended SassDoc's ``@example`` annotation
 for languages like `Sass`_ and `Nunjucks`_
 (we're working on support for Vue components).
-Herman will even render any examples that produce HTML output:
+Herman will display both input and compiled code,
+along with the rendered output when necessary:
 
 .. _Sass: http://sass-lang.com
 .. _Nunjucks: https://mozilla.github.io/nunjucks/
@@ -299,15 +303,21 @@ Herman will even render any examples that produce HTML output:
 
     /// Add default button styles to an element.
     /// @group buttons
-    /// @example html
-    ///   <button data-btn>This is my button</button>
+    /// @example html - submit button
+    ///   {% import 'content.macros.j2' as content %}
+    ///   {{ content.button('Submit', attrs={'type': 'submit'}) }}
     [data-btn] {
-      background: darkblue;
-      border-radius: 3px;
-      color: white;
+      border: 1px solid currentColor;
+      border-radius: 3em;
+      color: pink;
       display: inline-block;
       padding: 0.25em 1em;
     }
+
+.. image:: /static/images/blog/2017/herman-intro/examples.jpg
+   :alt: Herman rendered example
+   :class: extend-small img-border img-shadow
+   :target: /herman/docs/demo_examples.html
 
 
 Prose, Pages, and Third-Party Links
@@ -396,11 +406,11 @@ but no tool can provide the magic bullet.
 
 **If you need help with a refactor** to
 improve design systems, performance, testing,
-documentation, and accessibility --
-or eliminate technical debt,
+documentation, or accessibility --
+eliminate technical debt,
 and put better processes in place --
 we're here for you.
-Our team of experts
+Our `team of experts`_
 can provide `a range of support, training, and consulting`_
 across the full stack of product design & development --
 helping find *the solution that best fits your team*.
@@ -412,6 +422,7 @@ or join our `public Slack`_
 (with a dedicated ``#herman`` channel).
 We're excited to hear from you!
 
+.. _team of experts: /birds/
 .. _contact form: /contact/
 .. _@OddBird: https://twitter.com/oddbird
 .. _public Slack: http://friends.oddbird.net
