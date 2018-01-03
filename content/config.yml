@@ -8,10 +8,10 @@ nav:
   - text: 'work'
     subnav:
       - text: 'case-studies'
-        display_text: 'case studies'
+        display_text: 'clients & case studies'
         url: '/work/'
       - text: 'open-source'
-        display_text: 'open source'
+        display_text: 'open source tools'
         url: '/open-source/'
       - text: 'blog'
         display_text: 'articles'

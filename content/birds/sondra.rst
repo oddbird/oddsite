@@ -28,7 +28,7 @@ summary: |
   of a personal care products manufacturing startup
   where she coordinated multiple crowdfunding campaigns
   that reached over 200% of their goal.
-  Sondra is also a multi-media artist, author, and musician –
+  Sondra is also a multimedia artist, author, and musician –
   bringing a unique perspective
   to audience engagement and interaction.
 

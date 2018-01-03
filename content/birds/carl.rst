@@ -32,8 +32,8 @@ summary: |
   co-author of multiple accepted
   enhancements to the Python language and ecosystem,
   and a Fellow of the `Python Software Foundation`_.
-  *When not chasing more elegant algorithms,
-  he chases frisbees, hockey pucks, and a pair of sons.*
+  When not chasing more elegant algorithms,
+  he chases frisbees, hockey pucks, and a pair of sons.
 
   .. _Django: https://www.djangoproject.com/
   .. _Django technical board: https://www.djangoproject.com/weblog/2014/sep/06/inaugural-technical-board-elected/

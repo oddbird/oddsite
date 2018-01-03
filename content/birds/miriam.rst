@@ -37,9 +37,9 @@ summary: |
   and a internationally known
   `conference speaker`_,
   winning "Best of" `CSS Dev Conf`_ in 2017.
-  *She is also a multi-media artist
+  She is also a multimedia artist
   with extensive experience in theatre,
-  writing, music, and visual art.*
+  writing, music, and visual art.
 
   .. _Susy: /susy/
   .. _True: /true/

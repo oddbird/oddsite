@@ -31,8 +31,7 @@ summary: |
   most recently React, elasticsearch,
   and the Pyramid web framework.
   When he's not coding,
-  David can be found experimenting in the kitchen
-  or singing in the Seattle Bach Choir.
+  David can be found experimenting in the kitchen.
 
 
 David Glick
