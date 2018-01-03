@@ -8,10 +8,10 @@
 /// @group typography
 /// @link http://www.sassmeister.com/gist/069480556e17107cb8d33a9d5db2f5db
 ///   Text Outline vs Text-Shadow
-/// @example html
-///   <h1 class="title" data-styleguide="text-shadow">
-///     Text Shadow
-///   </h1>
+/// @example scss
+///   h1 {
+///     @include text-shadow;
+///   }
 @mixin text-shadow {
   text-shadow: -2px -2px 2px color('background');
 }

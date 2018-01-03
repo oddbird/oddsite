@@ -13,11 +13,11 @@
 ///   The background color above the border/arrow,
 ///   used to make it an arrow-outline rather than a solid triangle
 /// @example scss
-///   [data-styleguide='section-arrow'] {
+///   hr {
 ///     @include section-arrow;
 ///   }
 /// @example html
-///   <div data-styleguide="section-arrow">Section Arrow</div>
+///   <hr divider-line="large" />
 @mixin section-arrow(
   $color: 'border',
   $background: 'background'
@@ -53,6 +53,7 @@
 }
 
 
+/// @group sections
 /// @todo document small-divider
 @mixin small-divider(
   $color: 'border'
