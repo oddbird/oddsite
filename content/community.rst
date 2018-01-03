@@ -36,15 +36,15 @@ giving:
       is an independent non-profit foundation
       established to to promote, support, and advance the Django Web framework.
       As active users and contributors to the Django community,
-      we’re proud to support the continued development of the project.
+      we're proud to support the continued development of the project.
   - name: 'Goshen Ultimate Summer League'
     url: 'http://goshenultimate.com/'
     type: 'donations'
-    years: '2014–2016'
+    years: '2014–2017'
     description: |
       provides opportunities to learn, play,
       and teach spirited Ultimate in Goshen, IN and surrounding areas.
-      We’re just glad they keep Jonny out of trouble
+      We're just glad they keep Jonny out of trouble
       when he's not busy writing JavaScript.
   - name: 'Django Under the Hood'
     url: 'https://www.djangounderthehood.com/'
@@ -97,7 +97,7 @@ giving:
   - name: 'Django Girls'
     url: 'https://djangogirls.org/'
     type: 'donations'
-    years: '2015–2017'
+    years: '2015–2018'
     description: |
       is a non-profit organization
       and a community that empowers and helps women to organize free,

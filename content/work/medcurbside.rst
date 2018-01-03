@@ -8,7 +8,7 @@ project:
   - name: 'MedCurbside'
     tagline: 'Ask, Answer, Cite. Make Medicine Better.'
     url: 'https://www.medcurbside.com/'
-    years: '2016–2017'
+    years: '2016–2018'
     status: 'live'
 tasks:
   - Product Branding
