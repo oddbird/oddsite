@@ -5,9 +5,13 @@
   @include contrasted('invert');
   @include link-color-for('invert');
 
-  + .separator {
-    @include after(null) {
-      display: none;
+  + [divider] {
+    margin-top: 0;
+
+    [divider-line='large'] {
+      @include after(null) {
+        display: none;
+      }
     }
   }
 

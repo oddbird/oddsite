@@ -1,38 +1,42 @@
 {% import "utility.macros.j2" as utility %}
+{% import "content.macros.j2" as content %}
 {% import "blog/utility.macros.j2" as blog %}
 {% import "birds/utility.macros.j2" as birds %}
-{% import "content.macros.j2" as content %}
+{% import "community/events.macros.j2" as events %}
 
 
-{% macro section(author=none, page=none) %}
+{% macro details(page) %}
+  {% set author = page.config.bird %}
+  {{ events.by_author(author) }}
+  {{ oss_list(author, page) }}
+{% endmacro %}
+
+
+{% macro list(author=none, page=none) %}
   {% set page = page or all_pages|filter_pages('bird', 'eq', author)|get_page %}
   {% set author = author or page.config.bird %}
 
-  <div data-module="bird" class="h-card" id="bird-{{ author }}">
+  <article data-module="bird" class="h-card" id="bird-{{ author }}">
+    {{ content.divider(title=birds.name_link(author, page)) }}
+
     {% call content.media_block(
       media=birds.face(author)
     ) %}
-      <header>
-        <h2 class="name">
-          {{ birds.name_link(author, page) }}
-        </h2>
-
-        <ul class="socials">
-          {% set links = page.config.social[0] %}
-          {% for link in links %}
-            <li>{{ birds.get_social(link, links[link]) }}</li>
-          {% endfor %}
-        </ul>
-      </header>
+      {{ birds.social_list(
+        data=page.config.social,
+        bird_name=author|capitalize
+      ) }}
     {% endcall %}
 
     <div class="bio">
-      {{ page.render_contents() }}
+      {{ page.render_summary() }}
     </div>
 
-    {{ oss_list(author, page) }}
-    {{ blog_list(posts=get_blog_entries_by_bird(author)) }}
-  </div>
+    {{ content.link_button(
+      url=birds.get_bird_url(author, page),
+      content="See %s’s activity" % author|capitalize
+    ) }}
+  </article>
 {% endmacro %}
 
 
@@ -56,23 +60,32 @@
 
 {% macro oss_list(author, page) %}
   {% set oss = page.config.oss_by_author[author] %}
+  {% set oss = oss|filter_pages('public', 'neq', false) %}
+  {% set oss = oss|collect('contributors', label_with='slug') %}
+  {% set oss = oss|selectattr('author', 'equalto', author)|list %}
 
-  {% if oss %}
-    <div class="bird-posts">
-      <h3>Open Source</h3>
-      <ul class="title-list">
-        {% for item in oss %}
-          {% set project = item.config.project[0] %}
-          {% set contrib = item.config.contributors|selectattr('author', 'equalto', author)|list %}
-          <li>
-            {{ utility.link_if(
-              project.name or item.title,
-              content.project_link(item, allow_external=true)
+  {% if oss and (oss|length > 0) %}
+    <section data-module="contributions">
+      {{ content.divider(title='Open Source Contributions') }}
+      {% for group in oss|groupby('role') %}
+        <h3 class="oss-role">{{ group.grouper }}</h3>
+        <ul class="title-list">
+          {% for item in group.list %}
+            {% set page = all_pages|filter_pages('slug', 'eq', item.slug)|get_page %}
+            {% set project = page.config.project[0] %}
+            <li>
+              {{ utility.link_if(
+                project.name or project.title,
+                content.project_link(page, allow_external=true)
               ) }}
-            [{{ contrib[0].role }}]
-          </li>
-        {% endfor %}
-      </ul>
-    </div>
+
+              {% if item.dates %}
+                [{{ item.dates }}]
+              {% endif %}
+            </li>
+          {% endfor %}
+        </ul>
+      {% endfor %}
+    </section>
   {% endif %}
 {% endmacro %}

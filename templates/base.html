@@ -98,7 +98,9 @@
   {% endblock htmlhead %}
 </head>
 
-<body id="oddsite" data-location="{{ config.location }}">
+<body
+  id="oddsite"
+  data-location="{% block location %}{{ config.location }}{% endblock %}">
   {% include '_icons.svg' %}
 
   {% block layout %}{% endblock layout %}

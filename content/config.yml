@@ -8,46 +8,45 @@ nav:
   - text: 'work'
     subnav:
       - text: 'case-studies'
-        display_text: 'case studies'
+        display_text: 'clients & case studies'
         url: '/work/'
       - text: 'open-source'
-        display_text: 'open source'
+        display_text: 'open source tools'
         url: '/open-source/'
+      - text: 'blog'
+        display_text: 'articles'
+        url: '/blog/'
   - text: 'services'
     subnav:
       - text: 'design-development'
-        display_text: 'design & development'
+        display_text: 'application design & development'
         url: '/work/services/'
       - text: 'design-systems-training'
-        display_text: 'design systems training'
+        display_text: 'design systems'
         url: '/services/design-systems-training/'
-  - text: 'blog'
-    display_text: 'articles'
-    url: '/blog/'
+      - text: 'speaking'
+        display_text: 'presentations & workshops'
+        url: '/speaking/'
   - text: 'about'
-    display_text: 'about'
     subnav:
       - text: 'birds'
         display_text: 'meet the birds'
         url: '/birds/'
-      - text: 'speaking'
-        display_text: 'public speaking'
-        url: '/speaking/'
       - text: 'community'
         url: '/community/'
-      - text: 'contact'
-        display_text: 'contact'
-        url: '/contact/'
+  - text: 'contact'
+    display_text: 'contact'
+    url: '/contact/'
 
 
 # Site Settings
 # -------------
 
-copyright: '2009–2017'
+copyright: '2009–2018'
 email: 'birds@oddbird.net'
 
-location: 'blog'
-author: 'oddbird'
+location: home
+author: oddbird
 comments: false
 
 
@@ -56,6 +55,7 @@ comments: false
 
 active_modules: [
   jinja_macros,
+  current,
   typogrify,
   rst,
   images,

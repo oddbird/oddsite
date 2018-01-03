@@ -5,11 +5,11 @@
 {# `show` allows you to define an arbitrary, ordered list of birds to display #}
 {% if module.show %}
   {% for author in module.show %}
-    {{ birds.section(author=author) }}
+    {{ birds.list(author=author) }}
   {% endfor %}
 {% else %}
   {# If no list is given, show all bird pages... #}
   {% for page in all_pages|filter_pages('bird')|get_page() %}
-    {{ birds.section(page=page) }}
+    {{ birds.list(page=page) }}
   {% endfor %}
 {% endif %}

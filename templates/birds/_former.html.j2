@@ -1,10 +1,12 @@
 {% import "birds/utility.macros.j2" as birds %}
+{% import "content.macros.j2" as content %}
 
 {% set former = all_pages|filter_pages('former') %}
 
 {% if former %}
-<div data-module="birds-former">
-  <h2>OddBirds Emeritus…</h2>
+<article data-module="birds-former">
+  {{ content.divider(title='OddBirds Emeritus…') }}
+
   <ul>
     {% for page in former %}
       {% set author = page.config.bird %}
@@ -17,5 +19,5 @@
       </li>
     {% endfor %}
   </ul>
-</div>
+</article>
 {% endif %}

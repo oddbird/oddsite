@@ -32,22 +32,32 @@ $focus: '&:hover, &:focus, &:active';
 // @TODO: Add docs to link-color!
 //
 @mixin link-color-for(
-  $background
+  $background: 'background'
 ) {
   $contrast: contrast($background, 'contrast-light', 'action');
   $hover: color($background ('lighten': 55%, 'saturate': 100%));
   $hover: if($contrast == color('action'), color('action-hover'), $hover);
 
   a {
-    &:not(.btn) {
-      &,
-      #{$link}  {
-        color: color($contrast);
-      }
+    #{$link}  {
+      color: color($contrast);
+    }
 
-      #{$focus} {
-        color: color($hover);
-      }
+    #{$focus} {
+      color: color($hover);
+
+    }
+  }
+
+  .btn {
+    &,
+    #{$link} {
+      color: color($contrast);
+    }
+
+    #{$focus} {
+      background-color: color($contrast);
+      color: color($background);
     }
   }
 }

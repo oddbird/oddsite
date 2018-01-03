@@ -1,5 +1,4 @@
-public: yes
-location: open-source
+public: no
 grid_template: true
 headline:
   - type: 'Open Source'
@@ -10,6 +9,7 @@ project:
   - name: 'Accoutrement-Color'
     tagline: 'Color-management for Sass developers'
     source: 'https://github.com/oddbird/accoutrement-color'
+    docs: '/accoutrement-color/docs/'
     status: 'public'
     owner: yes
 contributors:
@@ -55,11 +55,6 @@ and loop through colors easily.
 .. code:: bash
 
   npm install accoutrement-color
-
-.. callmacro:: content.macros.j2#link_button
-  :url: 'docs/'
-
-  Read The Docs
 
 .. callmacro:: content.macros.j2#rst
   :tag: 'end'

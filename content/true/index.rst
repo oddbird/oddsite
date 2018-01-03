@@ -1,5 +1,4 @@
 public: yes
-location: open-source
 grid_template: true
 headline:
   - type: 'Open Source'
@@ -12,6 +11,7 @@ project:
   - name: 'True'
     tagline: 'Unit-testing for Sass developers'
     source: 'https://github.com/oddbird/true'
+    docs: '/true/docs/'
     status: 'public'
     owner: yes
 contributors:
@@ -29,7 +29,7 @@ brag: |
   **directly in SassScript**,
   or integrate with existing JavaScript test-runners.
 
-  .. _Miriam: /birds/#bird-miriam
+  .. _Miriam: /authors/miriam/
 summary: |
   **True is a full-featured unit-testing library for Sass**.
   The core functionality is written in pure SassScript,
@@ -72,11 +72,6 @@ command-line control and reporting.
 
 .. _Sass: http://sass-lang.com/
 .. _Susy: /susy/
-
-.. callmacro:: content.macros.j2#link_button
-  :url: '/true/docs/'
-
-  Read The Docs
 
 .. callmacro:: content.macros.j2#rst
   :tag: 'end'

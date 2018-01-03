@@ -1,5 +1,4 @@
 public: yes
-location: open-source
 image:
   - src: 'projects/nunjucks.jpg'
 project:

@@ -75,25 +75,14 @@ h6 {
 // Links
 // -----
 
+@include link-color-for('background');
+
 a {
   #{$link} {
-    color: color('action');
     font-weight: bold;
     text-decoration: underline;
     text-decoration-skip: ink;
-    transition: color 150ms;
-  }
-
-  #{$focus} {
-    color: color('action-hover');
-  }
-}
-
-.icon-link,
-.image-reference {
-  &,
-  #{$link} {
-    text-decoration: none;
+    transition: color 150ms, background-color 150ms;
   }
 }
 
@@ -103,6 +92,11 @@ a {
 }
 
 .image-reference {
+  &,
+  #{$link} {
+    text-decoration: none;
+  }
+
   object {
     pointer-events: none;
   }

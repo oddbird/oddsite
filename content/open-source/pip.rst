@@ -1,5 +1,4 @@
 public: yes
-location: open-source
 project:
   - name: 'Pip'
     tagline: 'Python package installer'
@@ -9,7 +8,8 @@ project:
     owner: no
 contributors:
   - author: 'carl'
-    role: 'maintainer, 2010–2012'
+    role: 'maintainer'
+    dates: '2010–2012'
 summary: |
   The PyPA recommended tool
   for installing Python packages.

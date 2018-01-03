@@ -41,7 +41,7 @@ enhanced view after enabling this extension.
    :alt: clean and messy json screenshots
    :class: img-border
 
-.. _David Glick: /birds/#bird-david
+.. _David Glick: /authors/david/
 .. _JSON Viewer: https://chrome.google.com/webstore/detail/json-viewer/gbmdgpbipfallnflgajpaliibnhdgobh
 
 
@@ -61,7 +61,7 @@ change. Jonny uses the plugin with `Sublime Text`_, but there are versions for
    :alt: screenshot of the Git Gutter plugin in use
    :align: center
 
-.. _Jonny Gerig Meyer: /birds/#bird-jonny
+.. _Jonny Gerig Meyer: /authors/jonny/
 .. _Git Gutter: https://github.com/jisaacks/GitGutter
 .. _JD Isaacks: https://twitter.com/jisaacks
 .. _most text editors: https://github.com/gitgutter
@@ -79,7 +79,7 @@ single vim motion.
 You can also get versions of this plugin for Sublime Text called
 `Sublime-surround`_ and `Vim Surround for Atom`_.
 
-.. _Kit La Touche: /birds/#bird-kit
+.. _Kit La Touche: /authors/kit/
 .. _Surround.vim: https://github.com/tpope/vim-surround
 .. _Tim Pope: https://twitter.com/tpope
 .. _Sublime-surround: https://github.com/jcartledge/sublime-surround
@@ -109,7 +109,7 @@ interface making it a great tool for non-developers as well.
 
 .. _Alfred: https://www.alfredapp.com/
 .. _launcher: https://www.alfredapp.com/help/features/default-results/
-.. _Miriam Suzanne’s: /birds/#bird-miriam
+.. _`Miriam Suzanne’s`: /authors/miriam/
 .. _searchable clipboard: https://www.alfredapp.com/help/features/clipboard/
 .. _created by the Alfred community: https://www.alfredapp.com/workflows/
 
@@ -125,7 +125,7 @@ to comment on individual prototypes. The Repeat Grid feature speeds up the
 design process considerably, cutting out all that time she use to spend
 copying, pasting, and spacing repeating elements.
 
-.. _Sondra Eby: /birds/#bird-sondra
+.. _Sondra Eby: /authors/sondra/
 .. _Adobe Xd: http://www.adobe.com/products/experience-design.html
 
 .. image:: /static/images/blog/2017/tips-tools/adobexd.jpg

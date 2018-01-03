@@ -1,0 +1,312 @@
+{% import "utility.macros.j2" as utility %}
+{% import "content.macros.j2" as content %}
+{% import "layout/macros.j2" as layout %}
+{% import "birds/utility.macros.j2" as birds %}
+
+
+{% macro by_author(
+  author=none
+) %}
+  {% set talks = all_pages|filter_pages('speakers', 'has', author) if author else all_pages|filter_pages('speakers') %}
+  {% set events = talks|collect('events', label_with='slug')|sort(attribute='date') %}
+  {% set future = events|filter_events(past=false)|list %}
+  {% set past = events|filter_events(past=true)|reverse|list %}
+  {% set highlight = future[0] or past[0] or none %}
+  {% set show_author = false if author else true %}
+
+  {{ splash(talks) }}
+
+  {{ videos(
+    talks=talks,
+    slice=2
+  ) }}
+
+  {% if events %}
+    <section class="events-by-author extend-full">
+      {{ content.divider(title='Event Schedule') }}
+
+      {{ feature(
+        event=highlight,
+        show_author=show_author
+      ) }}
+
+      {{ list(
+        events=future,
+        title="Upcoming Appearances",
+        show_author=show_author
+      ) }}
+
+      {% if future or (past|length > 1) %}
+        {{ list(
+          events=past,
+          title="Speaking History",
+          show_author=show_author,
+          slice=5
+        ) }}
+      {% endif %}
+    </section>
+  {% endif %}
+{% endmacro %}
+
+
+{% macro by_talk(ctx) %}
+  {% set events = ctx.config.events|sort(attribute='date') %}
+  {% set future = events|filter_events(past=false)|list %}
+  {% set past = events|filter_events(past=true)|reverse|list %}
+
+  {{ videos(
+    talks=[ctx],
+    slice=1
+  ) }}
+
+  <section class="events-by-talk extend-full">
+    {{ content.divider(title='Event Schedule') }}
+
+    {{ list(
+      events=future,
+      talk=ctx,
+      title="Upcoming Appearances…",
+      show_author=false
+    ) }}
+
+    {% if past|length > 0 %}
+      {{ list(
+        events=past,
+        talk=ctx,
+        title="Previously Presented At…",
+        show_author=false,
+        details=true,
+        slice=5
+      ) }}
+    {% endif %}
+  </section>
+{% endmacro %}
+
+
+{% macro splash(
+  talks
+) %}
+  {% set talks = talks|filter_pages('brag') %}
+
+  {% if talks|length %}
+    <section class="splash-talks extend-full">
+      {{ content.divider(title='Featured Talks & Workshops') }}
+      <div class="splash-section">
+        {% for talk in talks %}
+          <article class="splash-talk">
+            <h3 class="splash-title">
+              {{ utility.link_if(
+                url=content.page_link(talk),
+                content=talk.title|typogrify
+              ) }}
+            </h3>
+            <div class="splash-brag">
+              {% set brag = talk.config.brag %}
+              {% set brag = talk.render_summary() if (brag == 'summary') else brag|rst %}
+              {{ brag }}
+            </div>
+          </article>
+        {% endfor %}
+      </div>
+    </section>
+  {% endif %}
+{% endmacro %}
+
+
+{% macro videos(
+  talks=none,
+  slice=10
+) %}
+  {% set events = talks|collect('events', label_with='slug') %}
+  {% set events = events|selectattr('feature')|sort(attribute='date')|reverse|list %}
+  {% set title = 'Featured Videos' if (slice > 1) else 'Featured Video' %}
+
+  {% if events|length %}
+    <section class="talk-videos">
+      {{ content.divider(title=title) }}
+
+      <figure class='video-gallery extend-large'>
+        {% for event in events %}
+          {% if (loop.index <= slice) %}
+            <div class="video-item">
+              <div class="video">
+                {{ event.video|safe }}
+              </div>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </figure>
+    </section>
+  {% endif %}
+{% endmacro %}
+
+
+{% macro feature(
+  event,
+  talk=none,
+  show_author=false
+) %}
+  {% if event %}
+    <article class="feature-event">
+      {% set talk = talk if talk else all_pages|filter_pages('slug', 'eq', event.slug)|get_page %}
+      {% set talk_url = content.page_link(talk) if talk else none %}
+      {% set talk_url = talk_url if (talk_url != '/talks/tbd/') else none %}
+
+      <h3 class="event-title">
+        {% if talk %}
+          {{ utility.link_if(
+            content=talk.title|typogrify,
+            url=talk_url,
+            class='event-talk'
+          ) }}
+          <span class="meta-preposition">at</span>
+        {% endif %}
+        {{ utility.link_if(
+          content=event.venue,
+          url=event.url,
+          class='event-venue'
+        ) }}
+      </h3>
+
+      {{ meta(
+        event=event,
+        talk=talk,
+        show_author=show_author
+      ) }}
+
+      <div class="event-summary">
+        {{ talk.render_summary() }}
+      </div>
+    </article>
+  {% endif %}
+{% endmacro %}
+
+
+{% macro list(
+  events,
+  title,
+  talk=none,
+  show_author=false,
+  details=none,
+  slice=none
+) %}
+  <section data-module="events-list">
+    {% if events %}
+      <h3 class="events-list-title">{{ title }}</h3>
+
+      {% for event in events %}
+        {{ item(
+          event=event,
+          talk=talk,
+          show_author=show_author,
+          details=details
+        ) }}
+
+        {% if loop.index == slice %}
+          <div {{ utility.toggle_target('more-events') }}>
+        {% endif %}
+        {% if loop.last and slice %}
+          </div>
+        {% endif %}
+      {% endfor %}
+
+      {% if slice and (events|length > slice) %}
+        <button class="btn small-btn more-events" {{ utility.toggle_button('more-events') }}>
+          show all events
+        </button>
+      {% endif %}
+    {% else %}
+      <h3 class="events-list-title no-events">No events scheduled</h3>
+
+      <a href="/contact/" class="btn">
+        Invite us to present
+      </a>
+    {% endif %}
+  </section>
+{% endmacro %}
+
+
+{% macro item(
+  event,
+  talk=none,
+  show_author=false,
+  details=none
+) %}
+  {% set event_date = event.date|make_date %}
+  {% set talk = talk if talk else all_pages|filter_pages('slug', 'eq', event.slug)|get_page %}
+  {% set url = event.url if details else content.page_link(talk) %}
+
+  <article class="event">
+    <h4 class="event-venue">
+      {{ utility.link_if(
+        content=event.venue,
+        url=url
+        )  }}
+    </h4>
+
+    {{ meta(
+      event=event,
+      talk=talk,
+      show_author=show_author
+    ) }}
+
+      {% if details %}
+        {{ show_links(event) }}
+      {% endif %}
+  </article>
+{% endmacro %}
+
+
+{% macro meta(
+  event,
+  talk=none,
+  show_author=none
+) %}
+  {% set event_date = event.date|make_date %}
+  {% set talk = talk if talk else all_pages|filter_pages('slug', 'eq', event.slug)|get_page %}
+  {% set authors = talk.config.speakers if show_author else none %}
+
+  <div class="event-meta">
+    <span class="meta-preposition">on</span>
+    <time datetime="{{ event_date }}">
+      {{ event_date|format_date('%B %-d, %Y') }}
+    </time>
+    {% if authors %}
+      <span class="meta-preposition">with</span>
+      {% for author in authors %}
+        {{ 'and' if (loop.last and not loop.first) else '' }}
+        {{ birds.name_link(author) -}}
+        {{- '' if loop.last else ',' }}
+      {% endfor %}
+    {% endif %}
+    {% if event.adr %}
+      <span class="meta-preposition">in</span>
+      <span class="adr">{{ event.adr }}</span>
+    {% endif %}
+  </div>
+{% endmacro %}
+
+
+{% macro show_links(
+  event
+) %}
+  {% set links = {
+    'slides': 'slides',
+    'video_link': 'video',
+    'transcript': 'transcript'
+  } %}
+
+  {% if event.slides or event.video_link or event.transcript %}
+    <div class="event-list-links">
+      {% for link in links %}
+        {% if event[link] %}
+          {{ utility.link_if(
+            url=event[link],
+            content=links[link],
+            class='event-list-link'
+          ) }}
+        {% endif %}
+      {% endfor %}
+    </div>
+  {% endif %}
+{% endmacro %}

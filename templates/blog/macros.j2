@@ -5,7 +5,7 @@
 
 
 {% macro list(post, section='blog-post') %}
-  <article {{ utility.attr_if('data-module', section) }} class="preview">
+  <article {{ utility.attr_if('data-module', section) }}>
     {% set heading = 'h2' if section else 'h3' %}
     <{{ heading }} class="post-title">
       <a href="{{ link_to('page', slug=post.slug) }}" rel="bookmark">
@@ -33,6 +33,5 @@
     ) %}
       Read More
     {% endcall %}
-
   </article>
 {% endmacro %}

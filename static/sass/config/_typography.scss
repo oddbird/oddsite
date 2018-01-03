@@ -12,3 +12,18 @@
   font-size: calc(1.5rem + 1.75vw);
   line-height: 1.25;
 }
+
+
+/// Base styles for rst-summary and othr featured text-blocks
+/// @group typography
+/// @example scss -
+///   .rst-summary {
+///     @include feature;
+///   }
+@mixin feature {
+  font-size: size('intro-text');
+  line-height: 1.5;
+  margin: 0 auto size('spacer');
+  max-width: calc(#{size('full-content')} + 10vw);
+  padding: 0 size('gutter');
+}

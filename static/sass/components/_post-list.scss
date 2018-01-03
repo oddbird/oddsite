@@ -2,9 +2,24 @@
 // ==========
 
 
+[data-module='blog-post'] {
+  margin-top: size('spacer');
+
+  & + & {
+    @include before('') {
+      @include extend('extend-small');
+      @include small-divider;
+      display: block;
+      margin-bottom: size('spacer');
+    }
+  }
+}
+
+
 .post-title {
   margin-bottom: 0;
 }
+
 
 .post-subtitle {
   font-size: size('h3');

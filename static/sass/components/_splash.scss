@@ -2,50 +2,48 @@
 // ==================
 
 
-.splash-projects {
+.splash-section {
+  @include text-shadow;
   align-items: stretch;
   background-image: url('../images/wash-background.jpg');
-  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   justify-content: space-evenly; //sass-lint:disable-line no-duplicate-properties
-  margin-top: -1px; // fix a rounding error
-  padding-bottom: size('gutter');
+  margin-bottom: negative('double-gutter');
+  margin-top: negative('double-gutter');
+  padding: size('double-gutter') 0;
 
   // clearfix breaking the layout…
   @include after(null) {
-    position: absolute;
+    display: none;
   }
 }
 
-
-.splash-headline {
-  @include contrasted('invert');
-  background-image: linear-gradient(
-    to top,
-    color('shadow'),
-    transparent size('quarter-shim')
-  );
-  flex: 0 0 100%;
-  font-size: inherit;
-  margin: 0 0 size('double-gutter');
-  opacity: 0.95;
-  padding: size('shim') size('gutter');
-}
-
-
-.splash-project {
-  display: grid;
+.splash-project,
+.splash-talk {
   flex: 1 1 size('splash-items');
-  grid-template-columns: 100%;
-  grid-template-rows: size('splash-logo-y') auto;
   max-width: size('splash-items-max');
   padding: size('shim');
 
   @include above('medium-page') {
     padding: size('shim') size('double-gutter');
   }
+}
+
+
+.splash-project {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: size('splash-logo-y') auto;
+}
+
+
+.splash-title {
+  margin: 0;
 }
 
 

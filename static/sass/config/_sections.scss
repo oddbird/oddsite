@@ -28,21 +28,43 @@
   position: relative;
 
   @include wrap-content(' ') {
-    border: size('gutter') solid transparent;
-    border-bottom-width: 0;
+    border: size('shim') solid transparent;
     border-top-color: color($color);
+    border-width: size('shim') size('shim-plus') 0;
     left: 50%;
     position: absolute;
     top: 100%;
+    transition: border-width 300ms;
+
+    @include above('small-page') {
+      border-width: size('gutter') size('gutter') 0;
+    }
   }
 
-  @include before(' ') {
+  @include before(null) {
     margin-top: size('border');
     transform: translateX(-50%) translateY(-2px);
   }
 
-  @include after(' ') {
+  @include after(null) {
     border-top-color: color($background);
     transform: translateX(-50%) translateY(-4px);
   }
+}
+
+
+/// @todo document small-divider
+@mixin small-divider(
+  $color: 'border'
+) {
+  background-image: linear-gradient(
+    to right,
+    color($color ('rgba': 0)),
+    color($color),
+    color($color ('rgba': 0))
+  );
+  display: block;
+  height: size('border-thin');
+  margin: 0 auto;
+  max-width: size('full-content');
 }

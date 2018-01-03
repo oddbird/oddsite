@@ -1,5 +1,4 @@
-public: yes
-location: open-source
+public: no
 grid_template: true
 headline:
   - type: 'Open Source'
@@ -10,6 +9,7 @@ project:
   - name: 'Accoutrement-Init'
     tagline: 'Lightweight browser normalization for Sass projects'
     source: 'https://github.com/oddbird/accoutrement-init'
+    docs: '/accoutrement-init/docs/'
     status: 'public'
     owner: yes
 contributors:
@@ -51,11 +51,6 @@ and other sensible defaults.
 .. code:: bash
 
   npm install accoutrement-init
-
-.. callmacro:: content.macros.j2#link_button
-  :url: 'docs/'
-
-  Read The Docs
 
 .. callmacro:: content.macros.j2#rst
   :tag: 'end'

@@ -38,12 +38,12 @@ We're `writing more`_,
 `building a community on Slack`_,
 and contributing to more `open source projects`_.
 
-.. _`Carl`: /birds/#bird-carl
+.. _`Carl`: /authors/carl/
 .. _`Instagram`: http://instagram.com
-.. _`Sondra`: /birds/#bird-sondra
-.. _`David`: /birds/#bird-david
-.. _`Stacy`: /birds/#bird-stacy
-.. _`Kit`: /birds/#bird-kit
+.. _`Sondra`: /authors/sondra/
+.. _`David`: /authors/david/
+.. _`Stacy`: /authors/stacy/
+.. _`Kit`: /authors/kit/
 .. _`writing more`: /blog/
 .. _`speaking more`: /speaking/
 .. _`taking on more clients`: /work/

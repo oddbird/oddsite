@@ -1,6 +1,4 @@
 public: no
-location: case-studies
-pageclasses: work-layout
 grid_template: true
 client:
   - name: 'Sensible Innovation'
@@ -8,7 +6,7 @@ client:
 project:
   - name: 'TimeDesigner'
     tagline: 'Whole-School Design Thinking & Scheduling'
-    years: '2017'
+    years: '2017–2018'
     status: 'private'
 quotes:
   - text: |

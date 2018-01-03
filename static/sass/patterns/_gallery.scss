@@ -88,3 +88,31 @@ $min-image: 300px;
   grid-column: 1 / -1;
   margin: size('shim') 0;
 }
+
+
+// Videos
+// ------
+
+.video-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.video-item {
+  border: 1px solid color('border');
+  flex: 1 1 size('splash-items');
+  margin: size('shim');
+  max-width: 100%;
+}
+
+.video {
+  @include fluid-ratio;
+  overflow: hidden;
+
+  iframe {
+    @include position(0);
+    height: 100%;
+    width: 100%;
+  }
+}

@@ -4,7 +4,7 @@
 {% macro show_project(project) %}
   <li>
     {{ utility.link_if(project.name, project.url) }}
-    {{ project.description or '' }}
+    {{ project.description|typogrify or '' }}
   </li>
 {% endmacro %}
 

@@ -6,11 +6,11 @@
 {% macro social(slug='contact/index', data='social') %}
   {% set items = slug|get_config(data) %}
 
-  <ul class="contact-social">
+  <ul class="socials">
     {% for item in items %}
-      <li class="contact-social-item">
-        {% set content = get_content(item.icon, item.text) %}
-        {{ utility.link_if(content, item.url, 'contact-social-link icon-link') }}
+      <li class="social-item">
+        {% set content = get_social_content(item.icon, item.text) %}
+        {{ utility.link_if(content, item.url, 'icon-link') }}
         {{ item.after }}
       </li>
     {% endfor %}
@@ -18,7 +18,7 @@
 {% endmacro %}
 
 
-{% macro get_content(icon, text) %}
+{% macro get_social_content(icon, text) %}
   {{ utility.icon(icon) }}
   <span class="icon-text">{{ text }}</span>
 {% endmacro %}

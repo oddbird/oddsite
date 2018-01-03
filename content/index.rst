@@ -1,5 +1,4 @@
 public: yes
-location: home
 grid_template: true
 image:
   - src: 'pages/faces-hero.jpg'
@@ -31,20 +30,10 @@ Software for Humans
   :page: 'work/coachhub'
   :slug: 'remote'
 
-
-.. -------------------------------------
-.. callmacro:: content.macros.j2#divider
-.. -------------------------------------
-
-
 .. callmacro:: projects/splash.macros.j2#splash_list
   :headline: 'Featured Partners'
 
-
-.. -------------------------------------
 .. callmacro:: content.macros.j2#divider
-.. -------------------------------------
-
 
 .. callmacro:: content.macros.j2#get_quotes
   :page: 'work/medcurbside'
@@ -75,21 +64,11 @@ Software for Humans
   :page: 'work/coachhub'
   :slug: 'handoff'
 
-
-.. -------------------------------------
-.. callmacro:: content.macros.j2#divider
-.. -------------------------------------
-
-
 .. callmacro:: projects/splash.macros.j2#splash_list
   :has: 'contributors'
-  :headline: 'Open Source Leadership'
+  :headline: 'Building the Tools Developers Use'
 
-
-.. -------------------------------------
 .. callmacro:: content.macros.j2#divider
-.. -------------------------------------
-
 
 .. callmacro:: content.macros.j2#blockquote
   :content: 'Miriam has become one of the most notable
@@ -114,8 +93,8 @@ Software for Humans
   *We don't just follow best-practice –
   we help define it.*
 
-  .. _Miriam: /birds/#bird-miriam
-  .. _Carl: /birds/#bird-carl
+  .. _Miriam: /authors/miriam/
+  .. _Carl: /authors/carl/
   .. _Sass/CSS: http://sass-lang.com
   .. _Django/Python: https://www.djangoproject.com/
 

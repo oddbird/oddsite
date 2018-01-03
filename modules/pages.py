@@ -8,6 +8,7 @@ Use like:
 
 from functools import partial
 from rstblog.modules.blog import get_all_entries
+import operator
 
 
 def is_blog_post(page):
@@ -97,7 +98,7 @@ def filter_pages(values, key, operator=None, value=None):
         if operator == 'neq':
             return value != (getattr(x, key, None) or x.config.get(key))
         if operator == 'has':
-            return value in (getattr(x, key, None) or x.config.get(key))
+            return value in (getattr(x, key, None) or x.config.get(key, []))
 
     return [
         x
@@ -127,6 +128,21 @@ def get_blog_entries_by_tag(builder, tag):
     ]
 
 
+def collect(pages, key, label_with=None):
+    result = []
+    for page in pages:
+        for item in page.config.get(key, []):
+            if label_with:
+                label = (
+                    getattr(page, label_with, None) or
+                    page.config.get(label_with)
+                )
+                item = item.copy()
+                item[label_with] = label
+            result.append(item)
+    return result
+
+
 def build_get_config(builder):
     all_pages = {
         p.slug: p
@@ -153,12 +169,20 @@ def is_string(obj):
     return isinstance(obj, basestring)
 
 
+def remove_index(str):
+    if str.endswith('/index'):
+        return str[:-6]
+    return str
+
+
 def setup(builder):
     env = builder.jinja_env
     env.filters['is_string'] = is_string
+    env.filters['remove_index'] = remove_index
     env.filters['show_all_attrs'] = show_all_attrs
     env.filters['show_config'] = show_config
     env.filters['filter_pages'] = filter_pages
+    env.filters['collect'] = collect
     env.filters['get_page'] = get_page
     env.filters['get_config'] = build_get_config(builder)
     env.globals['get_blog_entries_by_bird'] = partial(

@@ -31,8 +31,16 @@
   Dividers
   --------
 #}
-{% macro divider() %}
-  <div class="separator"></div>
+{% macro divider(title=none, small=true) %}
+  {% set scale = 'small' if small else 'large' %}
+  <div divider="{{ scale }}">
+    <hr divider-line="{{ scale }}" />
+    {% if title %}
+      <h2 divider-title="{{ scale }}">
+        {{ title|typogrify }}
+      </h2>
+    {% endif %}
+  </div>
 {% endmacro %}
 
 
@@ -258,8 +266,8 @@
   {% set content = content if (content != none) else caller() %}
 
   <div class="media-block">
-    <div class="media-image">{{ media }}</div>
-    <div class="media-content">{{ content }}</div>
+    <div class="media-image">{{ media|safe }}</div>
+    <div class="media-content">{{ content|safe }}</div>
   </div>
 {% endmacro %}
 
@@ -351,8 +359,14 @@
   {%- set has_page = true if (project.owner or project.case_study) else false -%}
   {%- set fallback = '/open-source/' if page.config.contributors else '/work/' -%}
   {%- set fallback = fallback if allow_fallback else none -%}
-  {%- set local = '/' if (page.slug == 'index') else ['/', page.slug|replace('/index', '') if page.slug.endswith('/index') else page.slug, '/']|join -%}
-  {%- set local = local if (project and has_page) else none -%}
   {%- set external = project.url if (project and allow_external) else none -%}
+  {%- set local = page_link(page) if (project and has_page) else none -%}
   {{ local or external or fallback }}
-{%- endmacro %}
+{%- endmacro -%}
+
+
+{%- macro page_link(page) -%}
+  {%- set slug = page.slug|remove_index -%}
+  {%- set url = '/' if (slug == 'index') else ['/', slug, '/']|join -%}
+  {{ url }}
+{%- endmacro -%}

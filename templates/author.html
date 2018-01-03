@@ -1,22 +1,40 @@
 {% extends "blog/index.html" %}
 
+{% import "content.macros.j2" as content %}
+{% import "layout/macros.j2" as layout %}
 {% import "birds/macros.j2" as birds %}
 {% import "birds/utility.macros.j2" as utility %}
 
-{% set name = utility.get_bird_name(author.name) %}
 
-{% block title %}Entries by {{ name }} | {{ super() }}{% endblock %}
-{% block og_title %}Entries by {{ name }}{% endblock %}
+{% set name = utility.get_bird_name(author.name) %}
+{% set bird_page = all_pages|filter_pages('bird', 'eq', author.name)|get_page %}
+
+{% block title %}{{ name }} | OddBird{% endblock %}
+{% block og_title %}{{ name }} | OddBird{% endblock %}
 {% block og_url %}{{ get_full_canonical_url(builder, slug=['/authors', author.name]|join('/')) }}{% endblock %}
-{% block bodyclasses %}blog archive{% endblock %}
+{% block location %}birds{% endblock %}
+{% block has_image %}{{ 'yes' if bird_page.config.image else 'no' }}{% endblock %}
+
 
 {% block feedlinks %}
 {{ super() }}
 <link href="feed.atom" rel="alternate" title="OddBird posts by '{{ name }}'" type="application/atom+xml">
 {% endblock %}
 
+
 {% block list_intro %}
-  {{ birds.section(
-    page=all_pages|filter_pages('bird', 'eq', author.name)|get_page
-    ) }}
+  {% set is_index = not pagination.has_prev %}
+
+  {{ layout.header(
+    bird_page,
+    bird_page,
+    show_summary=is_index
+  ) }}
+
+  {% if is_index %}
+    {{ birds.details(bird_page) }}
+
+    {{ content.divider(small=false) }}
+  {% endif %}
+
 {% endblock list_intro %}

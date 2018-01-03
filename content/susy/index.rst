@@ -1,5 +1,5 @@
 public: yes
-location: 'susysite'
+location: susysite
 template: 'susysite/layout.html'
 grid_template: true
 headline:
@@ -40,7 +40,8 @@ project:
   - name: 'Susy'
     tagline: 'Your design, our math'
     source: 'https://github.com/oddbird/susy'
-    years: '2009-present'
+    docs: '/susy/docs/'
+    years: '2009–present'
     status: 'public'
     owner: yes
 contributors:
@@ -56,7 +57,7 @@ brag: |
   **Esquire UK**,
   and more.
 
-  .. _Miriam: /birds/#bird-miriam
+  .. _Miriam: /authors/miriam/
 quotes:
   - text: 'I like the idea of grids-on-demand, rather than a strict framework.'
     name: 'Chris Coyier'

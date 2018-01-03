@@ -6,23 +6,71 @@
   margin: size('gutter') auto;
   max-width: size('full-content');
   padding: 0 size('gutter');
-
-  & ~ & {
-    @include before('') {
-      border-top: size('border-thin') solid color('border-light');
-      display: block;
-      margin: size('double-gutter') 0;
-    }
-  }
 }
 
 .grid-template {
   max-width: 100%;
 }
 
-.separator {
+
+// Dividers
+// --------
+
+[divider] {
+  position: relative;
+  z-index: 5;
+}
+
+[divider-title] {
+  font-size: inherit;
+}
+
+
+// Small Dividers
+// --------------
+
+[divider='small'] {
+  @include extend('extend-small');
+  margin: size('spacer') 0 size('gutter');
+  text-align: center;
+}
+
+[divider-line='small'] {
+  @include small-divider;
+}
+
+[divider-title='small'] {
+  background: color('background');
+  display: inline-block;
+  margin: 0;
+  padding: 0 size('shim');
+  position: relative;
+  transform: translateY(-50%);
+
+  a {
+    text-decoration: none;
+  }
+}
+
+
+// Large Dividers
+// --------------
+
+[divider='large'] {
+  @include extend('extend-full');
+  margin-top: size('spacer');
+  text-align: center;
+
+  [data-region='banner'] & {
+    margin-top: 0;
+  }
+}
+
+
+[divider-line='large'] {
   @include section-arrow;
   box-shadow: 0 2px 2px color('shadow');
+  overflow: visible;
   z-index: 2;
 
   [data-location*='susysite'] & {
@@ -32,34 +80,13 @@
   [data-location*='hermansite'] & {
     @include section-arrow('action-hover');
   }
+}
 
-  + [data-module] {
-    @include before('') {
-      display: none;
-    }
+
+[divider-title='large'] {
+  margin: size('gutter') size('gutter') size('spacer');
+
+  @include above('small-page') {
+    padding-top: size('half-shim');
   }
-}
-
-
-hr {
-  background: linear-gradient(
-    to right,
-    color('border' ('rgba': 0)),
-    color('border'),
-    color('border' ('rgba': 0))
-  );
-  clear: both;
-  display: block;
-  height: size('border-thin');
-  margin: size('gutter') 0;
-}
-
-
-// used when going back and forth between content-blocks and other elements
-.section-end {
-  margin-bottom: size('double-gutter');
-}
-
-.preview {
-  margin: size('double-gutter') auto;
 }

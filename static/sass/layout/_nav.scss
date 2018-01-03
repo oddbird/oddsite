@@ -94,13 +94,16 @@
 $nav-locations: (
   'case-studies': 'work',
   'open-source': 'work',
+  'blog': 'work',
+
   'design-development': 'services',
   'design-systems-training': 'services',
-  'blog': null,
+  'speaking': 'services',
+
   'birds': 'about',
-  'speaking': 'about',
   'community': 'about',
-  'contact': 'about',
+
+  'contact': null,
 
   'susysite-sites': null,
   'susysite-articles': null,
@@ -146,13 +149,12 @@ $nav-locations: (
 // OddBird link from sub-sites
 [data-active='oddbird'] {
   #{$link} {
-    background-color: color('background');
-    border: 1px solid color('action-border');
+    border: 1px solid;
     border-radius: size('border-radius');
     color: color('action');
     font-weight: bold;
     text-decoration: none;
-    transition: color 250ms, background-color 250ms;
+    transition: color 150ms, background-color 150ms;
   }
 
   #{$focus} {

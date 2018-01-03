@@ -1,5 +1,4 @@
 public: yes
-location: open-source
 project:
   - name: 'Virtualenv'
     tagline: 'Virtual Python Environment builder'
@@ -9,7 +8,8 @@ project:
     owner: no
 contributors:
   - author: 'carl'
-    role: 'maintainer, 2010–2012'
+    role: 'maintainer'
+    dates: '2010–2012'
 summary: |
   A tool for creating isolated 'virtual'
   python environments.

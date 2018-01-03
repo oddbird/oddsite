@@ -9,6 +9,9 @@
   {% set link = content.project_link(page, allow_fallback=false) %}
   {% set link = none if ('None' in link) else link %}
 
+  {{ content.divider(
+    small=false if page.config.image else true
+  ) }}
   <article class='project-feature grid-template'>
     {{ layout.header_image(page, class='project-cover-image') }}
 
@@ -50,8 +53,6 @@
     {% endcall %}
 
     {{ content.get_quotes(page, count=2) }}
-
-    {{ content.divider()}}
   </article>
 {% endmacro %}
 

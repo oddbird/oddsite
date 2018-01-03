@@ -4,27 +4,24 @@
 
 
 {% macro splash_list(has='client', headline=none, slugs=none) %}
-  <section class='splash-projects extend-full'>
-    {% if headline %}
-      <h2 class="splash-headline">
-        {{ headline }}
-      </h2>
-    {% endif %}
+  <section class="splash-projects">
+    {{ content.divider(title=headline) }}
+    <div class='splash-section extend-full'>
+      {% if slugs %}
+        {% for slug in slugs %}
+          {% set page = slug|get_config %}
+          {{ splash(page) }}
+        {% endfor %}
+      {% else %}
+        {% set pages = all_pages|filter_pages(has) %}
+        {% set pages = pages|filter_pages('public', 'neq', false) %}
+        {% set pages = pages|filter_pages('brag') %}
 
-    {% if slugs %}
-      {% for slug in slugs %}
-        {% set page = slug|get_config %}
-        {{ splash(page) }}
-      {% endfor %}
-    {% else %}
-      {% set pages = all_pages|filter_pages(has) %}
-      {% set pages = pages|filter_pages('public', 'neq', false) %}
-      {% set pages = pages|filter_pages('brag') %}
-
-      {% for page in pages %}
-        {{ splash(page) }}
-      {% endfor %}
-    {% endif %}
+        {% for page in pages %}
+          {{ splash(page) }}
+        {% endfor %}
+      {% endif %}
+    </div>
   </section>
 {% endmacro %}
 
@@ -34,7 +31,7 @@
 
   <article class="splash-project">
     <a href="{{ content.project_link(page) }}" class="splash-logo">
-      {% include 'projects/_%s.svg' % page.config.logo %}
+      {% include 'projects/logos/_%s.svg' % page.config.logo %}
     </a>
 
     <div class="splash-brag">

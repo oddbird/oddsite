@@ -1,5 +1,4 @@
-public: yes
-location: open-source
+public: no
 grid_template: true
 headline:
   - type: 'Open Source'
@@ -10,6 +9,7 @@ project:
   - name: 'Accoutrement-Scale'
     tagline: 'Manage sizes and modular-scales in Sass'
     source: 'https://github.com/oddbird/accoutrement-scale'
+    docs: '/accoutrement-scale/docs/'
     status: 'public'
     owner: yes
 contributors:
@@ -56,11 +56,6 @@ for an automated pattern library.
 .. code:: bash
 
   npm install accoutrement-scale
-
-.. callmacro:: content.macros.j2#link_button
-  :url: 'docs/'
-
-  Read The Docs
 
 .. callmacro:: content.macros.j2#rst
   :tag: 'end'

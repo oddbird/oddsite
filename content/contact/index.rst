@@ -54,7 +54,7 @@ summary: |
 
     .. _our packages: /work/services/
     .. _speak to your company or conference: /speaking/
-    .. _Miriam Suzanne: /birds/#bird-miriam
+    .. _Miriam Suzanne: /authors/miriam/
 
 
 Start a Conversation

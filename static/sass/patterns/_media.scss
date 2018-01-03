@@ -68,7 +68,7 @@ h6 {
 // ------------
 
 .media-block {
-  align-items: flex-start;
+  align-items: center;
   display: flex;
   padding-bottom: size('shim');
 }
@@ -81,4 +81,12 @@ h6 {
 .media-content {
   align-self: center;
   flex: 1 1 0;
+
+  *:first-child {
+    margin-top: 0;
+  }
+
+  *:last-child {
+    margin-bottom: 0;
+  }
 }

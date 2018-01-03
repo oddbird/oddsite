@@ -1,5 +1,5 @@
 public: yes
-location: 'hermansite'
+location: hermansite
 template: 'hermansite/layout.html'
 grid_template: true
 headline:
@@ -38,6 +38,7 @@ project:
   - name: 'Herman'
     tagline: 'Automated Style Guides'
     source: 'https://github.com/oddbird/sassdoc-theme-herman'
+    docs: '/herman/docs/'
     status: 'pre-release'
     owner: yes
 contributors:

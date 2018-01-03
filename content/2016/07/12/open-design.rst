@@ -145,8 +145,8 @@ These are the rough stages we expect to go through:
    about the final visual details.
 
 .. _rstBlog: https://github.com/mitsuhiko/rstblog
-.. _Miriam: /birds/#bird-miriam
-.. _Sondra: /birds/#bird-sondra
+.. _Miriam: /authors/miriam/
+.. _Sondra: /authors/sondra/
 
 
 Rinse and Repeat...

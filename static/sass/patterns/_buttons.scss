@@ -16,43 +16,54 @@
 ///   {% import 'content.macros.j2' as content %}
 ///   {{ content.link_button(
 ///     url='/herman/docs/',
-///     content='Read the docs',
-///     attrs={'target': '_parent'}
+///     content='Read the docs'
 ///   ) }}
 .btn {
   &,
   #{$link} {
     @include font-family('alt');
     align-items: center;
-    background: color('background'); // remove link underline when styling as button...
-    border: 1px solid color('action-border');
+    border: 1px solid;
     border-radius: size('border-radius');
-    color: color('action');
     display: inline-flex;
     font-weight: bold;
-    padding: size('half-shim') 1rem;
+    padding: size('half-shim') size('gutter');
     text-decoration: none;
-    transition: color 250ms, background-color 250ms;
-  }
-
-  #{$focus} {
-    background-color: color('action');
-    color: color('background');
-
-    &::after {
-      transform: translateX(size('half-shim'));
-    }
+    transition: color 150ms, background-color 150ms;
   }
 
   @include after('»') {
     font-weight: normal;
-    padding-left: size('half-shim');
+    padding: 0 size('quarter-shim');
+    transform-origin: 50% 60%;
     transition: transform 250ms;
+  }
+
+  #{$focus},
+  &[aria-pressed='true'] {
+    background-color: color('action');
+    color: color('background');
+
+    &::after {
+      transform: translateX(size('quarter-shim'));
+    }
+  }
+
+  &[aria-pressed='true'] {
+    &::after {
+      transform: rotate(180deg);
+    }
   }
 
   + .btn {
     margin-left: size('half-shim');
   }
+}
+
+
+.small-btn {
+  font-size: size('small');
+  padding: size('half-shim') size('shim');
 }
 
 

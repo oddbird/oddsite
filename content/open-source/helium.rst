@@ -1,5 +1,4 @@
 public: yes
-location: open-source
 project:
   - name: 'Helium'
     tagline: 'A floating browser window for OS X'

@@ -1,5 +1,4 @@
 public: yes
-location: open-source
 logo: 'django'
 image:
   - src: 'projects/django.jpg'
@@ -21,7 +20,7 @@ brag: |
   and a contributor
   to the **Python language**.
 
-  .. _Carl: /birds/#bird-carl
+  .. _Carl: /authors/carl/
 summary: |
   **Django is a high-level Python Web framework**
   that encourages rapid development and clean, pragmatic design.

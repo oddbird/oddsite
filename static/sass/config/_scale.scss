@@ -25,14 +25,15 @@ $ratios: map-merge($ratios, $modular-scale);
 ///   Accoutrement Scale
 $text-sizes: (
   'root': 18px,
-  'small': 'root' ('text-ratio': -1),
+  'h2': calc(1rem + 1vw),
+  'h3': calc(1rem + 0.5vw),
+  'small': 'root' ('text-ratio': -0.5),
+  'xsmall': 'root' ('text-ratio': -1),
+  'rel-small': 1em ('text-ratio': -0.5),
   'medium': 'root' ('text-ratio': 0.7),
   'caption': 'root',
   'task': 'root' ('text-ratio': -0.125),
   'social': 'root' ('text-ratio': -0.25),
-
-  'h2': calc(1rem + 1vw),
-  'h3': calc(1rem + 0.5vw),
 );
 
 $sizes: map-merge($sizes, $text-sizes);
@@ -50,6 +51,7 @@ $spacing-sizes: (
   'gutter': 'rhythm',
   'double-gutter': 'gutter' ('multiple': 2),
   'triple-gutter': 'gutter' ('multiple': 3),
+  'shim-plus': 'gutter' ('multiple': 0.75),
   'shim': 'gutter' ('multiple': 0.5),
   'half-shim': 'shim' ('multiple': 0.5),
   'quarter-shim': 'shim' ('multiple': 0.25),

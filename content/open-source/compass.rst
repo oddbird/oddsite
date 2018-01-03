@@ -1,5 +1,4 @@
 public: yes
-location: open-source
 project:
   - name: 'Compass'
     tagline: 'CSS-authoring framework and Sass library'
@@ -9,7 +8,8 @@ project:
     owner: no
 contributors:
   - author: 'miriam'
-    role: 'core developer, 2010–2016'
+    role: 'core developer'
+    dates: '2010–2016'
 summary: |
   An open source CSS authoring framework
   which uses the Sass language

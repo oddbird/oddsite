@@ -46,8 +46,8 @@ to form OddBird.
 
 .. _Blueprint: http://www.blueprintcss.org/
 .. _`Eric Meyer’s Reset`: https://meyerweb.com/eric/tools/css/reset/
-.. _Carl: /birds/#bird-carl
-.. _Jonny: /birds/#bird-jonny
+.. _Carl: /authors/carl/
+.. _Jonny: /authors/jonny/
 
 At that point,
 every layout required extensive hacks
