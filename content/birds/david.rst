@@ -27,8 +27,8 @@ summary: |
   in Python and JavaScript for over a decade.
   He has been a prolific contributor
   to the Plone web content management system,
-  and enjoys learning new tools–most
-  recently React, elasticsearch,
+  and enjoys learning new tools --
+  most recently React, elasticsearch,
   and the Pyramid web framework.
   When he's not coding,
   David can be found experimenting in the kitchen

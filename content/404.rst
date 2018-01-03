@@ -1,5 +1,4 @@
 public: yes
-location: home
 headline:
   - type: '404'
     tagline: "That's odd…"

@@ -19,7 +19,7 @@
   {{ videos(
     talks=talks,
     slice=2
-    ) }}
+  ) }}
 
   {% if events %}
     <section class="events-by-author extend-full">
@@ -28,13 +28,13 @@
       {{ feature(
         event=highlight,
         show_author=show_author
-        ) }}
+      ) }}
 
       {{ list(
         events=future,
         title="Upcoming Appearances",
         show_author=show_author
-        ) }}
+      ) }}
 
       {% if future or (past|length > 1) %}
         {{ list(
@@ -42,7 +42,7 @@
           title="Speaking History",
           show_author=show_author,
           slice=5
-          ) }}
+        ) }}
       {% endif %}
     </section>
   {% endif %}
@@ -57,7 +57,7 @@
   {{ videos(
     talks=[ctx],
     slice=1
-    ) }}
+  ) }}
 
   <section class="events-by-talk extend-full">
     {{ content.divider(title='Event Schedule') }}
@@ -67,7 +67,7 @@
       talk=ctx,
       title="Upcoming Appearances…",
       show_author=false
-      ) }}
+    ) }}
 
     {% if past|length > 0 %}
       {{ list(
@@ -77,7 +77,7 @@
         show_author=false,
         details=true,
         slice=5
-        ) }}
+      ) }}
     {% endif %}
   </section>
 {% endmacro %}
@@ -98,7 +98,7 @@
               {{ utility.link_if(
                 url=content.page_link(talk),
                 content=talk.title|typogrify
-                ) }}
+              ) }}
             </h3>
             <div class="splash-brag">
               {% set brag = talk.config.brag %}
@@ -158,21 +158,21 @@
             content=talk.title|typogrify,
             url=talk_url,
             class='event-talk'
-            ) }}
+          ) }}
           <span class="meta-preposition">at</span>
         {% endif %}
         {{ utility.link_if(
           content=event.venue,
           url=event.url,
           class='event-venue'
-          ) }}
+        ) }}
       </h3>
 
       {{ meta(
         event=event,
         talk=talk,
         show_author=show_author
-        ) }}
+      ) }}
 
       <div class="event-summary">
         {{ talk.render_summary() }}
@@ -200,7 +200,7 @@
           talk=talk,
           show_author=show_author,
           details=details
-          ) }}
+        ) }}
 
         {% if loop.index == slice %}
           <div {{ utility.toggle_target('more-events') }}>
@@ -248,7 +248,7 @@
       event=event,
       talk=talk,
       show_author=show_author
-      ) }}
+    ) }}
 
       {% if details %}
         {{ show_links(event) }}
@@ -304,7 +304,7 @@
             url=event[link],
             content=links[link],
             class='event-list-link'
-            ) }}
+          ) }}
         {% endif %}
       {% endfor %}
     </div>

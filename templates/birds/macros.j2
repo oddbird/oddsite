@@ -25,7 +25,7 @@
       {{ birds.social_list(
         data=page.config.social,
         bird_name=author|capitalize
-        ) }}
+      ) }}
     {% endcall %}
 
     <div class="bio">
@@ -34,8 +34,8 @@
 
     {{ content.link_button(
       url=birds.get_bird_url(author, page),
-      content="See %s's activity" % author|capitalize|typogrify
-      ) }}
+      content="See %s’s activity" % author|capitalize
+    ) }}
   </article>
 {% endmacro %}
 
@@ -77,11 +77,11 @@
               {{ utility.link_if(
                 project.name or project.title,
                 content.project_link(page, allow_external=true)
-                ) }}
+              ) }}
 
-                {% if item.dates %}
-                  [{{ item.dates }}]
-                {% endif %}
+              {% if item.dates %}
+                [{{ item.dates }}]
+              {% endif %}
             </li>
           {% endfor %}
         </ul>

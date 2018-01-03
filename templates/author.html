@@ -9,7 +9,7 @@
 {% set name = utility.get_bird_name(author.name) %}
 {% set bird_page = all_pages|filter_pages('bird', 'eq', author.name)|get_page %}
 
-{% block title %}{{ name }} | {{ super() }}{% endblock %}
+{% block title %}{{ name }} | OddBird{% endblock %}
 {% block og_title %}{{ name }} | OddBird{% endblock %}
 {% block og_url %}{{ get_full_canonical_url(builder, slug=['/authors', author.name]|join('/')) }}{% endblock %}
 {% block location %}birds{% endblock %}
@@ -29,7 +29,7 @@
     bird_page,
     bird_page,
     show_summary=is_index
-    ) }}
+  ) }}
 
   {% if is_index %}
     {{ birds.details(bird_page) }}

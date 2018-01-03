@@ -27,7 +27,7 @@ summary: |
   to the development team.
   He is a core developer of the `Django`_ Python web framework,
   an elected member of the inaugural `Django technical board`_,
-  former-maintainer of the widely-used `pip`_ and `virtualenv`_
+  former maintainer of the widely-used `pip`_ and `virtualenv`_
   package management tools,
   co-author of multiple accepted
   enhancements to the Python language and ecosystem,

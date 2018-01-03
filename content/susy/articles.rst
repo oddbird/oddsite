@@ -1,5 +1,5 @@
 public: yes
-location: 'susysite-articles'
+location: susysite-articles
 template: 'susysite/layout.html'
 grid_template: true
 hide_title: true

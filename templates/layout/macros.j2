@@ -154,7 +154,7 @@
 {%- macro speaker_list(speakers) -%}
   {{- 'by ' -}}
   {%- for speaker in speakers -%}
-    {{- 'and '|safe if loop.last and not loop.first -}}
+    {{- 'and ' if loop.last and not loop.first -}}
     {{- birds_util.get_bird_name(speaker) -}}
     {{- ', ' if (speakers|length > 2) and (not loop.last) else ' ' -}}
   {%- endfor -%}
@@ -193,7 +193,7 @@
         {{ birds_util.card(
           ctx,
           details='birdpage'
-          ) }}
+        ) }}
       {% endif %}
 
       {% for bird in ctx.config.speakers %}
@@ -201,7 +201,7 @@
         {{ birds_util.card(
           birdpage,
           details=true
-          ) }}
+        ) }}
       {% endfor %}
 
       {{ ctx.render_summary()|typogrify }}

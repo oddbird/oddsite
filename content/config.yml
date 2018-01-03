@@ -28,7 +28,6 @@ nav:
         display_text: 'presentations & workshops'
         url: '/speaking/'
   - text: 'about'
-    display_text: 'about'
     subnav:
       - text: 'birds'
         display_text: 'meet the birds'
@@ -46,8 +45,8 @@ nav:
 copyright: '2009–2018'
 email: 'birds@oddbird.net'
 
-location: 'home'
-author: 'oddbird'
+location: home
+author: oddbird
 comments: false
 
 

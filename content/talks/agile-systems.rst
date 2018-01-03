@@ -23,6 +23,6 @@ summary: |
 Agile Design Systems
 ====================
 
-- Using tempaltes and pre-processors for pattern-making in CSS and HTML.
+- Using templates and pre-processors for pattern-making in CSS and HTML.
 - Designing and integrating toolkits that force pattern-making.
 - Examples of what we've done, where we've failed, and where we're headed.

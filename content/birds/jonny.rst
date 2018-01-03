@@ -24,7 +24,7 @@ summary: |
   turning your ideas into functional interactions.
   He has been writing clean,
   well-tested JavaScript web applications
-  for over eight years.
+  for over nine years.
   An active member in the JavaScript community,
   Jonny has authored or contributed to
   numerous open source projects.

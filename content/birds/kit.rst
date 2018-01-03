@@ -28,7 +28,7 @@ summary: |
   and game designer.
   He’s been active in
   Python & Django web development since 2007,
-  and also acts as a process consultant for businesses –
+  and also acts as a process consultant for businesses --
   helping teams find the flow of communication
   that works best for them.
 

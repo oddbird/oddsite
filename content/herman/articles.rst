@@ -1,5 +1,5 @@
 public: yes
-location: 'hermansite-articles'
+location: hermansite-articles
 template: 'hermansite/layout.html'
 grid_template: true
 hide_title: true
