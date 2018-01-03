@@ -69,7 +69,7 @@
     "sass-loader": "^6.0.6",
     "sass-true": "^3.0.2",
     "sassdoc": "^2.5.0",
-    "sassdoc-theme-herman": "1.0.0",
+    "sassdoc-theme-herman": "1.0.1",
     "sinon": "^4.1.2",
     "sinon-chai": "^2.13.0",
     "susy": "^3.0.1",
