@@ -1,4 +1,4 @@
-public: yes
+public: no
 grid_template: true
 headline:
   - type: 'Open Source'
@@ -9,6 +9,7 @@ project:
   - name: 'Accoutrement-Type'
     tagline: 'Manage typography and webfonts in Sass projects'
     source: 'https://github.com/oddbird/accoutrement-type'
+    docs: '/accoutrement-type/docs/'
     status: 'public'
     owner: yes
 contributors:
@@ -55,11 +56,6 @@ and pseudo-elements with generated content.
 .. code:: bash
 
   npm install accoutrement-type
-
-.. callmacro:: content.macros.j2#link_button
-  :url: 'docs/'
-
-  Read The Docs
 
 .. callmacro:: content.macros.j2#rst
   :tag: 'end'

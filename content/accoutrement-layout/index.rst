@@ -1,4 +1,4 @@
-public: yes
+public: no
 grid_template: true
 headline:
   - type: 'Open Source'
@@ -9,6 +9,7 @@ project:
   - name: 'Accoutrement-Layout'
     tagline: 'Layout utilities for Sass projects'
     source: 'https://github.com/oddbird/accoutrement-layout'
+    docs: '/accoutrement-layout/docs/'
     status: 'public'
     owner: yes
 contributors:
@@ -56,11 +57,6 @@ with nesting for extra contextual control.
 .. code:: bash
 
   npm install accoutrement-layout
-
-.. callmacro:: content.macros.j2#link_button
-  :url: 'docs/'
-
-  Read The Docs
 
 .. callmacro:: content.macros.j2#rst
   :tag: 'end'

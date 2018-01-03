@@ -11,6 +11,7 @@ project:
   - name: 'True'
     tagline: 'Unit-testing for Sass developers'
     source: 'https://github.com/oddbird/true'
+    docs: '/true/docs/'
     status: 'public'
     owner: yes
 contributors:
@@ -71,11 +72,6 @@ command-line control and reporting.
 
 .. _Sass: http://sass-lang.com/
 .. _Susy: /susy/
-
-.. callmacro:: content.macros.j2#link_button
-  :url: '/true/docs/'
-
-  Read The Docs
 
 .. callmacro:: content.macros.j2#rst
   :tag: 'end'

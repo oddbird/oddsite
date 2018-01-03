@@ -1,4 +1,4 @@
-public: no
+public: yes
 grid_template: true
 image:
   - src: 'projects/accoutrement.jpg'

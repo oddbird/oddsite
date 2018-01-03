@@ -40,6 +40,7 @@ project:
   - name: 'Susy'
     tagline: 'Your design, our math'
     source: 'https://github.com/oddbird/susy'
+    docs: '/susy/docs/'
     years: '2009–present'
     status: 'public'
     owner: yes

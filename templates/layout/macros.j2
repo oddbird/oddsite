@@ -115,12 +115,14 @@
   project=none,
   slides=none
 ) %}
-  {% if actions or project.url or project.source or slides %}
+  {% set project_actions = project.url or project.source or project.docs %}
+  {% if actions or project_actions or slides %}
     <div class="header-actions">
       {% if project %}
         {% set project = [
-          {'text': 'View app', 'url': project.url},
-          {'text': 'View source', 'url': project.source}
+          {'text': 'Go to app', 'url': project.url},
+          {'text': 'View source', 'url': project.source},
+          {'text': 'Read the docs', 'url': project.docs},
         ] %}
 
         {{ header_action_links(project) }}
