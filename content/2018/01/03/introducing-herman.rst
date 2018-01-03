@@ -46,7 +46,7 @@ available free online.
 .. _Clarity: https://www.clarityconf.com/2017
 .. _Design Systems: https://www.designbetter.co/design-systems-handbook/
 .. _Jina Anne: https://www.patreon.com/sushiandrobots
-.. _handbook: https://www.designbetter.co/design-systems-handbook/
+.. _Handbook: https://www.designbetter.co/design-systems-handbook/
 
 I'm always curious how many attendees at a conference
 are working on enterprise projects
@@ -144,8 +144,8 @@ from design language to components and API.
 
 .. _begin documenting itself: /herman/docs/
 
-The project is not complete,
-and never will be,
+The project is not complete --
+and never will be --
 but that's the point.
 As time goes on,
 we'll keep adding features
@@ -218,7 +218,7 @@ Here are just a few of their options:
     ///   }
 
 Herman supports `all SassDoc annotations`_,
-and we've added style guide features of our own…
+and we've added style guide features of our own...
 
 .. _all SassDoc annotations: http://sassdoc.com/annotations/
 
@@ -262,7 +262,7 @@ you will need to export all your Sass tokens to json,
 using our provided `Sass export utilities`_.
 We're working to make this step even more simple and automatic.
 
-.. _Sass export utilities: http://oddsite.hexxie.com:3000/herman/docs/api_json-export.html
+.. _Sass export utilities: /herman/docs/api_json-export.html
 
 
 We also provide an ``@icons`` annotation
@@ -294,7 +294,7 @@ We've extended SassDoc's ``@example`` annotation
 for languages like `Sass`_ and `Nunjucks`_
 (we're working on support for Vue components).
 Herman will display both input and compiled code,
-along with the rendered output, when necessary:
+along with the rendered output when necessary:
 
 .. _Sass: http://sass-lang.com
 .. _Nunjucks: https://mozilla.github.io/nunjucks/
