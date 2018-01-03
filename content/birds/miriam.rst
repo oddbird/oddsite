@@ -2,7 +2,7 @@ public: yes
 bird: 'miriam'
 headline:
   - tagline: 'Co-Founder & Project Manager'
-    type: 'Meet The Birds…'
+    type: 'Meet the Birds…'
 image:
   - src: 'birds/miriam.jpg'
 adr: 'Denver, CO'

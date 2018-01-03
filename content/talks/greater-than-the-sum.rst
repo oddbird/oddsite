@@ -15,6 +15,6 @@ summary: |
   .. _David: /authors/david/
 
 
-Greater Than The Sum of Parts
+Greater Than the Sum of Parts
 =============================
 

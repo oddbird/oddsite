@@ -2,7 +2,7 @@ public: yes
 bird: 'david'
 headline:
   - tagline: 'Senior Python Developer'
-    type: 'Meet The Birds…'
+    type: 'Meet the Birds…'
 image:
   - src: 'birds/david.jpg'
 adr: 'Goshen, IN'

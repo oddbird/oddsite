@@ -2,7 +2,7 @@ public: yes
 bird: 'stacy'
 headline:
   - tagline: 'Senior User Experience Designer & Developer'
-    type: 'Meet The Birds…'
+    type: 'Meet the Birds…'
 image:
   - src: 'herman/stacy-design-systems-training.jpg'
 adr: 'Aurora, IL'

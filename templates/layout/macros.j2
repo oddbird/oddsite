@@ -182,7 +182,7 @@
   {% set type = headline.type if (headline and headline.type) else none %}
   {% set type = 'Case Study' if (project and client and not type) else type %}
   {% set type = 'Open Source Software' if (project and contributors and not type) else type %}
-  {% set type = 'Meet The Birds…' if (ctx.config.bird and not type) else type %}
+  {% set type = 'Meet the Birds…' if (ctx.config.bird and not type) else type %}
   {% set type = 'Talk Details' if (ctx.config.speakers and not type) else type %}
 
   {{ header_image(ctx) }}

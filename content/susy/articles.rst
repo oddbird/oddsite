@@ -21,7 +21,7 @@ susytwo:
     author: 'Rachel Andrew'
     url: 'https://rachelandrew.co.uk/archives/2015/02/04/css-grid-layout-creating-complex-grids/'
     type: article
-  - title: 'Responsive Takes Flight: Building The 1st Responsive Airline Website'
+  - title: 'Responsive Takes Flight: Building the 1st Responsive Airline Website'
     author: 'Oliver Dore'
     url: 'http://youtu.be/o7I1P9yh8Rc'
     source: 'Virgin Airlines'

@@ -2,7 +2,7 @@ public: yes
 bird: 'sondra'
 headline:
   - tagline: 'Senior User Experience & Brand Designer'
-    type: 'Meet The Birds…'
+    type: 'Meet the Birds…'
 image:
   - src: 'blog/2017/typography/type.jpg'
 adr: 'Denver, CO'

@@ -4,7 +4,7 @@ image:
   - src: 'birds/jonny.jpg'
 headline:
   - tagline: 'Co-Founder & Front-End Lead'
-    type: 'Meet The Birds…'
+    type: 'Meet the Birds…'
 adr: 'Goshen, IN'
 social:
   - twitter: 'jgerigmeyer'

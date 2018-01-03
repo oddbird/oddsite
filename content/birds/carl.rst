@@ -2,7 +2,7 @@ public: yes
 bird: 'carl'
 headline:
   - tagline: 'Co-Founder & Python Consultant'
-    type: 'Meet The Birds…'
+    type: 'Meet the Birds…'
 image:
   - src: 'birds/carl.jpg'
 adr: 'Rapid City, SD'

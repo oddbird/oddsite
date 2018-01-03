@@ -27,5 +27,5 @@ summary: |
   .. _in person: /speaking/
 
 
-Meet The Odd Birds
+Meet the Odd Birds
 ==================

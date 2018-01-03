@@ -674,7 +674,7 @@ recovering from my own talk.
   Video
 
 
-It's Time To Ditch The Grid System
+It's Time To Ditch the Grid System
 ----------------------------------
 
 .. image:: /static/images/blog/2016/cssconf/eh.jpg

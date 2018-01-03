@@ -2,7 +2,7 @@ public: yes
 bird: 'kit'
 headline:
   - tagline: 'Senior Python Developer'
-    type: 'Meet The Birds…'
+    type: 'Meet the Birds…'
 adr: 'Boulder, CO'
 image:
   - src: 'pages/faces-hero.jpg'
