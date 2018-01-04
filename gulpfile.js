@@ -129,55 +129,12 @@ const sasslintTask = (src, failOnError, shouldLog) => {
   return stream;
 };
 
-gulp.task('default', ['eslint', 'sasslint', 'test']);
-gulp.task('dev', ['eslint', 'sasslint', 'sasstest', 'serve']);
-gulp.task('prod', ['webpack-prod', 'update-subproject-docs']);
-
-gulp.task('serve', ['watch', 'runserver']);
-gulp.task('quick-serve', ['runserver', 'webpack']);
-
-gulp.task('test', ['jstest', 'sasstest']);
-
-gulp.task('watch', ['jstest-watch', 'webpack-watch'], () => {
-  // lint scss on changes
-  gulp.watch(paths.SASS, ev => {
-    if (ev.type === 'added' || ev.type === 'changed') {
-      sasslintTask(ev.path, false, true);
-    }
-  });
-
-  // lint all scss when rules change
-  gulp.watch('**/.sass-lint.yml', ['sasslint-nofail']);
-
-  // run sass tests on changes
-  gulp.watch(paths.SASS, ['sasstest']);
-
-  // run webpack to compile svg icons and styleguide assets
-  gulp.watch(
-    [
-      `${paths.ICONS_DIR}**/*.svg`,
-      `${paths.SRC_TEMPLATES_DIR}_icon_template.lodash`,
-      './STYLEGUIDE.md',
-    ],
-    ['webpack'],
-  );
-
-  // compile rstblog assets
-  gulp.watch(
-    [
-      `${paths.SRC_TEMPLATES_DIR}**/*.j2`,
-      `${paths.SRC_TEMPLATES_DIR}**/*.html`,
-      'content/**/*.rst',
-      'content/**/*.yml',
-      'content/static/images/**/*',
-    ],
-    ['dev-rebuild'],
-  );
-});
-
 gulp.task('prettier', () => prettierTask(paths.ALL_JS));
 
-gulp.task('eslint', ['prettier'], () => eslintTask(paths.ALL_JS, true));
+gulp.task(
+  'eslint',
+  gulp.series('prettier', () => eslintTask(paths.ALL_JS, true)),
+);
 
 gulp.task('eslint-nofail', () => eslintTask(paths.ALL_JS));
 
@@ -190,134 +147,6 @@ gulp.task('sasstest', () =>
     .src([`${paths.SASS_TESTS_DIR}test_sass.js`], { read: false })
     .pipe(mocha({ reporter: 'dot' })),
 );
-
-const karmaOnBuild = done => exitCode => {
-  if (exitCode) {
-    beeper();
-    done(
-      new PluginError('karma', {
-        name: 'KarmaError',
-        message: `Failed with exit code: ${exitCode}`,
-      }),
-    );
-  } else {
-    done();
-  }
-  process.exit(exitCode);
-};
-
-gulp.task('jstest', cb => {
-  const karmaConf = require('./karma.common.conf.js');
-  new KarmaServer(karmaConf, karmaOnBuild(cb)).start();
-});
-
-// Use karma watcher instead of gulp watcher for tests
-gulp.task('jstest-watch', () => {
-  const karmaConf = require('./karma.common.conf.js');
-  const conf = Object.assign({}, karmaConf, {
-    autoWatch: true,
-    singleRun: false,
-  });
-  conf.coverageReporter.reporters = [
-    { type: 'html', dir: 'jscov/' },
-    { type: 'text-summary' },
-  ];
-  new KarmaServer(conf).start();
-});
-
-gulp.task('sprites-clean', cb => {
-  fs.remove(`${paths.SRC_TEMPLATES_DIR}_icons.svg`, cb);
-});
-
-gulp.task('sprites', ['sprites-clean'], () =>
-  gulp
-    .src(`${paths.ICONS_DIR}**/*.svg`)
-    .pipe(svgmin())
-    .pipe(
-      svg({
-        id: 'icon-%f',
-        title: '%f icon',
-        templates: [
-          path.join(
-            __dirname,
-            paths.SRC_TEMPLATES_DIR,
-            '_icon_template.lodash',
-          ),
-        ],
-      }),
-    )
-    .pipe(rename('_icons.svg'))
-    .pipe(gulp.dest(paths.SRC_TEMPLATES_DIR)),
-);
-
-gulp.task('runserver', ['browser-sync']);
-
-const getServeOpts = dir => ({
-  server: { baseDir: dir },
-  open: false,
-  logLevel: 'info',
-  logPrefix: 'oddsite',
-  notify: false,
-  files: [`${dir}**/*`],
-  reloadDebounce: 1000,
-});
-
-const getBsCb = cb => (err, bs) => {
-  bs.addMiddleware('*', (req, res) => {
-    res.writeHead(302, { location: '/404.html' });
-    res.end();
-  });
-  cb(err);
-};
-
-gulp.task('browser-sync', cb => {
-  browserSync.init(getServeOpts(paths.DIST_DIR), cb);
-});
-
-gulp.task('prod-serve', cb => {
-  browserSync.init(getServeOpts(paths.PROD_DIST_DIR), getBsCb(cb));
-});
-
-gulp.task('update-spammers', () => {
-  const url =
-    'https://raw.githubusercontent.com/piwik/' +
-    'referrer-spam-blacklist/master/spammers.txt';
-  return download(url).pipe(gulp.dest(paths.SRC_JS_DIR));
-});
-
-const webpackOnBuild = done => (err, stats) => {
-  if (err) {
-    log.error(chalk.red(err.stack || err));
-    if (err.details) {
-      log.error(chalk.red(err.details));
-    }
-  }
-
-  if (err || stats.hasErrors() || stats.hasWarnings()) {
-    beeper();
-  }
-
-  log(stats.toString({ colors: true, chunks: false }));
-
-  if (done) {
-    done(err);
-  }
-};
-
-gulp.task('webpack', ['sprites', 'dev-clean'], cb => {
-  const webpackConfig = require('./webpack.config.js');
-  webpack(webpackConfig).run(webpackOnBuild(cb));
-});
-
-gulp.task('webpack-prod', ['sprites', 'prod-clean', 'update-spammers'], cb => {
-  const webpackProdConfig = require('./webpack.prod.config.js');
-  webpack(webpackProdConfig).run(webpackOnBuild(cb));
-});
-
-gulp.task('webpack-watch', ['sprites', 'dev-clean-html'], () => {
-  const webpackConfig = require('./webpack.config.js');
-  webpack(webpackConfig).watch(300, webpackOnBuild());
-});
 
 gulp.task('dev-clean', cb => {
   fs.emptyDir(paths.DIST_DIR, cb);
@@ -347,10 +176,207 @@ gulp.task('update-subproject-docs', cb => {
 // re-generated files, so we empty the output styleguide/ dir before copying
 // changed files.
 // See https://github.com/oddbird/oddsite/issues/55
-gulp.task('dev-build', ['dev-styleguide-clean'], cb => {
-  spawnTask('python', ['run.py', 'dev'], cb);
+gulp.task(
+  'dev-build',
+  gulp.series('dev-styleguide-clean', cb => {
+    spawnTask('python', ['run.py', 'dev'], cb);
+  }),
+);
+
+gulp.task(
+  'dev-rebuild',
+  gulp.series('dev-clean-html', cb => {
+    spawnTask('python', ['run.py', 'dev'], cb);
+  }),
+);
+
+gulp.task('sprites-clean', cb => {
+  fs.remove(`${paths.SRC_TEMPLATES_DIR}_icons.svg`, cb);
 });
 
-gulp.task('dev-rebuild', ['dev-clean-html'], cb => {
-  spawnTask('python', ['run.py', 'dev'], cb);
+gulp.task(
+  'sprites',
+  gulp.series('sprites-clean', () =>
+    gulp
+      .src(`${paths.ICONS_DIR}**/*.svg`)
+      .pipe(svgmin())
+      .pipe(
+        svg({
+          id: 'icon-%f',
+          title: '%f icon',
+          templates: [
+            path.join(
+              __dirname,
+              paths.SRC_TEMPLATES_DIR,
+              '_icon_template.lodash',
+            ),
+          ],
+        }),
+      )
+      .pipe(rename('_icons.svg'))
+      .pipe(gulp.dest(paths.SRC_TEMPLATES_DIR)),
+  ),
+);
+
+gulp.task('update-spammers', () => {
+  const url =
+    'https://raw.githubusercontent.com/piwik/' +
+    'referrer-spam-blacklist/master/spammers.txt';
+  return download(url).pipe(gulp.dest(paths.SRC_JS_DIR));
 });
+
+const webpackOnBuild = done => (err, stats) => {
+  if (err) {
+    log.error(chalk.red(err.stack || err));
+    if (err.details) {
+      log.error(chalk.red(err.details));
+    }
+  }
+
+  if (err || stats.hasErrors() || stats.hasWarnings()) {
+    beeper();
+  }
+
+  log(stats.toString({ colors: true, chunks: false }));
+
+  if (done) {
+    done(err);
+  }
+};
+
+gulp.task(
+  'webpack',
+  gulp.series(gulp.parallel('sprites', 'dev-clean'), cb => {
+    const webpackConfig = require('./webpack.config.js');
+    webpack(webpackConfig).run(webpackOnBuild(cb));
+  }),
+);
+
+gulp.task(
+  'webpack-prod',
+  gulp.series(gulp.parallel('sprites', 'prod-clean', 'update-spammers'), cb => {
+    const webpackProdConfig = require('./webpack.prod.config.js');
+    webpack(webpackProdConfig).run(webpackOnBuild(cb));
+  }),
+);
+
+gulp.task(
+  'webpack-watch',
+  gulp.series(gulp.parallel('sprites', 'dev-clean-html'), cb => {
+    const webpackConfig = require('./webpack.config.js');
+    webpack(webpackConfig).watch(300, webpackOnBuild(cb));
+  }),
+);
+
+const karmaOnBuild = done => exitCode => {
+  if (exitCode) {
+    beeper();
+    done(
+      new PluginError('karma', {
+        name: 'KarmaError',
+        message: `Failed with exit code: ${exitCode}`,
+      }),
+    );
+  } else {
+    done();
+  }
+  process.exit(exitCode);
+};
+
+gulp.task('jstest', cb => {
+  const karmaConf = require('./karma.common.conf.js');
+  new KarmaServer(karmaConf, karmaOnBuild(cb)).start();
+});
+
+// Use karma watcher instead of gulp watcher for tests
+gulp.task('jstest-watch', cb => {
+  const karmaConf = require('./karma.common.conf.js');
+  const conf = Object.assign({}, karmaConf, {
+    autoWatch: true,
+    singleRun: false,
+  });
+  conf.coverageReporter.reporters = [
+    { type: 'html', dir: 'jscov/' },
+    { type: 'text-summary' },
+  ];
+  new KarmaServer(conf).start();
+  cb();
+});
+
+gulp.task(
+  'watch',
+  gulp.parallel('jstest-watch', 'webpack-watch', cb => {
+    // lint scss on changes
+    gulp.watch(paths.SASS).on('all', (event, filepath) => {
+      if (event === 'add' || event === 'change') {
+        sasslintTask(filepath, false, true);
+      }
+    });
+
+    // lint all scss when rules change
+    gulp.watch('**/.sass-lint.yml', gulp.parallel('sasslint-nofail'));
+
+    // run sass tests on changes
+    gulp.watch(paths.SASS, gulp.parallel('sasstest'));
+
+    // run webpack to compile svg icons and styleguide assets
+    gulp.watch(
+      [
+        `${paths.ICONS_DIR}**/*.svg`,
+        `${paths.SRC_TEMPLATES_DIR}_icon_template.lodash`,
+        './STYLEGUIDE.md',
+      ],
+      gulp.parallel('webpack'),
+    );
+
+    // compile rstblog assets
+    gulp.watch(
+      [
+        `${paths.SRC_TEMPLATES_DIR}**/*.j2`,
+        `${paths.SRC_TEMPLATES_DIR}**/*.html`,
+        'content/**/*.rst',
+        'content/**/*.yml',
+        'content/static/images/**/*',
+      ],
+      gulp.parallel('dev-rebuild'),
+    );
+
+    cb();
+  }),
+);
+
+const getServeOpts = dir => ({
+  server: { baseDir: dir },
+  open: false,
+  logLevel: 'info',
+  logPrefix: 'oddsite',
+  notify: false,
+  files: [`${dir}**/*`],
+  reloadDebounce: 1000,
+});
+
+const getBsCb = cb => (err, bs) => {
+  bs.addMiddleware('*', (req, res) => {
+    res.writeHead(302, { location: '/404.html' });
+    res.end();
+  });
+  cb(err);
+};
+
+gulp.task('runserver', cb => {
+  browserSync.init(getServeOpts(paths.DIST_DIR), cb);
+});
+
+gulp.task('prod-serve', cb => {
+  browserSync.init(getServeOpts(paths.PROD_DIST_DIR), getBsCb(cb));
+});
+
+gulp.task('test', gulp.parallel('jstest', 'sasstest'));
+gulp.task('serve', gulp.parallel('watch', 'runserver'));
+gulp.task('quick-serve', gulp.parallel('runserver', 'webpack'));
+gulp.task(
+  'dev',
+  gulp.series(gulp.parallel('eslint', 'sasslint', 'sasstest'), 'serve'),
+);
+gulp.task('prod', gulp.series('update-subproject-docs', 'webpack-prod'));
+gulp.task('default', gulp.parallel('sasslint', gulp.series('eslint', 'test')));
