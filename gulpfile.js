@@ -371,7 +371,7 @@ gulp.task('prod-serve', cb => {
   browserSync.init(getServeOpts(paths.PROD_DIST_DIR), getBsCb(cb));
 });
 
-gulp.task('test', gulp.parallel('jstest', 'sasstest'));
+gulp.task('test', gulp.series('sasstest', 'jstest'));
 gulp.task('serve', gulp.parallel('watch', 'runserver'));
 gulp.task('quick-serve', gulp.parallel('runserver', 'webpack'));
 gulp.task(
@@ -379,4 +379,7 @@ gulp.task(
   gulp.series(gulp.parallel('eslint', 'sasslint', 'sasstest'), 'serve'),
 );
 gulp.task('prod', gulp.series('update-subproject-docs', 'webpack-prod'));
-gulp.task('default', gulp.parallel('sasslint', gulp.series('eslint', 'test')));
+gulp.task(
+  'default',
+  gulp.series(gulp.parallel('sasslint', 'eslint', 'sasstest'), 'jstest'),
+);
