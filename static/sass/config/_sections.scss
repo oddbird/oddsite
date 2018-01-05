@@ -68,4 +68,15 @@
   height: size('border-thin');
   margin: 0 auto;
   max-width: size('full-content');
+
+  &:last-child {
+    @include before('• • •') {
+      @include position(null);
+      background: color('background');
+      color: color($color);
+      font-size: size('small');
+      padding: 0 size('half-shim');
+      transform: translate3d(-50%, -50%, 0);
+    }
+  }
 }

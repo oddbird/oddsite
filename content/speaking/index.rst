@@ -22,7 +22,35 @@ summary: |
   .. _improve design systems: /talks/agile-systems-workshop/
 
 
-Speaking Engagements
-====================
+Speaking & Training
+===================
 
 .. callmacro:: community/events.macros.j2#by_author
+
+.. callmacro:: content.macros.j2#divider
+
+.. callmacro:: content.macros.j2#image_block
+  :image: '/static/images/pages/jssass.png'
+  :url: 'https://www.sitepoint.com/premium/books/jump-start-sass'
+  :headline: 'Industry-Leading Expertise'
+
+  **Founders** `Miriam`_ **and** `Carl`_
+  **are internationally known**
+  for their open source
+  contributions to `Sass/CSS`_ and `Django/Python`_,
+  respectively.
+  We've written the books,
+  contributed to the languages,
+  and built the tools for other developers.
+  *We don't just follow best-practice –
+  we help define it.*
+
+  .. _Miriam: /authors/miriam/
+  .. _Carl: /authors/carl/
+  .. _Sass/CSS: http://sass-lang.com
+  .. _Django/Python: https://www.djangoproject.com/
+
+  .. callmacro:: content.macros.j2#link_button
+    :url: '/contact/'
+
+    Jump Start Your Project

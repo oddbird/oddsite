@@ -3,16 +3,19 @@ location: design-systems-training
 pageclasses: services-layout
 grid_template: true
 headline:
-  - title: 'Design Systems Training'
-    tagline: 'Want to reduce technical debt and scale your applications?'
+  - tagline: 'Want to reduce technical debt and scale your applications?'
     type: 'Services'
 image:
   - src: '/herman/stacy-design-systems-training.jpg'
 summary: |
-  **OddBird provides training and implementation consulting in
-  style guides, pattern libraries, layout design, and architecture.**
+  **OddBird provides** `training`_
+  **and implementation consulting around
+  style guides, pattern libraries, layout design,
+  and front-end architecture.**
   If you're a project manager, scrum master, or team leader,
   why not make your job easier?
+
+  .. _training: /speaking/
 
   .. callmacro:: content.macros.j2#link_button
     :url: '/contact/'
@@ -20,8 +23,8 @@ summary: |
     Let's chat about training
 
 
-Design Systems Training
-=======================
+Design Systems
+==============
 
 .. callmacro:: content.macros.j2#rst
   :tag: 'start'

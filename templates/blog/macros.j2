@@ -4,7 +4,11 @@
 {% import 'birds/utility.macros.j2' as birds %}
 
 
-{% macro list(post, section='blog-post') %}
+{% macro list(post, section='blog-post', divider=none) %}
+  {% if divider %}
+    {{ content.divider() }}
+  {% endif %}
+
   <article {{ utility.attr_if('data-module', section) }}>
     {% set heading = 'h2' if section else 'h3' %}
     <{{ heading }} class="post-title">
