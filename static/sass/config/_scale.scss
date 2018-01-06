@@ -78,6 +78,9 @@ $pattern-sizes: (
   'border-thin': 1px,
   'border-radius': 2rem,
 
+  'logo-y': 'gutter' ('times': 3),
+  'logo-x': 'logo-y' ('times': 2),
+
   'bird-face': 6rem,
   'half-bird-face': 'bird-face' ('multiple': 0.5),
 

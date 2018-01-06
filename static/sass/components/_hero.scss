@@ -14,9 +14,11 @@
     background-image: url('../images/multicolor-wash.png');
   }
 
+  [data-location='home'] & {
+    background-position: 60% negative('double-gutter');
+  }
 
   // Text shadow to first <p> in body so it is more readable above watercolors
-  // -------------------------------------------------------------------------
   [data-module='rst-body'] {
     > p {
       &:first-child {
@@ -38,7 +40,6 @@
     background-image: linear-gradient(50deg, color('background') 80%, transparent 80%);
     margin-bottom: 0;
     margin-top: negative('double-gutter');
-    max-width: none;
     padding-right: calc(20% + #{size('shim')}); // 100% - 80% (angle) = 20% then add padding
     position: relative;
     z-index: 1;

@@ -1,0 +1,34 @@
+// Home Page
+// =========
+
+
+.home-cta {
+  @include clearfix;
+  margin: 0 auto;
+  max-width: size('medium-page');
+  padding: size('spacer') 0 size('gutter');
+}
+
+
+.home-title {
+  @include text-shadow;
+  font-size: calc(1rem + 1vw);
+  margin-bottom: size('shim');
+  text-align: center;
+}
+
+.home-description {
+  font-size: calc(1rem + 2vw);
+  font-style: italic;
+  line-height: 1.4;
+  margin-bottom: size('gutter');
+
+  p {
+    margin-top: 0;
+  }
+}
+
+
+.home-action {
+  text-align: center;
+}

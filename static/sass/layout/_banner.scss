@@ -73,12 +73,8 @@
 }
 
 .logo-icon {
-  height: 6rem;
-  width: 13rem;
-
-  @include below('nav-medium') {
-    width: 10rem;
-  }
+  height: size('logo-y');
+  width: size('logo-x');
 
   [data-location='home'] &,
   [data-location='susysite'] & ,

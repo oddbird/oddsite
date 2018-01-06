@@ -1,37 +1,31 @@
 public: yes
 grid_template: true
-image:
-  - src: 'pages/faces-hero.jpg'
-headline:
-  - title: 'We help you meet your goals'
-    type: "We don't just write the code…"
-summary: |
-  **OddBird provides the full range of**
-  `web application strategy, design, and development`_ –
-  integrating with your company to
-  focus every decision around
-  the goals and needs of your users,
-  so that business strategy and user-experience
-  align for long-term success.
-
-  .. callmacro:: content.macros.j2#link_button
-    :url: '/contact/'
-
-    Schedule a free consultation
-
-  .. _`web application strategy, design, and development`: /work/
+hide_title: true
 
 
 Software for Humans
 ===================
 
+.. callmacro:: home.macros.j2#home_cta
+  :title: 'Custom Web & Mobile Applications'
+  :action: 'Schedule a free consultation'
+
+  We help companies integrate
+  product `strategy`_, `design`_, and `development`_
+  in pursuit of long-term success.
+
+  .. _`strategy`: /sevices/
+  .. _`design`: /sevices/
+  .. _`development`: /sevices/
+
+.. callmacro:: projects/splash.macros.j2#splash_list
+  :headline: 'Featured Clients'
+
+.. callmacro:: content.macros.j2#divider
 
 .. callmacro:: content.macros.j2#get_quotes
   :page: 'work/coachhub'
   :slug: 'remote'
-
-.. callmacro:: projects/splash.macros.j2#splash_list
-  :headline: 'Featured Partners'
 
 .. callmacro:: content.macros.j2#divider
 
@@ -82,14 +76,10 @@ Software for Humans
   :url: 'https://www.sitepoint.com/premium/books/jump-start-sass'
   :headline: 'Industry-Leading Expertise'
 
-  **Founders** `Miriam`_ **and** `Carl`_
-  **are internationally known**
-  for their open source
-  contributions to `Sass/CSS`_ and `Django/Python`_,
-  respectively.
-  We've written the books,
+  **We wrote the books,
   contributed to the languages,
-  and built the tools for other developers.
+  and built the tools**
+  that other developers rely on.
   *We don't just follow best-practice –
   we help define it.*
 
