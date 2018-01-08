@@ -1,31 +1,42 @@
 public: yes
 grid_template: true
 hide_title: true
+splash:
+  - big: |
+      Digital Product
+      <a href="/work/services/">Design</a> &
+      <a href="/work/services/">Development</a>,
+      Integrated for Long-Term Success.<span class="home-star">*</span>
+    small: |
+      |*| We help build and refactor
+      custom `mobile & web applications`_.
+      You’ll get a `complete team`_ of designers and developers
+      ready to integrate with your company,
+      scale your application,
+      and improve your results.
+
+      .. |*| raw:: html
+
+        <span class="home-star">*</span>
+
+      .. _`mobile & web applications`: /work/
+      .. _complete team: /birds/
+
+    action: Schedule a free consultation
+    target: /contact/
 
 
 Software for Humans
 ===================
 
 .. callmacro:: home.macros.j2#home_cta
-  :title: 'Custom Web & Mobile Applications'
-  :action: 'Schedule a free consultation'
+  :page: 'index'
+  :slug: 'splash'
 
-  We help companies integrate
-  product `strategy`_, `design`_, and `development`_
-  in pursuit of long-term success.
-
-  .. _`strategy`: /sevices/
-  .. _`design`: /sevices/
-  .. _`development`: /sevices/
 
 .. callmacro:: projects/splash.macros.j2#splash_list
   :headline: 'Featured Clients'
 
-.. callmacro:: content.macros.j2#divider
-
-.. callmacro:: content.macros.j2#get_quotes
-  :page: 'work/coachhub'
-  :slug: 'remote'
 
 .. callmacro:: content.macros.j2#divider
 
@@ -39,14 +50,11 @@ Software for Humans
 
   **Software is successful
   when it solves real problems in people's lives.**
-  Do you have a vision
-  for helping users handle complex issues?
-  Let's work together to find the best solutions
-  using an agile and collaborative process.
-  With 100% test coverage,
+  We can help you find those solutions --
+  with 100% test coverage,
   robust architecture,
-  and living style guides,
-  *you'll have low on-going maintenance,
+  and living style guides.
+  *Enjoy low on-going maintenance,
   and significant savings for years.*
 
   .. callmacro:: content.macros.j2#link_button
@@ -57,19 +65,6 @@ Software for Humans
 .. callmacro:: content.macros.j2#get_quotes
   :page: 'work/coachhub'
   :slug: 'handoff'
-
-.. callmacro:: projects/splash.macros.j2#splash_list
-  :has: 'contributors'
-  :headline: 'Building the Tools Developers Use'
-
-.. callmacro:: content.macros.j2#divider
-
-.. callmacro:: content.macros.j2#blockquote
-  :content: 'Miriam has become one of the most notable
-             creators of Sass plugins and best practices.'
-  :name: 'Chris Eppstein'
-  :role: 'Sass Core Developer'
-  :url: '/open-source/'
 
 .. callmacro:: content.macros.j2#image_block
   :image: '/static/images/pages/jssass.png'
@@ -94,5 +89,10 @@ Software for Humans
     Jump Start Your Project
 
 .. callmacro:: content.macros.j2#get_quotes
-  :page: 'work/timedesigner'
-  :slug: 'innovative'
+  :page: 'work/coachhub'
+  :slug: 'remote'
+
+
+.. callmacro:: projects/splash.macros.j2#splash_list
+  :headline: 'Tools for Developers'
+  :slugs: ['herman/index', 'open-source/django', 'susy/index']

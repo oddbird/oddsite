@@ -18,11 +18,10 @@ tasks:
   - Project Architecture
   - Responsive Styles
 brag: |
-  We helped Mozilla **Quality Assurance** manage
-  their distributed process –
-  making international volunteer
-  **software-testing & reporting** a breeze
-  across languages and operating systems.
+  Distributed
+  **software testing & reporting**
+  for quality assurance
+  across platforms, versions, and languages.
 quotes:
   - text: |
       I consider **Mozilla's MozTrap** to be one of the best

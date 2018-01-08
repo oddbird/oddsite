@@ -3,32 +3,72 @@
 
 
 .home-cta {
-  @include clearfix;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
   margin: 0 auto;
-  max-width: size('medium-page');
-  padding: size('spacer') 0 size('gutter');
+
+  @include above('home-break') {
+    display: flex;
+    padding: 0 size('gutter');
+  }
 }
 
 
 .home-title {
+  @include font-family('body');
   @include text-shadow;
-  font-size: calc(1rem + 1vw);
-  margin-bottom: size('shim');
-  text-align: center;
+  color: color('action-alt');
+  flex: 0 0 auto;
+  font-size: calc(1rem + 6.5vw);
+  font-style: italic;
+  font-weight: normal;
+  line-height: 1.2;
+  margin: 0 auto size('double-gutter');
+  max-width: 100%;
+
+  a {
+    #{$link} {
+      color: inherit;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    #{$focus} {
+      color: color('action-hover');
+      text-decoration: underline;
+    }
+  }
 }
 
+
+.home-description,
+.home-action {
+  flex: 1 1 30%;
+}
+
+
 .home-description {
-  font-size: calc(1rem + 2vw);
   font-style: italic;
-  line-height: 1.4;
-  margin-bottom: size('gutter');
 
   p {
     margin-top: 0;
+  }
+
+  @include above('home-break') {
+    margin-right: size('gutter');
   }
 }
 
 
 .home-action {
-  text-align: center;
+  @include above('home-break') {
+    text-align: center;
+  }
+}
+
+
+.home-star {
+  color: color('action');
+  font-weight: bold;
 }

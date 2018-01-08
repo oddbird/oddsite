@@ -137,6 +137,7 @@ $column-sizes: (
   'extend-large': 90vw,
   'extend-full': 100vw,
   'wide-column': 90%,
+  'home-break': 'full-content' ('convert-units': 'em'),
 );
 
 $sizes: map-merge($sizes, $column-sizes);

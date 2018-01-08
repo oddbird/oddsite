@@ -14,10 +14,6 @@
     background-image: url('../images/multicolor-wash.png');
   }
 
-  [data-location='home'] & {
-    background-position: 60% negative('double-gutter');
-  }
-
   // Text shadow to first <p> in body so it is more readable above watercolors
   [data-module='rst-body'] {
     > p {

@@ -532,9 +532,9 @@ accoutrement-scale@^5.0.1:
   version "5.0.2"
   resolved "https://registry.yarnpkg.com/accoutrement-scale/-/accoutrement-scale-5.0.2.tgz#2589252f8fd1eaf579a7d9f72343e81efe08259c"
 
-accoutrement-type@^3.1.0:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/accoutrement-type/-/accoutrement-type-3.1.0.tgz#5306b176672cdc49fbba6cf7b719fa4d7ae65ec2"
+accoutrement-type@3.2.0-beta.1:
+  version "3.2.0-beta.1"
+  resolved "https://registry.yarnpkg.com/accoutrement-type/-/accoutrement-type-3.2.0-beta.1.tgz#02299f7b50edb601dbb5c08221a8ab39fb0a1e8c"
 
 acorn-dynamic-import@^2.0.0:
   version "2.0.2"

@@ -5,6 +5,8 @@
 // Base
 // ----
 
+@include import-webfonts;
+
 :root {
   @include font-family('body');
   font-size: calc(100% + 0.3vw);
@@ -29,6 +31,14 @@
 .is-hidden,
 .wf-loading {
   @include is-hidden;
+}
+
+
+// Ampersands
+// ----------
+
+.amp {
+  @include font-family('amp');
 }
 
 

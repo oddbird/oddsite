@@ -2,20 +2,26 @@
 
 
 {% macro home_cta(
-  title,
-  action,
-  url='/contact/'
+  page,
+  slug
 ) %}
-  <section class="home-cta">
-    <h1 class="home-title">{{ title }}</h1>
-    <div class="home-description">
-      {{ caller()|rst }}
-    </div>
-    <div class="home-action">
-      {{ content.link_button(
-        content=action,
-        url=url
-        ) }}
-    </div>
-  </section>
+  {% set page = page|get_config(slug) %}
+  {% set splash = page[0] if page else none %}
+
+  {% if splash %}
+    <section class="home-cta">
+      <h1 class="home-title">{{ splash.big|typogrify|safe }}</h1>
+      <div class="home-description">
+        {{ splash.small|rst }}
+      </div>
+      <div class="home-action">
+        {{ content.link_button(
+          content=splash.action,
+          url=splash.target
+          ) }}
+      </div>
+    </section>
+  {% else %}
+    {{ page|length }}
+  {% endif %}
 {% endmacro %}
