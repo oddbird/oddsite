@@ -1,4 +1,5 @@
 public: yes
+location: home
 grid_template: true
 hide_title: true
 splash:
