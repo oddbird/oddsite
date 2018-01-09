@@ -18,6 +18,7 @@ splash:
       .. |*| raw:: html
 
         <span class="home-star">*</span>
+        <abbr title="Too long; didn't read…">tl;dr</abbr>
 
       .. _`mobile & web applications`: /work/
       .. _complete team: /birds/
@@ -73,10 +74,10 @@ Software for Humans
 
 .. callmacro:: utility.macros.j2#link_if
   :url: '/birds/'
+  :class: 'home-birds'
 
   .. callmacro:: utility.macros.j2#icon
     :name: 'allbirds'
-    :class: 'home-birds'
     :alt: 'Meet the birds: Miriam, Jonny, Carl, Sondra, David, Stacy, and Kit'
 
 .. callmacro:: content.macros.j2#get_quotes

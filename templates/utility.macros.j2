@@ -33,8 +33,23 @@
 {% endmacro %}
 
 
-{% macro icon(name, alt=none, size=none, class=none) %}
-  <svg data-icon="{{ name }}" {{ attr_if('data-size', size) }} {{ attr_if('class', class) }}>
+{% macro icon(name, alt=none, size=none, class=none, viewbox=none) %}
+  {% set boxes = {
+    'allbirds': '0 0 2280.12 545.64',
+    'carl': '0 0 456.5 456.5',
+    'david': '0 0 456.5 456.5',
+    'jonny': '0 0 456.5 456.5',
+    'kit': '0 0 456.5 456.5',
+    'miriam': '0 0 456.5 456.5',
+    'sondra': '0 0 456.5 456.5',
+    'stacy': '0 0 456.5 456.5',
+    'herman': '0 0 1391.9 1022',
+    'susy': '0 0 1152 1024'
+  } %}
+
+  {% set viewbox = boxes[name] or viewbox %}
+
+  <svg data-icon="{{ name }}" {{ attr_if('viewBox', viewbox) }} {{ attr_if('data-size', size) }} {{ attr_if('class', class) }}>
     {%- if alt -%}
       <title>{{ alt }}</title>
     {%- endif -%}

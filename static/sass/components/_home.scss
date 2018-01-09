@@ -55,6 +55,11 @@
     margin-top: 0;
   }
 
+  abbr {
+    font-style: normal;
+    font-weight: bold;
+  }
+
   @include above('home-break') {
     margin-right: size('gutter');
   }
@@ -75,11 +80,8 @@
 
 
 .home-birds {
+  display: block;
   fill: color('text');
-
-  &,
-  & use {
-    height: auto;
-    width: 100%;
-  }
+  margin: 0 auto;
+  max-width: size('medium-page');
 }

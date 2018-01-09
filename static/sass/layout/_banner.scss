@@ -74,7 +74,7 @@
 
 .logo-icon {
   height: size('logo-y');
-  width: size('logo-x');
+  width: auto;
 
   [data-location='home'] &,
   [data-location='susysite'] & ,
