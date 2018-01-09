@@ -42,7 +42,7 @@
   {%- set override = 'speaking' if config.speakers else override -%}
   {%- set override = 'open-source' if config.contributors else override -%}
   {%- set override = 'case-studies' if config.client else override -%}
-  {{- override or super() -}}
+  {{- config.location or override or super() -}}
 {%- endblock %}
 
 

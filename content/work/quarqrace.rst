@@ -21,11 +21,9 @@ tasks:
   - Project Architecture
   - Responsive Styles
 brag: |
-  We worked with athletic professionals
-  at SRAM and Quarq
-  to deliver **real-time race analytics**
-  for spectators, commentators, and coaches –
-  now used by **IronMan** and **Enduro** races
+  **Real-time race analytics**
+  used by spectators & coaches
+  at **IronMan** & **Enduro** events
   around the world.
 quotes:
   - text: |

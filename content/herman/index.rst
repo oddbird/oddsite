@@ -52,13 +52,9 @@ quotes:
     role: 'Frontend Architect'
     slug: 'dream'
 brag: |
-  Created by OddBird,
-  Herman provides
-  **fully-integrated style documentation** –
-  from **font specimens** and **color palettes** to
-  Nunjucks macros and rendered components –
-  for **automated pattern libraries**,
-  and **style guides**.
+  Fully-integrated style documentation
+  for **automated pattern libraries**
+  and **style guides** on a budget.
 summary: |
   **Design systems streamline development,
   communication, and consistency** --

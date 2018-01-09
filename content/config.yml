@@ -25,7 +25,7 @@ nav:
         display_text: 'design systems'
         url: '/services/design-systems-training/'
       - text: 'speaking'
-        display_text: 'presentations & workshops'
+        display_text: 'speaking & training'
         url: '/speaking/'
   - text: 'about'
     subnav:

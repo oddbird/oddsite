@@ -3,9 +3,17 @@
 {% import 'content.macros.j2' as content %}
 
 
-{% macro splash_list(has='client', headline=none, slugs=none) %}
+{% macro splash_list(
+  has='client',
+  headline=none,
+  url=none,
+  slugs=none
+) %}
   <section class="splash-projects">
-    {{ content.divider(title=headline) }}
+    {{ content.divider(
+      title=headline,
+      url=url
+    ) }}
     <div class='splash-section extend-full'>
       {% if slugs %}
         {% for slug in slugs %}

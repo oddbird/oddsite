@@ -203,7 +203,6 @@ gulp.task(
       .pipe(
         svg({
           id: 'icon-%f',
-          title: '%f icon',
           templates: [
             path.join(
               __dirname,

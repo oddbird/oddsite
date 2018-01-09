@@ -1,0 +1,100 @@
+// Home Page
+// =========
+
+
+.home-cta {
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+
+  @include above('full-content') {
+    display: flex;
+    padding: 0 size('gutter');
+  }
+}
+
+
+.home-title {
+  @include font-family('body');
+  @include text-shadow;
+  color: color('action-alt');
+  flex: 0 0 auto;
+  font-size: calc(1rem + 6.5vw);
+  font-style: italic;
+  font-weight: normal;
+  line-height: 1.2;
+  margin: 0 auto size('double-gutter');
+  max-width: 100%;
+
+  a {
+    #{$link} {
+      color: inherit;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    #{$focus} {
+      color: color('action-hover');
+      text-decoration: underline;
+    }
+  }
+}
+
+
+.home-description,
+.home-action {
+  flex: 1 1 30%;
+}
+
+
+.home-description {
+  font-style: italic;
+
+  p {
+    margin-top: 0;
+  }
+
+  abbr {
+    font-style: normal;
+    font-weight: bold;
+  }
+
+  @include above('full-content') {
+    margin-right: size('gutter');
+  }
+}
+
+
+.home-action {
+  @include above('full-content') {
+    text-align: center;
+  }
+}
+
+
+.home-star {
+  color: color('action');
+  font-weight: bold;
+}
+
+
+.home-birds {
+  #{$link} {
+    color: color('text');
+    display: block;
+    margin: 0 auto;
+    max-width: size('medium-page');
+  }
+
+  #{$focus} {
+    color: color('action-hover');
+  }
+
+  [data-icon] {
+    height: auto;
+    width: 100%;
+  }
+
+
+}
