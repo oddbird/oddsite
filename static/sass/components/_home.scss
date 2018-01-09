@@ -72,3 +72,14 @@
   color: color('action');
   font-weight: bold;
 }
+
+
+.home-birds {
+  fill: color('text');
+
+  &,
+  & use {
+    height: auto;
+    width: 100%;
+  }
+}

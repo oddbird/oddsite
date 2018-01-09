@@ -31,13 +31,17 @@
   Dividers
   --------
 #}
-{% macro divider(title=none, small=true) %}
+{% macro divider(
+  title=none,
+  url=none,
+  small=true
+) %}
   {% set scale = 'small' if small else 'large' %}
   <div divider="{{ scale }}">
     <hr divider-line="{{ scale }}" />
     {% if title %}
       <h2 divider-title="{{ scale }}">
-        {{ title|typogrify }}
+        {{ utility.link_if(title, url) }}
       </h2>
     {% endif %}
   </div>

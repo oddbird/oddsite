@@ -36,13 +36,14 @@ Software for Humans
 
 .. callmacro:: projects/splash.macros.j2#splash_list
   :headline: 'Featured Clients'
+  :url: '/work/'
 
 
 .. callmacro:: content.macros.j2#divider
 
 .. callmacro:: content.macros.j2#get_quotes
-  :page: 'work/medcurbside'
-  :slug: 'goals'
+  :page: 'work/coachhub'
+  :slug: 'remote'
 
 .. callmacro:: content.macros.j2#image_block
   :image: '/static/images/projects/trig-mobile.jpg'
@@ -66,6 +67,22 @@ Software for Humans
   :page: 'work/coachhub'
   :slug: 'handoff'
 
+
+.. callmacro:: content.macros.j2#divider
+  :title: 'Human-Driven Design'
+
+.. callmacro:: utility.macros.j2#link_if
+  :url: '/birds/'
+
+  .. callmacro:: utility.macros.j2#icon
+    :name: 'allbirds'
+    :class: 'home-birds'
+    :alt: 'Meet the birds: Miriam, Jonny, Carl, Sondra, David, Stacy, and Kit'
+
+.. callmacro:: content.macros.j2#get_quotes
+  :page: 'work/medcurbside'
+  :slug: 'goals'
+
 .. callmacro:: content.macros.j2#image_block
   :image: '/static/images/pages/jssass.png'
   :url: 'https://www.sitepoint.com/premium/books/jump-start-sass'
@@ -86,13 +103,14 @@ Software for Humans
   .. callmacro:: content.macros.j2#link_button
     :url: '/contact/'
 
-    Jump Start Your Project
+    Jump start your project
 
 .. callmacro:: content.macros.j2#get_quotes
-  :page: 'work/coachhub'
-  :slug: 'remote'
+  :page: 'work/timedesigner'
+  :slug: 'innovative'
 
 
 .. callmacro:: projects/splash.macros.j2#splash_list
   :headline: 'Tools for Developers'
+  :url: '/open-source/'
   :slugs: ['herman/index', 'open-source/django', 'susy/index']
