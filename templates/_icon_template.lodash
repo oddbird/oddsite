@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" hidden><% _.forEach( icons, function( icon ){ %>
-  <symbol id="<%= icon.id %>" viewBox="<%= icon.svg.viewBox %>"<% if (icon.width) {%> width="<%= icon.width %>"<% }%><% if (icon.height) {%> height="<%= icon.height %>"<% }%>>
+  <symbol id="<%= icon.id %>" viewBox="<%= icon.svg.viewBox %>">
     <%= icon.svg.content %>
   </symbol><% }); %>
 </svg>
