@@ -80,6 +80,22 @@ Software for Humans
     :name: 'allbirds'
     :alt: 'Meet the birds: Miriam, Jonny, Carl, Sondra, David, Stacy, and Kit'
 
+.. callmacro:: content.macros.j2#rst
+  :tag: 'start'
+
+**Our process is agile, collaborative, friendly, and transparent.**
+You'll have direct access to `our entire team`_,
+as we get to know your goals inside and out.
+
+.. _our entire team: /birds/
+
+.. callmacro:: content.macros.j2#rst
+  :tag: 'end'
+
+.. callmacro:: content.macros.j2#divider
+
+
+
 .. callmacro:: content.macros.j2#get_quotes
   :page: 'work/medcurbside'
   :slug: 'goals'
