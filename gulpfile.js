@@ -199,19 +199,10 @@ gulp.task(
   gulp.series('sprites-clean', () =>
     gulp
       .src(`${paths.ICONS_DIR}**/*.svg`)
-      .pipe(
-        svgmin({
-          plugins: [
-            {
-              removeDimensions: false,
-            },
-          ],
-        }),
-      )
+      .pipe(svgmin())
       .pipe(
         svg({
           id: 'icon-%f',
-          title: '%f icon',
           templates: [
             path.join(
               __dirname,
