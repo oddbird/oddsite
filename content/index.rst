@@ -89,9 +89,9 @@ Software for Humans
   :url: 'https://www.sitepoint.com/premium/books/jump-start-sass'
   :headline: 'Industry-Leading Expertise'
 
-  **We wrote the books,
-  contributed to the languages,
-  and built the tools**
+  **We write the books,
+  contribute to the languages,
+  and build the tools**
   that other developers rely on.
   *We don't just follow best-practice –
   we help define it.*
