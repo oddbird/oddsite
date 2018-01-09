@@ -8,7 +8,7 @@
   justify-content: center;
   margin: 0 auto;
 
-  @include above('home-break') {
+  @include above('full-content') {
     display: flex;
     padding: 0 size('gutter');
   }
@@ -60,14 +60,14 @@
     font-weight: bold;
   }
 
-  @include above('home-break') {
+  @include above('full-content') {
     margin-right: size('gutter');
   }
 }
 
 
 .home-action {
-  @include above('home-break') {
+  @include above('full-content') {
     text-align: center;
   }
 }
@@ -80,8 +80,21 @@
 
 
 .home-birds {
-  display: block;
-  fill: color('text');
-  margin: 0 auto;
-  max-width: size('medium-page');
+  #{$link} {
+    color: color('text');
+    display: block;
+    margin: 0 auto;
+    max-width: size('medium-page');
+  }
+
+  #{$focus} {
+    color: color('action-hover');
+  }
+
+  [data-icon] {
+    height: auto;
+    width: 100%;
+  }
+
+
 }

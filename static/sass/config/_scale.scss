@@ -88,7 +88,7 @@ $pattern-sizes: (
 
   'nav-small': 20rem,
   'nav-medium': 35rem,
-  'nav-wide': 50rem,
+  'nav-wide': 55rem,
 
   'dropdown-narrow': 9rem,
   'dropdown-wide': 14rem,
@@ -137,7 +137,6 @@ $column-sizes: (
   'extend-large': 90vw,
   'extend-full': 100vw,
   'wide-column': 90%,
-  'home-break': 'full-content' ('convert-units': 'em'),
 );
 
 $sizes: map-merge($sizes, $column-sizes);
