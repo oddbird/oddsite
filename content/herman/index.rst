@@ -53,7 +53,7 @@ quotes:
     slug: 'dream'
 brag: |
   Fully-integrated style documentation
-  for **automated pattern libraries**,
+  for **automated pattern libraries**
   and **style guides** on a budget.
 summary: |
   **Design systems streamline development,
