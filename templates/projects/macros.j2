@@ -91,3 +91,32 @@
     </div>
   {% endif %}
 {% endmacro %}
+
+
+{% macro service_group(title) %}
+  <div class="service-group">
+    <h2>{{ title|typogrify }}</h2>
+
+    {{ caller()|rst }}
+  </div>
+{% endmacro %}
+
+
+{% macro process(title, slug, data) %}
+  {% set data = slug|get_config(data) %}
+
+  {% if data %}
+    <section class='process extend-full'>
+        <h2>{{ title|typogrify }}</h2>
+
+      <ol>
+        {% for feature in data %}
+          <li>
+            <h3>{{ feature.title|typogrify }}</h3>
+            <p>{{ feature.body|rst }}</p>
+          </li>
+        {% endfor %}
+      </ol>
+    </section>
+  {% endif %}
+{% endmacro %}

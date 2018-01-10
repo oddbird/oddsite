@@ -5,59 +5,6 @@ grid_template: true
 headline:
   - tagline: 'Helping you launch your idea quickly'
     type: 'Services'
-after:
-  - include: 'projects/_process.html.j2'
-    title: 'The OddBird Process is...'
-  - include: 'projects/_services.html.j2'
-    title: 'Our Services'
-process:
-  - title: 'Lean <i>&</i> Agile'
-    body: |
-      We use a lean and agile process to deploy & integrate
-      new functionality frequently, aiming to deliver usable product
-      launches as early and often as possible.
-  - title: 'Transparent <i>&</i> Interactive'
-    body: |
-      We encourage clients to stay closely connected
-      with the daily progress,
-      offering frequent feedback and re-prioritization via
-      <a href="http://www.pivotaltracker.com/">Pivotal Tracker</a>.
-  - title: 'Accessible <i>&</i> Responsive'
-    body: |
-      We use the accessible open web stack:
-      semantic HTML5, unobtrusive JavaScript, and advanced CSS –
-      backed by <a href="https://www.python.org/">Python</a> &
-      <a href="https://www.djangoproject.com/">Django</a> on the server.
-services:
-  - title: 'Our Services:'
-    data:
-      - Custom web app design & development
-      - Django, Sass, & Python expertise
-      - Agile project management
-      - Web best practices
-      - Brand & logo design
-      - User experience design
-      - Responsive interface design
-      - Content strategy
-      - Information architecture
-      - 100% test coverage
-      - Maintainable & documented code
-      - Automated pattern libraries
-      - Usability and concept testing
-      - WCAG accessibility testing
-      - Content strategy & marketing consultation
-      - Developer training workshops
-  - title: 'We Have Partnered With:'
-    data:
-      - 'Educators'
-      - 'HIPAA-compliant wellness providers'
-      - 'Non-profits and community organizations'
-      - 'Professional gear manufacturers'
-      - 'Startups & enterprise companies'
-      - 'Urban planners'
-      - 'Data analysts'
-      - 'Software companies'
-      - 'Theaters, writers, and other artists'
 pitch:
   - title: 'Project Summary'
     icon: 'map'
@@ -196,8 +143,8 @@ investors:
 .. callmacro:: content.macros.j2#rst
   :tag: 'start'
 
-Project Discovery & Planning, with Development Estimate
--------------------------------------------------------
+Project Discovery & Planning with Development Estimate
+------------------------------------------------------
 
 ``$8000`` – everything you need to start development
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

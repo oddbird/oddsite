@@ -4,6 +4,28 @@ grid_template: true
 headline:
   - tagline: 'Fully-integrated to achieve your goals'
     type: 'Services'
+process:
+  - title: 'Lean & Agile'
+    body: |
+      We use a lean and agile process to deploy & integrate
+      new functionality frequently, aiming to deliver usable product
+      launches as early and often as possible.
+  - title: 'Transparent & Interactive'
+    body: |
+      We encourage clients to stay closely connected
+      with the daily progress,
+      offering frequent feedback and re-prioritization via
+      `Pivotal Tracker`_.
+
+      .. _Pivotal Tracker: http://www.pivotaltracker.com/
+  - title: 'Accessible & Responsive'
+    body: |
+      We use the accessible open web stack:
+      semantic HTML5, unobtrusive JavaScript, and advanced CSS –
+      backed by `Python`_ & `Django`_ on the server.
+
+      .. _Python: https://www.python.org/
+      .. _Django: https://www.djangoproject.com/
 summary: |
   **OddBird is a full-stack design & development agency**.
   Our team is fully-integrated,
@@ -109,3 +131,48 @@ and we have a track record of happy clients to show for it.
 .. callmacro:: content.macros.j2#get_quotes
   :page: 'work/coachhub'
   :slug: 'handoff'
+
+.. callmacro:: projects/macros.j2#process
+  :title: 'Our process is...'
+  :slug: 'services/index'
+  :data: 'process'
+
+.. wrap:: section
+  :class: services
+
+  .. callmacro:: projects/macros.j2#service_group
+    :title: 'Our Services:'
+
+    - Agile project management
+    - Brand & logo design
+    - `Design systems`_ & `automated pattern libraries`_
+    - User experience & interface design
+    - Integrated frontend & backend development
+    - 100% test coverage & full documentation
+    - Usability testing, WCAG accessibility, and performance
+    - Developer `training & workshops`_
+
+    .. _Design systems: /services/design-systems/
+    .. _automated pattern libraries: /herman/
+    .. _training & workshops: /services/training/
+
+    .. callmacro:: content.macros.j2#link_button
+      :content: 'Schedule a free consultation'
+      :url: '/contact/'
+
+  .. callmacro:: projects/macros.j2#service_group
+    :title: 'Client Types:'
+
+    - Educators
+    - HIPAA-compliant wellness providers
+    - Non-profits and community organizations
+    - Professional gear manufacturers
+    - Startups & enterprise companies
+    - Urban planners
+    - Data analysts
+    - Software companies
+    - Theaters, writers, and other artists
+
+    .. callmacro:: content.macros.j2#link_button
+      :content: 'View previous clients'
+      :url: '/work/'
