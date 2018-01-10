@@ -11,7 +11,7 @@
           {% set icon = 'external' if ('://' in link.url) else none %}
 
           <a href="{{ link.url }}" class="nav-link nav-link-main" data-active="{{ link.text }}">
-            {{ link.display_text or link.text }}
+            {{ link.display_text|typogrify or link.text|typogrify }}
             {% if icon %}{{ utility.icon(icon, size='text-small') }}{% endif %}
           </a>
         {% elif link.subnav %}
@@ -22,7 +22,7 @@
 
               <li>
                 <a href="{{ sub.url }}" class="nav-link nav-link-sub" data-active="{{ sub.text }}">
-                  {{ sub.display_text or sub.text }}
+                  {{ sub.display_text|typogrify or sub.text|typogrify }}
                   {% if icon %}{{ utility.icon(icon, size='text-small') }}{% endif %}
                 </a>
               </li>

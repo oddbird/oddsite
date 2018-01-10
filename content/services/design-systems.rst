@@ -1,5 +1,5 @@
 public: yes
-location: design-systems-training
+location: design-systems
 pageclasses: services-layout
 grid_template: true
 headline:
@@ -8,10 +8,12 @@ headline:
 image:
   - src: '/herman/stacy-design-systems-training.jpg'
 summary: |
-  **OddBird provides** `training`_
-  **and implementation consulting around
-  style guides, pattern libraries, layout design,
-  and front-end architecture.**
+  **OddBird provides design-system** `training`_
+  **and implementation** --
+  including strategy & design audits,
+  automated style guides & pattern libraries,
+  component libraries, integrated toolkits,
+  and robust front-end architecture.
   If you're a project manager, scrum master, or team leader,
   why not make your job easier?
 
@@ -20,26 +22,37 @@ summary: |
   .. callmacro:: content.macros.j2#link_button
     :url: '/contact/'
 
-    Let's chat about training
+    Let's chat about your design system
 
 
-Design Systems
-==============
+Integrated Design Systems
+=========================
 
 .. callmacro:: content.macros.j2#rst
   :tag: 'start'
 
 
-Your Team Will Learn How To:
-----------------------------
+Integrating Tools & Processes
+-----------------------------
 
-- maintain consistency in the design throughout an application
-- build a foundation that leads to a scalable code base
-- discover and create meaningful patterns
-- speed up processes
-- communicate effectively as a team
-- find bugs before committing code
-- create a layout system that works for your audience
+Whether you want short-term training for your team,
+or active consulting
+on the design and development of your system,
+we have you covered.
+We're experts at building systems on a budget,
+and integrating tools & daily process
+to keep your system meaningful and up-to-date.
+
+You're team will learn to…
+
+- Audit existing sites for patterns and problems
+- Maintain consistency in the design throughout an application
+- Build a foundation that leads to a scalable code base
+- Discover and create meaningful patterns
+- Speed up processes
+- Communicate effectively as a team
+- Find bugs before committing code
+- Create a layout system that works for your audience
 
 
 Herman Automated Style Guide
@@ -58,7 +71,7 @@ design systems training and implementation project.
 We work with you to determine the best tools for your company.
 
 .. image:: /static/images/herman/herman-color-palette.jpg
-   :class: extend-large content-img
+   :class: extend-large img-border img-shadow img-spacing
    :alt: screenshot showing Herman color palette pattern functionality
 
 .. callmacro:: content.macros.j2#link_button

@@ -26,7 +26,7 @@ summary: |
   .. _Herman: /herman/
   .. _full documentation: /herman/docs/
   .. _contact us: /contact/
-  .. _putting your design system in place: /services/design-systems-training/
+  .. _putting your design system in place: /services/design-systems/
 
 
 Herman Style Guides
@@ -426,4 +426,4 @@ We're excited to hear from you!
 .. _contact form: /contact/
 .. _@OddBird: https://twitter.com/oddbird
 .. _public Slack: http://friends.oddbird.net
-.. _`a range of support, training, and consulting`: /services/design-systems-training/
+.. _`a range of support, training, and consulting`: /services/design-systems/

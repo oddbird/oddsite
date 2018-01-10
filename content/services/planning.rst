@@ -1,10 +1,9 @@
 public: yes
-location: design-development
+location: planning
 pageclasses: services-layout
 grid_template: true
 headline:
-  - title: 'Packages and Services'
-    tagline: 'Helping you launch your idea quickly'
+  - tagline: 'Helping you launch your idea quickly'
     type: 'Services'
 after:
   - include: 'projects/_process.html.j2'
@@ -127,30 +126,28 @@ planning:
       work with you to add, remove, and rearrange features to find the
       right balance of functionality and budget.
 summary: |
-  **OddBird is a full-stack design & development agency**,
-  ready to help take your project `from concept to launch`_ –
-  with agile project management,
-  branding and content strategy,
-  interface and user-experience design,
-  and well-architected front & back-end development
-  with 100% test coverage,
-  automated pattern libraries,
-  and usability/accessibility testing.
-
-  The full design & development costs will depend on your project,
-  but the packages below will help get you started!
+  **Our team is experienced in product plannning,
+  discovery, and go-to-market strategy.**
+  We'll help you find your way to the right product --
+  a combination of your business goals and user needs --
+  with a robust plan for development and launch.
+  These flat-rate discovery packages
+  are a great place to start your new project.
 
   .. callmacro:: content.macros.j2#link_button
     :url: '/contact/'
     :class: 'section-end'
 
-    Get started with a free consultation
+    Schedule a free consultation
 
   .. _from concept to launch: /work/
 
 
-OddBird Packages
-===================
+
+Product Strategy & Planning
+===========================
+
+.. callmacro:: content.macros.j2#divider
 
 .. callmacro:: content.macros.j2#rst
   :tag: 'start'
@@ -176,13 +173,12 @@ investors:
 
 
 .. callmacro:: content.macros.j2#icon_block
-  :slug: 'work/services'
+  :slug: 'services/planning'
   :data: 'pitch'
 
 
 .. callmacro:: content.macros.j2#rst
   :tag: 'start'
-
 
 .. callmacro:: content.macros.j2#link_button
   :url: '/contact/'
@@ -190,7 +186,15 @@ investors:
 
   Contact us to learn more
 
+.. callmacro:: content.macros.j2#rst
+  :tag: 'end'
 
+
+
+.. callmacro:: content.macros.j2#divider
+
+.. callmacro:: content.macros.j2#rst
+  :tag: 'start'
 
 Project Discovery & Planning, with Development Estimate
 -------------------------------------------------------
@@ -217,7 +221,7 @@ Along the way, we’ll deliver:
 
 
 .. callmacro:: content.macros.j2#icon_block
-  :slug: 'work/services'
+  :slug: 'services/planning'
   :data: 'planning'
 
 

@@ -27,7 +27,7 @@ nav:
     display_text: 'articles'
     url: '/herman/articles/'
   - text: 'training'
-    url: '/services/design-systems-training'
+    url: '/services/design-systems'
   - text: 'hermansite-docs'
     display_text: 'docs'
     url: '/herman/docs/'
