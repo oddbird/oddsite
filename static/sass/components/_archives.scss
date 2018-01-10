@@ -1,48 +1,27 @@
 // Archives
 // ========
 
+
 .project-feature {
   margin: 0 auto;
   max-width: size('full-content');
   padding: 0 size('gutter');
-
-  + .divider {
-    display: none;
-  }
 }
+
 
 .project-cover-image {
-  @include extend('extend-full');
+  @include extend('extend-small');
   display: block;
   margin-bottom: size('gutter');
-
-  @include above('medium-page') {
-    margin-bottom: size('double-gutter');
-  }
+  margin-top: size('gutter');
 }
 
-.project-list-meta {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-
-  .content-block & {
-    @include above('medium-page') {
-      grid-column: col3-start / -1;
-      max-width: 100%;
-    }
-  }
-}
 
 .project-list-links {
-  flex: 0 0 auto;
   margin-bottom: size('half-shim');
   margin-top: size('half-shim');
 }
 
-.project-headlines {
-  flex: 0 0 1;
-}
 
 .project-list-title,
 .project-list-tagline {

@@ -4,10 +4,8 @@
 {% import 'birds/utility.macros.j2' as birds %}
 
 
-{% macro list(post, section='blog-post', divider=none) %}
-  {% if divider %}
-    {{ content.divider() }}
-  {% endif %}
+{% macro list(post, section='blog-post') %}
+  {{ content.divider() }}
 
   <article {{ utility.attr_if('data-module', section) }}>
     {% set heading = 'h2' if section else 'h3' %}
@@ -23,7 +21,10 @@
     {% endif %}
 
     {{ page.rst_meta(post) }}
-    {{ page.header_image(post, class='extend-small') }}
+    {{ page.header_image(
+      post,
+      class='extend-small img-border img-shadow'
+    ) }}
 
     {% if post.summary %}
       <div class="summary">
