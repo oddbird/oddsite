@@ -48,7 +48,15 @@
   transform: translateY(-50%);
 
   a {
-    text-decoration: none;
+    #{$link} {
+      color: color('action-alt');
+      text-decoration: none;
+    }
+
+    #{$focus} {
+      color: color('action-hover');
+      text-decoration: underline;
+    }
   }
 }
 

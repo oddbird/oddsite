@@ -48,16 +48,12 @@ contributors:
   - author: 'miriam'
     role: 'creator'
 brag: |
-  Created by `Miriam`_,
-  Susy is a powerful and flexible
+  Popular
   **CSS layout framework** –
-  defining the genre since 2009,
-  and used by **Virgin America**,
+  used by **Virgin America**,
   **The Smithsonian**,
   **Esquire UK**,
   and more.
-
-  .. _Miriam: /authors/miriam/
 quotes:
   - text: 'I like the idea of grids-on-demand, rather than a strict framework.'
     name: 'Chris Coyier'

@@ -186,7 +186,11 @@
   {% set type = 'Talk Details' if (ctx.config.speakers and not type) else type %}
 
   {{ header_image(ctx) }}
-  {{ show_headline(main, sub, type) }}
+
+  {% if not ctx.config.hide_title %}
+    {{ show_headline(main, sub, type) }}
+  {% endif %}
+
   {{ rst_meta(ctx) }}
 
   {% if ctx.config.summary and show_summary %}

@@ -8,30 +8,14 @@
 .main-nav {
   display: flex;
   justify-content: space-between;
-  margin: negative('gutter') auto size('half-shim');
-  max-width: calc(19rem + 15vw);
+  margin: 0 auto size('half-shim');
+  max-width: calc(18rem + 15vw);
   padding-left: size('half-shim');
   padding-right: size('half-shim');
   width: 100%;
 
-  [data-location*='susysite'] & {
-    margin-top: negative('shim');
-  }
-
-  [data-location*='hermansite'] & {
-    margin-top: 0;
-  }
-
-  .nav-item {
-    display: inline-flex;
-
-    &:nth-of-type(2) {
-      flex-grow: 2;
-    }
-
-    @include above('nav-medium') {
-      position: relative;
-    }
+  @include above('small-page') {
+    margin-top: negative('gutter');
   }
 
   [aria-controls] {
@@ -45,6 +29,22 @@
     }
   }
 }
+
+
+.nav-item {
+  display: inline-flex;
+
+  @include above('small-page') {
+    &:nth-of-type(2) {
+      flex-grow: 2;
+    }
+  }
+
+  @include above('nav-medium') {
+    position: relative;
+  }
+}
+
 
 // Shared base styles for links in navigation
 .nav-link {
@@ -68,14 +68,12 @@
   display: inline-block;
   padding: size('half-shim');
 
-  @include above('nav-small') {
-    padding-left: size('shim');
-    padding-right: size('shim');
+  @include above('nav-medium') {
+    padding: size('half-shim')  size('shim');
   }
 
-  @include above('nav-medium') {
-    padding-left: size('gutter');
-    padding-right: size('gutter');
+  @include above('nav-wide') {
+    padding: size('half-shim')  size('gutter');
   }
 
   &[aria-pressed='true'] {

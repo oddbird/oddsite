@@ -24,12 +24,9 @@ tasks:
   - User Experience Design
   - WCAG & HIPPA Compliant
 brag: |
-  We helped health-coaching experts at ORCAS
-  develop a web platform –
-  now used by the **US Military**,
-  **Coast Guard**,
-  and **National Institutes of Health** –
-  leading ORCAS to a **successful acquisition**.
+  Online platform for health coaches,
+  now used by the **US Coast Guard**
+  and **National Institutes of Health**.
 quotes:
   - text: |
       OddBird really changed my thinking

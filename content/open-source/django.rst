@@ -13,14 +13,10 @@ contributors:
   - author: 'carl'
     role: 'core developer'
 brag: |
-  `Carl`_ is a **core developer**
-  on the popular Django web framework for Python,
-  an elected member
-  of the inaugural **Django technical board**,
+  Carl is a **core developer** and **board-member**
+  for the popular web framework,
   and a contributor
-  to the **Python language**.
-
-  .. _Carl: /authors/carl/
+  to the Python language.
 summary: |
   **Django is a high-level Python Web framework**
   that encourages rapid development and clean, pragmatic design.

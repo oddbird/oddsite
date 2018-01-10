@@ -78,6 +78,9 @@ $pattern-sizes: (
   'border-thin': 1px,
   'border-radius': 2rem,
 
+  'logo-y': 'gutter' ('times': 3),
+  'logo-x': 'logo-y' ('times': 2),
+
   'bird-face': 6rem,
   'half-bird-face': 'bird-face' ('multiple': 0.5),
 
@@ -85,7 +88,7 @@ $pattern-sizes: (
 
   'nav-small': 20rem,
   'nav-medium': 35rem,
-  'nav-wide': 50rem,
+  'nav-wide': 55rem,
 
   'dropdown-narrow': 9rem,
   'dropdown-wide': 14rem,

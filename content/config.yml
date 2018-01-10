@@ -25,7 +25,7 @@ nav:
         display_text: 'design systems'
         url: '/services/design-systems-training/'
       - text: 'speaking'
-        display_text: 'presentations & workshops'
+        display_text: 'speaking & training'
         url: '/speaking/'
   - text: 'about'
     subnav:
@@ -45,7 +45,6 @@ nav:
 copyright: '2009–2018'
 email: 'birds@oddbird.net'
 
-location: home
 author: oddbird
 comments: false
 
