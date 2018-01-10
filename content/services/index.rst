@@ -89,11 +89,11 @@ and expertise in Python/Django, Sass/CSS,
 automated pattern libraries, and Plone --
 helping to define best-practice in our respective fields.
 
-Whether you’re looking for staff-augmentation
+Whether you're looking for staff-augmentation
 or an outside partner as you grow --
 we provide big agency skill with the attention,
 communication, and agility of an internal team.
-With our years’ of experience together,
+With years of experience together,
 we are able to provide smooth and efficient progress,
 100% test coverage, `integrated design systems`_,
 continuous review, and documentation.
