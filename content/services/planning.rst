@@ -75,7 +75,7 @@ planning:
       work with you to add, remove, and rearrange features to find the
       right balance of functionality and budget.
 summary: |
-  **Our team is experienced in product plannning,
+  **Our team is experienced in product planning,
   discovery, and go-to-market strategy.**
   We'll help you find your way to the right product --
   a combination of your business goals and user needs --

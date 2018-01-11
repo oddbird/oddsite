@@ -86,16 +86,15 @@ Application Design & Development
   :headline: 'Integrated Design, Code, and Documentation'
 
   **We work collaboratively with our clients as a cohesive team** --
-  with design, development, and user-experience
-  integrated in an agile cycle.
+  integrating design, development,
+  documentation, and testing in an agile cycle.
   The user and business needs are always front and center.
   With years of experience together,
   we are able to provide smooth and efficient progress
   with 100% test coverage,
   accessible & performant code,
-  `integrated design systems`_,
-  continuous review,
-  and full documentation.
+  `documentation`_,
+  and continuous review.
 
   .. _integrated design systems: /services/design-systems/
 
