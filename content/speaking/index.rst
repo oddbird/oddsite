@@ -4,7 +4,7 @@ grid_template: true
 image:
   - src: 'pages/devconf-best.jpg'
 headline:
-  - tagline: "Conferences, Workshops, and More…"
+  - tagline: "Conferences, workshops, and more…"
     type: 'About Us'
 summary: |
   **We're constantly learning**

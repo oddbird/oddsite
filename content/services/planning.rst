@@ -2,6 +2,8 @@ public: yes
 location: planning
 pageclasses: services-layout
 grid_template: true
+image:
+  - src: 'pages/design-sketch.jpg'
 headline:
   - tagline: 'Helping you launch your idea quickly'
     type: 'Services'
