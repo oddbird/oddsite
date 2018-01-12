@@ -83,7 +83,7 @@ Application Design & Development
 .. callmacro:: content.macros.j2#image_block
   :image: '/static/images/projects/mcs-herman-mobile.jpg'
   :alt: 'Screenshot of automated style guides'
-  :headline: 'Integrated Design, Code, and Documentation'
+  :headline: 'Integrated Design, Development, and Documentation'
 
   **We work collaboratively with our clients as a cohesive team** --
   integrating design, development,
