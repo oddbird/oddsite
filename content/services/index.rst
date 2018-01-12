@@ -31,15 +31,11 @@ process:
 summary: |
   **OddBird is a full-stack design & development agency**,
   building progressive mobile and web applications.
-  By tightly integrating design and development
-  in an agile process,
-  our team is ready to provide value from day one.
-  We'll help take you from concept to launch
-  with agile project management,
-  branding and content strategy,
-  interface and user-experience design,
-  well-architected code,
-  and usability testing.
+  We integrate design and development in an agile process,
+  so you only need to hire one team --
+  completely focussed on achieving your goals
+  with smooth and efficient progress
+  from concept to launch.
 
   .. callmacro:: content.macros.j2#link_button
     :url: '/contact/'
@@ -72,6 +68,11 @@ Application Design & Development
 
   .. _discovery phase: /services/planning/
 
+  .. callmacro:: content.macros.j2#link_button
+    :content: 'Start the conversation'
+    :url: '/contact/'
+    :class: 'small-btn'
+
 .. callmacro:: content.macros.j2#get_quotes
   :page: 'work/emmysworkshop'
   :slug: 'realistic'
@@ -85,20 +86,26 @@ Application Design & Development
 .. callmacro:: content.macros.j2#image_block
   :image: '/static/images/projects/mcs-herman-mobile.jpg'
   :alt: 'Screenshot of automated style guides'
-  :headline: 'Integrated Design, Development, and Documentation'
+  :headline: 'Software for Humans'
 
-  **We work collaboratively with our clients as a cohesive team** --
-  integrating design, development,
-  documentation, and testing in an agile cycle.
-  The user and business needs are always front and center.
-  With years of experience together,
-  we are able to provide smooth and efficient progress
-  with 100% test coverage,
+  **Our process is designed to solve real problems
+  for your business and users** --
+  augmenting your industry-expertise,
+  with our product-design experience.
+  We provide everything from project management
+  to design, development, and usability testing.
+  With 100% code test coverage,
   accessible & performant code,
   `integrated design systems`_,
-  and continuous review.
+  and continuous review,
+  you can expect low maintenance for years.
 
   .. _integrated design systems: /services/design-systems/
+
+  .. callmacro:: content.macros.j2#link_button
+    :content: 'See our list of services'
+    :url: '#service-list'
+    :class: 'small-btn'
 
 .. callmacro:: content.macros.j2#get_quotes
   :page: 'work/coachhub'
@@ -111,6 +118,7 @@ Application Design & Development
 
 .. wrap:: section
   :class: services
+  :id: service-list
 
   .. callmacro:: projects/macros.j2#service_group
     :title: 'Our Services:'
