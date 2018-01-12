@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+
+{% block htmlhead %}
+  <meta http-equiv="refresh" content="0; URL={{ config.redirect_url }}" />
+  {{ super() }}
+{% endblock htmlhead %}
+
+{% block body %}
+  <p>
+    Redirecting you to <a href="{{ config.redirect_url }}">{{ config.redirect_url }}</a>.
+    If you are not redirected shortly, please click the link above.
+  </p>
+{% endblock body %}
