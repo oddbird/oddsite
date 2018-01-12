@@ -16,6 +16,13 @@
 {%- endblock %}
 
 
+{% block extrahead %}
+  {% if config.redirect_url %}
+    <meta http-equiv="refresh" content="0; URL={{ config.redirect_url }}" />
+  {% endif %}
+{% endblock %}
+
+
 {% block og_title %}{{ rst.title }}{% endblock %}
 {% block og_type %}{{ 'article' if ctx.pub_date else 'website' }}{% endblock %}
 {% block og_url %}{{ get_full_canonical_url(ctx.builder, slug=ctx.slug) }}{% endblock %}
