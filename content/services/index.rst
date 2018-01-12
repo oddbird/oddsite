@@ -31,7 +31,9 @@ process:
 summary: |
   **OddBird is a full-stack design & development agency**,
   building progressive mobile and web applications.
-  Our tight-knit team is ready to provide value from day one.
+  By tightly integrating design and development
+  in an agile process,
+  our team is ready to provide value from day one.
   We'll help take you from concept to launch
   with agile project management,
   branding and content strategy,
