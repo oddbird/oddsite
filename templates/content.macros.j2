@@ -374,3 +374,10 @@
   {%- set url = '/' if (slug == 'index') else ['/', slug, '/']|join -%}
   {{ url }}
 {%- endmacro -%}
+
+
+{% macro redirect(page) %}
+  {% set page = page|get_config %}
+  Redirecting you to <a href="{{ page.config.redirect_url }}">{{ page.config.redirect_url }}</a>.
+  If you are not redirected shortly, please click the link above.
+{% endmacro %}
