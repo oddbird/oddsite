@@ -1,7 +1,12 @@
 public: no
-template: 'redirect.html'
 redirect_url: '/open-source/accoutrement/'
+headline:
+  - type: '301'
+    tagline: "Moving right along…"
 
 
-Accoutrement Redirect
-=====================
+Oops, that page is no longer here!
+==================================
+
+.. callmacro:: content.macros.j2#redirect
+  :page: 'accoutrement'
