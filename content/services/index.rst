@@ -93,7 +93,7 @@ Application Design & Development
   we are able to provide smooth and efficient progress
   with 100% test coverage,
   accessible & performant code,
-  `documentation`_,
+  `integrated design systems`_,
   and continuous review.
 
   .. _integrated design systems: /services/design-systems/

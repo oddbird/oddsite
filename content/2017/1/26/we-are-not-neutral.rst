@@ -45,7 +45,7 @@ and contributing to more `open source projects`_.
 .. _`Stacy`: /authors/stacy/
 .. _`Kit`: /authors/kit/
 .. _`writing more`: /blog/
-.. _`speaking more`: /speaking/
+.. _`speaking more`: /services/speaking/
 .. _`taking on more clients`: /work/
 .. _`re-designing our website and brand in the open`: /tags/open-design/
 .. _`building a community on Slack`: http://friends.oddbird.net/

@@ -29,7 +29,7 @@ nav:
         url: '/services/design-systems/'
       - text: 'speaking'
         display_text: 'speaking & training'
-        url: '/speaking/'
+        url: '/services/speaking/'
   - text: 'about'
     subnav:
       - text: 'birds'

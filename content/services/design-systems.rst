@@ -17,7 +17,7 @@ summary: |
   If you're a project manager, scrum master, or team leader,
   why not make your job easier?
 
-  .. _training: /speaking/
+  .. _training: /services/speaking/
 
   .. callmacro:: content.macros.j2#link_button
     :url: '/contact/'

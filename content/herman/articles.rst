@@ -2,7 +2,6 @@ public: yes
 location: hermansite-articles
 template: 'hermansite/layout.html'
 grid_template: true
-hide_title: true
 headline:
   - type: 'Herman Articles'
     tagline: 'What people are saying about Herman…'

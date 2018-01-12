@@ -24,7 +24,7 @@ summary: |
   or `in person`_ at a meetup or conference.
 
   .. _public Slack chat: http://friends.oddbird.net
-  .. _in person: /speaking/
+  .. _in person: /services/speaking/
 
 
 Meet the Odd Birds

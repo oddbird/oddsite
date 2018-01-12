@@ -145,7 +145,7 @@ We want to be in conversation with you.
 
 .. _donations: /community/
 .. _sponsorships: /community/
-.. _speaking: /speaking/
+.. _speaking: /services/speaking/
 .. _public Slack chat: http://friends.oddbird.net/
 .. _Twitter: https://twitter.com/OddBird
 .. _contact form: /contact/
