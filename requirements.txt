@@ -2,7 +2,7 @@
 
 rstblog==1.0.obc6
 PyYAML==3.12
-Babel==2.5.1
+Babel==2.5.2
 blinker==1.4
 docutils==0.14
 Jinja2==2.10
