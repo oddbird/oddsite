@@ -34,7 +34,7 @@ summary: |
   and `True`_ unit-testing library.
   Miriam is a staff writer for `CSS Tricks`_,
   co-author of SitePoint’s `Jump Start Sass`_,
-  and a internationally known
+  and an internationally known
   `conference speaker`_,
   winning "Best of" `CSS Dev Conf`_ in 2017.
   She is also a multimedia artist
