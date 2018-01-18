@@ -9,50 +9,50 @@
   {% set link = content.project_link(page, allow_fallback=false) %}
   {% set link = none if ('None' in link) else link %}
 
-  {{ content.divider(
-    small=false if page.config.image else true
-  ) }}
-  <article class='project-feature grid-template'>
-    {{ layout.header_image(page, class='project-cover-image') }}
+  {{ content.divider() }}
+  <article class='project-feature'>
 
-    {% call content.rst() %}
-      <header class="project-list-meta">
-        <div class="project-headlines">
-          <h2 class="project-list-title project-title">
-            {{ utility.link_if(project.name, link) }}
-          </h2>
-          {% if project.tagline %}
-            <h3 class="project-list-tagline">{{ project.tagline }}</h3>
-          {% endif %}
-        </div>
-
-        <aside class="project-list-links">
-          {% if project.case_study %}
-            {% call content.link_button(link) %}
-              Read our case study
-            {% endcall %}
-          {% endif %}
-          {% if project.url or project.owner %}
-            {% call content.link_button(project.url or link) %}
-              Go to project
-            {% endcall %}
-          {% endif %}
-          {% if project.source %}
-            {% call content.link_button(project.source) %}
-              View source
-            {% endcall %}
-          {% endif %}
-        </aside>
-      </header>
-
-      {% if page.summary %}
-        <div class="project-list-summary project-summary">
-          {{ page.render_summary() }}
-        </div>
+    <header class="project-headlines">
+      <h2 class="project-list-title project-title">
+        {{ utility.link_if(project.name, link) }}
+      </h2>
+      {% if project.tagline %}
+        <h3 class="project-list-tagline">{{ project.tagline }}</h3>
       {% endif %}
-    {% endcall %}
+    </header>
 
-    {{ content.get_quotes(page, count=2) }}
+    {{ layout.header_image(
+      page,
+      class='project-cover-image img-border img-shadow'
+    ) }}
+
+    <aside class="project-list-links">
+      {% if project.case_study %}
+        {% call content.link_button(link) %}
+          Read our case study
+        {% endcall %}
+      {% endif %}
+      {% if project.url or project.owner %}
+        {% call content.link_button(project.url or link) %}
+          Go to project
+        {% endcall %}
+      {% endif %}
+      {% if project.source %}
+        {% call content.link_button(project.source) %}
+          View source
+        {% endcall %}
+      {% endif %}
+    </aside>
+
+    {% if page.summary %}
+      <div class="project-list-summary project-summary">
+        {{ page.render_summary() }}
+      </div>
+    {% endif %}
+
+    <div class="extend-small">
+      {{ content.get_quotes(page, count=2) }}
+    </div>
   </article>
 {% endmacro %}
 
@@ -89,5 +89,34 @@
         {% endfor %}
       </p>
     </div>
+  {% endif %}
+{% endmacro %}
+
+
+{% macro service_group(title) %}
+  <div class="service-group">
+    <h2>{{ title|typogrify }}</h2>
+
+    {{ caller()|rst }}
+  </div>
+{% endmacro %}
+
+
+{% macro process(title, slug, data) %}
+  {% set data = slug|get_config(data) %}
+
+  {% if data %}
+    <section class='process extend-full'>
+        <h2>{{ title|typogrify }}</h2>
+
+      <ol>
+        {% for feature in data %}
+          <li>
+            <h3>{{ feature.title|typogrify }}</h3>
+            <p>{{ feature.body|rst }}</p>
+          </li>
+        {% endfor %}
+      </ol>
+    </section>
   {% endif %}
 {% endmacro %}

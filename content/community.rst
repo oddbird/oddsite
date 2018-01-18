@@ -152,7 +152,7 @@ summary: |
 
   .. _`diverse network`: /conduct/
   .. _`open source software`: /open-source/
-  .. _`public speaking`: /speaking/
+  .. _`public speaking`: /services/speaking/
 
 
 Community Involvement

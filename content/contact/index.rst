@@ -52,8 +52,8 @@ summary: |
     `Miriam Suzanne`_
     will get back to you soon.
 
-    .. _our packages: /work/services/
-    .. _speak to your company or conference: /speaking/
+    .. _our packages: /services/
+    .. _speak to your company or conference: /services/speaking/
     .. _Miriam Suzanne: /authors/miriam/
 
 

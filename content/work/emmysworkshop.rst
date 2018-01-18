@@ -15,9 +15,11 @@ tasks:
   - Responsive front-end architecture
 quotes:
   - text: |
-      The first meeting I had with Miriam helped me decide.
-      She was excited about the project
-      but also realistic about potential issues with the codebase.
+      The first meeting I had with `Miriam`_ helped me decide.
+      **She was excited about the project but also realistic**
+      about potential issues with the codebase.
+
+      .. _Miriam: /authors/miriam/
     name: 'Anna Rafferty'
     role: 'Assistant Professor of Computer Science'
     slug: 'realistic'

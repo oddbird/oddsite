@@ -5,8 +5,8 @@ hide_title: true
 splash:
   - big: |
       Digital Product
-      <a href="/work/services/">Design</a> &
-      <a href="/work/services/">Development</a>,
+      <a href="/services/">Design</a> &
+      <a href="/services/">Development</a>,
       Integrated for Long-Term Success.<span class="home-star">*</span>
     small: |
       |*| We help build and refactor

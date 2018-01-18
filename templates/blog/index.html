@@ -17,8 +17,7 @@
 
 {% block archive %}
   {%- for post in pagination.get_slice() %}
-    {% set divider = none if loop.first else true %}
-    {{ blog.list(post, divider=divider) }}
+    {{ blog.list(post) }}
   {%- endfor %}
 
   {% if show_pagination and pagination.pages > 1 %}

@@ -34,7 +34,7 @@ summary: |
   and `True`_ unit-testing library.
   Miriam is a staff writer for `CSS Tricks`_,
   co-author of SitePoint’s `Jump Start Sass`_,
-  and a internationally known
+  and an internationally known
   `conference speaker`_,
   winning "Best of" `CSS Dev Conf`_ in 2017.
   She is also a multimedia artist
@@ -45,7 +45,7 @@ summary: |
   .. _True: /true/
   .. _CSS Tricks: http://css-tricks.com
   .. _Jump Start Sass: https://www.sitepoint.com/premium/books/jump-start-sass
-  .. _conference speaker: /speaking/
+  .. _conference speaker: /services/speaking/
   .. _CSS Dev Conf: https://blog.cssdevconf.com/slides-and-resources-from-css-dev-conf-2017-new-orleans-8e2a5edb06b0#2b07
 
 
