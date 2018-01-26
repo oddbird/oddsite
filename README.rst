@@ -78,9 +78,9 @@ which development commands need to be run before serving locally:
 - 🐈 (``:cat2:``) -> ``yarn``
 - 🙀 (``:scream_cat:``) -> ``bin/unpack-node; yarn``
 
-After upgrading any of the OddBird-owned packages (Susy, True, Herman, or
-Accoutrement-*), run ``bin/update-subproject-docs`` to pull their updated
-documentation into OddSite.
+When a new version of any OddBird-owned packages (Susy, True, Herman, or
+Accoutrement-*) is published, run ``bin/update-subproject-docs`` to pull their
+updated documentation into OddSite.
 
 
 Directory Structure
