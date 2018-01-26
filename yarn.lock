@@ -10176,9 +10176,9 @@ supports-color@^5.1.0:
   dependencies:
     has-flag "^2.0.0"
 
-susy@^3.0.1:
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/susy/-/susy-3.0.1.tgz#d8f7942911a1e16ef84dfae2db296cd2058e8b26"
+susy@3.0.2:
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/susy/-/susy-3.0.2.tgz#03748e9c8c8f8b4c0de12877c0e52eb3c2e7c76f"
 
 sver-compat@^1.5.0:
   version "1.5.0"
