@@ -74,7 +74,6 @@
     "sassdoc-theme-herman": "^1.1.0",
     "sinon": "^4.1.2",
     "sinon-chai": "^2.13.0",
-    "susy": "^3.0.1",
     "touch": "^3.1.0",
     "webpack": "^3.9.1"
   },
