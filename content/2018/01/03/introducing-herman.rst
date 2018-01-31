@@ -242,7 +242,7 @@ Herman provides display annotations for `colors`_ (``@colors``),
 .. code:: scss
 
   /// @colors brand-primaries
-  /// @font my-font (regular, bold)
+  /// @font my-font (normal, bold)
   ///   <any html head required for CDN font imports>
   /// @sizes my-spacing
   /// @ratios my-modular-scale
