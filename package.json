@@ -79,7 +79,6 @@
   },
   "resolutions": {
     "browserslist": ">=2.4.0",
-    "scss-comment-parser": "github:jgerigmeyer/scss-comment-parser#fix-semicolon",
     "webpack-sources": "1.0.1"
   },
   "repository": {
