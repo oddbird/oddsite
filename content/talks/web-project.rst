@@ -9,7 +9,7 @@ events:
 brag: |
   A **non-technical guide**
   for taking your project from concept to launch,
-  without ever losing site of the goals.
+  without ever losing sight of the goals.
 summary: |
   **Are you looking to expand your web presence,
   or develop a new application?**

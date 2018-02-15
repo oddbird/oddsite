@@ -283,65 +283,69 @@ const karmaOnBuild = done => exitCode => {
 };
 
 gulp.task('jstest', cb => {
-  const karmaConf = require('./karma.common.conf.js');
-  new KarmaServer(karmaConf, karmaOnBuild(cb)).start();
+  new KarmaServer(
+    { configFile: path.join(__dirname, 'karma.conf.js') },
+    karmaOnBuild(cb),
+  ).start();
 });
 
 // Use karma watcher instead of gulp watcher for tests
 gulp.task('jstest-watch', cb => {
-  const karmaConf = require('./karma.common.conf.js');
-  const conf = Object.assign({}, karmaConf, {
+  new KarmaServer({
+    configFile: path.join(__dirname, 'karma.conf.js'),
     autoWatch: true,
     singleRun: false,
-  });
-  conf.coverageReporter.reporters = [
-    { type: 'html', dir: 'jscov/' },
-    { type: 'text-summary' },
-  ];
-  new KarmaServer(conf).start();
+    coverageIstanbulReporter: {
+      reports: ['html', 'text-summary'],
+    },
+  }).start();
   cb();
 });
 
 gulp.task(
   'watch',
-  gulp.parallel('jstest-watch', 'webpack-watch', cb => {
-    // lint scss on changes
-    gulp.watch(paths.SASS).on('all', (event, filepath) => {
-      if (event === 'add' || event === 'change') {
-        sasslintTask(filepath, false, true);
-      }
-    });
+  gulp.series(
+    'webpack-watch',
+    cb => {
+      // lint scss on changes
+      gulp.watch(paths.SASS).on('all', (event, filepath) => {
+        if (event === 'add' || event === 'change') {
+          sasslintTask(filepath, false, true);
+        }
+      });
 
-    // lint all scss when rules change
-    gulp.watch('**/.sass-lint.yml', gulp.parallel('sasslint-nofail'));
+      // lint all scss when rules change
+      gulp.watch('**/.sass-lint.yml', gulp.parallel('sasslint-nofail'));
 
-    // run sass tests on changes
-    gulp.watch(paths.SASS, gulp.parallel('sasstest'));
+      // run sass tests on changes
+      gulp.watch(paths.SASS, gulp.parallel('sasstest'));
 
-    // run webpack to compile svg icons and styleguide assets
-    gulp.watch(
-      [
-        `${paths.ICONS_DIR}**/*.svg`,
-        `${paths.SRC_TEMPLATES_DIR}_icon_template.lodash`,
-        './STYLEGUIDE.md',
-      ],
-      gulp.parallel('webpack'),
-    );
+      // run webpack to compile svg icons and styleguide assets
+      gulp.watch(
+        [
+          `${paths.ICONS_DIR}**/*.svg`,
+          `${paths.SRC_TEMPLATES_DIR}_icon_template.lodash`,
+          './STYLEGUIDE.md',
+        ],
+        gulp.parallel('webpack'),
+      );
 
-    // compile rstblog assets
-    gulp.watch(
-      [
-        `${paths.SRC_TEMPLATES_DIR}**/*.j2`,
-        `${paths.SRC_TEMPLATES_DIR}**/*.html`,
-        'content/**/*.rst',
-        'content/**/*.yml',
-        'content/static/images/**/*',
-      ],
-      gulp.parallel('dev-rebuild'),
-    );
+      // compile rstblog assets
+      gulp.watch(
+        [
+          `${paths.SRC_TEMPLATES_DIR}**/*.j2`,
+          `${paths.SRC_TEMPLATES_DIR}**/*.html`,
+          'content/**/*.rst',
+          'content/**/*.yml',
+          'content/static/images/**/*',
+        ],
+        gulp.parallel('dev-rebuild'),
+      );
 
-    cb();
-  }),
+      cb();
+    },
+    'jstest-watch',
+  ),
 );
 
 const getServeOpts = dir => ({

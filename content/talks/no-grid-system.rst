@@ -23,7 +23,7 @@ events:
     video: '<iframe width="560" height="315" src="https://www.youtube.com/embed/mDRfFEcj3-Q" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>'
     feature: true
 brag: |
-  The creator of `Susy`_,
+  The creator of `Susy`_
   provides **practical techniques**
   for avoiding grid systems.
   **"Best Of" CSS Dev Conf, 2017**.

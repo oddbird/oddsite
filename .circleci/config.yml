@@ -42,7 +42,7 @@ jobs:
           command: gulp sasstest
       - run:
           name: Test JS
-          command: karma start --reporters dots,coverage,junit --browsers ChromeHeadless
+          command: karma start --reporters dots,coverage-istanbul,junit --browsers ChromeHeadless
       - run:
           name: Check JS Test Coverage
           command: nyc check-coverage --temp-directory ./jscov/ --statements=100 --functions=100 --branches=100 --lines=100
