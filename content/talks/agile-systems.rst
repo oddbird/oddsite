@@ -1,10 +1,18 @@
 public: yes
 speakers: [miriam]
 events:
+  - venue: 'Tech Confluence'
+    url: 'https://www.meetup.com/TechConfluence/events/nxcfhlyxfbcc/'
+    date: [2018, 3, 21]
+    adr: 'Denver, CO'
   - venue: 'VueConf US'
     url: 'http://vueconf.us/'
     date: [2018, 3, 26]
     adr: 'New Orleans, LA'
+  - venue: 'Front-End Front Range'
+    url: 'https://www.meetup.com/front-range-front-end/events/zwjmwlyxgbhb/'
+    date: [2018, 4, 5]
+    adr: 'Denver, CO'
 brag: |
   A talk on how we
   **automate style documentation** by
