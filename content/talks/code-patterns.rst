@@ -23,12 +23,12 @@ events:
     adr: 'Chandler, AZ'
     slides: 'https://oddbooksapp.com/release/1f08a0cb-198f-4c5f-ac85-93e55daa471d'
     video: '<iframe width="560" height="315" src="https://www.youtube.com/embed/lK_akjzOUY0" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>'
+    feature: true
   - venue: 'CascadiaFest'
     url: 'http://2016.cascadiafest.org/'
     date: [2016, 8, 3]
     slides: 'https://oddbooksapp.com/release/3964dd55-982a-4171-a46b-6dd0354eac27'
     video: '<iframe width="560" height="315" src="https://www.youtube.com/embed/cVZreFHgLFw" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>'
-    feature: true
   - venue: 'CSS Summit'
     url: 'http://environmentsforhumans.com/2016/css-summit/'
     date: [2016, 7, 26]

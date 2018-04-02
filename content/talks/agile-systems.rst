@@ -5,10 +5,12 @@ events:
     url: 'https://www.meetup.com/TechConfluence/events/nxcfhlyxfbcc/'
     date: [2018, 3, 21]
     adr: 'Denver, CO'
+    slides: 'https://www.oddbooksapp.com/book/design-systems-10m'
   - venue: 'VueConf US'
     url: 'http://vueconf.us/'
     date: [2018, 3, 26]
     adr: 'New Orleans, LA'
+    slides: 'https://oddbooksapp.com/release/9edb34c9-8789-4201-9f14-64bf5ab11b0a'
   - venue: 'Front-End Front Range'
     url: 'https://www.meetup.com/front-range-front-end/events/zwjmwlyxgbhb/'
     date: [2018, 4, 5]
