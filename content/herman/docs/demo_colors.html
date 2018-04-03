@@ -42,7 +42,7 @@
       <div class="project-title">
         <a href="index.html" rel="home" class="project-name">Herman</a>
         
-          <span class="project-version">2.0.0</span>
+          <span class="project-version">2.1.0</span>
         
       </div>
     </header>
@@ -432,8 +432,6 @@ $brand-pink: hsl(330, 85%, 48%);
     
     
   
-
-  
     <div class="code-block">
       
         <div class="code-header">
@@ -449,7 +447,7 @@ $brand-pink: hsl(330, 85%, 48%);
       
       <pre class="hljs-pre"><code class="lang-scss">$demo-colors: (
   &#39;brand-blue&#39;: $brand-blue,
-  &#39;brand-pink&#39;: $brand-pink,
+  &#39;brand-pink&#39;: $brand-pink
 );</code></pre>
     </div>
   
@@ -834,9 +832,9 @@ where the values need to be parsed and compiled
 before they can be exported to Herman.
 Using <a href="http://oddbird.net/accoutrement-color">accoutrement-color</a>, our maps look like<span class="widont">&nbsp;</span>this:</p>
 <pre><code class="lang-scss">$demo-noncolors: (
-  'light-gray': 'brand-blue' ('tint': 80%, 'desaturate': 80%),
-  'gray': 'brand-blue' ('desaturate': 80%),
-  'black': 'brand-blue' ('shade': 30%, 'desaturate': 80%),
+  'light-gray': 'brand-blue' ('tint': 80%, get-function('desaturate'): 80%),
+  'gray': 'brand-blue' (get-function('desaturate'): 80%),
+  'black': 'brand-blue' ('shade': 30%, get-function('desaturate'): 80%),
 );
 </code></pre>
 <p>Our <code>color()</code> function knows how to interpret that syntax
@@ -903,8 +901,6 @@ along with any additional arguments required for that<span class="widont">&nbsp;
     <div class="example-code">
       
   
-
-  
     <div class="code-block">
       
         <div class="code-header">
@@ -920,20 +916,18 @@ along with any additional arguments required for that<span class="widont">&nbsp;
       
       <pre class="hljs-pre"><code class="lang-scss">$herman: ();
 $demo-noncolors: (
-  &#39;light-gray&#39;: &#39;brand-blue&#39; (&#39;tint&#39;: 80%, &#39;desaturate&#39;: 80%),
-  &#39;gray&#39;: &#39;brand-blue&#39; (&#39;desaturate&#39;: 80%),
-  &#39;black&#39;: &#39;brand-blue&#39; (&#39;shade&#39;: 30%, &#39;desaturate&#39;: 80%),
+  &#39;light-gray&#39;: &#39;brand-blue&#39; (&#39;tint&#39;: 80%, get-function(&#39;desaturate&#39;): 80%),
+  &#39;gray&#39;: &#39;brand-blue&#39; (get-function(&#39;desaturate&#39;): 80%),
+  &#39;black&#39;: &#39;brand-blue&#39; (&#39;shade&#39;: 30%, get-function(&#39;desaturate&#39;): 80%),
 );
 
 @include herman-add(
   &#39;colors&#39;, &#39;demo-noncolors&#39;, $demo-noncolors,
-  &#39;color&#39; // function
+  get-function(&#39;color&#39;) // function
 );
 
 /* #{$herman} */</code></pre>
     </div>
-  
-
   
 
   
@@ -1139,7 +1133,8 @@ $demo-noncolors: (
     </div>
   </div>
 
-  <script type="text/javascript" src="assets/webpack/vendor.min.js"></script>
+  <script type="text/javascript" src="assets/webpack/runtime.min.js"></script>
+  <script type="text/javascript" src="assets/webpack/common.min.js"></script>
   <script type="text/javascript" src="assets/webpack/app.min.js"></script>
   
 </body>
