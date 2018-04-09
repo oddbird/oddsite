@@ -9,4 +9,4 @@ Jinja2==2.10
 Werkzeug==0.14.1
 Pygments==2.2.0
 smartypants==2.0.1
-Pillow==5.0.0
+Pillow==5.1.0
