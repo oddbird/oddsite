@@ -6574,11 +6574,15 @@ lodash.filter@^4.4.0:
   version "4.6.0"
   resolved "https://registry.yarnpkg.com/lodash.filter/-/lodash.filter-4.6.0.tgz#668b1d4981603ae1cc5a6fa760143e480b4c4ace"
 
+lodash.find@^4.6.0:
+  version "4.6.0"
+  resolved "https://registry.yarnpkg.com/lodash.find/-/lodash.find-4.6.0.tgz#cb0704d47ab71789ffa0de8b97dd926fb88b13b1"
+
 lodash.flatten@^4.2.0:
   version "4.4.0"
   resolved "https://registry.yarnpkg.com/lodash.flatten/-/lodash.flatten-4.4.0.tgz#f31c22225a9632d2bbf8e4addbef240aa765a61f"
 
-lodash.foreach@^4.3.0:
+lodash.foreach@^4.3.0, lodash.foreach@^4.5.0:
   version "4.5.0"
   resolved "https://registry.yarnpkg.com/lodash.foreach/-/lodash.foreach-4.5.0.tgz#1a6a35eace401280c7f06dddec35165ab27e3e53"
 
@@ -6670,6 +6674,10 @@ lodash.keysin@^3.0.0:
   dependencies:
     lodash.isarguments "^3.0.0"
     lodash.isarray "^3.0.0"
+
+lodash.last@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/lodash.last/-/lodash.last-3.0.0.tgz#242f663112dd4c6e63728c60a3c909d1bdadbd4c"
 
 lodash.map@^4.4.0:
   version "4.6.0"
@@ -7428,7 +7436,7 @@ node-pre-gyp@^0.6.39:
     tar "^2.2.1"
     tar-pack "^3.4.0"
 
-node-sass@^4.5.3, node-sass@^4.7.1, node-sass@^4.7.2:
+node-sass@^4.7.1, node-sass@^4.7.2:
   version "4.7.2"
   resolved "https://registry.yarnpkg.com/node-sass/-/node-sass-4.7.2.tgz#9366778ba1469eb01438a9e8592f4262bcb6794e"
   dependencies:
@@ -9361,14 +9369,15 @@ sass-loader@^6.0.6:
     lodash.tail "^4.1.1"
     pify "^3.0.0"
 
-sass-true@^3.0.2:
-  version "3.0.2"
-  resolved "https://registry.yarnpkg.com/sass-true/-/sass-true-3.0.2.tgz#ba9ea42d69bee64e451852003d9b365731a3a04e"
+sass-true@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/sass-true/-/sass-true-4.0.0.tgz#4f1573f5d75f0c5d8539f57ca9c374995d15f278"
   dependencies:
     css "^2.2.1"
     css-selector-parser "^1.1.0"
-    node-sass "^4.5.3"
-    underscore "^1.8.3"
+    lodash.find "^4.6.0"
+    lodash.foreach "^4.5.0"
+    lodash.last "^3.0.0"
 
 sassdoc-extras@^2.4.0, sassdoc-extras@^2.4.1:
   version "2.4.2"
@@ -10752,10 +10761,6 @@ umd@^3.0.0:
 unc-path-regex@^0.1.2:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/unc-path-regex/-/unc-path-regex-0.1.2.tgz#e73dd3d7b0d7c5ed86fbac6b0ae7d8c6a69d50fa"
-
-underscore@^1.8.3:
-  version "1.8.3"
-  resolved "https://registry.yarnpkg.com/underscore/-/underscore-1.8.3.tgz#4f3fb53b106e6097fcf9cb4109f2a5e9bdfa5022"
 
 underscore@~1.7.0:
   version "1.7.0"
