@@ -69,7 +69,7 @@
     "raw-loader": "1.0.0-beta.0",
     "sass-lint": "^1.11.1",
     "sass-loader": "^6.0.6",
-    "sass-true": "^3.0.2",
+    "sass-true": "^4.0.0",
     "sassdoc": "^2.5.0",
     "sassdoc-theme-herman": "^2.0.0",
     "sinon": "^4.1.2",
