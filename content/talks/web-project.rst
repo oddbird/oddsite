@@ -3,7 +3,7 @@ speakers: [miriam]
 slides: 'https://www.oddbooksapp.com/book/web-projects'
 events:
   - venue: 'Boost Biz Ed'
-    url: 'https://www.meetup.com/BoostBizEd/'
+    url: 'https://boostbized.com/events/how-to-plan-a-web-project'
     date: [2018, 7, 11]
     adr: 'Westminster, CO'
   - venue: 'EdTech Colorado'

@@ -9,12 +9,11 @@
 /// @link http://oddbird.net/accoutrement-scale/docs/
 ///   Accoutrement Scale
 $modular-scale: (
-  'multiple': 'linear',
   'text-ratio': 1.4,
 );
 
-$ratios: map-merge($ratios, $modular-scale);
-@include herman-add('ratios', 'modular-scale', $modular-scale, 'ratio');
+@include add-ratios($modular-scale);
+@include herman-add('ratios', 'modular-scale', $modular-scale, get-function('ratio'));
 
 
 // Text Sizes
@@ -36,8 +35,8 @@ $text-sizes: (
   'social': 'root' ('text-ratio': -0.25),
 );
 
-$sizes: map-merge($sizes, $text-sizes);
-@include herman-add('sizes', 'text-sizes', $text-sizes, 'size');
+@include add-sizes($text-sizes);
+@include herman-add('sizes', 'text-sizes', $text-sizes, get-function('size'));
 
 
 // Spacing Sizes
@@ -49,12 +48,12 @@ $sizes: map-merge($sizes, $text-sizes);
 $spacing-sizes: (
   'rhythm': 'root' ('text-ratio': 1, 'convert-units': 'rem'),
   'gutter': 'rhythm',
-  'double-gutter': 'gutter' ('multiple': 2),
-  'triple-gutter': 'gutter' ('multiple': 3),
-  'shim-plus': 'gutter' ('multiple': 0.75),
-  'shim': 'gutter' ('multiple': 0.5),
-  'half-shim': 'shim' ('multiple': 0.5),
-  'quarter-shim': 'shim' ('multiple': 0.25),
+  'double-gutter': 'gutter' ('times': 2),
+  'triple-gutter': 'gutter' ('times': 3),
+  'shim-plus': 'gutter' ('times': 0.75),
+  'shim': 'gutter' ('times': 0.5),
+  'half-shim': 'shim' ('times': 0.5),
+  'quarter-shim': 'shim' ('times': 0.25),
   'pad': 1rem,
   'pixel': 1px,
 
@@ -62,8 +61,8 @@ $spacing-sizes: (
   'spacer': calc(%s + %s) ('double-gutter', 3vw),
 );
 
-$sizes: map-merge($sizes, $spacing-sizes);
-@include herman-add('sizes', 'spacing-sizes', $spacing-sizes, 'size');
+@include add-sizes($spacing-sizes);
+@include herman-add('sizes', 'spacing-sizes', $spacing-sizes, get-function('size'));
 
 
 // Pattern Sizes
@@ -82,7 +81,7 @@ $pattern-sizes: (
   'logo-x': 'logo-y' ('times': 2),
 
   'bird-face': 6rem,
-  'half-bird-face': 'bird-face' ('multiple': 0.5),
+  'half-bird-face': 'bird-face' ('times': 0.5),
 
   'intro-text': 'medium' ('convert-units': 'rem'),
 
@@ -93,7 +92,7 @@ $pattern-sizes: (
   'dropdown-narrow': 9rem,
   'dropdown-wide': 14rem,
   'menu-more': 12px,
-  'menu-more-space': 'menu-more' ('multiple': 0.25),
+  'menu-more-space': 'menu-more' ('times': 0.25),
 
   'splash-items': 18rem,
   'splash-items-max': 24rem,
@@ -102,8 +101,8 @@ $pattern-sizes: (
   'imageblock-image': 'splash-logo-x',
 );
 
-$sizes: map-merge($sizes, $pattern-sizes);
-@include herman-add('sizes', 'pattern-sizes', $pattern-sizes, 'size');
+@include add-sizes($pattern-sizes);
+@include herman-add('sizes', 'pattern-sizes', $pattern-sizes, get-function('size'));
 
 
 // Page Sizes
@@ -119,8 +118,8 @@ $page-sizes: (
   'large-page': 75rem,
 );
 
-$sizes: map-merge($sizes, $page-sizes);
-@include herman-add('sizes', 'page-sizes', $page-sizes, 'size');
+@include add-sizes($page-sizes);
+@include herman-add('sizes', 'page-sizes', $page-sizes, get-function('size'));
 
 
 // Column Sizes
@@ -139,5 +138,5 @@ $column-sizes: (
   'wide-column': 90%,
 );
 
-$sizes: map-merge($sizes, $column-sizes);
-@include herman-add('sizes', 'column-sizes', $column-sizes, 'size');
+@include add-sizes($column-sizes);
+@include herman-add('sizes', 'column-sizes', $column-sizes, get-function('size'));

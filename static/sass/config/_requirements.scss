@@ -6,3 +6,12 @@
 @import '~accoutrement-scale/sass/scale';
 @import '~accoutrement-layout/sass/layout';
 @import '~accoutrement-type/sass/type';
+
+$functions: (
+  'rgba': get-function('rgba'),
+  'saturate': get-function('saturate'),
+  'darken': get-function('darken'),
+  'lighten': get-function('lighten'),
+  'adjust-hue': get-function('adjust-hue'),
+  'convert-units': get-function('convert-units'),
+);

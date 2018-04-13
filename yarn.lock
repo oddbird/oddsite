@@ -529,21 +529,21 @@ accepts@~1.3.3:
     mime-types "~2.1.16"
     negotiator "0.6.1"
 
-accoutrement-color@^2.2.2:
-  version "2.2.2"
-  resolved "https://registry.yarnpkg.com/accoutrement-color/-/accoutrement-color-2.2.2.tgz#bece59d243c5d68077a2dd33d720fdeba988243f"
+accoutrement-color@2.3.1:
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/accoutrement-color/-/accoutrement-color-2.3.1.tgz#9466bbd74b394d1dbc36466ad09ca6d566ff35d9"
 
 accoutrement-init@^1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/accoutrement-init/-/accoutrement-init-1.1.2.tgz#8a08467efef35be8a22b5fc51ea820402abc3c4c"
 
-accoutrement-layout@^3.0.2:
+accoutrement-layout@3.0.3:
   version "3.0.3"
   resolved "https://registry.yarnpkg.com/accoutrement-layout/-/accoutrement-layout-3.0.3.tgz#747c630b24e8989296100c792297ea8ba18a0f47"
 
-accoutrement-scale@^5.0.1:
-  version "5.0.2"
-  resolved "https://registry.yarnpkg.com/accoutrement-scale/-/accoutrement-scale-5.0.2.tgz#2589252f8fd1eaf579a7d9f72343e81efe08259c"
+accoutrement-scale@6.0.0:
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/accoutrement-scale/-/accoutrement-scale-6.0.0.tgz#b7c973e319dbe21533ca9e0f57e8a5962d952c45"
 
 accoutrement-type@^4.0.2:
   version "4.0.2"
@@ -4645,7 +4645,7 @@ gulp-sourcemaps@1.6.0:
     through2 "^2.0.0"
     vinyl "^1.0.0"
 
-gulp-svg-symbols@^3.0.0:
+gulp-svg-symbols@^3.0.0, gulp-svg-symbols@^3.1.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/gulp-svg-symbols/-/gulp-svg-symbols-3.1.0.tgz#9869d78e8e93acac84c4818d1622c076a9748e98"
   dependencies:
@@ -6895,9 +6895,9 @@ lru-cache@~2.6.5:
   version "2.6.5"
   resolved "https://registry.yarnpkg.com/lru-cache/-/lru-cache-2.6.5.tgz#e56d6354148ede8d7707b58d143220fd08df0fd5"
 
-lunr@^2.1.5:
-  version "2.1.5"
-  resolved "https://registry.yarnpkg.com/lunr/-/lunr-2.1.5.tgz#826601ccaeac29148e224154b34760faf4d81b70"
+lunr@^2.1.6:
+  version "2.1.6"
+  resolved "https://registry.yarnpkg.com/lunr/-/lunr-2.1.6.tgz#671d2321c4c5bc4c522914953d1c54d612f60aa7"
 
 macaddress@^0.2.8:
   version "0.2.8"
@@ -6956,7 +6956,7 @@ markdown-it-named-headers@^0.0.4:
   dependencies:
     string "^3.0.1"
 
-markdown-it@^8.4.0:
+markdown-it@^8.4.1:
   version "8.4.1"
   resolved "https://registry.yarnpkg.com/markdown-it/-/markdown-it-8.4.1.tgz#206fe59b0e4e1b78a7c73250af9b34a4ad0aaf44"
   dependencies:
@@ -7312,6 +7312,10 @@ nan-x@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/nan-x/-/nan-x-1.0.0.tgz#0ee78e8d1cd0592d5b4260a5940154545c61c121"
 
+nan@^2.10.0:
+  version "2.10.0"
+  resolved "https://registry.yarnpkg.com/nan/-/nan-2.10.0.tgz#96d0cd610ebd58d4b4de9cc0c6828cda99c7548f"
+
 nan@^2.3.0, nan@^2.3.2:
   version "2.8.0"
   resolved "https://registry.yarnpkg.com/nan/-/nan-2.8.0.tgz#ed715f3fe9de02b57a5e6252d90a96675e1f085a"
@@ -7428,7 +7432,31 @@ node-pre-gyp@^0.6.39:
     tar "^2.2.1"
     tar-pack "^3.4.0"
 
-node-sass@^4.5.3, node-sass@^4.7.1, node-sass@^4.7.2:
+node-sass@4.8.3:
+  version "4.8.3"
+  resolved "https://registry.yarnpkg.com/node-sass/-/node-sass-4.8.3.tgz#d077cc20a08ac06f661ca44fb6f19cd2ed41debb"
+  dependencies:
+    async-foreach "^0.1.3"
+    chalk "^1.1.1"
+    cross-spawn "^3.0.0"
+    gaze "^1.0.0"
+    get-stdin "^4.0.1"
+    glob "^7.0.3"
+    in-publish "^2.0.0"
+    lodash.assign "^4.2.0"
+    lodash.clonedeep "^4.3.2"
+    lodash.mergewith "^4.6.0"
+    meow "^3.7.0"
+    mkdirp "^0.5.1"
+    nan "^2.10.0"
+    node-gyp "^3.3.1"
+    npmlog "^4.0.0"
+    request "~2.79.0"
+    sass-graph "^2.2.4"
+    stdout-stream "^1.4.0"
+    "true-case-path" "^1.0.2"
+
+node-sass@^4.5.3:
   version "4.7.2"
   resolved "https://registry.yarnpkg.com/node-sass/-/node-sass-4.7.2.tgz#9366778ba1469eb01438a9e8592f4262bcb6794e"
   dependencies:
@@ -9391,27 +9419,27 @@ sassdoc-theme-default@^2.6.1:
     swig "1.4.0"
     swig-extras "0.0.1"
 
-sassdoc-theme-herman@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/sassdoc-theme-herman/-/sassdoc-theme-herman-2.0.0.tgz#775f39e7ec5ce982762bd8c1f43d9423e5123182"
+sassdoc-theme-herman@3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/sassdoc-theme-herman/-/sassdoc-theme-herman-3.0.0.tgz#96ae97ec4a25c9be602f3defe0553fc2d2176ed9"
   dependencies:
     bluebird "^3.5.1"
     cheerio "^1.0.0-rc.2"
     extend "^3.0.1"
     gulp-imagemin "^4.0.0"
     gulp-rename "^1.2.2"
-    gulp-svg-symbols "^3.0.0"
+    gulp-svg-symbols "^3.1.0"
     html "^1.0.0"
-    lunr "^2.1.5"
-    markdown-it "^8.4.0"
+    lunr "^2.1.6"
+    markdown-it "^8.4.1"
     markdown-it-named-headers "^0.0.4"
-    node-sass "^4.7.1"
     nunjucks "^2.5.2"
     sassdoc-extras "^2.4.1"
     strip-indent "^2.0.0"
     through2 "^2.0.3"
     tinycolor2 "^1.4.1"
     typogr "^0.6.7"
+    unixify "^1.0.0"
     vinyl-fs "^3.0.0"
 
 sassdoc@^2.5.0:
@@ -10837,6 +10865,12 @@ unique-string@^1.0.0:
 universalify@^0.1.0:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/universalify/-/universalify-0.1.1.tgz#fa71badd4437af4c148841e3b3b165f9e9e590b7"
+
+unixify@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/unixify/-/unixify-1.0.0.tgz#3a641c8c2ffbce4da683a5c70f03a462940c2090"
+  dependencies:
+    normalize-path "^2.1.1"
 
 unpipe@1.0.0, unpipe@~1.0.0:
   version "1.0.0"
