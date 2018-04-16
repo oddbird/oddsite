@@ -2,18 +2,17 @@
 
 process.env.BROWSERSLIST_CONFIG = './.browserslistrc';
 
-const AssetsPlugin = require('assets-webpack-plugin');
+const AssetsPlugin = require('webpack-assets-manifest');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const path = require('path');
-const sassdoc = require('sassdoc');
+const SassDocPlugin = require('./sassdoc-webpack-plugin');
 const spawn = require('child_process').spawn;
 const touch = require('touch');
 const webpack = require('webpack');
 
 const outputPath = path.join(__dirname, 'content', 'static', 'assets');
 const sassdocPath = path.join(__dirname, 'content', 'styleguide');
-const assetsJsonPath = path.join(__dirname, 'content', 'static');
 let jsOutput = '[name].bundle.js';
 let styleOutput = '[name].bundle.css';
 let mediaOutput = '[name].[ext]';
@@ -53,7 +52,7 @@ const scssLoaders = [
 const WebpackShellPlugin = function() {};
 WebpackShellPlugin.prototype.apply = compiler => {
   let building = false;
-  compiler.plugin('after-emit', (compilation, cb) => {
+  compiler.hooks.afterEmit.tapAsync('WebpackShellPlugin', (compilation, cb) => {
     if (!building) {
       // eslint-disable-next-line no-console
       console.log('Executing post-build scripts');
@@ -70,99 +69,67 @@ WebpackShellPlugin.prototype.apply = compiler => {
   });
 };
 
-const SassdocPlugin = function() {};
-const getCSS = function(entry) {
-  if (!entry) {
-    return undefined;
-  }
-  for (const thisPath of entry) {
-    if (thisPath.substr(-4) === '.css') {
-      return thisPath;
-    }
-  }
-  return undefined;
-};
-SassdocPlugin.prototype.apply = compiler => {
-  compiler.plugin('after-emit', (compilation, cb) => {
-    const statsJSON = compilation.getStats().toJson();
-    const css = getCSS(statsJSON.assetsByChunkName.styleguide);
-    const json = getCSS(statsJSON.assetsByChunkName.sass_json);
-    const cssPath = css ? path.join(outputPath, css) : undefined;
-    const jsonPath = json ? path.join(outputPath, json) : undefined;
-    sassdoc('./static/sass/**/*.scss', {
-      dest: sassdocPath,
-      theme: 'herman',
-      descriptionPath: path.join(__dirname, 'STYLEGUIDE.md'),
-      herman: {
-        extraLinks: [
-          {
-            name: 'Accoutrement-Init',
-            url: 'http://oddbird.net/accoutrement-init/',
-          },
-          {
-            name: 'Accoutrement-Color',
-            url: 'http://oddbird.net/accoutrement-color/',
-          },
-          {
-            name: 'Accoutrement-Layout',
-            url: 'http://oddbird.net/accoutrement-layout/',
-          },
-          {
-            name: 'Accoutrement-Scale',
-            url: 'http://oddbird.net/accoutrement-scale/',
-          },
-          {
-            name: 'Accoutrement-Type',
-            url: 'http://oddbird.net/accoutrement-type/',
-          },
-        ],
-        displayColors: ['hex', 'hsl'],
-        customCSS: cssPath,
-        customHTML: path.join(__dirname, 'templates', '_icons.svg'),
-        nunjucks: {
-          templatepath: path.join(__dirname, 'templates'),
-        },
-        sass: {
-          jsonfile: jsonPath,
-          includepaths: [path.join(__dirname, 'static/sass')],
-          includes: ['config/manifest'],
-        },
+const sassDocOpts = {
+  src: './static/sass/**/*.scss',
+  dest: sassdocPath,
+  theme: 'herman',
+  descriptionPath: path.join(__dirname, 'STYLEGUIDE.md'),
+  herman: {
+    extraLinks: [
+      {
+        name: 'Accoutrement-Init',
+        url: 'http://oddbird.net/accoutrement-init/',
       },
-      shortcutIcon: path.join(
-        __dirname,
-        'content',
-        'static',
-        'images',
-        'favicons',
-        'favicon.ico',
-      ),
-      display: { access: ['public'] },
-      groups: {
-        'config-color': 'Color Palettes',
-        'config-fonts': 'Webfonts',
-        'config-layout': 'Layout',
-        'config-scale': 'Sizes & Spacing',
-        icons: 'Icons',
-        buttons: 'Buttons',
-        sections: 'Page Sections',
-        typography: 'Typography',
+      {
+        name: 'Accoutrement-Color',
+        url: 'http://oddbird.net/accoutrement-color/',
       },
-    }).then(
-      () => {
-        /* eslint-disable no-console */
-        console.log('Generated Sassdoc documentation.');
-        cb();
+      {
+        name: 'Accoutrement-Layout',
+        url: 'http://oddbird.net/accoutrement-layout/',
       },
-      err => {
-        console.error(err);
-        cb();
-        /* eslint-enable no-console */
+      {
+        name: 'Accoutrement-Scale',
+        url: 'http://oddbird.net/accoutrement-scale/',
       },
-    );
-  });
+      {
+        name: 'Accoutrement-Type',
+        url: 'http://oddbird.net/accoutrement-type/',
+      },
+    ],
+    displayColors: ['hex', 'hsl'],
+    customHTML: path.join(__dirname, 'templates', '_icons.svg'),
+    nunjucks: {
+      templatepath: path.join(__dirname, 'templates'),
+    },
+    sass: {
+      includepaths: [path.join(__dirname, 'static/sass')],
+      includes: ['config/manifest'],
+    },
+  },
+  shortcutIcon: path.join(
+    __dirname,
+    'content',
+    'static',
+    'images',
+    'favicons',
+    'favicon.ico',
+  ),
+  display: { access: ['public'] },
+  groups: {
+    'config-color': 'Color Palettes',
+    'config-fonts': 'Webfonts',
+    'config-layout': 'Layout',
+    'config-scale': 'Sizes & Spacing',
+    icons: 'Icons',
+    buttons: 'Buttons',
+    sections: 'Page Sections',
+    typography: 'Typography',
+  },
 };
 
 module.exports = {
+  mode: process.env.NODE_ENV || 'development',
   // context for entry points
   context: path.join(__dirname, 'static', 'js'),
   // define all the entry point bundles
@@ -183,6 +150,12 @@ module.exports = {
     modules: ['static/js', 'templates', 'sass', 'static', 'node_modules'],
     alias: { jquery: 'jquery/dist/jquery.slim.js' },
   },
+  optimization: {
+    runtimeChunk: 'single',
+    splitChunks: {
+      name: false,
+    },
+  },
   plugins: [
     // ignore flycheck and Emacs special files when watching
     new webpack.WatchIgnorePlugin([/flycheck_/, /\.#/, /#$/]),
@@ -196,23 +169,22 @@ module.exports = {
     new webpack.LoaderOptionsPlugin({
       debug: process.env.NODE_ENV !== 'production',
     }),
-    // pull common js and webpack runtime out of all bundles
-    new webpack.optimize.CommonsChunkPlugin({
-      name: 'spam_referrals_blocker',
-      minChunks: Infinity,
-    }),
     // pull all CSS out of JS bundles
     new ExtractTextPlugin({
       filename: styleOutput,
-      allChunks: true,
     }),
     // save assets.json mapping of names to bundled files
     new AssetsPlugin({
-      filename: 'assets.json',
-      path: assetsJsonPath,
-      prettyPrint: true,
+      output: '../assets.json',
+      publicPath: true,
     }),
-    new SassdocPlugin(),
+    new SassDocPlugin(sassDocOpts, {
+      assetPaths: [
+        { entry: 'styleguide', optPath: 'herman.customCSS' },
+        { entry: 'sass_json', optPath: 'herman.sass.jsonfile' },
+      ],
+      outputPath,
+    }),
     new WebpackShellPlugin(),
     new CleanWebpackPlugin([outputPath], {
       root: __dirname,

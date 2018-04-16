@@ -10,6 +10,7 @@ const webpack = require('webpack');
 const webpackConf = extend(true, {}, require('./webpack.common.config.js'));
 
 Reflect.deleteProperty(webpackConf, 'entry');
+webpackConf.optimization = {};
 webpackConf.plugins = [
   new webpack.WatchIgnorePlugin([
     /flycheck_/,
@@ -50,7 +51,7 @@ module.exports = config => {
 
     // frameworks to use
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
-    frameworks: ['mocha', 'sinon-chai'],
+    frameworks: ['mocha', 'chai-sinon'],
 
     client: { mocha: { ui: 'bdd' } },
 
@@ -89,7 +90,10 @@ module.exports = config => {
     // results will be saved as $outputDir/$browserName.xml
     junitReporter: { outputDir: 'jscov/' },
 
-    webpackMiddleware: { noInfo: true },
+    webpackMiddleware: {
+      logLevel: 'error',
+      stats: 'errors-only',
+    },
 
     // web server port
     port: 9876,
@@ -100,7 +104,7 @@ module.exports = config => {
     // level of logging
     // possible values: config.LOG_DISABLE, config.LOG_ERROR, config.LOG_WARN,
     // config.LOG_INFO, config.LOG_DEBUG
-    logLevel: 'ERROR',
+    logLevel: config.LOG_ERROR,
 
     // enable/disable watching file and executing tests whenever a file changes
     autoWatch: false,

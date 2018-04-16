@@ -14,8 +14,7 @@ from rstblog import builder as builder_module
 
 @contextfunction
 def get_asset(context, fn):
-    ext = 'css' if fn.endswith('_styles') else 'js'
-    return context.get('hashedassets', {}).get(fn, {}).get(ext, '/%s' % fn)
+    return context.get('hashedassets', {}).get(fn, '/%s' % fn)
 
 
 def monkeypatch_context():

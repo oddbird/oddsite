@@ -68,7 +68,7 @@
 
   <!-- Styles -->
   {% block styles %}
-  <link rel="stylesheet" href="{{ get_asset('app_styles') }}" media="screen" />
+  <link rel="stylesheet" href="{{ get_asset('app_styles.css') }}" media="screen" />
   {% endblock styles %}
 
   <!-- TypeKit Fonts -->
@@ -78,7 +78,8 @@
   <!-- Page-Specific Head -->
   {% block extrahead %}{% endblock extrahead %}
 
-  <script src="{{ get_asset('spam_referrals_blocker') }}"></script>
+  <script src="{{ get_asset('runtime.js') }}"></script>
+  <script src="{{ get_asset('spam_referrals_blocker.js') }}"></script>
   {% if config.google_analytics_id %}
     <!-- Google Analytics -->
     <script>
@@ -106,6 +107,6 @@
   {% block layout %}{% endblock layout %}
 
   <!-- JavaScript -->
-  <script src="{{ get_asset('app') }}"></script>
+  <script src="{{ get_asset('app.js') }}"></script>
 </body>
 </html>
