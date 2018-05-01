@@ -11,6 +11,7 @@ events:
     date: [2018, 3, 26]
     adr: 'New Orleans, LA'
     slides: 'https://oddbooksapp.com/release/9edb34c9-8789-4201-9f14-64bf5ab11b0a'
+    video_link: 'https://www.vuemastery.com/conferences/vueconf-2018/agile-design-systems-in-vue-miriam-suzanne/'
   - venue: 'Front-End Front Range'
     url: 'https://www.meetup.com/front-range-front-end/events/zwjmwlyxgbhb/'
     date: [2018, 4, 5]

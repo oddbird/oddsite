@@ -1,10 +1,5 @@
 public: yes
 speakers: [miriam, stacy]
-brag: |
-  Learn to **integrate design and code**
-  to isolate components and
-  automate style documentation
-  with a **design system built for your needs**.
 summary: |
   **Style Guides & Pattern Libraries are great tools**
   for documenting the relationships between code and design,

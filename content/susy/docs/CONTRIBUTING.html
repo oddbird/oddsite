@@ -42,7 +42,7 @@
       <div class="project-title">
         <a href="index.html" rel="home" class="project-name">Susy</a>
         
-          <span class="project-version">3.0.3</span>
+          <span class="project-version">3.0.5</span>
         
       </div>
     </header>
@@ -249,6 +249,13 @@ and make sure all tests are passing with <code>npm test</code></li>
 using <a href="http://sassdoc.com/">SassDoc</a> as appropriate,
 and compile the docs with <code>npm run sassdoc</code></li>
 </ul>
+<p><strong>Note:</strong>
+The primary API functions
+(<code>susy-span</code>, <code>susy-gutter</code>, <code>susy-slice</code>)
+all have unprefixed alias functions:
+<code>span</code>, <code>gutter</code>, and <code>slice</code>.
+Any changes to arguments or defaults
+should be made in both<span class="widont">&nbsp;</span>locations.</p>
 <h2 id="committing">Committing</h2>
 <p>Linting, testing, and documentation
 should be done before every<span class="widont">&nbsp;</span>commit:</p>
@@ -280,6 +287,15 @@ or<span class="widont">&nbsp;</span>up-for-debate.</p>
 <li>Write a clear, descriptive commit<span class="widont">&nbsp;</span>message</li>
 <li>Keep it simple: one bug fix or feature per pull<span class="widont">&nbsp;</span>request</li>
 </ul>
+<h2 id="release">Release</h2>
+<ul>
+<li>Update the version number in both
+<code>package.json</code> and <code>_version.scss</code>,</li>
+<li>Updated the changelog &amp; release<span class="widont">&nbsp;</span>date</li>
+<li><code>npm run commit</code></li>
+<li>Release on Github</li>
+<li>Publish release to<span class="widont">&nbsp;</span>NPM</li>
+</ul>
 
   </div>
 
@@ -288,7 +304,8 @@ or<span class="widont">&nbsp;</span>up-for-debate.</p>
     </div>
   </div>
 
-  <script type="text/javascript" src="assets/webpack/vendor.min.js"></script>
+  <script type="text/javascript" src="assets/webpack/runtime.min.js"></script>
+  <script type="text/javascript" src="assets/webpack/common.min.js"></script>
   <script type="text/javascript" src="assets/webpack/app.min.js"></script>
   
 </body>
