@@ -56,7 +56,7 @@
 
   {{ videos(
     talks=[ctx],
-    slice=1
+    slice=2
   ) }}
 
   <section class="events-by-talk extend-full">
@@ -118,7 +118,7 @@
   slice=10
 ) %}
   {% set events = talks|collect('events', label_with='slug') %}
-  {% set events = events|selectattr('feature')|sort(attribute='date')|reverse|list %}
+  {% set events = events|selectattr('video')|sort(attribute='date')|reverse|list %}
   {% set title = 'Featured Videos' if (slice > 1) else 'Featured Video' %}
 
   {% if events|length %}
@@ -126,14 +126,12 @@
       {{ content.divider(title=title) }}
 
       <figure class='video-gallery extend-large'>
-        {% for event in events %}
-          {% if (loop.index <= slice) %}
-            <div class="video-item">
-              <div class="video">
-                {{ event.video|safe }}
-              </div>
+        {% for event in events[:slice] %}
+          <div class="video-item">
+            <div class="video">
+              {{ event.video|safe }}
             </div>
-          {% endif %}
+          </div>
         {% endfor %}
       </figure>
     </section>

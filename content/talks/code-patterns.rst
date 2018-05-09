@@ -23,7 +23,6 @@ events:
     adr: 'Chandler, AZ'
     slides: 'https://oddbooksapp.com/release/1f08a0cb-198f-4c5f-ac85-93e55daa471d'
     video: '<iframe width="560" height="315" src="https://www.youtube.com/embed/lK_akjzOUY0" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>'
-    feature: true
   - venue: 'CascadiaFest'
     url: 'http://2016.cascadiafest.org/'
     date: [2016, 8, 3]

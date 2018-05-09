@@ -14,7 +14,6 @@ events:
     adr: 'Chandler, AZ'
     slides: 'https://www.slideshare.net/Funstacy/the-great-state-of-design-with-css-grid-layout-and-friends'
     video: '<iframe width="560" height="315" src="https://www.youtube.com/embed/pnbT4HdcSwM" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>'
-    feature: true
 brag: |
   An overview
   of the new features in CSS –

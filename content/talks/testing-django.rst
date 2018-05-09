@@ -6,7 +6,6 @@ events:
     date: [2012, 3, 10]
     adr: 'Santa Clara, CA'
     video: '<iframe width="560" height="315" src="https://www.youtube.com/embed/ickNQcNXiS4" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>'
-    feature: true
 summary: |
   Django has a fair bit of custom test code: a custom TestSuiteRunner, custom
   TestCase subclasses, some test-only monkeypatches to core Django code, and a

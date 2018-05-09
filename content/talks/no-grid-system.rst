@@ -8,11 +8,16 @@ events:
     url: 'https://beyondtellerrand.com/events/duesseldorf-2018'
     date: [2018, 5, 7]
     adr: 'Düsseldorf, Germany'
+    slides: 'https://oddbooksapp.com/release/ce37ef91-8bd8-43e2-932a-66931b4b25ce'
+    video: '<iframe src="https://player.vimeo.com/video/268576559" width="640" height="360" frameborder="0" allowfullscreen></iframe>'
+    video_link: 'https://vimeo.com/268576559'
   - venue: 'Clarity Conference'
     url: 'https://www.clarityconf.com/2017'
     date: [2017, 11, 28]
     adr: 'San Francisco, CA'
     slides: 'https://oddbooksapp.com/release/ae641b90-8efa-4b1e-8da8-16940edf420d'
+    video: '<iframe width="560" height="315" src="https://www.youtube.com/embed/Prc_V-j6yS4?rel=0" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>'
+    video_link: 'https://youtu.be/Prc_V-j6yS4'
   - venue: 'CSS Dev Conf'
     url: 'http://2017.cssdevconf.com/'
     date: [2017, 10, 9]
@@ -25,7 +30,7 @@ events:
     adr: 'Spokane, WA'
     slides: 'https://www.oddbooksapp.com/book/djangocon-layout'
     video: '<iframe width="560" height="315" src="https://www.youtube.com/embed/mDRfFEcj3-Q" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>'
-    feature: true
+    video_link: 'https://youtu.be/mDRfFEcj3-Q'
 brag: |
   The creator of `Susy`_
   provides **practical techniques**

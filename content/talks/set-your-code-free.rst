@@ -6,7 +6,6 @@ events:
     date: [2014, 4, 13]
     slides: '/set-your-code-free-preso/'
     video: '<iframe width="560" height="315" src="https://www.youtube.com/embed/nHWRN5gCPSI" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>'
-    feature: true
 summary: |
   **Got some code that you've written that would be useful to others**,
   but actually releasing it feels like too much new stuff to figure out?
