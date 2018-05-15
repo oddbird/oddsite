@@ -9,7 +9,7 @@ headline:
       .. _Agile Design Systems in Vue: /talks/agile-systems/
 author: miriam
 summary: |
-  I've been excited about `Vue.JS`_
+  I've been excited about `Vue.js`_
   since `Sarah Drasner`_ first showed me the basics.
   Since then,
   we've started using it for client work at OddBird,
@@ -17,7 +17,7 @@ summary: |
   so it was a real honor being invited to speak
   at the first `VueConf US`_, in New Orleans.
 
-  .. _`Vue.JS`: https://vuejs.org/
+  .. _`Vue.js`: https://vuejs.org/
   .. _Sarah Drasner: https://sarahdrasnerdesign.com/
   .. _VueConf US: http://us.vuejs.org/
 
@@ -49,25 +49,26 @@ our style guide generator.
 .. _Herman: /herman/
 
 I was also able to attend Sarah's
-full-day Vue annimation workshop.
+full-day Vue animation workshop.
 If you ever have the chance to learn from Sarah,
-I highly recommned it.
+I highly recommend it.
 I was already using the Vue
 ``<transition>`` and ``<transition-group>``
 `built-in functionality`_ on projects,
-but not to their full expent.
-Revisiting an internal OddBird project
-(still in early development)
+but not to their full extent.
+Revisiting an internal OddBird project,
+still in early development,
 I was finally able to create the page transitions
 that I wanted all along.
-The image is low-resolution
-in order to show more animations,
-without a massive file size…
 
 .. _built-in functionality: https://vuejs.org/v2/guide/transitions.html
 
-.. image:: /static/images/blog/2018/oddbooks.gif
-  :class: size-full img-border img-spacing
+.. figure:: /static/images/blog/2018/oddbooks.gif
+  :class: size-full img-border
+
+  The image is low-resolution
+  in order to show more animations,
+  without a massive file size…
 
 All the `VueConf talks`_ are available online,
 and I recommend checking them out!

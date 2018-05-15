@@ -45,7 +45,7 @@ robots with personality,
 stop-motion tinkering,
 and programatically-generated art.
 
-I had to speak on day two,
+I spoke on day two,
 followed by "bleeding edge" accessibility,
 large-scale projection-mapping,
 the women who built the internet,
@@ -54,17 +54,18 @@ How could I even begin to match
 the inspirational scope of these other presenters,
 while talking about layout?
 
-I couldn't but I did have some fun.
+I couldn't --
+but I did have some fun.
 Inspired by the generated art
-from Jared Tarbell and the `Levetated Toy Factory`_,
+from Jared Tarbell and the `Levitated Toy Factory`_,
 I picked `one of his art pieces`_ to recreate
 with CSS variables (aka custom properties)
 and CSS grid layouts.
 
-.. _Levetated Toy Factory: http://levitated.guru/
+.. _Levitated Toy Factory: http://levitated.guru/
 .. _one of his art pieces: http://levitated.net/daily/levInvaderFractal.html
 
-.. image:: /static/images/blog/2018/levetated.jpg
+.. image:: /static/images/blog/2018/levitated.jpg
   :class: extend-small img-border img-spacing
 
 I spent that evening studying his image,

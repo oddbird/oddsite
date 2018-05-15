@@ -23,7 +23,7 @@ quotes:
       Watch this talk when it’s published!
     name: 'Sarah Drasner'
     role: 'Microsoft Sr. Developer Advocate & Vue Core Team member'
-    source: 'https://twitter.com/sarah_edo/status/979023728611905536'
+    url: 'https://twitter.com/sarah_edo/status/979023728611905536'
     slug: 'audit'
 brag: |
   A talk on how we

@@ -33,13 +33,13 @@ events:
     video_link: 'https://youtu.be/mDRfFEcj3-Q'
 quotes:
   - text: |
-      Amazing talk by Miriam Suzanne at the Beyond Tellerand
+      Amazing talk by Miriam Suzanne at the Beyond Tellerand conference
       about the benefits of using plain CSS
       instead of heavy library for your grid!
       Very useful and inspiring. Thanks!
     name: 'Sami Stein'
     role: 'Frontend Developer at XING'
-    source: 'https://twitter.com/frontend_cat/status/993799732018532352'
+    url: 'https://twitter.com/frontend_cat/status/993799732018532352'
     slug: 'useful'
 brag: |
   The creator of `Susy`_
@@ -71,3 +71,6 @@ Don't Use My Grid System
 - When to use floats, CSS Grid, flexbox, custom properties, and other techniques.
 - How to make grid-math simple, and lose the grid-system.
 - How to make grid-systems work for you when you need them.
+
+.. callmacro:: content.macros.j2#get_quotes
+  :page: 'talks/no-grid-system'
