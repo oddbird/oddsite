@@ -17,8 +17,9 @@
 {% endmacro %}
 
 
-{% macro link_if(content=none, url=none, class=none) %}
-  {% set content = content|typogrify if (content != none) else caller()|rst %}
+{% macro link_if(content=none, url=none, class=none, rst=none) %}
+  {% set content = content if (content != none) else caller() %}
+  {% set content = content|rst if rst else content %}
 
   {%- if url -%}
     <a href="{{ url }}" {{ attr_if('class', class) }}>{{ content }}</a>

@@ -31,6 +31,16 @@ events:
     slides: 'https://www.oddbooksapp.com/book/djangocon-layout'
     video: '<iframe width="560" height="315" src="https://www.youtube.com/embed/mDRfFEcj3-Q" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>'
     video_link: 'https://youtu.be/mDRfFEcj3-Q'
+quotes:
+  - text: |
+      Amazing talk by Miriam Suzanne at the Beyond Tellerand conference
+      about the benefits of using plain CSS
+      instead of heavy library for your grid!
+      Very useful and inspiring. Thanks!
+    name: 'Sami Stein'
+    role: 'Frontend Developer at XING'
+    url: 'https://twitter.com/frontend_cat/status/993799732018532352'
+    slug: 'useful'
 brag: |
   The creator of `Susy`_
   provides **practical techniques**
@@ -43,7 +53,7 @@ summary: |
   (the creator of `Susy`_)
   will show you the history of web layout,
   how grid systems work,
-  and practical tip to avoid using them.
+  and practical tips to avoid using them.
   For those few cases where a grid really is required,
   we'll talk about the best ways to roll your own,
   so you're not relying on a bloated library to make decisions for you.
@@ -61,3 +71,6 @@ Don't Use My Grid System
 - When to use floats, CSS Grid, flexbox, custom properties, and other techniques.
 - How to make grid-math simple, and lose the grid-system.
 - How to make grid-systems work for you when you need them.
+
+.. callmacro:: content.macros.j2#get_quotes
+  :page: 'talks/no-grid-system'
