@@ -17,7 +17,7 @@
   {{ splash(talks) }}
 
   {{ videos(
-    talks=talks,
+    events=events,
     slice=2
   ) }}
 
@@ -50,12 +50,12 @@
 
 
 {% macro by_talk(ctx) %}
-  {% set events = ctx.config.events|sort(attribute='date') %}
+  {% set events = [ctx]|collect('events', label_with='slug')|sort(attribute='date') %}
   {% set future = events|filter_events(past=false)|list %}
   {% set past = events|filter_events(past=true)|reverse|list %}
 
   {{ videos(
-    talks=[ctx],
+    events=events,
     slice=2
   ) }}
 
@@ -80,6 +80,25 @@
       ) }}
     {% endif %}
   </section>
+{% endmacro %}
+
+
+{#
+  Talk Videos
+  -----------
+#}
+{% macro videos_by_talk(
+  slug,
+  venue=none,
+  slice=2
+) %}
+  {% set page = slug|get_config %}
+  {% set events = [page]|collect('events', label_with='slug')|sort(attribute='date') %}
+  {% set events = events|selectattr('venue', 'eq', venue) if venue else events %}
+  {{ videos(
+    events=events,
+    slice=slice
+  ) }}
 {% endmacro %}
 
 
@@ -114,10 +133,9 @@
 
 
 {% macro videos(
-  talks=none,
+  events=none,
   slice=10
 ) %}
-  {% set events = talks|collect('events', label_with='slug') %}
   {% set events = events|selectattr('video')|sort(attribute='date')|reverse|list %}
   {% set title = 'Featured Videos' if (slice > 1) else 'Featured Video' %}
 

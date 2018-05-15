@@ -8,7 +8,8 @@
 #}
 {% macro rst(
   content=none,
-  tag=none
+  tag=none,
+  safe=none
 ) %}
   {% if (tag == none) or (tag == 'start') %}
     <div class="content-block">
@@ -16,8 +17,8 @@
   {% endif %}
 
   {% if (tag == none) %}
-    {% set content = content|rst if (content != none) else caller() %}
-    {{ content|safe }}
+    {% set content = content if (content != none) else caller() %}
+    {{ content|safe if safe else content|rst }}
   {% endif %}
 
   {% if (tag == none) or (tag == 'end') %}
@@ -250,7 +251,7 @@
 ) %}
   {% set content = content if (content != none) else caller() %}
 
-  {% call rst() %}
+  {% call rst(safe=true) %}
     <div class="image-block extend-left">
       {% set img = '<img src="' + image + '" alt="' + alt + '" class="imageblock-image" />' %}
       {{ utility.link_if(img|safe, url, 'imageblock-link') }}

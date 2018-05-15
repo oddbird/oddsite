@@ -31,6 +31,16 @@ events:
     slides: 'https://www.oddbooksapp.com/book/djangocon-layout'
     video: '<iframe width="560" height="315" src="https://www.youtube.com/embed/mDRfFEcj3-Q" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>'
     video_link: 'https://youtu.be/mDRfFEcj3-Q'
+quotes:
+  - text: |
+      Amazing talk by Miriam Suzanne at the Beyond Tellerand
+      about the benefits of using plain CSS
+      instead of heavy library for your grid!
+      Very useful and inspiring. Thanks!
+    name: 'Sami Stein'
+    role: 'Frontend Developer at XING'
+    source: 'https://twitter.com/frontend_cat/status/993799732018532352'
+    slug: 'useful'
 brag: |
   The creator of `Susy`_
   provides **practical techniques**

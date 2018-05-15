@@ -17,6 +17,14 @@ events:
     url: 'https://www.meetup.com/front-range-front-end/events/zwjmwlyxgbhb/'
     date: [2018, 4, 5]
     adr: 'Denver, CO'
+quotes:
+  - text: |
+      Every time I hear Miriam talk, I learn a ton and laugh a ton…
+      Watch this talk when it’s published!
+    name: 'Sarah Drasner'
+    role: 'Microsoft Sr. Developer Advocate & Vue Core Team member'
+    source: 'https://twitter.com/sarah_edo/status/979023728611905536'
+    slug: 'audit'
 brag: |
   A talk on how we
   **automate style documentation** by
@@ -38,3 +46,6 @@ Agile Design Systems
 - Using templates and pre-processors for pattern-making in CSS and HTML.
 - Designing and integrating toolkits that force pattern-making.
 - Examples of what we've done, where we've failed, and where we're headed.
+
+.. callmacro:: content.macros.j2#get_quotes
+  :page: 'talks/agile-systems'

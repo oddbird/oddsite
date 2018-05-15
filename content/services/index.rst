@@ -37,6 +37,16 @@ summary: |
   with smooth and efficient progress
   from concept to launch.
 
+  We provide expertise across a range of technologies,
+  including
+  **Python/Django**,
+  accessible **HTML**,
+  modern **Sass/CSS**,
+  **Vue**,
+  **Node**,
+  **Backbone/Marionette**,
+  and more.
+
   .. callmacro:: content.macros.j2#link_button
     :url: '/contact/'
     :class: 'section-end'
