@@ -76,6 +76,7 @@ Software for Humans
 .. callmacro:: utility.macros.j2#link_if
   :url: '/birds/'
   :class: 'home-birds'
+  :rst: true
 
   .. callmacro:: utility.macros.j2#icon
     :name: 'allbirds'

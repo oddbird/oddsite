@@ -15,7 +15,7 @@ summary: |
   we've started using it for client work at OddBird,
   and I'm constantly impressed by the power and simplicity --
   so it was a real honor being invited to speak
-  at the first `VueConf US`_, in New Orleans.
+  at the first `VueConf US`_ in New Orleans.
 
   .. _`Vue.js`: https://vuejs.org/
   .. _Sarah Drasner: https://sarahdrasnerdesign.com/

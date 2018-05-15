@@ -75,7 +75,7 @@ leading to an absurd 3MB CSS file.
 By adding custom properties in the HTML,
 I was able to streamline things dramatically.
 This `second draft`_ relies on HAML
-to generate the required HTML,
+to generate the required HTML
 for a static (but responsive) result.
 
 .. _second draft: https://codepen.io/mirisuzanne/pen/gzXqOP
