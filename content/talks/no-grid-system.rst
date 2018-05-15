@@ -53,7 +53,7 @@ summary: |
   (the creator of `Susy`_)
   will show you the history of web layout,
   how grid systems work,
-  and practical tip to avoid using them.
+  and practical tips to avoid using them.
   For those few cases where a grid really is required,
   we'll talk about the best ways to roll your own,
   so you're not relying on a bloated library to make decisions for you.
