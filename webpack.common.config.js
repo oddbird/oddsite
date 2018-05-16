@@ -5,8 +5,10 @@ process.env.BROWSERSLIST_CONFIG = './.browserslistrc';
 const AssetsPlugin = require('webpack-assets-manifest');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const path = require('path');
 const SassDocPlugin = require('./sassdoc-webpack-plugin');
+const mozjpeg = require('imagemin-mozjpeg');
+const optipng = require('imagemin-optipng');
+const path = require('path');
 const spawn = require('child_process').spawn;
 const touch = require('touch');
 const webpack = require('webpack');
@@ -213,7 +215,7 @@ module.exports = {
         ],
       },
       {
-        test: /\.jpe?g$|\.gif$|\.png$|\.svg$/,
+        test: /\.jpe?g$|\.png$/,
         use: [
           {
             loader: 'file-loader',
@@ -222,7 +224,7 @@ module.exports = {
           {
             loader: 'img-loader',
             options: {
-              mozjpeg: { progressive: true },
+              plugins: [mozjpeg({ progressive: true }), optipng({})],
             },
           },
         ],

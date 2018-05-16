@@ -23,10 +23,10 @@ describe('initializeToggles', function() {
     this.close = $(
       '<div data-toggle="close" aria-controls="target &foo">',
     ).appendTo('body');
-    const toggleClose = (this.toggleClose = sinon.spy());
-    const toggleOpen = (this.toggleOpen = sinon.spy());
-    const targetClose = (this.targetClose = sinon.spy());
-    const targetOpen = (this.targetOpen = sinon.spy());
+    const toggleClose = (this.toggleClose = sinon.fake());
+    const toggleOpen = (this.toggleOpen = sinon.fake());
+    const targetClose = (this.targetClose = sinon.fake());
+    const targetOpen = (this.targetOpen = sinon.fake());
     this.toggle.on('toggle:close', toggleClose);
     this.toggle2.on('toggle:close', toggleClose);
     this.toggle.on('toggle:open', toggleOpen);

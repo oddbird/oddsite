@@ -2,47 +2,8 @@ import chaiJquery from 'chai-jquery';
 
 chai.use(chaiJquery);
 
-before(function() {
-  this.respondTo = (url, status, json, headers) => {
-    let matched = false;
-    for (const req of this.requests) {
-      if (req.readyState !== 4 && url === req.url) {
-        matched = true;
-        req.respond(
-          status,
-          headers || { 'Content-Type': 'application/json' },
-          JSON.stringify(json),
-        );
-        break;
-      }
-    }
-    expect(matched, `no requests matched by url ${url}`).to.be.true;
-  };
-  this.getRequest = (method, url) => {
-    let request;
-    for (const req of this.requests) {
-      if (req.url === url && req.method === method) {
-        request = req;
-        break;
-      }
-    }
-    expect(request, `no ${method} to ${url} found`).not.to.be.undefined;
-    return request;
-  };
-});
-
-beforeEach(function() {
-  this.xhr = sinon.useFakeXMLHttpRequest();
-  this.requests = [];
-  this.xhr.onCreate = req => {
-    this.requests.push(req);
-  };
-  this.clock = sinon.useFakeTimers();
-});
-
 afterEach(function() {
-  this.xhr.restore();
-  this.clock.restore();
+  sinon.restore();
 });
 
 chai.use(_chai => {

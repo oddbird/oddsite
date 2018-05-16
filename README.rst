@@ -12,7 +12,7 @@ Development setup
 Install Node.js
 ~~~~~~~~~~~~~~~
 
-OddSite development requires `Node.js`_ 8.11.1 and `yarn`_ 1.6.0.
+OddSite development requires `Node.js`_ 10.1.0 and `yarn`_ 1.6.0.
 
 The right versions of Node and yarn are bundled in the OddSite repo and can be
 unpacked inside the repo (in the git-ignored ``node/`` directory), so you don't
@@ -134,4 +134,3 @@ changes to the production code before committing. When satisfied, ``cd
 output/``, commit those changes and then ``git push`` to deploy it live.
 
 .. _github.com/oddbird/oddbird.github.com: https://github.com/oddbird/oddbird.github.com
-
