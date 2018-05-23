@@ -9,22 +9,6 @@ afterEach(function() {
 chai.use(_chai => {
   const { Assertion } = _chai;
 
-  Assertion.addMethod('calledOnceWith', function(...args) {
-    const obj = this._obj;
-    const assertion = new Assertion(obj);
-
-    assertion.to.have.been.calledOnce;
-    Reflect.apply(assertion.calledWith, assertion, args);
-  });
-
-  Assertion.addMethod('calledOnceWithExactly', function(...args) {
-    const obj = this._obj;
-    const assertion = new Assertion(obj);
-
-    assertion.to.have.been.calledOnce;
-    Reflect.apply(assertion.calledWithExactly, assertion, args);
-  });
-
   Assertion.addMethod('containRequest', function(method, url) {
     const obj = this._obj;
 
