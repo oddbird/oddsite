@@ -82,6 +82,8 @@ $pattern-sizes: (
 
   'bird-face': 6rem,
   'half-bird-face': 'bird-face' ('times': 0.5),
+  'bird-sig-height': 3rem,
+  'bird-sig-width': 'bird-sig-height' ('times': 920/310),
 
   'intro-text': 'medium' ('convert-units': 'rem'),
 
@@ -91,8 +93,6 @@ $pattern-sizes: (
 
   'dropdown-narrow': 9rem,
   'dropdown-wide': 14rem,
-  'menu-more': 12px,
-  'menu-more-space': 'menu-more' ('times': 0.25),
 
   'splash-items': 18rem,
   'splash-items-max': 24rem,
@@ -131,6 +131,7 @@ $page-sizes: (
 ///   Accoutrement Scale
 $column-sizes: (
   'full-content': 40rem,
+  'feature-width': calc(40rem + 10vw),
   'extend-xsmall': 70vw,
   'extend-small': 80vw,
   'extend-large': 90vw,

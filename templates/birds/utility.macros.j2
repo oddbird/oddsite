@@ -106,7 +106,7 @@
   {% set url = get_bird_url(author, page, blog) %}
   {% set url = none if ('None' in url) else url %}
 
-  {{ utility.link_if(name, url, class='hcard') }}
+  {{ utility.link_if(name, url, class='h-card') }}
 {% endmacro %}
 
 

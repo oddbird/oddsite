@@ -61,3 +61,8 @@
 [data-size='face'] {
   @include square('bird-face');
 }
+
+[data-size='sig'] {
+  height: size('bird-sig-height');
+  width: size('bird-sig-width');
+}

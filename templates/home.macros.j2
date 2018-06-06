@@ -1,1 +1,35 @@
+{% import 'birds/utility.macros.j2' as birds %}
 {% import 'content.macros.j2' as content %}
+{% import 'utility.macros.j2' as utility %}
+
+{% macro letter(
+  author,
+  action,
+  target
+) %}
+  <article class="splash-letter">
+    <div class="letter-face">
+      {{ utility.icon(author, size='face') }}
+    </div>
+    <div class="letter-body">
+      <div class="letter-text">
+        <p class="letter-greeting">
+          {% set first_name = birds.name_link(author, full_name=false) %}
+          <strong>
+            {{ ["Hi, I'm", first_name, '—']|join(' ')|typogrify }}
+          </strong>
+        </p>
+        {{ caller()|rst }}
+      </div>
+      <footer class="letter-sig">
+        {{ utility.icon([author, 'sig']|join('-'), size='sig') }}
+        {{ birds.get_card(author) }}
+      </footer>
+      {{ content.link_button(
+        url=target,
+        content=action,
+        class='letter-action'
+      ) }}
+    </div>
+  </article>
+{% endmacro %}

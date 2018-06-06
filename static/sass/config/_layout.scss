@@ -5,7 +5,7 @@
 // Variables
 // Reusable CSS Grid Template Columns definition
 // ---------------------------------------------
-$grid-columns-small: [col1-start] minmax(5vw, 1fr) [col1-end col2-start] minmax(auto, 1fr) [col2-end col3-start] minmax(auto, 1fr) [col3-end col4-start] minmax(auto, 1fr) [col4-end col5-start] minmax(auto, 1fr) [col5-end];
+$grid-columns-small: [col1-start] minmax(5vw, 1fr) [col1-end col2-start] 1fr [col2-end col3-start] 1fr [col3-end col4-start] 1fr [col4-end col5-start] 1fr [col5-end];
 $grid-columns-large: [col1-start] 1fr [col1-end col2-start] 1fr [col2-end col3-start] minmax(0, size('full-content')) [col3-end col4-start] 1fr [col4-end col5-start] 1fr [col5-end];
 
 

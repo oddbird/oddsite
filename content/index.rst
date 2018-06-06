@@ -9,40 +9,85 @@ dynamic_title:
       - name: 'accessible'
         tagline: |
           The world is diverse,
-          and no user is an "edge case"
+          and no user is an *edge case*...
       - name: 'human'
         tagline: |
-          Great software requires a personal touch
+          Great software requires a personal touch…
       - name: 'nimble'
         tagline: |
           Our tightly-integrated team
-          can adapt quickly to your needs
+          can adapt quickly to your needs…
       - name: 'queer'
         tagline: |
           Moving past "normal"
-          to explore new possibilities
+          to explore new possibilities…
       - name: 'robust'
         tagline: |
           100% test coverage,
           code review,
-          and documentation keep maintenance costs low
+          and documentation keep maintenance costs low…
       - name: 'thoughtful'
         tagline: |
           We don't know the answer,
-          but we know how to get there
+          but we know how to get there…
         default: true
       - name: 'top-shelf'
         tagline: |
           We build the tools
-          that millions of developers rely on
+          that millions of developers rely on…
       - name: 'transparent'
         tagline: |
           Daily communication keeps you in control
-          of the budget and priorities
+          of the budget and priorities…
 
 
 Software for Humans
 ===================
+
+.. callmacro:: home.macros.j2#letter
+  :author: 'miriam'
+  :action: 'Open the conversation'
+  :target: '/contact/'
+
+  I co-founded OddBird with my brothers
+  `Jonny`_ and `Carl`_ in 2008,
+  providing custom web & mobile application development.
+
+  .. _Carl: /authors/carl/
+  .. _Jonny: /authors/jonny/
+
+  While we've quickly become industry leaders --
+  creators and core developers of tools
+  like `Susy`_ & `Django`_
+  that larger agencies rely on --
+  we intentionally keep our team small.
+  Our size allows us to move quickly,
+  and integrate with your team
+  for an agile and collaborative process.
+  Together, we can build software
+  that reflects your unique vision and expertise.
+
+  .. _Susy: /susy/
+  .. _Django: /open-source/
+
+  - **Because we're small**,
+    you get direct access to our entire
+    `team of designers & developers`_,
+    with full transparency and daily communication.
+  - **Because we're experts**,
+    we can guide you smoothly through the entire process,
+    navigating issues before they arise.
+  - **Because we integrate** `design and code and content`_,
+    our software is built to last,
+    and keep your maintenance costs low.
+
+  .. _`team of designers & developers`: /birds/
+  .. _design and code and content: /services/
+
+  We know you have options,
+  and we'd love to talk more.
+  We think you'll be happy with the results.
+
 
 .. callmacro:: projects/splash.macros.j2#splash_list
   :headline: 'Featured Clients'

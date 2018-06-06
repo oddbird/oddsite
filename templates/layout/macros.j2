@@ -111,11 +111,11 @@
 
 {% macro dynamic_taglines(options) %}
   {% for option in options %}
-    <p class="tagline-option{{ ' is-active' if option.default }}"
+    <div class="tagline-option{{ ' is-active' if option.default }}"
       aria-labelledby="select-{{ option.name }}"
       id="{{ option.name }}">
-      {{ option.tagline }}
-    </p>
+      {{ option.tagline|rst }}
+    </div>
   {% endfor %}
 {% endmacro %}
 
@@ -125,8 +125,8 @@
       {{ utility.toggle_button(
         id='title-dropdown'
       ) }}>
-      {% set current = options|selectattr('default')|list|first %}
-      {{ current.name }}
+      {%- set current = options|selectattr('default')|list|first -%}
+      {{- current.name -}}
     </button>
     <ul class="title-dropdown is-dropdown"
       {{ utility.toggle_target(
