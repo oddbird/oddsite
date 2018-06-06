@@ -79,7 +79,7 @@
   type=none,
   is_dynamic=false
 ) %}
-  <header class="title{{ ' dynamic-title' if is_dynamic else '' }}">
+  <header class="title {{ 'dynamic-title' if is_dynamic else 'static-title' }}">
     {% if type %}
       <div class="title-post-type">
         {{ type|rst }}
@@ -112,6 +112,7 @@
 {% macro dynamic_taglines(options) %}
   {% for option in options %}
     <p class="tagline-option{{ ' is-active' if option.default else '' }}"
+      aria-labelledby="select-{{ option.name }}"
       id="{{ option.name }}">
       {{ option.tagline }}
     </p>
