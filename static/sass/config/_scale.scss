@@ -75,7 +75,7 @@ $pattern-sizes: (
   'background': calc(%s + %s) ('rhythm' ('times': 6), 16vw),
   'border': 8px,
   'border-thin': 1px,
-  'border-radius': 2rem,
+  'border-radius': 'half-shim',
 
   'logo-y': 'gutter' ('times': 3),
   'logo-x': 'logo-y' ('times': 2),

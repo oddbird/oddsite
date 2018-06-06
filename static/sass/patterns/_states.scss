@@ -1,6 +1,58 @@
 // States
 // ======
 
+.has-dropdown {
+  position: relative;
+
+  [aria-controls] {
+    @include after('\25BE') {
+      font-size: 0.5em;
+      font-style: normal;
+      opacity: 0.5;
+      padding-left: size('menu-more-space');
+      position: relative;
+      top: -0.2em;
+    }
+  }
+}
+
+// Dropdown ul for child items
+.is-dropdown {
+  @include position(100% 0 null);
+  background-color: color('background');
+  border-bottom: size('border') solid color('border');
+  filter: drop-shadow(0 6px 5px color('shadow'));
+  font-size: 1rem;
+  list-style: none;
+  min-width: 100%;
+  padding: size('shim') 0;
+  width: 100vw;
+  z-index: 2;
+
+  @include above('nav-medium') {
+    min-width: size('dropdown-narrow');
+    right: auto;
+    width: auto;
+  }
+
+  @include above('nav-wide') {
+    min-width: size('dropdown-wide');
+  }
+}
+
+// Styles for child items outside the .nav-link base styles
+.dropdown-item {
+  color: color('action-alt');
+  cursor: pointer;
+  display: block;
+  padding: size('half-shim') size('gutter');
+  text-align: left;
+
+  #{$focus} {
+    color: color('action');
+  }
+}
+
 [aria-expanded='false'] {
   @include is-hidden;
 }

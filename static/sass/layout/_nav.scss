@@ -18,15 +18,8 @@
     margin-top: negative('gutter');
   }
 
-  [aria-controls] {
-    @include after('\25BE') {
-      font-size: size('menu-more');
-      font-style: normal;
-      opacity: 0.5;
-      padding-left: size('menu-more-space');
-      position: relative;
-      top: -2px;
-    }
+  .is-dropdown {
+    transform: translateY(size('shim'));
   }
 }
 
@@ -81,13 +74,6 @@
   }
 }
 
-// Styles for child items outside the .nav-link base styles
-.nav-link-sub {
-  display: block;
-  padding: size('half-shim') size('gutter');
-  text-align: left;
-}
-
 // Map nav locations for highlighting active page
 $nav-locations: (
   'case-studies': 'work',
@@ -121,29 +107,6 @@ $nav-locations: (
   }
 }
 
-// Dropdown ul for child items
-.is-dropdown {
-  background-color: color('background');
-  border-bottom: size('border') solid color('border');
-  box-shadow: 0 6px 5px color('shadow');
-  left: 0;
-  padding: size('gutter') + size('half-shim') 0 size('shim');
-  position: absolute;
-  right: 0;
-  top: 100%;
-  width: 100vw;
-  z-index: 2;
-
-  @include above('nav-medium') {
-    min-width: size('dropdown-narrow');
-    right: auto;
-    width: auto;
-  }
-
-  @include above('nav-wide') {
-    min-width: size('dropdown-wide');
-  }
-}
 
 // OddBird link from sub-sites
 [data-active='oddbird'] {

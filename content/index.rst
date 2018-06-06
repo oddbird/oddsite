@@ -1,40 +1,48 @@
 public: yes
 location: home
 grid_template: true
-hide_title: true
-splash:
-  - big: |
-      Digital Product
-      <a href="/services/">Design</a> &
-      <a href="/services/">Development</a>,
-      Integrated for Long-Term Success.<span class="home-star">*</span>
-    small: |
-      |*| We help build and refactor
-      custom `mobile & web applications`_.
-      You’ll get a `complete team`_ of designers and developers
-      ready to integrate with your company,
-      scale your application,
-      and improve your results.
-
-      .. |*| raw:: html
-
-        <span class="home-star">*</span>
-        <abbr title="Too long; didn't read…">tl;dr</abbr>
-
-      .. _`mobile & web applications`: /work/
-      .. _complete team: /birds/
-
-    action: Schedule a free consultation
-    target: /contact/
+headline:
+  - type: 'Application Design & Development'
+dynamic_title:
+  - template: 'Oddly %s software development'
+    options:
+      - name: 'accessible'
+        tagline: |
+          The world is diverse,
+          and no user is an "edge case"
+      - name: 'human'
+        tagline: |
+          Great software requires a personal touch
+      - name: 'nimble'
+        tagline: |
+          Our tightly-integrated team
+          can adapt quickly to your needs
+      - name: 'queer'
+        tagline: |
+          Moving past "normal"
+          to explore new possibilities
+      - name: 'robust'
+        tagline: |
+          100% test coverage,
+          code review,
+          and documentation keep maintenance costs low
+      - name: 'thoughtful'
+        tagline: |
+          We don't know the answer,
+          but we know how to get there
+        default: true
+      - name: 'top-shelf'
+        tagline: |
+          We build the tools
+          that millions of developers rely on
+      - name: 'transparent'
+        tagline: |
+          Daily communication keeps you in control
+          of the budget and priorities
 
 
 Software for Humans
 ===================
-
-.. callmacro:: home.macros.j2#home_cta
-  :page: 'index'
-  :slug: 'splash'
-
 
 .. callmacro:: projects/splash.macros.j2#splash_list
   :headline: 'Featured Clients'
