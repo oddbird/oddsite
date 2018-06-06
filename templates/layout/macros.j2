@@ -120,14 +120,13 @@
 
 {% macro title_dropdown(options) %}
   <span class="title-select has-dropdown">
-    <span class="title-current"
+    <button class="title-current"
       {{ utility.toggle_button(
-        id='title-dropdown',
-        button=false
+        id='title-dropdown'
       ) }}>
       {% set current = options|selectattr('default')|list|first %}
       {{ current.name }}
-    </span>
+    </button>
     <ul class="title-dropdown is-dropdown"
       {{ utility.toggle_target(
         id='title-dropdown',
