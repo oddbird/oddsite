@@ -6,7 +6,7 @@
 {% macro main_nav(yaml) %}
   <ul class="main-nav">
     {% for link in yaml %}
-      <li class="nav-item{{ ' has-dropdown' if link.subnav else '' }}">
+      <li class="nav-item{{ ' has-dropdown' if link.subnav }}">
         {% if link.url %}
           {% set icon = 'external' if ('://' in link.url) else none %}
 
@@ -111,7 +111,7 @@
 
 {% macro dynamic_taglines(options) %}
   {% for option in options %}
-    <p class="tagline-option{{ ' is-active' if option.default else '' }}"
+    <p class="tagline-option{{ ' is-active' if option.default }}"
       aria-labelledby="select-{{ option.name }}"
       id="{{ option.name }}">
       {{ option.tagline }}

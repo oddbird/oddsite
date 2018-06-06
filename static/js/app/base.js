@@ -1,3 +1,16 @@
+export const closeToggle = function(target) {
+  // Close a target and update any attached toggles
+  const id = target.attr('data-target-id');
+  const openToggles = $(
+    `[data-toggle="button"][aria-controls="${id}"][aria-pressed="true"]`,
+  );
+  if (openToggles.length) {
+    openToggles.trigger('toggle:close');
+  } else {
+    target.trigger('target:close');
+  }
+};
+
 export const initializeToggles = function() {
   const body = $('body');
 
@@ -41,19 +54,6 @@ export const initializeToggles = function() {
     }
   });
 
-  const closeTarget = function(target) {
-    // Close a target and update any attached toggles
-    const id = target.attr('data-target-id');
-    const openToggles = $(
-      `[data-toggle="button"][aria-controls="${id}"][aria-pressed="true"]`,
-    );
-    if (openToggles.length) {
-      openToggles.trigger('toggle:close');
-    } else {
-      target.trigger('target:close');
-    }
-  };
-
   body.on('target:open', '[data-toggle="target"]', function cb(evt) {
     const target = $(this);
     // Prevent event firing on multiple nested targets
@@ -75,7 +75,7 @@ export const initializeToggles = function() {
   body.on('click', '[data-toggle="close"]', function cb(evt) {
     evt.preventDefault();
     const target = $(`[data-target-id="${$(this).attr('aria-controls')}"]`);
-    closeTarget(target);
+    closeToggle(target);
   });
 
   const autoClose = function(newTarget, target) {
@@ -90,10 +90,11 @@ export const initializeToggles = function() {
       : false;
     if (
       !toggleClicked &&
+      !clickedException &&
       (target.data('auto-closing-on-any-click') ||
-        (clickedElInDOM && clickedOutsideTarget && !clickedException))
+        (clickedElInDOM && clickedOutsideTarget))
     ) {
-      closeTarget(target);
+      closeToggle(target);
     }
   };
 
@@ -104,5 +105,20 @@ export const initializeToggles = function() {
     openTargets.each((index, target) => {
       autoClose($(evt.target), $(target));
     });
+  });
+};
+
+export const initializeDynamicNav = function() {
+  const toggle = $('[aria-controls="title-dropdown"]');
+  const target = $('#title-dropdown');
+  const radios = target.find('input[type="radio"][name="title-option"]');
+  const subtitles = $('.tagline-option');
+  radios.on('change', evt => {
+    const val = $(evt.currentTarget).val();
+    subtitles
+      .removeClass('is-active')
+      .filter(`#${val}`)
+      .addClass('is-active');
+    toggle.text(val);
   });
 };

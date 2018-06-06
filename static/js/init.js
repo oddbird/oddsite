@@ -1,6 +1,7 @@
-import { initializeToggles } from 'app/base';
+import { initializeToggles, initializeDynamicNav } from 'app/base';
 
 $(() => {
   window.$ = $;
   initializeToggles();
+  initializeDynamicNav();
 });
