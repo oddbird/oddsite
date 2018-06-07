@@ -1,3 +1,26 @@
+import 'jquery-dotimeout';
+
+// Store keycode variables for easier readability
+export const KEYCODES = {
+  SPACE: 32,
+  ENTER: 13,
+  TAB: 9,
+  ESC: 27,
+  BACKSPACE: 8,
+  SHIFT: 16,
+  CTRL: 17,
+  ALT: 18,
+  CAPS: 20,
+  LEFT: 37,
+  UP: 38,
+  RIGHT: 39,
+  DOWN: 40,
+  DELETE: 46,
+  COMMA: 44,
+  Y: 89,
+  Z: 90,
+};
+
 export const closeToggle = function(target) {
   // Close a target and update any attached toggles
   const id = target.attr('data-target-id');
@@ -62,9 +85,15 @@ export const initializeToggles = function() {
     }
   });
 
-  body.on('click', '[data-toggle="button"]', function cb(evt) {
-    evt.preventDefault();
+  body.on('click keyup', '[data-toggle="button"]', function cb(evt) {
     const toggle = $(this);
+    // Browsers trigger `click` on button `ENTER` by default
+    if (
+      evt.type === 'keyup' &&
+      (evt.which !== KEYCODES.ENTER || toggle.is('button'))
+    ) {
+      return;
+    }
     if (toggle.attr('aria-pressed') === 'true') {
       toggle.trigger('toggle:close');
     } else {
@@ -76,6 +105,23 @@ export const initializeToggles = function() {
     evt.preventDefault();
     const target = $(`[data-target-id="${$(this).attr('aria-controls')}"]`);
     closeToggle(target);
+  });
+
+  body.on('focusin', '[data-toggle="target"]', function cb() {
+    const target = $(this);
+    const id = target.attr('data-target-id');
+    const toggle = $(`[data-toggle="button"][aria-controls="${id}"]`).first();
+    toggle.trigger('toggle:open');
+  });
+
+  body.on('focusout', '[data-toggle="target"]', function cb() {
+    const target = $(this);
+    // Delay to check if focus has been moved to sibling within target
+    $.doTimeout(50, () => {
+      if (!target.find(document.activeElement).length) {
+        closeToggle(target);
+      }
+    });
   });
 
   const autoClose = function(newTarget, target) {
@@ -113,12 +159,16 @@ export const initializeDynamicNav = function() {
   const target = $('#title-dropdown');
   const radios = target.find('input[type="radio"][name="title-option"]');
   const subtitles = $('.tagline-option');
-  radios.on('change', evt => {
+  radios.on('click', evt => {
     const val = $(evt.currentTarget).val();
     subtitles
       .removeClass('is-active')
       .filter(`#${val}`)
       .addClass('is-active');
     toggle.text(val);
+    // Close menu if this was an actual `click` (not a change using arrow keys)
+    if (evt.clientX !== 0 && evt.clientY !== 0) {
+      toggle.trigger('toggle:close');
+    }
   });
 };

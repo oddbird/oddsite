@@ -227,7 +227,7 @@
       {% endfor %}
 
       {% if slice and (events|length > slice) %}
-        <button class="btn small-btn more-events" {{ utility.toggle_button('more-events') }}>
+        <button class="btn small-btn more-events" {{ utility.toggle_button('more-events', button=true) }}>
           show all events
         </button>
       {% endif %}

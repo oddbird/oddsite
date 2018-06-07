@@ -21,7 +21,7 @@
               {% set icon = 'external' if ('://' in sub.url) else none %}
 
               <li>
-                <a href="{{ sub.url }}" class="nav-link dropdown-item" data-active="{{ sub.text }}">
+                <a href="{{ sub.url }}" class="nav-link dropdown-item" data-active="{{ sub.text }}" tabindex="0">
                   {{ sub.display_text|typogrify or sub.text|typogrify }}
                   {% if icon %}{{ utility.icon(icon, size='text-small') }}{% endif %}
                 </a>
@@ -123,7 +123,8 @@
   <span class="title-select has-dropdown">
     <button class="title-current"
       {{ utility.toggle_button(
-        id='title-dropdown'
+        id='title-dropdown',
+        button=true
       ) }}>
       {%- set current = options|selectattr('default')|list|first -%}
       {{- current.name -}}
@@ -131,8 +132,7 @@
     <ul class="title-dropdown is-dropdown"
       {{ utility.toggle_target(
         id='title-dropdown',
-        auto_closing=true,
-        auto_closing_on_any_click=true
+        auto_closing=true
       ) }}>
       {% for option in options %}
         <li>

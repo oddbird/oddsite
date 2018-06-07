@@ -354,8 +354,10 @@ const getServeOpts = dir => ({
   logLevel: 'info',
   logPrefix: 'oddsite',
   notify: false,
+  ghostMode: false,
   files: [`${dir}**/*`],
   reloadDebounce: 1000,
+  injectChanges: false,
 });
 
 const getBsCb = cb => (err, bs) => {

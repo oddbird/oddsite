@@ -27,8 +27,8 @@ quotes:
     slug: 'iterate'
   - text: |
       Oddbird was the wise investment.
-      We could have selected a cheaper avenue for this work.​
-      We would have paid for it manifold in long run.
+      We could have selected a cheaper avenue for this work --
+      we would have paid for it manifold in the long run.
     name: 'Furman Brown'
     role: 'Founder'
     slug: 'investment'

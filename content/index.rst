@@ -10,33 +10,33 @@ dynamic_title:
           and no user is an "edge case"...
       - name: 'human'
         tagline: |
-          Great software requires a personal touch…
+          Great software requires a personal touch...
       - name: 'nimble'
         tagline: |
           Our tightly-integrated team
-          can adapt quickly to your needs…
+          can adapt quickly to your needs...
       - name: 'queer'
         tagline: |
           Moving past "normal"
-          to explore new possibilities…
+          to explore new possibilities...
       - name: 'robust'
         tagline: |
           100% test coverage,
           code review,
-          and documentation keep maintenance costs low…
+          and documentation keep maintenance costs low...
       - name: 'thoughtful'
         tagline: |
           We don't know the answer,
-          but we know how to get there…
+          but we know how to get there...
         default: true
       - name: 'top-shelf'
         tagline: |
           We build the tools
-          that millions of developers rely on…
+          that millions of developers rely on...
       - name: 'transparent'
         tagline: |
           Daily communication keeps you in control
-          of the budget and priorities…
+          of the budget and priorities...
 
 
 Software for Humans
@@ -77,7 +77,7 @@ Software for Humans
     navigating issues before they arise.
   - **Because we integrate** `design and code and content`_,
     our software is built to last,
-    and keep your maintenance costs low.
+    keeping your maintenance costs low.
 
   .. _`team of designers & developers`: /birds/
   .. _entire process: /services/planning/

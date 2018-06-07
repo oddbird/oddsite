@@ -15,7 +15,7 @@
       <div class="letter-text">
         <p class="letter-greeting">
           {% set first_name = birds.name_link(author, full_name=false) %}
-          {{ ["Hi, I'm", first_name, '—']|join(' ')|typogrify }}
+          {{ ["Hi, I’m", first_name, '—']|join(' ') }}
         </p>
         {{ caller()|rst }}
       </div>
