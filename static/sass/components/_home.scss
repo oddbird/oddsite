@@ -8,12 +8,18 @@
 
   @include above('small-page') {
     display: grid;
-    grid-template-columns: auto minmax(0, size('full-content'));
+    grid-template-columns: auto minmax(0, size('full-content')) var(--last-col, 0);
+  }
+
+  @include above('medium-page') {
+    #{--last-col}: minmax(0, size('bird-face'));
+    padding-right: size('gutter');
   }
 }
 
 .letter-face {
   display: none;
+  flex: 0 0 auto;
   padding-right: size('shim');
 
   @include above('small-page') {
@@ -28,6 +34,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  max-width: size('full-content');
   padding: size('double-gutter');
   position: relative;
 
@@ -40,9 +47,9 @@
 }
 
 .letter-greeting {
-  display: inline;
   font-size: size('intro-text');
   font-style: italic;
+  font-weight: bold;
 }
 
 .letter-text {
@@ -88,24 +95,36 @@
   display: flex;
   flex: 0 0 auto;
   flex-direction: column;
+  margin-bottom: size('gutter');
 
   [data-icon] {
-    transition: transform 200ms ease-in-out;
-
-    @include above('small-page') {
-      transform: translateX(-33%);
-    }
-  }
-
-  .h-card {
-    transition: transform 200ms ease-in-out;
-
-    @include above('small-page') {
-      transform: translateY(negative('shim-plus'));
-    }
+    pointer-events: none;
+    transform: translate3d(-25%, size('shim-plus'), 0);
   }
 }
 
 .letter-action {
   flex: 0 0 auto;
+  margin-bottom: size('shim-plus');
+}
+
+
+// Birds image
+// -----------
+.home-birds {
+  #{$link} {
+    color: color('text');
+    display: block;
+    margin: 0 auto;
+    max-width: size('medium-page');
+  }
+
+  #{$focus} {
+    color: color('action-hover');
+  }
+
+  [data-icon] {
+    height: auto;
+    width: 100%;
+  }
 }

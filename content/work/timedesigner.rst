@@ -26,6 +26,13 @@ quotes:
     role: 'Founder'
     slug: 'iterate'
   - text: |
+      Oddbird was the wise investment.
+      We could have selected a cheaper avenue for this work.​
+      We would have paid for it manifold in long run.
+    name: 'Furman Brown'
+    role: 'Founder'
+    slug: 'investment'
+  - text: |
       The internet was useless in deciding who to hire,
       with too much conflicting info.
       Then I found OddBird,

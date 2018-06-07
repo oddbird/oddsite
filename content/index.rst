@@ -1,15 +1,13 @@
 public: yes
 location: home
 grid_template: true
-headline:
-  - type: 'Application Design & Development'
 dynamic_title:
   - template: 'Oddly %s software development'
     options:
       - name: 'accessible'
         tagline: |
           The world is diverse,
-          and no user is an *edge case*...
+          and no user is an "edge case"...
       - name: 'human'
         tagline: |
           Great software requires a personal touch…
@@ -61,7 +59,7 @@ Software for Humans
   like `Susy`_ & `Django`_
   that larger agencies rely on --
   we intentionally keep our team small.
-  Our size allows us to move quickly,
+  Our size allows us to move quickly
   and integrate with your team
   for an agile and collaborative process.
   Together, we can build software
@@ -75,22 +73,23 @@ Software for Humans
     `team of designers & developers`_,
     with full transparency and daily communication.
   - **Because we're experts**,
-    we can guide you smoothly through the entire process,
+    we can guide you smoothly through the `entire process`_,
     navigating issues before they arise.
   - **Because we integrate** `design and code and content`_,
     our software is built to last,
     and keep your maintenance costs low.
 
   .. _`team of designers & developers`: /birds/
+  .. _entire process: /services/planning/
   .. _design and code and content: /services/
 
   We know you have options,
   and we'd love to talk more.
-  We think you'll be happy with the results.
+  **We think you'll be happy with the results.**
 
 
 .. callmacro:: projects/splash.macros.j2#splash_list
-  :headline: 'Featured Clients'
+  :headline: 'Featured Projects'
   :url: '/work/'
 
 
@@ -164,7 +163,10 @@ as we get to know your goals inside and out.
   contribute to the languages,
   and build the tools**
   that other developers rely on.
-  *We don't just follow best-practice –
+  With expertise in
+  Python/Django, accessible HTML, modern Sass/CSS,
+  Vue, Node, Backbone/Marionette, and more --
+  *We don't just follow best-practice,
   we help define it.*
 
   .. _Miriam: /authors/miriam/

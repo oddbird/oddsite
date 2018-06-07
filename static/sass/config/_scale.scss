@@ -82,7 +82,7 @@ $pattern-sizes: (
 
   'bird-face': 6rem,
   'half-bird-face': 'bird-face' ('times': 0.5),
-  'bird-sig-height': 3rem,
+  'bird-sig-height': 'rhythm' ('times': 3),
   'bird-sig-width': 'bird-sig-height' ('times': 920/310),
 
   'intro-text': 'medium' ('convert-units': 'rem'),
