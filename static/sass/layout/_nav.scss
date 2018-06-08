@@ -16,6 +16,20 @@
 
   @include above('small-page') {
     margin-top: negative('gutter');
+
+    .is-dropdown {
+      padding-top: size('gutter');
+    }
+  }
+
+  @include below('small-page') {
+    .has-dropdown {
+      position: static;
+    }
+
+    .is-dropdown {
+      width: 100vw;
+    }
   }
 
   .is-dropdown {
@@ -31,10 +45,6 @@
     &:nth-of-type(2) {
       flex-grow: 2;
     }
-  }
-
-  @include above('nav-medium') {
-    position: relative;
   }
 }
 
