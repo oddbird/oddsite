@@ -147,7 +147,7 @@ export const initializeToggles = function() {
     }
     $.doTimeout(
       'toggle-autoclose',
-      100,
+      75,
       () => {
         const openTargets = $('[data-toggle="target"][aria-expanded="true"]');
         openTargets.each((index, target) => {
