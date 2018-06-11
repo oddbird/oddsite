@@ -2,31 +2,33 @@ import * as base from 'js/app/base.js';
 
 describe('initializeToggles', function() {
   beforeEach(function() {
+    this.body = $('body');
     this.toggle = $(
       '<div data-toggle="button" aria-controls="target &foo" ' +
         'aria-pressed="false" tabindex="0">',
-    ).appendTo('body');
+    ).appendTo(this.body);
     this.toggle2 = $(
-      '<div data-toggle="button" aria-controls="target &foo" ' +
+      '<button data-toggle="button" aria-controls="target &foo" ' +
         'aria-pressed="true">',
-    ).appendTo('body');
+    ).appendTo(this.body);
     this.syncedToggle = $(
-      '<div data-toggle="button" aria-controls="target &foo" ' +
+      '<button data-toggle="button" aria-controls="target &foo" ' +
         'data-toggle-synced="true">',
-    ).appendTo('body');
+    ).appendTo(this.body);
     this.syncedToggle2 = $(
-      '<div data-toggle="button" aria-controls="target &foo" ' +
+      '<button data-toggle="button" aria-controls="target &foo" ' +
         'data-toggle-synced="true">',
-    ).appendTo('body');
+    ).appendTo(this.body);
     this.target = $(
       '<div data-toggle="target" data-target-id="target &foo" ' +
         'aria-expanded="false">',
-    ).appendTo('body');
-    this.targetContents = $('<div tabindex="0">').appendTo(this.target);
-    this.targetContents2 = $('<div tabindex="0">').appendTo(this.target);
+    ).appendTo(this.body);
+    this.targetContents = $('<button>').appendTo(this.target);
+    this.targetContents2 = $('<button>').appendTo(this.target);
     this.close = $(
-      '<div data-toggle="close" aria-controls="target &foo">',
-    ).appendTo('body');
+      '<button data-toggle="close" aria-controls="target &foo">',
+    ).appendTo(this.body);
+    this.otherElement = $('<button>').appendTo(this.body);
     const toggleClose = (this.toggleClose = sinon.fake());
     const toggleOpen = (this.toggleOpen = sinon.fake());
     const targetClose = (this.targetClose = sinon.fake());
@@ -47,9 +49,9 @@ describe('initializeToggles', function() {
     this.syncedToggle2.remove();
     this.target.remove();
     this.close.remove();
-    $('body').off(
-      'click keyup focusin focusout toggle:close toggle:open target:close ' +
-        'target:open',
+    this.otherElement.remove();
+    this.body.off(
+      'click keyup focusin toggle:close toggle:open target:close target:open',
     );
   });
 
@@ -153,6 +155,7 @@ describe('initializeToggles', function() {
 
   describe('auto-closing', function() {
     beforeEach(function() {
+      sinon.stub($, 'doTimeout').callsArg(2);
       this.target.attr('data-auto-closing', 'true');
       this.toggle.click();
     });
@@ -165,7 +168,7 @@ describe('initializeToggles', function() {
       expect(this.toggleClose).not.to.have.been.called;
       expect(this.targetClose).not.to.have.been.called;
 
-      $('body').click();
+      this.body.click();
 
       expect(this.toggle).to.have.attr('aria-pressed', 'false');
       expect(this.target).to.have.attr('aria-expanded', 'false');
@@ -174,7 +177,7 @@ describe('initializeToggles', function() {
     });
 
     it('does not close if clicked el is removed from DOM', function() {
-      const el = $('div').appendTo('body');
+      const el = $('div').appendTo(this.body);
       el.on('click', () => {
         el.remove();
       });
@@ -188,7 +191,7 @@ describe('initializeToggles', function() {
 
     it('does not close if exception is clicked', function() {
       this.target.attr('data-auto-closing-exception', '.exception');
-      const el = $('<div class="exception">').appendTo('body');
+      const el = $('<div class="exception">').appendTo(this.body);
       el.click();
 
       expect(this.toggle).to.have.attr('aria-pressed', 'true');
@@ -201,6 +204,7 @@ describe('initializeToggles', function() {
   });
 
   it('auto-closing-on-any-click toggle closes on any click', function() {
+    sinon.stub($, 'doTimeout').callsArg(2);
     this.target.attr('data-auto-closing', 'true');
     this.target.attr('data-auto-closing-on-any-click', 'true');
     this.toggle.click();
@@ -219,14 +223,15 @@ describe('initializeToggles', function() {
   });
 
   it('multiple auto-closing toggles work independently', function() {
+    sinon.stub($, 'doTimeout').callsArg(2);
     const otherTarget = $(
       '<div data-toggle="target" data-target-id="target2"' +
         ' data-auto-closing="true" aria-expanded="false">',
-    ).appendTo('body');
+    ).appendTo(this.body);
     const otherToggle = $(
       '<div data-toggle="button" aria-controls="target2" ' +
         'aria-pressed="false">',
-    ).appendTo('body');
+    ).appendTo(this.body);
     this.target.attr('data-auto-closing', 'true');
     this.toggle.click();
 
@@ -254,7 +259,8 @@ describe('initializeToggles', function() {
   });
 
   it('focus within target opens toggle', function() {
-    sinon.stub($, 'doTimeout');
+    const TAB = $.Event('keyup', { which: base.KEYCODES.TAB });
+    sinon.stub($, 'doTimeout').callsArg(2);
     this.targetContents.focus();
 
     expect(this.toggle).to.have.attr('aria-pressed', 'true');
@@ -263,13 +269,20 @@ describe('initializeToggles', function() {
     expect(this.targetOpen).to.have.been.calledOnce;
 
     this.targetContents2.focus();
-    $.doTimeout.args[0][1]();
+    this.body.trigger(TAB);
 
     expect(this.toggle).to.have.attr('aria-pressed', 'true');
     expect(this.target).to.have.attr('aria-expanded', 'true');
 
-    this.toggle.focus();
-    $.doTimeout.args[1][1]();
+    this.target.removeData('auto-opened');
+    this.otherElement.focus();
+    this.body.trigger(TAB);
+
+    expect(this.toggle).to.have.attr('aria-pressed', 'true');
+    expect(this.target).to.have.attr('aria-expanded', 'true');
+
+    this.target.data('auto-opened', true);
+    this.body.trigger(TAB);
 
     expect(this.toggle).to.have.attr('aria-pressed', 'false');
     expect(this.target).to.have.attr('aria-expanded', 'false');
