@@ -19,6 +19,7 @@
 // Dropdown ul for child items
 .is-dropdown {
   @include position(100% null null 0);
+  @include z-index('dropdown');
   background-color: color('background');
   border-bottom: size('border') solid color('border');
   filter: drop-shadow(0 6px 5px color('shadow'));
@@ -26,7 +27,6 @@
   list-style: none;
   min-width: 100%;
   padding: size('shim') 0;
-  z-index: 2;
 
   @include above('nav-medium') {
     min-width: size('dropdown-narrow');

@@ -47,8 +47,8 @@
   color: color('text');
 
   svg {
+    @include z-index('bump');
     position: relative;
-    z-index: 1;
   }
 }
 

@@ -65,9 +65,9 @@
 
 [divider='large'] {
   @include extend('extend-full');
+  @include z-index('large-divider');
   margin-top: size('spacer');
   text-align: center;
-  z-index: 5;
 
   [data-region='banner'] & {
     margin-top: 0;
@@ -79,7 +79,6 @@
   @include section-arrow;
   box-shadow: 0 2px 2px color('shadow');
   overflow: visible;
-  z-index: 2;
 
   [data-location*='susysite'] & {
     @include section-arrow('brand-pink');

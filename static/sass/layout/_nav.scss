@@ -33,6 +33,7 @@
   }
 
   .is-dropdown {
+    @include z-index('nav-dropdown');
     transform: translateY(size('shim'));
   }
 }
