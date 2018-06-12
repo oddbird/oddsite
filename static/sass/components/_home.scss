@@ -1,84 +1,116 @@
 // Home Page
 // =========
 
-
-.home-cta {
-  align-items: center;
-  flex-wrap: wrap;
+.splash-letter {
+  display: flex;
   justify-content: center;
-  margin: 0 auto;
+  margin: size('double-gutter') auto;
 
-  @include above('full-content') {
-    display: flex;
-    padding: 0 size('gutter');
+  @include above('small-page') {
+    display: grid;
+    grid-template-columns: auto minmax(0, size('full-content')) var(--last-col, 0);
+  }
+
+  @include above('medium-page') {
+    #{--last-col}: minmax(0, size('bird-face'));
+    padding-right: size('gutter');
   }
 }
 
-
-.home-title {
-  @include font-family('body');
-  @include text-shadow;
-  color: color('action-alt');
+.letter-face {
+  display: none;
   flex: 0 0 auto;
-  font-size: calc(1rem + 6.5vw);
-  font-style: italic;
-  font-weight: normal;
-  line-height: 1.2;
-  margin: 0 auto size('double-gutter');
-  max-width: 100%;
+  padding-right: size('shim');
 
-  a {
-    #{$link} {
-      color: inherit;
-      font-weight: bold;
-      text-decoration: none;
-    }
-
-    #{$focus} {
-      color: color('action-hover');
-      text-decoration: underline;
-    }
+  @include above('small-page') {
+    display: block;
   }
 }
 
+.letter-body {
+  align-items: flex-end;
+  background: color('background');
+  border-radius: size('shim');
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: size('full-content');
+  padding: size('double-gutter');
+  position: relative;
 
-.home-description,
-.home-action {
-  flex: 1 1 30%;
+  @include after(' ') {
+    @include position(45% 0 0 50%);
+    border-radius: size('shim');
+    box-shadow: 0 0 size('half-shim') color('caption');
+    z-index: -1;
+  }
 }
 
-
-.home-description {
+.letter-greeting {
+  font-size: size('intro-text');
   font-style: italic;
+  font-weight: bold;
+}
+
+.letter-text {
+  flex: 1 1 100%;
 
   p {
     margin-top: 0;
   }
 
-  abbr {
-    font-style: normal;
-    font-weight: bold;
+  ul {
+    margin-left: negative('gutter');
   }
 
-  @include above('full-content') {
-    margin-right: size('gutter');
+  li {
+    margin-bottom: size('half-shim');
+  }
+
+  a {
+    #{$link} {
+      font-style: italic;
+    }
+  }
+
+  @include before(' ') {
+    @include position(0 50% 55% 0);
+    border-radius: size('shim');
+    box-shadow: 0 0 size('half-shim') color('caption');
+    z-index: -1;
+  }
+
+  @include above('small-page') {
+    @include after(' ') {
+      @include position(size('double-gutter') 100% null null);
+      border: size('shim') solid transparent;
+      border-right-color: color('background');
+      filter: drop-shadow(0 0 size('quarter-shim') color('caption'));
+      z-index: -1;
+    }
   }
 }
 
+.letter-sig {
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  margin-bottom: size('gutter');
 
-.home-action {
-  @include above('full-content') {
-    text-align: center;
+  [data-icon] {
+    pointer-events: none;
+    transform: translate3d(-25%, size('shim-plus'), 0);
   }
 }
 
-
-.home-star {
-  color: color('action');
-  font-weight: bold;
+.letter-action {
+  flex: 0 0 auto;
+  margin-bottom: size('shim-plus');
 }
 
 
+// Birds image
+// -----------
 .home-birds {
   #{$link} {
     color: color('text');
@@ -95,6 +127,4 @@
     height: auto;
     width: 100%;
   }
-
-
 }

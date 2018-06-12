@@ -1,27 +1,33 @@
+{% import 'birds/utility.macros.j2' as birds %}
 {% import 'content.macros.j2' as content %}
+{% import 'utility.macros.j2' as utility %}
 
-
-{% macro home_cta(
-  page,
-  slug
+{% macro letter(
+  author,
+  action,
+  target
 ) %}
-  {% set page = page|get_config(slug) %}
-  {% set splash = page[0] if page else none %}
-
-  {% if splash %}
-    <section class="home-cta">
-      <h1 class="home-title">{{ splash.big|typogrify|safe }}</h1>
-      <div class="home-description">
-        {{ splash.small|rst }}
+  <article class="splash-letter">
+    <div class="letter-face">
+      {{ utility.icon(author, size='face') }}
+    </div>
+    <div class="letter-body">
+      <div class="letter-text">
+        <p class="letter-greeting">
+          {% set first_name = birds.name_link(author, full_name=false) %}
+          {{ ["Hi, I’m", first_name, '—']|join(' ') }}
+        </p>
+        {{ caller()|rst }}
       </div>
-      <div class="home-action">
-        {{ content.link_button(
-          content=splash.action,
-          url=splash.target
-        ) }}
-      </div>
-    </section>
-  {% else %}
-    {{ page|length }}
-  {% endif %}
+      <footer class="letter-sig">
+        {{ utility.icon([author, 'sig']|join('-'), size='sig') }}
+        {{ birds.get_card(author) }}
+      </footer>
+      {{ content.link_button(
+        url=target,
+        content=action,
+        class='letter-action'
+      ) }}
+    </div>
+  </article>
 {% endmacro %}

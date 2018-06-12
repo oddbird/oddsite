@@ -100,7 +100,7 @@ along with the code you are testing in Sass:
 
 .. code-block:: scss
 
-  @import "<path/to/node_modules>/true/sass/true";
+  @import "<path/to/node_modules>/sass-true/sass/true";
 
 **Define tests in Sass** with a BDD (``describe``/``it``)
 or TDD (``test-module``/``test``) syntax:

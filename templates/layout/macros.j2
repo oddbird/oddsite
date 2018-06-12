@@ -6,7 +6,7 @@
 {% macro main_nav(yaml) %}
   <ul class="main-nav">
     {% for link in yaml %}
-      <li class="nav-item">
+      <li class="nav-item{{ ' has-dropdown' if link.subnav }}">
         {% if link.url %}
           {% set icon = 'external' if ('://' in link.url) else none %}
 
@@ -21,7 +21,7 @@
               {% set icon = 'external' if ('://' in sub.url) else none %}
 
               <li>
-                <a href="{{ sub.url }}" class="nav-link nav-link-sub" data-active="{{ sub.text }}">
+                <a href="{{ sub.url }}" class="nav-link dropdown-item" data-active="{{ sub.text }}" tabindex="0">
                   {{ sub.display_text|typogrify or sub.text|typogrify }}
                   {% if icon %}{{ utility.icon(icon, size='text-small') }}{% endif %}
                 </a>
@@ -73,20 +73,83 @@
 {% endmacro %}
 
 
-{% macro show_headline(main, sub=none, type=none) %}
-  <header class="title">
+{% macro show_headline(
+  main,
+  sub=none,
+  type=none,
+  is_dynamic=false
+) %}
+  <header class="title {{ 'dynamic-title' if is_dynamic else 'static-title' }}">
     {% if type %}
-      <div class="title-post-type">{{ type|rst }}</div>
+      <div class="title-post-type">
+        {{ type|rst }}
+      </div>
     {% endif %}
 
-    <h1 class="title-main">{{ main|typogrify }}</h1>
+    <h1 class="title-main">
+      {{ main|typogrify }}
+    </h1>
 
     {% if sub %}
-      <div class="title-sub">{{ sub|rst }}</div>
+      <div class="title-sub">
+        {{ sub if is_dynamic else sub|rst }}
+      </div>
     {% endif %}
   </header>
 {% endmacro %}
 
+{% macro dynamic_headline(title, type) %}
+  {% set main = title.template % title_dropdown(title.options) %}
+  {% set sub = dynamic_taglines(title.options) %}
+  {{ show_headline(
+    main=main,
+    sub=sub,
+    type=type,
+    is_dynamic=true
+  ) }}
+{% endmacro %}
+
+{% macro dynamic_taglines(options) %}
+  {% for option in options %}
+    <div class="tagline-option{{ ' is-active' if option.default }}"
+      aria-labelledby="select-{{ option.name }}"
+      id="{{ option.name }}">
+      {{ option.tagline|rst }}
+    </div>
+  {% endfor %}
+{% endmacro %}
+
+{% macro title_dropdown(options) %}
+  <span class="title-select has-dropdown">
+    <button class="title-current"
+      {{ utility.toggle_button(
+        id='title-dropdown',
+        button=true
+      ) }}>
+      {%- set current = options|selectattr('default')|list|first -%}
+      {{- current.name -}}
+    </button>
+    <ul class="title-dropdown is-dropdown"
+      {{ utility.toggle_target(
+        id='title-dropdown',
+        auto_closing=true
+      ) }}>
+      {% for option in options %}
+        <li>
+          <input type="radio"
+            name="title-option"
+            value="{{ option.name }}"
+            aria-controls="{{ option.name }}"
+            id="select-{{ option.name }}"
+            {{ utility.attr_if('checked', option.default) }} />
+          <label for="select-{{ option.name }}" class="dropdown-item">
+            {{ option.name }}
+          </label>
+        </li>
+      {% endfor %}
+    </ul>
+  </span>
+{% endmacro %}
 
 {% macro rst_meta(
   ctx
@@ -187,7 +250,9 @@
 
   {{ header_image(ctx) }}
 
-  {% if not ctx.config.hide_title %}
+  {% if ctx.config.dynamic_title %}
+    {{ dynamic_headline(ctx.config.dynamic_title[0], type) }}
+  {% elif not ctx.config.hide_title %}
     {{ show_headline(main, sub, type) }}
   {% endif %}
 

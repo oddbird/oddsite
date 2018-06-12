@@ -17,8 +17,9 @@ process:
       We encourage clients to stay closely connected
       with the daily progress,
       offering frequent feedback and re-prioritization via
-      `Pivotal Tracker`_.
+      `Trello`_ or `Pivotal Tracker`_.
 
+      .. _Trello: https://trello.com/
       .. _Pivotal Tracker: http://www.pivotaltracker.com/
   - title: 'Accessible & Responsive'
     body: |

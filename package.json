@@ -51,6 +51,7 @@
     "img-loader": "^3.0.0",
     "istanbul-instrumenter-loader": "^3.0.1",
     "jquery": "^3.2.1",
+    "jquery-dotimeout": "github:oddbird/jquery-dotimeout#v1.0.0",
     "karma": "^2.0.2",
     "karma-chai-sinon": "^0.1.5",
     "karma-chrome-launcher": "^2.2.0",
