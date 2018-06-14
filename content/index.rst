@@ -98,14 +98,7 @@ Software for Humans
 .. callmacro:: content.macros.j2#divider
   :title: 'Human-Driven Design'
 
-.. callmacro:: utility.macros.j2#link_if
-  :url: '/birds/'
-  :class: 'home-birds'
-  :rst: true
-
-  .. callmacro:: utility.macros.j2#icon
-    :name: 'allbirds'
-    :alt: 'Meet the birds: Miriam, Jonny, Carl, Sondra, David, Stacy, and Kit'
+.. callmacro:: birds/macros.j2#home_faces
 
 .. callmacro:: content.macros.j2#image_block
   :image: '/static/images/projects/trig-mobile.jpg'
