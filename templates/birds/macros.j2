@@ -89,3 +89,23 @@
     </section>
   {% endif %}
 {% endmacro %}
+
+
+{% macro home_faces(
+  authors=['carl', 'david', 'stacy', 'miriam', 'sondra', 'kit', 'jonny']
+) %}
+  {% call content.rst(safe=true) %}
+    {{ utility.link_if(
+      content=utility.icon('allbirds'),
+      url='/birds/',
+      class='home-birds'
+    ) }}
+
+    <p class="center-text">
+      <strong>Meet the Birds</strong>:
+      {% for author in authors %}
+        {{ ('and ' if loop.last else '') + birds.name_link(author, full_name=false)|trim + ('.' if loop.last else ',') }}
+      {% endfor %}
+    </p>
+  {% endcall %}
+{% endmacro %}

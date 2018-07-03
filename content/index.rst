@@ -87,17 +87,18 @@ Software for Humans
   and we'd love to talk more.
   **We think you'll be happy with the results.**
 
+.. callmacro:: content.macros.j2#get_quotes
+  :page: 'work/coachhub'
+  :slug: 'remote'
 
 .. callmacro:: projects/splash.macros.j2#splash_list
   :headline: 'Featured Projects'
   :url: '/work/'
 
-
 .. callmacro:: content.macros.j2#divider
+  :title: 'Human-Driven Design'
 
-.. callmacro:: content.macros.j2#get_quotes
-  :page: 'work/coachhub'
-  :slug: 'remote'
+.. callmacro:: birds/macros.j2#home_faces
 
 .. callmacro:: content.macros.j2#image_block
   :image: '/static/images/projects/trig-mobile.jpg'
@@ -121,34 +122,7 @@ Software for Humans
   :page: 'work/coachhub'
   :slug: 'handoff'
 
-
 .. callmacro:: content.macros.j2#divider
-  :title: 'Human-Driven Design'
-
-.. callmacro:: utility.macros.j2#link_if
-  :url: '/birds/'
-  :class: 'home-birds'
-  :rst: true
-
-  .. callmacro:: utility.macros.j2#icon
-    :name: 'allbirds'
-    :alt: 'Meet the birds: Miriam, Jonny, Carl, Sondra, David, Stacy, and Kit'
-
-.. callmacro:: content.macros.j2#rst
-  :tag: 'start'
-
-**Our process is agile, collaborative, friendly, and transparent.**
-You'll have direct access to `our entire team`_,
-as we get to know your goals inside and out.
-
-.. _our entire team: /birds/
-
-.. callmacro:: content.macros.j2#rst
-  :tag: 'end'
-
-.. callmacro:: content.macros.j2#divider
-
-
 
 .. callmacro:: content.macros.j2#get_quotes
   :page: 'work/medcurbside'
@@ -182,7 +156,6 @@ as we get to know your goals inside and out.
 .. callmacro:: content.macros.j2#get_quotes
   :page: 'work/timedesigner'
   :slug: 'innovative'
-
 
 .. callmacro:: projects/splash.macros.j2#splash_list
   :headline: 'Tools for Developers'
