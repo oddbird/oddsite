@@ -10,7 +10,6 @@ social:
   - twitter: 'carljm'
     github: 'carljm'
     stackoverflow: '3207'
-    lanyrd: 'carljm'
 short_bio: |
   `Carl Meyer`_
   is an active owner

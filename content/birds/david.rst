@@ -10,7 +10,6 @@ social:
   - twitter: 'davisagli'
     github: 'davisagli'
     stackoverflow: '212493'
-    lanyrd: 'davisagli'
 short_bio: |
   `David Glick`_
   is a Python and JavaScript developer,

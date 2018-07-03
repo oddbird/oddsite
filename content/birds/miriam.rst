@@ -12,7 +12,6 @@ social:
     codepen: 'mirisuzanne'
     stackoverflow: '1930386'
     dribbble: 'miriamsuzanne'
-    lanyrd: 'miriamsuzanne'
 og:
   - facebook: 'mirisuzanne'
     twitter: 'mirisuzanne'
