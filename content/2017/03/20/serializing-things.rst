@@ -38,7 +38,7 @@ it's best to avoid exposing yourself to them in the first place. In the same
 way that you *can* sanitize all your database inputs and assemble DB queries
 through string concatenation – but would be well-advised to use prepared
 statements – you *can* ensure that everything that touches ``pickle`` is
-adequately sanitized.  I, for one, prefer to avoid using it, and save myself
+adequately sanitized. I, for one, prefer to avoid using it, and save myself
 the worry.
 
 To ensure we don't risk executing arbitrary code, we can tell Celery to use the
@@ -237,7 +237,7 @@ crucial relationships. It looks something like this:
    # deserialized_objects[i].object
 
 .. [#] You are keeping in mind that your *data model* and your Django *Models*
-   aren't the same, right? Django models are persistence-layer mappings, that
+   aren't the same, right? Django models are persistence-layer mappings that
    you can bolt some additional logic to. Your data model may be much more!
 
 .. _Celery: http://docs.celeryproject.org/en/latest/index.html
