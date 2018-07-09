@@ -1,6 +1,10 @@
 public: yes
 speakers: [miriam]
 events:
+  - venue: 'Agile Denver'
+    url: 'https://www.meetup.com/Agile-Denver2/events/251897187/'
+    date: [2018, 10, 22]
+    adr: 'Denver, CO'
   - venue: 'Tech Confluence'
     url: 'https://www.meetup.com/TechConfluence/events/nxcfhlyxfbcc/'
     date: [2018, 3, 21]

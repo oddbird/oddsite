@@ -1,6 +1,14 @@
 public: yes
 speakers: [miriam]
 events:
+  - venue: 'Full Stack Fest'
+    url: 'https://2018.fullstackfest.com/'
+    date: [2018, 9, 6]
+    adr: 'Barcelona, Spain'
+  - venue: 'JSConf US'
+    url: 'https://2018.jsconf.us/'
+    date: [2018, 8, 21]
+    adr: 'Carlsbad, CA'
   - venue: 'CSSConf Argentina'
     url: 'https://cssconfar.com/'
     date: [2018, 8, 18]
