@@ -212,6 +212,30 @@ your thoughts on `Twitter`_, on our `public Slack channel`_, or through our
 
 Header image courtesy of `Dan Morelle`_.
 
+**Edited to add, on 2018-07-09:**
+
+Astute reader Julian Coy writes that there's another approach: you can
+use Django's built-in serialization/deserialization framework.
+
+This is particularly useful for smaller models, without lots of deep or
+crucial relationships. It looks something like this:
+
+.. code:: python
+
+   from django.core.serializers import serialize, deserialize
+
+   # Note that this requires an iterable, so you have to wrap your
+   # instance in a list:
+   json_version = serialize('json', [some_class_instance])
+   # Now you have a JSON representation of the instance that knows its
+   # own type.
+   # Put it on the wire here, passing it to a task or whatever.
+   # Then in the task:
+   deserialized_objects = deserialize('json', json_version)
+   # This will produce a list of DeserializedObject instances that wrap
+   # the actual model, which will be available as
+   # deserialized_objects[i].object
+
 .. [#] You are keeping in mind that your *data model* and your Django *Models*
    aren't the same, right? Django models are persistence-layer mappings, that
    you can bolt some additional logic to. Your data model may be much more!
