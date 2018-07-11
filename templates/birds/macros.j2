@@ -92,7 +92,7 @@
 
 
 {% macro home_faces(
-  authors=['carl', 'stacy', 'miriam', 'sondra', 'kit', 'jonny']
+  authors
 ) %}
   {% call content.rst(safe=true) %}
     {{ utility.link_if(

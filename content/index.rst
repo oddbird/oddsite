@@ -99,6 +99,7 @@ Software for Humans
   :title: 'Human-Driven Design'
 
 .. callmacro:: birds/macros.j2#home_faces
+  :authors: ['carl', 'kit', 'stacy', 'miriam', 'sondra', 'jonny']
 
 .. callmacro:: content.macros.j2#image_block
   :image: '/static/images/projects/trig-mobile.jpg'
