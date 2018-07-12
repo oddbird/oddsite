@@ -21,7 +21,9 @@ short_bio: |
 
   .. _David Glick: /authors/david/
 summary: |
-  **David is a developer emeritus who co-led our server-side development**,
+  **David is a developer emeritus**
+  (now working with `Salesforce.org`_)
+  who co-led our server-side development --
   managing code architecture,
   database design,
   and deployment.
@@ -34,6 +36,8 @@ summary: |
   and the Pyramid web framework.
   When he's not coding,
   David can be found experimenting in the kitchen.
+
+  .. _Salesforce.org: http://www.salesforce.org/
 
 
 David Glick
