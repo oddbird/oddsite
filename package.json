@@ -45,7 +45,7 @@
     "gulp-svg-symbols": "^3.1.1",
     "gulp-svgmin": "^1.2.4",
     "husky": "^0.14.3",
-    "imagemin": "^5.3.1",
+    "imagemin": "^6.0.0",
     "imagemin-mozjpeg": "^7.0.0",
     "imagemin-optipng": "^5.2.1",
     "img-loader": "^3.0.0",
