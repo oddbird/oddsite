@@ -67,7 +67,7 @@
     "node-sass": "^4.9.2",
     "nyc": "^12.0.2",
     "plugin-error": "^1.0.0",
-    "postcss-loader": "^2.1.6",
+    "postcss-loader": "^3.0.0",
     "prettier": "^1.13.7",
     "raw-loader": "1.0.0-beta.0",
     "sass-lint": "^1.11.1",
