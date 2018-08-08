@@ -60,9 +60,9 @@
 ) {
   background-image: linear-gradient(
     to right,
-    color($color ('rgba': 0)),
+    color($color, ('rgba': 0)),
     color($color),
-    color($color ('rgba': 0))
+    color($color, ('rgba': 0))
   );
   display: block;
   height: size('border-thin');

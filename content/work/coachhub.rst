@@ -298,7 +298,7 @@ Ratio`_ tool to select colors for text that passed WCAG AA level at all sizes.
 We also built a WCAG contrast test into our `Sass Accoutrement toolkits`_.
 
 .. _Contrast Ratio: http://leaverou.github.io/contrast-ratio/
-.. _Sass Accoutrement toolkits: /open-source/accoutrement/
+.. _Sass Accoutrement toolkits: /accoutrement/
 
 
 Landing Pages

@@ -24,13 +24,13 @@ $grid-columns-large: [col1-start] 1fr [col1-end col2-start] 1fr [col2-end col3-s
 /// Breakpoint values, adjusted to the proper units
 /// @group config-layout
 $breakpoints: (
-  'medium-page': size('medium-page') ('convert-units': 'browser-ems'),
-  'full-content': size('full-content') ('convert-units': 'browser-ems'),
-  'small-page': size('small-page') ('convert-units': 'browser-ems'),
-  'large-page': size('large-page') ('convert-units': 'browser-ems'),
-  'nav-medium': size('nav-medium') ('convert-units': 'browser-ems'),
-  'nav-small': size('nav-small') ('convert-units': 'browser-ems'),
-  'nav-wide': size('nav-wide') ('convert-units': 'browser-ems'),
+  'medium-page': size('medium-page', 'browser-ems'),
+  'full-content': size('full-content', 'browser-ems'),
+  'small-page': size('small-page', 'browser-ems'),
+  'large-page': size('large-page', 'browser-ems'),
+  'nav-medium': size('nav-medium', 'browser-ems'),
+  'nav-small': size('nav-small', 'browser-ems'),
+  'nav-wide': size('nav-wide', 'browser-ems'),
 );
 
 
@@ -210,7 +210,7 @@ $breakpoints: (
 
     @if ($side == 'left') {
       margin-right: size('pad');
-    } @elseif ($side == 'right') {
+    } @else if ($side == 'right') {
       margin-left: size('pad');
     } @else {
       @error 'Choose left or right silly. How many sides do you have?';

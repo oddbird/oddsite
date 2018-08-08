@@ -20,7 +20,7 @@
   &[href] {
     display: block;
     text-decoration: none;
-    transition: transform 300ms $ease-back;
+    transition: transform 300ms ease('ease-back');
 
     #{$focus} {
       transform: scale(1.1) translateX(negative('shim'));

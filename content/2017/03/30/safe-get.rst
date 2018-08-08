@@ -228,7 +228,7 @@ calling local functions**
 (e.g. known functions defined in the same partial).
 
 .. _`Kaelig's solution`: https://medium.com/@kaelig/sass-first-class-functions-6e718e2b5eb0
-.. _Sass Accoutrement: /open-source/accoutrement/
+.. _Sass Accoutrement: /accoutrement/
 .. _pass in an arbitrary function: ../07/pattern-making/
 
 

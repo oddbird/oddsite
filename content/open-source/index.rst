@@ -12,7 +12,7 @@ after:
       - 'susy/index'
       - 'true/index'
       - 'open-source/plone'
-      - 'open-source/accoutrement'
+      - 'accoutrement/index'
       - 'open-source/nunjucks'
       - 'open-source/virtualenv'
       - 'open-source/pip'

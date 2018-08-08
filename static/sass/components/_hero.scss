@@ -37,14 +37,14 @@
     background-image: linear-gradient(50deg, color('background') 80%, transparent 80%);
     margin-bottom: 0;
     margin-top: negative('double-gutter');
-    padding-right: calc(20% + #{size('shim')}); // 100% - 80% (angle) = 20% then add padding
+    padding-right: size('calc(20% + #shim)'); // 100% - 80% (angle) = 20% then add padding
     position: relative;
 
     @include above('medium-page') {
       background-image: linear-gradient(50deg, color('background') 60%, transparent 60%);
       margin-top: negative('triple-gutter');
       padding-bottom: size('gutter');
-      padding-right: calc(40% + #{size('double-gutter')}); // 100% - 60% (angle) = 40% then add padding
+      padding-right: size('calc(40% + #double-gutter)'); // 100% - 60% (angle) = 40% then add padding
       padding-top: size('gutter');
     }
   }

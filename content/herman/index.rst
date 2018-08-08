@@ -127,11 +127,13 @@ Herman's Current Features
 
 .. _SassDoc: http://sassdoc.com/
 .. _Nunjucks: https://mozilla.github.io/nunjucks/
-.. _Sass Accoutrement: /open-source/accoutrement/
+.. _Sass Accoutrement: /accoutrement/
 
 
 .. callmacro:: content.macros.j2#rst
   :tag: 'end'
 
 
-.. callmacro:: content.macros.j2#accoutrement
+.. callmacro:: content.macros.j2#icon_block
+  :slug: 'accoutrement/index'
+  :data: 'accoutrement_modules'

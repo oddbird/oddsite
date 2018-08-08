@@ -1,9 +1,10 @@
 #!/bin/sh
 
-yarn global add susy sass-true sassdoc-theme-herman accoutrement-color accoutrement-init accoutrement-layout accoutrement-scale accoutrement-type --no-lockfile --ignore-scripts --no-bin-links --global-folder temp
+yarn global add susy sass-true sassdoc-theme-herman accoutrement accoutrement-color accoutrement-init accoutrement-layout accoutrement-scale accoutrement-type --no-lockfile --ignore-scripts --no-bin-links --global-folder temp
 rm -rf ./content/susy/docs; cp -a ./temp/node_modules/susy/docs ./content/susy/
 rm -rf ./content/true/docs; cp -a ./temp/node_modules/sass-true/docs ./content/true/
 rm -rf ./content/herman/docs; cp -a ./temp/node_modules/sassdoc-theme-herman/docs ./content/herman/
+rm -rf ./content/accoutrement/docs; cp -a ./temp/node_modules/accoutrement/docs ./content/accoutrement/
 rm -rf ./content/accoutrement-color/docs; cp -a ./temp/node_modules/accoutrement-color/docs ./content/accoutrement-color/
 rm -rf ./content/accoutrement-init/docs; cp -a ./temp/node_modules/accoutrement-init/docs ./content/accoutrement-init/
 rm -rf ./content/accoutrement-layout/docs; cp -a ./temp/node_modules/accoutrement-layout/docs ./content/accoutrement-layout/
