@@ -95,18 +95,20 @@
     "preparecommitmsg": "./bin/prepare-commit-msg"
   },
   "lint-staged": {
-    "{static/js/,test/}**/*.js": [
-      "prettier --write",
-      "eslint",
-      "git add"
-    ],
-    "{gulpfile,karma*,postcss.config,webpack*}.js": [
-      "prettier --write",
-      "eslint",
-      "git add"
-    ],
-    "static/sass/**/*.scss": [
-      "sass-lint -v -q"
-    ]
+    "linters": {
+      "{static/js/,test/}**/*.js": [
+        "prettier --write",
+        "eslint",
+        "git add"
+      ],
+      "{gulpfile,karma*,postcss.config,webpack*}.js": [
+        "prettier --write",
+        "eslint",
+        "git add"
+      ],
+      "static/sass/**/*.scss": [
+        "sass-lint -v -q"
+      ]
+    }
   }
 }
