@@ -7,7 +7,7 @@ and associated OddBird branding materials.
 
 It is still in development,
 using OddBird's
-[Accoutrement](/open-source/accoutrement/) and
+[Accoutrement](/accoutrement/) and
 [Herman](/herman/)
 open source toolkits
 to automate as much living documentation as possible.
