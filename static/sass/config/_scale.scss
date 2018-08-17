@@ -26,13 +26,13 @@ $text-sizes: (
   'root': 18px,
   'h2': calc(1rem + 1vw),
   'h3': calc(1rem + 0.5vw),
-  'small': 'root' ('text-ratio': -0.5),
-  'xsmall': 'root' ('text-ratio': -1),
+  'small': '#root' ('text-ratio': -0.5),
+  'xsmall': '#root' ('text-ratio': -1),
   'rel-small': 1em ('text-ratio': -0.5),
-  'medium': 'root' ('text-ratio': 0.7),
-  'caption': 'root',
-  'task': 'root' ('text-ratio': -0.125),
-  'social': 'root' ('text-ratio': -0.25),
+  'medium': '#root' ('text-ratio': 0.7),
+  'caption': '#root',
+  'task': '#root' ('text-ratio': -0.125),
+  'social': '#root' ('text-ratio': -0.25),
 );
 
 @include add-sizes($text-sizes);
@@ -46,19 +46,19 @@ $text-sizes: (
 /// @link http://oddbird.net/accoutrement-scale/docs/
 ///   Accoutrement Scale
 $spacing-sizes: (
-  'rhythm': 'root' ('text-ratio': 1, 'convert-units': 'rem'),
-  'gutter': 'rhythm',
-  'double-gutter': 'gutter' ('times': 2),
-  'triple-gutter': 'gutter' ('times': 3),
-  'shim-plus': 'gutter' ('times': 0.75),
-  'shim': 'gutter' ('times': 0.5),
-  'half-shim': 'shim' ('times': 0.5),
-  'quarter-shim': 'shim' ('times': 0.25),
+  'rhythm': '#root' ('text-ratio': 1, 'convert-units': 'rem'),
+  'gutter': '#rhythm',
+  'double-gutter': '#gutter' ('times': 2),
+  'triple-gutter': '#gutter' ('times': 3),
+  'shim-plus': '#gutter' ('times': 0.75),
+  'shim': '#gutter' ('times': 0.5),
+  'half-shim': '#shim' ('times': 0.5),
+  'quarter-shim': '#shim' ('times': 0.25),
   'pad': 1rem,
   'pixel': 1px,
 
   // responsive spacing
-  'spacer': calc(%s + %s) ('double-gutter', 3vw),
+  'spacer': 'calc(#double-gutter + 3vw)',
 );
 
 @include add-sizes($spacing-sizes);
@@ -72,20 +72,20 @@ $spacing-sizes: (
 /// @link http://oddbird.net/accoutrement-scale/docs/
 ///   Accoutrement Scale
 $pattern-sizes: (
-  'background': calc(%s + %s) ('rhythm' ('times': 6), 16vw),
+  'background': 'calc(%s + 16vw)' ('%s': '#rhythm' ('times': 6)),
   'border': 8px,
   'border-thin': 1px,
-  'border-radius': 'half-shim',
+  'border-radius': '#half-shim',
 
-  'logo-y': 'gutter' ('times': 3),
-  'logo-x': 'logo-y' ('times': 2),
+  'logo-y': '#gutter' ('times': 3),
+  'logo-x': '#logo-y' ('times': 2),
 
   'bird-face': 6rem,
-  'half-bird-face': 'bird-face' ('times': 0.5),
-  'bird-sig-height': 'rhythm' ('times': 3),
-  'bird-sig-width': 'bird-sig-height' ('times': 920/310),
+  'half-bird-face': '#bird-face' ('times': 0.5),
+  'bird-sig-height': '#rhythm' ('times': 3),
+  'bird-sig-width': '#bird-sig-height' ('times': 920/310),
 
-  'intro-text': 'medium' ('convert-units': 'rem'),
+  'intro-text': '#medium' ('convert-units': 'rem'),
 
   'nav-small': 20rem,
   'nav-medium': 35rem,
@@ -97,8 +97,8 @@ $pattern-sizes: (
   'splash-items': 18rem,
   'splash-items-max': 24rem,
   'splash-logo-x': 14rem,
-  'splash-logo-y': 'spacer',
-  'imageblock-image': 'splash-logo-x',
+  'splash-logo-y': '#spacer',
+  'imageblock-image': '#splash-logo-x',
 );
 
 @include add-sizes($pattern-sizes);

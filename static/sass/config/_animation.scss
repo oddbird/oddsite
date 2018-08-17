@@ -1,4 +1,6 @@
 // Animation Config
 // ================
 
-$ease-back: cubic-bezier(0.36, -0.25, 0.43, 1.49);
+$ease: (
+  'ease-back': cubic-bezier(0.36, -0.25, 0.43, 1.49),
+);

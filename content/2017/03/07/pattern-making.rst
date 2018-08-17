@@ -381,7 +381,7 @@ for the more robust
 style guide generator
 we'll develop later.
 
-.. _Accoutrement: /open-source/accoutrement/
+.. _Accoutrement: /accoutrement/
 .. _color: /accoutrement-color/docs/
 .. _scale: /accoutrement-scale/docs/
 .. _type: /accoutrement-type/docs/

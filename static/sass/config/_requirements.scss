@@ -1,11 +1,8 @@
 // Required Third-Party Dependencies
 // =================================
 
-@import '~accoutrement-color/sass/color';
+@import '~accoutrement/sass/tools';
 @import '~sassdoc-theme-herman/scss/utilities';
-@import '~accoutrement-scale/sass/scale';
-@import '~accoutrement-layout/sass/layout';
-@import '~accoutrement-type/sass/type';
 
 $functions: (
   'rgba': get-function('rgba'),
