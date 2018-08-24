@@ -9,7 +9,7 @@
   },
   "devDependencies": {
     "@babel/core": "7.0.0-rc.1",
-    "@babel/polyfill": "7.0.0-rc.1",
+    "@babel/polyfill": "7.0.0-rc.3",
     "@babel/preset-env": "7.0.0-rc.1",
     "accoutrement": "^1.0.0",
     "autoprefixer": "^9.1.0",
