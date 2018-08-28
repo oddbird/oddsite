@@ -13,7 +13,7 @@
     "@babel/preset-env": "7.0.0-rc.1",
     "accoutrement": "^1.0.0",
     "autoprefixer": "^9.1.0",
-    "babel-eslint": "^8.2.6",
+    "babel-eslint": "^9.0.0",
     "babel-loader": "8.0.0-beta.4",
     "beeper": "^1.1.1",
     "browser-sync": "^2.24.6",
