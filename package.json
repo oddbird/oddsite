@@ -14,7 +14,7 @@
     "accoutrement": "^1.0.0",
     "autoprefixer": "^9.1.0",
     "babel-eslint": "^8.2.6",
-    "babel-loader": "8.0.0-beta.4",
+    "babel-loader": "8.0.0",
     "beeper": "^1.1.1",
     "browser-sync": "^2.24.6",
     "chai": "^4.1.1",
