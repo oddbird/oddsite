@@ -12,7 +12,6 @@ screenshots:
     target: 'http://sass-lang.com/'
   - image: 'susy/screenshots/virginamerica.jpg'
     alt: 'Virgin America'
-    target: 'https://www.virginamerica.com/'
   - image: 'susy/screenshots/squaremarket.jpg'
     alt: 'Square Market'
     target: 'http://squareup.com/market'
@@ -81,7 +80,6 @@ Feel free to
 
 - `Sass <http://sass-lang.com>`_
 - `Python <http://python.org>`_
-- `Virgin America <https://www.virginamerica.com/>`_
 - `Le Figaro Premium (French newspaper) <http://premium.lefigaro.fr/>`_
 - `TV Mag (by Le Figaro) <http://tvmag.lefigaro.fr/>`_
 - `Locust <http://locust.io>`_
