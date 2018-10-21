@@ -4,6 +4,10 @@ slides: 'https://www.oddbooksapp.com/book/css-layout'
 image:
   - src: 'pages/devconf-best.jpg'
 events:
+  - venue: 'ElectronConf'
+    url: 'http://electronconf.com/'
+    date: [2019, 1, 15]
+    adr: 'San Francisco, CA'
   - venue: 'Beyond Tellerand'
     url: 'https://beyondtellerrand.com/events/duesseldorf-2018'
     date: [2018, 5, 7]

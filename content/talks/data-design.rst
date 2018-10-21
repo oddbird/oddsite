@@ -1,6 +1,15 @@
 public: yes
 speakers: [miriam]
+slides: 'http://talks.oddbird.net/dynamic-css/'
 events:
+  - venue: 'Smashing Conference'
+    url: 'https://www.smashingconf.com/sf-2019/'
+    date: [2019, 4, 16]
+    adr: 'San Francisco, CA'
+  - venue: 'Front Range Front-End'
+    url: 'https://www.meetup.com/front-range-front-end/events/chtxtpyxpbcb/'
+    date: [2018, 11, 1]
+    adr: 'Denver, CO'
   - venue: 'Full Stack Fest'
     url: 'https://2018.fullstackfest.com/'
     date: [2018, 9, 6]
@@ -9,10 +18,12 @@ events:
     url: 'https://2018.jsconf.us/'
     date: [2018, 8, 21]
     adr: 'Carlsbad, CA'
+    slides: 'http://talks.oddbird.net/dynamic-css/jsconfus18/'
   - venue: 'CSSConf Argentina'
     url: 'https://cssconfar.com/'
     date: [2018, 8, 18]
     adr: 'Buenos Aires, Argentina'
+    slides: 'http://talks.oddbird.net/dynamic-css/cssconfar18/'
 brag: |
   Learn to **integrate design and code**
   to isolate components and

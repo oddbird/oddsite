@@ -6,10 +6,6 @@ headline:
 image:
   - src: 'talks/user-unfriendly.png'
 events:
-  - venue: 'Agile Denver Coaching'
-    url: 'https://www.meetup.com/Agile-Denver-Coaching/'
-    date: [2018, 9, 19]
-    adr: 'Denver, CO'
   - venue: 'AIGA Colorado'
     url: 'https://colorado.aiga.org/event/04-26-18-rethinking-ux-design/'
     date: [2018, 4, 26]
