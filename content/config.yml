@@ -13,9 +13,6 @@ nav:
       - text: 'open-source'
         display_text: 'open source tools'
         url: '/open-source/'
-      - text: 'blog'
-        display_text: 'articles'
-        url: '/blog/'
   - text: 'services'
     subnav:
       - text: 'planning'
@@ -37,9 +34,9 @@ nav:
         url: '/birds/'
       - text: 'community'
         url: '/community/'
-  - text: 'contact'
-    display_text: 'contact'
-    url: '/contact/'
+  - text: 'blog'
+    display_text: 'articles'
+    url: '/blog/'
 
 
 # Site Settings

@@ -22,3 +22,7 @@
   @include square(0.75em);
   vertical-align: baseline;
 }
+
+.inline-icon {
+  margin-right: size('half-shim');
+}

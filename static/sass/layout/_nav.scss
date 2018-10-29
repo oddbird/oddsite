@@ -1,26 +1,11 @@
 // Site Navigation
 // ===============
 
-.nav {
-  position: relative;
-}
-
 .main-nav {
   display: flex;
-  justify-content: space-between;
-  margin: 0 auto size('half-shim');
-  max-width: calc(18rem + 15vw);
+  justify-content: center;
   padding-left: size('half-shim');
   padding-right: size('half-shim');
-  width: 100%;
-
-  @include above('small-page') {
-    margin-top: negative('gutter');
-
-    .is-dropdown {
-      padding-top: size('gutter');
-    }
-  }
 
   @include below('small-page') {
     .has-dropdown {
@@ -34,19 +19,12 @@
 
   .is-dropdown {
     @include z-index('nav-dropdown');
-    transform: translateY(size('shim'));
   }
 }
 
 
 .nav-item {
   display: inline-flex;
-
-  @include above('small-page') {
-    &:nth-of-type(2) {
-      flex-grow: 2;
-    }
-  }
 }
 
 
@@ -121,29 +99,5 @@ $nav-locations: (
 
 // OddBird link from sub-sites
 [data-active='oddbird'] {
-  #{$link} {
-    border: 1px solid;
-    border-radius: size('border-radius');
-    color: color('action');
-    font-weight: bold;
-    text-decoration: none;
-    transition: color 150ms, background-color 150ms;
-  }
-
-  #{$focus} {
-    background-color: color('action');
-    color: color('background');
-
-    &::after {
-      transform: translateX(size('half-shim'));
-    }
-  }
-
-  @include after('»') {
-    font-weight: normal;
-    padding-left: size('half-shim');
-    transition: transform 250ms;
-  }
+  @include after('»');
 }
-
-

@@ -5,22 +5,24 @@
 {% import 'layout/macros.j2' as layout %}
 
 {% block layout %}
+
   <header data-region="banner">
-    <nav class="nav">
-      <div class="brand">
-        {% block banner_logo %}
-          <a href="/" rel="home" class="logo-link">
-            {{ utility.icon('logo', alt='OddBird', class='logo-icon') }}
-          </a>
-        {% endblock %}
-      </div>
-
-      {% block banner_nav %}
-        {{ layout.main_nav(config.nav) }}
+    <div class="brand">
+      {% block banner_logo %}
+        <a href="/" rel="home" class="logo-link">
+          {{ utility.icon('logo', alt='OddBird', class='logo-icon') }}
+        </a>
       {% endblock %}
-    </nav>
+    </div>
 
-    {{ content.divider(small=false) }}
+    {% block banner_nav %}
+      {{ layout.main_nav(config.nav) }}
+    {% endblock %}
+
+    {% call content.link_button('/contact/', class='banner-contact') %}
+      {{ utility.icon('mail') }}
+      <span class="banner-contact-text">contact us</span>
+    {% endcall %}
   </header>
 
   <main

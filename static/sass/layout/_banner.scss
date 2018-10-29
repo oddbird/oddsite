@@ -3,15 +3,67 @@
 
 
 [data-region='banner'] {
-  margin-top: size('gutter');
-  text-align: center;
+  @include z-index('banner');
+  align-items: center;
+  background: color('background');
+  border-bottom: 1px solid color('border');
+  display: flex;
+  justify-content: space-between;
+  padding: size('quarter-shim') size('half-shim');
+  position: relative;
+  position: sticky; // sass-lint:disable-line no-duplicate-properties
+  top: 0;
+
+  @include above('small-page') {
+    padding: size('quarter-shim') size('shim');
+  }
+
+  @include above('medium-page') {
+    padding: size('quarter-shim') size('gutter');
+  }
+}
+
+
+.banner-contact {
+  #{$link} {
+    flex: 0 0 auto;
+    padding: size('quarter-shim') size('half-shim');
+    white-space: nowrap;
+
+    @include above('medium-page') {
+      padding: size('quarter-shim') size('shim');
+    }
+  }
+
+  @include below('small-page') {
+    @include after(initial);
+  }
+}
+
+.banner-contact-text {
+  display: inline-block;
+  margin-left: size('quarter-shim');
+
+  @include below('small-page') {
+    @include is-hidden;
+  }
 }
 
 
 // Brand
 // -----
 .brand {
-  margin: 0 auto; // @@@ bottom: negative('rhythm') * 1.5
+  align-self: flex-start;
+  margin-bottom: negative('rhythm');
+
+  @include below('small-page') {
+    @include is-hidden;
+  }
+
+  [data-location='home'] & {
+    opacity: 0;
+    pointer-events: none;
+  }
 }
 
 .logo-link {
@@ -76,18 +128,18 @@
   height: size('logo-y');
   width: auto;
 
-  [data-location='home'] &,
+  // [data-location='home'] &,
   [data-location='susysite'] & ,
   [data-location='hermansite'] & {
     animation: draw-logo 3s 1 ease-out both, fill-logo 3s 2s 1 ease-in-out both, fade-logo-outline 2s 2s 1 ease-in-out both;
   }
 
-  [data-location='home'] & {
-    stroke: color('brand-orange');
-    stroke-dasharray: 500;
-    stroke-dashoffset: 500;
-    stroke-width: 1;
-  }
+  // [data-location='home'] & {
+  //   stroke: color('brand-orange');
+  //   stroke-dasharray: 500;
+  //   stroke-dashoffset: 500;
+  //   stroke-width: 1;
+  // }
 
   [data-location='susysite'] & {
     stroke: color('brand-pink');
