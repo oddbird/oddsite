@@ -42,7 +42,7 @@
     "gulp-svgmin": "^2.1.0",
     "husky": "^1.1.2",
     "imagemin": "^6.0.0",
-    "imagemin-mozjpeg": "^7.0.0",
+    "imagemin-mozjpeg": "^8.0.0",
     "imagemin-optipng": "^5.2.1",
     "img-loader": "^3.0.0",
     "istanbul-instrumenter-loader": "^3.0.1",
