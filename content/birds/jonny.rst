@@ -24,10 +24,13 @@ summary: |
   turning your ideas into functional interactions.
   He has been writing clean,
   well-tested JavaScript web applications
-  for over nine years.
+  for nearly a decade.
+  Experienced in a wide variety of JavaScript frameworks,
+  he is passionate about front-end architecture,
+  code test coverage, and sweating the details.
   An active member in the JavaScript community,
   Jonny has authored or contributed to
-  numerous open source projects.
+  numerous open-source projects.
   He's easily distracted by a game of ultimate frisbee,
   homebrewing delicious IPAs and stouts,
   and trying to keep up with his two young kids.
