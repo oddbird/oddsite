@@ -5,10 +5,6 @@
   position: relative;
 }
 
-[data-hero='no'] {
-  padding-top: size('double-gutter');
-}
-
 [data-module='rst-body'] {
   section {
     @include clearfix;

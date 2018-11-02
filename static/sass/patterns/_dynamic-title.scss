@@ -8,7 +8,6 @@
 }
 
 .title-select {
-  @include font-family('body');
   display: inline-block;
 
   .is-dropdown {
@@ -18,22 +17,11 @@
 }
 
 .title-current {
-  border: size('border-thin') solid color('action');
-  border-radius: size('border-radius');
-  box-shadow: 0 0 5px color('shadow');
-  font-style: italic;
-  padding: 0 size('shim') size('quarter-shim');
+  color: color('action');
   transition: all 300ms ease-in-out;
 
   #{$focus} {
-    background: color('background');
-    border-color: color('action-hover');
     color: color('action-hover');
-  }
-
-  &[aria-pressed='true'] {
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
   }
 }
 

@@ -57,6 +57,12 @@
     <div class="{{ ['hero', class]|join(' ') if class else 'hero' }}">
       {{ image }}
     </div>
+  {% else %}
+    <div class="{{ ['no-hero', class]|join(' ') if class else 'no-hero' }}">
+      <a href="/" rel="home">
+        {{ utility.icon('logo', alt='OddBird') }}
+      </a>
+    </div>
   {% endif %}
 {% endmacro %}
 

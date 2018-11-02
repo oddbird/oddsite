@@ -3,23 +3,56 @@
 
 // Watercolor backgrounds on main region
 // -------------------------------------
+@keyframes draw-logo {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
 
-[data-hero='no'] {
-  background-image: url('../images/multicolor-wash-05x.png');
-  background-position: 60% 0;
-  background-repeat: repeat-x;
-  background-size: auto 33vh;
-
-  @include above('full-content') {
-    background-image: url('../images/multicolor-wash.png');
+@keyframes fill-logo {
+  from {
+    fill-opacity: 0;
   }
 
-  // Text shadow to first <p> in body so it is more readable above watercolors
-  [data-module='rst-body'] {
-    > p {
-      &:first-child {
-        @include text-shadow;
-      }
+  to {
+    fill-opacity: 1;
+  }
+}
+
+@keyframes fade-logo-outline {
+  to {
+    stroke-width: 0;
+  }
+}
+
+.no-hero {
+  background-image: url('../images/multicolor_wash.jpg');
+  background-position: top center;
+  background-repeat: repeat-x;
+  background-size: auto 120%;
+  margin-bottom: negative('double-gutter');
+  padding: size('gutter') size('shim');
+  text-align: center;
+
+  [data-icon='logo'] {
+    animation: draw-logo 3s 1 ease-out both, fill-logo 3s 2s 1 ease-in-out both, fade-logo-outline 2s 2.5s 1 ease-in-out both;
+    fill: color('background');
+    height: size('hero-logo');
+    stroke: color('background');
+    stroke-dasharray: 500;
+    stroke-dashoffset: 500;
+    stroke-width: 1;
+    width: auto;
+  }
+
+  [rel='home'] {
+    #{$link} {
+      display: inline-block;
+      transition: transform 150ms ease-in;
+    }
+
+    #{$focus} {
+      transform: scale(1.075);
     }
   }
 }
@@ -36,9 +69,13 @@
     @include z-index('bump');
     background-image: linear-gradient(50deg, color('background') 80%, transparent 80%);
     margin-bottom: 0;
-    margin-top: negative('double-gutter');
+    margin-top: negative('gutter');
     padding-right: size('calc(20% + #shim)'); // 100% - 80% (angle) = 20% then add padding
     position: relative;
+
+    @include above('small-page') {
+      margin-top: negative('double-gutter');
+    }
 
     @include above('medium-page') {
       background-image: linear-gradient(50deg, color('background') 60%, transparent 60%);

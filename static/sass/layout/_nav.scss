@@ -3,9 +3,10 @@
 
 .main-nav {
   display: flex;
+  flex: 1 0 auto;
+  font-size: size('small');
   justify-content: center;
-  padding-left: size('half-shim');
-  padding-right: size('half-shim');
+  position: relative;
 
   @include below('small-page') {
     .has-dropdown {
@@ -13,12 +14,17 @@
     }
 
     .is-dropdown {
+      left: negative('half-shim');
       width: 100vw;
     }
   }
 
   .is-dropdown {
     @include z-index('nav-dropdown');
+  }
+
+  @include above('medium-page') {
+    font-size: inherit;
   }
 }
 
@@ -31,7 +37,6 @@
 // Shared base styles for links in navigation
 .nav-link {
   color: color('action-alt');
-  font-weight: bold;
   text-decoration: none;
   white-space: nowrap;
 
@@ -67,7 +72,6 @@
 $nav-locations: (
   'case-studies': 'work',
   'open-source': 'work',
-  'blog': 'work',
 
   'planning': 'services',
   'development': 'services',
@@ -77,6 +81,7 @@ $nav-locations: (
   'birds': 'about',
   'community': 'about',
 
+  'blog': null,
   'contact': null,
 
   'susysite-sites': null,

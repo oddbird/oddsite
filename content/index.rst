@@ -1,13 +1,20 @@
 public: yes
 location: home
+headline:
+  - type: 'Custom Web App Design & Development'
 grid_template: true
 dynamic_title:
-  - template: 'Oddly %s software development'
+  - template: 'Oddly %s'
     options:
       - name: 'accessible'
         tagline: |
           The world is diverse,
           and no user is an "edge case"...
+      - name: 'approachable'
+        tagline: |
+          Your friend in digital product
+          performance, design, & development...
+        default: true
       - name: 'human'
         tagline: |
           Great software requires a personal touch...
@@ -28,7 +35,6 @@ dynamic_title:
         tagline: |
           We don't know the answer,
           but we know how to get there...
-        default: true
       - name: 'top-shelf'
         tagline: |
           We build the tools
@@ -42,50 +48,18 @@ dynamic_title:
 Software for Humans
 ===================
 
-.. callmacro:: home.macros.j2#letter
-  :author: 'miriam'
-  :action: 'Open the conversation'
-  :target: '/contact/'
+.. callmacro:: content.macros.j2#image_block
+  :image: '/static/images/projects/trig-mobile.jpg'
+  :headline: "Hi, I'm Miriam--"
 
-  I co-founded OddBird with my brothers
-  `Jonny`_ and `Carl`_ in 2008,
-  providing custom web & mobile application development.
+  I co-founded OddBird with my brothers in 2008
+  to provide custom **web application design and development**
+  as well as **performance and accessibility refactors**.
 
-  .. _Carl: /authors/carl/
-  .. _Jonny: /authors/jonny/
-
-  While we've quickly become industry leaders --
-  creators and core developers of tools
-  like `Susy`_ & `Django`_
-  that larger agencies rely on --
-  we intentionally keep our team small.
-  Our size allows us to move quickly
-  and integrate with your team
-  for an agile and collaborative process.
-  Together, we can build software
-  that reflects your unique vision and expertise.
-
-  .. _Susy: /susy/
-  .. _Django: /open-source/
-
-  - **Because we're small**,
-    you get direct access to our entire
-    `team of designers & developers`_,
-    with full transparency and daily communication.
-  - **Because we're experts**,
-    we can guide you smoothly through the `entire process`_,
-    navigating issues before they arise.
-  - **Because we integrate** `design and code and content`_,
-    our software is built to last,
-    keeping your maintenance costs low.
-
-  .. _`team of designers & developers`: /birds/
-  .. _entire process: /services/planning/
-  .. _design and code and content: /services/
-
-  We know you have options,
-  and we'd love to talk more.
-  **We think you'll be happy with the results.**
+  Pay only for the hours you need,
+  and enjoy low maintenance
+  and significant savings for years.
+  We think you’ll be happy with the results.
 
 .. callmacro:: content.macros.j2#get_quotes
   :page: 'work/coachhub'

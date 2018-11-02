@@ -77,7 +77,9 @@ $pattern-sizes: (
   'border-thin': 1px,
   'border-radius': '#half-shim',
 
-  'logo-y': '#rhythm' ('times': 2.5),
+  'logo-y': '#rhythm' ('times': 2.25),
+  'alt-logo-y': '#rhythm' ('times': 2),
+  'hero-logo': '#rhythm' ('times': 5),
 
   'bird-face': 6rem,
   'half-bird-face': '#bird-face' ('times': 0.5),

@@ -8,14 +8,15 @@
   background: color('background');
   border-bottom: 1px solid color('border');
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   padding: size('quarter-shim') size('half-shim');
   position: relative;
-  position: sticky; // sass-lint:disable-line no-duplicate-properties
   top: 0;
 
   @include above('small-page') {
     padding: size('quarter-shim') size('shim');
+    position: sticky;
   }
 
   @include above('medium-page') {
@@ -54,15 +55,24 @@
 // -----
 .brand {
   align-self: flex-start;
-  margin-bottom: negative('rhythm');
+  filter: drop-shadow(1px 1px 0 color('background'));
+  flex: 1 1 100%;
+  order: 2;
+  text-align: center;
 
-  @include below('small-page') {
-    @include is-hidden;
+  @include above('small-page') {
+    flex: 0 1 auto;
+    margin-bottom: negative('rhythm');
+    order: initial;
   }
 
-  [data-location='home'] & {
+  [data-hero='no'] & {
     opacity: 0;
     pointer-events: none;
+
+    @include below('small-page') {
+      @include is-hidden;
+    }
   }
 }
 
@@ -102,56 +112,14 @@
 
 // Logo
 // ----
-@keyframes draw-logo {
-  to {
-    stroke-dashoffset: 0;
-  }
-}
-
-@keyframes fill-logo {
-  from {
-    fill-opacity: 0;
-  }
-
-  to {
-    fill-opacity: 1;
-  }
-}
-
-@keyframes fade-logo-outline {
-  to {
-    stroke-width: 0;
-  }
-}
 
 .logo-icon {
   height: size('logo-y');
+  margin-bottom: negative('shim-plus');
   width: auto;
 
-  // [data-location='home'] &,
-  [data-location='susysite'] & ,
+  [data-location='susysite'] &,
   [data-location='hermansite'] & {
-    animation: draw-logo 3s 1 ease-out both, fill-logo 3s 2s 1 ease-in-out both, fade-logo-outline 2s 2s 1 ease-in-out both;
-  }
-
-  // [data-location='home'] & {
-  //   stroke: color('brand-orange');
-  //   stroke-dasharray: 500;
-  //   stroke-dashoffset: 500;
-  //   stroke-width: 1;
-  // }
-
-  [data-location='susysite'] & {
-    stroke: color('brand-pink');
-    stroke-dasharray: 5000;
-    stroke-dashoffset: 5000;
-    stroke-width: 10;
-  }
-
-  [data-location='hermansite'] & {
-    stroke: color('action-hover');
-    stroke-dasharray: 5000;
-    stroke-dashoffset: 5000;
-    stroke-width: 10;
+    height: size('alt-logo-y');
   }
 }
