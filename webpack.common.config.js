@@ -4,8 +4,10 @@ process.env.BROWSERSLIST_CONFIG = './.browserslistrc';
 
 const AssetsPlugin = require('webpack-assets-manifest');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const SassDocPlugin = require('./sassdoc-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
 const mozjpeg = require('imagemin-mozjpeg');
 const optipng = require('imagemin-optipng');
 const path = require('path');
@@ -39,6 +41,7 @@ const scssLoaders = [
     options: {
       sourceMap: true,
       minimize: process.env.NODE_ENV === 'production',
+      importLoaders: 2,
     },
   },
   {
@@ -79,24 +82,8 @@ const sassDocOpts = {
   herman: {
     extraLinks: [
       {
-        name: 'Accoutrement-Init',
-        url: 'http://oddbird.net/accoutrement-init/',
-      },
-      {
-        name: 'Accoutrement-Color',
-        url: 'http://oddbird.net/accoutrement-color/',
-      },
-      {
-        name: 'Accoutrement-Layout',
-        url: 'http://oddbird.net/accoutrement-layout/',
-      },
-      {
-        name: 'Accoutrement-Scale',
-        url: 'http://oddbird.net/accoutrement-scale/',
-      },
-      {
-        name: 'Accoutrement-Type',
-        url: 'http://oddbird.net/accoutrement-type/',
+        name: 'Accoutrement',
+        url: 'http://oddbird.net/accoutrement/',
       },
     ],
     displayColors: ['hex', 'hsl'],
@@ -153,6 +140,14 @@ module.exports = {
     alias: { jquery: 'jquery/dist/jquery.slim.js' },
   },
   optimization: {
+    minimizer: [
+      new TerserPlugin({
+        cache: true,
+        parallel: true,
+        sourceMap: true,
+      }),
+      new OptimizeCSSAssetsPlugin(),
+    ],
     runtimeChunk: 'single',
     splitChunks: {
       name: false,
@@ -172,7 +167,7 @@ module.exports = {
       debug: process.env.NODE_ENV !== 'production',
     }),
     // pull all CSS out of JS bundles
-    new ExtractTextPlugin({
+    new MiniCssExtractPlugin({
       filename: styleOutput,
     }),
     // save assets.json mapping of names to bundled files
@@ -232,17 +227,20 @@ module.exports = {
       {
         test: /\.scss$/,
         exclude: /styleguide\.scss$/,
-        use: ExtractTextPlugin.extract({
-          use: scssLoaders,
-        }),
+        use: [MiniCssExtractPlugin.loader, ...scssLoaders],
       },
       {
         test: /styleguide\.scss$/,
-        use: ExtractTextPlugin.extract({
-          use: scssLoaders,
-          // Disable publicPath prefix for `url()` in styleguide CSS
-          publicPath: '',
-        }),
+        use: [
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              // Disable publicPath prefix for `url()` in styleguide CSS
+              publicPath: '',
+            },
+          },
+          ...scssLoaders,
+        ],
       },
     ],
   },
