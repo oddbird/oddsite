@@ -237,7 +237,9 @@
   alt='',
   headline=none,
   url=none,
-  content=none
+  content=none,
+  class=none,
+  do_rst=true
 ) %}
   {% set content = content if (content != none) else caller() %}
 
@@ -246,11 +248,11 @@
       {% set img = '<img src="' + image + '" alt="' + alt + '" class="imageblock-image" />' %}
       {{ utility.link_if(img|safe, url, 'imageblock-link') }}
 
-      <div class="imageblock-content">
+      <div class="imageblock-content {{ class }}">
         {% if headline %}
           <h2 class="imageblock-title">{{ headline }}</h2>
         {% endif %}
-        {{ content|rst }}
+        {{ content|rst if do_rst else content }}
       </div>
     </div>
   {% endcall %}

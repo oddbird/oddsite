@@ -9,11 +9,11 @@ dynamic_title:
       - name: 'accessible'
         tagline: |
           The world is diverse,
-          and no user is an "edge case"...
+          & no user is an "edge case"...
       - name: 'approachable'
         tagline: |
-          Your friend in digital product
-          performance, design, & development...
+          Your friend in digital
+          design, development, & performance...
         default: true
       - name: 'human'
         tagline: |
@@ -28,9 +28,8 @@ dynamic_title:
           to explore new possibilities...
       - name: 'robust'
         tagline: |
-          100% test coverage,
-          code review,
-          and documentation keep maintenance costs low...
+          100% test coverage
+          & documentation keep maintenance costs low...
       - name: 'thoughtful'
         tagline: |
           We don't know the answer,
@@ -42,23 +41,22 @@ dynamic_title:
       - name: 'transparent'
         tagline: |
           Daily communication keeps you in control
-          of the budget and priorities...
+          of budget & priorities...
 
 
 Software for Humans
 ===================
 
-.. callmacro:: content.macros.j2#image_block
-  :image: '/static/images/projects/trig-mobile.jpg'
-  :headline: "Hi, I'm Miriam--"
+.. callmacro:: home.macros.j2#letter
+  :image: '/static/images/pages/letter-phones.jpg'
+  :author: 'miriam'
 
   I co-founded OddBird with my brothers in 2008
   to provide custom **web application design and development**
   as well as **performance and accessibility refactors**.
 
-  Pay only for the hours you need,
-  and enjoy low maintenance
-  and significant savings for years.
+  Pay only for the hours you need, and enjoy
+  **low maintenance and significant savings for years.**
   We think you’ll be happy with the results.
 
 .. callmacro:: content.macros.j2#get_quotes
