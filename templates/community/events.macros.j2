@@ -113,13 +113,13 @@
       <div class="splash-section">
         {% for talk in talks %}
           <article class="splash-talk">
-            <h3 class="splash-title">
-              {{ utility.link_if(
-                url=content.page_link(talk),
-                content=talk.title
-              ) }}
-            </h3>
             <div class="splash-brag">
+              <h3 class="splash-title">
+                {{ utility.link_if(
+                  url=content.page_link(talk),
+                  content=talk.title
+                ) }}
+              </h3>
               {% set brag = talk.config.brag %}
               {% set brag = talk.render_summary() if (brag == 'summary') else brag|rst %}
               {{ brag }}

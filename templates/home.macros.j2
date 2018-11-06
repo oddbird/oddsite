@@ -21,7 +21,7 @@
 ) %}
   <div class='letter-sig'>
     {{ utility.icon([author, 'sig']|join('-'), size='sig') }}
-    {{ birds.get_card(author) }}
+    <span class='h-card'>{{ birds.get_bird_name(author) }}</span>
   </div>
 {% endmacro %}
 
@@ -29,9 +29,11 @@
 {% macro letter_hello(
   author='miriam'
 ) %}
-  {{ utility.icon(author, size='face', class='letter-face') }}
-  <span class="letter-hello">
-    Hi, I’m
-    {{ author|capitalize }} —
+  <span data-media-block>
+    {{ utility.icon(author, size='face-small', class='letter-face') }}
+    <span class="letter-hello">
+      Hi, I’m
+      {{ author|capitalize }} —
+    </span>
   </span>
 {% endmacro %}

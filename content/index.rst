@@ -52,44 +52,32 @@ Software for Humans
   :author: 'miriam'
 
   I co-founded OddBird with my brothers in 2008
-  to provide custom **web application design and development**
-  as well as **performance and accessibility refactors**.
+  to help you create **scalable web applications**
+  with **human-centered design**,
+  **performance**,
+  and **accessibility**.
 
-  Pay only for the hours you need, and enjoy
-  **low maintenance and significant savings for years.**
+  From custom builds to consulting and refactors:
+  we'll provide an established team of experts to fit your needs.
+  Our well-tested and documented code will keep
+  **maintenance costs low, for significant long-term savings**.
   We think you’ll be happy with the results.
+
+  .. callmacro:: content.macros.j2#link_button
+    :url: '/contact/'
+
+    Let's talk about your project
 
 .. callmacro:: content.macros.j2#get_quotes
   :page: 'work/coachhub'
   :slug: 'remote'
 
 .. callmacro:: projects/splash.macros.j2#splash_list
-  :headline: 'Featured Projects'
+  :headline: 'Industries We Serve'
   :url: '/work/'
-
-.. callmacro:: content.macros.j2#divider
-  :title: 'Human-Driven Design'
 
 .. callmacro:: birds/macros.j2#home_faces
   :authors: ['carl', 'kit', 'stacy', 'miriam', 'sondra', 'jonny']
-
-.. callmacro:: content.macros.j2#image_block
-  :image: '/static/images/projects/trig-mobile.jpg'
-  :headline: 'Are We The Right Fit For You?'
-
-  **Software is successful
-  when it solves real problems in people's lives.**
-  We can help you find those solutions --
-  with 100% test coverage,
-  robust architecture,
-  and living style guides.
-  *Enjoy low on-going maintenance,
-  and significant savings for years.*
-
-  .. callmacro:: content.macros.j2#link_button
-    :url: '/contact/'
-
-    Start the conversation
 
 .. callmacro:: content.macros.j2#get_quotes
   :page: 'work/coachhub'
@@ -104,22 +92,28 @@ Software for Humans
 .. callmacro:: content.macros.j2#image_block
   :image: '/static/images/pages/jssass.png'
   :url: 'https://www.sitepoint.com/premium/books/jump-start-sass'
-  :headline: 'Industry-Leading Expertise'
+  :headline: 'Python, CSS, & Performance Experts'
 
-  **We write the books,
+  We write the books,
   contribute to the languages,
-  and build the tools**
+  and build the tools
   that other developers rely on.
-  With expertise in
-  Python/Django, accessible HTML, modern Sass/CSS,
-  Vue, Node, Backbone/Marionette, and more --
+  Let's create a
+  **custom digital experience
+  that delights** your customers.
+
+  **Language & Platform Expertise**:
+
+  - Python/Django
+  - Sass/CSS
+  - Accessible HTML
+  - Vue & React
+  - Backbone/Marionette
+  - Node
+  - WordPress & Other CMS solutions
+
   *We don't just follow best-practice,
   we help define it.*
-
-  .. _Miriam: /authors/miriam/
-  .. _Carl: /authors/carl/
-  .. _Sass/CSS: http://sass-lang.com
-  .. _Django/Python: https://www.djangoproject.com/
 
   .. callmacro:: content.macros.j2#link_button
     :url: '/contact/'
@@ -131,6 +125,6 @@ Software for Humans
   :slug: 'innovative'
 
 .. callmacro:: projects/splash.macros.j2#splash_list
-  :headline: 'Tools for Developers'
+  :headline: 'Developers Tools We Build'
   :url: '/open-source/'
   :slugs: ['herman/index', 'open-source/django', 'susy/index']

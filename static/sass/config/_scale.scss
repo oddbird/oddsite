@@ -82,6 +82,7 @@ $pattern-sizes: (
   'hero-logo': '#rhythm' ('times': 5),
 
   'bird-face': 6rem,
+  'bird-face-small': '#bird-face' ('times': 0.75),
   'half-bird-face': '#bird-face' ('times': 0.5),
   'bird-sig-height': '#rhythm' ('times': 3),
   'bird-sig-width': '#bird-sig-height' ('times': 920/310),
@@ -95,11 +96,9 @@ $pattern-sizes: (
   'dropdown-narrow': 9rem,
   'dropdown-wide': 14rem,
 
-  'splash-items': 18rem,
-  'splash-items-max': 24rem,
-  'splash-logo-x': 14rem,
+  'splash-items': 16rem,
   'splash-logo-y': '#spacer',
-  'imageblock-image': '#splash-logo-x',
+  'imageblock-image': '#dropdown-wide',
 );
 
 @include add-sizes($pattern-sizes);

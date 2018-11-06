@@ -43,6 +43,9 @@
     </a>
 
     <div class="splash-brag">
+      {% if project.industry %}
+        <h3 class="splash-title">{{ project.industry }}</h3>
+      {% endif %}
       {{ page.config.brag|rst }}
     </div>
   </article>

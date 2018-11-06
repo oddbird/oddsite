@@ -39,11 +39,15 @@
 ) %}
   {% set scale = 'small' if small else 'large' %}
   <div divider="{{ scale }}">
-    <hr divider-line="{{ scale }}" />
     {% if title %}
+      {% if scale != 'small' %}
+        <hr divider-line="{{ scale }}" />
+      {% endif %}
       <h2 divider-title="{{ scale }}">
         {{ utility.link_if(title, url) }}
       </h2>
+    {% else %}
+      <hr divider-line="{{ scale }}" />
     {% endif %}
   </div>
 {% endmacro %}
@@ -259,10 +263,14 @@
 {% endmacro %}
 
 
-{% macro media_block(media, content=none) %}
+{% macro media_block(
+  media,
+  content=none,
+  align='center'
+) %}
   {% set content = content if (content != none) else caller() %}
 
-  <div class="media-block">
+  <div data-media-block="{{ align }}">
     <div class="media-image">{{ media|safe }}</div>
     <div class="media-content">{{ content|safe }}</div>
   </div>

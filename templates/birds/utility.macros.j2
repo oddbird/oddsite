@@ -2,7 +2,7 @@
 
 {% macro card(page, details=false, class=none) %}
   {% if details == 'birdpage' %}
-    <div class="h-card media-block birdpage-social">
+    <div class="h-card birdpage-social" data-media-block>
       {{ face(page.config.bird, 'media-image') }}
 
       <div class="media-content">
@@ -13,7 +13,7 @@
       </div>
     </div>
   {% elif details %}
-    <div class="h-card media-block{{ [' ', class]|join if class else '' }}">
+    <div class="h-card {{ [' ', class]|join if class else '' }}" data-media-block>
       {{ face(page.config.bird, 'media-image') }}
 
       <div class="bio-short media-content">

@@ -1,9 +1,13 @@
 // Inverted Sections
 // =================
 
-.inverted {
+@mixin invert {
   @include contrasted('invert');
   @include link-color-for('invert');
+}
+
+.inverted {
+  @include invert;
 
   + [divider] {
     margin-top: 0;

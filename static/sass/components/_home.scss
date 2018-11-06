@@ -1,16 +1,8 @@
 // Home Page
 // =========
 
-.home-letter {
-  .imageblock-title {
-    align-items: center;
-    display: flex;
-  }
-}
-
 .letter-face {
-  flex: 0 0 auto;
-  padding-right: size('shim');
+  margin-left: negative('shim-plus');
 }
 
 .letter-sig {
@@ -25,7 +17,7 @@
 
   .h-card {
     display: inline-block;
-    margin-left: size('gutter');
+    margin-left: size('double-gutter');
   }
 }
 

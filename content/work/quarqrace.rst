@@ -11,6 +11,7 @@ client:
     url: 'http://sram.com/'
 project:
   - name: 'Quarq Race Intelligence'
+    industry: 'Pro Sports & Fitness'
     tagline: 'Real-Time Race Analytics'
     url: 'http://quarqrace.com'
     years: '2015–2016'

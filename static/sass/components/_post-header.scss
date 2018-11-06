@@ -11,6 +11,17 @@
     margin-bottom: 0;
     margin-top: 0;
   }
+
+  .no-hero + & {
+    @include center;
+    max-width: size('medium-page');
+
+    .title-post-type {
+      $bleed: get-extend-calc('extend-full');
+      margin-left: $bleed;
+      padding-left: calc(#{$bleed} * -1);
+    }
+  }
 }
 
 .header-actions {
@@ -21,7 +32,7 @@
 
 .title-post-type {
   background-color: color('invert');
-  clip-path: polygon(100% 0%, calc(100% - 0.5rem) 50%, 100% 100%, 0 100%, 0% 50%, 0 0);
+  clip-path: polygon(100% 0%, calc(100% - 0.5rem) 50%, 100% 100%, 0 100%, 0 0);
   color: color('background');
   display: inline-block;
   font-size: 1rem;
@@ -75,23 +86,6 @@
 
 // Dynamic Titles
 // --------------
-
-.dynamic-title {
-  @include center;
-  max-width: size('medium-page');
-
-  .title-post-type {
-    $bleed: get-extend-calc('extend-full');
-    margin-left: $bleed;
-    padding-left: calc(#{$bleed} * -1);
-  }
-
-  + [data-module] {
-    .content-block {
-      margin-top: 0;
-    }
-  }
-}
 
 .title-select {
   display: inline-block;

@@ -3,6 +3,7 @@
 {% import 'utility.macros.j2' as utility %}
 {% import 'content.macros.j2' as content %}
 {% import 'layout/macros.j2' as layout %}
+{% import 'contact/macros.j2' as contact %}
 
 {% block layout %}
 
@@ -35,7 +36,7 @@
   </main>
 
   <footer data-region="footer">
-    {% block footer %}
+      {{ contact.social() }}
       <p class="h-card">
         Copyright &copy; {{ config.copyright }}
         <a href="/" class="p-name u-url">OddBird</a>
@@ -43,6 +44,5 @@
         Established in 2008 by three odd siblings.
         <a href="/conduct/">Code of Conduct</a>
       </p>
-    {% endblock %}
   </footer>
 {% endblock %}

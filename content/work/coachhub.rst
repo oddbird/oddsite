@@ -8,6 +8,7 @@ client:
     url: 'http://orcasinc.com'
 project:
   - name: 'CoachHub'
+    industry: 'Wellness & Medical'
     tagline: 'Integrated Health Coaching'
     url: 'https://coachhub.resilienceboost.com/'
     case_study: true
@@ -24,8 +25,8 @@ tasks:
   - User Experience Design
   - WCAG & HIPPA Compliant
 brag: |
-  Online platform for health coaches,
-  now used by the **US Coast Guard**
+  Responsive platform for health coaches,
+  used by the **US Coast Guard**
   and **National Institutes of Health**.
 quotes:
   - text: |

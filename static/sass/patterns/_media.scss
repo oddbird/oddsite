@@ -67,10 +67,18 @@ h6 {
 // Media Blocks
 // ------------
 
-.media-block {
+[data-media-block] {
   align-items: center;
   display: flex;
   padding-bottom: size('shim');
+}
+
+[data-media-block~='start'] {
+  align-items: start;
+}
+
+[data-media-block~='end'] {
+  align-items: end;
 }
 
 .media-image {

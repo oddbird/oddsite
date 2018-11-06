@@ -16,6 +16,12 @@
 }
 
 
+.imageblock-title {
+  font-size: size('h3');
+  margin-top: 0;
+}
+
+
 .imageblock-link {
   &[href] {
     display: block;
@@ -50,8 +56,4 @@
   @include above('small-page') {
     margin-left: size('pad');
   }
-}
-
-.imageblock-title {
-  margin-top: 0;
 }
