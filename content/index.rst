@@ -68,9 +68,11 @@ Software for Humans
 
     Let's talk about your project
 
-.. callmacro:: content.macros.j2#get_quotes
-  :page: 'work/coachhub'
-  :slug: 'remote'
+.. callmacro:: content.macros.j2#two_quotes
+  :quotes: [
+      ['work/coachhub', 'remote'],
+      ['work/medcurbside', 'goals'],
+    ]
 
 .. callmacro:: projects/splash.macros.j2#splash_list
   :headline: 'Industries We Serve'
@@ -79,15 +81,11 @@ Software for Humans
 .. callmacro:: birds/macros.j2#home_faces
   :authors: ['carl', 'kit', 'stacy', 'miriam', 'sondra', 'jonny']
 
-.. callmacro:: content.macros.j2#get_quotes
-  :page: 'work/coachhub'
-  :slug: 'handoff'
-
-.. callmacro:: content.macros.j2#divider
-
-.. callmacro:: content.macros.j2#get_quotes
-  :page: 'work/medcurbside'
-  :slug: 'goals'
+.. callmacro:: content.macros.j2#two_quotes
+  :quotes: [
+      ['work/timedesigner', 'innovative'],
+      ['work/coachhub', 'handoff'],
+    ]
 
 .. callmacro:: content.macros.j2#image_block
   :image: '/static/images/pages/jssass.png'
@@ -119,10 +117,6 @@ Software for Humans
     :url: '/contact/'
 
     Jump start your project
-
-.. callmacro:: content.macros.j2#get_quotes
-  :page: 'work/timedesigner'
-  :slug: 'innovative'
 
 .. callmacro:: projects/splash.macros.j2#splash_list
   :headline: 'Developers Tools We Build'

@@ -36,6 +36,7 @@ quotes:
       **ready to start adding value immediately**,
       working as closely as an internal team.
     name: 'Sara Taillon'
+    face: 'sara-taillon.jpg'
     role: 'CTO'
     slug: 'remote'
   - text: |
@@ -44,6 +45,7 @@ quotes:
       For example, 100% unit test coverage was a given.
       I never had to ask for it.
     name: 'Sara Taillon'
+    face: 'sara-taillon.jpg'
     role: 'CTO'
     slug: 'handoff'
   - text: |
@@ -51,6 +53,7 @@ quotes:
       combined with **incredible communication**
       and an easy-going style.
     name: 'Sara Taillon'
+    face: 'sara-taillon.jpg'
     role: 'CTO'
     slug: 'experts'
 planning:

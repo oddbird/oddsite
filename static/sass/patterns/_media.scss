@@ -70,20 +70,36 @@ h6 {
 [data-media-block] {
   align-items: center;
   display: flex;
+  flex-direction: column;
   padding-bottom: size('shim');
+
+  @include above('small-page') {
+    flex-direction: row;
+  }
 }
 
 [data-media-block~='start'] {
-  align-items: start;
+  @include above('small-page') {
+    align-items: start;
+  }
 }
 
 [data-media-block~='end'] {
-  align-items: end;
+  @include above('small-page') {
+    align-items: end;
+  }
 }
 
 .media-image {
   flex: 0 0 auto;
-  margin-right: size('shim');
+
+  @include below('small-page') {
+    margin-bottom: size('shim');
+  }
+
+  @include above('small-page') {
+    margin-right: size('gutter');
+  }
 }
 
 .media-content {

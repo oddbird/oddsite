@@ -118,24 +118,33 @@
   name=none,
   url=none,
   role=none,
+  face=none,
   section=true
 ) %}
   {% set content = content if (content != none) else caller() %}
 
-  <blockquote {{ utility.attr_if('data-quote-section', section) }}>
-    {{ content|rst }}
-
-    {% if name or url or role %}
-      <footer class="attribution">
-      <cite>
-        {% set display_name = name if role else utility.link_if(name, url) %}
-        —{{ display_name }}
-        {%- if role -%},
-          <b>{{ utility.link_if(role, url) }}</b>
-        {%- endif -%}
-      </cite>
-      </footer>
+  <blockquote data-media-block="start" {{ utility.attr_if('data-quote-section', section) }}>
+    {% if face %}
+      <img src="{{ '/static/images/quotes/%s' % face }}" class="media-image">
+    {% else %}
+      <span class="media-image"></span>
     {% endif %}
+
+    <div class="media-content">
+      {{ content|rst }}
+
+      {% if name or url or role %}
+        <footer class="attribution">
+        <cite>
+          {% set display_name = name if role else utility.link_if(name, url) %}
+          —{{ display_name }}
+          {%- if role -%},
+            <b>{{ utility.link_if(role, url) }}</b>
+          {%- endif -%}
+        </cite>
+        </footer>
+      {% endif %}
+    </div>
   </blockquote>
 {% endmacro %}
 
@@ -146,8 +155,9 @@
 ) %}
   {% set content = content if (content != none) else caller() %}
 
-  <div class="pullquote" {{ utility.attr_if('data-quote-section', section) }}>
-    {{ content|rst }}
+  <div class="pullquote" data-media-block="start" {{ utility.attr_if('data-quote-section', section) }}>
+    <span class="media-image"></span>
+    <div class="media-content">{{ content|rst }}</div>
   </div>
 {% endmacro %}
 
@@ -155,7 +165,8 @@
 {% macro get_quotes(
   page,
   slug=none,
-  count=none
+  count=none,
+  section=true
 ) %}
   {% set page = page|get_config or page %}
   {% set client = page.config.client[0] if page.config.client else none %}
@@ -164,16 +175,35 @@
     {% set quote = page.config.quotes|selectattr('slug', 'equalto', slug)|list %}
     {% set quote = quote[0] %}
     {% set role = get_role(quote.role, client.name) %}
-    {{ blockquote(quote.text, quote.name, quote.url, role) }}
+    {{ blockquote(quote.text, quote.name, quote.url, role, quote.face, section) }}
   {% else %}
+    {% set two_up = (page.config.quotes|length > 1) %}
+    {% set section = false if two_up else section %}
+
+    {% if two_up %}<section data-quote-section="two-up">{% endif %}
+
     {% for quote in page.config.quotes %}
       {% if (count == none) or (loop.index0 < count) %}
         {% set role = get_role(quote.role, client.name) %}
-        {{ blockquote(quote.text, quote.name, quote.url, role) }}
+        {{ blockquote(quote.text, quote.name, quote.url, role, quote.face, section) }}
       {% endif %}
     {% endfor %}
+
+    {% if two_up %}</section>{% endif %}
   {% endif %}
 {% endmacro %}
+
+
+{% macro two_quotes(
+  quotes
+) %}
+  <section data-quote-section="two-up">
+    {% for quote in quotes %}
+      {{ get_quotes(quote[0], quote[1], section=false) }}
+    {% endfor %}
+  </section>
+{% endmacro %}
+
 
 
 {% macro get_role(role=none, client=none) -%}

@@ -4,7 +4,7 @@
 
 
 {% macro attr_if(attr, value=none) %}
-  {%- if value == true and value|string == 'true' -%}
+  {%- if value == true and (value|string == 'true' or value|string == 'True') -%}
     {{ attr }}
   {%- elif value -%}
     {{ attr }}="{{ value }}"

@@ -32,13 +32,13 @@
 
 .title-post-type {
   background-color: color('invert');
-  clip-path: polygon(100% 0%, calc(100% - 0.5rem) 50%, 100% 100%, 0 100%, 0 0);
+  clip-path: polygon(100% 0%, calc(100% - #{size('shim-plus')}) 50%, 100% 100%, 0 100%, 0 0);
   color: color('background');
   display: inline-block;
   font-size: 1rem;
   font-weight: bold;
   margin-left: negative('gutter');
-  padding: size('half-shim') size('gutter');
+  padding: size('half-shim') size('double-gutter');
   text-shadow: none;
 }
 
@@ -91,8 +91,12 @@
   display: inline-block;
 
   .is-dropdown {
-    min-width: 100%;
     transform: translateY(size('border-thin'));
+    width: size('dropdown-narrow');
+
+    @include above('nav-wide') {
+      width: size('dropdown-wide');
+    }
   }
 }
 

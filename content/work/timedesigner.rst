@@ -16,6 +16,7 @@ quotes:
       **we fundamentally transformed
       the Chicago public school system.**
     name: 'Furman Brown'
+    face: 'furman-brown.jpg'
     role: 'Founder'
     slug: 'innovative'
   - text: |
@@ -23,6 +24,7 @@ quotes:
       Seeing how OddBird does the iteration
       has improved my own iterative system with schools.
     name: 'Furman Brown'
+    face: 'furman-brown.jpg'
     role: 'Founder'
     slug: 'iterate'
   - text: |
@@ -30,6 +32,7 @@ quotes:
       We could have selected a cheaper avenue for this work --
       we would have paid for it manifold in the long run.
     name: 'Furman Brown'
+    face: 'furman-brown.jpg'
     role: 'Founder'
     slug: 'investment'
   - text: |
@@ -39,6 +42,7 @@ quotes:
       providing **a focused team
       with a wide range of talent.**
     name: 'Furman Brown'
+    face: 'furman-brown.jpg'
     role: 'Founder'
     slug: 'range'
   - text: |
@@ -48,12 +52,14 @@ quotes:
       and increase my revenue from courses,
       because the tool has sped up the process.
     name: 'Furman Brown'
+    face: 'furman-brown.jpg'
     role: 'Founder'
     slug: 'mvp'
   - text: |
       I love working with Miriam as a project manager,
       She’s excellent at reigning me in.
     name: 'Furman Brown'
+    face: 'furman-brown.jpg'
     role: 'Founder'
     slug: 'focus'
   - text: |
@@ -62,6 +68,7 @@ quotes:
       But Miriam asked “what do you need?”
       and then we built that, and it worked.
     name: 'Furman Brown'
+    face: 'furman-brown.jpg'
     role: 'Founder'
     slug: 'needs'
   - text: |
@@ -70,6 +77,7 @@ quotes:
       and knew how to work together;
       that allowed us get to where we are now.
     name: 'Furman Brown'
+    face: 'furman-brown.jpg'
     role: 'Founder'
     slug: 'process'
 summary: |

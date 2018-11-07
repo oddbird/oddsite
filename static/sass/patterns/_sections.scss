@@ -40,10 +40,10 @@
 
 [divider-title='small'] {
   @include invert;
-  clip-path: polygon(100% 0%, calc(100% - 0.5rem) 50%, 100% 100%, 0 100%, 0.5rem 50%, 0 0);
+  clip-path: polygon(100% 0%, calc(100% - #{size('shim-plus')}) 50%, 100% 100%, 0 100%, #{size('shim-plus')} 50%, 0 0);
   display: inline-block;
   margin: size('gutter') auto;
-  padding: size('shim') size('spacer');
+  padding: size('half-shim') size('spacer');
 }
 
 

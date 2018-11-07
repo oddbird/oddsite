@@ -10,6 +10,7 @@ quotes:
       OddBird really changed my thinking about
       how successful outsourcing software development can be.
     name: 'Sara Taillon'
+    face: 'sara-taillon.jpg'
     url: 'http://orcasinc.com'
     role: 'CTO'
     slug: 'outsource'
@@ -175,6 +176,7 @@ The YAML data should be structured as follows:
         OddBird really changed my thinking about
         how successful outsourcing software development can be.
       name: 'Sara Taillon'
+      face: 'sara-taillon.jpg'
       url: 'http://orcasinc.com'
       role: 'CTO'
       slug: 'outsource'
