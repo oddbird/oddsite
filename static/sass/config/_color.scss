@@ -46,6 +46,7 @@ $contrast-colors: (
 $pattern-colors: (
   'text': '#contrast-dark',
   'background': '#contrast-light',
+  'overlay': '#background' ('rgba': 0.95),
   'border': '#brand-blue',
   'border-light': '#border' ('tint': 50%),
   'caption': '#text' ('rgba': 0.7),

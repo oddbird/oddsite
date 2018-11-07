@@ -5,7 +5,7 @@
 [data-region='banner'] {
   @include z-index('banner');
   align-items: center;
-  background: color('background');
+  background: color('overlay');
   border-bottom: 1px solid color('border');
   display: flex;
   flex-wrap: wrap;
