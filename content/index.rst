@@ -90,7 +90,7 @@ Software for Humans
 .. callmacro:: content.macros.j2#image_block
   :image: '/static/images/pages/jssass.png'
   :url: 'https://www.sitepoint.com/premium/books/jump-start-sass'
-  :headline: 'Python, CSS, & Performance Experts'
+  :headline: 'Performant Python, JavaScript, & CSS'
 
   We write the books,
   contribute to the languages,
