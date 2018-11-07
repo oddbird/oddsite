@@ -3,7 +3,7 @@ jobs:
   build:
     working_directory: ~/oddsite
     docker:
-      - image: circleci/node:latest-browsers
+      - image: circleci/node:10-browsers
     steps:
       - checkout
       - restore_cache:
@@ -25,6 +25,7 @@ jobs:
             if [[ ! "${CIRCLE_BRANCH}" =~ greenkeeper\/.* ]]; then
               [[ $(git diff --name-only yarn.lock) == "" ]] && exit 0
               echo ">> yarn.lock is out of date, run \"yarn\""
+              git diff --no-pager yarn.lock
               exit 1
             fi
       - save_cache:
@@ -46,14 +47,6 @@ jobs:
       - run:
           name: Check JS Test Coverage
           command: nyc check-coverage --temp-directory ./jscov/ --statements=100 --functions=100 --branches=100 --lines=100
-      - deploy:
-          name: Update yarn.lock [greenkeeper]
-          command: |
-            if [[ "${CIRCLE_BRANCH}" =~ greenkeeper\/.* ]]; then
-              yarn global add greenkeeper-lockfile@1 --prefix ~/oddsite/node
-              greenkeeper-lockfile-update
-              greenkeeper-lockfile-upload
-            fi
       - store_artifacts:
           path: jscov
           destination: js-reports
