@@ -1,7 +1,6 @@
 // Banner Layout
 // =============
 
-
 [data-region='banner'] {
   @include z-index('banner');
   align-items: center;
@@ -23,7 +22,6 @@
     padding: size('quarter-shim') size('gutter');
   }
 }
-
 
 .banner-contact {
   #{$link} {
@@ -50,7 +48,6 @@
   }
 }
 
-
 // Brand
 // -----
 .brand {
@@ -72,6 +69,11 @@
 
     @include below('small-page') {
       @include is-hidden;
+    }
+
+    // sass-lint:disable space-around-operator
+    @supports (--css: variables) {
+      opacity: var(--opacity, 0);
     }
   }
 }
@@ -108,7 +110,6 @@
     }
   }
 }
-
 
 // Logo
 // ----
