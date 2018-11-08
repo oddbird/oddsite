@@ -64,16 +64,14 @@
   }
 
   [data-hero='no'] & {
-    opacity: 0;
-    pointer-events: none;
+    #{--opacity}: 0; // default is hidden
+    opacity: 1; // non-variable fallback is visible
+    opacity: var(--opacity, 0); // sass-lint:disable-line no-duplicate-properties
+    transform: translateY(calc(50% - var(--opacity, 1) * 50%));
+    transition: opacity 150ms ease-in-out;
 
     @include below('small-page') {
       @include is-hidden;
-    }
-
-    // sass-lint:disable space-around-operator
-    @supports (--css: variables) {
-      opacity: var(--opacity, 0);
     }
   }
 }
@@ -87,7 +85,7 @@
   }
 
   #{$focus} {
-    color: color('brand-orange');
+    color: color('action-hover');
   }
 
   [data-location*='susysite'] & {

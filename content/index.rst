@@ -104,7 +104,6 @@ Software for Humans
 
   - Python/Django
   - Sass/CSS
-  - Accessible HTML
   - Vue & React
   - Backbone/Marionette
   - Node
