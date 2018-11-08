@@ -124,15 +124,16 @@
   {% set content = content if (content != none) else caller() %}
 
   <blockquote data-media-block="start" {{ utility.attr_if('data-quote-section', section) }}>
-    {% if face %}
+    {# @@@ Get permission for faces #}
+    {# {% if face %}
       {{ utility.img(
         src='/static/images/quotes/%s' % face,
         alt='%s headshot' % name, class='media-image',
         class='media-image'
       ) }}
-    {% else %}
+    {% else %} #}
       <span class="media-image"></span>
-    {% endif %}
+    {# {% endif %} #}
 
     <div class="media-content">
       {{ content|rst }}
