@@ -18,12 +18,14 @@
 
 // Dropdown ul for child items
 .is-dropdown {
+  @include font-family('body');
   @include position(100% null null 0);
   @include z-index('dropdown');
   background-color: color('background');
   border-bottom: size('border') solid color('border');
   filter: drop-shadow(0 6px 5px color('shadow'));
   font-size: 1rem;
+  font-weight: normal;
   list-style: none;
   min-width: 100%;
   padding: size('shim') 0;

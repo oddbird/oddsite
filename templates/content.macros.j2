@@ -125,7 +125,11 @@
 
   <blockquote data-media-block="start" {{ utility.attr_if('data-quote-section', section) }}>
     {% if face %}
-      <img src="{{ '/static/images/quotes/%s' % face }}" class="media-image">
+      {{ utility.img(
+        src='/static/images/quotes/%s' % face,
+        alt='%s headshot' % name, class='media-image',
+        class='media-image'
+      ) }}
     {% else %}
       <span class="media-image"></span>
     {% endif %}
@@ -240,7 +244,11 @@
       <figure class="{{ class }}" {{ utility.attr_if('style', style) }}>
         {% for item in data %}
           {% set img = item.image if ('://' in item.image) else ['/static/images/', item.image]|join %}
-          {% set img = '<img src="' + img + '" alt="' + item.alt + '" class="gallery-image" />' %}
+          {% set img = utility.img(
+            src=img,
+            alt=item.alt,
+            class='gallery-image'
+          ) %}
 
           <div class="gallery-item">
             {{ utility.link_if(img|safe, item.target, 'gallery-link') }}
@@ -279,7 +287,7 @@
 
   {% call rst(safe=true) %}
     <div class="image-block extend-left">
-      {% set img = '<img src="' + image + '" alt="' + alt + '" class="imageblock-image" />' %}
+      {% set img = utility.img(image, alt, class='imageblock-image') %}
       {{ utility.link_if(img|safe, url, 'imageblock-link') }}
 
       <div class="imageblock-content {{ class }}">

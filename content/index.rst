@@ -9,39 +9,39 @@ dynamic_title:
       - name: 'accessible'
         tagline: |
           The world is diverse,
-          & no user is an "edge case"...
+          & no user is an "edge case"
       - name: 'approachable'
         tagline: |
           Your friend in digital
-          design, development, & performance...
+          design, development, & performance
         default: true
       - name: 'human'
         tagline: |
-          Great software requires a personal touch...
+          Great software requires a personal touch
       - name: 'nimble'
         tagline: |
           Our tightly-integrated team
-          can adapt quickly to your needs...
+          can adapt quickly to your needs
       - name: 'queer'
         tagline: |
           Moving past "normal"
-          to explore new possibilities...
+          to explore new possibilities
       - name: 'robust'
         tagline: |
           100% test coverage
-          & documentation keep maintenance costs low...
+          & documentation keep maintenance costs low
       - name: 'thoughtful'
         tagline: |
           We don't know the answer,
-          but we know how to get there...
+          but we know how to get there
       - name: 'top-shelf'
         tagline: |
           We build the tools
-          that millions of developers rely on...
+          that millions of developers rely on
       - name: 'transparent'
         tagline: |
           Daily communication keeps you in control
-          of budget & priorities...
+          of budget & priorities
 
 
 Software for Humans
@@ -49,13 +49,13 @@ Software for Humans
 
 .. callmacro:: home.macros.j2#letter
   :image: '/static/images/pages/letter-phones.jpg'
+  :alt: 'Two phones showing samples of applications that OddBird built for clients: CoachHub & Quarq Race Intelligence'
   :author: 'miriam'
 
   I co-founded OddBird with my brothers in 2008
-  to help you create **scalable web applications**
-  with **human-centered design**,
-  **performance**,
-  and **accessibility**.
+  to help you create **scalable**,
+  **accessible**, and **performant web applications**
+  with a **human-centered design**.
 
   From custom builds to consulting and refactors:
   we'll provide an established team of experts to fit your needs.
@@ -89,6 +89,7 @@ Software for Humans
 
 .. callmacro:: content.macros.j2#image_block
   :image: '/static/images/pages/jssass.png'
+  :alt: 'Jump Start Sass: a beginners guide from SitePoint, written by Miriam Suzanne & Hugo Giraudel'
   :url: 'https://www.sitepoint.com/premium/books/jump-start-sass'
   :headline: 'Performant Python, JavaScript, & CSS'
 

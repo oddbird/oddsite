@@ -1,5 +1,9 @@
-{% macro img() %}
-  <img{% for k in kwargs %} {{ k }}="{{ kwargs[k] }}"{% endfor %}>
+{% macro img(
+  src,
+  alt=""
+) %}
+  <img {{ attr_if('src', src) }} alt="{{ alt or '' }}"
+    {% for k in kwargs %} {{ k }}="{{ kwargs[k] }}"{% endfor %}>
 {% endmacro %}
 
 
