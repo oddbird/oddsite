@@ -215,13 +215,13 @@ export const initializeLogoFadeOnScroll = function() {
     updateOpacity();
 
     $window.scroll(() => {
-      $.doTimeout('scroll', 10, () => {
+      $.doTimeout('scroll', 5, () => {
         updateOpacity();
       });
     });
 
     $window.resize(() => {
-      $.doTimeout('resize', 250, () => {
+      $.doTimeout('resize', 100, () => {
         calculateSizes();
         updateOpacity();
       });
