@@ -1,10 +1,14 @@
-{% macro img() %}
-  <img{% for k in kwargs %} {{ k }}="{{ kwargs[k] }}"{% endfor %}>
+{% macro img(
+  src,
+  alt=""
+) %}
+  <img {{ attr_if('src', src) }} alt="{{ alt or '' }}"
+    {% for k in kwargs %} {{ k }}="{{ kwargs[k] }}"{% endfor %}>
 {% endmacro %}
 
 
 {% macro attr_if(attr, value=none) %}
-  {%- if value == true and value|string == 'true' -%}
+  {%- if value == true and (value|string == 'true' or value|string == 'True') -%}
     {{ attr }}
   {%- elif value -%}
     {{ attr }}="{{ value }}"

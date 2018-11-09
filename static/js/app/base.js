@@ -189,3 +189,42 @@ export const initializeDynamicNav = function() {
     }
   });
 };
+
+export const initializeLogoFadeOnScroll = function() {
+  const logo = $('.no-hero');
+  if (logo.length) {
+    const $window = $(window);
+    const bannerLogo = $('.brand');
+    let opacity = 0;
+    let logoHeight, logoTopPadding;
+    const calculateSizes = () => {
+      logoHeight = logo.height();
+      logoTopPadding = (logo.outerHeight() - logoHeight) / 2;
+      logoHeight = logoHeight + logoTopPadding;
+    };
+    const updateOpacity = () => {
+      const scrolled = $window.scrollTop();
+      const newOpacity = Math.min(scrolled / logoHeight, 1);
+      if (newOpacity !== opacity) {
+        opacity = newOpacity;
+        bannerLogo.css('--opacity', opacity.toString());
+      }
+    };
+
+    calculateSizes();
+    updateOpacity();
+
+    $window.scroll(() => {
+      $.doTimeout('scroll', 5, () => {
+        updateOpacity();
+      });
+    });
+
+    $window.resize(() => {
+      $.doTimeout('resize', 100, () => {
+        calculateSizes();
+        updateOpacity();
+      });
+    });
+  }
+};

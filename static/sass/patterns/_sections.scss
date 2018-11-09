@@ -39,24 +39,12 @@
 }
 
 [divider-title='small'] {
-  background: color('background');
+  @include font-family('body');
+  @include invert;
+  clip-path: polygon(100% 0%, calc(100% - #{size('shim-plus')}) 50%, 100% 100%, 0 100%, #{size('shim-plus')} 50%, 0 0);
   display: inline-block;
-  margin: 0;
-  padding: 0 size('shim');
-  position: relative;
-  transform: translateY(-50%);
-
-  a {
-    #{$link} {
-      color: color('action-alt');
-      text-decoration: none;
-    }
-
-    #{$focus} {
-      color: color('action-hover');
-      text-decoration: underline;
-    }
-  }
+  margin: size('gutter') auto;
+  padding: size('half-shim') size('spacer');
 }
 
 

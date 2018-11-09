@@ -5,26 +5,26 @@
 // Link
 // ----
 /// Shortcut for `link` and `visited` pseudo-classes.
-/// @group typography
 /// @example scss
 ///   a {
 ///     #{$link} {
 ///       color: blue;
 ///     }
 ///   }
+/// @group typography
 $link: '&:link, &:visited';
 
 
 // Focus
 // -----
 /// Shortcut for `hover`, `focus`, and `active` pseudo-classes.
-/// @group typography
 /// @example scss
 ///   a {
 ///     #{$focus} {
 ///       color: red;
 ///     }
 ///   }
+/// @group typography
 $focus: '&:hover, &:focus, &:active';
 
 
@@ -41,11 +41,12 @@ $focus: '&:hover, &:focus, &:active';
   a {
     #{$link}  {
       color: color($contrast);
+      text-decoration-color: color($contrast, ('rgba': 0.25));
     }
 
     #{$focus} {
       color: color($hover);
-
+      text-decoration-color: currentColor;
     }
   }
 
@@ -53,6 +54,7 @@ $focus: '&:hover, &:focus, &:active';
     &,
     #{$link} {
       color: color($contrast);
+      text-decoration: none;
     }
 
     #{$focus} {

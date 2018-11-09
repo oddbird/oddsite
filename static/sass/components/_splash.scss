@@ -3,71 +3,75 @@
 
 
 .splash-section {
-  @include text-shadow;
-  align-items: stretch;
-  background-image: url('../images/wash-background.jpg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: auto 100%;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  justify-content: space-evenly; //sass-lint:disable-line no-duplicate-properties
-  margin-bottom: negative('double-gutter');
-  margin-top: negative('double-gutter');
-  padding: size('double-gutter') 0;
+  flex-direction: column;
 
   // clearfix breaking the layout…
   @include after(null) {
     display: none;
   }
+
+  @include above('splash-items') {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
 
 .splash-project,
 .splash-talk {
-  flex: 1 1 size('splash-items');
-  max-width: size('splash-items-max');
-  padding: size('shim');
+  margin: size('gutter');
+
+  @include above('#splash-items' ('times': 2)) {
+    width: size('splash-items');
+  }
 
   @include above('medium-page') {
-    padding: size('shim') size('double-gutter');
+    margin: size('shim') size('double-gutter');
   }
 }
 
-
-.splash-project {
-  display: grid;
-  grid-template-columns: 100%;
-  grid-template-rows: size('splash-logo-y') auto;
-}
-
-
 .splash-title {
+  @include font-family('alt');
+  font-size: inherit;
+  font-style: normal;
+  font-weight: bold;
   margin: 0;
 }
 
+.splash-brag {
+  p {
+    margin: 0;
+  }
+}
 
 .splash-logo {
   #{$link} {
     align-items: center;
-    align-self: center;
     color: color('caption');
     display: flex;
     justify-content: center;
     padding-bottom: size('shim');
     text-decoration: none;
-    transition: transform 300ms ease('ease-back'), fill 200ms ease;
+    transition: transform 300ms ease('ease-back'), color 200ms ease;
+    width: 100%;
+
+    @include before('') {
+      flex: 0 0 1px;
+      height: 0;
+      margin-left: -1px;
+      padding-top: percentage(340 / 907);
+    }
   }
 
   #{$focus} {
     color: color('action-hover');
-    transform: scale(1.1);
+    transform: scale(1.1) translate3d(0, 0, 0);
   }
 
   svg {
-    flex: 0 1 size('splash-logo-x');
-    height: size('splash-logo-y');
     margin: 0 auto;
     overflow: hidden;
+    width: 100%;
   }
 }

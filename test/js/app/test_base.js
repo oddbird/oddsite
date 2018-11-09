@@ -333,3 +333,68 @@ describe('initializeDynamicNav', function() {
     expect(this.toggleClose).not.to.have.been.called;
   });
 });
+
+describe('initializeLogoFadeOnScroll', function() {
+  beforeEach(function() {
+    this.logo = $('<div class="no-hero">').appendTo('body');
+    this.bannerLogo = $('<div class="brand">').appendTo('body');
+    sinon.stub($, 'doTimeout').callsArg(2);
+    sinon.spy($.fn, 'scroll');
+    sinon.spy($.fn, 'resize');
+    sinon.stub($.fn, 'height').returns(10);
+    sinon.stub($.fn, 'outerHeight').returns(20);
+    sinon.stub($.fn, 'scrollTop');
+    this.triggerScroll = scrollTop => {
+      $.fn.scrollTop.returns(scrollTop);
+      $.fn.scroll.args[0][0]();
+    };
+  });
+
+  afterEach(function() {
+    this.logo.remove();
+  });
+
+  after(function() {
+    $(window).off('scroll resize');
+  });
+
+  describe('scroll', function() {
+    it('updates opacity (if changed)', function() {
+      base.initializeLogoFadeOnScroll();
+      this.triggerScroll(0);
+
+      expect(this.bannerLogo).to.have.css('--opacity', '0');
+
+      this.triggerScroll(10);
+
+      expect(this.bannerLogo).to.have.css('--opacity', '0.666667');
+
+      this.triggerScroll(20);
+
+      expect(this.bannerLogo).to.have.css('--opacity', '1');
+    });
+
+    it('does update if no logo', function() {
+      this.logo.remove();
+      base.initializeLogoFadeOnScroll();
+
+      expect($.fn.scroll).not.to.have.been.called;
+    });
+
+    it('recalculates on window resize', function() {
+      base.initializeLogoFadeOnScroll();
+      this.triggerScroll(20);
+
+      expect(this.bannerLogo).to.have.css('--opacity', '1');
+
+      $.fn.outerHeight.returns(50);
+      this.triggerScroll(20);
+
+      expect(this.bannerLogo).to.have.css('--opacity', '1');
+
+      $.fn.resize.args[0][0]();
+
+      expect(this.bannerLogo).to.have.css('--opacity', '0.666667');
+    });
+  });
+});

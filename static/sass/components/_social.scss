@@ -2,20 +2,6 @@
 // ======
 
 .socials {
-  align-items: baseline;
-  display: flex;
-  flex-wrap: wrap;
-  font-size: size('social');
-  justify-content: space-between;
-  line-height: size('rhythm');
-
-  .media-content & {
-    display: grid;
-    grid-column-gap: size('shim');
-    grid-template-columns: repeat(auto-fill, minmax(auto, 14em));
-    justify-content: start;
-  }
-
   // override main ul spacing
   [data-region='main'] & {
     margin: 0;
@@ -23,11 +9,8 @@
   }
 
   .social-item {
-    display: inline;
+    display: inline-block;
     list-style: none;
-  }
-
-  [data-icon] {
-    padding: size('pixel'); // avoid social icons getting cropped
+    margin: 0 size('quarter-shim');
   }
 }

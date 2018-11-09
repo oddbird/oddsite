@@ -62,6 +62,10 @@
   @include square('bird-face');
 }
 
+[data-size='face-small'] {
+  @include square('bird-face-small');
+}
+
 [data-size='sig'] {
   height: size('bird-sig-height');
   width: size('bird-sig-width');

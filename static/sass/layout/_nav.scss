@@ -1,26 +1,12 @@
 // Site Navigation
 // ===============
 
-.nav {
-  position: relative;
-}
-
 .main-nav {
   display: flex;
-  justify-content: space-between;
-  margin: 0 auto size('half-shim');
-  max-width: calc(18rem + 15vw);
-  padding-left: size('half-shim');
-  padding-right: size('half-shim');
-  width: 100%;
-
-  @include above('small-page') {
-    margin-top: negative('gutter');
-
-    .is-dropdown {
-      padding-top: size('gutter');
-    }
-  }
+  flex: 1 0 auto;
+  font-size: size('small');
+  justify-content: center;
+  position: relative;
 
   @include below('small-page') {
     .has-dropdown {
@@ -28,38 +14,33 @@
     }
 
     .is-dropdown {
+      left: negative('half-shim');
       width: 100vw;
     }
   }
 
   .is-dropdown {
     @include z-index('nav-dropdown');
-    transform: translateY(size('shim'));
+  }
+
+  @include above('medium-page') {
+    font-size: inherit;
   }
 }
 
 
 .nav-item {
   display: inline-flex;
-
-  @include above('small-page') {
-    &:nth-of-type(2) {
-      flex-grow: 2;
-    }
-  }
 }
 
 
 // Shared base styles for links in navigation
 .nav-link {
-  color: color('action-alt');
-  font-weight: bold;
-  text-decoration: none;
-  white-space: nowrap;
-
+  &,
   #{$link} {
     color: color('action-alt');
     text-decoration: none;
+    white-space: nowrap;
   }
 
   #{$focus} {
@@ -70,14 +51,14 @@
 // Styles for main items outside the .nav-link base styles
 .nav-link-main {
   display: inline-block;
-  padding: size('half-shim');
+  padding: size('half-shim') size('shim');
 
   @include above('nav-medium') {
-    padding: size('half-shim')  size('shim');
+    margin: 0 size('half-shim');
   }
 
   @include above('nav-wide') {
-    padding: size('half-shim')  size('gutter');
+    margin: 0 size('shim');
   }
 
   &[aria-pressed='true'] {
@@ -89,7 +70,6 @@
 $nav-locations: (
   'case-studies': 'work',
   'open-source': 'work',
-  'blog': 'work',
 
   'planning': 'services',
   'development': 'services',
@@ -99,6 +79,7 @@ $nav-locations: (
   'birds': 'about',
   'community': 'about',
 
+  'blog': null,
   'contact': null,
 
   'susysite-sites': null,
@@ -113,6 +94,7 @@ $nav-locations: (
   [data-location='#{$location}'] {
     [data-active='#{$location}'],
     [data-active='#{$parent}'] {
+      color: color('action-hover');
       font-style: italic;
     }
   }
@@ -121,29 +103,5 @@ $nav-locations: (
 
 // OddBird link from sub-sites
 [data-active='oddbird'] {
-  #{$link} {
-    border: 1px solid;
-    border-radius: size('border-radius');
-    color: color('action');
-    font-weight: bold;
-    text-decoration: none;
-    transition: color 150ms, background-color 150ms;
-  }
-
-  #{$focus} {
-    background-color: color('action');
-    color: color('background');
-
-    &::after {
-      transform: translateX(size('half-shim'));
-    }
-  }
-
-  @include after('»') {
-    font-weight: normal;
-    padding-left: size('half-shim');
-    transition: transform 250ms;
-  }
+  @include after('»');
 }
-
-

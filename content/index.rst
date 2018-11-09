@@ -1,164 +1,124 @@
 public: yes
 location: home
+headline:
+  - type: 'Custom Web App Design & Development'
 grid_template: true
 dynamic_title:
-  - template: 'Oddly %s software development'
+  - template: 'Oddly %s'
     options:
       - name: 'accessible'
         tagline: |
           The world is diverse,
-          and no user is an "edge case"...
+          & no user is an "edge case"
+      - name: 'approachable'
+        tagline: |
+          Your friend in digital
+          design, development, & performance
+        default: true
       - name: 'human'
         tagline: |
-          Great software requires a personal touch...
+          Great software requires a personal touch
       - name: 'nimble'
         tagline: |
           Our tightly-integrated team
-          can adapt quickly to your needs...
+          can adapt quickly to your needs
       - name: 'queer'
         tagline: |
           Moving past "normal"
-          to explore new possibilities...
+          to explore new possibilities
       - name: 'robust'
         tagline: |
-          100% test coverage,
-          code review,
-          and documentation keep maintenance costs low...
+          100% test coverage
+          & documentation keep maintenance costs low
       - name: 'thoughtful'
         tagline: |
           We don't know the answer,
-          but we know how to get there...
-        default: true
+          but we know how to get there
       - name: 'top-shelf'
         tagline: |
           We build the tools
-          that millions of developers rely on...
+          that millions of developers rely on
       - name: 'transparent'
         tagline: |
           Daily communication keeps you in control
-          of the budget and priorities...
+          of budget & priorities
 
 
 Software for Humans
 ===================
 
 .. callmacro:: home.macros.j2#letter
+  :image: '/static/images/pages/letter-phones.jpg'
+  :alt: 'Two phones showing samples of applications that OddBird built for clients: CoachHub & Quarq Race Intelligence'
   :author: 'miriam'
-  :action: 'Open the conversation'
-  :target: '/contact/'
 
-  I co-founded OddBird with my brothers
-  `Jonny`_ and `Carl`_ in 2008,
-  providing custom web & mobile application development.
+  I co-founded OddBird with my brothers in 2008
+  to help you create **scalable**,
+  **accessible**, and **performant web applications**
+  with a **human-centered design**.
 
-  .. _Carl: /authors/carl/
-  .. _Jonny: /authors/jonny/
-
-  While we've quickly become industry leaders --
-  creators and core developers of tools
-  like `Susy`_ & `Django`_
-  that larger agencies rely on --
-  we intentionally keep our team small.
-  Our size allows us to move quickly
-  and integrate with your team
-  for an agile and collaborative process.
-  Together, we can build software
-  that reflects your unique vision and expertise.
-
-  .. _Susy: /susy/
-  .. _Django: /open-source/
-
-  - **Because we're small**,
-    you get direct access to our entire
-    `team of designers & developers`_,
-    with full transparency and daily communication.
-  - **Because we're experts**,
-    we can guide you smoothly through the `entire process`_,
-    navigating issues before they arise.
-  - **Because we integrate** `design and code and content`_,
-    our software is built to last,
-    keeping your maintenance costs low.
-
-  .. _`team of designers & developers`: /birds/
-  .. _entire process: /services/planning/
-  .. _design and code and content: /services/
-
-  We know you have options,
-  and we'd love to talk more.
-  **We think you'll be happy with the results.**
-
-.. callmacro:: content.macros.j2#get_quotes
-  :page: 'work/coachhub'
-  :slug: 'remote'
-
-.. callmacro:: projects/splash.macros.j2#splash_list
-  :headline: 'Featured Projects'
-  :url: '/work/'
-
-.. callmacro:: content.macros.j2#divider
-  :title: 'Human-Driven Design'
-
-.. callmacro:: birds/macros.j2#home_faces
-  :authors: ['carl', 'kit', 'stacy', 'miriam', 'sondra', 'jonny']
-
-.. callmacro:: content.macros.j2#image_block
-  :image: '/static/images/projects/trig-mobile.jpg'
-  :headline: 'Are We The Right Fit For You?'
-
-  **Software is successful
-  when it solves real problems in people's lives.**
-  We can help you find those solutions --
-  with 100% test coverage,
-  robust architecture,
-  and living style guides.
-  *Enjoy low on-going maintenance,
-  and significant savings for years.*
+  From custom builds to consulting and refactors:
+  we'll provide an established team of experts to fit your needs.
+  Our well-tested and documented code will keep
+  **maintenance costs low, for significant long-term savings**.
+  We think you’ll be happy with the results.
 
   .. callmacro:: content.macros.j2#link_button
     :url: '/contact/'
 
-    Start the conversation
+    Let's talk about your project
 
-.. callmacro:: content.macros.j2#get_quotes
-  :page: 'work/coachhub'
-  :slug: 'handoff'
+.. callmacro:: content.macros.j2#two_quotes
+  :quotes: [
+      ['work/coachhub', 'remote'],
+      ['work/medcurbside', 'goals'],
+    ]
 
-.. callmacro:: content.macros.j2#divider
+.. callmacro:: projects/splash.macros.j2#splash_list
+  :headline: 'Industries We Serve'
+  :url: '/work/'
 
-.. callmacro:: content.macros.j2#get_quotes
-  :page: 'work/medcurbside'
-  :slug: 'goals'
+.. callmacro:: birds/macros.j2#home_faces
+  :authors: ['carl', 'kit', 'stacy', 'miriam', 'sondra', 'jonny']
+
+.. callmacro:: content.macros.j2#two_quotes
+  :quotes: [
+      ['work/timedesigner', 'innovative'],
+      ['work/coachhub', 'handoff'],
+    ]
 
 .. callmacro:: content.macros.j2#image_block
   :image: '/static/images/pages/jssass.png'
+  :alt: 'Jump Start Sass: a beginners guide from SitePoint, written by Miriam Suzanne & Hugo Giraudel'
   :url: 'https://www.sitepoint.com/premium/books/jump-start-sass'
-  :headline: 'Industry-Leading Expertise'
+  :headline: 'Performant Python, JavaScript, & CSS'
 
-  **We write the books,
+  We write the books,
   contribute to the languages,
-  and build the tools**
+  and build the tools
   that other developers rely on.
-  With expertise in
-  Python/Django, accessible HTML, modern Sass/CSS,
-  Vue, Node, Backbone/Marionette, and more --
+  Let's create a
+  **custom digital experience
+  that delights** your customers.
+
+  **Language & Platform Expertise**:
+
+  - Python/Django
+  - Sass/CSS
+  - Vue & React
+  - Backbone/Marionette
+  - Node
+  - WordPress & Other CMS solutions
+
   *We don't just follow best-practice,
   we help define it.*
-
-  .. _Miriam: /authors/miriam/
-  .. _Carl: /authors/carl/
-  .. _Sass/CSS: http://sass-lang.com
-  .. _Django/Python: https://www.djangoproject.com/
 
   .. callmacro:: content.macros.j2#link_button
     :url: '/contact/'
 
     Jump start your project
 
-.. callmacro:: content.macros.j2#get_quotes
-  :page: 'work/timedesigner'
-  :slug: 'innovative'
-
 .. callmacro:: projects/splash.macros.j2#splash_list
-  :headline: 'Tools for Developers'
+  :headline: 'Developer Tools We Build'
   :url: '/open-source/'
   :slugs: ['herman/index', 'open-source/django', 'susy/index']

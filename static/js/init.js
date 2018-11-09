@@ -1,7 +1,12 @@
-import { initializeToggles, initializeDynamicNav } from 'app/base';
+import {
+  initializeToggles,
+  initializeDynamicNav,
+  initializeLogoFadeOnScroll,
+} from 'app/base';
 
 $(() => {
   window.$ = $;
   initializeToggles();
   initializeDynamicNav();
+  initializeLogoFadeOnScroll();
 });

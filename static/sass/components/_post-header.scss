@@ -11,6 +11,17 @@
     margin-bottom: 0;
     margin-top: 0;
   }
+
+  .no-hero + & {
+    @include center;
+    max-width: size('medium-page');
+
+    .title-post-type {
+      $bleed: get-extend-calc('extend-full');
+      margin-left: $bleed;
+      padding-left: calc(#{$bleed} * -1);
+    }
+  }
 }
 
 .header-actions {
@@ -21,13 +32,13 @@
 
 .title-post-type {
   background-color: color('invert');
-  clip-path: polygon(100% 0%, calc(100% - 0.5rem) 50%, 100% 100%, 0 100%, 0% 50%, 0 0);
+  clip-path: polygon(100% 0%, calc(100% - #{size('shim-plus')}) 50%, 100% 100%, 0 100%, 0 0);
   color: color('background');
   display: inline-block;
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: bold;
   margin-left: negative('gutter');
-  padding: size('quarter-shim') size('gutter');
+  padding: size('half-shim') size('double-gutter') size('half-shim')  size('gutter');
   text-shadow: none;
 }
 
@@ -69,5 +80,70 @@
 
   .h-card {
     margin-bottom: size('gutter');
+  }
+}
+
+
+// Dynamic Titles
+// --------------
+
+.title-select {
+  display: inline-block;
+
+  .is-dropdown {
+    transform: translateY(size('border-thin'));
+    width: size('dropdown-narrow');
+
+    @include above('nav-wide') {
+      width: size('dropdown-wide');
+    }
+  }
+}
+
+.title-current {
+  color: color('action');
+  transition: all 300ms ease-in-out;
+
+  #{$focus} {
+    color: color('action-hover');
+  }
+}
+
+[name='title-option'] {
+  @include is-hidden;
+
+  &:checked {
+    ~ .dropdown-item {
+      font-style: italic;
+    }
+  }
+
+  &:focus {
+    ~ .dropdown-item {
+      color: color('action');
+    }
+  }
+}
+
+.tagline-option {
+  // float "isolation" keeps container height consistent…
+  float: left;
+  margin-right: -200%;
+  opacity: 0;
+  pointer-events: none;
+  position: relative;
+  transform: translate3d(0, -100%, 0);
+  transition: opacity 200ms ease-in-out, transform 300ms ease-in-out;
+  width: 100%;
+
+  &.is-active {
+    opacity: 1;
+    pointer-events: initial;
+    transform: translate3d(0, 0, 0);
+    transition: opacity 200ms 100ms ease-in-out, transform 300ms ease-in-out;
+
+    ~ .tagline-option {
+      transform: translate3d(0, 100%, 0);
+    }
   }
 }

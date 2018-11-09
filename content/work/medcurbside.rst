@@ -24,6 +24,7 @@ quotes:
       I defer to the team expertise now,
       which makes a better result.
     name: 'Rohit Puranik'
+    face: 'rohit-puranik.jpg'
     role: 'Founder'
     slug: 'goals'
   - text: |
@@ -31,6 +32,7 @@ quotes:
       **They were curious and asked detailed questions
       to really understand what was needed.**
     name: 'Rohit Puranik'
+    face: 'rohit-puranik.jpg'
     role: 'Founder'
     slug: 'curious'
 summary: |

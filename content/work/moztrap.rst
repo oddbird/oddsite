@@ -8,7 +8,8 @@ client:
     url: 'https://www.mozilla.org/'
 project:
   - name: 'MozTrap'
-    tagline: 'Ditributed Quality Assurance Tools'
+    industry: 'Enterprise Technology'
+    tagline: 'Distributed Quality Assurance Tools'
     source: 'https://github.com/mozilla/moztrap'
     years: '2011–2012'
     status: 'dead'

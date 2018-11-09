@@ -1,83 +1,79 @@
 // Blockquotes
 // ===========
 
-$quote-circle: calc(1.5rem + 2vw);
+$quote-circle: calc(2rem + 2vw);
 $quote-circle-type: calc(5rem + 2vw);
+
+[data-quote-section] {
+  margin-bottom: size('spacer');
+  margin-top: size('spacer');
+}
+
+[data-quote-section=''] {
+  @include center('small-page');
+}
+
+[data-quote-section='two-up'] {
+  @include extend('extend-small');
+  @include center('medium-page');
+  align-items: start;
+  display: grid;
+  grid-column-gap: size('double-gutter');
+  grid-template-columns: repeat(auto-fit, minmax(size('quote-items'), 1fr));
+
+  .pullquote,
+  blockquote {
+    justify-self: center;
+    max-width: size('small-page');
+
+    &:nth-child(odd) {
+      &:last-child {
+        grid-column: 1 / -1;
+      }
+    }
+  }
+
+  // clearfix breaking the layout…
+  [data-module='rst-body'] & {
+    @include after(null) {
+      display: none;
+    }
+  }
+}
 
 .pullquote,
 blockquote {
-  @include extend('extend-small');
-  font-size: calc(1.125rem + 0.5vw);
-  font-style: italic;
   margin-bottom: size('gutter');
   margin-top: size('gutter');
-  position: relative;
 
-
-  &[data-quote-section] {
-    @include center('medium-page');
-    margin-bottom: size('spacer');
-    margin-top: size('spacer');
-  }
-
-  @include above('medium-page') {
-    @include grid;
-  }
-
-  @include before('“') {
-    @include font-family('alt');
-    background-color: color('quote');
+  .media-image {
+    @include square($quote-circle);
     border-radius: 50%;
-    color: color('background');
-    font-size: $quote-circle-type;
-    font-style: normal;
-    height: $quote-circle;
-    line-height: 0.8;
-    position: relative;
-    text-align: right;
-    width: $quote-circle;
 
-    @include below('medium-page') {
-      @include center;
-      display: block;
-    }
-
-    @include above('medium-page') {
-      height: $quote-circle;
-      margin-right: size('shim');
-      width: $quote-circle;
-
-      @supports not (display: grid) {
-        margin-left: 0;
-        position: absolute;
-      }
-
-      @supports (display: grid) {
-        grid-column: col1-start;
-      }
+    &:not(img) {
+      @include before('“');
+      @include font-family('alt');
+      background-color: color('quote');
+      color: color('background');
+      font-size: $quote-circle-type;
+      font-style: normal;
+      line-height: 0.8;
+      text-align: right;
     }
   }
 
-  .attribution,
   p {
-    @include above('medium-page') {
-      margin-top: 0;
-
-      @supports not (display: grid) {
-        margin-left: auto;
-        margin-right: 0;
-        max-width: size('wide-column');
-      }
-
-      @supports (display: grid) {
-        grid-column: col2-start / -1;
-      }
-    }
+    @include wrap-content;
+    text-indent: -0.4em;
   }
+}
 
-  .attribution {
-    font-size: 1rem;
+.attribution {
+  font-size: 1rem;
+  margin-bottom: 0;
+
+  b {
     font-style: normal;
-    margin-bottom: 0;
+    font-weight: normal;
   }
 }

@@ -12,29 +12,23 @@ social:
   - icon: 'twitter'
     text: '@OddBird'
     url: 'http://twitter.com/oddbird'
-    after: 'on Twitter'
   - icon: 'slack'
-    text: 'OddBird Friends'
+    text: 'OddFriends'
     url: 'http://friends.oddbird.net/'
-    after: 'public Slack'
   - icon: 'mail'
-    text: 'birds@oddbird.net'
+    text: 'Email'
     url: 'mailto:birds@oddbird.net'
-    after: 'by Email'
 cta_footer:
-  - title: 'Start the conversation…'
+  - title: 'Ask us anything.'
     project_title: 'Partner with OddBird on Your Next Project'
     contact: 'miriam'
     action:
       text: 'Schedule a call with %s'
       url: '/contact/'
     content: |
-      **Interested in a chat with %s to find out more?**
-      Ask us anything;
-      we're happy to answer your questions,
-      big or small.
-      If your business is a good fit,
-      we'll offer a free in-depth project assessment!
+      We’re happy to answer your questions, big or small.
+      If we’re a good fit for your custom web project,
+      we’ll offer a free in-depth assessment!
 summary: |
   .. wrap:: div
     :class: contact-intro

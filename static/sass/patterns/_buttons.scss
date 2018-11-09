@@ -23,6 +23,7 @@
   #{$link} {
     @include font-family('alt');
     align-items: center;
+    background-clip: padding-box;
     border: 1px solid;
     border-radius: size('border-radius');
     display: inline-flex;
@@ -41,8 +42,7 @@
 
   #{$focus},
   &[aria-pressed='true'] {
-    background-color: color('action');
-    color: color('background');
+    @include contrasted('action');
 
     &::after {
       transform: translateX(size('quarter-shim'));

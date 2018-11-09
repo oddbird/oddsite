@@ -39,11 +39,15 @@
 ) %}
   {% set scale = 'small' if small else 'large' %}
   <div divider="{{ scale }}">
-    <hr divider-line="{{ scale }}" />
     {% if title %}
+      {% if scale != 'small' %}
+        <hr divider-line="{{ scale }}" />
+      {% endif %}
       <h2 divider-title="{{ scale }}">
         {{ utility.link_if(title, url) }}
       </h2>
+    {% else %}
+      <hr divider-line="{{ scale }}" />
     {% endif %}
   </div>
 {% endmacro %}
@@ -114,24 +118,38 @@
   name=none,
   url=none,
   role=none,
+  face=none,
   section=true
 ) %}
   {% set content = content if (content != none) else caller() %}
 
-  <blockquote {{ utility.attr_if('data-quote-section', section) }}>
-    {{ content|rst }}
+  <blockquote data-media-block="start" {{ utility.attr_if('data-quote-section', section) }}>
+    {# @@@ Get permission for faces #}
+    {# {% if face %}
+      {{ utility.img(
+        src='/static/images/quotes/%s' % face,
+        alt='%s headshot' % name, class='media-image',
+        class='media-image'
+      ) }}
+    {% else %} #}
+      <span class="media-image"></span>
+    {# {% endif %} #}
 
-    {% if name or url or role %}
-      <footer class="attribution">
-      <cite>
-        {% set display_name = name if role else utility.link_if(name, url) %}
-        —{{ display_name }}
-        {%- if role -%},
-          <b>{{ utility.link_if(role, url) }}</b>
-        {%- endif -%}
-      </cite>
-      </footer>
-    {% endif %}
+    <div class="media-content">
+      {{ content|rst }}
+
+      {% if name or url or role %}
+        <footer class="attribution">
+        <cite>
+          {% set display_name = name if role else utility.link_if(name, url) %}
+          —{{ display_name }}
+          {%- if role -%},
+            <b>{{ utility.link_if(role, url) }}</b>
+          {%- endif -%}
+        </cite>
+        </footer>
+      {% endif %}
+    </div>
   </blockquote>
 {% endmacro %}
 
@@ -142,8 +160,9 @@
 ) %}
   {% set content = content if (content != none) else caller() %}
 
-  <div class="pullquote" {{ utility.attr_if('data-quote-section', section) }}>
-    {{ content|rst }}
+  <div class="pullquote" data-media-block="start" {{ utility.attr_if('data-quote-section', section) }}>
+    <span class="media-image"></span>
+    <div class="media-content">{{ content|rst }}</div>
   </div>
 {% endmacro %}
 
@@ -151,7 +170,8 @@
 {% macro get_quotes(
   page,
   slug=none,
-  count=none
+  count=none,
+  section=true
 ) %}
   {% set page = page|get_config or page %}
   {% set client = page.config.client[0] if page.config.client else none %}
@@ -160,16 +180,35 @@
     {% set quote = page.config.quotes|selectattr('slug', 'equalto', slug)|list %}
     {% set quote = quote[0] %}
     {% set role = get_role(quote.role, client.name) %}
-    {{ blockquote(quote.text, quote.name, quote.url, role) }}
+    {{ blockquote(quote.text, quote.name, quote.url, role, quote.face, section) }}
   {% else %}
+    {% set two_up = (page.config.quotes|length > 1) %}
+    {% set section = false if two_up else section %}
+
+    {% if two_up %}<section data-quote-section="two-up">{% endif %}
+
     {% for quote in page.config.quotes %}
       {% if (count == none) or (loop.index0 < count) %}
         {% set role = get_role(quote.role, client.name) %}
-        {{ blockquote(quote.text, quote.name, quote.url, role) }}
+        {{ blockquote(quote.text, quote.name, quote.url, role, quote.face, section) }}
       {% endif %}
     {% endfor %}
+
+    {% if two_up %}</section>{% endif %}
   {% endif %}
 {% endmacro %}
+
+
+{% macro two_quotes(
+  quotes
+) %}
+  <section data-quote-section="two-up">
+    {% for quote in quotes %}
+      {{ get_quotes(quote[0], quote[1], section=false) }}
+    {% endfor %}
+  </section>
+{% endmacro %}
+
 
 
 {% macro get_role(role=none, client=none) -%}
@@ -206,7 +245,11 @@
       <figure class="{{ class }}" {{ utility.attr_if('style', style) }}>
         {% for item in data %}
           {% set img = item.image if ('://' in item.image) else ['/static/images/', item.image]|join %}
-          {% set img = '<img src="' + img + '" alt="' + item.alt + '" class="gallery-image" />' %}
+          {% set img = utility.img(
+            src=img,
+            alt=item.alt,
+            class='gallery-image'
+          ) %}
 
           <div class="gallery-item">
             {{ utility.link_if(img|safe, item.target, 'gallery-link') }}
@@ -237,30 +280,36 @@
   alt='',
   headline=none,
   url=none,
-  content=none
+  content=none,
+  class=none,
+  do_rst=true
 ) %}
   {% set content = content if (content != none) else caller() %}
 
   {% call rst(safe=true) %}
     <div class="image-block extend-left">
-      {% set img = '<img src="' + image + '" alt="' + alt + '" class="imageblock-image" />' %}
+      {% set img = utility.img(image, alt, class='imageblock-image') %}
       {{ utility.link_if(img|safe, url, 'imageblock-link') }}
 
-      <div class="imageblock-content">
+      <div class="imageblock-content {{ class }}">
         {% if headline %}
           <h2 class="imageblock-title">{{ headline }}</h2>
         {% endif %}
-        {{ content|rst }}
+        {{ content|rst if do_rst else content }}
       </div>
     </div>
   {% endcall %}
 {% endmacro %}
 
 
-{% macro media_block(media, content=none) %}
+{% macro media_block(
+  media,
+  content=none,
+  align='center'
+) %}
   {% set content = content if (content != none) else caller() %}
 
-  <div class="media-block">
+  <div data-media-block="{{ align }}">
     <div class="media-image">{{ media|safe }}</div>
     <div class="media-content">{{ content|safe }}</div>
   </div>

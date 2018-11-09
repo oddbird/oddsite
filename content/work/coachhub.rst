@@ -8,6 +8,7 @@ client:
     url: 'http://orcasinc.com'
 project:
   - name: 'CoachHub'
+    industry: 'Wellness & Medical'
     tagline: 'Integrated Health Coaching'
     url: 'https://coachhub.resilienceboost.com/'
     case_study: true
@@ -24,8 +25,8 @@ tasks:
   - User Experience Design
   - WCAG & HIPPA Compliant
 brag: |
-  Online platform for health coaches,
-  now used by the **US Coast Guard**
+  Responsive platform for health coaches,
+  used by the **US Coast Guard**
   and **National Institutes of Health**.
 quotes:
   - text: |
@@ -35,6 +36,7 @@ quotes:
       **ready to start adding value immediately**,
       working as closely as an internal team.
     name: 'Sara Taillon'
+    face: 'sara-taillon.jpg'
     role: 'CTO'
     slug: 'remote'
   - text: |
@@ -43,6 +45,7 @@ quotes:
       For example, 100% unit test coverage was a given.
       I never had to ask for it.
     name: 'Sara Taillon'
+    face: 'sara-taillon.jpg'
     role: 'CTO'
     slug: 'handoff'
   - text: |
@@ -50,6 +53,7 @@ quotes:
       combined with **incredible communication**
       and an easy-going style.
     name: 'Sara Taillon'
+    face: 'sara-taillon.jpg'
     role: 'CTO'
     slug: 'experts'
 planning:

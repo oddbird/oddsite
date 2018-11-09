@@ -1,17 +1,95 @@
 // Banner Layout
 // =============
 
-
 [data-region='banner'] {
-  margin-top: size('gutter');
-  text-align: center;
+  @include z-index('banner');
+  align-items: center;
+  background: color('overlay');
+  border-bottom: 1px solid color('border-light');
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: size('quarter-shim') size('half-shim');
+  position: relative;
+  top: 0;
+
+  @include above('small-page') {
+    padding: size('quarter-shim') size('shim');
+    position: sticky;
+  }
+
+  @include above('medium-page') {
+    padding: size('quarter-shim') size('gutter');
+  }
 }
 
+.banner-contact {
+  #{$link} {
+    flex: 0 0 auto;
+    padding: size('quarter-shim') size('half-shim');
+    white-space: nowrap;
+
+    @include above('medium-page') {
+      padding: size('quarter-shim') size('shim');
+    }
+  }
+
+  @include below('small-page') {
+    @include after(initial);
+  }
+
+  .banner-contact-text,
+  &::after {
+    transform: translateY(-2px); // magic number for centering text with icon
+  }
+}
+
+.banner-contact-text {
+  display: inline-block;
+  margin-left: size('quarter-shim');
+
+  @include below('small-page') {
+    @include is-hidden;
+  }
+}
 
 // Brand
 // -----
 .brand {
-  margin: 0 auto; // @@@ bottom: negative('rhythm') * 1.5
+  align-self: flex-start;
+  filter: drop-shadow(1px 1px 0 color('background'));
+  flex: 1 1 100%;
+  order: 2;
+  text-align: center;
+
+  @include above('small-page') {
+    flex: 0 1 auto;
+    margin-bottom: negative('rhythm');
+    order: initial;
+  }
+
+  [data-hero='no'] & {
+    #{--opacity}: 0; // default is hidden
+    #{--translate}: calc(50% - var(--opacity, 1) * 50%); // sass-lint:disable-line no-duplicate-properties
+    opacity: 1; // non-variable fallback is visible
+    opacity: var(--opacity, 0); // sass-lint:disable-line no-duplicate-properties
+    transition: opacity 150ms ease-in-out;
+
+    #{$focus} {
+      #{--translate}: 1;
+      opacity: 1;
+    }
+
+    [data-icon] {
+      pointer-events: none;
+      transform: translateY(var(--translate, 0));
+      transition: transform 200ms ease-in-out;
+    }
+
+    @include below('small-page') {
+      @include is-hidden;
+    }
+  }
 }
 
 .logo-link {
@@ -23,7 +101,7 @@
   }
 
   #{$focus} {
-    color: color('brand-orange');
+    color: color('action-hover');
   }
 
   [data-location*='susysite'] & {
@@ -47,59 +125,16 @@
   }
 }
 
-
 // Logo
 // ----
-@keyframes draw-logo {
-  to {
-    stroke-dashoffset: 0;
-  }
-}
-
-@keyframes fill-logo {
-  from {
-    fill-opacity: 0;
-  }
-
-  to {
-    fill-opacity: 1;
-  }
-}
-
-@keyframes fade-logo-outline {
-  to {
-    stroke-width: 0;
-  }
-}
 
 .logo-icon {
   height: size('logo-y');
+  margin-bottom: negative('shim-plus');
   width: auto;
 
-  [data-location='home'] &,
-  [data-location='susysite'] & ,
+  [data-location='susysite'] &,
   [data-location='hermansite'] & {
-    animation: draw-logo 3s 1 ease-out both, fill-logo 3s 2s 1 ease-in-out both, fade-logo-outline 2s 2s 1 ease-in-out both;
-  }
-
-  [data-location='home'] & {
-    stroke: color('brand-orange');
-    stroke-dasharray: 500;
-    stroke-dashoffset: 500;
-    stroke-width: 1;
-  }
-
-  [data-location='susysite'] & {
-    stroke: color('brand-pink');
-    stroke-dasharray: 5000;
-    stroke-dashoffset: 5000;
-    stroke-width: 10;
-  }
-
-  [data-location='hermansite'] & {
-    stroke: color('action-hover');
-    stroke-dasharray: 5000;
-    stroke-dashoffset: 5000;
-    stroke-width: 10;
+    height: size('alt-logo-y');
   }
 }

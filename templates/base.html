@@ -101,7 +101,9 @@
 
 <body
   id="oddsite"
-  data-location="{% block location %}home{% endblock %}">
+  data-location="{% block location %}home{% endblock %}"
+  data-hero="{% block has_image %}{{ 'yes' if config.image else 'no' }}{% endblock %}"
+>
   {% include '_icons.svg' %}
 
   {% block layout %}{% endblock layout %}

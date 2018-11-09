@@ -3,37 +3,40 @@
 {% import 'utility.macros.j2' as utility %}
 {% import 'content.macros.j2' as content %}
 {% import 'layout/macros.j2' as layout %}
+{% import 'contact/macros.j2' as contact %}
 
 {% block layout %}
+
   <header data-region="banner">
-    <nav class="nav">
-      <div class="brand">
-        {% block banner_logo %}
-          <a href="/" rel="home" class="logo-link">
-            {{ utility.icon('logo', alt='OddBird', class='logo-icon') }}
-          </a>
-        {% endblock %}
-      </div>
-
-      {% block banner_nav %}
-        {{ layout.main_nav(config.nav) }}
+    <div class="brand">
+      {% block banner_logo %}
+        <a href="/" rel="home" class="logo-link">
+          {{ utility.icon('logo', alt='OddBird', class='logo-icon') }}
+        </a>
       {% endblock %}
-    </nav>
+    </div>
 
-    {{ content.divider(small=false) }}
+    {% block banner_nav %}
+      {{ layout.main_nav(config.nav) }}
+    {% endblock %}
+
+    {% call content.link_button('/contact/', class='banner-contact') %}
+      {{ utility.icon('mail') }}
+      <span class="banner-contact-text">contact us</span>
+    {% endcall %}
   </header>
 
   <main
     data-region="main"
     {{ utility.attr_if('class', config.pageclasses) }}
-    data-hero="{% block has_image %}{{ 'yes' if config.image else 'no' }}{% endblock %}">
+  >
     {% block body %}{% endblock body %}
 
     {% include 'contact/_cta.html.j2' %}
   </main>
 
   <footer data-region="footer">
-    {% block footer %}
+      {{ contact.social() }}
       <p class="h-card">
         Copyright &copy; {{ config.copyright }}
         <a href="/" class="p-name u-url">OddBird</a>
@@ -41,6 +44,5 @@
         Established in 2008 by three odd siblings.
         <a href="/conduct/">Code of Conduct</a>
       </p>
-    {% endblock %}
   </footer>
 {% endblock %}

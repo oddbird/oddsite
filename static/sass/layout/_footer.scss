@@ -4,9 +4,16 @@
 
 [data-region='footer'] {
   @include font-family('alt');
-  font-size: size('xsmall');
-  margin: 0 auto;
-  max-width: size('full-content');
+  align-items: baseline;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  font-size: size('social');
+  justify-content: space-between;
+  line-height: size('rhythm');
   padding: size('gutter');
-  text-align: center;
+
+  @include above('medium-page') {
+    flex-direction: row-reverse;
+  }
 }

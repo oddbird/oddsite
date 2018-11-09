@@ -3,31 +3,38 @@
 {% import 'utility.macros.j2' as utility %}
 
 {% macro letter(
-  author,
-  action,
-  target
+  image,
+  alt='',
+  author='miriam'
 ) %}
-  <article class="splash-letter">
-    <div class="letter-face">
-      {{ utility.icon(author, size='face') }}
-    </div>
-    <div class="letter-body">
-      <div class="letter-text">
-        <p class="letter-greeting">
-          {% set first_name = birds.name_link(author, full_name=false) %}
-          {{ ["Hi, I’m", first_name, '—']|join(' ') }}
-        </p>
-        {{ caller()|rst }}
-      </div>
-      <footer class="letter-sig">
-        {{ utility.icon([author, 'sig']|join('-'), size='sig') }}
-        {{ birds.get_card(author) }}
-      </footer>
-      {{ content.link_button(
-        url=target,
-        content=action,
-        class='letter-action'
-      ) }}
-    </div>
-  </article>
+  {{ content.image_block(
+    image=image,
+    headline=letter_hello(author),
+    content=caller()|rst + letter_sig(author),
+    class='home-letter',
+    do_rst=false
+  ) }}
+{% endmacro %}
+
+
+{% macro letter_sig(
+  author='miriam'
+) %}
+  <div class='letter-sig'>
+    {{ utility.icon([author, 'sig']|join('-'), size='sig') }}
+    <span class='h-card'>{{ birds.get_bird_name(author) }}</span>
+  </div>
+{% endmacro %}
+
+
+{% macro letter_hello(
+  author='miriam'
+) %}
+  <span data-media-block>
+    {{ utility.icon(author, size='face-small', class='letter-face') }}
+    <span class="letter-hello">
+      Hi, I’m
+      {{ author|capitalize }} —
+    </span>
+  </span>
 {% endmacro %}

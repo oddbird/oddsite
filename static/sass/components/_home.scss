@@ -1,111 +1,24 @@
 // Home Page
 // =========
 
-.splash-letter {
-  display: flex;
-  justify-content: center;
-  margin: size('double-gutter') auto;
-
-  @include above('small-page') {
-    display: grid;
-    grid-template-columns: auto minmax(0, size('full-content')) var(--last-col, 0);
-  }
-
-  @include above('medium-page') {
-    #{--last-col}: minmax(0, size('bird-face'));
-    padding-right: size('gutter');
-  }
-}
-
 .letter-face {
-  display: none;
-  flex: 0 0 auto;
-  padding-right: size('shim');
-
-  @include above('small-page') {
-    display: block;
-  }
-}
-
-.letter-body {
-  align-items: flex-end;
-  background: color('background');
-  border-radius: size('shim');
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  max-width: size('full-content');
-  padding: size('double-gutter');
-  position: relative;
-
-  @include after(' ') {
-    @include position(45% 0 0 50%);
-    border-radius: size('shim');
-    box-shadow: 0 0 size('half-shim') color('caption');
-    z-index: -1;
-  }
-}
-
-.letter-greeting {
-  font-size: size('intro-text');
-  font-style: italic;
-  font-weight: bold;
-}
-
-.letter-text {
-  flex: 1 1 100%;
-
-  p {
-    margin-top: 0;
-  }
-
-  ul {
-    margin-left: negative('gutter');
-  }
-
-  li {
-    margin-bottom: size('half-shim');
-  }
-
-  a {
-    #{$link} {
-      font-style: italic;
-    }
-  }
-
-  @include before(' ') {
-    @include position(0 50% 55% 0);
-    border-radius: size('shim');
-    box-shadow: 0 0 size('half-shim') color('caption');
-    z-index: -1;
-  }
-
-  @include above('small-page') {
-    @include after(' ') {
-      @include position(size('double-gutter') 100% null null);
-      border: size('shim') solid transparent;
-      border-right-color: color('background');
-      filter: drop-shadow(0 0 size('quarter-shim') color('caption'));
-      z-index: -1;
-    }
-  }
+  margin-left: negative('shim-plus');
 }
 
 .letter-sig {
   display: flex;
-  flex: 0 0 auto;
   flex-direction: column;
   margin-bottom: size('gutter');
 
   [data-icon] {
     pointer-events: none;
-    transform: translate3d(-25%, size('shim-plus'), 0);
+    transform: translate3d(-5%, size('shim-plus'), 0);
   }
-}
 
-.letter-action {
-  flex: 0 0 auto;
-  margin-bottom: size('shim-plus');
+  .h-card {
+    display: inline-block;
+    margin-left: size('double-gutter');
+  }
 }
 
 
