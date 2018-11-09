@@ -37,6 +37,11 @@
   @include below('small-page') {
     @include after(initial);
   }
+
+  .banner-contact-text,
+  &::after {
+    transform: translateY(-2px); // magic number for centering text with icon
+  }
 }
 
 .banner-contact-text {
@@ -76,6 +81,7 @@
     }
 
     [data-icon] {
+      pointer-events: none;
       transform: translateY(var(--translate, 0));
       transition: transform 200ms ease-in-out;
     }
