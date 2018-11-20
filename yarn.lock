@@ -823,10 +823,10 @@ accepts@~1.3.4:
     mime-types "~2.1.18"
     negotiator "0.6.1"
 
-accoutrement@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/accoutrement/-/accoutrement-1.0.1.tgz#bb72d9c31d001632964300e250d2e16fb44e19fc"
-  integrity sha512-RJytRPW75xy2yn0OKG5hJhfMEIsWMhKg2hkvvkB3CcAgphYjD0ROvqSeZViwB6leoPcmQMlXN/NUoxe+HIRyMw==
+accoutrement@^2.0.0-alpha.1:
+  version "2.0.0-alpha.1"
+  resolved "https://registry.yarnpkg.com/accoutrement/-/accoutrement-2.0.0-alpha.1.tgz#ebf973ccb8d2a1a961910c2ba8411260c7caab33"
+  integrity sha512-5JLqdLmMgy+eS0rlN3Ws7rrT16TiNLDg9V3aZyRH8kyhntRZ8K5GLyEM6h1aDb0JD+MjuP1bNPZ1DWn040soqg==
 
 acorn-dynamic-import@^3.0.0:
   version "3.0.0"

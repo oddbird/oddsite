@@ -68,7 +68,7 @@ $min-image: 300px;
   .gallery-image {
     transform: scale(1.3);
     transform-origin: 100% 0;
-    transition: transform 150ms ease-in;
+    transition: transform time('fast') ease-in;
   }
 
   .duo-overlay {
@@ -80,7 +80,7 @@ $min-image: 300px;
     opacity: 0;
     pointer-events: none;
     transform: translate3d(101%, 0, 0);
-    transition: opacity, transform 150ms ease-in;
+    transition: opacity, transform time('fast') ease-in;
   }
 }
 

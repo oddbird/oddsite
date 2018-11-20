@@ -19,6 +19,8 @@ events:
     date: [2018, 8, 21]
     adr: 'Carlsbad, CA'
     slides: 'http://talks.oddbird.net/dynamic-css/jsconfus18/'
+    video: '<iframe width="560" height="315" src="https://www.youtube.com/embed/uwgBz748t-g" frameborder="0" allowfullscreen></iframe>'
+    video_link: 'https://www.youtube.com/watch?v=uwgBz748t-g'
   - venue: 'CSSConf Argentina'
     url: 'https://cssconfar.com/'
     date: [2018, 8, 18]

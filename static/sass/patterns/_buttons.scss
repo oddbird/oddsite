@@ -22,6 +22,7 @@
   &,
   #{$link} {
     @include font-family('alt');
+    @include transition('colors');
     align-items: center;
     background-clip: padding-box;
     border: 1px solid;
@@ -30,7 +31,6 @@
     font-weight: bold;
     padding: size('half-shim') size('gutter');
     text-decoration: none;
-    transition: color 150ms, background-color 150ms;
   }
 
   @include after('»') {
@@ -53,10 +53,6 @@
     &::after {
       transform: rotate(180deg);
     }
-  }
-
-  + .btn {
-    margin-left: size('half-shim');
   }
 }
 
