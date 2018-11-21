@@ -5,9 +5,7 @@ process.env.BROWSERSLIST_CONFIG = './.browserslistrc';
 const AssetsPlugin = require('webpack-assets-manifest');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const SassDocPlugin = require('./sassdoc-webpack-plugin');
-const TerserPlugin = require('terser-webpack-plugin');
 const mozjpeg = require('imagemin-mozjpeg');
 const optipng = require('imagemin-optipng');
 const path = require('path');
@@ -20,7 +18,6 @@ const sassdocPath = path.join(__dirname, 'content', 'styleguide');
 let jsOutput = '[name].bundle.js';
 let styleOutput = '[name].bundle.css';
 let mediaOutput = '[name].[ext]';
-let devtool = 'cheap-module-inline-source-map';
 let buildScript = 'gulp dev-build';
 
 // Create empty spammers.txt file if none exists
@@ -31,7 +28,6 @@ if (process.env.NODE_ENV === 'production') {
   jsOutput = '[name].bundle.[chunkhash].min.js';
   styleOutput = '[name].bundle.[chunkhash].min.css';
   mediaOutput = '[name].[hash].[ext]';
-  devtool = 'source-map';
   buildScript = 'python run.py prod';
 }
 
@@ -118,7 +114,6 @@ const sassDocOpts = {
 };
 
 module.exports = {
-  mode: process.env.NODE_ENV || 'development',
   // context for entry points
   context: path.join(__dirname, 'static', 'js'),
   // define all the entry point bundles
@@ -140,14 +135,6 @@ module.exports = {
     alias: { jquery: 'jquery/dist/jquery.slim.js' },
   },
   optimization: {
-    minimizer: [
-      new TerserPlugin({
-        cache: true,
-        parallel: true,
-        sourceMap: true,
-      }),
-      new OptimizeCSSAssetsPlugin(),
-    ],
     runtimeChunk: 'single',
     splitChunks: {
       name: false,
@@ -244,5 +231,4 @@ module.exports = {
       },
     ],
   },
-  devtool,
 };
