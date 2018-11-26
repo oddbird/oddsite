@@ -73,7 +73,7 @@
     #{--translate}: calc(50% - var(--opacity, 1) * 50%); // sass-lint:disable-line no-duplicate-properties
     opacity: 1; // non-variable fallback is visible
     opacity: var(--opacity, 0); // sass-lint:disable-line no-duplicate-properties
-    transition: opacity 150ms ease-in-out;
+    transition: opacity time('fast') ease-in-out;
 
     #{$focus} {
       #{--translate}: 1;
@@ -83,7 +83,7 @@
     [data-icon] {
       pointer-events: none;
       transform: translateY(var(--translate, 0));
-      transition: transform 200ms ease-in-out;
+      transition: change('move');
     }
 
     @include below('small-page') {
@@ -94,10 +94,10 @@
 
 .logo-link {
   #{$link} {
+    @include transition('colors');
     color: color('brand-blue');
     display: inline-block;
     text-decoration: none;
-    transition: color 250ms;
   }
 
   #{$focus} {

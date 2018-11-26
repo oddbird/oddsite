@@ -18,8 +18,13 @@
 
 
 .project-list-links {
-  margin-bottom: size('half-shim');
-  margin-top: size('half-shim');
+  display: grid;
+  grid-gap: size('shim');
+  grid-template-columns: 1fr;
+
+  @include above('small-page') {
+    grid-template-columns: repeat(auto-fit, minmax(6em, max-content));
+  }
 }
 
 

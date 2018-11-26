@@ -49,6 +49,7 @@
 
 {% macro header_image(
   post,
+  default=false,
   class=''
 ) %}
   {% set image = get_image(post.config.image, 'hero', 'hero-image') %}
@@ -57,7 +58,7 @@
     <div class="{{ ['hero', class]|join(' ') if class else 'hero' }}">
       {{ image }}
     </div>
-  {% else %}
+  {% elif default %}
     <div class="{{ ['no-hero', class]|join(' ') if class else 'no-hero' }}">
       <a href="/" rel="home">
         {{ utility.icon('logo', alt='OddBird') }}
@@ -254,7 +255,7 @@
   {% set type = 'Meet the Birds…' if (ctx.config.bird and not type) else type %}
   {% set type = 'Talk Details' if (ctx.config.speakers and not type) else type %}
 
-  {{ header_image(ctx) }}
+  {{ header_image(ctx, default=true) }}
 
   {% if ctx.config.dynamic_title %}
     {{ dynamic_headline(ctx.config.dynamic_title[0], type) }}

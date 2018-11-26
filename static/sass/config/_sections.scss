@@ -34,7 +34,7 @@
     left: 50%;
     position: absolute;
     top: 100%;
-    transition: border-width 300ms;
+    transition: border-width time('slow');
 
     @include above('small-page') {
       border-width: size('gutter') size('gutter') 0;

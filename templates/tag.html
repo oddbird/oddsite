@@ -15,7 +15,7 @@
 
 {% block list_intro %}
   {% set page = 'blog-index'|get_config %}
-  {{ layout.header_image(page) }}
+  {{ layout.header_image(page, default=true) }}
   {{ layout.show_headline(
     main=['Posts Tagged ‘', tag.name, '’']|join,
     sub='More articles on the topic…',

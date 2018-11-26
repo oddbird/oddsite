@@ -47,7 +47,7 @@
   [rel='home'] {
     #{$link} {
       display: inline-block;
-      transition: transform 150ms ease-in;
+      transition: transform time('fast') ease-in;
     }
 
     #{$focus} {

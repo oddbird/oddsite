@@ -100,9 +100,9 @@ h6 {
 
 a {
   #{$link} {
+    @include transition('colors');
     text-decoration-line: underline;
     text-decoration-skip: ink;
-    transition: color 150ms, background-color 150ms, text-decoration-color 150ms;
   }
 }
 

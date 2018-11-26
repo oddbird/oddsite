@@ -29,8 +29,8 @@ $brand-colors: (
 /// @link http://oddbird.net/accoutrement-color/docs/
 ///   Accoutrement Colors
 $contrast-colors: (
-  'contrast-light': #fff,
-  'contrast-dark': '#brand-blue' ('shade': 50%),
+  '_contrast-light': #fff,
+  '_contrast-dark': '#brand-blue' ('shade': 50% #000),
 );
 
 @include add-colors($contrast-colors)
@@ -44,8 +44,8 @@ $contrast-colors: (
 /// @colors
 /// @type Map
 $pattern-colors: (
-  'text': '#contrast-dark',
-  'background': '#contrast-light',
+  'text': '#_contrast-dark',
+  'background': '#_contrast-light',
   'overlay': '#background' ('rgba': 0.95),
   'border': '#brand-blue',
   'border-light': '#border' ('tint': 50%),

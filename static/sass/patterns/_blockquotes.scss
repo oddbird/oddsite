@@ -62,9 +62,17 @@ blockquote {
     }
   }
 
+  &:not([data-media-block]) {
+    border-left: size('border') solid color('callout');
+    font-size: size('intro-text');
+    padding-left: size('gutter');
+  }
+
   p {
-    @include wrap-content;
-    text-indent: -0.4em;
+    &:not(.attribution) {
+      @include wrap-content;
+      text-indent: -0.4em;
+    }
   }
 }
 
