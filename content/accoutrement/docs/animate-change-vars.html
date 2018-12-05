@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <title>Combined &quot;Change&quot; Maps | Accoutrement Documentation</title>
+  <title>Changes » CSS Variables | Accoutrement Documentation</title>
 
   <link href="assets/img/favicon.ico" rel="shortcut icon">
   <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,600|Source+Sans+Pro:400,400i,700,700i" rel="stylesheet">
@@ -212,12 +212,12 @@
   
   
     <li class="nav-item">
-      <a href="animate-change.html" data-nav="is-active">Combined &quot;Change&quot;<span class="widont">&nbsp;</span>Maps</a>
+      <a href="animate-change.html" data-nav="is-not-active">Combined &quot;Change&quot;<span class="widont">&nbsp;</span>Maps</a>
     </li>
   
   
     <li class="nav-item">
-      <a href="animate-change-vars.html" data-nav="is-not-active">Changes » CSS<span class="widont">&nbsp;</span>Variables</a>
+      <a href="animate-change-vars.html" data-nav="is-active">Changes » CSS<span class="widont">&nbsp;</span>Variables</a>
     </li>
   </ul>
             </li>
@@ -400,11 +400,11 @@
   <nav class="breadcrumb">
     
     <a href="index.html" >Accoutrement</a> »
-    <strong>Combined &quot;Change&quot; Maps</strong>
+    <strong>Changes » CSS Variables</strong>
   </nav>
 
 
-        <div data-page="animate-change">
+        <div data-page="animate-change-vars">
           
   
     
@@ -429,11 +429,7 @@
 
   
     <div data-item-section="prose" class="text-block">
-      <h1 id="combined-change-maps-animations-transitions">Combined “Change” Maps: Animations &amp;<span class="widont">&nbsp;</span>Transitions</h1>
-<p>Combine your <code>$times</code> and <code>$easing</code> values
-to create entire transitions and animations –
-all stored in one place and easy to access
-for consistent “changes” across your<span class="widont">&nbsp;</span>project.</p>
+      <h1 id="changes-css-variables">Changes » CSS<span class="widont">&nbsp;</span>Variables</h1>
 
       
   
@@ -498,7 +494,7 @@ for consistent “changes” across your<span class="widont">&nbsp;</span>projec
 
 
 
-<section class="item" id="variable--changes">
+<section class="item" id="variable--change-var-prefix">
   
     
   
@@ -516,9 +512,11 @@ for consistent “changes” across your<span class="widont">&nbsp;</span>projec
       
 
       
-        <a href="#variable--changes" class="item-name">$changes</a>
+        <a href="#variable--change-var-prefix" class="item-name">$change-var-prefix</a>
       
 
+      
+        <span class="value-type">(string)</span>
       
 
       
@@ -545,7 +543,7 @@ for consistent “changes” across your<span class="widont">&nbsp;</span>projec
 
       
       
-      <pre class="hljs-pre"><code class="lang-scss">$changes: () !default;</code></pre>
+      <pre class="hljs-pre"><code class="lang-scss">$change-var-prefix: &#39;change-&#39; !default;</code></pre>
     </div>
   
 
@@ -557,42 +555,26 @@ for consistent “changes” across your<span class="widont">&nbsp;</span>projec
 
   
     <div class="text-block">
-      <p>A variable storing the map of
-all your standardized changes (transitions and animations).
-Any changes added to the <code>$changes</code> map will be accesible
-to the <code>change()</code> function by<span class="widont">&nbsp;</span>default.</p>
-<p>Define each change with a <code>name</code> and <code>value</code>,
-or use interpolation to compose more complex<span class="widont">&nbsp;</span>changes.</p>
-<pre><code>$changes: (
-  // single animation
-  'glow': glow time('slow') ease('in-out-quad') infinite alternate,
-
-  // single transitions
-  'slide': transform time('fast'),
-  'fade': opacity time('fade') ease('out-quad'),
-
-  // interolate using '#name' (quotes optional)
-  // to build on existing &quot;changes&quot;
-  'slide-in': #slide ease('out-back'),
-  'slide-out': '#slide' ease('in'),
-
-  // or string together multiple &quot;changes&quot;
-  'sidebar-in': ('#slide-in', '#fade' time('delay')),
-
-  // or create a 1-to-1 alias
-  'modal-in': #sidebar-in,
-);
-</code></pre>
-<ul>
-<li>Name your changes anything –
-from abstractions like <code>fade</code>,
-to concrete patterns like <code>sidebar-in</code>.</li>
-<li>Values can be CSS-ready values,
-references other changes in the map,
-or format strings to<span class="widont">&nbsp;</span>interpolate.</li>
-</ul>
+      <p>Since CSS variables are often defined in a global space,
+it can be useful to prefix different variable types.
+Accoutrement maps help solve that problem in Sass,
+so we wanted to carry that over into our CSS variable support.
+Set a prefix for all change-tokens,
+and we’ll apply it when setting or calling css variables
+based on your change maps.
+Set to <code>null</code> or <code>''</code> (empty string) for no<span class="widont">&nbsp;</span>prefix.</p>
 
       
+  
+    
+      <section class="summary-subsection">
+        <h3 class="summary-subtitle">Since <code>2.0.0</code>:</h3>
+        <div class="subsection-details"><ul>
+<li>NEW: Initial release</li>
+</ul>
+</div>
+      </section>
+    
   
 
       
@@ -619,6 +601,85 @@ or format strings to<span class="widont">&nbsp;</span>interpolate.</li>
 
 
   
+  
+    
+
+    <div data-item-section="examples">
+      <h3 class="item-subtitle">
+        <span class="item-subtitle-main">Example</span>
+      </h3>
+
+      
+        
+  
+  
+
+  
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  <div class="example">
+    <div class="example-code">
+      
+  
+    <div class="code-block">
+      
+        <div class="code-header">
+          <span class="code-language">
+            scss
+          </span>
+
+          
+        </div>
+      
+
+      
+      
+      <pre class="hljs-pre"><code class="lang-scss">$changes: (&#39;my-change&#39;: pink);
+$change-var-prefix: &#39;prefix_&#39;;
+:root { @include change--(&#39;my-change&#39;) }</code></pre>
+    </div>
+  
+
+  
+    <div class="code-block">
+      
+        <div class="code-header">
+          <span class="code-language">
+            css
+          </span>
+
+          
+            <span class='code-description'>
+              compiled
+            </span>
+          
+        </div>
+      
+
+      
+      
+      <pre class="hljs-pre"><code class="lang-css">:root {
+  --prefix_my-change: pink;
+}
+</code></pre>
+    </div>
+  
+
+    </div>
+
+    
+  </div>
+
+      
+    </div>
   
 
 
@@ -659,7 +720,7 @@ or format strings to<span class="widont">&nbsp;</span>interpolate.</li>
       <span class="item-type">@mixin</span>
       
         <a href="
-  animate-change.html#mixin--add-changes" class="item-name">add-changes()</a>
+  animate-change-vars.html#mixin--changes--" class="item-name">changes--()</a>
       
       
       
@@ -673,6 +734,64 @@ or format strings to<span class="widont">&nbsp;</span>interpolate.</li>
         
       
         
+
+        
+          
+          
+  
+  
+  
+  
+  
+  
+
+  
+  <div class="param-list">
+    <h4 class="param-title">
+      <span class="item-type">@mixin</span>
+      
+        <a href="
+  animate-change-vars.html#mixin--change--" class="item-name">change--()</a>
+      
+      
+      
+      
+    </h4>
+
+    
+  </div>
+
+
+        
+      
+        
+
+        
+          
+          
+  
+  
+  
+  
+  
+  
+
+  
+  <div class="param-list">
+    <h4 class="param-title">
+      <span class="item-type">@function</span>
+      
+        <a href="
+  animate-change-vars.html#function--var-change" class="item-name">var-change()</a>
+      
+      
+      
+      
+    </h4>
+
+    
+  </div>
+
 
         
       
@@ -708,7 +827,7 @@ or format strings to<span class="widont">&nbsp;</span>interpolate.</li>
 
 
 
-<section class="item" id="function--change">
+<section class="item" id="mixin--changes--">
   
     
   
@@ -722,11 +841,11 @@ or format strings to<span class="widont">&nbsp;</span>interpolate.</li>
   <div data-item-section="header">
     <h2 class="item-title">
       
-        <span class="item-type">@function</span>
+        <span class="item-type">@mixin</span>
       
 
       
-        <a href="#function--change" class="item-name">change()</a>
+        <a href="#mixin--changes--" class="item-name">changes--()</a>
       
 
       
@@ -747,18 +866,822 @@ or format strings to<span class="widont">&nbsp;</span>interpolate.</li>
 
   
     <div class="text-block">
-      <p>Access a named change in your <code>$changes</code> map.</p>
+      <p>Convert any change-map into CSS variables,
+using the global <code>$change-var-prefix</code>.</p>
+<ul>
+<li>Change names that start with <code>_</code> or <code>-</code> are considered “private”
+and will not be output as<span class="widont">&nbsp;</span>variables</li>
+<li>Changes that contain a simple alias with no adjustments
+will be output with a <code>var()</code> value,
+keeping the alias relationship<span class="widont">&nbsp;</span>intact</li>
+</ul>
 
       
   
     
       <section class="summary-subsection">
-        <h3 class="summary-subtitle">Since <code>1.0.0</code>:</h3>
+        <h3 class="summary-subtitle">Since <code>2.0.0</code>:</h3>
         <div class="subsection-details"><ul>
-<li>NEW: Accepts <code>$do</code> map argument,
-for on-the-fly<span class="widont">&nbsp;</span>adjustments</li>
-<li>NEW: Accepts <code>$source</code> map argument,
-for custom<span class="widont">&nbsp;</span>source-palette</li>
+<li>NEW: Initial release</li>
+</ul>
+</div>
+      </section>
+    
+  
+
+      
+  
+
+      
+  
+
+    </div>
+  
+
+  </div>
+
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    
+  <div data-item-section="parameter">
+    
+      <h3 class="item-subtitle">
+        <span class="item-subtitle-main">Parameters &amp;<span class="widont">&nbsp;</span>Output</span>
+        
+      </h3>
+    
+
+    
+      
+        
+  
+  
+
+  
+  <div class="param-list">
+    <h4 class="param-title">
+      
+      
+        <span class="item-name">$source:</span>
+      
+      <span class="item-value">$changes</span>
+      <span class="value-type">(map)</span>
+      
+    </h4>
+
+    
+      
+      <div class="param-details text-block">
+        <p>Optionally use a custom
+map of changes to set as css<span class="widont">&nbsp;</span>variables</p>
+
+      </div>
+    
+  </div>
+
+
+      
+
+      
+  
+
+      
+  
+
+      
+  
+    
+  <div class="param-list">
+    <h4 class="param-title">
+      
+      
+        <span class="item-name">{CSS output}</span>
+      
+      
+      <span class="value-type">(code<span class="widont">&nbsp;</span>block)</span>
+      
+    </h4>
+
+    
+      
+      <div class="param-details text-block">
+        <p>Custom properties for all public changes in the<span class="widont">&nbsp;</span>map</p>
+
+      </div>
+    
+  </div>
+
+  
+
+      
+  
+
+    
+  </div>
+
+  
+
+
+  
+  
+    
+
+    <div data-item-section="examples">
+      <h3 class="item-subtitle">
+        <span class="item-subtitle-main">Example</span>
+      </h3>
+
+      
+        
+  
+  
+
+  
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  <div class="example">
+    <div class="example-code">
+      
+  
+    <div class="code-block">
+      
+        <div class="code-header">
+          <span class="code-language">
+            scss
+          </span>
+
+          
+        </div>
+      
+
+      
+      
+      <pre class="hljs-pre"><code class="lang-scss">$changes: (
+  &#39;_brand&#39;: hsl(120, 50%, 50%),
+  &#39;text&#39;: &#39;#_brand&#39; (&#39;shade&#39;: 50%),
+  &#39;border&#39;: &#39;#text&#39;,
+);
+:root {
+  @include changes--;
+}</code></pre>
+    </div>
+  
+
+  
+    <div class="code-block">
+      
+        <div class="code-header">
+          <span class="code-language">
+            css
+          </span>
+
+          
+            <span class='code-description'>
+              compiled
+            </span>
+          
+        </div>
+      
+
+      
+      
+      <pre class="hljs-pre"><code class="lang-css">:root {
+  --change-text: #206020;
+  --change-border: var(--change-text, #206020);
+}
+</code></pre>
+    </div>
+  
+
+    </div>
+
+    
+  </div>
+
+      
+    </div>
+  
+
+
+  
+  
+  
+  
+    
+    
+  <div data-item-section="requires">
+    
+      <h3 class="item-subtitle">
+        <span class="item-subtitle-main">Requires</span>
+        
+      </h3>
+    
+
+    
+      
+      
+        
+        
+        
+
+        
+          
+          
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  <div class="param-list">
+    <h4 class="param-title">
+      <span class="item-type">@mixin</span>
+      
+        <a href="
+  core-vars.html#mixin--tokens--" class="item-name">tokens--()</a>
+      
+      
+      
+      
+    </h4>
+
+    
+  </div>
+
+
+        
+      
+        
+        
+        
+
+        
+          
+          
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  <div class="param-list">
+    <h4 class="param-title">
+      
+      
+        <a href="
+  animate-change-vars.html#variable--change-var-prefix" class="item-name">$change-var-prefix</a>
+      
+      
+      <span class="value-type">(string)</span>
+      
+    </h4>
+
+    
+  </div>
+
+
+        
+      
+    
+  </div>
+
+  
+    
+  
+
+  
+
+  
+  
+
+
+  
+  
+
+  
+  
+
+</section>
+
+  
+    
+    
+
+
+
+
+
+
+
+
+
+
+<section class="item" id="mixin--change--">
+  
+    
+  
+  
+
+  
+  
+  
+  
+
+  <div data-item-section="header">
+    <h2 class="item-title">
+      
+        <span class="item-type">@mixin</span>
+      
+
+      
+        <a href="#mixin--change--" class="item-name">change--()</a>
+      
+
+      
+
+      
+    </h2>
+
+    
+  
+
+
+    
+    
+  
+  
+  
+  
+
+  
+    <div class="text-block">
+      <p>Set a single custom property based on a map-change,
+with optional alias and<span class="widont">&nbsp;</span>fallback</p>
+
+      
+  
+    
+      <section class="summary-subsection">
+        <h3 class="summary-subtitle">Since <code>2.0.0</code>:</h3>
+        <div class="subsection-details"><ul>
+<li>NEW: Initial release</li>
+</ul>
+</div>
+      </section>
+    
+  
+
+      
+  
+
+      
+  
+
+    </div>
+  
+
+  </div>
+
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    
+  <div data-item-section="parameter">
+    
+      <h3 class="item-subtitle">
+        <span class="item-subtitle-main">Parameters</span>
+        
+      </h3>
+    
+
+    
+      
+        
+  
+  
+
+  
+  <div class="param-list">
+    <h4 class="param-title">
+      
+      
+        <span class="item-name">$change:</span>
+      
+      
+      <span class="value-type">(*)</span>
+      
+    </h4>
+
+    
+      
+      <div class="param-details text-block">
+        <p>Change name available in the <code>$source</code> map,
+or alias to use in naming the CSS<span class="widont">&nbsp;</span>variable</p>
+
+      </div>
+    
+  </div>
+
+
+      
+        
+  
+  
+
+  
+  <div class="param-list">
+    <h4 class="param-title">
+      
+      
+        <span class="item-name">$value:</span>
+      
+      <span class="item-value">null</span>
+      <span class="value-type">(string |<span class="widont">&nbsp;</span>null)</span>
+      
+    </h4>
+
+    
+      
+      <div class="param-details text-block">
+        <p>Optional value for the variable,
+if different from the given <code>$change</code></p>
+
+      </div>
+    
+  </div>
+
+
+      
+        
+  
+  
+
+  
+  <div class="param-list">
+    <h4 class="param-title">
+      
+      
+        <span class="item-name">$fallback:</span>
+      
+      <span class="item-value">true</span>
+      <span class="value-type">(*)</span>
+      
+    </h4>
+
+    
+      
+      <div class="param-details text-block">
+        <p>The optional fallback value for a <code>var()</code> function:</p>
+<ul>
+<li><code>true</code> will generate a fallback based on the token<span class="widont">&nbsp;</span>value</li>
+<li>A token name will fallback to the value of that
+css-variable and then to the token’s calculated<span class="widont">&nbsp;</span>value</li>
+<li>Any other fallback will be passed through<span class="widont">&nbsp;</span>unchanged</li>
+</ul>
+
+      </div>
+    
+  </div>
+
+
+      
+        
+  
+  
+
+  
+  <div class="param-list">
+    <h4 class="param-title">
+      
+      
+        <span class="item-name">$source:</span>
+      
+      <span class="item-value">$changes</span>
+      <span class="value-type">(map)</span>
+      
+    </h4>
+
+    
+      
+      <div class="param-details text-block">
+        <p>Optional map of changes to use as a palette<span class="widont">&nbsp;</span>source</p>
+
+      </div>
+    
+  </div>
+
+
+      
+
+      
+  
+
+      
+  
+
+      
+  
+
+      
+  
+
+    
+  </div>
+
+  
+
+
+  
+  
+    
+
+    <div data-item-section="examples">
+      <h3 class="item-subtitle">
+        <span class="item-subtitle-main">Example</span>
+      </h3>
+
+      
+        
+  
+  
+
+  
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  <div class="example">
+    <div class="example-code">
+      
+  
+    <div class="code-block">
+      
+        <div class="code-header">
+          <span class="code-language">
+            scss
+          </span>
+
+          
+        </div>
+      
+
+      
+      
+      <pre class="hljs-pre"><code class="lang-scss">$changes: (
+  &#39;_brand&#39;: hsl(120, 50%, 50%),
+  &#39;text&#39;: &#39;#_brand&#39; (&#39;shade&#39;: 50%),
+  &#39;border&#39;: &#39;#text&#39;,
+);
+.example {
+  @include change--(&#39;border&#39;);
+  @include change--(&#39;outline&#39;, &#39;border&#39;, red);
+}</code></pre>
+    </div>
+  
+
+  
+    <div class="code-block">
+      
+        <div class="code-header">
+          <span class="code-language">
+            css
+          </span>
+
+          
+            <span class='code-description'>
+              compiled
+            </span>
+          
+        </div>
+      
+
+      
+      
+      <pre class="hljs-pre"><code class="lang-css">.example {
+  --change-border: var(--change-text, #206020);
+  --change-outline: var(--change-border, red);
+}
+</code></pre>
+    </div>
+  
+
+    </div>
+
+    
+  </div>
+
+      
+    </div>
+  
+
+
+  
+  
+  
+  
+    
+    
+  <div data-item-section="requires">
+    
+      <h3 class="item-subtitle">
+        <span class="item-subtitle-main">Requires</span>
+        
+      </h3>
+    
+
+    
+      
+      
+        
+        
+        
+
+        
+          
+          
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  <div class="param-list">
+    <h4 class="param-title">
+      <span class="item-type">@mixin</span>
+      
+        <a href="
+  core-vars.html#mixin--token--" class="item-name">token--()</a>
+      
+      
+      
+      
+    </h4>
+
+    
+  </div>
+
+
+        
+      
+        
+        
+        
+
+        
+          
+          
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  <div class="param-list">
+    <h4 class="param-title">
+      
+      
+        <a href="
+  animate-change-vars.html#variable--change-var-prefix" class="item-name">$change-var-prefix</a>
+      
+      
+      <span class="value-type">(string)</span>
+      
+    </h4>
+
+    
+  </div>
+
+
+        
+      
+    
+  </div>
+
+  
+    
+  
+
+  
+
+  
+  
+
+
+  
+  
+
+  
+  
+
+</section>
+
+  
+    
+    
+
+
+
+
+
+
+
+
+
+
+<section class="item" id="function--var-change">
+  
+    
+  
+  
+
+  
+  
+  
+  
+
+  <div data-item-section="header">
+    <h2 class="item-title">
+      
+        <span class="item-type">@function</span>
+      
+
+      
+        <a href="#function--var-change" class="item-name">var-change()</a>
+      
+
+      
+
+      
+    </h2>
+
+    
+  
+
+
+    
+    
+  
+  
+  
+  
+
+  
+    <div class="text-block">
+      <p>Access the CSS variable associated with a given token,
+along with a fallback value based on the token<span class="widont">&nbsp;</span>itself</p>
+
+      
+  
+    
+      <section class="summary-subsection">
+        <h3 class="summary-subtitle">Since <code>2.0.0</code>:</h3>
+        <div class="subsection-details"><ul>
+<li>NEW: Initial release</li>
 </ul>
 </div>
       </section>
@@ -806,17 +1729,17 @@ for custom<span class="widont">&nbsp;</span>source-palette</li>
     <h4 class="param-title">
       
       
-        <span class="item-name">$name:</span>
+        <span class="item-name">$change:</span>
       
       
-      <span class="value-type">(string)</span>
+      <span class="value-type">(*)</span>
       
     </h4>
 
     
       
       <div class="param-details text-block">
-        <p>The name of a change in your configuration (e.g. <code>fade-in</code>)</p>
+        <p>Change name available in the <code>$source</code> map</p>
 
       </div>
     
@@ -833,17 +1756,23 @@ for custom<span class="widont">&nbsp;</span>source-palette</li>
     <h4 class="param-title">
       
       
-        <span class="item-name">$do:</span>
+        <span class="item-name">$fallback:</span>
       
-      <span class="item-value">null</span>
-      <span class="value-type">(map |<span class="widont">&nbsp;</span>null)</span>
+      <span class="item-value">true</span>
+      <span class="value-type">(*)</span>
       
     </h4>
 
     
       
       <div class="param-details text-block">
-        <p>A map of function/ratio adjustments to run on the returned<span class="widont">&nbsp;</span>value</p>
+        <p>The optional fallback value for a <code>var()</code> function:</p>
+<ul>
+<li><code>true</code> will generate a fallback based on the token<span class="widont">&nbsp;</span>value</li>
+<li>A token name will fallback to the value of that
+css-variable and then to the token’s calculated<span class="widont">&nbsp;</span>value</li>
+<li>Any other fallback will be passed through<span class="widont">&nbsp;</span>unchanged</li>
+</ul>
 
       </div>
     
@@ -862,7 +1791,7 @@ for custom<span class="widont">&nbsp;</span>source-palette</li>
       
         <span class="item-name">$source:</span>
       
-      <span class="item-value">$changes</span>
+      
       <span class="value-type">(map)</span>
       
     </h4>
@@ -870,7 +1799,7 @@ for custom<span class="widont">&nbsp;</span>source-palette</li>
     
       
       <div class="param-details text-block">
-        <p>Optional accoutrement-format map of changes to use as the origin<span class="widont">&nbsp;</span>palette</p>
+        <p>Optional Accoutrement map of changes to use as<span class="widont">&nbsp;</span>source</p>
 
       </div>
     
@@ -892,572 +1821,6 @@ for custom<span class="widont">&nbsp;</span>source-palette</li>
         <span class="item-name">@return</span>
       
       
-      <span class="value-type">(length)</span>
-      
-    </h4>
-
-    
-      
-      <div class="param-details text-block">
-        <p>The change value<span class="widont">&nbsp;</span>requested</p>
-
-      </div>
-    
-  </div>
-
-  
-
-      
-  
-
-      
-  
-
-    
-  </div>
-
-  
-
-
-  
-  
-
-
-  
-  
-  
-  
-    <div class="requires-wrapper">
-      
-    
-  <div data-item-section="requires">
-    
-      <h3 class="item-subtitle">
-        <span class="item-subtitle-main">Requires</span>
-        
-      </h3>
-    
-
-    
-      
-      
-        
-        
-        
-
-        
-          
-          
-  
-  
-  
-  
-  
-  
-  
-  
-
-  
-  <div class="param-list">
-    <h4 class="param-title">
-      <span class="item-type">@function</span>
-      
-        <a href="
-  core-get.html#function--get-token" class="item-name">get-token()</a>
-      
-      
-      
-      
-    </h4>
-
-    
-  </div>
-
-
-        
-      
-    
-  </div>
-
-  
-      
-  
-    
-  <div data-item-section="used-by">
-    
-      <h3 class="item-subtitle">
-        <span class="item-subtitle-main">Used By</span>
-        
-      </h3>
-    
-
-    
-      
-      
-        
-
-        
-          
-          
-  
-  
-  
-  
-  
-  
-
-  
-  <div class="param-list">
-    <h4 class="param-title">
-      <span class="item-type">@mixin</span>
-      
-        <a href="
-  animate-change.html#mixin--animate" class="item-name">animate()</a>
-      
-      
-      
-      
-    </h4>
-
-    
-  </div>
-
-
-        
-      
-        
-
-        
-          
-          
-  
-  
-  
-  
-  
-  
-
-  
-  <div class="param-list">
-    <h4 class="param-title">
-      <span class="item-type">@mixin</span>
-      
-        <a href="
-  animate-change.html#mixin--transition" class="item-name">transition()</a>
-      
-      
-      
-      
-    </h4>
-
-    
-  </div>
-
-
-        
-      
-    
-  </div>
-
-  
-
-    </div>
-  
-
-  
-  
-
-
-  
-  
-
-  
-  
-
-</section>
-
-  
-    
-    
-
-
-
-
-
-
-
-
-
-
-<section class="item" id="mixin--add-changes">
-  
-    
-  
-  
-
-  
-  
-  
-  
-
-  <div data-item-section="header">
-    <h2 class="item-title">
-      
-        <span class="item-type">@mixin</span>
-      
-
-      
-        <a href="#mixin--add-changes" class="item-name">add-changes()</a>
-      
-
-      
-
-      
-    </h2>
-
-    
-  
-
-
-    
-    
-  
-  
-  
-  
-
-  
-    <div class="text-block">
-      <p>Merge individual change maps into the global <code>$changes</code> variable,
-in case you want to define changes in smaller groups –
-such as <code>button-changes</code>, <code>page-changes</code>, etc –
-before merging them into a single global<span class="widont">&nbsp;</span>changes-palette.</p>
-
-      
-  
-
-      
-  
-
-      
-  
-
-    </div>
-  
-
-  </div>
-
-  
-
-  
-  
-  
-  
-  
-  
-
-  
-    
-  <div data-item-section="parameter">
-    
-      <h3 class="item-subtitle">
-        <span class="item-subtitle-main">Parameters &amp;<span class="widont">&nbsp;</span>Output</span>
-        
-      </h3>
-    
-
-    
-      
-        
-  
-  
-
-  
-  <div class="param-list">
-    <h4 class="param-title">
-      
-      
-        <span class="item-name">$maps:</span>
-      
-      
-      <span class="value-type">(map...)</span>
-      
-    </h4>
-
-    
-      
-      <div class="param-details text-block">
-        <p>Pass any number of maps to be merged and<span class="widont">&nbsp;</span>added</p>
-
-      </div>
-    
-  </div>
-
-
-      
-
-      
-  
-
-      
-  
-
-      
-  
-    
-  <div class="param-list">
-    <h4 class="param-title">
-      
-      
-        <span class="item-name">{CSS output}</span>
-      
-      
-      <span class="value-type">(code<span class="widont">&nbsp;</span>block)</span>
-      
-    </h4>
-
-    
-      
-      <div class="param-details text-block">
-        <ul>
-<li>An updated global <code>$changes</code> variable,
-with new maps merged<span class="widont">&nbsp;</span>in.</li>
-</ul>
-
-      </div>
-    
-  </div>
-
-  
-
-      
-  
-
-    
-  </div>
-
-  
-
-
-  
-  
-
-
-  
-  
-  
-  
-    
-    
-  <div data-item-section="requires">
-    
-      <h3 class="item-subtitle">
-        <span class="item-subtitle-main">Requires</span>
-        
-      </h3>
-    
-
-    
-      
-      
-        
-        
-        
-
-        
-          
-          
-  
-  
-  
-  
-  
-  
-  
-  
-
-  
-  <div class="param-list">
-    <h4 class="param-title">
-      <span class="item-type">@function</span>
-      
-        <span class="item-name">_a_map-multimerge()</span>
-      
-      
-      
-      <span class="item-note">[private]</span>
-    </h4>
-
-    
-  </div>
-
-
-        
-      
-        
-        
-        
-
-        
-          
-          
-  
-  
-  
-  
-  
-  
-  
-  
-
-  
-  <div class="param-list">
-    <h4 class="param-title">
-      
-      
-        <a href="
-  animate-change.html#variable--changes" class="item-name">$changes</a>
-      
-      
-      
-      
-    </h4>
-
-    
-  </div>
-
-
-        
-      
-        
-        
-        
-
-        
-      
-    
-  </div>
-
-  
-    
-  
-
-  
-
-  
-  
-
-
-  
-  
-
-  
-  
-
-</section>
-
-  
-    
-    
-
-
-
-
-
-
-
-
-
-
-<section class="item" id="mixin--animate">
-  
-    
-  
-  
-
-  
-  
-  
-  
-
-  <div data-item-section="header">
-    <h2 class="item-title">
-      
-        <span class="item-type">@mixin</span>
-      
-
-      
-        <a href="#mixin--animate" class="item-name">animate()</a>
-      
-
-      
-
-      
-    </h2>
-
-    
-  
-
-
-    
-    
-  
-  
-  
-  
-
-  
-    <div class="text-block">
-      <p>Access named animations in your <code>$changes</code> map,
-and apply them to the <code>animation</code> property.</p>
-
-      
-  
-
-      
-  
-
-      
-  
-
-    </div>
-  
-
-  </div>
-
-  
-
-  
-  
-  
-  
-  
-  
-
-  
-    
-  <div data-item-section="parameter">
-    
-      <h3 class="item-subtitle">
-        <span class="item-subtitle-main">Parameters &amp;<span class="widont">&nbsp;</span>Output</span>
-        
-      </h3>
-    
-
-    
-      
-        
-  
-  
-
-  
-  <div class="param-list">
-    <h4 class="param-title">
-      
-      
-        <span class="item-name">$names:</span>
-      
-      
       <span class="value-type">(string)</span>
       
     </h4>
@@ -1465,46 +1828,16 @@ and apply them to the <code>animation</code> property.</p>
     
       
       <div class="param-details text-block">
-        <p>Named animations to<span class="widont">&nbsp;</span>apply</p>
+        <p>CSS variable call, in the format:
+<code>var(--&lt;token&gt;, &lt;fallback&gt;)</code></p>
 
       </div>
     
   </div>
 
-
-      
-
-      
   
 
       
-  
-
-      
-  
-    
-  <div class="param-list">
-    <h4 class="param-title">
-      
-      
-        <span class="item-name">{CSS output}</span>
-      
-      
-      <span class="value-type">(code<span class="widont">&nbsp;</span>block)</span>
-      
-    </h4>
-
-    
-      
-      <div class="param-details text-block">
-        <ul>
-<li>The requested animations, applied in<span class="widont">&nbsp;</span>CSS</li>
-</ul>
-
-      </div>
-    
-  </div>
-
   
 
       
@@ -1559,10 +1892,13 @@ and apply them to the <code>animation</code> property.</p>
       
       
       <pre class="hljs-pre"><code class="lang-scss">$changes: (
-  &#39;fade-in&#39;: fade-in 300ms ease-out both,
+  &#39;_brand&#39;: hsl(120, 50%, 50%),
+  &#39;text&#39;: &#39;#_brand&#39; (&#39;shade&#39;: 50%),
+  &#39;border&#39;: &#39;#text&#39;,
 );
 .example {
-  @include animate(&#39;fade-in&#39;);
+  border-change: var-change(&#39;border&#39;);
+  change: var-change(&#39;text&#39;, black);
 }</code></pre>
     </div>
   
@@ -1586,7 +1922,8 @@ and apply them to the <code>animation</code> property.</p>
       
       
       <pre class="hljs-pre"><code class="lang-css">.example {
-  animation: fade-in 300ms ease-out both;
+  border-change: var(--change-border, #206020);
+  change: var(--change-text, black);
 }
 </code></pre>
     </div>
@@ -1641,7 +1978,7 @@ and apply them to the <code>animation</code> property.</p>
       <span class="item-type">@function</span>
       
         <a href="
-  animate-change.html#function--change" class="item-name">change()</a>
+  core-vars.html#function--var-token" class="item-name">var-token()</a>
       
       
       
@@ -1654,118 +1991,19 @@ and apply them to the <code>animation</code> property.</p>
 
         
       
-    
-  </div>
-
-  
-    
-  
-
-  
-
-  
-  
-
-
-  
-  
-
-  
-  
-
-</section>
-
-  
-    
-    
-
-
-
-
-
-
-
-
-
-
-<section class="item" id="mixin--transition">
-  
-    
-  
-  
-
-  
-  
-  
-  
-
-  <div data-item-section="header">
-    <h2 class="item-title">
-      
-        <span class="item-type">@mixin</span>
-      
-
-      
-        <a href="#mixin--transition" class="item-name">transition()</a>
-      
-
-      
-
-      
-    </h2>
-
-    
-  
-
-
-    
-    
-  
-  
-  
-  
-
-  
-    <div class="text-block">
-      <p>Access named transitions in your <code>$changes</code> map,
-and apply them to the <code>transition</code> property.</p>
-
-      
-  
-
-      
-  
-
-      
-  
-
-    </div>
-  
-
-  </div>
-
-  
-
-  
-  
-  
-  
-  
-  
-
-  
-    
-  <div data-item-section="parameter">
-    
-      <h3 class="item-subtitle">
-        <span class="item-subtitle-main">Parameters &amp;<span class="widont">&nbsp;</span>Output</span>
         
-      </h3>
-    
-
-    
-      
         
+        
+
+        
+          
+          
+  
+  
+  
+  
+  
+  
   
   
 
@@ -1774,196 +2012,11 @@ and apply them to the <code>transition</code> property.</p>
     <h4 class="param-title">
       
       
-        <span class="item-name">$names:</span>
+        <a href="
+  animate-change-vars.html#variable--change-var-prefix" class="item-name">$change-var-prefix</a>
       
       
       <span class="value-type">(string)</span>
-      
-    </h4>
-
-    
-      
-      <div class="param-details text-block">
-        <p>Named transitions to<span class="widont">&nbsp;</span>apply</p>
-
-      </div>
-    
-  </div>
-
-
-      
-
-      
-  
-
-      
-  
-
-      
-  
-    
-  <div class="param-list">
-    <h4 class="param-title">
-      
-      
-        <span class="item-name">{CSS output}</span>
-      
-      
-      <span class="value-type">(code<span class="widont">&nbsp;</span>block)</span>
-      
-    </h4>
-
-    
-      
-      <div class="param-details text-block">
-        <ul>
-<li>The requested transitions, applied in<span class="widont">&nbsp;</span>CSS</li>
-</ul>
-
-      </div>
-    
-  </div>
-
-  
-
-      
-  
-
-    
-  </div>
-
-  
-
-
-  
-  
-    
-
-    <div data-item-section="examples">
-      <h3 class="item-subtitle">
-        <span class="item-subtitle-main">Example</span>
-      </h3>
-
-      
-        
-  
-  
-
-  
-  
-  
-
-  
-  
-
-  
-  
-
-  
-  <div class="example">
-    <div class="example-code">
-      
-  
-    <div class="code-block">
-      
-        <div class="code-header">
-          <span class="code-language">
-            scss
-          </span>
-
-          
-        </div>
-      
-
-      
-      
-      <pre class="hljs-pre"><code class="lang-scss">$changes: (
-  &#39;fade&#39;: opacity 300ms ease-out,
-);
-.example {
-  @include transition(&#39;fade&#39;);
-}</code></pre>
-    </div>
-  
-
-  
-    <div class="code-block">
-      
-        <div class="code-header">
-          <span class="code-language">
-            css
-          </span>
-
-          
-            <span class='code-description'>
-              compiled
-            </span>
-          
-        </div>
-      
-
-      
-      
-      <pre class="hljs-pre"><code class="lang-css">.example {
-  transition: opacity 300ms ease-out;
-}
-</code></pre>
-    </div>
-  
-
-    </div>
-
-    
-  </div>
-
-      
-    </div>
-  
-
-
-  
-  
-  
-  
-    
-    
-  <div data-item-section="requires">
-    
-      <h3 class="item-subtitle">
-        <span class="item-subtitle-main">Requires</span>
-        
-      </h3>
-    
-
-    
-      
-      
-        
-        
-        
-
-        
-          
-          
-  
-  
-  
-  
-  
-  
-  
-  
-
-  
-  <div class="param-list">
-    <h4 class="param-title">
-      <span class="item-type">@function</span>
-      
-        <a href="
-  animate-change.html#function--change" class="item-name">change()</a>
-      
-      
-      
       
     </h4>
 

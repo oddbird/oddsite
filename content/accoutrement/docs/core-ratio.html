@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <title>General | Accoutrement Documentation</title>
+  <title>Ratios &amp; Modular Scales | Accoutrement Documentation</title>
 
   <link href="assets/img/favicon.ico" rel="shortcut icon">
   <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,600|Source+Sans+Pro:400,400i,700,700i" rel="stylesheet">
@@ -107,7 +107,7 @@
   
   
     <li class="nav-item">
-      <a href="core-ratio.html" data-nav="is-not-active">Ratios &amp; Modular<span class="widont">&nbsp;</span>Scales</a>
+      <a href="core-ratio.html" data-nav="is-active">Ratios &amp; Modular<span class="widont">&nbsp;</span>Scales</a>
     </li>
   
   
@@ -157,7 +157,7 @@
   
   
     <li class="nav-item">
-      <a href="init-root.html" data-nav="is-active">General</a>
+      <a href="init-root.html" data-nav="is-not-active">General</a>
     </li>
   
   
@@ -400,11 +400,11 @@
   <nav class="breadcrumb">
     
     <a href="index.html" >Accoutrement</a> »
-    <strong>General</strong>
+    <strong>Ratios &amp; Modular Scales</strong>
   </nav>
 
 
-        <div data-page="init-root">
+        <div data-page="core-ratio">
           
   
     
@@ -419,7 +419,87 @@
 
 
 
-<section class="item" id="css--html">
+<section class="item" >
+  
+    
+  
+  
+  
+  
+
+  
+    <div data-item-section="prose" class="text-block">
+      <h1 id="layout-type-ratios">Layout &amp; Type<span class="widont">&nbsp;</span>Ratios</h1>
+<p>Ratios are useful for both <a href="scale-sizes.html">modular-scales</a>
+and <a href="layout-ratios.html">fluid media</a> layouts.
+We’ve moved them into the core,
+as a common way of manipulating numerical data,
+on-par with<span class="widont">&nbsp;</span>function-calls.</p>
+
+      
+  
+
+      
+  
+
+      
+  
+
+    </div>
+  
+
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+
+  
+  
+
+
+  
+  
+  
+  
+    
+    
+  
+
+  
+
+  
+  
+
+
+  
+  
+
+  
+  
+
+</section>
+
+  
+    
+    
+
+
+
+
+
+
+
+
+
+
+<section class="item" id="variable--ratios">
   
     
   
@@ -437,9 +517,11 @@
       
 
       
-        <a href="#css--html" class="item-name">html</a>
+        <a href="#variable--ratios" class="item-name">$ratios</a>
       
 
+      
+        <span class="value-type">(map)</span>
       
 
       
@@ -466,10 +548,7 @@
 
       
       
-      <pre class="hljs-pre"><code class="lang-scss">html {
-  -ms-overflow-style: -ms-autohiding-scrollbar;
-  text-size-adjust: 100%;
-}</code></pre>
+      <pre class="hljs-pre"><code class="lang-scss">$ratios: () !default;</code></pre>
     </div>
   
 
@@ -481,33 +560,868 @@
 
   
     <div class="text-block">
-      <p>Prevent iOS and IE text size adjust after device orientation<span class="widont">&nbsp;</span>change.</p>
-<ul>
-<li>Overflow-style: Edge 12+, Internet Explorer<span class="widont">&nbsp;</span>11-</li>
+      <p>Define your own ratios,
+or alias keys for built-in ratios.
+Any ratios that resolve to <code>linear</code>
+will not use any exponential<span class="widont">&nbsp;</span>scale.</p>
+
+      
+  
+
+      
+  
+
+      
+  
+
+    </div>
+  
+
+  </div>
+
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+
+  
+  
+    
+
+    <div data-item-section="examples">
+      <h3 class="item-subtitle">
+        <span class="item-subtitle-main">Example</span>
+      </h3>
+
+      
+        
+  
+  
+
+  
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  <div class="example">
+    <div class="example-code">
+      
+  
+    <div class="code-block">
+      
+        <div class="code-header">
+          <span class="code-language">
+            scss
+          </span>
+
+          
+        </div>
+      
+
+      
+      
+      <pre class="hljs-pre"><code class="lang-scss">$ratios: (
+  &#39;line-height&#39;: (1 / 3),
+  &#39;headings&#39;: &#39;linear&#39;,
+  &#39;_golden&#39;: 1.61803399,
+);</code></pre>
+    </div>
+  
+
+    </div>
+
+    
+  </div>
+
+      
+    </div>
+  
+
+
+  
+
+    
+  <div data-item-section="related">
+    
+      <h3 class="item-subtitle">
+        <span class="item-subtitle-main">Related</span>
+        
+      </h3>
+    
+
+    
+      
+
+      
+        
+  
+  
+  
+  
+  
+
+  
+  <div class="param-list">
+    <h4 class="param-title">
+      
+      
+        <a href="
+  core-ratio.html#variable--_a_RATIOS" class="item-name">$_a_RATIOS</a>
+      
+      
+      
+      
+    </h4>
+
+    
+  </div>
+
+
+      
+    
+  </div>
+
+  
+  
+  
+  
+    
+    
+  
+    
+  <div data-item-section="used-by">
+    
+      <h3 class="item-subtitle">
+        <span class="item-subtitle-main">Used By</span>
+        
+      </h3>
+    
+
+    
+      
+      
+        
+
+        
+          
+          
+  
+  
+  
+  
+  
+  
+
+  
+  <div class="param-list">
+    <h4 class="param-title">
+      <span class="item-type">@mixin</span>
+      
+        <a href="
+  core-ratio.html#mixin--add-ratios" class="item-name">add-ratios()</a>
+      
+      
+      
+      
+    </h4>
+
+    
+  </div>
+
+
+        
+      
+        
+
+        
+      
+    
+  </div>
+
+  
+
+  
+
+  
+  
+
+
+  
+  
+
+  
+  
+
+</section>
+
+  
+    
+    
+
+
+
+
+
+
+
+
+
+
+<section class="item" id="function--ratio">
+  
+    
+  
+  
+
+  
+  
+  
+  
+
+  <div data-item-section="header">
+    <h2 class="item-title">
+      
+        <span class="item-type">@function</span>
+      
+
+      
+        <a href="#function--ratio" class="item-name">ratio()</a>
+      
+
+      
+
+      
+    </h2>
+
+    
+  
+
+
+    
+    
+  
+  
+  
+  
+
+  
+    <div class="text-block">
+      <p>Retrieve a scale ratio by name
+from either the <code>$_DEFAULT-RATIOS</code>
+or user <code>$ratios</code> configurations.</p>
+
+      
+  
+    
+      <section class="summary-subsection">
+        <h3 class="summary-subtitle">Since <code>1.0.0</code>:</h3>
+        <div class="subsection-details"><ul>
+<li>NEW: Accepts <code>$do</code> map argument,
+for on-the-fly<span class="widont">&nbsp;</span>adjustments</li>
+<li>NEW: Accepts <code>$source</code> map argument,
+for custom<span class="widont">&nbsp;</span>source-palette</li>
+</ul>
+</div>
+      </section>
+    
+  
+
+      
+  
+
+      
+  
+
+    </div>
+  
+
+  </div>
+
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    
+  <div data-item-section="parameter">
+    
+      <h3 class="item-subtitle">
+        <span class="item-subtitle-main">Parameters &amp;<span class="widont">&nbsp;</span>Return</span>
+        
+      </h3>
+    
+
+    
+      
+        
+  
+  
+
+  
+  <div class="param-list">
+    <h4 class="param-title">
+      
+      
+        <span class="item-name">$ratio:</span>
+      
+      
+      <span class="value-type">(string |<span class="widont">&nbsp;</span>number)</span>
+      
+    </h4>
+
+    
+      
+      <div class="param-details text-block">
+        <p>The key-name or value of a<span class="widont">&nbsp;</span>ratio</p>
+
+      </div>
+    
+  </div>
+
+
+      
+        
+  
+  
+
+  
+  <div class="param-list">
+    <h4 class="param-title">
+      
+      
+        <span class="item-name">$do:</span>
+      
+      <span class="item-value">null</span>
+      <span class="value-type">(map |<span class="widont">&nbsp;</span>null)</span>
+      
+    </h4>
+
+    
+      
+      <div class="param-details text-block">
+        <p>A map of function/ratio adjustments to run on the returned<span class="widont">&nbsp;</span>value</p>
+
+      </div>
+    
+  </div>
+
+
+      
+        
+  
+  
+
+  
+  <div class="param-list">
+    <h4 class="param-title">
+      
+      
+        <span class="item-name">$source:</span>
+      
+      <span class="item-value">$ratios</span>
+      <span class="value-type">(map)</span>
+      
+    </h4>
+
+    
+      
+      <div class="param-details text-block">
+        <p>Optional accoutrement-format map of ratios to use as the origin palette
+(in addition to the provided<span class="widont">&nbsp;</span>defaults)</p>
+
+      </div>
+    
+  </div>
+
+
+      
+
+      
+  
+
+      
+  
+    
+  <div class="param-list">
+    <h4 class="param-title">
+      
+      
+        <span class="item-name">@return</span>
+      
+      
+      <span class="value-type">(number)</span>
+      
+    </h4>
+
+    
+      
+      <div class="param-details text-block">
+        <p>The numeric value of a<span class="widont">&nbsp;</span>ratio</p>
+
+      </div>
+    
+  </div>
+
+  
+
+      
+  
+
+      
+  
+
+    
+  </div>
+
+  
+
+
+  
+  
+    
+
+    <div data-item-section="examples">
+      <h3 class="item-subtitle">
+        <span class="item-subtitle-main">Example</span>
+      </h3>
+
+      
+        
+  
+  
+
+  
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  <div class="example">
+    <div class="example-code">
+      
+  
+    <div class="code-block">
+      
+        <div class="code-header">
+          <span class="code-language">
+            scss
+          </span>
+
+          
+        </div>
+      
+
+      
+      
+      <pre class="hljs-pre"><code class="lang-scss">/* _octave: #{ratio(&#39;_octave&#39;)} */
+/* _fifth: #{ratio(&#39;_fifth&#39;)} */</code></pre>
+    </div>
+  
+
+  
+    <div class="code-block">
+      
+        <div class="code-header">
+          <span class="code-language">
+            css
+          </span>
+
+          
+            <span class='code-description'>
+              compiled
+            </span>
+          
+        </div>
+      
+
+      
+      
+      <pre class="hljs-pre"><code class="lang-css">/* _octave: 2 */
+/* _fifth: 1.5 */
+</code></pre>
+    </div>
+  
+
+    </div>
+
+    
+  </div>
+
+      
+    </div>
+  
+
+
+  
+  
+  
+  
+    <div class="requires-wrapper">
+      
+    
+  <div data-item-section="requires">
+    
+      <h3 class="item-subtitle">
+        <span class="item-subtitle-main">Requires</span>
+        
+      </h3>
+    
+
+    
+      
+      
+        
+        
+        
+
+        
+          
+          
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  <div class="param-list">
+    <h4 class="param-title">
+      <span class="item-type">@function</span>
+      
+        <a href="
+  core-get.html#function--get-token" class="item-name">get-token()</a>
+      
+      
+      
+      
+    </h4>
+
+    
+  </div>
+
+
+        
+      
+        
+        
+        
+
+        
+          
+          
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  <div class="param-list">
+    <h4 class="param-title">
+      
+      
+        <a href="
+  core-ratio.html#variable--_a_RATIOS" class="item-name">$_a_RATIOS</a>
+      
+      
+      
+      
+    </h4>
+
+    
+  </div>
+
+
+        
+      
+    
+  </div>
+
+  
+      
+  
+    
+  <div data-item-section="used-by">
+    
+      <h3 class="item-subtitle">
+        <span class="item-subtitle-main">Used By</span>
+        
+      </h3>
+    
+
+    
+      
+      
+        
+
+        
+          
+          
+  
+  
+  
+  
+  
+  
+
+  
+  <div class="param-list">
+    <h4 class="param-title">
+      <span class="item-type">@function</span>
+      
+        <a href="
+  layout-ratios.html#function--fluid-ratio" class="item-name">fluid-ratio()</a>
+      
+      
+      
+      
+    </h4>
+
+    
+  </div>
+
+
+        
+      
+        
+
+        
+          
+          
+  
+  
+  
+  
+  
+  
+
+  
+  <div class="param-list">
+    <h4 class="param-title">
+      <span class="item-type">@function</span>
+      
+        <span class="item-name">_a_do()</span>
+      
+      
+      
+      <span class="item-note">[private]</span>
+    </h4>
+
+    
+  </div>
+
+
+        
+      
+    
+  </div>
+
+  
+
+    </div>
+  
+
+  
+  
+
+
+  
+  
+
+  
+  
+
+</section>
+
+  
+    
+    
+
+
+
+
+
+
+
+
+
+
+<section class="item" id="mixin--add-ratios">
+  
+    
+  
+  
+
+  
+  
+  
+  
+
+  <div data-item-section="header">
+    <h2 class="item-title">
+      
+        <span class="item-type">@mixin</span>
+      
+
+      
+        <a href="#mixin--add-ratios" class="item-name">add-ratios()</a>
+      
+
+      
+
+      
+    </h2>
+
+    
+  
+
+
+    
+    
+  
+  
+  
+  
+
+  
+    <div class="text-block">
+      <p>Merge individual ratio maps into the global <code>$ratio</code> variable.
+This can be useful for internal organization,
+documentation with <a href="http://sassdoc.com/">SassDoc</a>,
+or integration with our pattern-library generator:
+<a href="http://oddbird.net/herman/">Herman</a>.</p>
+
+      
+  
+
+      
+  
+
+      
+  
+
+    </div>
+  
+
+  </div>
+
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    
+  <div data-item-section="parameter">
+    
+      <h3 class="item-subtitle">
+        <span class="item-subtitle-main">Parameters &amp;<span class="widont">&nbsp;</span>Output</span>
+        
+      </h3>
+    
+
+    
+      
+        
+  
+  
+
+  
+  <div class="param-list">
+    <h4 class="param-title">
+      
+      
+        <span class="item-name">$maps:</span>
+      
+      
+      <span class="value-type">(map...)</span>
+      
+    </h4>
+
+    
+      
+      <div class="param-details text-block">
+        <p>Pass any number of maps to be<span class="widont">&nbsp;</span>merged.</p>
+
+      </div>
+    
+  </div>
+
+
+      
+
+      
+  
+
+      
+  
+
+      
+  
+    
+  <div class="param-list">
+    <h4 class="param-title">
+      
+      
+        <span class="item-name">{CSS output}</span>
+      
+      
+      <span class="value-type">(code<span class="widont">&nbsp;</span>block)</span>
+      
+    </h4>
+
+    
+      
+      <div class="param-details text-block">
+        <ul>
+<li>An updated global <code>$ratios</code> variable,
+with new maps merged<span class="widont">&nbsp;</span>in.</li>
 </ul>
 
-      
-  
-
-      
-  
-
-      
-  
-
-    </div>
-  
-
+      </div>
+    
   </div>
 
   
 
+      
   
-  
-  
-  
-  
-  
+
+    
+  </div>
 
   
 
@@ -521,6 +1435,97 @@
   
   
     
+    
+  <div data-item-section="requires">
+    
+      <h3 class="item-subtitle">
+        <span class="item-subtitle-main">Requires</span>
+        
+      </h3>
+    
+
+    
+      
+      
+        
+        
+        
+
+        
+          
+          
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  <div class="param-list">
+    <h4 class="param-title">
+      <span class="item-type">@function</span>
+      
+        <span class="item-name">_a_map-multimerge()</span>
+      
+      
+      
+      <span class="item-note">[private]</span>
+    </h4>
+
+    
+  </div>
+
+
+        
+      
+        
+        
+        
+
+        
+          
+          
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  <div class="param-list">
+    <h4 class="param-title">
+      
+      
+        <a href="
+  core-ratio.html#variable--ratios" class="item-name">$ratios</a>
+      
+      
+      <span class="value-type">(map)</span>
+      
+    </h4>
+
+    
+  </div>
+
+
+        
+      
+        
+        
+        
+
+        
+      
+    
+  </div>
+
+  
     
   
 
@@ -551,7 +1556,7 @@
 
 
 
-<section class="item" id="css--main">
+<section class="item" id="variable--_a_RATIOS">
   
     
   
@@ -569,7 +1574,7 @@
       
 
       
-        <a href="#css--main" class="item-name">main</a>
+        <a href="#variable--_a_RATIOS" class="item-name">$_a_RATIOS</a>
       
 
       
@@ -598,9 +1603,26 @@
 
       
       
-      <pre class="hljs-pre"><code class="lang-scss">main {
-  display: block;
-}</code></pre>
+      <pre class="hljs-pre"><code class="lang-scss">$_a_RATIOS: (
+  &#39;_octave&#39;: 2,
+  &#39;_major-seventh&#39;: (15 / 8),
+  &#39;_minor-seventh&#39;: (16 / 9),
+  &#39;_major-sixth&#39;: (5 / 3),
+  &#39;_minor-sixth&#39;: (8 / 5),
+  &#39;_fifth&#39;: (3 / 2),
+  &#39;_augmented-fourth&#39;: (45 / 32),
+  &#39;_fourth&#39;: (4 / 3),
+  &#39;_major-third&#39;: (5 / 4),
+  &#39;_minor-third&#39;: (6 / 5),
+  &#39;_major-second&#39;: (9 / 8),
+  &#39;_minor-second&#39;: (16 / 15),
+
+  &#39;_photo&#39;: &#39;#_fifth&#39;,
+  &#39;_classic&#39;: &#39;#_fourth&#39;,
+  &#39;_widescreen&#39;: &#39;#_minor-seventh&#39;,
+  &#39;_cinema&#39;: 2.39,
+  &#39;_golden&#39;: 1.618,
+);</code></pre>
     </div>
   
 
@@ -612,11 +1634,8 @@
 
   
     <div class="text-block">
-      <ul>
-<li>Android 4.3-</li>
-<li>Internet Explorer 11-</li>
-<li>Windows Phone 8.1+</li>
-</ul>
+      <p>Some default named ratios you can use,
+but shouldn’t edit<span class="widont">&nbsp;</span>directly.</p>
 
       
   
@@ -649,1062 +1668,194 @@
 
 
   
-  
-  
-  
-    
-    
-  
-
-  
-
-  
-  
-
-
-  
-  
-
-  
-  
-
-</section>
-
-  
-    
-    
-
-
-
-
-
-
-
-
-
-
-<section class="item" id="css--details">
-  
-    
-  
-  
-
-  
-  
-  
-  
-
-  <div data-item-section="header">
-    <h2 class="item-title">
-      
-        <span class="item-type"></span>
-      
-
-      
-        <a href="#css--details" class="item-name">details</a>
-      
-
-      
-
-      
-    </h2>
 
     
-  
-
+  <div data-item-section="related">
+    
+      <h3 class="item-subtitle">
+        <span class="item-subtitle-main">Related</span>
+        
+      </h3>
+    
 
     
+      
+
+      
+        
+  
+  
+  
+  
+  
+
+  
+  <div class="param-list">
+    <h4 class="param-title">
+      
+      
+        <a href="
+  core-ratio.html#variable--ratios" class="item-name">$ratios</a>
+      
+      
+      
+      
+    </h4>
+
     
+  </div>
+
+
+      
     
-  
-    <div class="code-block">
-      
-        <div class="code-header">
-          <span class="code-language">
-            scss
-          </span>
-
-          
-        </div>
-      
-
-      
-      
-      <pre class="hljs-pre"><code class="lang-scss">details {
-  display: block;
-}</code></pre>
-    </div>
-  
-
-    
-  
-  
-  
-  
-
-  
-    <div class="text-block">
-      <ul>
-<li>Edge 12+</li>
-<li>Firefox 40+</li>
-<li>Internet Explorer 11-</li>
-<li>Windows Phone 8.1+</li>
-</ul>
-
-      
-  
-
-      
-  
-
-      
-  
-
-    </div>
-  
-
   </div>
 
   
-
-  
-  
-  
-  
-  
-  
-
-  
-
-
-  
-  
-
-
-  
   
   
   
     
     
   
-
-  
-
-  
-  
-
-
-  
-  
-
-  
-  
-
-</section>
-
-  
     
+  <div data-item-section="used-by">
+    
+      <h3 class="item-subtitle">
+        <span class="item-subtitle-main">Used By</span>
+        
+      </h3>
     
 
-
-
-
-
-
-
-
-
-
-<section class="item" id="css--pre">
-  
     
-  
-  
-
-  
-  
-  
-  
-
-  <div data-item-section="header">
-    <h2 class="item-title">
       
-        <span class="item-type"></span>
       
+        
 
-      
-        <a href="#css--pre" class="item-name">pre</a>
-      
-
-      
-
-      
-    </h2>
-
-    
-  
-
-
-    
-    
-    
-  
-    <div class="code-block">
-      
-        <div class="code-header">
-          <span class="code-language">
-            scss
-          </span>
-
+        
           
-        </div>
-      
-
-      
-      
-      <pre class="hljs-pre"><code class="lang-scss">pre {
-  overflow: auto;
-}</code></pre>
-    </div>
+          
   
+  
+  
+  
+  
+  
+
+  
+  <div class="param-list">
+    <h4 class="param-title">
+      <span class="item-type">@function</span>
+      
+        <a href="
+  core-ratio.html#function--ratio" class="item-name">ratio()</a>
+      
+      
+      
+      
+    </h4>
 
     
-  
-  
-  
-  
-
-  
-    <div class="text-block">
-      <p>Internet Explorer 11-</p>
-
-      
-  
-
-      
-  
-
-      
-  
-
-    </div>
-  
-
   </div>
 
-  
 
-  
-  
-  
-  
-  
-  
-
-  
-
-
-  
-  
-
-
-  
-  
-  
-  
-    
-    
-  
-
-  
-
-  
-  
-
-
-  
-  
-
-  
-  
-
-</section>
-
-  
-    
-    
-
-
-
-
-
-
-
-
-
-
-<section class="item" id="css--progress">
-  
-    
-  
-  
-
-  
-  
-  
-  
-
-  <div data-item-section="header">
-    <h2 class="item-title">
+        
       
-        <span class="item-type"></span>
-      
+        
 
-      
-        <a href="#css--progress" class="item-name">progress</a>
-      
-
-      
-
-      
-    </h2>
-
-    
-  
-
-
-    
-    
-    
-  
-    <div class="code-block">
-      
-        <div class="code-header">
-          <span class="code-language">
-            scss
-          </span>
-
+        
           
-        </div>
-      
-
-      
-      
-      <pre class="hljs-pre"><code class="lang-scss">progress {
-  display: inline-block;
-}</code></pre>
-    </div>
+          
   
+  
+  
+  
+  
+  
+
+  
+  <div class="param-list">
+    <h4 class="param-title">
+      <span class="item-type">@mixin</span>
+      
+        <a href="
+  core-ratio-vars.html#mixin--ratios--" class="item-name">ratios--()</a>
+      
+      
+      
+      
+    </h4>
 
     
-  
-  
-  
-  
-
-  
-    <div class="text-block">
-      <ul>
-<li>Internet Explorer 11-</li>
-<li>Windows Phone 8.1+</li>
-</ul>
-
-      
-  
-
-      
-  
-
-      
-  
-
-    </div>
-  
-
   </div>
 
-  
 
-  
-  
-  
-  
-  
-  
-
-  
-
-
-  
-  
-
-
-  
-  
-  
-  
-    
-    
-  
-
-  
-
-  
-  
-
-
-  
-  
-
-  
-  
-
-</section>
-
-  
-    
-    
-
-
-
-
-
-
-
-
-
-
-<section class="item" id="css--summary">
-  
-    
-  
-  
-
-  
-  
-  
-  
-
-  <div data-item-section="header">
-    <h2 class="item-title">
+        
       
-        <span class="item-type"></span>
-      
+        
 
-      
-        <a href="#css--summary" class="item-name">summary</a>
-      
-
-      
-
-      
-    </h2>
-
-    
-  
-
-
-    
-    
-    
-  
-    <div class="code-block">
-      
-        <div class="code-header">
-          <span class="code-language">
-            scss
-          </span>
-
+        
           
-        </div>
-      
-
-      
-      
-      <pre class="hljs-pre"><code class="lang-scss">summary {
-  display: block;
-}</code></pre>
-    </div>
+          
   
+  
+  
+  
+  
+  
+
+  
+  <div class="param-list">
+    <h4 class="param-title">
+      <span class="item-type">@mixin</span>
+      
+        <a href="
+  core-ratio-vars.html#mixin--ratio--" class="item-name">ratio--()</a>
+      
+      
+      
+      
+    </h4>
 
     
-  
-  
-  
-  
-
-  
-    <div class="text-block">
-      <ul>
-<li>Firefox 40+</li>
-<li>Internet Explorer 11-</li>
-<li>Windows Phone 8.1+</li>
-</ul>
-
-      
-  
-
-      
-  
-
-      
-  
-
-    </div>
-  
-
   </div>
 
-  
 
-  
-  
-  
-  
-  
-  
-
-  
-
-
-  
-  
-
-
-  
-  
-  
-  
-    
-    
-  
-
-  
-
-  
-  
-
-
-  
-  
-
-  
-  
-
-</section>
-
-  
-    
-    
-
-
-
-
-
-
-
-
-
-
-<section class="item" id="css--template">
-  
-    
-  
-  
-
-  
-  
-  
-  
-
-  <div data-item-section="header">
-    <h2 class="item-title">
+        
       
-        <span class="item-type"></span>
-      
+        
 
-      
-        <a href="#css--template" class="item-name">template</a>
-      
-
-      
-
-      
-    </h2>
-
-    
-  
-
-
-    
-    
-    
-  
-    <div class="code-block">
-      
-        <div class="code-header">
-          <span class="code-language">
-            scss
-          </span>
-
+        
           
-        </div>
-      
-
-      
-      
-      <pre class="hljs-pre"><code class="lang-scss">template {
-  display: none;
-}</code></pre>
-    </div>
+          
   
+  
+  
+  
+  
+  
+
+  
+  <div class="param-list">
+    <h4 class="param-title">
+      <span class="item-type">@function</span>
+      
+        <a href="
+  core-ratio-vars.html#function--var-ratio" class="item-name">var-ratio()</a>
+      
+      
+      
+      
+    </h4>
 
     
-  
-  
-  
-  
-
-  
-    <div class="text-block">
-      <ul>
-<li>Android 4.3-</li>
-<li>Internet Explorer 11-</li>
-<li>iOS 7-</li>
-<li>Safari 7-</li>
-<li>Windows Phone 8.1+</li>
-</ul>
-
-      
-  
-
-      
-  
-
-      
-  
-
-    </div>
-  
-
   </div>
 
-  
 
-  
-  
-  
-  
-  
-  
-
-  
-
-
-  
-  
-
-
-  
-  
-  
-  
+        
+      
     
-    
-  
-
-  
-
-  
-  
-
-
-  
-  
-
-  
-  
-
-</section>
-
-  
-    
-    
-
-
-
-
-
-
-
-
-
-
-<section class="item" id="css--*%2C%0A%3A%3Abefore%2C%0A%3A%3Aafter">
-  
-    
-  
-  
-
-  
-  
-  
-  
-
-  <div data-item-section="header">
-    <h2 class="item-title">
-      
-        <span class="item-type"></span>
-      
-
-      
-        <a href="#css--*%2C%0A%3A%3Abefore%2C%0A%3A%3Aafter" class="item-name">*,
-::before,<span class="widont">&nbsp;</span>::after</a>
-      
-
-      
-
-      
-    </h2>
-
-    
-  
-
-
-    
-    
-    
-  
-    <div class="code-block">
-      
-        <div class="code-header">
-          <span class="code-language">
-            scss
-          </span>
-
-          
-        </div>
-      
-
-      
-      
-      <pre class="hljs-pre"><code class="lang-scss">*,
-::before,
-::after {
-  border-style: solid;
-  border-width: 0;
-  box-sizing: border-box;
-}</code></pre>
-    </div>
-  
-
-    
-  
-  
-  
-  
-
-  
-    <div class="text-block">
-      <p>Specify the border style, width, and box-sizing of all<span class="widont">&nbsp;</span>elements.</p>
-
-      
-  
-
-      
-  
-
-      
-  
-
-    </div>
-  
-
   </div>
 
-  
-
-  
-  
-  
-  
-  
-  
-
-  
-
-
-  
-  
-
-
-  
-  
-  
-  
-    
-    
-  
-
-  
-
-  
-  
-
-
-  
-  
-
-  
-  
-
-</section>
-
-  
-    
-    
-
-
-
-
-
-
-
-
-
-
-<section class="item" id="css--*">
-  
-    
-  
-  
-
-  
-  
-  
-  
-
-  <div data-item-section="header">
-    <h2 class="item-title">
-      
-        <span class="item-type"></span>
-      
-
-      
-        <a href="#css--*" class="item-name">*</a>
-      
-
-      
-
-      
-    </h2>
-
-    
-  
-
-
-    
-    
-    
-  
-    <div class="code-block">
-      
-        <div class="code-header">
-          <span class="code-language">
-            scss
-          </span>
-
-          
-        </div>
-      
-
-      
-      
-      <pre class="hljs-pre"><code class="lang-scss">* {
-  font-size: inherit;
-  line-height: inherit;
-  margin: 0;
-  padding: 0;
-}</code></pre>
-    </div>
-  
-
-    
-  
-  
-  
-  
-
-  
-    <div class="text-block">
-      <p>Specify the core styles of all<span class="widont">&nbsp;</span>elements.</p>
-
-      
-  
-
-      
-  
-
-      
-  
-
-    </div>
-  
-
-  </div>
-
-  
-
-  
-  
-  
-  
-  
-  
-
-  
-
-
-  
-  
-
-
-  
-  
-  
-  
-    
-    
-  
-
-  
-
-  
-  
-
-
-  
-  
-
-  
-  
-
-</section>
-
-  
-    
-    
-
-
-
-
-
-
-
-
-
-
-<section class="item" id="css--table">
-  
-    
-  
-  
-
-  
-  
-  
-  
-
-  <div data-item-section="header">
-    <h2 class="item-title">
-      
-        <span class="item-type"></span>
-      
-
-      
-        <a href="#css--table" class="item-name">table</a>
-      
-
-      
-
-      
-    </h2>
-
-    
-  
-
-
-    
-    
-    
-  
-    <div class="code-block">
-      
-        <div class="code-header">
-          <span class="code-language">
-            scss
-          </span>
-
-          
-        </div>
-      
-
-      
-      
-      <pre class="hljs-pre"><code class="lang-scss">table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}</code></pre>
-    </div>
-  
-
-    
-  
-  
-  
-  
-
-  
-    <div class="text-block">
-      <p>Specify the border styling of<span class="widont">&nbsp;</span>tables.</p>
-
-      
-  
-
-      
-  
-
-      
-  
-
-    </div>
-  
-
-  </div>
-
-  
-
-  
-  
-  
-  
-  
-  
-
-  
-
-
-  
-  
-
-
-  
-  
-  
-  
-    
-    
   
 
   
