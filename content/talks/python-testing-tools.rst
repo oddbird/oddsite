@@ -1,5 +1,6 @@
 public: yes
 speakers: [carl]
+talk: true
 events:
   - venue: 'ConFoo'
     url: 'http://confoo.ca/'

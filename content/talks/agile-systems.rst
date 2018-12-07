@@ -1,5 +1,6 @@
 public: yes
 speakers: [miriam]
+talk: true
 events:
   - venue: 'Agile Denver'
     url: 'https://www.meetup.com/Agile-Denver2/events/251897187/'

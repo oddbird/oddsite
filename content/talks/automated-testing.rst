@@ -1,5 +1,6 @@
 public: yes
 speakers: [carl]
+talk: true
 events:
   - venue: 'PyCon'
     url: 'https://us.pycon.org/2013/'

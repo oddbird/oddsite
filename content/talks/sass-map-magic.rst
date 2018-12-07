@@ -1,5 +1,6 @@
 public: yes
 speakers: [miriam]
+talk: true
 slides: 'https://www.oddbooksapp.com/book/sass-map-magic'
 events:
   - venue: 'CSSConf 2016'

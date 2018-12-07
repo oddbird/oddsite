@@ -15,6 +15,7 @@
   {% set show_author = false if author else true %}
 
   {{ splash(talks) }}
+  {{ splash(talks, 'workshop') }}
 
   {{ videos(
     events=events,
@@ -103,15 +104,17 @@
 
 
 {% macro splash(
-  talks
+  events,
+  type='talk'
 ) %}
-  {% set talks = talks|filter_pages('brag') %}
+  {% set events = events|filter_pages('brag')|filter_pages(type) %}
+  {% set title = 'Featured %ss' % type|capitalize %}
 
-  {% if talks|length %}
+  {% if events|length %}
     <section class="splash-talks extend-full">
-      {{ content.divider(title='Featured Talks & Workshops') }}
+      {{ content.divider(title=title) }}
       <div class="splash-section">
-        {% for talk in talks %}
+        {% for talk in events %}
           <article class="splash-talk">
             <div class="splash-brag">
               <h3 class="splash-title">

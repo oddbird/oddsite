@@ -1,5 +1,6 @@
 public: yes
 speakers: [miriam]
+talk: true
 slides: 'https://oddbooksapp.com/book/wwc-layout'
 events:
   - venue: 'Women Who Code Fort Collins'

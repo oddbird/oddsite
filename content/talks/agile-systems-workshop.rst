@@ -1,5 +1,10 @@
 public: yes
 speakers: [miriam, stacy]
+workshop: true
+brag: |
+  Learn to build
+  **robust and scalable design systems**
+  without breaking the budget.
 summary: |
   **Style Guides & Pattern Libraries are great tools**
   for documenting the relationships between code and design,

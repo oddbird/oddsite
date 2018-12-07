@@ -1,5 +1,6 @@
 public: yes
 speakers: [miriam]
+talk: true
 slides: 'http://miriamsuzanne.com/pres/sass-partials/'
 events:
   - venue: 'NYCSass Meetup'
