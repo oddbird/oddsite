@@ -31,7 +31,7 @@ offer here. We've made a pretty traditional RESTful API with it,
 keeping the endpoints flat, with minimal server-side logic mostly
 encapsulated in the serializers.
 
-The endpoints look a bit like this:
+Just so we're on the same page, the endpoints look a bit like this:
 
 .. code::
 
@@ -41,7 +41,7 @@ The endpoints look a bit like this:
    PUT /api/foo/:id
    DELETE /api/foo/:id
 
-And the code like this:
+And the code is organized like this:
 
 .. code::
 
@@ -57,34 +57,33 @@ And the code like this:
        serializers.py
        views.py
 
-For something that I'm not distributing as a library, I like to keep the
-tests parallel to the code and within the same tree; I find it makes it
-easier to work with the tests that pertain to the code you're touching
-as you work on it. If I'm writing a library, I root the tests in a
-different tree, but still with parallel structure to the code; this
-makes it easier to exclude them on an install.
+(For something that I'm not distributing as a library, I like to keep
+the tests parallel to the code and within the same tree; I find it makes
+it easier to work with the tests that pertain to the code you're
+touching as you work on it. If I'm writing a library, I root the tests
+in a different tree, but still with parallel structure to the code; this
+makes it easier to exclude them on an install.)
 
 Inside those files, we mostly have simple declarative use of DRF. Follow
 their `tutorial`_ if you want to get that set up.
 
 We use `pytest`_ for all our Python tests, and a require 100% test
 coverage. Because of this, we can't just skip anything that's "too hard"
-to test.
+to test, so I will talk a bit about our testing setup later.
 
-It may be more likely that you are less familiar with Channels; I
-haven't seen it get quite as much uptake, being a more specialized tool.
-That said, it's pretty simple to set up on top of an existing Django
-application, so I'll walk you through it in brief.
+Now Channels. I don't encounter people as familiar with it as I do with
+DRF, so I'll walk through how we set it up a little more.  It's not too
+bad, but it is different than you may be used to from basic Django.
 
-First, you need to move from using WSGI to ASGI, which is "basically the
-same, but async". This means changing your server process from gunicorn
-to something like `Daphne`_, changing your ``project.wsgi`` file to
-``project.asgi`` (as described in the `Channels docs`_), add a
-``routing`` module and a ``consumers`` module, and adjust your settings
-appropriately.
+First, you need to move from using WSGI to ASGI, which is "basically
+WSGI, but async". This means changing your server process from gunicorn
+(or whatever you use) to something like `Daphne`_, changing your
+``project.wsgi`` module to ``project.asgi`` (as described in the
+`Channels docs`_), adding a ``routing`` module and a ``consumers``
+module, and adjusting your settings appropriately.
 
-At this stage, you won't yet have anything in ``consumers``, and you
-won't have much in ``routing``. It can look like this:
+At this stage, you won't yet have anything in ``consumers``, nor much in
+``routing``. ``routing`` can look like this:
 
 .. code:: python
 
@@ -111,29 +110,35 @@ notifications to the client. We've opted to simplify the client's job by
 having one endpoint that it can call to subscribe to any object it
 wants, using the payload it sends to validate and set up that
 subscription. So the client sends the following data to
-``wss://server.domain/ws/notifications``:
+``wss://server.domain/ws/notifications/``:
 
 .. code:: json
 
    {
-       "model": "string representation of model name",
-       "id": "hashid of the instance PK"
+       "model": "app.label",
+       "id": "123ABC"
    }
+
+The model is something like ``foo.Foo``, using the syntax
+``apps.get_model`` `expects`_. The id is the HashID of the model instance
+in question. (We use HashIDs everywhere we can, to avoid leaking
+information through consecutive ID numbers.)
 
 The server will then decide if the requesting user can subscribe to that
 model, and start sending them updates over that WebSocket if so.
 
-On the server's side of things, we have a Consumer object that handles a
-bunch of WebSocket events, and, when appropriate, adds a particular
-socket connection to a named Group. Elsewhere in the server logic, we
-send events to that group when the model changes, and all subscribed
-sockets will receive a serialization of the model with the changes.
+On the server's side of things, we have a ``Consumer`` object that
+handles a bunch of WebSocket events, and, when appropriate, adds a
+particular socket connection to a named ``Group``. Elsewhere in the
+server logic, we send events to that ``Group`` when the model changes,
+and all subscribed sockets will receive a serialization of the model
+with the changes.
 
-(Since we're using React on the frontend for this project, we're also
+(Since we're using React on the front-end for this project, we're also
 sending a value that happens to map to the Redux event names we're
 using, but that sort of tight coupling may not match your needs.)
 
-OK, but what does that Consumer look like?
+OK, but what does that ``Consumer`` look like?
 
 .. code:: python
 
@@ -175,11 +180,6 @@ OK, but what does that Consumer look like?
             allowed to subscribe to the requested object.
             """
 
-            # Define this method on your consumer like the version in
-            # rest_framework.generics.GenericAPIView
-            # Be sure to pass in the context, so that the serializer can
-            # confirm that this particular user can get updates on this
-            # particular object.
             serializer = self.get_serializer(data=content)
             if not serializer.is_valid():
                 return
@@ -195,7 +195,11 @@ OK, but what does that Consumer look like?
                 self.channel_name,
             )
 
-And you'll want to add some stuff to your ``routing`` module, too:
+         def get_serializer(self, *, data):
+             # ... omitted for brevity. See
+             # https://github.com/encode/django-rest-framework/blob/master/rest_framework/generics.py
+
+And now you'll want to add some stuff to your ``routing`` module, too:
 
 .. code:: python
 
@@ -229,7 +233,11 @@ the appropriate functions to wrap up the data and send it over the
 channels layer, and then we call out to those functions in the models'
 ``save`` methods.
 
-In our ``notifications.py`` we have something like this:
+First, the ``notifications`` module: we define an async function that
+will build and send an appropriately-shaped object to the appropriate
+group on the channel layer. This is part of our API, and the output of
+all the helper functions here should be documented for anyone who
+consumes this API.
 
 .. code:: python
 
@@ -241,7 +249,7 @@ In our ``notifications.py`` we have something like this:
         group_name = serializer.get_group_name()
         channel_layer = get_channel_layer()
         content = {
-            # This "type" passes through to the frontend to facilitate
+            # This "type" passes through to the front-end to facilitate
             # our Redux events.
             "type": "UPDATE_FOO",
             "payload": serializer.data,
@@ -253,7 +261,10 @@ In our ``notifications.py`` we have something like this:
             "content": content,
         })
 
-And then our models has something like this:
+And then our ``models`` relies on three things: an override in the
+``save`` method, the ``FieldTracker`` from ``django-model-utils``, and
+calling the update method from ``notifications`` wrapped in
+``asgiref.sync.async_to_sync``. This looks like:
 
 .. code:: python
 
@@ -285,30 +296,57 @@ functions, if you use the ``@pytest.mark.asyncio`` marker on them. The
 Channels docs have some more details on `how to test consumers`_ this
 way.
 
+The one caution I can offer is be sure to read from your consumer at
+each point where you expect it to have new data, or your tests may fall
+down with hard-to-diagnose timeout errors. So your tests will look a
+little like this:
+
+.. code:: python
+
+
+   connected, _ = await communicator.connect()
+   assert connected
+
+   await communicator.send_json_to({
+       "model": "as.Appropriate",
+       "id": str(some_model.id),
+   })
+   assert await communicator.receive_nothing()
+
+   await some_notification_async_function()
+   response = await communicator.receive_json_from()
+   assert response == {
+       # ... whatever you expect
+   }
+
+   await communicator.disconnect()
+
 Final thoughts
 --------------
 
 This is a work in progress, of course. As we iron out the kinks, I
 intend to wrap up the easily isolated pieces of logic into a package we
-can distribute. I think that this will involve a particular Consumer, a
-serializer mixin, a model mixin, and a particular notifications module.
+can distribute. I think that this will involve a particular
+``Consumer``, a serializer mixin, a model mixin, and a particular
+notifications module.
 
-One particular problem we've found, and not yet grappled with, is what
-happens when you change a serializer based on the requesting user. For
-example, if you want to only show a restricted version of the User
-unless it is the user requesting their own information, how do we handle
-this when serializing for the websocket? I don't have a good answer yet.
+One particular problem we've found, and not yet solved, is what happens
+when you change a serializer based on the requesting user. For example,
+if you want to only show a restricted version of the User unless it is
+the user requesting their own information, how do we handle this when
+serializing for the websocket? I don't have a good answer yet.
 
 Let us know if you try this, or have ideas for improvements! This is new
 ground for me, and I'd love to have some different perspectives on it.
 
 
 
+.. _Channels docs: https://channels.readthedocs.io/en/latest/deploying.html?highlight=asgi.py#run-protocol-servers
 .. _Daphne: https://github.com/django/daphne
 .. _Django REST Framework: https://www.django-rest-framework.org/
 .. _Tom Christie: https://groups.google.com/d/msg/django-rest-framework/3-QNn3SYlZI/Gwx6rFr4BQAJ
-.. _tutorial: https://www.django-rest-framework.org/tutorial/quickstart/
-.. _pytest: https://docs.pytest.org/en/latest/
-.. _Channels docs: https://channels.readthedocs.io/en/latest/deploying.html?highlight=asgi.py#run-protocol-servers
-.. _pytest-asyncio: https://github.com/pytest-dev/pytest-asyncio
+.. _expects: https://docs.djangoproject.com/en/2.1/ref/applications/#django.apps.apps.get_model
 .. _how to test consumers: https://channels.readthedocs.io/en/latest/topics/testing.html
+.. _pytest-asyncio: https://github.com/pytest-dev/pytest-asyncio
+.. _pytest: https://docs.pytest.org/en/latest/
+.. _tutorial: https://www.django-rest-framework.org/tutorial/quickstart/
