@@ -67,7 +67,8 @@
       events=future,
       talk=ctx,
       title="Upcoming Appearances…",
-      show_author=false
+      show_author=false,
+      venue_link=true
     ) }}
 
     {% if past|length > 0 %}
@@ -207,7 +208,8 @@
   talk=none,
   show_author=false,
   details=none,
-  slice=none
+  slice=none,
+  venue_link=false
 ) %}
   <section data-module="events-list">
     {% if events %}
@@ -218,7 +220,8 @@
           event=event,
           talk=talk,
           show_author=show_author,
-          details=details
+          details=details,
+          venue_link=venue_link
         ) }}
 
         {% if loop.index == slice %}
@@ -249,11 +252,12 @@
   event,
   talk=none,
   show_author=false,
-  details=none
+  details=none,
+  venue_link=false
 ) %}
   {% set event_date = event.date|make_date %}
   {% set talk = talk if talk else all_pages|filter_pages('slug', 'eq', event.slug)|get_page %}
-  {% set url = event.url if details else content.page_link(talk) %}
+  {% set url = event.url if (details or venue_link) else content.page_link(talk) %}
 
   <article class="event">
     <h4 class="event-venue">
@@ -261,6 +265,9 @@
         content=event.venue,
         url=url
         )  }}
+      {% if talk.config.workshop %}
+        [workshop]
+      {% endif %}
     </h4>
 
     {{ meta(

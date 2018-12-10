@@ -7,10 +7,10 @@ events:
     date: [2019, 4, 16]
     adr: 'San Francisco, CA'
 brag: |
-  Learn a variety of **new and advanced CSS techniques** --
+  Learn a variety of **new and advanced CSS techniques**,
   along with practical use-cases, integrations, and pitfalls.
 summary: |
-  From building beautiful sites,
+  From building beautiful sites
   to maintaining complex design systems across applications,
   CSS is the web-language of design.
   Like all web languages,
@@ -23,7 +23,7 @@ summary: |
 Advanced CSS for Modern Applications
 ====================================
 
-Miriam will introduce a variety of new and advanced CSS techniques --
+Miriam will introduce a variety of new and advanced CSS techniques,
 along with practical use-cases, integrations, and pitfalls.
 You’ll learn how to manage CSS variables, grids, calculations,
 support queries, and more --
@@ -41,7 +41,7 @@ In this workshop, you’ll learn:
   advanced media & support queries, and more
 - Building powerful interactions between CSS and JS
 - Combining techniques to solve practical problems,
-  from layout and theming, to interaction, and data visualization
+  from layout and theming to interaction and data visualization
 - Common gotchas and work-arounds
 - Using Sass to write more meaningful and maintainable systems
 - CSS & Sass architecture patterns that scale
