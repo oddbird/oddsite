@@ -36,7 +36,6 @@ const scssLoaders = [
     loader: 'css-loader',
     options: {
       sourceMap: true,
-      minimize: process.env.NODE_ENV === 'production',
       importLoaders: 2,
     },
   },
