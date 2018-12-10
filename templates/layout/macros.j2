@@ -249,17 +249,18 @@
   {% set by_sub = speaker_list(ctx.config.speakers) if ctx.config.speakers else none %}
   {% set sub = page_sub or proj_sub or by_sub %}
 
-  {% set type = headline.type if (headline and headline.type) else none %}
-  {% set type = 'Case Study' if (project and client and not type) else type %}
+  {% set type = none %}
+  {% set type = 'Case Study' if (project and client) else type %}
   {% set type = 'Open Source Software' if (project and contributors and not type) else type %}
   {% set type = 'Meet the Birds…' if (ctx.config.bird and not type) else type %}
   {% set type -%}
     {%- if (ctx.config.speakers and not type) -%}
       {{ '%s Details' % ('Workshop' if ctx.config.workshop else 'Talk') }}
-    {%- else -%}
+    {%- elif type -%}
       {{ type }}
     {%- endif -%}
   {%- endset %}
+  {% set type = headline.type if (headline and headline.type) else type %}
 
   {{ header_image(ctx, default=true) }}
 
