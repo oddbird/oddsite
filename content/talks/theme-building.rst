@@ -1,5 +1,6 @@
 public: yes
 speakers: [stacy]
+talk: true
 events:
   - venue: 'WordPress Naperville'
     url: 'https://www.meetup.com/WordPress-Naperville/events/236903886/'

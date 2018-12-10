@@ -1,5 +1,6 @@
 public: yes
 speakers: [miriam]
+talk: true
 summary: |
   This event has been scheduled,
   but the talk/workshop title & topic

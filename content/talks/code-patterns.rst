@@ -1,5 +1,6 @@
 public: yes
 speakers: [miriam]
+talk: true
 slides: 'http://oddbooksapp.com/book/pattern-making'
 events:
   - venue: 'Refresh Denver'

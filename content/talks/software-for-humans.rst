@@ -1,5 +1,6 @@
 public: yes
 speakers: [miriam]
+talk: true
 slides: https://www.oddbooksapp.com/book/software-for-humans
 headline:
   - tagline: 'Designing software for humans…'
