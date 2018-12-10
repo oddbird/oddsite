@@ -16,6 +16,7 @@ A ways back, Tom Christie, the creator of `Django REST Framework`_
     I think the biggest thing missing for folks ATM is probably just a
     lack of tutorials or blog posts on using Channels and REST framework
     together.
+
     -- `Tom Christie`_
 
 I realized that's *exactly* what we're working on lately at OddBird, so
@@ -321,7 +322,7 @@ little like this:
 
    await communicator.disconnect()
 
-Final thoughts
+Final Thoughts
 --------------
 
 This is a work in progress, of course. As we iron out the kinks, I
