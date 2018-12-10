@@ -1,12 +1,13 @@
 public: yes
 speakers: [miriam]
+talk: true
 slides: 'https://www.oddbooksapp.com/book/css-layout'
 image:
   - src: 'pages/devconf-best.jpg'
 events:
-  - venue: 'ElectronConf'
-    url: 'http://electronconf.com/'
-    date: [2019, 1, 15]
+  - venue: 'Covalence Conference'
+    url: 'http://www.covalenceconf.com/'
+    date: [2019, 1, 16]
     adr: 'San Francisco, CA'
   - venue: 'Beyond Tellerand'
     url: 'https://beyondtellerrand.com/events/duesseldorf-2018'

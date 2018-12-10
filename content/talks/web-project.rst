@@ -1,5 +1,6 @@
 public: yes
 speakers: [miriam]
+talk: true
 slides: 'https://www.oddbooksapp.com/book/web-projects'
 events:
   - venue: 'Boost Biz Ed'

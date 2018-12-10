@@ -1,5 +1,6 @@
 public: yes
 speakers: [miriam]
+talk: true
 slides: 'https://www.oddbooksapp.com/book/losing-control'
 events:
   - venue: 'UVA Scholars’ Lab'

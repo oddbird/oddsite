@@ -1,11 +1,16 @@
 public: yes
 speakers: [miriam]
+talk: true
 slides: 'http://talks.oddbird.net/dynamic-css/'
 events:
   - venue: 'Smashing Conference'
     url: 'https://www.smashingconf.com/sf-2019/'
     date: [2019, 4, 16]
     adr: 'San Francisco, CA'
+  - venue: 'VueConf US'
+    url: 'http://vueconf.us/'
+    date: [2019, 3, 26]
+    adr: 'Tampa, FL'
   - venue: 'Front Range Front-End'
     url: 'https://www.meetup.com/front-range-front-end/events/chtxtpyxpbcb/'
     date: [2018, 11, 1]

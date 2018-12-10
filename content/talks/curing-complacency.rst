@@ -1,5 +1,6 @@
 public: yes
 speakers: [stacy]
+talk: true
 slides: 'http://www.slideshare.net/Funstacy/curing-design-complacency-61550889'
 events:
   - venue: 'WordCamp Chicago'
