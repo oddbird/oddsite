@@ -1,5 +1,5 @@
 public: yes
-tags: [Python, Django, APIs, ASGI, 'Push Notifications']
+tags: [Python, Django, APIs, ASGI, 'Push Notifications', Code]
 author: kit
 summary: |
   We're exploring some patterns lately for how to add WebSocket push
@@ -17,6 +17,8 @@ DRF), said:
     lack of tutorials or blog posts on using Channels and REST framework
     together.
 
+    --Tom Christie
+
 I realized that that's *exactly* what we're working on lately at
 OddBird, so I thought I'd write up an in-progress report. I'm not at all
 convinced that this is the best way, but it's what seems to be working
@@ -30,7 +32,9 @@ We've made a pretty traditional RESTful API with it, keeping the
 endpoints flat, with minimal server-side logic mostly encapsulated in
 the serializers.
 
-The endpoints look a bit like this::
+The endpoints look a bit like this:
+
+.. code::
 
    GET /api/foo
    POST /api/foo
@@ -38,7 +42,9 @@ The endpoints look a bit like this::
    PUT /api/foo/:id
    DELETE /api/foo/:id
 
-And the code like this::
+And the code like this:
+
+.. code::
 
    foo/
      __init__.py
@@ -76,8 +82,9 @@ to something like Daphne, changing your ``project.wsgi`` file to
 appropriately.
 
 At this stage, you won't yet have anything in ``consumers``, and you
-won't have much in routing. It can look like this::
+won't have much in routing. It can look like this:
 
+.. code:: python
 
    from channels.routing import ProtocolTypeRouter
 
@@ -105,7 +112,9 @@ WebSockets. We've opted to simplify the client's job by having one
 endpoint that it can call to subscribe to any objects it wants, and to
 use the payload it sends to validate and set up that subscription. So
 the client sends the following data to
-``wss://server.domain/ws/notifications``::
+``wss://server.domain/ws/notifications``:
+
+.. code:: json
 
    {
        "object_type": "string representation of type",
@@ -127,7 +136,7 @@ using, but that sort of tight coupling may not match your needs.)
 
 OK, but what does that Consumer look like?
 
-::
+.. code:: python
 
     from channels.generic.websocket import AsyncJsonWebsocketConsumer
 
@@ -187,7 +196,9 @@ OK, but what does that Consumer look like?
                 self.channel_name,
             )
 
-And you'll want to add some stuff to your ``routing`` module, too::
+And you'll want to add some stuff to your ``routing`` module, too:
+
+.. code:: python
 
     from django.urls import path
 
@@ -219,8 +230,9 @@ the appropriate functions to wrap up the data and send it over the
 channels layer, and then we call out to those functions in the models'
 ``save`` methods.
 
-In our ``notifications.py`` we have something like this::
+In our ``notifications.py`` we have something like this:
 
+.. code:: python
 
     from channels.layers import get_channel_layer
     from .serializers import FooSerializer
@@ -242,7 +254,9 @@ In our ``notifications.py`` we have something like this::
             "content": content,
         })
 
-And then our models has something like this::
+And then our models has something like this:
+
+.. code:: python
 
     from django.db import models
     # Using FieldTracker from django-model-utils helps you only send
