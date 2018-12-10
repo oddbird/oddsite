@@ -2,7 +2,7 @@ public: yes
 tags: [Code, Python, Django, APIs, ASGI, 'Push Notifications', DRF, Channels]
 author: kit
 image:
-  - src: 'blog/2018/chanel.jpg'
+  - src: 'blog/2018/channel.jpg'
 summary: |
   We've begun exploring some patterns for how to add WebSocket push
   notifications to what is otherwise a RESTful API. This means, for us,
