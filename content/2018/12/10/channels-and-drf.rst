@@ -1,8 +1,8 @@
 public: yes
-tags: [Python, Django, APIs, ASGI, 'Push Notifications', Code]
+tags: [Code, Python, Django, APIs, ASGI, 'Push Notifications', DRF, Channels]
 author: kit
 summary: |
-  We're exploring some patterns lately for how to add WebSocket push
+  We've begun exploring some patterns for how to add WebSocket push
   notifications to what is otherwise a RESTful API. This means, for us,
   using Django REST Framework and Django Channels in concert.
 
@@ -10,27 +10,26 @@ summary: |
 Django REST Framework and Channels
 ==================================
 
-Recently, Tom Christie, the creator of Django REST Framework (a.k.a.
-DRF), said:
+A ways back, Tom Christie, the creator of `Django REST Framework`_
+(DRF), said:
 
     I think the biggest thing missing for folks ATM is probably just a
     lack of tutorials or blog posts on using Channels and REST framework
     together.
+    -- `Tom Christie`_
 
-    --Tom Christie
+I realized that's *exactly* what we're working on lately at OddBird, so
+I thought I'd write up an in-progress report. I'm not at all convinced
+that this is the best way, but it's what seems to be working so far.
 
-I realized that that's *exactly* what we're working on lately at
-OddBird, so I thought I'd write up an in-progress report. I'm not at all
-convinced that this is the best way, but it's what seems to be working
-so far.
-
-The basics
+The Basics
 ----------
 
-First, DRF. If you're here, you're probably already familiar with it.
-We've made a pretty traditional RESTful API with it, keeping the
-endpoints flat, with minimal server-side logic mostly encapsulated in
-the serializers.
+First, DRF. I'm going to assume that you're familiar with it, and if
+you're not, their own documentation is better than any summary I can
+offer here. We've made a pretty traditional RESTful API with it,
+keeping the endpoints flat, with minimal server-side logic mostly
+encapsulated in the serializers.
 
 The endpoints look a bit like this:
 
@@ -58,31 +57,34 @@ And the code like this:
        serializers.py
        views.py
 
-As a side note, for something that I'm not distributing as a library, I
-like to keep the tests parallel to the code and within the same tree; if
-I'm writing a library, I root the tests in a different tree, but still
-with parallel structure to the code. This makes it easier to exclude
-them on an install.
+For something that I'm not distributing as a library, I like to keep the
+tests parallel to the code and within the same tree; I find it makes it
+easier to work with the tests that pertain to the code you're touching
+as you work on it. If I'm writing a library, I root the tests in a
+different tree, but still with parallel structure to the code; this
+makes it easier to exclude them on an install.
 
 Inside those files, we mostly have simple declarative use of DRF. Follow
-their `tutorial`_ if you want to get that set up. We run our tests with
-`pytest`_ and a requirement of 100% test coverage, as we do with all our
-projects.
+their `tutorial`_ if you want to get that set up.
 
-Channels is perhaps a little less likely to be familiar; I haven't seen
-it get quite as much uptake, being a more specialized tool. That said,
-it's pretty simple to set up on top of an existing Django application,
-so I'll walk you through it in brief.
+We use `pytest`_ for all our Python tests, and a require 100% test
+coverage. Because of this, we can't just skip anything that's "too hard"
+to test.
+
+It may be more likely that you are less familiar with Channels; I
+haven't seen it get quite as much uptake, being a more specialized tool.
+That said, it's pretty simple to set up on top of an existing Django
+application, so I'll walk you through it in brief.
 
 First, you need to move from using WSGI to ASGI, which is "basically the
 same, but async". This means changing your server process from gunicorn
-to something like Daphne, changing your ``project.wsgi`` file to
+to something like `Daphne`_, changing your ``project.wsgi`` file to
 ``project.asgi`` (as described in the `Channels docs`_), add a
 ``routing`` module and a ``consumers`` module, and adjust your settings
 appropriately.
 
 At this stage, you won't yet have anything in ``consumers``, and you
-won't have much in routing. It can look like this:
+won't have much in ``routing``. It can look like this:
 
 .. code:: python
 
@@ -92,10 +94,9 @@ won't have much in routing. It can look like this:
        # (http->django views is added by default)
    })
 
-Yep, that's basically an empty ``ProtocolTypeRouter``. We're just making
-sure we don't break anything with the transition to ASGI, first, and
-``ProtocolTypeRouter`` does as the comment says, and wires HTTP to
-Django by default.
+Yep, that's basically an empty ``ProtocolTypeRouter``. We're just first
+making sure we don't break anything with the transition to ASGI, and
+that ``ProtocolTypeRouter`` correctly wires HTTP to Django.
 
 Once that's all done and you've confirmed that everything's still
 working, you can start to add in the wiring for WebSockets.
@@ -103,22 +104,20 @@ working, you can start to add in the wiring for WebSockets.
 WebSockets, Consumers, and Groups
 ---------------------------------
 
-Let's talk a bit about architecture before we talk about how to
-implement it.
+Let's talk a bit about architecture before we dive into implementation.
 
-As we're using it, Channels primarily drives the pushing of
-notifications about the state of selected objects to the client, over
-WebSockets. We've opted to simplify the client's job by having one
-endpoint that it can call to subscribe to any objects it wants, and to
-use the payload it sends to validate and set up that subscription. So
-the client sends the following data to
+As we're using it, Channels primarily drives WebSockets to push
+notifications to the client. We've opted to simplify the client's job by
+having one endpoint that it can call to subscribe to any object it
+wants, using the payload it sends to validate and set up that
+subscription. So the client sends the following data to
 ``wss://server.domain/ws/notifications``:
 
 .. code:: json
 
    {
-       "object_type": "string representation of type",
-       "id": "hashid of the instance"
+       "model": "string representation of model name",
+       "id": "hashid of the instance PK"
    }
 
 The server will then decide if the requesting user can subscribe to that
@@ -294,11 +293,20 @@ intend to wrap up the easily isolated pieces of logic into a package we
 can distribute. I think that this will involve a particular Consumer, a
 serializer mixin, a model mixin, and a particular notifications module.
 
+One particular problem we've found, and not yet grappled with, is what
+happens when you change a serializer based on the requesting user. For
+example, if you want to only show a restricted version of the User
+unless it is the user requesting their own information, how do we handle
+this when serializing for the websocket? I don't have a good answer yet.
+
 Let us know if you try this, or have ideas for improvements! This is new
 ground for me, and I'd love to have some different perspectives on it.
 
 
 
+.. _Daphne: https://github.com/django/daphne
+.. _Django REST Framework: https://www.django-rest-framework.org/
+.. _Tom Christie: https://groups.google.com/d/msg/django-rest-framework/3-QNn3SYlZI/Gwx6rFr4BQAJ
 .. _tutorial: https://www.django-rest-framework.org/tutorial/quickstart/
 .. _pytest: https://docs.pytest.org/en/latest/
 .. _Channels docs: https://channels.readthedocs.io/en/latest/deploying.html?highlight=asgi.py#run-protocol-servers
