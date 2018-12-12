@@ -1,5 +1,15 @@
 public: yes
-tags: [Code, Python, Django, APIs, ASGI, 'Push Notifications', DRF, Channels]
+tags: [
+    Code,
+    Python,
+    Django,
+    APIs,
+    ASGI,
+    'Push Notifications',
+    WebSockets,
+    DRF,
+    Channels
+    ]
 author: kit
 image:
   - src: 'blog/2018/channel.jpg'
@@ -29,7 +39,7 @@ The Basics
 ----------
 
 First, DRF. I'll just touch briefly on this, assuming that you're
-already familiar with it. If you're not, their own documentation is
+already familiar with it. If you're not, `their own documentation`_ is
 better than any summary I can offer here. We've made a pretty
 traditional RESTful API with it, keeping the endpoints flat, with
 minimal server-side logic mostly encapsulated in the serializers.
@@ -352,4 +362,5 @@ ground for me, and I'd love to have some different perspectives on it.
 .. _how to test consumers: https://channels.readthedocs.io/en/latest/topics/testing.html
 .. _pytest-asyncio: https://github.com/pytest-dev/pytest-asyncio
 .. _pytest: https://docs.pytest.org/en/latest/
+.. _their own documentation: `Django REST Framework`_
 .. _tutorial: https://www.django-rest-framework.org/tutorial/quickstart/
