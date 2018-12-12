@@ -28,11 +28,11 @@ that this is the best way, but it's what seems to be working so far.
 The Basics
 ----------
 
-First, DRF. I'm going to assume that you're familiar with it, and if
-you're not, their own documentation is better than any summary I can
-offer here. We've made a pretty traditional RESTful API with it,
-keeping the endpoints flat, with minimal server-side logic mostly
-encapsulated in the serializers.
+First, DRF. I'll just touch briefly on this, assuming that you're
+already familiar with it. If you're not, their own documentation is
+better than any summary I can offer here. We've made a pretty
+traditional RESTful API with it, keeping the endpoints flat, with
+minimal server-side logic mostly encapsulated in the serializers.
 
 Just so we're on the same page, the endpoints look a bit like this:
 
