@@ -42,7 +42,7 @@
       <div class="project-title">
         <a href="index.html" rel="home" class="project-name">Herman</a>
         
-          <span class="project-version">3.0.0</span>
+          <span class="project-version">3.0.1</span>
         
       </div>
     </header>
@@ -234,23 +234,7 @@
         <ul>
           
             <li class="nav-item">
-              <a href="http://oddbird.net/accoutrement-color/" data-nav="is-not-active">Accoutrement-Color</a>
-            </li>
-          
-            <li class="nav-item">
-              <a href="http://oddbird.net/accoutrement-scale/" data-nav="is-not-active">Accoutrement-Scale</a>
-            </li>
-          
-            <li class="nav-item">
-              <a href="http://oddbird.net/accoutrement-type/" data-nav="is-not-active">Accoutrement-Type</a>
-            </li>
-          
-            <li class="nav-item">
-              <a href="http://oddbird.net/accoutrement-layout/" data-nav="is-not-active">Accoutrement-Layout</a>
-            </li>
-          
-            <li class="nav-item">
-              <a href="http://oddbird.net/accoutrement-init/" data-nav="is-not-active">Accoutrement-Init</a>
+              <a href="http://oddbird.net/accoutrement/" data-nav="is-not-active">Accoutrement</a>
             </li>
           
         </ul>
@@ -447,7 +431,7 @@ $brand-pink: hsl(330, 85%, 48%);
       
       <pre class="hljs-pre"><code class="lang-scss">$demo-colors: (
   &#39;brand-blue&#39;: $brand-blue,
-  &#39;brand-pink&#39;: $brand-pink
+  &#39;brand-pink&#39;: $brand-pink,
 );</code></pre>
     </div>
   
@@ -466,7 +450,7 @@ we’ll want to combine them into a map
 of name/value pairs.
 Sass does not provide any shortcuts for automating this step,
 or removing the duplication,
-but you can use a tool like our <a href="http://oddbird.net/accoutrement-color/">Accoutrement-Color</a>
+but you can use a tool like our <a href="http://oddbird.net/accoutrement/">Accoutrement</a>
 to store and access colors
 directly in a Herman-friendly<span class="widont">&nbsp;</span>map.</p>
 <p>Create as many maps as you like
@@ -830,11 +814,11 @@ to be added to the <code>$herman</code> export map.</li>
 <p>At OddBird, we store our colors in more complex maps,
 where the values need to be parsed and compiled
 before they can be exported to Herman.
-Using <a href="http://oddbird.net/accoutrement-color">accoutrement-color</a>, our maps look like<span class="widont">&nbsp;</span>this:</p>
+Using <a href="http://oddbird.net/accoutrement">accoutrement</a>, our maps look like<span class="widont">&nbsp;</span>this:</p>
 <pre><code class="lang-scss">$demo-noncolors: (
-  'light-gray': 'brand-blue' ('tint': 80%, 'desaturate': 80%),
-  'gray': 'brand-blue' ('desaturate': 80%),
-  'black': 'brand-blue' ('shade': 30%, 'desaturate': 80%),
+  'light-gray': '#brand-blue' ('tint': 80%, 'desaturate': 80%),
+  'gray': '#brand-blue' ('desaturate': 80%),
+  'contrast-dark': '#brand-blue' ('shade': 30% #000, 'desaturate': 80%),
 );
 </code></pre>
 <p>Our <code>color()</code> function knows how to interpret that syntax
@@ -916,9 +900,9 @@ along with any additional arguments required for that<span class="widont">&nbsp;
       
       <pre class="hljs-pre"><code class="lang-scss">$herman: ();
 $demo-noncolors: (
-  &#39;light-gray&#39;: &#39;brand-blue&#39; (&#39;tint&#39;: 80%, &#39;desaturate&#39;: 80%),
-  &#39;gray&#39;: &#39;brand-blue&#39; (&#39;desaturate&#39;: 80%),
-  &#39;black&#39;: &#39;brand-blue&#39; (&#39;shade&#39;: 30%, &#39;desaturate&#39;: 80%),
+  &#39;light-gray&#39;: &#39;#brand-blue&#39; (&#39;tint&#39;: 80%, &#39;desaturate&#39;: 80%),
+  &#39;gray&#39;: &#39;#brand-blue&#39; (&#39;desaturate&#39;: 80%),
+  &#39;black&#39;: &#39;#brand-blue&#39; (&#39;shade&#39;: 30%, &#39;desaturate&#39;: 80%),
 );
 
 @include herman-add(
@@ -948,7 +932,7 @@ $demo-noncolors: (
 
       
       
-      <pre class="hljs-pre"><code class="lang-css">/* (&quot;colors&quot;: (&quot;demo-noncolors&quot;: (&quot;light-gray&quot;: #dedede, &quot;gray&quot;: #555b5e, &quot;black&quot;: #3b4042))) */
+      <pre class="hljs-pre"><code class="lang-css">/* (&quot;colors&quot;: (&quot;demo-noncolors&quot;: (&quot;light-gray&quot;: #dedede, &quot;gray&quot;: #555b5e, &quot;black&quot;: #515151))) */
 </code></pre>
     </div>
   
@@ -984,7 +968,7 @@ $demo-noncolors: (
     <h4 class="param-title">
       
       
-        <a href="http://oddbird.net/accoutrement-color" class="item-name">Accoutrement-Color</a>
+        <a href="http://oddbird.net/accoutrement" class="item-name">Accoutrement</a>
       
       
       
@@ -1097,7 +1081,7 @@ $demo-noncolors: (
           <div class="color-info">
             <strong class="color-name">
               
-                <span class="color-name-option">black</span>
+                <span class="color-name-option">contrast-dark</span>
               
             </strong>
             

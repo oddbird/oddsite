@@ -71,13 +71,13 @@
     "sass-loader": "^7.1.0",
     "sass-true": "^4.0.0",
     "sassdoc": "^2.5.1",
-    "sassdoc-theme-herman": "^3.0.0",
+    "sassdoc-theme-herman": "^3.0.1",
     "sinon": "^7.2.2",
     "sinon-chai": "^3.3.0",
     "touch": "^3.1.0",
     "webpack": "^4.28.3",
     "webpack-assets-manifest": "^3.1.1",
-    "webpack-cli": "^3.2.0",
+    "webpack-cli": "^3.2.1",
     "webpack-merge": "^4.2.1"
   },
   "resolutions": {
