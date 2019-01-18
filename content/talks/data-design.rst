@@ -1,7 +1,7 @@
 public: yes
 speakers: [miriam]
 talk: true
-slides: 'http://talks.oddbird.net/dynamic-css/'
+slides: 'https://talks.oddbird.net/dynamic-css/'
 events:
   - venue: 'Smashing Conference'
     url: 'https://www.smashingconf.com/sf-2019/'
@@ -15,10 +15,14 @@ events:
     url: 'https://www.meetup.com/front-range-front-end/events/chtxtpyxpbcb/'
     date: [2018, 11, 1]
     adr: 'Denver, CO'
+    slides: 'https://talks.oddbird.net/dynamic-css/frontrange18/'
   - venue: 'Full Stack Fest'
     url: 'https://2018.fullstackfest.com/'
     date: [2018, 9, 6]
     adr: 'Barcelona, Spain'
+    slides: 'https://talks.oddbird.net/dynamic-css/fullstack18/'
+    video: '<iframe width="560" height="315" src="https://www.youtube.com/embed/9fTUeLsR2Hc" frameborder="0" allowfullscreen></iframe>'
+    video_link: https://youtu.be/9fTUeLsR2Hc
   - venue: 'JSConf US'
     url: 'https://2018.jsconf.us/'
     date: [2018, 8, 21]

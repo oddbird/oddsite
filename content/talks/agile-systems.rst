@@ -1,11 +1,13 @@
 public: yes
 speakers: [miriam]
 talk: true
+slides: 'https://talks.oddbird.net/agile-systems/'
 events:
   - venue: 'Agile Denver'
     url: 'https://www.meetup.com/Agile-Denver2/events/251897187/'
     date: [2018, 10, 22]
     adr: 'Denver, CO'
+    slides: 'https://talks.oddbird.net/agile-systems/agiledenver18/'
   - venue: 'Front-End Front Range'
     url: 'https://www.meetup.com/front-range-front-end/events/zwjmwlyxgbhb/'
     date: [2018, 4, 5]

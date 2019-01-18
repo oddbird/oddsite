@@ -1,10 +1,15 @@
 public: yes
 speakers: [miriam]
 talk: true
-slides: 'https://www.oddbooksapp.com/book/css-layout'
+slides: 'https://talks.oddbird.net/no-grid-system/'
 image:
   - src: 'pages/devconf-best.jpg'
 events:
+  - venue: 'Boulder Python'
+    url: 'https://www.meetup.com/BoulderPython/events/256868153/'
+    date: [2019, 2, 12]
+    adr: 'Boulder, CO'
+    slides: 'https://talks.oddbird.net/no-grid-system/covalence19/'
   - venue: 'Covalence Conference'
     url: 'http://www.covalenceconf.com/'
     date: [2019, 1, 16]
