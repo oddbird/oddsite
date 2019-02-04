@@ -317,6 +317,31 @@
 
 
 {#
+  Audio
+  -----
+#}
+{% macro audio(
+  src,
+  link=none,
+  caption=none
+) %}
+{% set caption = caption if (caption != none) else caller() %}
+<figure class="figure">
+  {% if caption %}
+    <figcaption class="caption">{{ caption | rst | safe }}</figcaption>
+  {% endif %}
+  <audio
+    src="{{ src }}"
+    controls />
+  {{ utility.link_if(
+    'Listen to the audio',
+    link or src
+  ) }}
+</figure>
+{% endmacro %}
+
+
+{#
   Link Lists
   ----------
 #}

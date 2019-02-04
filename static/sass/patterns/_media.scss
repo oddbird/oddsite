@@ -5,8 +5,13 @@
 audio,
 canvas,
 iframe,
-video {
+video,
+audio {
   margin-bottom: size('gutter');
+}
+
+audio {
+  width: 100%;
 }
 
 svg {
