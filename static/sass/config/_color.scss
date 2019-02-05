@@ -14,8 +14,13 @@ $brand-colors: (
   'brand-pink': hsl(330, 100%, 45%),
 );
 
-@include add-colors($brand-colors) @include
-  herman-add('colors', 'brand-colors', $brand-colors, get-function('color'));
+@include add-colors($brand-colors);
+@include herman-add(
+  'colors',
+  'brand-colors',
+  $brand-colors,
+  get-function('color')
+);
 
 // Contrast Colors
 // ---------------
@@ -34,13 +39,13 @@ $contrast-colors: (
     ),
 );
 
-@include add-colors($contrast-colors) @include
-  herman-add(
-    'colors',
-    'contrast-colors',
-    $contrast-colors,
-    get-function('color')
-  );
+@include add-colors($contrast-colors);
+@include herman-add(
+  'colors',
+  'contrast-colors',
+  $contrast-colors,
+  get-function('color')
+);
 
 // Pattern Colors
 // --------------
@@ -103,8 +108,13 @@ $pattern-colors: (
   'icon-block': '#brand-orange',
 );
 
-@include add-colors($pattern-colors) @include
-  herman-add('colors', 'pattern-colors', $pattern-colors, get-function('color'));
+@include add-colors($pattern-colors);
+@include herman-add(
+  'colors',
+  'pattern-colors',
+  $pattern-colors,
+  get-function('color')
+);
 
 // Code Highlighting Colors
 // ------------------------
@@ -225,10 +235,10 @@ $highlight-colors: (
   'code-gen-subhead': hsl(165, 58%, 42%),
 );
 
-@include add-colors($highlight-colors) @include
-  herman-add(
-    'colors',
-    'highlight-colors',
-    $highlight-colors,
-    get-function('color')
-  );
+@include add-colors($highlight-colors);
+@include herman-add(
+  'colors',
+  'highlight-colors',
+  $highlight-colors,
+  get-function('color')
+);

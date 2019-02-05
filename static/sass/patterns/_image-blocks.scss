@@ -8,7 +8,7 @@
   @include above('small-page') {
     align-items: center;
     display: flex;
-    display: grid; // sass-lint:disable-line no-duplicate-properties
+    display: grid;
     grid-template-columns: auto minmax(0, 1fr);
     text-align: left;
   }

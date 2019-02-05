@@ -97,7 +97,7 @@ perform an appropriate selection of the following tasks whenever changes are
 detected to files in the ``templates/`` and ``content/`` directories:
 
 * validate JS with `ESLint`_
-* validate Sass with `Sass Lint`_
+* validate Sass with `stylelint`_
 * compile the static assets with `Webpack`_
 * regenerate the site as static HTML files under the ``dev-output/`` directory
 
@@ -111,7 +111,7 @@ source and `gulp`_ documentation for more info.
 .. _Python: https://www.python.org/
 .. _virtualenv: http://www.virtualenv.org
 .. _ESLint: http://eslint.org/
-.. _Sass Lint: https://github.com/sasstools/sass-lint
+.. _stylelint: https://stylelint.io/
 .. _Webpack: http://webpack.github.io/
 .. _gulp: http://gulpjs.com/
 

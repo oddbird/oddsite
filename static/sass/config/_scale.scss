@@ -98,7 +98,7 @@ $spacing-sizes: (
     ),
   'pad': 1rem,
   'pixel': 1px,
-  // responsive spacing 'spacer': 'calc(#double-gutter + 3vw)',
+  'spacer': 'calc(#double-gutter + 3vw)',
 );
 
 @include add-sizes($spacing-sizes);

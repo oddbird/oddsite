@@ -318,7 +318,7 @@ gulp.task(
       });
 
       // lint all scss when rules change
-      gulp.watch('**/.sass-lint.yml', gulp.parallel('sasslint-nofail'));
+      gulp.watch('**/.stylelintrc.yml', gulp.parallel('sasslint-nofail'));
 
       // run sass tests on changes
       gulp.watch(paths.SASS, gulp.parallel('sasstest'));
