@@ -28,11 +28,9 @@
   }
 }
 
-
 .nav-item {
   display: inline-flex;
 }
-
 
 // Shared base styles for links in navigation
 .nav-link {
@@ -70,22 +68,17 @@
 $nav-locations: (
   'case-studies': 'work',
   'open-source': 'work',
-
   'planning': 'services',
   'development': 'services',
   'design-systems': 'services',
   'speaking': 'services',
-
   'birds': 'about',
   'community': 'about',
-
   'blog': null,
   'contact': null,
-
   'susysite-sites': null,
   'susysite-articles': null,
   'susysite-styleguide': 'susysite-support',
-
   'hermansite-articles': null,
 );
 
@@ -99,7 +92,6 @@ $nav-locations: (
     }
   }
 }
-
 
 // OddBird link from sub-sites
 [data-active='oddbird'] {

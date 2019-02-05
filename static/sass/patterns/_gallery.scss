@@ -18,8 +18,12 @@ $min-image: 300px;
     grid-template-columns: repeat(auto-fill, minmax($min-image, 1fr));
   }
 
-  @supports (--css: variables) { // sass-lint:disable-line space-around-operator
-    grid-template-columns: repeat(auto-fill, minmax(var(--min-image, $min-image), 1fr));
+  @supports (--css: variables) {
+    // sass-lint:disable-line space-around-operator
+    grid-template-columns: repeat(
+      auto-fill,
+      minmax(var(--min-image, $min-image), 1fr)
+    );
   }
 }
 
@@ -35,7 +39,8 @@ $min-image: 300px;
     margin: 0;
   }
 
-  @supports (--css: variables) { // sass-lint:disable-line space-around-operator
+  @supports (--css: variables) {
+    // sass-lint:disable-line space-around-operator
     flex-basis: var(--min-image, $min-image);
   }
 }
@@ -88,7 +93,6 @@ $min-image: 300px;
   grid-column: 1 / -1;
   margin: size('shim') 0;
 }
-
 
 // Videos
 // ------

@@ -1,7 +1,6 @@
 // Section Config
 // ==============
 
-
 // Section Arrow
 // -------------
 /// Apply a top-border with centered down-arrow triangle,
@@ -18,10 +17,7 @@
 ///   }
 /// @example html
 ///   <hr divider-line="large" />
-@mixin section-arrow(
-  $color: 'border',
-  $background: 'background'
-) {
+@mixin section-arrow($color: 'border', $background: 'background') {
   @include extend('extend-full');
   border-bottom: size('border') solid color($color);
   display: block;
@@ -52,17 +48,24 @@
   }
 }
 
-
 /// @group sections
 /// @todo document small-divider
-@mixin small-divider(
-  $color: 'border'
-) {
+@mixin small-divider($color: 'border') {
   background-image: linear-gradient(
     to right,
-    color($color, ('rgba': 0)),
+    color(
+      $color,
+      (
+        'rgba': 0,
+      )
+    ),
     color($color),
-    color($color, ('rgba': 0))
+    color(
+      $color,
+      (
+        'rgba': 0,
+      )
+    )
   );
   display: block;
   height: size('border-thin');

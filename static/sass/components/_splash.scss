@@ -1,7 +1,6 @@
 // Home Page Projects
 // ==================
 
-
 .splash-section {
   display: flex;
   flex-direction: column;
@@ -12,8 +11,7 @@
   }
 
   @include above('splash-items') {
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
     justify-content: center;
   }
 }

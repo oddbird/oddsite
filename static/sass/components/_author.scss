@@ -42,7 +42,6 @@
   }
 }
 
-
 .bird-face {
   color: color('text');
 
@@ -52,11 +51,9 @@
   }
 }
 
-
 .bio {
   clear: both;
 }
-
 
 [data-size='face'] {
   @include square('bird-face');

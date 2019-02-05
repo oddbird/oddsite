@@ -1,7 +1,6 @@
 // Image Blocks
 // ============
 
-
 .image-block {
   margin: size('gutter') 0;
   text-align: center;
@@ -15,12 +14,10 @@
   }
 }
 
-
 .imageblock-title {
   font-size: size('h3');
   margin-top: 0;
 }
-
 
 .imageblock-link {
   &[href] {
@@ -33,7 +30,6 @@
     }
   }
 }
-
 
 .imageblock-link,
 .imageblock-image {

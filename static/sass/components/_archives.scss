@@ -1,13 +1,11 @@
 // Archives
 // ========
 
-
 .project-feature {
   margin: 0 auto;
   max-width: size('full-content');
   padding: 0 size('gutter');
 }
-
 
 .project-cover-image {
   @include extend('extend-small');
@@ -15,7 +13,6 @@
   margin-bottom: size('gutter');
   margin-top: size('gutter');
 }
-
 
 .project-list-links {
   display: grid;
@@ -26,7 +23,6 @@
     grid-template-columns: repeat(auto-fit, minmax(6em, max-content));
   }
 }
-
 
 .project-list-title,
 .project-list-tagline {
