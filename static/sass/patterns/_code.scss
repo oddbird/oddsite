@@ -17,7 +17,8 @@ code {
     color: color('action');
   }
 
-  a:hover & { // sass-lint:disable-line force-pseudo-nesting
+  a:hover & {
+    // sass-lint:disable-line force-pseudo-nesting
     color: color('action-hover');
   }
 }

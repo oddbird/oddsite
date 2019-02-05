@@ -20,17 +20,21 @@
   }
 }
 
-
 // Running Footer
 // --------------
 
 .contact-wrap {
-  $opaque: color('contact-bg', ('rgba': 1, 'tint': 50%));
+  $opaque: color(
+    'contact-bg',
+    (
+      'rgba': 1,
+      'tint': 50%,
+    )
+  );
   @include link-color-for($opaque);
   background: color('contact-bg');
   padding: size('gutter') 0;
 }
-
 
 [data-module='contact-cta'] {
   @include before(null) {

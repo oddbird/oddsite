@@ -4,7 +4,10 @@
 $times: (
   'fast': 150ms,
   'mid': 200ms,
-  'slow': '#fast' ('times': 2),
+  'slow': '#fast'
+    (
+      'times': 2,
+    ),
 );
 
 $changes: (
