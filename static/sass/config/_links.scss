@@ -1,7 +1,6 @@
 // Links Config
 // ============
 
-
 // Link
 // ----
 /// Shortcut for `link` and `visited` pseudo-classes.
@@ -13,7 +12,6 @@
 ///   }
 /// @group typography
 $link: '&:link, &:visited';
-
 
 // Focus
 // -----
@@ -27,21 +25,29 @@ $link: '&:link, &:visited';
 /// @group typography
 $focus: '&:hover, &:focus, &:active';
 
-
 //
 // @TODO: Add docs to link-color!
 //
-@mixin link-color-for(
-  $background: 'background'
-) {
+@mixin link-color-for($background: 'background') {
   $contrast: contrast($background, 'background', 'action');
-  $hover: color($background, ('lighten': 55%, 'saturate': 100%));
+  $hover: color(
+    $background,
+    (
+      'lighten': 55%,
+      'saturate': 100%,
+    )
+  );
   $hover: if($contrast == color('action'), color('action-hover'), $hover);
 
   a {
-    #{$link}  {
+    #{$link} {
       color: color($contrast);
-      text-decoration-color: color($contrast, ('rgba': 0.25));
+      text-decoration-color: color(
+        $contrast,
+        (
+          'rgba': 0.25,
+        )
+      );
     }
 
     #{$focus} {

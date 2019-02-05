@@ -70,9 +70,14 @@
 
   [data-hero='no'] & {
     #{--opacity}: 0; // default is hidden
-    #{--translate}: calc(50% - var(--opacity, 1) * 50%); // sass-lint:disable-line no-duplicate-properties
+    #{--translate}: calc(
+      50% - var(--opacity, 1) * 50%
+    ); // sass-lint:disable-line no-duplicate-properties
     opacity: 1; // non-variable fallback is visible
-    opacity: var(--opacity, 0); // sass-lint:disable-line no-duplicate-properties
+    opacity: var(
+      --opacity,
+      0
+    ); // sass-lint:disable-line no-duplicate-properties
     transition: opacity time('fast') ease-in-out;
 
     #{$focus} {

@@ -1,7 +1,6 @@
 // Event Styles
 // ============
 
-
 // Components
 // ----------
 
@@ -9,12 +8,10 @@
   margin: size('shim') 0;
 }
 
-
 .event-title,
 .event-venue {
   margin: 0;
 }
-
 
 .event-meta {
   font-size: size('rel-small');
@@ -24,7 +21,6 @@
     font-weight: bold;
   }
 }
-
 
 // Feature
 // -------
@@ -36,7 +32,6 @@
     margin-bottom: size('shim');
   }
 }
-
 
 // List
 // ----
@@ -50,22 +45,17 @@
   .event-meta {
     display: inline-block;
   }
-
 }
-
 
 .event-list-links {
   @include before('»');
-
 }
-
 
 .event-list-link {
   & + & {
     @include before(' | ');
   }
 }
-
 
 .more-events {
   &[aria-pressed='true'] {

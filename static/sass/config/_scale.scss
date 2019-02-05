@@ -1,7 +1,6 @@
 // Scale Settings
 // ==============
 
-
 // Ratios
 // ------
 /// @group config-scale
@@ -13,8 +12,12 @@ $modular-scale: (
 );
 
 @include add-ratios($modular-scale);
-@include herman-add('ratios', 'modular-scale', $modular-scale, get-function('ratio'));
-
+@include herman-add(
+  'ratios',
+  'modular-scale',
+  $modular-scale,
+  get-function('ratio')
+);
 
 // Text Sizes
 // ----------
@@ -26,18 +29,35 @@ $text-sizes: (
   'root': 18px,
   'h2': calc(1rem + 1vw),
   'h3': calc(1rem + 0.5vw),
-  'small': '#root' ('text-ratio': -0.5),
-  'xsmall': '#root' ('text-ratio': -1),
-  'rel-small': 1em ('text-ratio': -0.5),
-  'medium': '#root' ('text-ratio': 0.7),
+  'small': '#root'
+    (
+      'text-ratio': -0.5,
+    ),
+  'xsmall': '#root'
+    (
+      'text-ratio': -1,
+    ),
+  'rel-small': 1em
+    (
+      'text-ratio': -0.5,
+    ),
+  'medium': '#root'
+    (
+      'text-ratio': 0.7,
+    ),
   'caption': '#root',
-  'task': '#root' ('text-ratio': -0.125),
-  'social': '#root' ('text-ratio': -0.25),
+  'task': '#root'
+    (
+      'text-ratio': -0.125,
+    ),
+  'social': '#root'
+    (
+      'text-ratio': -0.25,
+    ),
 );
 
 @include add-sizes($text-sizes);
 @include herman-add('sizes', 'text-sizes', $text-sizes, get-function('size'));
-
 
 // Spacing Sizes
 // -------------
@@ -46,24 +66,48 @@ $text-sizes: (
 /// @link http://oddbird.net/accoutrement-scale/docs/
 ///   Accoutrement Scale
 $spacing-sizes: (
-  'rhythm': '#root' ('text-ratio': 1, 'convert-units': 'rem'),
+  'rhythm': '#root'
+    (
+      'text-ratio': 1,
+      'convert-units': 'rem',
+    ),
   'gutter': '#rhythm',
-  'double-gutter': '#gutter' ('times': 2),
-  'triple-gutter': '#gutter' ('times': 3),
-  'shim-plus': '#gutter' ('times': 0.75),
-  'shim': '#gutter' ('times': 0.5),
-  'half-shim': '#shim' ('times': 0.5),
-  'quarter-shim': '#shim' ('times': 0.25),
+  'double-gutter': '#gutter'
+    (
+      'times': 2,
+    ),
+  'triple-gutter': '#gutter'
+    (
+      'times': 3,
+    ),
+  'shim-plus': '#gutter'
+    (
+      'times': 0.75,
+    ),
+  'shim': '#gutter'
+    (
+      'times': 0.5,
+    ),
+  'half-shim': '#shim'
+    (
+      'times': 0.5,
+    ),
+  'quarter-shim': '#shim'
+    (
+      'times': 0.25,
+    ),
   'pad': 1rem,
   'pixel': 1px,
-
-  // responsive spacing
-  'spacer': 'calc(#double-gutter + 3vw)',
+  // responsive spacing 'spacer': 'calc(#double-gutter + 3vw)',
 );
 
 @include add-sizes($spacing-sizes);
-@include herman-add('sizes', 'spacing-sizes', $spacing-sizes, get-function('size'));
-
+@include herman-add(
+  'sizes',
+  'spacing-sizes',
+  $spacing-sizes,
+  get-function('size')
+);
 
 // Pattern Sizes
 // -------------
@@ -72,30 +116,54 @@ $spacing-sizes: (
 /// @link http://oddbird.net/accoutrement-scale/docs/
 ///   Accoutrement Scale
 $pattern-sizes: (
-  'background': 'calc(%s + 16vw)' ('%s': '#rhythm' ('times': 6)),
+  'background': 'calc(%s + 16vw)'
+    (
+      '%s': '#rhythm'
+        (
+          'times': 6,
+        ),
+    ),
   'border': 8px,
   'border-thin': 1px,
   'border-radius': '#half-shim',
-
-  'logo-y': '#rhythm' ('times': 2.25),
-  'alt-logo-y': '#rhythm' ('times': 2),
-  'hero-logo': '#rhythm' ('times': 5),
-
+  'logo-y': '#rhythm'
+    (
+      'times': 2.25,
+    ),
+  'alt-logo-y': '#rhythm'
+    (
+      'times': 2,
+    ),
+  'hero-logo': '#rhythm'
+    (
+      'times': 5,
+    ),
   'bird-face': 6rem,
-  'bird-face-small': '#bird-face' ('times': 0.75),
-  'half-bird-face': '#bird-face' ('times': 0.5),
-  'bird-sig-height': '#rhythm' ('times': 3),
-  'bird-sig-width': '#bird-sig-height' ('times': 920/310),
-
-  'intro-text': '#medium' ('convert-units': 'rem'),
-
+  'bird-face-small': '#bird-face'
+    (
+      'times': 0.75,
+    ),
+  'half-bird-face': '#bird-face'
+    (
+      'times': 0.5,
+    ),
+  'bird-sig-height': '#rhythm'
+    (
+      'times': 3,
+    ),
+  'bird-sig-width': '#bird-sig-height'
+    (
+      'times': 920/310,
+    ),
+  'intro-text': '#medium'
+    (
+      'convert-units': 'rem',
+    ),
   'nav-small': 20rem,
   'nav-medium': 35rem,
   'nav-wide': 55rem,
-
   'dropdown-narrow': 9rem,
   'dropdown-wide': 14rem,
-
   'splash-items': 16rem,
   'quote-items': 20rem,
   'splash-logo-y': '#spacer',
@@ -103,8 +171,12 @@ $pattern-sizes: (
 );
 
 @include add-sizes($pattern-sizes);
-@include herman-add('sizes', 'pattern-sizes', $pattern-sizes, get-function('size'));
-
+@include herman-add(
+  'sizes',
+  'pattern-sizes',
+  $pattern-sizes,
+  get-function('size')
+);
 
 // Page Sizes
 // ----------
@@ -121,7 +193,6 @@ $page-sizes: (
 
 @include add-sizes($page-sizes);
 @include herman-add('sizes', 'page-sizes', $page-sizes, get-function('size'));
-
 
 // Column Sizes
 // ------------
@@ -141,4 +212,9 @@ $column-sizes: (
 );
 
 @include add-sizes($column-sizes);
-@include herman-add('sizes', 'column-sizes', $column-sizes, get-function('size'));
+@include herman-add(
+  'sizes',
+  'column-sizes',
+  $column-sizes,
+  get-function('size')
+);

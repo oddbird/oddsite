@@ -1,24 +1,19 @@
 // Layout Config
 // =============
 
-
 // Z-Index
 // -------
-$z-index: (
-  'bump',
-  'large-divider',
-  'dropdown',
-  'banner',
-  'nav-dropdown',
-);
-
+$z-index: ('bump', 'large-divider', 'dropdown', 'banner', 'nav-dropdown');
 
 // Variables
 // Reusable CSS Grid Template Columns definition
 // ---------------------------------------------
-$grid-columns-small: [col1-start] minmax(5vw, 1fr) [col1-end col2-start] 1fr [col2-end col3-start] 1fr [col3-end col4-start] 1fr [col4-end col5-start] 1fr [col5-end];
-$grid-columns-large: [col1-start] 1fr [col1-end col2-start] 1fr [col2-end col3-start] minmax(0, size('full-content')) [col3-end col4-start] 1fr [col4-end col5-start] 1fr [col5-end];
-
+$grid-columns-small: [col1-start] minmax(5vw, 1fr) [col1-end col2-start] 1fr
+  [col2-end col3-start] 1fr [col3-end col4-start] 1fr [col4-end col5-start] 1fr
+  [col5-end];
+$grid-columns-large: [col1-start] 1fr [col1-end col2-start] 1fr [col2-end
+  col3-start] minmax(0, size('full-content')) [col3-end col4-start] 1fr
+  [col4-end col5-start] 1fr [col5-end];
 
 // Breakpoints
 // -----------
@@ -34,7 +29,6 @@ $breakpoints: (
   'nav-wide': size('nav-wide', 'browser-ems'),
 );
 
-
 // Center it (horizontally)
 // ------------------------
 /// Shortcut for left and right margin set to auto with optional max-width
@@ -49,9 +43,7 @@ $breakpoints: (
 ///   .bar {
 ///     @include center('full-content');
 ///   }
-@mixin center(
-  $max-width: null
-) {
+@mixin center($max-width: null) {
   margin-left: auto;
   margin-right: auto;
 
@@ -60,7 +52,6 @@ $breakpoints: (
     width: 100%;
   }
 }
-
 
 // Grid Container
 // --------------
@@ -81,7 +72,6 @@ $breakpoints: (
   }
 }
 
-
 // Get Extend Calc
 // ===============
 /// Returns a CSS-ready `calc()` function
@@ -100,16 +90,13 @@ $breakpoints: (
 /// @return {String} -
 ///   CSS-ready `calc()` function
 ///   for extending elements outside their containers.
-@function get-extend-calc(
-  $size
-) {
+@function get-extend-calc($size) {
   // Process size, when needed
   $size: if(type-of($size) != 'number', size($size), $size);
 
   // viewport width, divided by negative 2, plus 50%
   @return calc(#{$size / -2} + 50%);
 }
-
 
 // Extend Element
 // ==============
@@ -128,9 +115,7 @@ $breakpoints: (
 ///   .foo {
 ///     @include extend('extend-small');
 ///   }
-@mixin extend-element(
-  $size
-) {
+@mixin extend-element($size) {
   // Process size, when needed
   $size: if(type-of($size) != 'number', size($size), $size);
   $margins: get-extend-calc($size);
@@ -141,7 +126,6 @@ $breakpoints: (
   max-width: $size;
   width: $size;
 }
-
 
 // Extend
 // ======
@@ -166,9 +150,7 @@ $breakpoints: (
 ///   .baz {
 ///     @include extend('extend-full');
 ///   }
-@mixin extend(
-  $extend-base-size
-) {
+@mixin extend($extend-base-size) {
   $extend-base-size: size($extend-base-size);
 
   @if ($extend-base-size == size('extend-full')) {
@@ -183,7 +165,6 @@ $breakpoints: (
     }
   }
 }
-
 
 // Extend Side
 // ===========
@@ -201,9 +182,7 @@ $breakpoints: (
 ///   .bar {
 ///     @include extend-side(right);
 ///   }
-@mixin extend-side(
-  $side
-) {
+@mixin extend-side($side) {
   margin-bottom: size('pad');
 
   @include above('small-page') {

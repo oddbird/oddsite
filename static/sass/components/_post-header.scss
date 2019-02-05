@@ -32,13 +32,20 @@
 
 .title-post-type {
   background-color: color('invert');
-  clip-path: polygon(100% 0%, calc(100% - #{size('shim-plus')}) 50%, 100% 100%, 0 100%, 0 0);
+  clip-path: polygon(
+    100% 0%,
+    calc(100% - #{size('shim-plus')}) 50%,
+    100% 100%,
+    0 100%,
+    0 0
+  );
   color: color('background');
   display: inline-block;
   font-size: 1rem;
   font-weight: bold;
   margin-left: negative('gutter');
-  padding: size('half-shim') size('double-gutter') size('half-shim')  size('gutter');
+  padding: size('half-shim') size('double-gutter') size('half-shim')
+    size('gutter');
   text-shadow: none;
 }
 
@@ -51,7 +58,7 @@
   display: block;
   font-size: calc(1rem + 1vw);
   font-style: italic;
-  font-weight: 400;
+  font-weight: normal;
 }
 
 .rst-meta {
@@ -82,7 +89,6 @@
     margin-bottom: size('gutter');
   }
 }
-
 
 // Dynamic Titles
 // --------------

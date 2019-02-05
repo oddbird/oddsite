@@ -1,13 +1,11 @@
 // Footer Region Layout
 // ====================
 
-
 [data-region='footer'] {
   @include font-family('alt');
   align-items: baseline;
   display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
+  flex-flow: column wrap;
   font-size: size('social');
   justify-content: space-between;
   line-height: size('rhythm');

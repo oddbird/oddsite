@@ -1,7 +1,6 @@
 // Initial Typography
 // ------------------
 
-
 // Base
 // ----
 
@@ -14,7 +13,6 @@
   line-height: 1.35;
 }
 
-
 // Selection
 // ---------
 /// Selected text is highlighted in orange,
@@ -25,7 +23,6 @@
   text-shadow: none;
 }
 
-
 // Hidden Text & Fout
 // ------------------
 
@@ -33,7 +30,6 @@
 .wf-loading {
   @include is-hidden;
 }
-
 
 // Abbr
 // ----
@@ -44,14 +40,12 @@ abbr {
   }
 }
 
-
 // Ampersands
 // ----------
 
 .amp {
   @include font-family('amp');
 }
-
 
 // Headlines
 // ---------
@@ -102,13 +96,13 @@ a {
   #{$link} {
     @include transition('colors');
     text-decoration-line: underline;
-    text-decoration-skip: ink;
+    text-decoration-skip-ink: auto;
   }
 }
 
 .icon-text {
   text-decoration: underline;
-  text-decoration-skip: ink;
+  text-decoration-skip-ink: auto;
 }
 
 .image-reference {
@@ -121,7 +115,6 @@ a {
     pointer-events: none;
   }
 }
-
 
 // Paragraphs
 // ----------

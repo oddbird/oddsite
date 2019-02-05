@@ -1,7 +1,6 @@
 // Buttons and Button Links
 // ========================
 
-
 /// The `btn` class provides a button-like
 /// call-to-action style
 /// that can be applied to `link` or `button` elements.
@@ -56,12 +55,10 @@
   }
 }
 
-
 .small-btn {
   font-size: size('small');
   padding: size('half-shim') size('shim');
 }
-
 
 .content-img {
   + .btn {

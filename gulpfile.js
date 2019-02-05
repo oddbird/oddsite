@@ -1,5 +1,7 @@
 /* eslint-disable no-process-exit, global-require */
 
+const KarmaServer = require('karma').Server;
+const PluginError = require('plugin-error');
 const beeper = require('beeper');
 const browserSync = require('browser-sync').create();
 const chalk = require('chalk');
@@ -8,14 +10,12 @@ const download = require('gulp-download');
 const eslint = require('gulp-eslint');
 const fs = require('fs-extra');
 const gulp = require('gulp');
-const KarmaServer = require('karma').Server;
 const log = require('fancy-log');
 const mocha = require('gulp-mocha');
 const path = require('path');
-const PluginError = require('plugin-error');
 const prettier = require('gulp-prettier-plugin');
 const rename = require('gulp-rename');
-const sasslint = require('gulp-sass-lint');
+const stylelint = require('gulp-stylelint');
 const svg = require('gulp-svg-symbols');
 const svgmin = require('gulp-svgmin');
 const webpack = require('webpack');
@@ -118,22 +118,25 @@ const sasslintTask = (src, failOnError, shouldLog) => {
     const cmd = `sasslint ${src}`;
     log('Running', `'${chalk.cyan(cmd)}'...`);
   }
-  const stream = gulp
-    .src(src)
-    .pipe(sasslint())
-    .pipe(sasslint.format())
-    .pipe(sasslint.failOnError());
+  const stream = gulp.src(src).pipe(
+    stylelint({
+      reporters: [{ formatter: 'string', console: true }],
+      failAfterError: failOnError,
+    }),
+  );
   if (!failOnError) {
     stream.on('error', onError);
   }
   return stream;
 };
 
-gulp.task('prettier', () => prettierTask(paths.ALL_JS));
+gulp.task('prettier-js', () => prettierTask(paths.ALL_JS));
+gulp.task('prettier-scss', () => prettierTask(paths.SASS));
+gulp.task('prettier', gulp.parallel('prettier-js', 'prettier-scss'));
 
 gulp.task(
   'eslint',
-  gulp.series('prettier', () => eslintTask(paths.ALL_JS, true)),
+  gulp.series('prettier-js', () => eslintTask(paths.ALL_JS, true)),
 );
 
 gulp.task('eslint-nofail', () => eslintTask(paths.ALL_JS));
