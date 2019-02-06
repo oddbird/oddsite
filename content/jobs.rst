@@ -1,4 +1,6 @@
 public: no
+location: birds
+hide_contact: true
 headline:
   - type: 'Now Hiring'
     tagline: collaborative team, flexible hours, competitive pay
@@ -41,7 +43,7 @@ everyone working together (with clients and users) towards a unified goal.
 We make decisions as a team,
 find clients together,
 and collaborate to build them the best tools we can.
-We all do what we can,
+When there's work to be done, we all chip in,
 and we all get paid equally for our time.
 
 You:
@@ -59,3 +61,6 @@ You:
 
 While we are specifically hiring for JavaScript experience,
 we’re interested in the full range of your skills and interests.
+
+Email `birds@oddbird.net <mailto:birds@oddbird.net>`_,
+or use this handy little form:

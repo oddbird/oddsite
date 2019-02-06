@@ -34,6 +34,8 @@ nav:
         url: '/birds/'
       - text: 'community'
         url: '/community/'
+      - text: 'now hiring'
+        url: '/jobs/'
   - text: 'blog'
     display_text: 'articles'
     url: '/blog/'
