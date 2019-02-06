@@ -4,7 +4,7 @@ headline:
     tagline: collaborative team, flexible hours, competitive pay
 after:
   - include: 'contact/_job.html.j2'
-    subject: 'New application for Javascript Web Developer'
+    subject: 'New application for JavaScript Web Developer'
     submit: 'Send'
     next: 'contact/thanks/'
 summary: |
@@ -16,7 +16,7 @@ summary: |
   *We'd love to hear from you!*
 
 
-JavaScript Web Developer
+S Web Developer
 ========================
 
 OddBirds:
@@ -47,7 +47,7 @@ and we all get paid equally for our time.
 You:
 ----
 
-- Have experience writing JavaScript for the web,
+- Have experience writing S for the web,
   preferably not limited to a single framework
 - Enjoy solving complex problems with readable, efficient, tested code
 - Can explain the decisions behind your work, and the tradeoffs involved
@@ -57,5 +57,5 @@ You:
 - Are regularly available to check-in during US work hours,
   roughly 10am-4pm Central Time
 
-While we are specifically hiring for JavaScript experience,
+While we are specifically hiring for S experience,
 we’re interested in the full range of your skills and interests.
