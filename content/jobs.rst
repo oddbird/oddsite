@@ -2,13 +2,17 @@ public: no
 headline:
   - type: 'Now Hiring'
     tagline: collaborative team, flexible hours, competitive pay
+after:
+  - include: 'contact/_job.html.j2'
+    subject: 'New application for Javascript Web Developer'
+    submit: 'Send'
+    next: 'contact/thanks/'
 summary: |
   OddBird is a small team (you'll be #6),
   working on a mix of client and internal projects.
-  This is a contract job with long term potential,
-  a good hourly rate (equal across the team),
-  and a lot of flexibility.
-
+  This is an hourly job with long-term potential,
+  flexibility between part-time or full-time remote work,
+  and a good hourly rate.
   *We'd love to hear from you!*
 
 
@@ -32,10 +36,13 @@ OddBirds:
 - Engage with the software community as part of the job –
   writing articles, sharing tools, and giving talks
 
-We work together to find clients,
-and we work together to build them the best tools we can.
-When there's work to be done, we all do what we can,
-and we get paid for our time.
+Our process keeps design and development tightly integrated --
+everyone working together (with clients and users) towards a unified goal.
+We make decisions as a team,
+find clients together,
+and collaborate to build them the best tools we can.
+We all do what we can,
+and we all get paid equally for our time.
 
 You:
 ----
@@ -47,14 +54,8 @@ You:
 - Work closely with designers to integrate form & function
 - Enjoy the push-and-pull of a tight feedback cycle
 - Enjoy exploring outside what you know, and questioning your assumptions
+- Are regularly available to check-in during US work hours,
+  roughly 10am-4pm Central Time
 
-We’re looking for 10-20 billable hours per week to start,
-with potential for more.
-@@@ Something tho express that "full time" is ~25hrs,
-this is not as half-time as it looks?
-
-Our process keeps design and development tightly integrated.
-There are no Photoshop comps thrown over the wall to developers.
-Everyone is working together (with clients and users) towards a unified goal.
 While we are specifically hiring for JavaScript experience,
 we’re interested in the full range of your skills and interests.

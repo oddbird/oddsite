@@ -1,0 +1,45 @@
+{% import 'forms.macros.j2' as form %}
+{% import 'utility.macros.j2' as utility %}
+{% import 'content.macros.j2' as content %}
+{% import "birds/utility.macros.j2" as birds %}
+
+
+<section data-module="contact-form">
+  <form data-form="contact" action="https://formspree.io/{{ config.email }}" method="POST">
+    <input type="hidden" name="_next" value="{{ [config.canonical_url, module.next]|join }}" />
+    <input type="text" name="_gotcha" style="display:none" />
+    <input type="hidden" name="_subject" value="{{ module.subject or 'New job application' }}" />
+
+    {{ form.input(
+      text='Name',
+      id='contact-name',
+      required=true
+    ) }}
+
+    {{ form.input(
+      text='Email Address',
+      id='contact-email',
+      name='_replyto',
+      type='email',
+      required=true
+    ) }}
+
+    {{ form.textarea(
+      text='Tell us about you',
+      id='contact-message',
+      required=true
+    ) }}
+
+    {{ form.input(
+      text='Link to resume or portfolio',
+      id='contact-source',
+      required=true
+    ) }}
+
+    <div class="form-actions">
+      {% call content.button(attrs={'type': 'submit'}) %}
+        {{ module.submit or 'submit' }}
+      {% endcall %}
+    </div>
+  </form>
+</section>
