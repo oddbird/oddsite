@@ -19,7 +19,6 @@ $min-image: 300px;
   }
 
   @supports (--css: variables) {
-    // sass-lint:disable-line space-around-operator
     grid-template-columns: repeat(
       auto-fill,
       minmax(var(--min-image, $min-image), 1fr)
@@ -40,7 +39,6 @@ $min-image: 300px;
   }
 
   @supports (--css: variables) {
-    // sass-lint:disable-line space-around-operator
     flex-basis: var(--min-image, $min-image);
   }
 }
