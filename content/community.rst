@@ -14,10 +14,41 @@ after:
       <a href="/contact/">Contact us</a>
       about conference sponsorship and donation opportunities.
 giving:
+  - name: 'Django Girls'
+    url: 'https://djangogirls.org/'
+    type: 'donations'
+    years: '2015–2019'
+    description: |
+      is a non-profit organization
+      and a community that empowers and helps women to organize free,
+      one-day programming workshops by providing tools,
+      resources and support.
+  - name: 'App Camp for Girls'
+    url: 'https://appcamp4girls.com/'
+    type: 'donations'
+    years: '2018'
+    description: |
+      is a one-week summer day program where girls,
+      transgender & gender non-conforming youth
+      can put their creative powers to work
+      designing and building apps.
+  - name: 'Black Girls CODE'
+    url: 'http://blackgirlscode.com/'
+    type: 'donations'
+    years: '2013–2016, 2018'
+    description: |
+      has set out to prove to the world
+      that girls of every color have the skills
+      to become the programmers of tomorrow.
+      By promoting classes and programs
+      they help to grow the number of women of color
+      working in technology,
+      and give underprivileged girls a chance
+      to become the masters of their technological worlds.
   - name: 'Electronic Frontier Foundation'
     url: 'https://www.eff.org/'
     type: 'donations'
-    years: '2016'
+    years: '2016, 2018'
     description: |
       is the leading nonprofit organization
       defending civil liberties in the digital world.
@@ -37,15 +68,6 @@ giving:
       established to to promote, support, and advance the Django Web framework.
       As active users and contributors to the Django community,
       we're proud to support the continued development of the project.
-  - name: 'Goshen Ultimate Summer League'
-    url: 'http://goshenultimate.com/'
-    type: 'donations'
-    years: '2014–2017'
-    description: |
-      provides opportunities to learn, play,
-      and teach spirited Ultimate in Goshen, IN and surrounding areas.
-      We're just glad they keep Jonny out of trouble
-      when he's not busy writing JavaScript.
   - name: 'Django Under the Hood'
     url: 'https://www.djangounderthehood.com/'
     type: 'sponsorships'
@@ -65,19 +87,6 @@ giving:
       Besides being active participants in the Sass community,
       we love the thoughtfulness and dedication to diversity
       that the SassConf organizers bring to the community.
-  - name: 'Black Girls CODE'
-    url: 'http://blackgirlscode.com/'
-    type: 'donations'
-    years: '2013–2016'
-    description: |
-      has set out to prove to the world
-      that girls of every color have the skills
-      to become the programmers of tomorrow.
-      By promoting classes and programs
-      they help to grow the number of women of color
-      working in technology,
-      and give underprivileged girls a chance
-      to become the masters of their technological worlds.
   - name: 'Thunder Valley Community Development Corporation'
     url: 'http://thundervalley.org/'
     type: 'donations'
@@ -94,15 +103,6 @@ giving:
       is an international mentorship group
       with a focus on helping more women become active participants
       and leaders in the Python open source community.
-  - name: 'Django Girls'
-    url: 'https://djangogirls.org/'
-    type: 'donations'
-    years: '2015–2018'
-    description: |
-      is a non-profit organization
-      and a community that empowers and helps women to organize free,
-      one-day programming workshops by providing tools,
-      resources and support.
   - name: 'PyCon'
     url: 'https://us.pycon.org/'
     type: 'sponsorships'
@@ -111,6 +111,15 @@ giving:
       is the largest annual gathering
       for the people who use and develop
       the open source Python programming language.
+  - name: 'Goshen Ultimate Summer League'
+    url: 'http://goshenultimate.com/'
+    type: 'sponsorships'
+    years: '2014–2018'
+    description: |
+      provides opportunities to learn, play,
+      and teach spirited Ultimate in Goshen, IN and surrounding areas.
+      We're just glad they keep Jonny out of trouble
+      when he's not busy writing JavaScript.
   - name: 'The Mixin'
     url: 'http://themixinsf.com/'
     type: 'sponsorships'
