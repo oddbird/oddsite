@@ -1,6 +1,4 @@
 ---
-
-
 # Navigation
 # ----------
 
@@ -34,12 +32,12 @@ nav:
         url: '/birds/'
       - text: 'community'
         url: '/community/'
-      - text: 'now hiring'
+      - text: 'jobs'
+        display_text: 'now hiring'
         url: '/jobs/'
   - text: 'blog'
     display_text: 'articles'
     url: '/blog/'
-
 
 # Site Settings
 # -------------
@@ -50,24 +48,24 @@ email: 'birds@oddbird.net'
 author: oddbird
 comments: false
 
-
 # rstBlog Setup
 # -------------
 
-active_modules: [
-  jinja_macros,
-  current,
-  typogrify,
-  rst,
-  images,
-  denormalize_config,
-  tags,
-  blog,
-  author,
-  pages,
-  wrap,
-  hashedassets,
-  urls
+active_modules:
+  [
+    jinja_macros,
+    current,
+    typogrify,
+    rst,
+    images,
+    denormalize_config,
+    tags,
+    blog,
+    author,
+    pages,
+    wrap,
+    hashedassets,
+    urls,
   ]
 programs:
   '*.rst': 'rst'

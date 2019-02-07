@@ -1,5 +1,5 @@
 public: no
-location: birds
+location: jobs
 hide_contact: true
 headline:
   - type: 'Now Hiring'
