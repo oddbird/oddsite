@@ -75,9 +75,9 @@
     "sinon-chai": "^3.3.0",
     "stylelint": "^9.10.1",
     "stylelint-config-recommended-scss": "^3.2.0",
-    "stylelint-scss": "^3.5.2",
+    "stylelint-scss": "^3.5.3",
     "touch": "^3.1.0",
-    "webpack": "^4.29.1",
+    "webpack": "^4.29.2",
     "webpack-assets-manifest": "^3.1.1",
     "webpack-cli": "^3.2.3",
     "webpack-merge": "^4.2.1"
