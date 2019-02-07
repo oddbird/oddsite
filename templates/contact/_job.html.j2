@@ -5,7 +5,7 @@
 
 
 <section data-module="contact-form">
-  <form data-form="contact" action="https://formspree.io/{{ config.email }}" method="POST">
+  <form data-form="contact" action="https://formspree.io/{{ config.jobs_email }}" method="POST">
     <input type="hidden" name="_next" value="{{ [config.canonical_url, module.next]|join }}" />
     <input type="text" name="_gotcha" style="display:none" />
     <input type="hidden" name="_subject" value="{{ module.subject or 'New job application' }}" />

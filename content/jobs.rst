@@ -62,5 +62,5 @@ You:
 While we are specifically hiring for JavaScript experience,
 we’re interested in the full range of your skills and interests.
 
-Email `birds@oddbird.net <mailto:birds@oddbird.net>`_,
+Email `jobs@oddbird.net <mailto:jobs@oddbird.net>`_,
 or use this handy little form:
