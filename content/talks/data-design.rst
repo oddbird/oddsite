@@ -3,6 +3,10 @@ speakers: [miriam]
 talk: true
 slides: 'https://talks.oddbird.net/dynamic-css/'
 events:
+  - venue: 'Generate 2019'
+    url: 'https://www.generateconf.com/generate2019/'
+    date: [2019, 4, 25]
+    adr: 'New York, NY'
   - venue: 'Smashing Conference'
     url: 'https://www.smashingconf.com/sf-2019/'
     date: [2019, 4, 16]

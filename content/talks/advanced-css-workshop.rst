@@ -2,6 +2,10 @@ public: yes
 speakers: [miriam]
 workshop: true
 events:
+  - venue: 'Generate 2019'
+    url: 'https://www.generateconf.com/generate2019/workshops'
+    date: [2019, 4, 24]
+    adr: 'New York, NY'
   - venue: 'Smashing Conference'
     url: 'https://www.smashingconf.com/sf-2019/'
     date: [2019, 4, 16]
