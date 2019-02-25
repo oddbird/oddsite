@@ -1,7 +1,7 @@
 --find-links ./requirements/
 
 rstblog==1.0.obc6
-PyYAML==4.2b4
+PyYAML==5.1b1
 Babel==2.6.0
 blinker==1.4
 docutils==0.14
