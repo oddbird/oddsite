@@ -4,18 +4,15 @@ hide_contact: true
 headline:
   - type: 'Now Hiring'
     tagline: collaborative team, flexible hours, competitive pay
-after:
-  - include: 'contact/_job.html.j2'
-    subject: 'New application for JavaScript Web Developer'
-    submit: 'Send'
-    next: 'contact/thanks/'
 summary: |
   OddBird is a small team (you'll be #6),
   working on a mix of client and internal projects.
   This is an hourly job with long-term potential,
   flexibility between part-time or full-time remote work,
   and a good hourly rate.
-  *We'd love to hear from you!*
+
+  *We are no longer accepting applications for this position –
+  thanks for your interest!*
 
 
 JavaScript Web Developer
@@ -61,6 +58,3 @@ You:
 
 While we are specifically hiring for JavaScript experience,
 we’re interested in the full range of your skills and interests.
-
-Email `jobs@oddbird.net <mailto:jobs@oddbird.net>`_,
-or use this handy little form:
