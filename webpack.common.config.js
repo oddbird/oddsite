@@ -169,8 +169,7 @@ module.exports = {
       outputPath,
     }),
     new WebpackShellPlugin(),
-    new CleanWebpackPlugin([outputPath], {
-      root: __dirname,
+    new CleanWebpackPlugin({
       verbose: true,
     }),
   ],

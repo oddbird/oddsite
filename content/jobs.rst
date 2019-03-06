@@ -2,7 +2,7 @@ public: no
 location: jobs
 hide_contact: true
 headline:
-  - type: 'Now Hiring'
+  - type: 'Jobs'
     tagline: collaborative team, flexible hours, competitive pay
 summary: |
   OddBird is a small team (you'll be #6),

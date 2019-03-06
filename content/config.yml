@@ -33,7 +33,6 @@ nav:
       - text: 'community'
         url: '/community/'
       - text: 'jobs'
-        display_text: 'now hiring'
         url: '/jobs/'
   - text: 'blog'
     display_text: 'articles'
