@@ -2,7 +2,7 @@ public: yes
 location: speaking
 grid_template: true
 image:
-  - src: 'pages/devconf-best.jpg'
+  - src: 'talks/miriam.jpg'
 headline:
   - tagline: "Conferences, workshops, and more…"
     type: 'About Us'

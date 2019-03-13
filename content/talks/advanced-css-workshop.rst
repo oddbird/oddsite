@@ -1,6 +1,8 @@
 public: yes
 speakers: [miriam]
 workshop: true
+image:
+  - src: 'talks/miriam.jpg'
 events:
   - venue: 'Generate 2019'
     url: 'https://www.generateconf.com/generate2019/workshops'
