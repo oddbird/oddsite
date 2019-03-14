@@ -1,5 +1,7 @@
 public: yes
 speakers: [miriam]
+image:
+  - src: 'talks/miriam.jpg'
 talk: true
 slides: 'https://talks.oddbird.net/dynamic-css/'
 events:

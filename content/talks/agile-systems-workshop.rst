@@ -1,6 +1,8 @@
 public: yes
 speakers: [miriam, stacy]
 workshop: true
+image:
+  - src: 'talks/miriam.jpg'
 brag: |
   Learn to build
   **robust and scalable design systems**

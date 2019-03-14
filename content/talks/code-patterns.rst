@@ -1,5 +1,7 @@
 public: yes
 speakers: [miriam]
+image:
+  - src: 'talks/miriam.jpg'
 talk: true
 slides: 'http://oddbooksapp.com/book/pattern-making'
 events:
