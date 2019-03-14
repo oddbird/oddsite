@@ -12,14 +12,14 @@ Development setup
 Install Node.js
 ~~~~~~~~~~~~~~~
 
-OddSite development requires `Node.js`_ 10.15.3 and `yarn`_ 1.13.0.
+The project-local versions of `Node.js`_ and `yarn`_ can be downloaded and
+unpacked locally (in the git-ignored ``node/`` directory), so you don't have to
+install it system-wide (and possibly conflict with other projects wanting other
+Node versions).
 
-The right versions of Node and yarn are bundled in the OddSite repo and can be
-unpacked inside the repo (in the git-ignored ``node/`` directory), so you don't
-have to install then system-wide (and possibly conflict with other projects
-wanting other Node/yarn versions). Run ``bin/unpack-node`` to unpack into
-``node/`` (this command also installs `yarn`_ for front-end package
-management, and wipes the contents of ``node_modules/``).
+To download and install the project-local version of Node (and yarn)::
+
+    bin/unpack-node
 
 Next you need to make sure that whenever you are working on OddSite, you use
 that OddSite-specific Node instead of any system-wide Node you may have.
@@ -76,7 +76,6 @@ which development commands need to be run before serving locally:
 
 - 📦 (``:package:``) -> ``pip install -r requirements.txt``
 - 🐈 (``:cat2:``) -> ``yarn``
-- 🙀 (``:scream_cat:``) -> ``bin/unpack-node; yarn``
 
 When a new version of any OddBird-owned packages (Susy, True, Herman, or
 Accoutrement-*) is published, run ``bin/update-subproject-docs`` to pull their
