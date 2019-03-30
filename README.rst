@@ -118,18 +118,16 @@ source and `gulp`_ documentation for more info.
 Deployment
 ----------
 
-The site is deployed on Github Pages. The ``output/`` directory (which is git-
-ignored) should be its own git repo (`github.com/oddbird/oddbird.github.com`_,
-which is also the deployment on Github Pages).
+The site is auto-deployed on Netlify
+from the `master` branch on Github.
+Deploys are automated on push to master,
+and triggered nightly via IFTTT webhooks.
 
-To deploy, first be sure that the ``output/`` directory contains the correct
-git repo; if not, run ``git clone git@github.com:oddbird/oddbird.github.com
-output`` to set it up.
+For testing production locally,
+run ``gulp prod`` to build the site under ``output/`` (git-ignored).
+Run ``gulp prod-serve`` to view your changes
+to the production code before committing.
 
-Before deploying, ``cd output/`` and ``git pull`` to be sure you have the
-latest code. Then, back in the parent directory (``cd ..``), run ``gulp prod``
-to build the site under ``output/``. Run ``gulp prod-serve`` to view your
-changes to the production code before committing. When satisfied, ``cd
-output/``, commit those changes and then ``git push`` to deploy it live.
-
-.. _github.com/oddbird/oddbird.github.com: https://github.com/oddbird/oddbird.github.com
+Use branches and PRs for major changes,
+and Netlify will create staging previews
+for functional review before merge.
