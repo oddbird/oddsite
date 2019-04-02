@@ -3,15 +3,18 @@
 
 [data-region='footer'] {
   @include font-family('alt');
-  align-items: baseline;
-  display: flex;
-  flex-flow: column wrap;
+  display: grid;
   font-size: size('social');
-  justify-content: space-between;
   line-height: size('rhythm');
   padding: size('gutter');
 
   @include above('medium-page') {
-    flex-direction: row-reverse;
+    grid-template-areas:
+      'socials   form'
+      'siteinfo  form';
   }
+}
+
+#mc_embed_signup {
+  grid-area: form;
 }
