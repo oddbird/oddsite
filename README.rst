@@ -118,16 +118,12 @@ source and `gulp`_ documentation for more info.
 Deployment
 ----------
 
-The site is auto-deployed on Netlify
-from the `master` branch on Github.
-Deploys are automated on push to master,
-and triggered nightly via IFTTT webhooks.
+The site is auto-deployed on Netlify from the `master` branch on GitHub. Deploys
+are automated on push to master, and triggered nightly via IFTTT webhooks.
 
-For testing production locally,
-run ``gulp prod`` to build the site under ``output/`` (git-ignored).
-Run ``gulp prod-serve`` to view your changes
-to the production code before committing.
+For testing production locally, run ``gulp prod`` to build the site under
+``output/`` (git-ignored). Run ``gulp prod-serve`` to view your changes to the
+production code before committing.
 
-Use branches and PRs for major changes,
-and Netlify will create staging previews
+Use branches and PRs for major changes, and Netlify will create staging previews
 for functional review before merge.
