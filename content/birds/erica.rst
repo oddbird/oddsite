@@ -1,7 +1,7 @@
 public: yes
 bird: 'erica'
 headline:
-  - tagline: ''
+  - tagline: 'Senior Front End Developer'
     type: 'Meet the Birds…'
 adr: 'Charlotte, NC'
 social:
