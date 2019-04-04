@@ -18,7 +18,7 @@ short_bio: |
 
   .. _Kit La Touche: /authors/kit/
 summary: |
-  **Kit co-leads our server-side development**,
+  **Kit leads our server-side development**,
   managing code architecture,
   database design,
   and deployment.

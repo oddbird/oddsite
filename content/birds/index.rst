@@ -7,7 +7,7 @@ headline:
     type: 'About Us'
 after:
   - include: 'birds/_list.html.j2'
-    show: [miriam, jonny, sondra, kit, stacy, carl]
+    show: [miriam, jonny, sondra, kit, stacy, erica, carl]
   - include: 'birds/_former.html.j2'
 summary: |
   **As a client, you'll get to know our tight-knit team**

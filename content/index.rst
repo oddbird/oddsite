@@ -79,7 +79,7 @@ Software for Humans
   :url: '/work/'
 
 .. callmacro:: birds/macros.j2#home_faces
-  :authors: ['carl', 'kit', 'stacy', 'miriam', 'sondra', 'jonny']
+  :authors: ['carl', 'kit', 'stacy', 'miriam', 'sondra', 'erica', 'jonny']
 
 .. callmacro:: content.macros.j2#two_quotes
   :quotes: [
