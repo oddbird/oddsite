@@ -1,0 +1,92 @@
+
+{% macro form(
+  label='Subscribe to our email newsletter',
+  action='Subscribe',
+  interests='oddnews'
+) %}
+  {% set groups = [
+    {
+      'key': 'oddbooks',
+      'label': 'OddBooks',
+      'value': 1,
+    },
+    {
+      'key': 'book_tester',
+      'label': 'OddBooks Tester',
+      'value': 2,
+    },
+    {
+      'key': 'oddnews',
+      'label': 'OddNews',
+      'value': 4,
+    },
+    {
+      'key': 'vueconfus19',
+      'label': 'Event: VueConf US 2019',
+      'value': 8,
+    },
+  ] %}
+
+<!-- Begin Mailchimp Signup Form -->
+<div id="mc_embed_signup">
+  <form
+    action="https://oddbird.us19.list-manage.com/subscribe/post?u=80219aa68d7bad77b9fd2eb93&amp;id=7c27f7fb9a"
+    method="post"
+    id="mc-embedded-subscribe-form"
+    name="mc-embedded-subscribe-form"
+    class="validate"
+    target="_blank"
+    novalidate
+    data-form="email-subscribe"
+  >
+    <div id="mc_embed_signup_scroll">
+      <label for="mce-EMAIL" data-form-field="contact-email">
+        <span class="form-label">
+          {{ label }}
+        </span>
+        <input
+          data-input-type="default"
+          type="email"
+          value=""
+          name="EMAIL"
+          class="email"
+          id="mce-EMAIL"
+          placeholder="email address"
+          required >
+      </label>
+
+      <ul class="is-hidden">
+        {% for group in groups %}
+          <li>
+            <label for="mce-group[2075]-2075-{{ group.value }}">
+              <input
+                type="checkbox"
+                value="{{ group.value }}"
+                name="group[2075][{{ group.value }}]"
+                id="mce-group[2075]-2075-{{ group.value }}"
+                {{ 'checked' if (group.key in interests) else '' }}
+                >
+              {{ group.label }}
+            </label>
+          </li>
+        {% endfor %}
+      </ul>
+
+      <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+      <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_80219aa68d7bad77b9fd2eb93_7c27f7fb9a" tabindex="-1" value=""></div>
+
+      <div class="clear">
+        <button
+          type="submit"
+          name="subscribe"
+          id="mc-embedded-subscribe"
+          class="button btn small-btn"
+        >
+          {{ action }}
+        </button>
+      </div>
+    </div>
+  </form>
+</div>
+<!--End mc_embed_signup-->
+{% endmacro %}
