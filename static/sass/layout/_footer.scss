@@ -5,10 +5,16 @@
   @include font-family('alt');
   display: grid;
   font-size: size('social');
+  grid-gap: size('gutter');
+  grid-template-areas:
+    'socials'
+    'form'
+    'siteinfo';
   line-height: size('rhythm');
   padding: size('gutter');
 
-  @include above('medium-page') {
+  @include above('small-page') {
+    grid-gap: 0 size('gutter');
     grid-template-areas:
       'socials   form'
       'siteinfo  form';
@@ -17,4 +23,9 @@
 
 #mc_embed_signup {
   grid-area: form;
+
+  .form-label {
+    line-height: 1.3;
+    margin-bottom: size('half-shim');
+  }
 }
