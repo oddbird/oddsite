@@ -34,7 +34,7 @@ repo to find out the full path to it).
 
 There are a variety of tools that let you set up environment variables
 temporarily for a particular "environment" or directory. We use
-`virtualenvwrapper`_, in which case you can just add the above two lines to the
+`virtualenvwrapper`_, in which case you can add the above two lines to the
 ``bin/postactivate`` script file inside your OddSite virtualenv directory (if
 you don't know where that is, you can run ``cdvirtualenv`` with your OddSite
 virtualenv activated to find it). Your ``PATH`` will be updated when you
