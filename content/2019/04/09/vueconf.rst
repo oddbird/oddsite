@@ -43,7 +43,7 @@ and the framework behind it.
 I loved that I could build
 complete and valid Vue components
 in plain HTML/CSS --
-and slowly inetgrate JS logic as necessary.
+and slowly integrate JS logic as necessary.
 I started digging,
 and quickly learned to
 bind JS data to HTML attributes:
