@@ -162,6 +162,8 @@ both inspired new demos in my talk.
   by `Krystal Campioni <https://twitter.com/krystalcampioni>`_
   [`permalink <https://talks.oddbird.net/demos/cssSprites>`_ /
   `source <https://github.com/oddbird/vuefinder/blob/master/components/demos/cssSprites.vue>`_]
+  -- hover to see them move
+
 
 You can find all the available
 `speaker slides linked from gist`_.
