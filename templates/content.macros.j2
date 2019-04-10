@@ -342,6 +342,38 @@
 
 
 {#
+  iframe
+  ------
+#}
+{% macro iframe(
+  src,
+  caption=none,
+  ratio=none,
+  class='extend-small'
+) %}
+  {% set caption = caption if caption != none else caller() %}
+  {% set style = '--ratio: calc(%s);' % ratio if ratio else ratio %}
+  <figure class="figure {{ class or '' }}">
+    <div
+      data-ratio="parent"
+      {{ utility.attr_if('style', style) }}
+    >
+      <iframe
+        src="{{ src }}"
+        data-ratio="child"
+        frameborder="0"
+      >
+        {{ utility.link_if(src, src) }}
+      </iframe>
+    </div>
+    <figcaption class="caption">
+      {{ caption|rst or 'please provide a caption' }}
+    </figcaption>
+  </figure>
+{% endmacro %}
+
+
+{#
   Link Lists
   ----------
 #}
