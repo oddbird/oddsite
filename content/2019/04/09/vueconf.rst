@@ -92,11 +92,10 @@ when the videos are posted.
 VueFinder Slides
 ----------------
 
-Along the way,
-I've been learning JS and Vue
-in more depth,
-and decided to re-build my presentation tool
-to meet my adapting needs as a speaker.
+While learning JS and Vue
+in more detail,
+I decided to re-build my presentation software
+to better meet my needs as a speaker.
 
 The result,
 which I call `VueFinder`_,
