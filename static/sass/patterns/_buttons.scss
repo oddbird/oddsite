@@ -60,6 +60,13 @@
   padding: size('half-shim') size('shim');
 }
 
+// button to match input height
+.xsmall-btn {
+  font-size: size('small');
+  line-height: normal;
+  padding: 0.25rem 0.5rem;
+}
+
 .content-img {
   + .btn {
     margin-top: size('gutter');
