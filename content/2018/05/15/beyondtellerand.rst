@@ -32,6 +32,10 @@ Beyond Tellerand
   :page: 'talks/no-grid-system'
   :slug: 'useful'
 
+
+.. callmacro:: community/subscribe.macros.j2#form
+  :interests: ['oddnews', 'beyondtellerand19']
+
 .. callmacro:: content.macros.j2#divider
 
 Right from the start,
