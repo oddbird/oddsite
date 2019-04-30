@@ -169,3 +169,8 @@ You can find all the available
 `speaker slides linked from gist`_.
 
 .. _speaker slides linked from gist: https://gist.github.com/vincentmayers/298f7bfd4c26ebd2fc0143f03dc4cbf7
+
+.. callmacro:: content.macros.j2#divider
+
+.. callmacro:: community/subscribe.macros.j2#form
+  :interests: ['oddnews', 'vueconfus19']

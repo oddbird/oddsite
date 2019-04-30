@@ -1,0 +1,21 @@
+// Mailchimp Email Subscribe Form
+// ==============================
+
+.odd-input-group {
+  align-items: flex-end;
+  display: flex;
+
+  [data-module='rst-body'] & {
+    margin: size('gutter') 0;
+  }
+
+  [data-form-field] {
+    flex: auto;
+    margin-bottom: 0;
+  }
+
+  // submit btn container
+  .odd-submit-btn {
+    margin-left: size('shim');
+  }
+}
