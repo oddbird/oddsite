@@ -9,11 +9,14 @@ events:
     url: 'https://www.meetup.com/BoulderPython/events/256868153/'
     date: [2019, 2, 12]
     adr: 'Boulder, CO'
-    slides: 'https://talks.oddbird.net/no-grid-system/covalence19/'
+    slides: 'https://talks.oddbird.net/no-grid-system/boulderpython19'
   - venue: 'Covalence Conference'
     url: 'http://www.covalenceconf.com/'
     date: [2019, 1, 16]
     adr: 'San Francisco, CA'
+    slides: 'https://talks.oddbird.net/no-grid-system/covalence19/'
+    video: '<iframe width="560" height="315" src="https://www.youtube.com/embed/pP0Sf1QcuYk" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>'
+    video_link: https://www.youtube.com/watch?v=pP0Sf1QcuYk
   - venue: 'Beyond Tellerand'
     url: 'https://beyondtellerrand.com/events/duesseldorf-2018'
     date: [2018, 5, 7]

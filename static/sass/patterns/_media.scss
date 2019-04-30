@@ -116,3 +116,23 @@ h6 {
     margin-bottom: 0;
   }
 }
+
+// Ratios
+// ------
+
+[data-ratio='parent'] {
+  --ratio: #{ratio('_widescreen')};
+  position: relative;
+
+  @include before('') {
+    display: inline-block;
+    height: 0;
+    padding-top: calc(100% / var(--ratio, #{ratio('_widescreen')}));
+    width: 1px;
+  }
+}
+
+[data-ratio='child'] {
+  @include position(0);
+  @include square(100%);
+}

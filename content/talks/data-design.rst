@@ -17,6 +17,7 @@ events:
     url: 'http://vueconf.us/'
     date: [2019, 3, 26]
     adr: 'Tampa, FL'
+    slides: 'https://talks.oddbird.net/dynamic-css/vueconf19/'
   - venue: 'Front Range Front-End'
     url: 'https://www.meetup.com/front-range-front-end/events/chtxtpyxpbcb/'
     date: [2018, 11, 1]
@@ -41,6 +42,14 @@ events:
     date: [2018, 8, 18]
     adr: 'Buenos Aires, Argentina'
     slides: 'http://talks.oddbird.net/dynamic-css/cssconfar18/'
+quotes:
+  - text: |
+      So stoked @mirisuzanne is @vueconfus !!!
+      look at how cool CSS is ~ and all the squishy things it does.
+    name: 'Ngan Hoang'
+    role: '@itsngansense'
+    url: 'https://twitter.com/itsngansense/status/1111001282528063488'
+    slug: 'squishy'
 brag: |
   Learn to **integrate design and code**
   to isolate components and

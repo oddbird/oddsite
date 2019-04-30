@@ -257,7 +257,7 @@ consumes this API.
     from channels.layers import get_channel_layer
     from .serializers import FooSerializer
 
-    async def update_foo(instance):
+    async def update_foo(foo):
         serializer = FooSerializer(foo)
         group_name = serializer.get_group_name()
         channel_layer = get_channel_layer()

@@ -21,7 +21,7 @@ short_bio: |
   .. _Stacy Kvernmo: /authors/stacy/
 summary: |
   With over 15 years of experience,
-  Stacy takes the lead on interface development,
+  **Stacy takes the lead on interface development**,
   architecting accessible and maintainable
   HTML, CSS, and Sass.
   Balancing a love of design and code,

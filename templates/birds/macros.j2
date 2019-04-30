@@ -32,10 +32,13 @@
       {{ page.render_summary() }}
     </div>
 
-    {{ content.link_button(
-      url=birds.get_bird_url(author, page),
-      content="See %s’s activity" % author|capitalize
-    ) }}
+    {% set author_page = birds.get_bird_url(author, page) %}
+    {% if not ('/birds/#bird' in author_page) %}
+      {{ content.link_button(
+        url=author_page,
+        content="See %s’s activity" % author|capitalize
+      ) }}
+    {% endif %}
   </article>
 {% endmacro %}
 
