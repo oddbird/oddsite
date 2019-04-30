@@ -23,20 +23,9 @@ summary: |
 Beyond Tellerand
 ================
 
-.. callmacro:: community/events.macros.j2#videos_by_talk
-  :slug: 'talks/no-grid-system'
-  :venue: 'Beyond Tellerand'
-  :slice: 1
-
 .. callmacro:: content.macros.j2#get_quotes
   :page: 'talks/no-grid-system'
   :slug: 'useful'
-
-
-.. callmacro:: community/subscribe.macros.j2#form
-  :interests: ['oddnews', 'beyondtellerand19']
-
-.. callmacro:: content.macros.j2#divider
 
 Right from the start,
 Beyond Tellerand was unlike other conferences.
@@ -117,3 +106,11 @@ Here are a few of my favorites:
 .. _Broad Band: https://beyondtellerrand.com/events/duesseldorf-2018/speakers/claire-evans#talk
 .. _Generative Spaces: https://beyondtellerrand.com/events/duesseldorf-2018/speakers/jared-tarbell#talk
 .. _How to Build an Atomic Bomb: https://beyondtellerrand.com/events/duesseldorf-2018/speakers/mike-monteiro#talk
+
+.. callmacro:: community/events.macros.j2#videos_by_talk
+  :slug: 'talks/no-grid-system'
+  :venue: 'Beyond Tellerand'
+  :slice: 1
+
+.. callmacro:: community/subscribe.macros.j2#form
+  :interests: ['oddnews', 'beyondtellerand19']

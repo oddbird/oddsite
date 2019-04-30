@@ -2,24 +2,20 @@
 // ==============================
 
 .odd-input-group {
-  [data-region='footer'] & {
-    align-items: flex-end;
-    display: flex;
+  align-items: flex-end;
+  display: flex;
 
-    [data-form-field] {
-      flex: 1 1 auto;
-      margin-bottom: 0;
-    }
+  [data-module='rst-body'] & {
+    margin: size('gutter') 0;
+  }
 
-    // submit btn container
-    .odd-submit-btn {
-      margin-left: size('shim');
+  [data-form-field] {
+    flex: auto;
+    margin-bottom: 0;
+  }
 
-      .small-btn {
-        font-size: size('small');
-        line-height: normal;
-        padding: 0.25rem 0.5rem;
-      }
-    }
+  // submit btn container
+  .odd-submit-btn {
+    margin-left: size('shim');
   }
 }
