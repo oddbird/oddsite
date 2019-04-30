@@ -19,23 +19,8 @@
       'socials   form'
       'siteinfo  form';
   }
-}
 
-#mc_embed_signup {
-  grid-area: form;
-
-  [data-form-field] {
-    flex: 1 1 auto;
-    margin-bottom: 0;
+  #mc_embed_signup {
+    grid-area: form;
   }
-}
-
-// submit btn container
-.odd-submit-btn {
-  margin-left: size('shim');
-}
-
-.odd-input-group {
-  align-items: flex-end;
-  display: flex;
 }
