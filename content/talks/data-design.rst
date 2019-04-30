@@ -9,10 +9,13 @@ events:
     url: 'https://www.generateconf.com/generate2019/'
     date: [2019, 4, 25]
     adr: 'New York, NY'
+    slides: 'https://talks.oddbird.net/dynamic-css/generate19/'
   - venue: 'Smashing Conference'
     url: 'https://www.smashingconf.com/sf-2019/'
     date: [2019, 4, 16]
     adr: 'San Francisco, CA'
+    video_link: 'https://vimeo.com/331571593'
+    slides: 'https://talks.oddbird.net/dynamic-css/smashingsf19/'
   - venue: 'VueConf US'
     url: 'http://vueconf.us/'
     date: [2019, 3, 26]
