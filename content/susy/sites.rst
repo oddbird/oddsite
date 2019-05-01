@@ -146,6 +146,7 @@ Feel free to
 - `Trailpost Outdoors <https://www.trailpost.com/>`_
 - `Heyevent <http://heyevent.com>`_
 - `Teachoo <https://www.teachoo.com>`_
+- `MicroTech NA Inc. <http://www.microtechna.com>`_
 
 .. callmacro:: content.macros.j2#rst
   :tag: 'end'
