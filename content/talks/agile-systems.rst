@@ -3,6 +3,10 @@ speakers: [miriam]
 talk: true
 slides: 'https://talks.oddbird.net/agile-systems/'
 events:
+  - venue: 'Agile Alliance'
+    url: 'https://www.agilealliance.org/agile2019/program/'
+    date: [2019, 8, 7]
+    adr: 'Washington, DC'
   - venue: 'Agile Denver'
     url: 'https://www.meetup.com/Agile-Denver2/events/251897187/'
     date: [2018, 10, 22]
