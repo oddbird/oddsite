@@ -19,6 +19,9 @@
       {% if project.tagline %}
         <h3 class="project-list-tagline">{{ project.tagline }}</h3>
       {% endif %}
+      {% if page.config.contributors %}
+        {{ who(page.config.contributors) }}
+      {% endif %}
     </header>
 
     {{ layout.header_image(
@@ -83,7 +86,8 @@
           {% set page = all_pages|filter_pages('bird', 'eq', contributor.author)|get_page %}
           {{ birds.name_link(
             author=contributor.author,
-            page=page
+            page=page,
+            full_name=false
           ) }}
           [{{ contributor.role }}]{{ ',' if not loop.last }}
         {% endfor %}
