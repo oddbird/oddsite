@@ -25,6 +25,9 @@ summary: |
 Speaking & Training
 ===================
 
+.. callmacro:: content.macros.j2#get_quotes
+  :page: 'talks/data-design'
+
 .. callmacro:: community/events.macros.j2#by_author
 
 .. callmacro:: content.macros.j2#divider
@@ -54,3 +57,6 @@ Speaking & Training
     :url: '/contact/'
 
     Jump Start Your Project
+
+.. callmacro:: content.macros.j2#get_quotes
+  :page: 'talks/advanced-css-workshop'

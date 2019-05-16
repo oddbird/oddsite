@@ -20,6 +20,8 @@ events:
     url: 'http://vueconf.us/'
     date: [2019, 3, 26]
     adr: 'Tampa, FL'
+    video_link: 'https://www.vuemastery.com/conferences/vueconf-us-2019/dynamic-css-with-vue/'
+    video: '<iframe src="https://player.vimeo.com/video/334544582" width="640" height="360" frameborder="0" allowfullscreen></iframe>'
     slides: 'https://talks.oddbird.net/dynamic-css/vueconf19/'
   - venue: 'Front Range Front-End'
     url: 'https://www.meetup.com/front-range-front-end/events/chtxtpyxpbcb/'
@@ -46,6 +48,14 @@ events:
     adr: 'Buenos Aires, Argentina'
     slides: 'http://talks.oddbird.net/dynamic-css/cssconfar18/'
 quotes:
+  - text: |
+      Miriam has always been nothing but spot-on,
+      professional, funny, while also being extremely knowledgeable,
+      smart, polite and always on time.
+    name: 'Vitaly Friedman'
+    role: 'Founder of Smashing Magazine & Conference'
+    url: https://www.smashingmagazine.com/events/
+    slug: 'smashing'
   - text: |
       So stoked @mirisuzanne is @vueconfus !!!
       look at how cool CSS is ~ and all the squishy things it does.
@@ -74,3 +84,6 @@ Dynamic CSS: Layouts & Beyond
 - Basics for understanding Custom Properties & ``Calc()``.
 - Practical examples and use-cases for data-infused design.
 - Integrating with CSS Grids to build layouts on-the-fly.
+
+.. callmacro:: content.macros.j2#get_quotes
+  :page: 'talks/data-design'

@@ -1,6 +1,6 @@
 public: yes
 author: miriam
-tags: [Vue, Conferences, 'Design Systems', Code, 'Style Guides']
+tags: [Vue, Conferences, Code, CSS]
 image:
   - src: 'blog/2019/vueconf.jpg'
 headline:

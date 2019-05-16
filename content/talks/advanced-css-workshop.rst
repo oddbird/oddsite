@@ -12,6 +12,15 @@ events:
     url: 'https://www.smashingconf.com/sf-2019/'
     date: [2019, 4, 16]
     adr: 'San Francisco, CA'
+quotes:
+  - text: |
+      A fantastic speaker, with wonderful teaching skills,
+      and highly praised by attendees of the conference
+      and the workshop alike.
+    name: 'Vitaly Friedman'
+    role: 'Founder of Smashing Magazine & Conference'
+    url: https://www.smashingmagazine.com/events/
+    slug: 'praised'
 brag: |
   Learn a variety of **new and advanced CSS techniques**,
   along with practical use-cases, integrations, and pitfalls.
@@ -55,3 +64,6 @@ In this workshop, you’ll learn:
 
 The workshop is intended for professional front-end developers
 with experience in HTML and CSS.
+
+.. callmacro:: content.macros.j2#get_quotes
+  :page: 'talks/advanced-css-workshop'
