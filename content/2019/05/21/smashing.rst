@@ -13,46 +13,53 @@ summary: |
   I had the pleasure of presenting
   both a talk and workshop
   at Smashing Conf in San Francisco
-  this year --
-  and enjoyed it thoroughly.
-  Thanks to all the Smashing team
-  that made it possible.
+  this year.
+  During the talk,
+  people left questions in a collaborative doc,
+  so I'm here to provide the answers!
 
 
-Smashing Good CSS
-=================
+Smashing CSS Follow-Up Q & A
+============================
 
 The conference has already released
-`two follow-up`_ `posts`_
-that links to videos (`including my talk`_),
-`photos`_,
-and open, collaborative notes
-from `both`_ `days`_ of the conference.
+a `follow-up post`_
+that links to videos
+(`including mine`_), photos,
+collaborative notes from both days of the conference.
 In particular,
-I recommend watching
-Sara Soueidan
-`Building Accessible Interfaces`_,
-Jason Pamental on
-`Dynamic Web Typography`_,
-and Jen Simmons
-`Thinking With Grid`_.
+I recommend watching, at minimum:
 
-.. _two follow-up: https://smashingconf.com/sf-2019/
-.. _posts: https://www.smashingmagazine.com/2019/04/smashingconf-san-francisco-2019/
-.. _including my talk: https://vimeo.com/331571593
-.. _photos: https://www.flickr.com/photos/marcthiele/albums/72157708275324135
-.. _both: https://smashed.by/sf1
-.. _days: https://smashed.by/sf2
+- Sara Soueidan: `Building Accessible Interfaces`_
+- Jason Pamental: `Dynamic Web Typography`_
+- Jen Simmons: `Thinking With Grid`_
+
+.. _follow-up post: https://www.smashingmagazine.com/2019/04/smashingconf-san-francisco-2019/
+.. _including mine: https://vimeo.com/331571593
 .. _Building Accessible Interfaces: https://vimeo.com/331530115
 .. _Dynamic Web Typography: https://vimeo.com/331575184
 .. _Thinking With Grid: https://vimeo.com/331578108
+
+.. callmacro:: content.macros.j2#divider
+
+.. callmacro:: content.macros.j2#get_quotes
+  :page: 'talks/data-design'
+  :slug: 'mind-bending'
+
+.. callmacro:: content.macros.j2#divider
 
 
 Collaborative Questions
 -----------------------
 
-The collaborative notes include a few questions about my talk,
+The `collaborative notes from day 2`_
+include a few questions about my talk,
 so I thought I'd take a minute to provide some answers:
+
+.. _collaborative notes from day 2: https://smashed.by/sf2
+
+Tooling & Frameworks
+~~~~~~~~~~~~~~~~~~~~
 
   With all the tooling and frameworks and options out there,
   how do you make sense of them all?
@@ -80,6 +87,9 @@ while Vue encourarges a stuctured split between languages
 that allows each one to shine.
 Valid CSS and HTML work in Vue by default
 without any adjustments.
+
+Changing Workflow
+~~~~~~~~~~~~~~~~~
 
   How has your workflow changed over the last few years?
   Anything you are looking forward to experiment with?
@@ -121,6 +131,9 @@ will be game-changers.
 
 After seeing Jason talk,
 I'm also very excited about variable fonts!
+
+Sass vs CSS
+~~~~~~~~~~~
 
   When would you advise to use CSS Custom Properties
   and when Sass variables?
@@ -169,6 +182,9 @@ Static site generators are in a similar position --
 they are not required for any special site features,
 but they help us generate more performant code, more efficiently.
 
+Live Color Themes
+~~~~~~~~~~~~~~~~~
+
   Do CSS variables allow for on-the-fly theming
   without pre-defined stylesheets/options?
   I.e., could someone choose a color
@@ -205,6 +221,9 @@ and share what you find!
 
 .. _CSS Tricks also provides a rundown: https://css-tricks.com/css-custom-properties-theming/
 
+Unit Tests
+~~~~~~~~~~
+
   There is so much logic in CSS now, how do you write (unit) tests?
 
 That's a great question,
@@ -213,6 +232,9 @@ But I haven't done it yet.
 The tests would have to run in the browser,
 so I think JavaScript would be the way to go.
 I'd love to see it happen.
+
+Browser Support
+~~~~~~~~~~~~~~~
 
   What about Browser Support?
 
@@ -225,6 +247,9 @@ in ways that allow us to move forward,
 even while we support old browsers.
 
   What is that beautiful font used in your code editor?
+
+Code Font
+~~~~~~~~~
 
 `Dank Mono`_,
 recommended to me by `Sarah Drasner`_

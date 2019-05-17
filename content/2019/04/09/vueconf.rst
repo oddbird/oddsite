@@ -28,9 +28,16 @@ summary: |
 VueFinder at VueConf, 2019
 ==========================
 
+.. callmacro:: community/events.macros.j2#videos_by_talk
+  :slug: 'talks/data-design'
+  :venue: 'VueConf US'
+  :slice: 1
+
 .. callmacro:: content.macros.j2#get_quotes
   :page: 'talks/data-design'
   :slug: 'squishy'
+
+.. callmacro:: content.macros.j2#divider
 
 After learning about Vue
 from `Sarah Drasner`_'s

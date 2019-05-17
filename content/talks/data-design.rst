@@ -10,7 +10,7 @@ events:
     date: [2019, 4, 25]
     adr: 'New York, NY'
     slides: 'https://talks.oddbird.net/dynamic-css/generate19/'
-  - venue: 'Smashing Conference'
+  - venue: 'Smashing Conf'
     url: 'https://www.smashingconf.com/sf-2019/'
     date: [2019, 4, 16]
     adr: 'San Francisco, CA'
@@ -49,6 +49,24 @@ events:
     slides: 'http://talks.oddbird.net/dynamic-css/cssconfar18/'
 quotes:
   - text: |
+      Some pretty mind-bendingly cool uses for CSS custom props
+      from @MiriSuzanne --
+      color, layout & animation all in css
+      and only using JS to feed data.
+    name: 'Jason Pamental'
+    role: 'Invited Expert on the W3C'
+    url: https://twitter.com/jpamental/status/1118585546803036160
+    slug: 'mind-bending'
+  - text: |
+      Well that was awesome!!!
+      “If you think CSS is a dumb language,
+      you’re a dumb language — CSS IS AWESSOME!”
+      @MiriSuzanne thank you so much for the amazing talk!
+    name: 'Nour Saud'
+    role: 'Software Engineer'
+    url: https://twitter.com/Nour_ASoud/status/1118588349994823681
+    slug: 'awesome'
+  - text: |
       Miriam has always been nothing but spot-on,
       professional, funny, while also being extremely knowledgeable,
       smart, polite and always on time.
@@ -60,7 +78,7 @@ quotes:
       So stoked @mirisuzanne is @vueconfus !!!
       look at how cool CSS is ~ and all the squishy things it does.
     name: 'Ngan Hoang'
-    role: '@itsngansense'
+    role: 'Principal Designer at Prefect.io'
     url: 'https://twitter.com/itsngansense/status/1111001282528063488'
     slug: 'squishy'
 brag: |
