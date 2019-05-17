@@ -119,11 +119,16 @@
   url=none,
   role=none,
   face=none,
-  section=true
+  section=true,
+  class=none
 ) %}
   {% set content = content if (content != none) else caller() %}
 
-  <blockquote data-media-block="start" {{ utility.attr_if('data-quote-section', section) }}>
+  <blockquote
+    data-media-block="start"
+    {{ utility.attr_if('class', class) }}
+    {{ utility.attr_if('data-quote-section', section) }}
+  >
     {# @@@ Get permission for faces #}
     {# {% if face %}
       {{ utility.img(
@@ -171,7 +176,8 @@
   page,
   slug=none,
   count=none,
-  section=true
+  section=true,
+  class=none
 ) %}
   {% set page = page|get_config or page %}
   {% set client = page.config.client[0] if page.config.client else none %}
@@ -180,7 +186,15 @@
     {% set quote = page.config.quotes|selectattr('slug', 'equalto', slug)|list %}
     {% set quote = quote[0] %}
     {% set role = get_role(quote.role, client.name) %}
-    {{ blockquote(quote.text, quote.name, quote.url, role, quote.face, section) }}
+    {{ blockquote(
+      quote.text,
+      quote.name,
+      quote.url,
+      role,
+      quote.face,
+      section,
+      class
+    ) }}
   {% else %}
     {% set two_up = (page.config.quotes|length > 1) %}
     {% set section = false if two_up else section %}
@@ -190,7 +204,15 @@
     {% for quote in page.config.quotes %}
       {% if (count == none) or (loop.index0 < count) %}
         {% set role = get_role(quote.role, client.name) %}
-        {{ blockquote(quote.text, quote.name, quote.url, role, quote.face, section) }}
+        {{ blockquote(
+          quote.text,
+          quote.name,
+          quote.url,
+          role,
+          quote.face,
+          section,
+          class
+        ) }}
       {% endif %}
     {% endfor %}
 

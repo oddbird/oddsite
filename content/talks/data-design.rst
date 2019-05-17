@@ -10,7 +10,7 @@ events:
     date: [2019, 4, 25]
     adr: 'New York, NY'
     slides: 'https://talks.oddbird.net/dynamic-css/generate19/'
-  - venue: 'Smashing Conference'
+  - venue: 'Smashing Conf'
     url: 'https://www.smashingconf.com/sf-2019/'
     date: [2019, 4, 16]
     adr: 'San Francisco, CA'
@@ -20,6 +20,8 @@ events:
     url: 'http://vueconf.us/'
     date: [2019, 3, 26]
     adr: 'Tampa, FL'
+    video_link: 'https://www.vuemastery.com/conferences/vueconf-us-2019/dynamic-css-with-vue/'
+    video: '<iframe src="https://player.vimeo.com/video/334544582" width="640" height="360" frameborder="0" allowfullscreen></iframe>'
     slides: 'https://talks.oddbird.net/dynamic-css/vueconf19/'
   - venue: 'Front Range Front-End'
     url: 'https://www.meetup.com/front-range-front-end/events/chtxtpyxpbcb/'
@@ -47,10 +49,36 @@ events:
     slides: 'http://talks.oddbird.net/dynamic-css/cssconfar18/'
 quotes:
   - text: |
+      Some pretty mind-bendingly cool uses for CSS custom props
+      from @MiriSuzanne --
+      color, layout & animation all in css
+      and only using JS to feed data.
+    name: 'Jason Pamental'
+    role: 'Invited Expert on the W3C'
+    url: https://twitter.com/jpamental/status/1118585546803036160
+    slug: 'mind-bending'
+  - text: |
+      Well that was awesome!!!
+      “If you think CSS is a dumb language,
+      you’re a dumb language — CSS IS AWESSOME!”
+      @MiriSuzanne thank you so much for the amazing talk!
+    name: 'Nour Saud'
+    role: 'Software Engineer'
+    url: https://twitter.com/Nour_ASoud/status/1118588349994823681
+    slug: 'awesome'
+  - text: |
+      Miriam has always been nothing but spot-on,
+      professional, funny, while also being extremely knowledgeable,
+      smart, polite and always on time.
+    name: 'Vitaly Friedman'
+    role: 'Founder of Smashing Magazine & Conference'
+    url: https://www.smashingmagazine.com/events/
+    slug: 'smashing'
+  - text: |
       So stoked @mirisuzanne is @vueconfus !!!
       look at how cool CSS is ~ and all the squishy things it does.
     name: 'Ngan Hoang'
-    role: '@itsngansense'
+    role: 'Principal Designer at Prefect.io'
     url: 'https://twitter.com/itsngansense/status/1111001282528063488'
     slug: 'squishy'
 brag: |
@@ -74,3 +102,6 @@ Dynamic CSS: Layouts & Beyond
 - Basics for understanding Custom Properties & ``Calc()``.
 - Practical examples and use-cases for data-infused design.
 - Integrating with CSS Grids to build layouts on-the-fly.
+
+.. callmacro:: content.macros.j2#get_quotes
+  :page: 'talks/data-design'
