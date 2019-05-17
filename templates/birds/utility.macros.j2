@@ -65,17 +65,21 @@
   page=none,
   blog=true
 ) %}
-  {%- set page = page or all_pages|filter_pages('bird', 'eq', author)|get_page -%}
-  {%- set author = author or page.config.bird -%}
-  {%- set former = page.config.former[0] if page.config.former else none -%}
-  {%- set bio = former.url if former else ['/birds/#bird', author]|join('-') -%}
-
-  {%- if blog -%}
-    {%- set has_posts = get_blog_entries_by_bird(author)|length -%}
-    {%- set blog_url = link_to('author', author=author) if has_posts else none -%}
-    {{ blog_url or bio }}
+  {%- if author == 'oddbird' -%}
+    /birds/
   {%- else -%}
-    {{ bio }}
+    {%- set page = page or all_pages|filter_pages('bird', 'eq', author)|get_page -%}
+    {%- set author = author or page.config.bird -%}
+    {%- set former = page.config.former[0] if (page and page.config.former) else none -%}
+    {%- set bio = former.url if former else ['/birds/#bird', author]|join('-') -%}
+
+    {%- if blog -%}
+      {%- set has_posts = get_blog_entries_by_bird(author)|length -%}
+      {%- set blog_url = link_to('author', author=author) if has_posts else none -%}
+      {{ blog_url or bio }}
+    {%- else -%}
+      {{ bio }}
+    {%- endif -%}
   {%- endif -%}
 {% endmacro %}
 
