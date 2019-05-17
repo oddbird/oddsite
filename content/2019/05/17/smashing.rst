@@ -251,8 +251,8 @@ Code Font
 
   What is that beautiful font used in your code editor?
 
-`Dank Mono`_,
-recommended to me by `Sarah Drasner`_
+I use `Dank Mono`_,
+recommended by `Sarah Drasner`_
 as the perfect font for her `Night Owl`_
 VS Code theme.
 
