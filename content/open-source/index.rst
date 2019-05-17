@@ -7,11 +7,11 @@ after:
   - include: 'projects/_feature.html.j2'
     has: 'contributors'
     slugs:
-      - 'herman/index'
+      - 'open-source/sass'
       - 'open-source/django'
+      - 'herman/index'
       - 'susy/index'
       - 'true/index'
-      - 'open-source/plone'
       - 'accoutrement/index'
       - 'open-source/nunjucks'
       - 'open-source/virtualenv'

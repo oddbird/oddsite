@@ -29,17 +29,19 @@ summary: |
   and find solutions to their unique problems.
   She is a user-experience expert,
   and a pioneer of modern CSS techniques –
-  creating the popular `Susy`_ responsive-grid toolkit,
-  and `True`_ unit-testing library.
+  member of the `Sass`_ core team,
+  and creator of the popular `Susy`_
+  and `True`_ libraries.
   Miriam is a staff writer for `CSS Tricks`_,
   co-author of SitePoint’s `Jump Start Sass`_,
-  and an internationally known
+  and internationally known
   `conference speaker`_,
   winning "Best of" `CSS Dev Conf`_ in 2017.
   She is also a multimedia artist
   with extensive experience in theatre,
   writing, music, and visual art.
 
+  .. _Sass: https://sass-lang.com
   .. _Susy: /susy/
   .. _True: /true/
   .. _CSS Tricks: http://css-tricks.com

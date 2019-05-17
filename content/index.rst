@@ -121,4 +121,10 @@ Software for Humans
 .. callmacro:: projects/splash.macros.j2#splash_list
   :headline: 'Developer Tools We Build'
   :url: '/open-source/'
-  :slugs: ['herman/index', 'open-source/django', 'susy/index']
+  :slugs: [
+      'open-source/sass',
+      'open-source/django',
+      'susy/index',
+      'herman/index',
+      'true/index'
+    ]
