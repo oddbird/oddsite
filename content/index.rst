@@ -70,7 +70,7 @@ Software for Humans
 
 .. callmacro:: content.macros.j2#two_quotes
   :quotes: [
-      ['work/coachhub', 'remote'],
+      ['work/metadeploy', 'outsourcing'],
       ['work/medcurbside', 'goals'],
     ]
 
