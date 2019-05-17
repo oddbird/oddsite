@@ -246,10 +246,10 @@ CSS is designed to be resilient
 in ways that allow us to move forward,
 even while we support old browsers.
 
-  What is that beautiful font used in your code editor?
-
 Code Font
 ~~~~~~~~~
+
+  What is that beautiful font used in your code editor?
 
 `Dank Mono`_,
 recommended to me by `Sarah Drasner`_
