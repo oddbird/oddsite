@@ -5,7 +5,7 @@ client:
   - name: 'Salesforce.org'
 project:
   - name: 'MetaDeploy'
-    tagline: ''
+    tagline: 'Salesforce product installer'
     url: 'https://install.salesforce.org/'
     years: '2018–2019'
     status: 'live'
@@ -26,7 +26,7 @@ quotes:
     role: 'Sr. Director of Release Engineering'
     slug: 'outsourcing'
 summary: |
-  MetaDeploy helps nonprofit Salesforce admins & developers
+  MetaDeploy helps nonprofit Salesforce admins and developers
   configure, install, and test
   packaged products --
   providing a graphic web interface
@@ -37,10 +37,10 @@ summary: |
   or Education Data Architecture (EDA),
   to install on one of their Salesforce organizations.
   MetaDeploy helps make packages easy to find,
-  whil allowing users to customize their installations,
+  while allowing users to customize their installations,
   and run preflight checks
   before committing to a full install.
 
 
-Case Study: MedCurbside
-=======================
+Case Study: MetaDeploy
+======================
