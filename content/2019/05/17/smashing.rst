@@ -72,18 +72,18 @@ In most cases, I think
 "that's cool, but not a priority for me"
 and I move on.
 
-I also have vey stong opinions
-about how a tool should fit my wokflow.
+I also have very strong opinions
+about how a tool should fit my workflow.
 For example:
 features in React got me excited several years back,
 but Vue reframed the idea
 in a way that fit my requirements.
-That difference was obviuos from looking at code samples,
+That difference was obvious from looking at code samples,
 and made Vue worth my time to learn.
 
 React hides all my favorite languages (HTML and CSS)
 inside JavaScript with custom syntax,
-while Vue encourarges a stuctured split between languages
+while Vue encourages a structured split between languages
 that allows each one to shine.
 Valid CSS and HTML work in Vue by default
 without any adjustments.
@@ -96,7 +96,7 @@ Changing Workflow
 
 Modern CSS features are released
 module-by-module,
-without the overarching fanfair that we saw with CSS3.
+without the overarching fanfare that we saw with CSS3.
 That *continuous integration* has been great
 for speed and efficiency --
 but we can "miss the forest for the trees"
@@ -108,12 +108,12 @@ Grid, Flexbox, Writing Modes,
 Multi-Column, Box Alignment, Custom Properties,
 and various other specs
 are not meant to stand-alone,
-but to compliment each other in surprising ways.
+but to complement each other in surprising ways.
 
 Multicol and Grid ``auto-fill``
 use similar logic,
 and can easily align with each other.
-Flexbox provides space-distribution among differen-sized elements,
+Flexbox provides space-distribution among different-sized elements,
 while Grid provides top-down layouts.
 Both are designed to be truly "fluid"
 in a way that makes ``%`` layouts look downright static.
@@ -121,9 +121,9 @@ Box alignment solves a number of old issues,
 and will eventually work with
 standard "flow" layouts as well.
 
-The overall affect is what Jen Simmons
+The overall effect is what Jen Simmons
 has called Intrinsic Design,
-and it has fundmentally changed how I think about CSS
+and it has fundamentally changed how I think about CSS
 and the layouts I create --
 but there are a few pieces missing.
 Subgrid and universal Box Alignment
@@ -141,7 +141,7 @@ Sass vs CSS
 There is some overlap,
 which is a matter of judgement.
 There's no right answer in that gray area,
-and your milage will vary
+and your mileage will vary
 project-to-project.
 But there are a few big differences:
 
@@ -158,13 +158,13 @@ something Sass will never be able to do.
 
 While CSS handles that DOM-variation well,
 Sass provides more tools
-for working with global configuration "contants"
+for working with global configuration "constants"
 and other logical variable use-cases,
 like if/then statements.
 I use Sass to store global config
 that I want to manipulate programmatically (like colors) --
 and then output the results to CSS custom properties
-if I need them to *also* varry based on the DOM.
+if I need them to *also* vary based on the DOM.
 
   With Custom Properties,
   nesting and Houdini CSS now coming to CSS,
@@ -199,7 +199,7 @@ and then use it wherever you want!
 There's one feature that feels like it's missing:
 CSS doesn't provide an easy way to inspect colors,
 and adjust them on-the-fly
-(to find a compliment or contrast for example).
+(to find a complement or contrast for example).
 You can achieve some of that with a mix of `hsl()` and `calc()`
 functions, but it takes some careful work --
 and contrast isn't simple to calculate.
@@ -227,7 +227,7 @@ Unit Tests
   There is so much logic in CSS now, how do you write (unit) tests?
 
 That's a great question,
-annd a great idea!
+and a great idea!
 But I haven't done it yet.
 The tests would have to run in the browser,
 so I think JavaScript would be the way to go.
