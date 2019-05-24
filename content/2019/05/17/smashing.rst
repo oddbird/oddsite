@@ -19,8 +19,8 @@ summary: |
   so I'm here to provide the answers!
 
 
-Smashing CSS Follow-Up Q & A
-============================
+Smashing CSS Follow-Up Q&nbsp;&&nbsp;A
+======================================
 
 The conference has already released
 a `follow-up post`_
