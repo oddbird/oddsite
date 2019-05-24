@@ -17,7 +17,6 @@ summary: |
   to Object Oriented UX
   to the wonder of CSS Grid,
   here's what I found interesting.
-  Maybe you will too.
 
 
 The Scary & the Inspiring
@@ -40,10 +39,10 @@ But if we can use those results
 to help expose and address bias as Josh suggested,
 I’m all in.
 
-Watch Josh's talk: `AI is your new design material`_
+Watch Josh's talk: `A.I. Is Your New Design Material`_
 
 .. _Forbes: https://www.forbes.com/sites/bernardmarr/2019/01/29/3-steps-to-tackle-the-problem-of-bias-in-artificial-intelligence/#36c9eff87a12
-.. _AI is your new design material: https://bigmedium.com/speaking/ai-is-your-new-design-material.html
+.. _A.I. Is Your New Design Material: https://bigmedium.com/speaking/ai-is-your-new-design-material.html
 
 
 Miriam Suzanne
@@ -58,16 +57,16 @@ It was a blizzard of useful information
 about CSS Grid, variables, interactions between CSS and JS,
 and much more.
 If you're curious,
-checkout the full video.
-If you were at either Generate or Smashing Conf,
+check out the full video.
+If you were at either Generate or Smashing Conf
 and still want to learn more
 about Dynamic CSS,
 Miriam continues with a Q&A in `Smashing CSS Followup`_.
 
-Watch Miriam's talk & view slides: `Dynamic CSS Layouts and Beyond`_
+Watch Miriam's talk & view slides: `Dynamic CSS: Layouts & Beyond`_
 
 .. _Smashing CSS Followup: /2019/05/17/smashing/
-.. _Dynamic CSS Layouts and Beyond: /talks/data-design/
+.. _Dynamic CSS\: Layouts & Beyond: /talks/data-design/
 
 
 Sam Richard
@@ -132,8 +131,8 @@ and start prototyping with code.
 It’s a super efficient way
 to communicate designs to developers.
 
-Start prototyping with `Gatsby`_.
-Learn more about `Adekunle`_.
+Start prototyping with `Gatsby`_,
+or learn more about `Adekunle`_.
 
 .. _Gatsby: https://www.gatsbyjs.org/
 .. _Adekunle: http://www.adekunleoduye.com/speaking/
@@ -142,12 +141,12 @@ Learn more about `Adekunle`_.
 Aaron Irizarry
 --------------
 
-Groundwork: Building Foundations for High-Performing Teams
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Laying the Groundwork: Building Foundations for High-Performing Teams
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-In his talk Aaron Irizarry confirmed my anecdotal experience
-about the factors that make a high performance team.
-Create a psychologically safe work environment,
+Aaron Irizarry confirmed my anecdotal experience
+about the factors that make a high-performance team:
+create a psychologically safe work environment,
 avoid micromanagement and low standards,
 allow autonomy,
 provide clear expectations, stakes, goals, and evaluations,
@@ -156,9 +155,9 @@ Thanks, OddBird,
 for challenging me to do my best work
 in a thoroughly supportive space. 👏
 
-Watch Aaron's talk: `Groundwork Building Foundations for High Performing Teams`_
+Watch Aaron's talk: `Laying the Groundwork: Building Foundations for High-Performing Teams`_
 
-.. _Groundwork Building Foundations for High Performing Teams: https://vimeo.com/296445890
+.. _Laying the Groundwork\: Building Foundations for High-Performing Teams: https://vimeo.com/296445890
 
 
 Jen Simmons
@@ -226,9 +225,9 @@ but satisfaction with their work is high.
 And what’s all this work for anyway,
 if not increased happiness?
 
-Learn more about `AntonandIrene`_.
+Learn more about `Anton & Irene`_.
 
-.. _AntonandIrene: http://antonandirene.com/
+.. _Anton & Irene: http://antonandirene.com/
 .. _One Shared House: http://work.antonandirene.com/onesharedhouse/
 .. _One Shared House 2030: http://work.antonandirene.com/onesharedhouse2030/
 
