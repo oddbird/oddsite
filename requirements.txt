@@ -2,11 +2,11 @@
 
 rstblog==1.0.obc6
 PyYAML==5.1
-Babel==2.6.0
+Babel==2.7.0
 blinker==1.4
 docutils==0.14
 Jinja2==2.10.1
 Werkzeug==0.15.4
-Pygments==2.4.0
+Pygments==2.4.1
 smartypants==2.0.1
 Pillow==6.0.0
