@@ -22,7 +22,7 @@ Why this matters.
 -----------------
 
 For three days, technologists from many parts of the country gathered in Atlanta
-GA  —  a melting pot of human experience in itself —  to realize just that.
+GA – a melting pot of human experience in itself – to realize just that.
 `Refactr.tech`_ showcased growing and powerful voices of underrepresented
 professionals in tech and their allies; with a focus on technology and creating
 a safe space to have conversations around diversity, inclusion, and
@@ -124,7 +124,7 @@ struggling to learn Angular during her day job, just like me.
 .. _quantum computing: https://en.wikipedia.org/wiki/Quantum_computing
 
 I sat in on a panel with A* members of `/dev/color`_ from Netflix on being
-authentic leading teams while black in Silicon Valley — showing there is
+authentic leading teams while black in Silicon Valley  –  showing there is
 strength in a shared experience and knowing that you’re not alone.
 
 .. _/dev/color: https://www.devcolor.org/
@@ -133,7 +133,7 @@ strength in a shared experience and knowing that you’re not alone.
 in her talk, "Mentoring the way to diversity and inclusion". It was a
 call-to-action for companies to make cultural shifts in how they hire, onboard
 and mold upcoming talent; talent that perhaps have less-than-conventional paths
-to get where they are—and how mentoring junior engineers and bolstering D&I
+to get where they are – and how mentoring junior engineers and bolstering D&I
 efforts work hand-in-hand.
 
 .. _Alexandra Millatmal: https://twitter.com/halfghaninne?lang=en
@@ -148,8 +148,8 @@ like Microsoft and Reddit.
 .. _Looker (now Google): https://cloud.google.com/blog/topics/inside-google-cloud/expanding-our-platform-for-business-intelligence-and-embedded-analytics
 
 I even learned something from the not-so-good talks (there were a couple). But
-for someone like me—an up-and-coming developer with her own goals to join the
-conference circuit—it’s refreshing to know that not everyone is a rock star and
+for someone like me – an up-and-coming developer with her own goals to join the
+conference circuit – it’s refreshing to know that not everyone is a rock star and
 that there is space for me to one day present my ideas and experiences to my
 peers.
 
