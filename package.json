@@ -73,7 +73,7 @@
     "sassdoc-theme-herman": "^3.0.2",
     "sinon": "^7.3.2",
     "sinon-chai": "^3.3.0",
-    "stylelint": "^10.0.1",
+    "stylelint": "^10.1.0",
     "stylelint-config-recommended-scss": "^3.3.0",
     "stylelint-scss": "^3.6.1",
     "touch": "^3.1.0",
