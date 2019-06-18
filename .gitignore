@@ -17,6 +17,7 @@ output/
 node/
 npm-debug.log
 static/js/spammers.txt
+.vscode/
 
 # Node and Yarn packages:
 requirements/yarn-*.tar.gz
