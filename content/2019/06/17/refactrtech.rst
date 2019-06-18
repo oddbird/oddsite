@@ -28,8 +28,8 @@ professionals in tech and their allies; with a focus on technology and creating
 a safe space to have conversations around diversity, inclusion, and
 intersectionality in tech.
 
-	"I knew I was in the right place as I met so many people I already follow on
-	Twitter."
+  "I knew I was in the right place as I met so many people I already follow on
+  Twitter."
 
 First, I'd like to thank the awesome women of `Vue Vixens`_ for sponsoring my
 ticket for the conference. Refactr.tech is a re-branding of sorts of `We RISE`_,
