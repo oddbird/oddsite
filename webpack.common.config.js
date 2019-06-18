@@ -3,7 +3,6 @@
 process.env.BROWSERSLIST_CONFIG = './.browserslistrc';
 
 const AssetsPlugin = require('webpack-assets-manifest');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const SassDocPlugin = require('./sassdoc-webpack-plugin');
 const mozjpeg = require('imagemin-mozjpeg');
@@ -12,6 +11,7 @@ const path = require('path');
 const spawn = require('child_process').spawn;
 const touch = require('touch');
 const webpack = require('webpack');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 const outputPath = path.join(__dirname, 'content', 'static', 'assets');
 const sassdocPath = path.join(__dirname, 'content', 'styleguide');
@@ -169,9 +169,7 @@ module.exports = {
       outputPath,
     }),
     new WebpackShellPlugin(),
-    new CleanWebpackPlugin({
-      verbose: true,
-    }),
+    new CleanWebpackPlugin(),
   ],
   module: {
     rules: [

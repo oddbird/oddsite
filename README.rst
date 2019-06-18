@@ -1,9 +1,6 @@
 OddBird
 =======
 
-.. image:: https://badges.greenkeeper.io/oddbird/oddsite.svg
-   :alt: Greenkeeper badge
-   :target: https://greenkeeper.io/
 
 Development setup
 -----------------
