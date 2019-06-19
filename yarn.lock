@@ -6532,9 +6532,10 @@ jpegtran-bin@^4.0.0:
     bin-wrapper "^4.0.0"
     logalot "^2.0.0"
 
-"jquery-dotimeout@github:oddbird/jquery-dotimeout#v1.0.0":
-  version "1.0.0"
-  resolved "https://codeload.github.com/oddbird/jquery-dotimeout/tar.gz/7c4d538bc51095e0a5c516f9abec58b8ee99ee63"
+"jquery-dotimeout@github:oddbird/jquery-dotimeout#v1.0":
+  version "0.0.0"
+  uid "1849a50d3defe2205ea98d9363421805bc265149"
+  resolved "https://codeload.github.com/oddbird/jquery-dotimeout/tar.gz/1849a50d3defe2205ea98d9363421805bc265149"
 
 jquery@^3.4.1:
   version "3.4.1"
