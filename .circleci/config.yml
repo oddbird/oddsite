@@ -18,16 +18,7 @@ jobs:
             echo 'export PATH=~/oddsite/node/bin:$PATH' >> $BASH_ENV
       - run:
           name: Install Dependencies
-          command: yarn
-      - run:
-          name: Check that yarn.lock matches package.json
-          command: |
-            if [[ ! "${CIRCLE_BRANCH}" =~ greenkeeper\/.* ]]; then
-              [[ $(git diff --name-only yarn.lock) == "" ]] && exit 0
-              echo ">> yarn.lock is out of date, run \"yarn\""
-              git diff --no-pager yarn.lock
-              exit 1
-            fi
+          command: yarn install --frozen-lockfile
       - save_cache:
           key: oddsite-{{ .Branch }}-{{ checksum "yarn.lock" }}
           paths:
