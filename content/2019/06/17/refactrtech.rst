@@ -28,8 +28,10 @@ professionals in tech and their allies; with a focus on technology and creating
 a safe space to have conversations around diversity, inclusion, and
 intersectionality in tech.
 
-  "I knew I was in the right place as I met so many people I already follow on
-  Twitter."
+.. callmacro:: content.macros.j2#pullquote
+
+  I knew I was in the right place as I met so many people I already follow on
+  Twitter.
 
 First, I'd like to thank the awesome women of `Vue Vixens`_ for sponsoring my
 ticket for the conference. Refactr.tech is a re-branding of sorts of `We RISE`_,
@@ -50,9 +52,8 @@ than just “we need more women.”
 
 We know that diversity makes good business sense and that companies that work
 towards gender, racial and ethnic diversity see financial gains above industry
-medians; but I love how the purview of this conference was less about how we can
-achieve D&I for financial gain and more about how being intentional about D&I
-can help technologists find purpose in the things we build.
+medians; but I love how the organizers of this conference took the conversation 
+further than just its economic benefits.
 
 .. _Refactr.tech: http://refactr.tech/
 .. _Vue Vixens: https://vuevixens.org/
