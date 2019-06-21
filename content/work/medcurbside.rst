@@ -4,6 +4,7 @@ image:
   - src: 'projects/medcurbside.jpg'
 client:
   - name: 'Lab06'
+sort_date: 2017-12-15
 project:
   - name: 'MedCurbside'
     tagline: 'Ask, Answer, Cite. Make Medicine Better.'

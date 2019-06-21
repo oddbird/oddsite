@@ -4,6 +4,7 @@ image:
   - src: 'projects/carrot.jpg'
 client:
   - name: 'Jake de Grazia'
+sort_date: 2010-03-15
 project:
   - name: 'The Carrot Project'
     tagline: 'A community tool for social responsability'

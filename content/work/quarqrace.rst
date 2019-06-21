@@ -9,6 +9,7 @@ logo: 'sram'
 client:
   - name: 'SRAM'
     url: 'http://sram.com/'
+sort_date: 2016-12-15
 project:
   - name: 'Quarq Race Intelligence'
     industry: 'Pro Sports & Fitness'

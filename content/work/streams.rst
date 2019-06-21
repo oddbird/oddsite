@@ -3,6 +3,7 @@ grid_template: true
 client:
   - name: 'Junyo'
     url: 'http://junyo.com/'
+sort_date: 2014-09-15
 project:
   - name: 'Streams Resource Library'
     tagline: 'Curration Tools for Teachers'

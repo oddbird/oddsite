@@ -28,6 +28,14 @@ summary: |
 Integrated Design Systems
 =========================
 
+.. callmacro:: content.macros.j2#get_quotes
+  :page: 'work/second-measure'
+  :slug: 'best'
+
+.. callmacro:: content.macros.j2#get_quotes
+  :page: 'work/second-measure'
+  :slug: 'systems'
+
 .. callmacro:: content.macros.j2#rst
   :tag: 'start'
 

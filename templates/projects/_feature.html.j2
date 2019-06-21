@@ -1,8 +1,6 @@
 {% import 'utility.macros.j2' as utility %}
 {% import 'projects/macros.j2' as work %}
 
-{% set pages = all_pages|filter_pages(module.has) if module.has else pages %}
-
 {% if module.slugs %}
   {% for slug in module.slugs %}
     {% set page = slug|get_config %}
@@ -11,7 +9,8 @@
     {% endif %}
   {% endfor %}
 {% else %}
-  {% set pages = pages|filter_pages('public', 'neq', false) %}
+  {% set pages = all_pages|filter_pages(module.has) if module.has else pages %}
+  {% set pages = pages|filter_pages('public', 'neq', false)|sort_projects %}
   {% for page in pages %}
     {{ work.feature(page) }}
   {% endfor %}

@@ -8,6 +8,7 @@ image:
 client:
   - name: 'SRAM'
     url: 'http://sram.com/'
+sort_date: 2016-12-15
 project:
   - name: 'QuarqNet'
     tagline: 'Real-Time Telemetry for Athletes'

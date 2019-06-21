@@ -3,6 +3,7 @@ grid_template: true
 client:
   - name: 'The Providence Plan'
     url: 'http://provplan.org/'
+sort_date: 2011-12-15
 project:
   - name: 'Master Lookup Table'
     tagline: 'Parcel Mapping for Urban Development'

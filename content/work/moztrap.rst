@@ -6,6 +6,7 @@ logo: 'mozilla'
 client:
   - name: 'Mozilla'
     url: 'https://www.mozilla.org/'
+sort_date: 2012-03-15
 project:
   - name: 'MozTrap'
     industry: 'Enterprise Technology'
