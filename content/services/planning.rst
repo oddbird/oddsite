@@ -96,6 +96,10 @@ summary: |
 Product Strategy & Planning
 ===========================
 
+.. callmacro:: content.macros.j2#get_quotes
+  :page: 'work/second-measure'
+  :slug: 'easy'
+
 .. callmacro:: content.macros.j2#divider
 
 .. callmacro:: content.macros.j2#rst
