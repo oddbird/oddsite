@@ -52,7 +52,7 @@ summary: |
   & consumer behavior data.
   We were hired to help
   organize the code and design systems
-  into a re-usable and fully-documented
+  into a reusable and fully documented
   React component library
   and inttegrated design system.
 
