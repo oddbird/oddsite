@@ -54,7 +54,7 @@ summary: |
   organize the code and design systems
   into a reusable and fully documented
   React component library
-  and inttegrated design system.
+  and integrated design system.
 
 
 Second Measure
