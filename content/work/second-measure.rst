@@ -17,20 +17,20 @@ tasks:
 quotes:
   - text: |
       OddBird was quick to learn and pick up new technologies.
-      They delivered high quality code, and delivered on time.
+      **They delivered high quality code, and delivered on time.**
     name: 'Matthew King'
     role: 'Engineering Manager'
     slug: 'quick'
   - text: |
       When the inventor of the modern design system
-      names you as the number one person she'd hire
-      to build a design system, well then I jump!
+      names you as **the number one person she'd hire
+      to build a design system**, well then I jump!
       I'm grateful she put us in contact.
     name: 'Tara Kelly'
     role: 'Director Of Product Design'
     slug: 'best'
   - text: |
-      It was easy to talk about technology options.
+      **It was easy to talk about technology options.**
       OddBird was both flexible
       (working within the constraints of our existing systems)
       and opinionated
@@ -39,8 +39,8 @@ quotes:
     role: 'Engineering Manager'
     slug: 'easy'
   - text: |
-      I appreciated the specific experience OddBird brought to bear
-      in terms of building component libraries,
+      **I appreciated the specific experience OddBird brought to bear
+      in terms of building component libraries**,
       particularly the need to incrementally import the component library
       in order to have it successfully be used.
     name: 'Matthew King'
