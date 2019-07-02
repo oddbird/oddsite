@@ -68,6 +68,24 @@ Software for Humans
 
     Let's talk about your project
 
+
+.. callmacro:: home.macros.j2#expertise
+
+  While we’ve become industry leaders –
+  experts and core developers of languages like Sass/CSS and
+  Django/Python that large companies rely on –
+  we intentionally keep our team small.
+  Our size allows us to move fast and integrate with your team
+  for an agile and collaborative process.
+
+  *Let’s create a beautiful web app that reflects your unique vision.*
+
+  .. callmacro:: content.macros.j2#link_button
+    :url: '/contact/'
+
+    Start a conversation with us
+
+
 .. callmacro:: content.macros.j2#two_quotes
   :quotes: [
       ['work/metadeploy', 'outsourcing'],

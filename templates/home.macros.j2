@@ -38,3 +38,23 @@
     </span>
   </span>
 {% endmacro %}
+
+
+{% macro expertise(
+  content=none,
+  do_rst=true
+) %}
+  {% set content = content if (content != none) else caller() %}
+    <h2 class='headline-contrast'>
+      <span class='fancy-headline-small'>experience</span>
+      <span class='title-main'>dedicated</span>
+      <span class='fancy-headline-light'>service</span>
+      <span class='fancy-headline-small'>for</span>
+      <span class='title-main'>large-scale</span>
+      <span class='fancy-headline-light'>projects</span>
+    </h2>
+
+    <div class="content-area">
+      {{ content|rst }}
+    </div>
+{% endmacro %}
