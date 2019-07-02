@@ -4,6 +4,10 @@ workshop: true
 image:
   - src: 'talks/miriam.jpg'
 events:
+  - venue: 'Webconf.Asia'
+    url: 'https://2019.webconf.asia/'
+    date: [2019, 11, 21]
+    adr: 'Hong Kong'
   - venue: 'Generate 2019'
     url: 'https://www.generateconf.com/generate2019/workshops'
     date: [2019, 4, 24]

@@ -5,6 +5,14 @@ image:
 talk: true
 slides: 'https://talks.oddbird.net/dynamic-css/'
 events:
+  - venue: 'Webconf.Asia'
+    url: 'https://2019.webconf.asia/'
+    date: [2019, 11, 22]
+    adr: 'Hong Kong'
+  - venue: 'Develop Denver'
+    url: 'https://developdenver.org/'
+    date: [2019, 8, 15]
+    adr: 'Denver, CO'
   - venue: 'Generate 2019'
     url: 'https://www.generateconf.com/generate2019/'
     date: [2019, 4, 25]

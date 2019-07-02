@@ -1,7 +1,7 @@
 public: yes
 speakers: [miriam]
 talk: true
-slides: https://www.oddbooksapp.com/book/software-for-humans
+slides: https://talks.oddbird.net/user-unfriendly/design4drupal19
 headline:
   - tagline: 'Designing software for humans…'
 image:
@@ -11,10 +11,19 @@ events:
     url: 'https://design4drupal.org/'
     date: [2019, 6, 26]
     adr: 'Boston, MA'
+    video: '<iframe width="560" height="315" src="https://www.youtube.com/embed/2MkQBQb43gE" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+    video_link: https://drupal.tv/external-video/2019-06-28/user-unfriendly-practical-guide-losing-control
+    slides: https://talks.oddbird.net/user-unfriendly/design4drupal19
   - venue: 'Open Source Conference'
     url: 'https://www.comcastlabsconnect.com/open-source-2019'
     date: [2019, 6, 20]
     adr: 'Denver, CO'
+    slides: https://talks.oddbird.net/user-unfriendly/opensource19
+  - venue: 'Agile Denver'
+    url: 'https://www.comcastlabsconnect.com/open-source-2019'
+    date: [2019, 3, 17]
+    adr: 'Denver, CO'
+    slides: https://talks.oddbird.net/user-unfriendly/agiledenver19
   - venue: 'AIGA Colorado'
     url: 'https://colorado.aiga.org/event/04-26-18-rethinking-ux-design/'
     date: [2018, 4, 26]
