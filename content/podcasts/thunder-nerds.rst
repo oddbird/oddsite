@@ -15,5 +15,5 @@ summary: |
   before her talk at VueConf US 2019.
 
 
-Dynamic CSS Interview at VueConf US
-===================================
+Dynamic CSS Interview
+=====================

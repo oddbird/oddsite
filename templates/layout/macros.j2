@@ -249,13 +249,17 @@
   {% set by_sub = speaker_list(ctx.config.speakers) if ctx.config.speakers else none %}
   {% set sub = page_sub or proj_sub or by_sub %}
 
+  {% set is_event = ctx.config.event_type and (ctx.config.events|length == 1) %}
+  {% set event = ctx.config.events[0] if is_event else none %}
+
   {% set type = none %}
   {% set type = 'Case Study' if (project and client) else type %}
   {% set type = 'Open Source Software' if (project and contributors and not type) else type %}
   {% set type = 'Meet the Birds…' if (ctx.config.bird and not type) else type %}
   {% set type -%}
-    {%- if (ctx.config.speakers and not type) -%}
-      {{ '%s Details' % (ctx.config.event_type|capitalize if ctx.config.event_type else 'Talk') }}
+    {%- if (ctx.config.event_type and not type) -%}
+      {%- set event_type = ctx.config.event_type|capitalize -%}
+      {{- [event_type, event.venue]|join(': ') if event else [event_type, 'Details']|join(' ') -}}
     {%- elif type -%}
       {{ type }}
     {%- endif -%}
@@ -290,6 +294,15 @@
       {% endfor %}
 
       {{ ctx.render_summary()|typogrify }}
+
+      {% if (event and event.audio) %}
+        {{ content.audio(
+          src=event.audio,
+          link=event.url,
+          caption='Listen to the audio:'
+        ) }}
+      {% endif %}
+
       {{ header_actions(actions, project, slides) }}
     </div>
   {% endif %}
