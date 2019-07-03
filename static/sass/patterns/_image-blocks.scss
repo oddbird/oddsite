@@ -2,16 +2,7 @@
 // ============
 
 .image-block {
-  margin: size('gutter') 0;
-  text-align: center;
-
-  @include above('small-page') {
-    align-items: center;
-    display: flex;
-    display: grid;
-    grid-template-columns: auto minmax(0, 1fr);
-    text-align: left;
-  }
+  @include contentblock;
 }
 
 .imageblock-title {
@@ -20,6 +11,8 @@
 }
 
 .imageblock-link {
+  @include contentblock-highlight('link');
+
   &[href] {
     @include transition('move');
     display: block;
@@ -31,25 +24,10 @@
   }
 }
 
-.imageblock-link,
 .imageblock-image {
-  flex: 0 1 45%;
-  margin: 0 auto;
-  max-width: size('imageblock-image');
-}
-
-.imageblock-image {
-  margin-bottom: size('shim');
-
-  @include above('small-page') {
-    margin: 0;
-  }
+  @include contentblock-highlight('normal');
 }
 
 .imageblock-content {
-  text-align: left;
-
-  @include above('small-page') {
-    margin-left: size('pad');
-  }
+  @include contentblock-copy;
 }

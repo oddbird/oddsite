@@ -205,3 +205,41 @@ $breakpoints: (
     margin-#{$side}: get-extend-calc('extend-xsmall');
   }
 }
+
+@mixin contentblock-highlight($type) {
+  flex: 0 1 45%;
+  max-width: size('imageblock-image');
+
+  @if ($type == 'normal') {
+    margin: 0 auto size('shim');
+
+    @include above('small-page') {
+      margin: 0;
+    }
+  } @else if ($type == 'link') {
+    margin: 0 auto;
+  } @else {
+    @error 'Is this a normal or link block?';
+  }
+}
+
+@mixin contentblock-copy {
+  text-align: left;
+
+  @include above('small-page') {
+    margin-left: size('pad');
+  }
+}
+
+@mixin contentblock {
+  margin: size('gutter') 0;
+  text-align: center;
+
+  @include above('small-page') {
+    align-items: center;
+    display: flex;
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    text-align: left;
+  }
+}

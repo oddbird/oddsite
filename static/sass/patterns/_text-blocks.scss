@@ -1,0 +1,28 @@
+// Text Blocks
+// ===========
+
+.text-block {
+  @include contentblock;
+}
+
+.textblock-headline {
+  @include contentblock-highlight('normal');
+}
+
+.textblock-content {
+  @include contentblock-copy;
+
+  p {
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+}
+
+.headline-contrast {
+  text-align: right;
+
+  span {
+    display: block;
+  }
+}

@@ -68,6 +68,8 @@ Software for Humans
 
     Let's talk about your project
 
+.. callmacro:: content.macros.j2#rst
+  :tag: 'start'
 
 .. callmacro:: home.macros.j2#expertise
 
@@ -84,6 +86,9 @@ Software for Humans
     :url: '/contact/'
 
     Start a conversation with us
+
+.. callmacro:: content.macros.j2#rst
+  :tag: 'end'
 
 
 .. callmacro:: content.macros.j2#two_quotes
