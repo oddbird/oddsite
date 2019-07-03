@@ -12,10 +12,12 @@ events:
     url: 'https://www.generateconf.com/generate2019/workshops'
     date: [2019, 4, 24]
     adr: 'New York, NY'
+    post: '/2019/05/24/generate'
   - venue: 'Smashing Conference'
     url: 'https://www.smashingconf.com/sf-2019/'
     date: [2019, 4, 16]
     adr: 'San Francisco, CA'
+    post: '/2019/05/17/smashing'
 quotes:
   - text: |
       A fantastic speaker, with wonderful teaching skills,

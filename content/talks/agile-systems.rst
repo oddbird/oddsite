@@ -23,6 +23,7 @@ events:
     slides: 'https://oddbooksapp.com/release/9edb34c9-8789-4201-9f14-64bf5ab11b0a'
     video_link: 'https://www.vuemastery.com/conferences/vueconf-2018/agile-design-systems-in-vue-miriam-suzanne/'
     video: '<iframe src="https://player.vimeo.com/video/264296381" width="640" height="360" frameborder="0" allowfullscreen></iframe>'
+    post: '/2018/05/14/vueconfus'
   - venue: 'Tech Confluence'
     url: 'https://www.meetup.com/TechConfluence/events/nxcfhlyxfbcc/'
     date: [2018, 3, 21]

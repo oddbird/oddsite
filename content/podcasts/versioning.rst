@@ -7,7 +7,7 @@ events:
   - venue: 'SitePoint Versioning Show'
     date: [2016, 10, 13]
     url: 'https://www.sitepoint.com/versioning-show-episode-8-miriam-suzanne/'
-    post: '2016/10/18/versioning.rst'
+    post: '/2016/10/18/versioning.rst'
 summary: |
   In this episode of the Versioning Show,
   Tim and David are joined by Miriam Suzanne,

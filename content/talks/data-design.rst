@@ -18,18 +18,21 @@ events:
     date: [2019, 4, 25]
     adr: 'New York, NY'
     slides: 'https://talks.oddbird.net/dynamic-css/generate19/'
+    post: '/2019/05/24/generate'
   - venue: 'Smashing Conf'
     url: 'https://www.smashingconf.com/sf-2019/'
     date: [2019, 4, 16]
     adr: 'San Francisco, CA'
     video_link: 'https://vimeo.com/331571593'
     slides: 'https://talks.oddbird.net/dynamic-css/smashingsf19/'
+    post: '/2019/05/17/smashing'
   - venue: 'VueConf US'
     url: 'http://vueconf.us/'
     date: [2019, 3, 26]
     adr: 'Tampa, FL'
     video_link: 'https://www.vuemastery.com/conferences/vueconf-us-2019/dynamic-css-with-vue/'
     slides: 'https://talks.oddbird.net/dynamic-css/vueconf19/'
+    post: '/2019/04/09/vueconf'
   - venue: 'Front Range Front-End'
     url: 'https://www.meetup.com/front-range-front-end/events/chtxtpyxpbcb/'
     date: [2018, 11, 1]

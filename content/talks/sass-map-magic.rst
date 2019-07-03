@@ -11,6 +11,7 @@ events:
     adr: 'Boston, MA'
     slides: 'https://oddbooksapp.com/release/b71e6e5d-e956-42ff-a4dd-b70bf3b13a2a'
     video: '<iframe width="560" height="315" src="https://www.youtube.com/embed/MdwtoFt2LOI" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>'
+    post: '/2016/09/30/cssconf'
   - venue: 'CSS Summit'
     url: 'http://environmentsforhumans.com/2015/css-summit/'
     date: [2015, 7, 7]
@@ -19,6 +20,7 @@ events:
   - venue: 'SassConf 2014 [Unconference Day]'
     url: 'http://sassconf.com'
     date: [2014, 10, 2]
+    post: '/2014/10/01/sassconf'
   - venue: 'BlendConf'
     url: 'http://www.blendconf.com/'
     date: [2014, 9, 12]
