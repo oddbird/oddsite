@@ -42,6 +42,15 @@ events:
     url: 'http://sassconf.com'
     date: [2015, 11, 11]
     slides: 'https://www.oddbooksapp.com/book/user-unfriendly'
+quotes:
+  - text: |
+      Thought provoking talk on rethinking who the user is
+      and who we are writing for as developers.
+      Wow! Made me think.
+    name: 'Nithya Ruff'
+    role: 'Leader of Comcast Open Source Office'
+    url: https://twitter.com/nithyaruff/status/1141803102376550402
+    slug: 'thought'
 brag: |
   A project-manager's reflections
   on **human-centered problem-solving**,

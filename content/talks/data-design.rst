@@ -68,7 +68,7 @@ quotes:
   - text: |
       Well that was awesome!!!
       “If you think CSS is a dumb language,
-      you’re a dumb language — CSS IS AWESSOME!”
+      you’re a dumb language — CSS IS AWESOME!”
       @MiriSuzanne thank you so much for the amazing talk!
     name: 'Nour Saud'
     role: 'Software Engineer'
