@@ -1,0 +1,26 @@
+public: yes
+speakers: [miriam]
+image:
+  - src: 'blog/2018/viewsonvue.jpg'
+event_type: podcast
+events:
+  - venue: 'Views on Vue'
+    date: [2019, 7, 2]
+    url: 'https://devchat.tv/views-on-vue/vov-068-design-systems-css-with-miriam-suzanne/'
+    audio: 'https://media.devchat.tv/viewsonvue/VoV_068_Design_Systems_CSS_with_Miriam_Suzanne.mp3'
+summary: |
+  Miriam Suzanne starts by explaining design systems and design tooling,
+  how they differ and the problems they solve.
+  The panel considers how design systems help teams communicate.
+  Miriam shares tools that make design systems easier.
+  The panel discusses different aspects of design.
+  Miriam explains the advantages and disadvantages of using CSS-in-JS,
+  and why she uses CSS with Vue.
+  The panel discusses Miriam's VueConf talk “Dynamic CSS with Vue”.
+  Miriam explains what her vue applications look like
+  and shares advice for organizing CSS in Vue.
+  She shares the top three CSS features that are the most underutilized.
+
+
+Design Systems & CSS
+====================

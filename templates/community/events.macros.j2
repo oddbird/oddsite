@@ -7,7 +7,7 @@
 {% macro by_author(
   author=none
 ) %}
-  {% set talks = all_pages|filter_pages('speakers', 'has', author) if author else all_pages|filter_pages('speakers') %}
+  {% set talks = all_pages|filter_pages('speakers', 'has', author) if author else all_pages|filter_pages('event_type') %}
   {% set events = talks|collect('events', label_with='slug')|sort(attribute='date') %}
   {% set future = events|filter_events(past=false)|list %}
   {% set past = events|filter_events(past=true)|reverse|list %}
@@ -60,28 +60,30 @@
     slice=2
   ) }}
 
-  <section class="events-by-talk extend-full">
-    {{ content.divider(title='Event Schedule') }}
+  {% if not (ctx.config.event_type == 'podcast') %}
+    <section class="events-by-talk extend-full">
+      {{ content.divider(title='Event Schedule') }}
 
-    {{ list(
-      events=future,
-      talk=ctx,
-      title="Upcoming Appearances…",
-      show_author=false,
-      venue_link=true
-    ) }}
-
-    {% if past|length > 0 %}
       {{ list(
-        events=past,
+        events=future,
         talk=ctx,
-        title="Previously Presented At…",
+        title="Upcoming Appearances…",
         show_author=false,
-        details=true,
-        slice=5
+        venue_link=true
       ) }}
-    {% endif %}
-  </section>
+
+      {% if past|length > 0 %}
+        {{ list(
+          events=past,
+          talk=ctx,
+          title="Previously Presented At…",
+          show_author=false,
+          details=true,
+          slice=5
+        ) }}
+      {% endif %}
+    </section>
+  {% endif %}
 {% endmacro %}
 
 
@@ -108,7 +110,7 @@
   events,
   type='talk'
 ) %}
-  {% set events = events|filter_pages('brag')|filter_pages(type) %}
+  {% set events = events|filter_pages('brag')|filter_pages('event_type', 'eq', type) %}
   {% set title = 'Featured %ss' % type|capitalize %}
 
   {% if events|length %}
@@ -265,8 +267,8 @@
         content=event.venue,
         url=url
         )  }}
-      {% if talk.config.workshop %}
-        [workshop]
+      {% if talk.config.event_type and (talk.config.event_type != 'talk') %}
+        [{{ talk.config.event_type }}]
       {% endif %}
     </h4>
 

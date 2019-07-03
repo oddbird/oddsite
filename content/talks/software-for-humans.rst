@@ -1,6 +1,6 @@
 public: yes
 speakers: [miriam]
-talk: true
+event_type: talk
 slides: https://talks.oddbird.net/user-unfriendly/design4drupal19
 headline:
   - tagline: 'Designing software for humans…'

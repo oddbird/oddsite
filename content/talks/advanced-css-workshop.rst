@@ -1,8 +1,8 @@
 public: yes
 speakers: [miriam]
-workshop: true
 image:
   - src: 'talks/miriam.jpg'
+event_type: workshop
 events:
   - venue: 'Webconf.Asia'
     url: 'https://2019.webconf.asia/'

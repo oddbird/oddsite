@@ -1,6 +1,6 @@
 public: yes
 speakers: [miriam]
-talk: true
+event_type: talk
 image:
   - src: 'talks/miriam.jpg'
 slides: 'https://www.oddbooksapp.com/book/sass-map-magic'

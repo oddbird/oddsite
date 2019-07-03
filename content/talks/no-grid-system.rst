@@ -1,6 +1,6 @@
 public: yes
 speakers: [miriam]
-talk: true
+event_type: talk
 slides: 'https://talks.oddbird.net/no-grid-system/'
 image:
   - src: 'pages/devconf-best.jpg'

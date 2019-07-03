@@ -1,6 +1,6 @@
 public: yes
 speakers: [miriam]
-talk: true
+event_type: talk
 slides: 'http://miriamsuzanne.com/pres/susy2/'
 events:
   - venue: 'Bmore Sass'

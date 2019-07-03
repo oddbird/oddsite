@@ -2,7 +2,7 @@ public: yes
 speakers: [miriam]
 image:
   - src: 'talks/miriam.jpg'
-talk: true
+event_type: talk
 slides: 'https://talks.oddbird.net/dynamic-css/'
 events:
   - venue: 'Webconf.Asia'
@@ -29,7 +29,6 @@ events:
     date: [2019, 3, 26]
     adr: 'Tampa, FL'
     video_link: 'https://www.vuemastery.com/conferences/vueconf-us-2019/dynamic-css-with-vue/'
-    video: '<iframe src="https://player.vimeo.com/video/334544582" width="640" height="360" frameborder="0" allowfullscreen></iframe>'
     slides: 'https://talks.oddbird.net/dynamic-css/vueconf19/'
   - venue: 'Front Range Front-End'
     url: 'https://www.meetup.com/front-range-front-end/events/chtxtpyxpbcb/'

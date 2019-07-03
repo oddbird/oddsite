@@ -1,6 +1,6 @@
 public: yes
 speakers: [david]
-talk: true
+event_type: talk
 slides: 'https://www.oddbooksapp.com/book/web-projects'
 events:
   - venue: 'Plone Digital Experience Conference'

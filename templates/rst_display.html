@@ -46,7 +46,7 @@
 
 {% block location -%}
   {%- set override = 'blog' if ctx.author else none -%}
-  {%- set override = 'speaking' if config.speakers else override -%}
+  {%- set override = 'speaking' if config.events else override -%}
   {%- set override = 'open-source' if config.contributors else override -%}
   {%- set override = 'case-studies' if config.client else override -%}
   {{- config.location or override or super() -}}
@@ -67,7 +67,7 @@
     </div>
   {% endif %}
 
-  {% if config.speakers %}
+  {% if config.events %}
     {{ events.by_talk(ctx) }}
   {% endif %}
 

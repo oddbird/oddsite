@@ -1,6 +1,6 @@
 public: yes
 speakers: [stacy]
-talk: true
+event_type: talk
 headline:
   - tagline: 'with CSS Grid Layout and Friends'
 slides: 'https://www.slideshare.net/Funstacy/the-great-state-of-design-with-css-grid-layout-and-friends'

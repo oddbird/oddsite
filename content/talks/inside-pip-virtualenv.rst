@@ -1,6 +1,6 @@
 public: yes
 speakers: [carl]
-talk: true
+event_type: talk
 events:
   - venue: 'PyCon'
     url: 'https://us.pycon.org/2011/'

@@ -1,6 +1,6 @@
 public: yes
 speakers: [miriam]
-talk: true
+event_type: talk
 slides: 'https://talks.oddbird.net/agile-systems/'
 events:
   - venue: 'Agile Alliance'

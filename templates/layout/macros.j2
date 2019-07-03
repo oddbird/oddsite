@@ -255,7 +255,7 @@
   {% set type = 'Meet the Birds…' if (ctx.config.bird and not type) else type %}
   {% set type -%}
     {%- if (ctx.config.speakers and not type) -%}
-      {{ '%s Details' % ('Workshop' if ctx.config.workshop else 'Talk') }}
+      {{ '%s Details' % (ctx.config.event_type|capitalize if ctx.config.event_type else 'Talk') }}
     {%- elif type -%}
       {{ type }}
     {%- endif -%}

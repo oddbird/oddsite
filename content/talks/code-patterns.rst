@@ -2,7 +2,7 @@ public: yes
 speakers: [miriam]
 image:
   - src: 'talks/miriam.jpg'
-talk: true
+event_type: talk
 slides: 'http://oddbooksapp.com/book/pattern-making'
 events:
   - venue: 'Refresh Denver'
