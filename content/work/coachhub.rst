@@ -6,6 +6,7 @@ logo: 'orcas'
 client:
   - name: 'ORCAS'
     url: 'http://orcasinc.com'
+sort_date: 2015-09-15
 project:
   - name: 'CoachHub'
     industry: 'Wellness & Medical'

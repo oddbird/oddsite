@@ -4,6 +4,7 @@ image:
   - src: 'projects/emmys.jpg'
 client:
   - name: 'Carleton College'
+sort_date: 2017-01-15
 project:
   - name: 'Emmy’s Workshop'
     tagline: 'Individualized algebra tutor'

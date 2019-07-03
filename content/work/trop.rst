@@ -4,11 +4,12 @@ image:
   - src: 'projects/trop.jpg'
 client:
   - name: 'Trop Magazine'
+sort_date: 2017-01-15
 project:
   - name: 'Trop'
     tagline: 'A cool little lit mag from Los Angeles.'
     url: 'http://tropmag.com/'
-    years: '2016'
+    years: '2016-2017'
     status: 'live'
 tasks:
   - WordPress Theme
