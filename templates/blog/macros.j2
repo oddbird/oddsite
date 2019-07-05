@@ -6,11 +6,12 @@
 
 {% macro list(post, section='blog-post') %}
   {{ content.divider() }}
+  {% set page_url = link_to('page', slug=post.slug) %}
 
   <article {{ utility.attr_if('data-module', section) }}>
     {% set heading = 'h2' if section else 'h3' %}
     <{{ heading }} class="post-title">
-      <a href="{{ link_to('page', slug=post.slug) }}" rel="bookmark">
+      <a href="{{ page_url }}" rel="bookmark">
         {{ post.title|typogrify }}
       </a>
     </{{ heading }}>
@@ -33,10 +34,14 @@
     {% endif %}
 
     {% call content.link_button(
-      url=link_to('page', slug=post.slug),
+      url=post.config.canonical or page_url,
       attrs={'rel': 'bookmark'}
     ) %}
-      Read More
+      Read more
+      {% if post.config.elsewhere %}
+        on {{ post.config.elsewhere }}
+      {% endif %}
     {% endcall %}
+
   </article>
 {% endmacro %}
