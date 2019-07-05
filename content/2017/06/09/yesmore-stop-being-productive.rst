@@ -4,7 +4,9 @@ canonical: https://superyesmore.com/stop-being-productive-21dea85762f5753eb52990
 elsewhere: SuperYesMore
 headline:
   - tagline: "It's time to re-think what we're measuring."
-tags: [Elsewhere, Design, CSS, Interview, SuperYesMore]
+tags: [Elsewhere, Design, CSS, SuperYesMore]
+image:
+  - src: 'blog/2017/neck.jpg'
 summary: |
   Miriam reflects on the nature and value
   of productivity

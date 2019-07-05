@@ -263,6 +263,7 @@
   {% set event = ctx.config.events[0] if is_event else none %}
 
   {% set type = none %}
+  {% set type = 'Elsewhere' if elsewhere else type %}
   {% set type = 'Case Study' if (project and client) else type %}
   {% set type = 'Open Source Software' if (project and contributors and not type) else type %}
   {% set type = 'Meet the Birds…' if (ctx.config.bird and not type) else type %}

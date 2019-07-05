@@ -3,6 +3,8 @@ author: miriam
 canonical: https://css-tricks.com/fun-viewport-units/
 elsewhere: CSS Tricks
 tags: [Elsewhere, CSS, CSS Tricks]
+image:
+  - src: 'blog/elsewhere/css-tricks.jpg'
 summary: |
   Viewport units have been around for several years now,
   with near-perfect support in the major browsers,

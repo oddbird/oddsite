@@ -3,6 +3,8 @@ author: miriam
 canonical: https://www.sitepoint.com/writing-beautiful-sass/
 elsewhere: SitePoint
 tags: [Elsewhere, CSS, Sass, SitePoint, Books]
+image:
+  - src: 'blog/sassbook.jpg'
 summary: |
   Clean, beautiful code should be a goal in every project.
   If other developers need to make a change,

@@ -3,6 +3,8 @@ author: miriam
 canonical: https://css-tricks.com/interview-miriam-suzanne/
 elsewhere: CSS Tricks
 tags: [Elsewhere, CSS, Sass, Less, Stylus, CSS Tricks]
+image:
+  - src: 'blog/2016/trick-loops.jpg'
 summary: |
   Preprocessor loops are useful for writing DRY CSS.
   While everyone is talking about pattern libraries and modular design,
