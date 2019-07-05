@@ -75,7 +75,7 @@ planning:
       work with you to add, remove, and rearrange features to find the
       right balance of functionality and budget.
 summary: |
-  **Our team is experienced in product planning,
+  **Our team is experienced in digital product planning,
   discovery, and go-to-market strategy.**
   We'll help you find your way to the right product --
   a combination of your business goals and user needs --
@@ -108,8 +108,8 @@ Product Strategy & Planning
 Interactive Mockups
 -------------------
 
-``$4000`` – great for a pitch deck or proof-of-concept
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+great for a pitch deck or proof-of-concept
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Do you need a beautiful mockup of your web app for your pitch deck, to raise
 your first or second round of funding?
@@ -152,7 +152,7 @@ investors:
 Project Discovery & Planning with Development Estimate
 ------------------------------------------------------
 
-``$8000`` – everything you need to start development
+``$5000`` – everything you need to start development
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Have you raised your first round of funding and need a design & development
