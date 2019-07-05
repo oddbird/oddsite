@@ -151,7 +151,7 @@ when you follow the link from our site.
   Susy3 Documentation
 
 .. callmacro:: content.macros.j2#link_button
-  :url: 'http://susy.readthedocs.io/'
+  :url: 'https://susy.readthedocs.io/'
 
   Susy2 Documentation
 

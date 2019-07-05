@@ -14,7 +14,7 @@ summary: |
   along the way.
 
   .. _off-canvas: http://jasonweaver.name/lab/offcanvas/
-  .. _Susy One: http://susyone.oddbird.net/
+  .. _Susy One: https://susyone.oddbird.net/
 
 
 Off-Canvas Layout with Susy

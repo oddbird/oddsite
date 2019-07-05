@@ -72,7 +72,7 @@ programs:
   '*.jpg': 'image'
   '*.jpeg': 'image'
   '*.png': 'image'
-canonical_url: http://oddbird.net/
+canonical_url: https://oddbird.net/
 template_path: ../templates
 asset_map_path: static/assets.json
 rst_writer: html5writer

@@ -16,7 +16,7 @@ summary: |
   application, but becomes worthless if spam sessions start infesting your
   data. Here's how we've tried to combat the problem for `oddbird.net`_.
 
-  .. _oddbird.net: http://oddbird.net/
+  .. _oddbird.net: https://oddbird.net/
 
 
 Blocking Analytics Spam

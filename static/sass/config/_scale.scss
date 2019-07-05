@@ -5,7 +5,7 @@
 // ------
 /// @group config-scale
 /// @ratios
-/// @link http://oddbird.net/accoutrement-scale/docs/
+/// @link https://oddbird.net/accoutrement-scale/docs/
 ///   Accoutrement Scale
 $modular-scale: (
   'text-ratio': 1.4,
@@ -23,7 +23,7 @@ $modular-scale: (
 // ----------
 /// @group config-scale
 /// @sizes
-/// @link http://oddbird.net/accoutrement-scale/docs/
+/// @link https://oddbird.net/accoutrement-scale/docs/
 ///   Accoutrement Scale
 $text-sizes: (
   'root': 18px,
@@ -63,7 +63,7 @@ $text-sizes: (
 // -------------
 /// @group config-scale
 /// @sizes {ruler}
-/// @link http://oddbird.net/accoutrement-scale/docs/
+/// @link https://oddbird.net/accoutrement-scale/docs/
 ///   Accoutrement Scale
 $spacing-sizes: (
   'rhythm': '#root'
@@ -113,7 +113,7 @@ $spacing-sizes: (
 // -------------
 /// @group config-scale
 /// @sizes {output-only}
-/// @link http://oddbird.net/accoutrement-scale/docs/
+/// @link https://oddbird.net/accoutrement-scale/docs/
 ///   Accoutrement Scale
 $pattern-sizes: (
   'background': 'calc(%s + 16vw)'
@@ -183,7 +183,7 @@ $pattern-sizes: (
 // Mostly used as breakpoints when content is asking for css edits
 /// @group config-scale
 /// @sizes {output-only}
-/// @link http://oddbird.net/accoutrement-scale/docs/
+/// @link https://oddbird.net/accoutrement-scale/docs/
 ///   Accoutrement Scale
 $page-sizes: (
   'small-page': 34rem,
@@ -199,7 +199,7 @@ $page-sizes: (
 // Columns are used mostly in extend mixin and to declare size of content containers
 /// @group config-scale
 /// @sizes {output-only}
-/// @link http://oddbird.net/accoutrement-scale/docs/
+/// @link https://oddbird.net/accoutrement-scale/docs/
 ///   Accoutrement Scale
 $column-sizes: (
   'full-content': 40rem,
