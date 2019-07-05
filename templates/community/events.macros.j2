@@ -259,7 +259,9 @@
 ) %}
   {% set event_date = event.date|make_date %}
   {% set talk = talk if talk else all_pages|filter_pages('slug', 'eq', event.slug)|get_page %}
-  {% set url = event.url if (details or venue_link) else content.page_link(talk) %}
+  {% set event_type = talk.config.event_type or 'talk' %}
+  {% set tbd = (event_type|lower == 'tbd') %}
+  {% set url = event.url if (details or venue_link or tbd) else content.page_link(talk) %}
 
   <article class="event">
     <h4 class="event-venue">
@@ -267,8 +269,8 @@
         content=event.venue,
         url=url
         )  }}
-      {% if talk.config.event_type and (talk.config.event_type != 'talk') %}
-        [{{ talk.config.event_type }}]
+      {% if (event_type != 'talk') %}
+        [{{ event_type }}]
       {% endif %}
     </h4>
 
