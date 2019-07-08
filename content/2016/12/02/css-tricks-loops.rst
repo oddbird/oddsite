@@ -1,6 +1,6 @@
 public: yes
 author: miriam
-canonical: https://css-tricks.com/interview-miriam-suzanne/
+canonical: https://css-tricks.com/loops-css-preprocessors/
 elsewhere: CSS Tricks
 tags: [Elsewhere, CSS, Sass, Less, Stylus, CSS Tricks]
 image:
