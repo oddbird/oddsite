@@ -42,7 +42,7 @@
       <div class="project-title">
         <a href="index.html" rel="home" class="project-name">True</a>
         
-          <span class="project-version">4.0.0</span>
+          <span class="project-version">5.0.0</span>
         
       </div>
     </header>
@@ -184,6 +184,20 @@
           
   <div class="text-block">
     <h1 id="true-changelog">True Changelog</h1>
+<h2 id="5-0-0-06-03-19-">5.0.0 (06/03/19)</h2>
+<ul>
+<li>BREAKING: Update API for <code>runSass</code>, which now accepts two arguments: a
+<code>sassOptions</code> object and a <code>trueOptions</code> object.</li>
+<li>BREAKING: Drop support for node &lt;<span class="widont">&nbsp;</span>8</li>
+<li>Add docs and testing for usage with Jest
+<a href="https://github.com/oddbird/true/issues/135">#135</a></li>
+<li>Add <code>sass</code> option to <code>runSass</code> for passing a different Sass implementation
+than <code>node-sass</code> <a href="https://github.com/oddbird/true/issues/137">#137</a></li>
+<li>Remove <code>node-sass</code> from <code>peerDependencies</code></li>
+<li>Fix deprecated use of <code>assert.fail</code>
+<a href="https://github.com/oddbird/true/issues/138">#138</a></li>
+<li>Update dev dependencies</li>
+</ul>
 <h2 id="4-0-0-04-09-18-">4.0.0 (04/09/18)</h2>
 <ul>
 <li>BREAKING: Move <code>node-sass</code> to <code>peerDependencies</code></li>

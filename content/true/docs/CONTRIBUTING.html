@@ -42,7 +42,7 @@
       <div class="project-title">
         <a href="index.html" rel="home" class="project-name">True</a>
         
-          <span class="project-version">4.0.0</span>
+          <span class="project-version">5.0.0</span>
         
       </div>
     </header>
@@ -198,7 +198,7 @@ or<span class="widont">&nbsp;</span>up-for-debate.</p>
 <ul>
 <li>Write a clear, descriptive commit<span class="widont">&nbsp;</span>message</li>
 <li>Include any appropriate unit tests,
-and make sure all tests are passing (<code>npm test</code>)</li>
+and make sure all tests are passing (<code>yarn test</code>)</li>
 <li>Add your changes to the <a href="CHANGELOG.md">changelog</a></li>
 <li>Update or write appropriate <a href="http://sassdoc.com/">SassDoc</a>
 inline documentation for your<span class="widont">&nbsp;</span>changes</li>
@@ -212,17 +212,17 @@ with the appropriate<span class="widont">&nbsp;</span>dependencies:</p>
 <h2 id="committing">Committing</h2>
 <p>Linting, testing, and documentation
 should be done before every<span class="widont">&nbsp;</span>commit:</p>
-<pre><code>npm run commit
+<pre><code>yarn commit
 </code></pre>
 <p>They can also be triggered<span class="widont">&nbsp;</span>individually:</p>
 <pre><code># lint
 gulp sasslint
 
-# test with mocha/true
-npm test
+# test with mocha/jest and true
+yarn test
 
 # compile docs
-npm run sassdoc
+yarn sassdoc
 </code></pre>
 <p>Once you’ve fixed any final errors or typos,
 commit your changes, and submit a pull<span class="widont">&nbsp;</span>request!</p>
