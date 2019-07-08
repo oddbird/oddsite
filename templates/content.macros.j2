@@ -172,6 +172,36 @@
 {% endmacro %}
 
 
+{% macro show_quotes(
+  quotes,
+  client,
+  section=true,
+  class=none,
+  count=none
+) %}
+  {% set two_up = (quotes|length > 1) %}
+  {% set section = false if two_up else section %}
+
+  {% if two_up %}<section data-quote-section="two-up">{% endif %}
+
+  {% for quote in quotes %}
+    {% if (count == none) or (loop.index0 < count) %}
+      {{ blockquote(
+        quote.text,
+        quote.name,
+        quote.url,
+        get_role(quote.role, client.name),
+        quote.face,
+        section,
+        class
+      ) }}
+    {% endif %}
+  {% endfor %}
+
+  {% if two_up %}</section>{% endif %}
+{% endmacro %}
+
+
 {% macro get_quotes(
   page,
   slug=none,
@@ -182,41 +212,12 @@
   {% set page = page|get_config or page %}
   {% set client = page.config.client[0] if page.config.client else none %}
 
-  {% if slug %}
-    {% set quote = page.config.quotes|selectattr('slug', 'equalto', slug)|list %}
-    {% set quote = quote[0] %}
-    {% set role = get_role(quote.role, client.name) %}
-    {{ blockquote(
-      quote.text,
-      quote.name,
-      quote.url,
-      role,
-      quote.face,
-      section,
-      class
-    ) }}
+  {% if slug|is_string %}
+    {% set quotes = page.config.quotes|selectattr('slug', 'equalto', slug)|list %}
+    {{ show_quotes(quotes, client, section, class) }}
   {% else %}
-    {% set two_up = (page.config.quotes|length > 1) %}
-    {% set section = false if two_up else section %}
-
-    {% if two_up %}<section data-quote-section="two-up">{% endif %}
-
-    {% for quote in page.config.quotes %}
-      {% if (count == none) or (loop.index0 < count) %}
-        {% set role = get_role(quote.role, client.name) %}
-        {{ blockquote(
-          quote.text,
-          quote.name,
-          quote.url,
-          role,
-          quote.face,
-          section,
-          class
-        ) }}
-      {% endif %}
-    {% endfor %}
-
-    {% if two_up %}</section>{% endif %}
+    {% set quotes = page.config.quotes or [] %}
+    {{ show_quotes(quotes, client, section, class, count) }}
   {% endif %}
 {% endmacro %}
 

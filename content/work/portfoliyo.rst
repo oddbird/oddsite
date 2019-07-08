@@ -2,6 +2,7 @@ public: no
 grid_template: true
 client:
   - name: 'The K Network'
+sort_date: 2013-05-15
 project:
   - name: 'Portfoliyo'
     tagline: 'Real-Time Communication for Parents, Teachers, and Students'

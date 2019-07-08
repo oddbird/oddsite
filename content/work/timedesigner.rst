@@ -3,6 +3,7 @@ grid_template: true
 client:
   - name: 'Sensible Innovation'
     url: 'https://www.sensibleinnovation.com/'
+sort_date: 2018-07-15
 project:
   - name: 'TimeDesigner'
     tagline: 'Whole-School Design Thinking & Scheduling'

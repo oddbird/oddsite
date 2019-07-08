@@ -3,6 +3,7 @@ image:
   - src: 'projects/metadeploy.jpg'
 client:
   - name: 'Salesforce.org'
+sort_date: 2019-05-15
 project:
   - name: 'MetaDeploy'
     tagline: 'Salesforce product installer'

@@ -2,6 +2,7 @@ public: no
 grid_template: true
 client:
   - name: 'Craftisan'
+sort_date: 2011-04-15
 project:
   - name: 'Craftisan'
     years: '2010–2011'

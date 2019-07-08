@@ -175,6 +175,14 @@ def remove_index(str):
     return str
 
 
+def sort_projects(pages):
+    return sorted(
+        pages,
+        key=lambda x: getattr(x, 'sort_date', None) or x.config.get('sort_date') or '2019',
+        reverse=True
+    )
+
+
 def setup(builder):
     env = builder.jinja_env
     env.filters['is_string'] = is_string
@@ -185,6 +193,7 @@ def setup(builder):
     env.filters['collect'] = collect
     env.filters['get_page'] = get_page
     env.filters['get_config'] = build_get_config(builder)
+    env.filters['sort_projects'] = sort_projects
     env.globals['get_blog_entries_by_bird'] = partial(
         get_blog_entries_by_bird,
         builder,
