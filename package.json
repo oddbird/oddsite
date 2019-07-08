@@ -8,7 +8,7 @@
     "yarn": "1.13.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.4.5",
+    "@babel/core": "^7.5.0",
     "@babel/polyfill": "^7.4.4",
     "@babel/preset-env": "^7.4.5",
     "accoutrement": "^2.1.1",
