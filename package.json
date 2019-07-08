@@ -112,7 +112,7 @@
       "stylelint",
       "git add"
     ],
-    "*.{json,yml,rst}": [
+    "*.{json,yml}": [
       "prettier --write",
       "git add"
     ]
