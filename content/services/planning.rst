@@ -92,9 +92,8 @@ summary: |
   .. _from concept to launch: /work/
 
 
-
-Product Strategy & Planning
-===========================
+Research & Concepting
+=====================
 
 .. callmacro:: content.macros.j2#get_quotes
   :page: 'work/second-measure'
@@ -105,55 +104,14 @@ Product Strategy & Planning
 .. callmacro:: content.macros.j2#rst
   :tag: 'start'
 
-Interactive Mockups
--------------------
-
-great for a pitch deck or proof-of-concept
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Do you need a beautiful mockup of your web app for your pitch deck, to raise
-your first or second round of funding?
-
-This package is designed to help you quickly experiment with features and
-demonstrate your concept to investors. We won’t take you through the full
-process for planning and estimating a project, just enough to design hi-fi,
-interactive mockups as a proof-of-concept for your idea. Perfect for investor
-and B2B slide decks and for receiving early buy-in from stakeholders and
-investors:
-
-.. callmacro:: content.macros.j2#rst
-  :tag: 'end'
-
-
-.. callmacro:: content.macros.j2#icon_block
-  :slug: 'services/planning'
-  :data: 'pitch'
-
-
-.. callmacro:: content.macros.j2#rst
-  :tag: 'start'
-
-.. callmacro:: content.macros.j2#link_button
-  :url: '/contact/'
-  :class: 'section-end'
-
-  Contact us to learn more
-
-.. callmacro:: content.macros.j2#rst
-  :tag: 'end'
-
-
-
-.. callmacro:: content.macros.j2#divider
-
-.. callmacro:: content.macros.j2#rst
-  :tag: 'start'
+@@@ Ignore: rstBug
+------------------
 
 Project Discovery & Planning with Development Estimate
-------------------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ``$5000`` – everything you need to start development
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 Have you raised your first round of funding and need a design & development
 partner to help make your brilliant idea a reality? Or do you need help
