@@ -75,13 +75,13 @@ planning:
       work with you to add, remove, and rearrange features to find the
       right balance of functionality and budget.
 summary: |
-  **Our team is experienced in product planning,
+  **Our team is experienced in digital product planning,
   discovery, and go-to-market strategy.**
   We'll help you find your way to the right product --
   a combination of your business goals and user needs --
   with a robust plan for development and launch.
-  These flat-rate discovery packages
-  are a great place to start your new project.
+  This flat-rate discovery package
+  is a great place to start your new project.
 
   .. callmacro:: content.macros.j2#link_button
     :url: '/contact/'
@@ -92,9 +92,8 @@ summary: |
   .. _from concept to launch: /work/
 
 
-
-Product Strategy & Planning
-===========================
+Research & Concepting
+=====================
 
 .. callmacro:: content.macros.j2#get_quotes
   :page: 'work/second-measure'
@@ -105,55 +104,14 @@ Product Strategy & Planning
 .. callmacro:: content.macros.j2#rst
   :tag: 'start'
 
-Interactive Mockups
--------------------
-
-``$4000`` – great for a pitch deck or proof-of-concept
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Do you need a beautiful mockup of your web app for your pitch deck, to raise
-your first or second round of funding?
-
-This package is designed to help you quickly experiment with features and
-demonstrate your concept to investors. We won’t take you through the full
-process for planning and estimating a project, just enough to design hi-fi,
-interactive mockups as a proof-of-concept for your idea. Perfect for investor
-and B2B slide decks and for receiving early buy-in from stakeholders and
-investors:
-
-.. callmacro:: content.macros.j2#rst
-  :tag: 'end'
-
-
-.. callmacro:: content.macros.j2#icon_block
-  :slug: 'services/planning'
-  :data: 'pitch'
-
-
-.. callmacro:: content.macros.j2#rst
-  :tag: 'start'
-
-.. callmacro:: content.macros.j2#link_button
-  :url: '/contact/'
-  :class: 'section-end'
-
-  Contact us to learn more
-
-.. callmacro:: content.macros.j2#rst
-  :tag: 'end'
-
-
-
-.. callmacro:: content.macros.j2#divider
-
-.. callmacro:: content.macros.j2#rst
-  :tag: 'start'
+@@@ Ignore: rstBug
+------------------
 
 Project Discovery & Planning with Development Estimate
-------------------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-``$8000`` – everything you need to start development
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+``$5000`` – everything you need to start development
+++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 Have you raised your first round of funding and need a design & development
 partner to help make your brilliant idea a reality? Or do you need help
