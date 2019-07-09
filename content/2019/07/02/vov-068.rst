@@ -11,8 +11,8 @@ summary: |
   and shares advice for organizing CSS in Vue.
 
 
-Podcast: Design Systems & CSS
-=============================
+Views on Vue: Design Systems & CSS
+==================================
 
 .. callmacro:: content.macros.j2#audio
   :src: 'https://media.devchat.tv/viewsonvue/VoV_068_Design_Systems_CSS_with_Miriam_Suzanne.mp3'

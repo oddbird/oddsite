@@ -10,8 +10,8 @@ summary: |
   before her talk at VueConf US 2019.
 
 
-Podcast: Dynamic CSS Interview
-==============================
+Thunder Nerds: Dynamic CSS Interview
+====================================
 
 .. callmacro:: content.macros.j2#audio
   :src: 'https://media.blubrry.com/thundernerds/s/thundernerds.s3.amazonaws.com/vueconf/206-miriam-suzanne-vueconf-us-2019.mp3'

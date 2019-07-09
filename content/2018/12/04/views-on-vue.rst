@@ -12,8 +12,8 @@ summary: |
   .. _Views on Vue: https://devchat.tv/views-on-vue/
 
 
-Podcast: Views on Vue
-=====================
+Views on Vue: Fonts with Miriam Suzanne
+=======================================
 
 .. callmacro:: content.macros.j2#audio
   :src: 'https://media.devchat.tv/viewsonvue/VoV_040_Fonts%20with%20Miriam_Suzanne.mp3'
