@@ -261,7 +261,7 @@
   {% set talk = talk if talk else all_pages|filter_pages('slug', 'eq', event.slug)|get_page %}
   {% set event_type = talk.config.event_type or 'talk' %}
   {% set tbd = (event_type|lower == 'tbd') %}
-  {% set url = event.url if (details or venue_link or tbd) else content.page_link(talk) %}
+  {% set url = event.url if (details or venue_link or tbd) else (event.post or content.page_link(talk)) %}
 
   <article class="event">
     <h4 class="event-venue">
@@ -269,10 +269,8 @@
         content=event.venue,
         url=url
         )  }}
-      {% if (event_type != 'talk') %}
-        [{{ event_type }}]
-      {% elif event.keynote %}
-        [keynote]
+      {% if (event_type != 'talk') or event.type %}
+        [{{ event.type or event_type }}]
       {% endif %}
     </h4>
 

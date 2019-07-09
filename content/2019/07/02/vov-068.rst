@@ -1,0 +1,21 @@
+public: yes
+author: miriam
+tags: [Elsewhere, Code, CSS, Sass, Vue, 'Design Systems', Interview, Podcast, 'Views on Vue']
+canonical: https://devchat.tv/views-on-vue/vov-068-design-systems-css-with-miriam-suzanne/
+elsewhere: Views on Vue
+image:
+  - src: 'blog/2018/viewsonvue.jpg'
+summary: |
+  The panel discusses Miriam's VueConf talk “Dynamic CSS with Vue”.
+  Miriam explains what her vue applications look like
+  and shares advice for organizing CSS in Vue.
+
+
+Podcast: Design Systems & CSS
+=============================
+
+.. callmacro:: content.macros.j2#audio
+  :src: 'https://media.devchat.tv/viewsonvue/VoV_068_Design_Systems_CSS_with_Miriam_Suzanne.mp3'
+  :link: 'https://devchat.tv/views-on-vue/vov-068-design-systems-css-with-miriam-suzanne/'
+
+  Miriam on Views on Vue

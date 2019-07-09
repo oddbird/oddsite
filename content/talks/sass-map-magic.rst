@@ -17,10 +17,11 @@ events:
     date: [2015, 7, 7]
   - venue: 'Future Insights Live'
     date: [2015, 6, 2]
-  - venue: 'SassConf 2014 [Unconference Day]'
+  - venue: 'SassConf 2014'
     url: 'http://sassconf.com'
     date: [2014, 10, 2]
     post: '/2014/10/01/sassconf'
+    type: unconference
   - venue: 'BlendConf'
     url: 'http://www.blendconf.com/'
     date: [2014, 9, 12]

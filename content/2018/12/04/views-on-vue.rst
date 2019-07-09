@@ -1,5 +1,7 @@
 public: yes
-tags: [Code, CSS, Sass, Fonts, Vue, Design, Interview, Podcast]
+tags: [Elsewhere, Code, CSS, Sass, Fonts, Vue, Design, Interview, Podcast, 'Views on Vue']
+canonical: https://devchat.tv/views-on-vue/vov-040-fonts-with-miriam-suzanne/
+elsewhere: Views on Vue
 author: miriam
 image:
   - src: 'blog/2018/viewsonvue.jpg'

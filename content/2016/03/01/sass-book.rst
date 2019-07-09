@@ -2,7 +2,7 @@ public: yes
 author: miriam
 canonical: https://www.sitepoint.com/architecture-in-sass/
 elsewhere: SitePoint
-tags: [Sass, Books, SitePoint]
+tags: [Elsewhere, Sass, Books, SitePoint]
 image:
   - src: 'blog/sassbook.jpg'
 headline:

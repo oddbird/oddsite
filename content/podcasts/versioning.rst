@@ -1,7 +1,7 @@
 public: yes
 speakers: [miriam]
 image:
-  - src: 'talks/miriam.jpg'
+  - src: 'blog/2016/versioning.png'
 event_type: podcast
 events:
   - venue: 'SitePoint Versioning Show'
@@ -10,12 +10,19 @@ events:
     post: '/2016/10/18/versioning/'
     audio: '/static/media/VER008_Miriam-Suzanne.mp3'
 summary: |
-  In this episode of the Versioning Show,
-  Tim and David are joined by Miriam Suzanne,
-  best known for Susy, a responsive layout toolkit for Sass.
-  They discuss going from being a lurker to finding your voice,
+  I joined `Tim Evko`_ and `M. David Green`_
+  for their great new `SitePoint`_ podcast –
+  `The Versioning Show`_.
+  We discussed going from lurker to speaker,
   the importance of writing about what you’re learning,
-  stumbling into fame, approaching new projects, and unit testing in Sass.
+  stumbling into fame,
+  approaching new projects,
+  and unit testing in Sass.
+
+  .. _Tim Evko: https://www.sitepoint.com/author/tevko/
+  .. _`M. David Green`: https://www.sitepoint.com/author/mdavidgreen/
+  .. _SitePoint: https://www.sitepoint.com/
+  .. _The Versioning Show: https://www.sitepoint.com/versioning-show-episode-8-miriam-suzanne/
 
 
 Sass, Susy, Unit Testing, and Finding Your Voice
