@@ -183,11 +183,15 @@
 {% macro header_actions(
   actions=none,
   project=none,
-  slides=none
+  slides=none,
+  elsewhere=none
 ) %}
   {% set project_actions = project.url or project.source or project.docs %}
-  {% if actions or project_actions or slides %}
+  {% if actions or project_actions or slides or elsewhere %}
     <div class="header-actions">
+      {{ header_action_links(actions) }}
+      {{ header_action_links(elsewhere) }}
+
       {% if project %}
         {% set project = [
           {'text': 'Go to app', 'url': project.url},
@@ -203,8 +207,6 @@
 
         {{ header_action_links(slides) }}
       {% endif %}
-
-      {{ header_action_links(actions) }}
     </div>
   {% endif %}
 {% endmacro %}
@@ -239,6 +241,14 @@
   {% set client = ctx.config.client[0] if ctx.config.client else none %}
   {% set contributors = ctx.config.contributors if ctx.config.contributors else none %}
   {% set slides = ctx.config.slides or none %}
+  {% set actions = ctx.config.actions or none %}
+  {% set elsewhere = [
+      {
+        'text': ['Read more on', ctx.config.elsewhere]|join(' '),
+        'url': ctx.config.canonical
+      }
+    ] if ctx.config.elsewhere else none
+  %}
 
   {% set main = headline.title if (headline and headline.title) else none %}
   {% set main = project.name if (project and project.name and not main) else main %}
@@ -249,13 +259,18 @@
   {% set by_sub = speaker_list(ctx.config.speakers) if ctx.config.speakers else none %}
   {% set sub = page_sub or proj_sub or by_sub %}
 
+  {% set is_event = ctx.config.event_type and (ctx.config.events|length == 1) %}
+  {% set event = ctx.config.events[0] if is_event else none %}
+
   {% set type = none %}
+  {% set type = 'Elsewhere' if elsewhere else type %}
   {% set type = 'Case Study' if (project and client) else type %}
   {% set type = 'Open Source Software' if (project and contributors and not type) else type %}
   {% set type = 'Meet the Birds…' if (ctx.config.bird and not type) else type %}
   {% set type -%}
-    {%- if (ctx.config.speakers and not type) -%}
-      {{ '%s Details' % ('Workshop' if ctx.config.workshop else 'Talk') }}
+    {%- if (ctx.config.event_type and not type) -%}
+      {%- set event_type = ctx.config.event_type|capitalize -%}
+      {{- [event_type, event.venue]|join(': ') if event else [event_type, 'Details']|join(' ') -}}
     {%- elif type -%}
       {{ type }}
     {%- endif -%}
@@ -272,7 +287,10 @@
 
   {{ rst_meta(ctx) }}
 
-  {% if ctx.config.summary and show_summary %}
+  {% set has_summary = ctx.config.summary %}
+  {% set has_actions = actions or elsewhere or project or slides %}
+
+  {% if show_summary and (has_summary or has_actions) %}
     <div class="rst-summary">
       {% if ctx.config.bird %}
         {{ birds_util.card(
@@ -290,7 +308,16 @@
       {% endfor %}
 
       {{ ctx.render_summary()|typogrify }}
-      {{ header_actions(actions, project, slides) }}
+
+      {% if (event and event.audio) %}
+        {{ content.audio(
+          src=event.audio,
+          link=event.url,
+          caption='Listen to the audio:'
+        ) }}
+      {% endif %}
+
+      {{ header_actions(actions, project, slides, elsewhere) }}
     </div>
   {% endif %}
 {% endmacro %}

@@ -1,6 +1,8 @@
-public: no
+public: yes
 author: miriam
-tags: [Interviews, Sitepoint, Podcasts]
+tags: [Elsewhere, Interview, SitePoint, Podcast]
+canonical: https://www.sitepoint.com/versioning-show-episode-8-miriam-suzanne/
+elsewhere: SitePoint
 image:
   - src: 'blog/2016/versioning.png'
 summary: |
@@ -31,8 +33,6 @@ stumbling into fame,
 approaching new projects,
 and unit testing in Sass.
 
-|listen|
-
 Check out all the `other great episodes`_,
 with people like `Jen Simmons`_ and `Chris Coyier`_!
 
@@ -43,7 +43,3 @@ with people like `Jen Simmons`_ and `Chris Coyier`_!
 .. _other great episodes: https://www.sitepoint.com/tag/versioning-show-episodes/
 .. _Jen Simmons: https://www.sitepoint.com/versioning-show-episode-6-with-jen-simmons/
 .. _Chris Coyier: https://www.sitepoint.com/versioning-show-episode-4-with-chris-coyier/
-
-.. |listen| raw:: html
-
-  <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/282805438&amp;color=ff5500"></iframe>

@@ -1,6 +1,8 @@
 public: yes
 author: miriam
-tags: ['Q&A', Sitepoint]
+tags: [Elsewhere, 'Q&A', Interview, SitePoint]
+canonical: https://www.sitepoint.com/community/t/live-q-a-miriam-suzanne-on-susy-and-the-need-for-toolkits-on-18th-aug-2pm-pst/232664
+elsewhere: SitePoint
 image:
   - src: 'blog/2016/QandA.jpg'
 summary: |

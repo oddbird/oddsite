@@ -1,6 +1,6 @@
 public: yes
 speakers: [stacy]
-talk: true
+event_type: talk
 slides: 'http://www.slideshare.net/Funstacy/no-pain-no-gain-css-code-reviews-ftw'
 events:
   - venue: 'SassConf 2015'

@@ -5,12 +5,11 @@ interviews:
     url: 'http://parentprogramming.libsyn.com/'
     date: [2016, 3, 16]
     author: 'stacy'
-    audio: 'http://parentprogramming.libsyn.com/stacy-kvernmo'
   - venue: 'Shop Talk Show'
     url: 'http://shoptalkshow.com/'
     date: [2015, 12, 16]
     author: 'stacy'
-    audio: 'http://shoptalkshow.com/episodes/197-with-stacy-kvernmo/'
+    url: 'https://shoptalkshow.com/episodes/197-with-stacy-kvernmo/'
   - venue: 'Sass Bites'
     url: 'https://www.youtube.com/user/sassbites'
     date: [2015, 9, 24]

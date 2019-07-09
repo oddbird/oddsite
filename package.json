@@ -1,7 +1,7 @@
 {
   "name": "oddsite",
   "version": "3.0.0",
-  "homepage": "http://oddbird.net/",
+  "homepage": "https://oddbird.net/",
   "title": "OddSite",
   "engines": {
     "node": "10.15.3",

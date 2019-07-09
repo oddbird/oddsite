@@ -1,0 +1,18 @@
+public: yes
+speakers: [miriam]
+image:
+  - src: 'blog/2018/viewsonvue.jpg'
+event_type: podcast
+events:
+  - venue: 'Views on Vue'
+    date: [2018, 12, 4]
+    url: 'https://devchat.tv/views-on-vue/vov-040-fonts-with-miriam-suzanne/'
+    audio: 'https://media.devchat.tv/viewsonvue/VoV_040_Fonts%20with%20Miriam_Suzanne.mp3'
+    post: '/2018/12/04/views-on-vue.rst'
+summary: |
+  The panel and the guest talk about grid systems, fonts, and more!
+
+
+Fonts
+=====
+

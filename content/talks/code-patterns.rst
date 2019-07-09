@@ -2,7 +2,7 @@ public: yes
 speakers: [miriam]
 image:
   - src: 'talks/miriam.jpg'
-talk: true
+event_type: talk
 slides: 'http://oddbooksapp.com/book/pattern-making'
 events:
   - venue: 'Refresh Denver'
@@ -26,6 +26,7 @@ events:
     adr: 'Chandler, AZ'
     slides: 'https://oddbooksapp.com/release/1f08a0cb-198f-4c5f-ac85-93e55daa471d'
     video: '<iframe width="560" height="315" src="https://www.youtube.com/embed/lK_akjzOUY0" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>'
+    post: '/2017/1/31/css-day'
   - venue: 'CascadiaFest'
     url: 'http://2016.cascadiafest.org/'
     date: [2016, 8, 3]
@@ -45,6 +46,7 @@ events:
     adr: 'San Francisco, CA'
     video: '<iframe width="560" height="315" src="https://www.youtube.com/embed/b4vSy1e1ai8" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>'
     slides: 'https://oddbooksapp.com/release/ab1987b6-7d5f-42e4-b0ff-e7312cb345f6'
+    post: '/2016/04/04/clarity'
 summary: |
   **Style Guides & Pattern Libraries are great tools**
   for documenting the relationships between code and design,

@@ -2,27 +2,37 @@ public: yes
 speakers: [miriam]
 image:
   - src: 'talks/miriam.jpg'
-talk: true
+event_type: talk
 slides: 'https://talks.oddbird.net/dynamic-css/'
 events:
+  - venue: 'Webconf.Asia'
+    url: 'https://2019.webconf.asia/'
+    date: [2019, 11, 22]
+    adr: 'Hong Kong'
+  - venue: 'Develop Denver'
+    url: 'https://developdenver.org/'
+    date: [2019, 8, 15]
+    adr: 'Denver, CO'
   - venue: 'Generate 2019'
     url: 'https://www.generateconf.com/generate2019/'
     date: [2019, 4, 25]
     adr: 'New York, NY'
     slides: 'https://talks.oddbird.net/dynamic-css/generate19/'
+    post: '/2019/05/24/generate'
   - venue: 'Smashing Conf'
     url: 'https://www.smashingconf.com/sf-2019/'
     date: [2019, 4, 16]
     adr: 'San Francisco, CA'
     video_link: 'https://vimeo.com/331571593'
     slides: 'https://talks.oddbird.net/dynamic-css/smashingsf19/'
+    post: '/2019/05/17/smashing'
   - venue: 'VueConf US'
     url: 'http://vueconf.us/'
     date: [2019, 3, 26]
     adr: 'Tampa, FL'
     video_link: 'https://www.vuemastery.com/conferences/vueconf-us-2019/dynamic-css-with-vue/'
-    video: '<iframe src="https://player.vimeo.com/video/334544582" width="640" height="360" frameborder="0" allowfullscreen></iframe>'
     slides: 'https://talks.oddbird.net/dynamic-css/vueconf19/'
+    post: '/2019/04/09/vueconf'
   - venue: 'Front Range Front-End'
     url: 'https://www.meetup.com/front-range-front-end/events/chtxtpyxpbcb/'
     date: [2018, 11, 1]
@@ -60,7 +70,7 @@ quotes:
   - text: |
       Well that was awesome!!!
       “If you think CSS is a dumb language,
-      you’re a dumb language — CSS IS AWESSOME!”
+      you’re a dumb language — CSS IS AWESOME!”
       @MiriSuzanne thank you so much for the amazing talk!
     name: 'Nour Saud'
     role: 'Software Engineer'

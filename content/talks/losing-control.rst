@@ -2,7 +2,7 @@ public: yes
 speakers: [miriam]
 image:
   - src: 'talks/miriam.jpg'
-talk: true
+event_type: talk
 slides: 'https://www.oddbooksapp.com/book/losing-control'
 events:
   - venue: 'UVA Scholars’ Lab'

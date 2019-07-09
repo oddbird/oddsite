@@ -1,6 +1,6 @@
 public: yes
 speakers: [carl]
-talk: true
+event_type: talk
 events:
   - venue: 'DjangoCon US'
     url: 'https://2011.djangocon.us/'

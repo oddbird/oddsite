@@ -1,6 +1,6 @@
 public: yes
 speakers: [miriam]
-talk: true
+event_type: talk
 slides: 'https://www.oddbooksapp.com/book/sassy-toolkits'
 events:
   - venue: 'Frontend Conference Zurich'

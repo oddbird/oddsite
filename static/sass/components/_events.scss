@@ -51,12 +51,6 @@
   @include before('»');
 }
 
-.event-list-link {
-  & + & {
-    @include before(' | ');
-  }
-}
-
 .more-events {
   &[aria-pressed='true'] {
     display: none;

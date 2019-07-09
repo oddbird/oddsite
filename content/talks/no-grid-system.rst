@@ -1,6 +1,6 @@
 public: yes
 speakers: [miriam]
-talk: true
+event_type: talk
 slides: 'https://talks.oddbird.net/no-grid-system/'
 image:
   - src: 'pages/devconf-best.jpg'
@@ -24,6 +24,7 @@ events:
     slides: 'https://oddbooksapp.com/release/ce37ef91-8bd8-43e2-932a-66931b4b25ce'
     video: '<iframe src="https://player.vimeo.com/video/268576559" width="640" height="360" frameborder="0" allowfullscreen></iframe>'
     video_link: 'https://vimeo.com/268576559'
+    post: '/2018/05/15/beyondtellerand'
   - venue: 'Clarity Conference'
     url: 'https://www.clarityconf.com/2017'
     date: [2017, 11, 28]

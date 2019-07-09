@@ -1,20 +1,30 @@
 public: yes
 speakers: [miriam]
-talk: true
-slides: https://www.oddbooksapp.com/book/software-for-humans
+event_type: talk
+slides: https://talks.oddbird.net/user-unfriendly/design4drupal19
 headline:
   - tagline: 'Designing software for humans…'
 image:
   - src: 'talks/user-unfriendly.png'
 events:
-  - venue: 'Design 4 Drupal [keynote]'
+  - venue: 'Design 4 Drupal'
     url: 'https://design4drupal.org/'
     date: [2019, 6, 26]
     adr: 'Boston, MA'
+    keynote: true
+    video: '<iframe width="560" height="315" src="https://www.youtube.com/embed/2MkQBQb43gE" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+    video_link: https://drupal.tv/external-video/2019-06-28/user-unfriendly-practical-guide-losing-control
+    slides: https://talks.oddbird.net/user-unfriendly/design4drupal19
   - venue: 'Open Source Conference'
     url: 'https://www.comcastlabsconnect.com/open-source-2019'
     date: [2019, 6, 20]
     adr: 'Denver, CO'
+    slides: https://talks.oddbird.net/user-unfriendly/opensource19
+  - venue: 'Agile Denver'
+    url: 'https://www.comcastlabsconnect.com/open-source-2019'
+    date: [2019, 3, 17]
+    adr: 'Denver, CO'
+    slides: https://talks.oddbird.net/user-unfriendly/agiledenver19
   - venue: 'AIGA Colorado'
     url: 'https://colorado.aiga.org/event/04-26-18-rethinking-ux-design/'
     date: [2018, 4, 26]
@@ -33,6 +43,15 @@ events:
     url: 'http://sassconf.com'
     date: [2015, 11, 11]
     slides: 'https://www.oddbooksapp.com/book/user-unfriendly'
+quotes:
+  - text: |
+      Thought provoking talk on rethinking who the user is
+      and who we are writing for as developers.
+      Wow! Made me think.
+    name: 'Nithya Ruff'
+    role: 'Leader of Comcast Open Source Office'
+    url: https://twitter.com/nithyaruff/status/1141803102376550402
+    slug: 'thought'
 brag: |
   A project-manager's reflections
   on **human-centered problem-solving**,

@@ -12,10 +12,10 @@ susythree:
     type: 'official documentation'
 susytwo:
   - title: 'Full Susy Two Reference'
-    url: 'http://susy.readthedocs.io/en/latest/'
+    url: 'https://susy.readthedocs.io/en/latest/'
     type: 'official documentation'
   - title: 'Upgrade Path from Susy One'
-    url: 'http://susy.readthedocs.io/en/latest/upgrade/'
+    url: 'https://susy.readthedocs.io/en/latest/upgrade/'
     type: 'official documentation'
   - title: 'CSS Grid Layout - creating complex grids'
     author: 'Rachel Andrew'
@@ -141,7 +141,7 @@ susytwo:
     type: 'video'
 susyone:
   - title: 'Full Susy One Reference'
-    url: 'http://susy.readthedocs.io/en/latest/susyone/'
+    url: 'https://susy.readthedocs.io/en/latest/susyone/'
     type: 'official documentation'
   - title: 'Susy 102 - Breakpoints'
     author: 'Chris Maxwell'
