@@ -2,7 +2,7 @@ public: yes
 author: miriam
 canonical: https://css-tricks.com/interview-miriam-suzanne/
 elsewhere: CSS Tricks
-tags: [Elsewhere, CSS, Interview, CSS Tricks]
+tags: [Elsewhere, CSS, Interview, 'CSS Tricks']
 image:
   - src: 'blog/elsewhere/css-tricks.jpg'
 summary: |

@@ -2,7 +2,7 @@ public: yes
 author: miriam
 headline:
   - tagline: "Experience design is a collaboration"
-tags: [User Experience, 'Net Magazine', Interview, News]
+tags: ['User Experience', 'Net Magazine', Interview, News]
 image:
   - src: 'blog/2016/teacup.jpg'
 summary: |
