@@ -184,10 +184,11 @@
   actions=none,
   project=none,
   slides=none,
-  elsewhere=none
+  elsewhere=none,
+  event=none
 ) %}
   {% set project_actions = project.url or project.source or project.docs %}
-  {% if actions or project_actions or slides or elsewhere %}
+  {% if actions or project_actions or slides or elsewhere or event %}
     <div class="header-actions">
       {{ header_action_links(actions) }}
       {{ header_action_links(elsewhere) }}
@@ -206,6 +207,14 @@
         ] %}
 
         {{ header_action_links(slides) }}
+      {% elif event %}
+        {% set event_links = [
+          {'text': 'Slides', 'url': event.slides},
+          {'text': 'Article', 'url': event.post},
+          {'text': 'Transcript', 'url': event.transcript},
+        ] %}
+
+        {{ header_action_links(event_links) }}
       {% endif %}
     </div>
   {% endif %}
@@ -288,7 +297,7 @@
   {{ rst_meta(ctx) }}
 
   {% set has_summary = ctx.config.summary %}
-  {% set has_actions = actions or elsewhere or project or slides %}
+  {% set has_actions = actions or elsewhere or project or slides or event %}
 
   {% if show_summary and (has_summary or has_actions) %}
     <div class="rst-summary">
@@ -308,6 +317,7 @@
       {% endfor %}
 
       {{ ctx.render_summary()|typogrify }}
+      {{ header_actions(actions, project, slides, elsewhere, event) }}
 
       {% if (event and event.audio) %}
         {{ content.audio(
@@ -316,8 +326,6 @@
           caption='Listen to the audio:'
         ) }}
       {% endif %}
-
-      {{ header_actions(actions, project, slides, elsewhere) }}
     </div>
   {% endif %}
 {% endmacro %}
