@@ -2,7 +2,7 @@ public: yes
 author: miriam
 canonical: https://www.smashingmagazine.com/2019/07/css-custom-properties-cascade/
 elsewhere: Smashing Magazine
-tags: [Elsewhere, CSS, Custom Properties, Smashing Magazine]
+tags: [Elsewhere, CSS, 'Custom Properties', 'Smashing Magazine']
 image:
   - src: 'blog/2019/smashing-vars.jpg'
 summary: |
@@ -16,5 +16,5 @@ summary: |
   to balance context and isolation in CSS patterns and components.
 
 
-Smashing Magazine: CSS Custom Properties In The Cascade
+Smashing Magazine: CSS Custom Properties in the Cascade
 =======================================================

@@ -1,13 +1,5 @@
 public: yes
-tags: [
-    Code,
-    CSS,
-    Sass,
-    Fonts,
-    Vue,
-    Design,
-    Podcast
-    ]
+tags: [Code, CSS, Sass, Fonts, Vue, Design, Interview, Podcast]
 author: miriam
 image:
   - src: 'blog/2018/viewsonvue.jpg'

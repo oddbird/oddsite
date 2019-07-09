@@ -2,7 +2,7 @@ public: yes
 author: miriam
 canonical: https://www.creativebloq.com/features/has-css-has-finally-come-of-age
 elsewhere: Creative Bloq
-tags: [Elsewhere, CSS, Interview, Creative Bloq]
+tags: [Elsewhere, CSS, Interview, 'Creative Bloq']
 image:
   - src: 'blog/2019/creative-bloq.jpg'
 summary: |
@@ -13,5 +13,5 @@ summary: |
   to Dynamic CSS.
 
 
-Creative Bloq: Has CSS finally come of age?
+Creative Bloq: Has CSS Finally Come of Age?
 ===========================================

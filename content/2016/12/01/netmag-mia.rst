@@ -1,13 +1,13 @@
 public: yes
 author: miriam
 headline:
-  - tagline: "Experience design is a collaboration."
-tags: [User Experience, Net Magazine, Interview, News]
+  - tagline: "Experience design is a collaboration"
+tags: [User Experience, 'Net Magazine', Interview, News]
 image:
   - src: 'blog/2016/teacup.jpg'
 summary: |
   Net Magazine featured Miriam this month
-  with a **\*Beyond Pixels** profile.
+  with a **Beyond Pixels** profile.
   "Miriam Suzanne creates experimental experiences
   with her band and her fellow developers."
 

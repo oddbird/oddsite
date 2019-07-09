@@ -1,6 +1,6 @@
-public: no
+public: yes
 author: miriam
-tags: [Elsewhere, Interviews, SitePoint, Podcasts]
+tags: [Elsewhere, Interview, SitePoint, Podcast]
 canonical: https://www.sitepoint.com/versioning-show-episode-8-miriam-suzanne/
 elsewhere: SitePoint
 image:

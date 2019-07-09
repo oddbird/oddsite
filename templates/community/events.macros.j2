@@ -271,6 +271,8 @@
         )  }}
       {% if (event_type != 'talk') %}
         [{{ event_type }}]
+      {% elif event.keynote %}
+        [keynote]
       {% endif %}
     </h4>
 
@@ -320,23 +322,34 @@
 {% macro show_links(
   event
 ) %}
-  {% set links = {
-    'slides': 'slides',
-    'video_link': 'video',
-    'post': 'article',
-    'transcript': 'transcript'
-  } %}
+  {% set links = [
+    {
+      'name': 'slides',
+      'url': event.slides
+    },
+    {
+      'name': 'video',
+      'url': event.video_link
+    },
+    {
+      'name': 'article',
+      'url': event.post
+    },
+    {
+      'name': 'transcript',
+      'url': event.transcript
+     }
+  ] | selectattr('url') | list %}
 
-  {% if event.slides or event.video_link or event.transcript %}
+  {% if (links|length >  0) %}
     <div class="event-list-links">
       {% for link in links %}
-        {% if event[link] %}
-          {{ utility.link_if(
-            url=event[link],
-            content=links[link],
-            class='event-list-link'
-          ) }}
-        {% endif %}
+        {{ utility.link_if(
+          url=link.url,
+          content=link.name,
+          class='event-list-link'
+        ) }}
+        {% if not loop.last %}|{% endif %}
       {% endfor %}
     </div>
   {% endif %}
