@@ -80,8 +80,8 @@ summary: |
   We'll help you find your way to the right product --
   a combination of your business goals and user needs --
   with a robust plan for development and launch.
-  These flat-rate discovery packages
-  are a great place to start your new project.
+  This flat-rate discovery package
+  is a great place to start your new project.
 
   .. callmacro:: content.macros.j2#link_button
     :url: '/contact/'
