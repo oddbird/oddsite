@@ -11,7 +11,7 @@ events:
     url: 'https://design4drupal.org/'
     date: [2019, 6, 26]
     adr: 'Boston, MA'
-    keynote: true
+    type: keynote
     video: '<iframe width="560" height="315" src="https://www.youtube.com/embed/2MkQBQb43gE" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
     video_link: https://drupal.tv/external-video/2019-06-28/user-unfriendly-practical-guide-losing-control
     slides: https://talks.oddbird.net/user-unfriendly/design4drupal19

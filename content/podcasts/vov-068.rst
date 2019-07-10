@@ -8,6 +8,7 @@ events:
     date: [2019, 7, 2]
     url: 'https://devchat.tv/views-on-vue/vov-068-design-systems-css-with-miriam-suzanne/'
     audio: 'https://media.devchat.tv/viewsonvue/VoV_068_Design_Systems_CSS_with_Miriam_Suzanne.mp3'
+    post: '/2019/07/02/vov-068/'
 summary: |
   Miriam Suzanne starts by explaining design systems and design tooling,
   how they differ and the problems they solve.

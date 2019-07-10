@@ -24,14 +24,11 @@ summary: |
 Versioning Show Ep.8: Miriam Suzanne
 ====================================
 
-I joined `Tim Evko`_ and `M. David Green`_
-for their great new `SitePoint`_ podcast –
-`The Versioning Show`_.
-We discussed going from lurker to speaker,
-the importance of writing about what you’re learning,
-stumbling into fame,
-approaching new projects,
-and unit testing in Sass.
+.. callmacro:: content.macros.j2#audio
+  :src: '/static/media/VER008_Miriam-Suzanne.mp3'
+  :link: 'https://www.sitepoint.com/versioning-show-episode-8-miriam-suzanne/'
+
+  Miriam on Versioning episode 8
 
 Check out all the `other great episodes`_,
 with people like `Jen Simmons`_ and `Chris Coyier`_!
