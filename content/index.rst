@@ -77,8 +77,8 @@ Software for Humans
   experts and core developers of languages like `Sass/CSS`_ and
   `Django/Python`_ that large companies rely on –
   we intentionally keep our team small.
-  Our size allows us to move fast and integrate with your team
-  for an agile and collaborative process.
+  Our size allows us to **move fast and integrate with your team
+  for an agile and collaborative process**.
 
   *Let’s create a beautiful web app that reflects your unique vision.*
 
