@@ -3,6 +3,10 @@
 
 .image-block {
   @include contentblock;
+
+  @include above('small-page') {
+    align-items: center;
+  }
 }
 
 .imageblock-title {

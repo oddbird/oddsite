@@ -74,13 +74,16 @@ Software for Humans
 .. callmacro:: home.macros.j2#expertise
 
   While we’ve become industry leaders –
-  experts and core developers of languages like Sass/CSS and
-  Django/Python that large companies rely on –
+  experts and core developers of languages like `Sass/CSS`_ and
+  `Django/Python`_ that large companies rely on –
   we intentionally keep our team small.
   Our size allows us to move fast and integrate with your team
   for an agile and collaborative process.
 
   *Let’s create a beautiful web app that reflects your unique vision.*
+
+  .. _Sass/CSS: /open-source/
+  .. _Django/Python: /open-source/
 
   .. callmacro:: content.macros.j2#link_button
     :url: '/contact/'
@@ -89,6 +92,7 @@ Software for Humans
 
 .. callmacro:: content.macros.j2#rst
   :tag: 'end'
+
 
 
 .. callmacro:: content.macros.j2#two_quotes

@@ -207,8 +207,9 @@ $breakpoints: (
 }
 
 @mixin contentblock-highlight($type) {
-  flex: 0 1 45%;
+  flex: 0 1 auto;
   max-width: size('imageblock-image');
+  width: 100%;
 
   @if ($type == 'normal') {
     margin: 0 auto size('shim');
@@ -236,10 +237,9 @@ $breakpoints: (
   text-align: center;
 
   @include above('small-page') {
-    align-items: center;
     display: flex;
     display: grid;
-    grid-template-columns: auto minmax(0, 1fr);
+    grid-template-columns: minmax(0, size('imageblock-image')) minmax(0, 1fr);
     text-align: left;
   }
 }
