@@ -79,7 +79,7 @@
     "touch": "^3.1.0",
     "webpack": "^4.35.3",
     "webpack-assets-manifest": "^3.1.1",
-    "webpack-cli": "^3.3.5",
+    "webpack-cli": "^3.3.6",
     "webpack-merge": "^4.2.1"
   },
   "resolutions": {
