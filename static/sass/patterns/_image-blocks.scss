@@ -15,7 +15,7 @@
 }
 
 .imageblock-link {
-  @include contentblock-highlight('link');
+  @include contentblock-highlight('image');
 
   &[href] {
     @include transition('move');
@@ -29,7 +29,7 @@
 }
 
 .imageblock-image {
-  @include contentblock-highlight('normal');
+  @include contentblock-highlight('image');
 }
 
 .imageblock-content {

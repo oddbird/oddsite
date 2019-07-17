@@ -208,19 +208,15 @@ $breakpoints: (
 
 @mixin contentblock-highlight($type) {
   flex: 0 1 auto;
-  max-width: size('imageblock-image');
   width: 100%;
 
-  @if ($type == 'normal') {
+  @if ($type == 'image') {
     margin: 0 auto size('shim');
-
-    @include above('small-page') {
-      margin: 0;
-    }
-  } @else if ($type == 'link') {
-    margin: 0 auto;
+    max-width: size('imageblock-image');
+  } @else if ($type == 'text') {
+    margin: 0 0 size('shim');
   } @else {
-    @error 'Is this a normal or link block?';
+    @error 'Is this an image or text block?';
   }
 }
 

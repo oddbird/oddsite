@@ -6,7 +6,7 @@
 }
 
 .textblock-headline {
-  @include contentblock-highlight('normal');
+  @include contentblock-highlight('text');
 }
 
 .textblock-content {
@@ -21,29 +21,32 @@
 
 .headline-contrast {
   margin-top: 0;
+  text-align: left;
 
   @include above('small-page') {
     text-align: right;
+    text-transform: lowercase;
   }
 
   span {
-    display: block;
+    @include above('small-page') {
+      display: block;
+    }
   }
+}
 
-  .title-main {
-    font-size: size('headline-highlight-large');
-  }
-
-  .fancy-headline-small {
+.fancy-headline-small {
+  @include above('small-page') {
     @include font-family('body');
     font-size: size('headline-highlight-small');
     font-style: italic;
     font-weight: normal;
     line-height: 1;
   }
+}
 
-  .fancy-headline-light {
-    font-size: size('headline-highlight-large');
+.fancy-headline-light {
+  @include above('small-page') {
     font-weight: normal;
     margin-bottom: size('shim');
     // decrease space without setting line-height
