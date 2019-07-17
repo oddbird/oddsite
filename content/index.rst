@@ -102,7 +102,7 @@ Software for Humans
     ]
 
 .. callmacro:: projects/splash.macros.j2#splash_list
-  :headline: 'Industries We Serve'
+  :headline: 'Featured Clients'
   :url: '/work/'
 
 .. callmacro:: birds/macros.j2#home_faces
