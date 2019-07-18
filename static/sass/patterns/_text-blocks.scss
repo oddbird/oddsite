@@ -1,0 +1,56 @@
+// Text Blocks
+// ===========
+
+.text-block {
+  @include contentblock;
+}
+
+.textblock-headline {
+  @include contentblock-highlight('text');
+}
+
+.textblock-content {
+  @include contentblock-copy;
+
+  p {
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+}
+
+.headline-contrast {
+  margin-top: 0;
+  text-align: left;
+
+  @include above('small-page') {
+    text-align: right;
+    text-transform: lowercase;
+  }
+
+  span {
+    @include above('small-page') {
+      display: block;
+    }
+  }
+}
+
+.fancy-headline-small {
+  @include above('small-page') {
+    @include font-family('body');
+    font-size: size('headline-highlight-small');
+    font-style: italic;
+    font-weight: normal;
+    line-height: 1;
+  }
+}
+
+.fancy-headline-light {
+  @include above('small-page') {
+    font-weight: normal;
+    margin-bottom: size('shim');
+    // decrease space without setting line-height
+    //  under 1 which some browsers crop letters
+    margin-top: negative('shim');
+  }
+}
