@@ -17,6 +17,8 @@ events:
     url: 'https://www.generateconf.com/generate2019/'
     date: [2019, 4, 25]
     adr: 'New York, NY'
+    video_link: 'https://www.youtube.com/watch?v=oXEsYwtTT6I'
+    video: '<iframe width="560" height="315" src="https://www.youtube.com/embed/oXEsYwtTT6I" frameborder="0" allowfullscreen></iframe>'
     slides: 'https://talks.oddbird.net/dynamic-css/generate19/'
     post: '/2019/05/24/generate'
   - venue: 'Smashing Conf'
