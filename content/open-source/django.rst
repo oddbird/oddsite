@@ -4,6 +4,7 @@ image:
   - src: 'projects/django.jpg'
 project:
   - name: 'Django'
+    subhead: 'Python Web Framework'
     tagline: 'The Web Framework for Perfectionists With Deadlines'
     url: 'https://www.djangoproject.com/'
     source: 'https://github.com/django/django'
