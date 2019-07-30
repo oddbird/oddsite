@@ -38,7 +38,7 @@ nav:
     url: '/'
 project:
   - name: 'Susy'
-    tagline: 'Your design, our math'
+    tagline: 'Your Design, Our Math'
     source: 'https://github.com/oddbird/susy'
     docs: '/susy/docs/'
     years: '2009–present'

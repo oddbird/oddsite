@@ -3,7 +3,7 @@ image:
   - src: 'projects/nunjucks.jpg'
 project:
   - name: 'Nunjucks'
-    tagline: 'Sophisticated templating for JavaScript'
+    tagline: 'Sophisticated Templating for JavaScript'
     url: 'http://mozilla.github.io/nunjucks/'
     source: 'https://github.com/mozilla/nunjucks/'
     status: 'public'

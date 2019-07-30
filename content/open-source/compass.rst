@@ -1,7 +1,7 @@
 public: yes
 project:
   - name: 'Compass'
-    tagline: 'CSS-authoring framework and Sass library'
+    tagline: 'CSS-Authoring Framework and Sass Library'
     url: 'http://compass-style.org'
     source: 'http://github.com/compass/compass'
     status: 'end-of-life'

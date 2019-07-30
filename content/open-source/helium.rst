@@ -1,7 +1,7 @@
 public: yes
 project:
   - name: 'Helium'
-    tagline: 'A floating browser window for OS X'
+    tagline: 'A Floating Browser Window for OS X'
     url: 'http://heliumfloats.com/'
     source: 'https://github.com/JadenGeller/Helium'
     status: 'public'

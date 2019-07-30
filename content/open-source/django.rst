@@ -4,7 +4,7 @@ image:
   - src: 'projects/django.jpg'
 project:
   - name: 'Django'
-    tagline: 'The web framework for perfectionists with deadlines'
+    tagline: 'The Web Framework for Perfectionists With Deadlines'
     url: 'https://www.djangoproject.com/'
     source: 'https://github.com/django/django'
     status: 'public'

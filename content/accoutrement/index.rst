@@ -7,7 +7,7 @@ image:
   - src: 'projects/accoutrement.jpg'
 project:
   - name: 'Sass Accoutrement'
-    tagline: 'Integrated design-system management in Sass'
+    tagline: 'Integrated Design-System Management in Sass'
     source: 'https://github.com/oddbird/accoutrement'
     docs: '/accoutrement/docs/'
     status: 'public'

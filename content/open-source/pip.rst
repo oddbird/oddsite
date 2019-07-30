@@ -1,7 +1,7 @@
 public: yes
 project:
   - name: 'Pip'
-    tagline: 'Python package installer'
+    tagline: 'Python Package Installer'
     url: 'https://pip.pypa.io/'
     source: 'https://github.com/pypa/pip/'
     status: 'public'
