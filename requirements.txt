@@ -1,10 +1,10 @@
 --find-links ./requirements/
 
 rstblog==1.0.obc6
-PyYAML==5.1.1
+PyYAML==5.1.2
 Babel==2.7.0
 blinker==1.4
-docutils==0.15.1
+docutils==0.15.2
 Jinja2==2.10.1
 Werkzeug==0.15.5
 Pygments==2.4.2
