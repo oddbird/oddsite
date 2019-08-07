@@ -2,6 +2,9 @@ public: yes
 speakers: [miriam]
 event_type: talk
 slides: 'https://talks.oddbird.net/agile-systems/'
+actions:
+  - text: Download checklist
+    url: /static/resources/design-systems-checklist.pdf
 events:
   - venue: 'Agile Alliance'
     url: 'https://www.agilealliance.org/agile2019/program/'
