@@ -43,8 +43,15 @@
     </a>
 
     <div class="splash-brag">
-      {% if project.industry %}
+      {# Use subheads when tagline is too long or less specific #}
+      {% if project.subhead %}
+        <h3 class="splash-title">{{ project.subhead }}</h3>
+      {# When showing client splash, use industry #}
+      {% elif project.industry %}
         <h3 class="splash-title">{{ project.industry }}</h3>
+      {# Fall back to tagline if one exists #}
+      {% elif project.tagline %}
+        <h3 class="splash-title">{{ project.tagline }}</h3>
       {% endif %}
       {{ page.config.brag|rst }}
     </div>

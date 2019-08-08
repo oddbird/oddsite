@@ -9,7 +9,7 @@ image:
   - src: 'projects/true.jpg'
 project:
   - name: 'True'
-    tagline: 'Unit-testing for Sass developers'
+    tagline: 'Unit-Testing for Sass Developers'
     source: 'https://github.com/oddbird/true'
     docs: '/true/docs/'
     status: 'public'

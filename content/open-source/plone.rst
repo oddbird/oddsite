@@ -4,7 +4,7 @@ image:
   - src: 'projects/plone.jpg'
 project:
   - name: 'Plone'
-    tagline: 'Enterprise web content management system'
+    tagline: 'Enterprise Web Content Management System'
     url: 'http://plone.org/'
     source: 'https://github.com/plone/Products.CMFPlone'
     status: 'public'

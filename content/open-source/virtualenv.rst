@@ -1,7 +1,7 @@
 public: yes
 project:
   - name: 'Virtualenv'
-    tagline: 'Virtual Python Environment builder'
+    tagline: 'Virtual Python Environment Builder'
     url: 'https://virtualenv.pypa.io/'
     source: 'https://github.com/pypa/virtualenv'
     status: 'public'

@@ -4,7 +4,7 @@ image:
   - src: 'projects/sass.jpg'
 project:
   - name: 'Sass'
-    tagline: 'CSS with superpowers'
+    tagline: 'CSS with Superpowers'
     url: 'https://sass-lang.com/'
     source: 'https://github.com/sass/sass'
     status: 'public'

@@ -38,7 +38,8 @@ nav:
     url: '/'
 project:
   - name: 'Susy'
-    tagline: 'Your design, our math'
+    subhead: 'CSS Layout Framework'
+    tagline: 'Your Design, Our Math'
     source: 'https://github.com/oddbird/susy'
     docs: '/susy/docs/'
     years: '2009–present'
