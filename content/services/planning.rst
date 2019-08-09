@@ -110,8 +110,8 @@ Research & Concepting
 Project Discovery & Planning with Development Estimate
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-``$5000`` – everything you need to start development
-++++++++++++++++++++++++++++++++++++++++++++++++++++
+everything you need to start development
+++++++++++++++++++++++++++++++++++++++++
 
 Have you raised your first round of funding and need a design & development
 partner to help make your brilliant idea a reality? Or do you need help
