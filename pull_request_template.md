@@ -5,7 +5,7 @@
 
 ## Description
 *The commit messages say what you did, this should explain why and how.*
-- [ ] Description is in Trello Card 
+- [ ] Description is in Trello Card
 
 
 
@@ -28,7 +28,7 @@
 
 ## Reviewer tasks:
 
-- [ ] Pulled branch and ran code locally
+- [ ] Pulled branch and ran code locally (or viewed on Netlify preview)
 - [ ] Reproduced the issue to review in the browser
 - [ ] Reviewed code
-- [ ] Updated Trello Task
+- [ ] Updated Trello Card (as necessary)
