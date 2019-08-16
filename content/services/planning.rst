@@ -5,7 +5,7 @@ grid_template: true
 image:
   - src: 'pages/design-sketch.jpg'
 headline:
-  - tagline: 'Helping you launch your idea quickly'
+  - tagline: 'Let’s discover what your customers or users need'
     type: 'Services'
 pitch:
   - title: 'Project Summary'
@@ -24,70 +24,120 @@ pitch:
       basic features. Colors and fonts will be based on the existing brand
       or an accessible placeholder brand. (Full brand identity development
       process not included, but available upon request.)
-planning:
-  - title: 'Project Overview'
+planning1:
+  - title: 'Goals'
     icon: 'map'
     text: |
-      Your chance to provide a general sense of the goals, scope, and
-      requirements of the project. Much of the information may be available
-      in planning documents you have already generated. This is a central
-      reference to build from.
+      Together we’ll discuss the goals, scope, and requirements of the
+      project and create a map for our journey. Some of the information may
+      be available in planning documents you have already created. This
+      process includes a review of technical, brand, and marketing goals as
+      needed. Below are a few sample questions.
+
+      | **What is the goal of the application?**
+      | *In other words, when it’s done and working great, what specific outcomes will occur? Are we trying to close sales? Are we telling a story? Are we earning permission to follow up? Are we hoping that people will watch or learn?*
+
+      |
+
+      | **Who are we trying to reach?**
+      | *Is it everyone? Existing customers? A certain kind of prospect? What are the existing apps and sites that this group has demonstrated they enjoy interacting with?*
+
+      |
+
+      | **Does your audience have specific accessibility needs? Basic accessibility is included.**
+      | *Do varying ability levels play a role? Languages or other cultural/location differences? What web browsers and mobile devices do we hope to support?*
   - title: 'User Profiles'
     icon: 'users'
     text: |
-      Imagine a day in the life of your user. When and where do they use your
-      application? What activities does a user go through during a day.
-      At what times and in what locations will they interact with your
-      application?
+      Next we will create User Profiles to help us imagine a day in the life
+      of your users. When and where do they use the application? What are
+      they trying to do on the tool, and why? Below is a sample excerpt from
+      a User Profile.
+
+      | **User 1 - Coach**
+      | In the morning, Sam sits down at her desk in her office and opens CoachHub on her desktop in Chrome browser. She skims the dashboard and notices two alerts — new customer signups — that she needs to respond to right away. She clicks on one customer name and is taken directly to their profile information. Sam quickly browses their list of needs and clicks on her calendar to confirm the meeting date the new customer requested. It is easy to continue to the next customer because the tool bar with alerts still appears at the top of this page. After taking care of the immediate tasks…
+
+  - title: 'Interactive Wireframe'
+    icon: 'interact'
+    text: |
+      We will also create a basic, interactive design of the application,
+      showing the movement of users through core interactions. We’ll make it
+      look good, but lo-fi and unbranded, including several linked gray-scale
+      pages. Wireframes are a great way to start visualizing your web product
+      or site — helping us get into the specifics of what your app should do.
+      Wireframes are also a fantastic tool to get investor, CEO, or board
+      approval.
+planning2:
   - title: 'User Stories'
     icon: 'theater'
     text: |
-      A list of expected features, written as “stories” from the perspective
-      of a single user. What are they trying to do, and why? The final list
-      represents all of the ways that a user will interact with the
-      application. The final development estimate will be itemized by story,
-      making it easier to set your priorities and budget for each phase of the
-      project.
+      Using the Goals, User Profiles, Interviews, and Wireframe we will
+      create a list of expected features or “stories” written from the
+      perspective of individuals. The final list of User Stories represents
+      all the ways people will interact with the web application or site.
+      User Stories help us provide an accurate estimate, and collaborate with
+      you to prioritize tasks, keeping you in control of the cost. Below is a
+      sample set of User Stories. Large projects can have over 100 Stories.
+
+      | **As a Coach, I want** to see a dashboard.
+      | As a Coach, I want to check alerts.
+      | As a Coach, I want to see and confirm appointments on a calendar.
+      | As a Coach, I want to view a client’s profile with need requests.
+
+      |
+
+      | **As a Client, I want** to create a profile.
+      | As a Client, I want to request an appointment on a calendar.
+      | As a Client, I want to select specific services from a list.
   - title: 'Data Model/Glossary'
     icon: 'site-map'
     text: |
       What are the core concepts/objects around which the application is
-      built? These will be the models. What are the relationships between
-      the models? What data attributes does each model have, and what is
-      the data-type for each attribute? Giving everything a name and
-      describing the relationships will help guide development, and keep
-      the entire team on the same page.
-  - title: 'Interactive Wireframe'
-    icon: 'interact'
-    text: |
-      A basic, interactive design of the application, showing the movement
-      of users through core interactions defined in the User Stories. We’ll
-      make it look good, but lo-fi and unbranded, including several linked
-      gray-scale pages. Perfect for a proof-of-concept for generating
-      board-member, stakeholder, or investor buy-in. This will also be
-      useful for a development team to kick-start the full production
-      process when you take that next step.
-  - title: 'Design/Development Estimate'
+      built? These are the data models. What are the relationships between
+      the models? What data attributes does each model have, and what is the
+      data-type for each attribute? Giving everything a name and describing
+      the relationships will help guide development, and keep the entire team
+      on the same page.
+  - title: 'Itemized & Prioritized Estimate'
     icon: 'estimate'
     text: |
       We’ll estimate each User Story individually, providing you with an
-      itemized estimate, organized into phases when appropriate. We’ll
-      work with you to add, remove, and rearrange features to find the
+      itemized hourly estimate, organized into phases where appropriate.
+      We’ll work with you to add, remove, and rearrange features to find the
       right balance of functionality and budget.
+industry:
+  - title: 'Competitor Overview'
+    icon: 'map'
+    text: |
+      Let’s take a look at existing web apps and companies that serve a
+      similar audience to get an overview of industry trends and potential
+      pitfalls to avoid. We’ll do a more detailed analysis of a direct
+      competitor, asking questions like “what are the specific features this
+      competitor is using to serve people?” and “how comfortable do users
+      feel when using this competitor’s web app?”
+  - title: 'User Interviews'
+    icon: 'users'
+    text: |
+      Because your digital product needs to serve different people with
+      distinct needs, we would like to have direct conversations with a
+      variety of users in order to create something they will all find
+      useful. These interviews can happen over the phone, via video chat, or
+      through an online survey.
 summary: |
-  **Our team is experienced in digital product planning,
-  discovery, and go-to-market strategy.**
-  We'll help you find your way to the right product --
-  a combination of your business goals and user needs --
+  **Most projects start with Research & Concepting**
+  to make sure we thoroughly understand your project.
+  We’ll help you pinpoint the right digital product –
+  a combination of customer/user needs and business goals –
   with a robust plan for development and launch.
-  This flat-rate discovery package
-  is a great place to start your new project.
+  We’ll create an interactive wireframe to visualize
+  your application or website,
+  and a prioritized estimate to keep you in control of cost.
 
   .. callmacro:: content.macros.j2#link_button
     :url: '/contact/'
     :class: 'section-end'
 
-    Schedule a free consultation
+    Schedule a call to begin
 
   .. _from concept to launch: /work/
 
@@ -104,28 +154,20 @@ Research & Concepting
 .. callmacro:: content.macros.j2#rst
   :tag: 'start'
 
-@@@ Ignore: rstBug
-------------------
 
-Project Discovery & Planning with Development Estimate
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+What You Get
+------------
 
-everything you need to start development
-++++++++++++++++++++++++++++++++++++++++
+This process delivers all the information required to take
+your project to the next step.
+We’ll help you understand the full scope of your vision,
+experiment with interactive visualization,
+define the Minimum Viable Product (MVP),
+get to know your customers on a new level,
+and see a full estimate for design and development.
+Use the Research & Concepting deliverables to present your idea to your
+board or CEO, or to take the leap into creating your web project!
 
-Have you raised your first round of funding and need a design & development
-partner to help make your brilliant idea a reality? Or do you need help
-fleshing out your idea and documenting it with interactive demos for investors
-and stakeholders? Are you curious how much it might cost to develop your
-web app?
-
-This package provides all the documentation required to take your project
-to the next step. Understand the full scope of your vision, experiment with
-interactive wireframes, define the Minimum Viable Product (MVP), and see a
-full estimate for design and development. Perfect for demonstrating your
-idea to investors, letting them know how much funding you need and your
-plans for using the money, or for taking the leap into active production!
-Along the way, we’ll deliver:
 
 .. callmacro:: content.macros.j2#rst
   :tag: 'end'
@@ -133,8 +175,18 @@ Along the way, we’ll deliver:
 
 .. callmacro:: content.macros.j2#icon_block
   :slug: 'services/planning'
-  :data: 'planning'
+  :data: 'planning1'
 
+.. figure:: /static/images/blog/navdraft.jpg
+   :alt: Sample Interactive Wireframe
+   :align: center
+   :figclass: extend-full
+
+   Sample Interactive Wireframe showing one laptop sized screen and the mobile view of the same content with clickable links.
+
+.. callmacro:: content.macros.j2#icon_block
+  :slug: 'services/planning'
+  :data: 'planning2'
 
 .. callmacro:: content.macros.j2#rst
   :tag: 'start'
@@ -148,3 +200,33 @@ Along the way, we’ll deliver:
 .. callmacro:: content.macros.j2#rst
   :tag: 'end'
 
+.. callmacro:: content.macros.j2#rst
+  :tag: 'start'
+
+
+Get to Know Your Industry
+-------------------------
+
+This process delivers all the information required to take your project to
+the next step. We’ll help you understand the full scope of your vision,
+experiment with interactive visualization, define the Minimum Viable Product
+(MVP), get to know your customers on a new level, and see a full estimate for
+design and development. Use the Research & Concepting deliverables to present
+your idea to your board or CEO, or to take the leap into creating your web
+project!
+
+
+.. callmacro:: content.macros.j2#rst
+  :tag: 'end'
+
+
+.. callmacro:: content.macros.j2#icon_block
+  :slug: 'services/planning'
+  :data: 'industry'
+
+.. figure:: /static/images/blog/navdraft.jpg
+  :alt: Google Form used to gather research from prospective users
+  :align: center
+  :figclass: size-full
+
+  Sample User Survey using Google Forms.
