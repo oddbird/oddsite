@@ -7,6 +7,9 @@ headline:
 image:
   - src: 'talks/user-unfriendly.png'
 events:
+  - venue: 'Agnes Scott College'
+    date: [2019, 9, 16]
+    adr: 'Atlanta, GA'
   - venue: 'Design 4 Drupal'
     url: 'https://design4drupal.org/'
     date: [2019, 6, 26]
