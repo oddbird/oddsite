@@ -43,6 +43,6 @@ now and into the future.
 
 - Use new features before they are universally supported
 - Support more browsers with less work
-- Different fallback methods, and when to use them
+- Use different fallback methods depending on the circumstances
 - Understanding caniuse.com as a guide, rather than a gatekeeper
 - Understand the radical vision that makes design on the web so unique… and weird
