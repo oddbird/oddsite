@@ -24,7 +24,7 @@ summary: |
   with unique rules and constraints.
 
 
-CSS is Rad
+CSS Is Rad
 ==========
 
 The web is designed to work across platforms,
@@ -41,3 +41,8 @@ From layouts to variables, support queries, and duplicated properties --
 we can write resilient and modern CSS that works across the entire web,
 now and into the future.
 
+- Use new features before they are universally supported
+- Support more browsers with less work
+- Different fallback methods, and when to use them
+- Understanding caniuse.com as a guide, rather than a gatekeeper
+- Understand the radical vision that makes design on the web so unique… and weird
