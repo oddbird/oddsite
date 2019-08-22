@@ -176,7 +176,7 @@ as well as an automated "living" `style guide`_.
 
 .. _style guide: http://quarqnet.com/styleguide/config-colors.html
 
-.. figure:: /static/images/work/quarqnet/communication.jpg
+.. image:: /static/images/work/quarqnet/communication.jpg
    :class: extend-large
    :alt: user story in Pivotal Tracker and Sass color maps
 
