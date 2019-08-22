@@ -55,7 +55,15 @@ h6 {
   font-style: italic;
 }
 
-.figure,
+.figure {
+  margin-bottom: size('gutter');
+  margin-top: size('gutter');
+
+  img {
+    width: 100%;
+  }
+}
+
 .add-space {
   margin-bottom: size('gutter');
   margin-top: size('gutter');
