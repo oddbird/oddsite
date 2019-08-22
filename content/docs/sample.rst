@@ -347,5 +347,19 @@ Unfortunately, ReStructured Text doesn't wrap them in a <figure> and
 <figcaption> element. Instead they get a <div> with a class of figure.
 Alignment options can be found in the `content guidelines`_.
 
+
+Dividers
+~~~~~~~~
+
+Options include title (default is none), url (default is none), and small (default is true) but scale isn't working at this time.
+
+.. code:: rst
+
+  .. callmacro:: content.macros.j2#divider
+
+.. callmacro:: content.macros.j2#divider
+
+
+
 .. _content guidelines: /styleguide
 
