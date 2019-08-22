@@ -34,18 +34,18 @@ planning1:
       process includes a review of technical, brand, and marketing goals as
       needed. Below are a few sample questions.
 
-      | **What is the goal of the application?**
-      | *In other words, when it’s done and working great, what specific outcomes will occur? Are we trying to close sales? Are we telling a story? Are we earning permission to follow up? Are we hoping that people will watch or learn?*
+      **What is the goal of the application?** |br|
+      *In other words, when it’s done and working great, what specific outcomes will occur? Are we trying to close sales? Are we telling a story? Are we earning permission to follow up? Are we hoping that people will watch or learn?*
 
-      |
+      **Who are we trying to reach?** |br|
+      *Is it everyone? Existing customers? A certain kind of prospect? What are the existing apps and sites that this group has demonstrated they enjoy interacting with?*
 
-      | **Who are we trying to reach?**
-      | *Is it everyone? Existing customers? A certain kind of prospect? What are the existing apps and sites that this group has demonstrated they enjoy interacting with?*
+      **Does your audience have specific accessibility needs? Basic accessibility is included.** |br|
+      *Do varying ability levels play a role? Languages or other cultural/location differences? What web browsers and mobile devices do we hope to support?*
 
-      |
+      .. |br| raw:: html
 
-      | **Does your audience have specific accessibility needs? Basic accessibility is included.**
-      | *Do varying ability levels play a role? Languages or other cultural/location differences? What web browsers and mobile devices do we hope to support?*
+        <br/>
   - title: 'User Profiles'
     icon: 'users'
     text: |
@@ -54,9 +54,12 @@ planning1:
       they trying to do on the tool, and why? Below is a sample excerpt from
       a User Profile.
 
-      | **User 1 - Coach**
-      | In the morning, Sam sits down at her desk in her office and opens CoachHub on her desktop in Chrome browser. She skims the dashboard and notices two alerts — new customer signups — that she needs to respond to right away. She clicks on one customer name and is taken directly to their profile information. Sam quickly browses their list of needs and clicks on her calendar to confirm the meeting date the new customer requested. It is easy to continue to the next customer because the tool bar with alerts still appears at the top of this page. After taking care of the immediate tasks…
+      **User 1 - Coach** |br|
+      In the morning, Sam sits down at her desk in her office and opens CoachHub on her desktop in Chrome browser. She skims the dashboard and notices two alerts — new customer signups — that she needs to respond to right away. She clicks on one customer name and is taken directly to their profile information. Sam quickly browses their list of needs and clicks on her calendar to confirm the meeting date the new customer requested. It is easy to continue to the next customer because the tool bar with alerts still appears at the top of this page. After taking care of the immediate tasks…
 
+      .. |br| raw:: html
+
+        <br/>
   - title: 'Interactive Wireframe'
     icon: 'interact'
     text: |
@@ -79,16 +82,18 @@ planning2:
       you to prioritize tasks, keeping you in control of the cost. Below is a
       sample set of User Stories. Large projects can have over 100 Stories.
 
-      | **As a Coach, I want** to see a dashboard.
-      | As a Coach, I want to check alerts.
-      | As a Coach, I want to see and confirm appointments on a calendar.
-      | As a Coach, I want to view a client’s profile with need requests.
+      **As a Coach, I want** to see a dashboard. |br|
+      As a Coach, I want to check alerts. |br|
+      As a Coach, I want to see and confirm appointments on a calendar. |br|
+      As a Coach, I want to view a client’s profile with need requests.
 
-      |
+      **As a Client, I want** to create a profile. |br|
+      As a Client, I want to request an appointment on a calendar. |br|
+      As a Client, I want to select specific services from a list.
 
-      | **As a Client, I want** to create a profile.
-      | As a Client, I want to request an appointment on a calendar.
-      | As a Client, I want to select specific services from a list.
+      .. |br| raw:: html
+
+        <br/>
   - title: 'Data Model/Glossary'
     icon: 'site-map'
     text: |
@@ -150,6 +155,7 @@ Research & Concepting
   :slug: 'easy'
 
 .. callmacro:: content.macros.j2#divider
+  :small: 'true'
 
 .. callmacro:: content.macros.j2#rst
   :tag: 'start'
@@ -179,8 +185,7 @@ board or CEO, or to take the leap into creating your web project!
 
 .. figure:: /static/images/blog/navdraft.jpg
    :alt: Sample Interactive Wireframe
-   :align: center
-   :figclass: extend-full
+   :figclass: extend-large
 
    Sample Interactive Wireframe showing one laptop sized screen and the mobile view of the same content with clickable links.
 
@@ -196,12 +201,6 @@ board or CEO, or to take the leap into creating your web project!
   :class: 'section-end'
 
   Contact us to learn more
-
-.. callmacro:: content.macros.j2#rst
-  :tag: 'end'
-
-.. callmacro:: content.macros.j2#rst
-  :tag: 'start'
 
 
 Get to Know Your Industry
@@ -224,9 +223,15 @@ project!
   :slug: 'services/planning'
   :data: 'industry'
 
+.. callmacro:: content.macros.j2#rst
+  :tag: 'start'
+
 .. figure:: /static/images/blog/navdraft.jpg
-  :alt: Google Form used to gather research from prospective users
   :align: center
+  :alt: Google Form used to gather research from prospective users
   :figclass: size-full
 
   Sample User Survey using Google Forms.
+
+.. callmacro:: content.macros.j2#rst
+  :tag: 'end'
