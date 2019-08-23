@@ -183,7 +183,7 @@ board or CEO, or to take the leap into creating your web project!
   :slug: 'services/planning'
   :data: 'planning1'
 
-.. figure:: /static/images/blog/navdraft.jpg
+.. figure:: /static/images/pages/interactive-prototypes.png
    :alt: Sample Interactive Wireframe
    :figclass: extend-large
 
@@ -198,7 +198,7 @@ board or CEO, or to take the leap into creating your web project!
 
 .. callmacro:: content.macros.j2#link_button
   :url: '/contact/'
-  :class: 'section-end'
+  :class: 'section-end small-btn'
 
   Contact us to learn more
 
@@ -226,7 +226,7 @@ project!
 .. callmacro:: content.macros.j2#rst
   :tag: 'start'
 
-.. figure:: /static/images/blog/navdraft.jpg
+.. figure:: /static/images/pages/web-app-survey.png
   :align: center
   :alt: Google Form used to gather research from prospective users
   :figclass: size-full
