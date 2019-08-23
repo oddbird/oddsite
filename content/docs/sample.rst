@@ -351,13 +351,22 @@ Alignment options can be found in the `content guidelines`_.
 Dividers
 ~~~~~~~~
 
-Options include title (default is none), url (default is none), and small (default is true) but scale isn't working at this time.
+Options include title (default is none), url (default is none), and small (default is true).
 
 .. code:: rst
 
   .. callmacro:: content.macros.j2#divider
 
+
+Small Divider:
+
 .. callmacro:: content.macros.j2#divider
+
+
+Large Divider:
+
+.. callmacro:: content.macros.j2#divider
+  :small: false
 
 
 
