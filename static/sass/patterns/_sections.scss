@@ -86,3 +86,9 @@
     padding-top: size('half-shim');
   }
 }
+
+.section-end {
+  + section {
+    margin-top: size('spacer');
+  }
+}
