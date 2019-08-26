@@ -112,7 +112,7 @@ planning2:
       right balance of functionality and budget.
 industry:
   - title: 'Competitor Overview'
-    icon: 'map'
+    icon: 'running'
     text: |
       Let’s take a look at existing web apps and companies that serve a
       similar audience to get an overview of industry trends and potential
@@ -121,7 +121,7 @@ industry:
       competitor is using to serve people?” and “how comfortable do users
       feel when using this competitor’s web app?”
   - title: 'User Interviews'
-    icon: 'users'
+    icon: 'messaging'
     text: |
       Because your digital product needs to serve different people with
       distinct needs, we would like to have direct conversations with a
