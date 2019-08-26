@@ -164,8 +164,8 @@ Research & Concepting
 What You Get
 ------------
 
-This process delivers all the information required to take
-your project to the next step.
+**This process delivers all the information required to take
+your project to the next step.**
 We’ll help you understand the full scope of your vision,
 experiment with interactive visualization,
 define the Minimum Viable Product (MVP),
