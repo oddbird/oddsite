@@ -198,7 +198,7 @@ board or CEO, or to take the leap into creating your web project!
 
 .. callmacro:: content.macros.j2#link_button
   :url: '/contact/'
-  :class: 'section-end small-btn'
+  :class: 'section-end'
 
   Contact us to learn more
 
@@ -206,14 +206,7 @@ board or CEO, or to take the leap into creating your web project!
 Get to Know Your Industry
 -------------------------
 
-This process delivers all the information required to take your project to
-the next step. We’ll help you understand the full scope of your vision,
-experiment with interactive visualization, define the Minimum Viable Product
-(MVP), get to know your customers on a new level, and see a full estimate for
-design and development. Use the Research & Concepting deliverables to present
-your idea to your board or CEO, or to take the leap into creating your web
-project!
-
+The purpose of a web app or site is to improve life for people. We offer these additional items to help you get to know the people who will interact with your digital product more fully. Let's find out what's familiar to them, where they are struggling, and what would make their lives easier.
 
 .. callmacro:: content.macros.j2#rst
   :tag: 'end'
