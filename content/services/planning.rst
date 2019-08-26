@@ -226,7 +226,7 @@ project!
 .. callmacro:: content.macros.j2#rst
   :tag: 'start'
 
-.. figure:: /static/images/pages/web-app-survey.png
+.. figure:: /static/images/pages/web-app-survey.jpg
   :align: center
   :alt: Google Form used to gather research from prospective users
   :figclass: size-full
