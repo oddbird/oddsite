@@ -38,7 +38,7 @@
     "gulp-stylelint": "^9.0.0",
     "gulp-svg-symbols": "^3.2.3",
     "gulp-svgmin": "^2.2.0",
-    "husky": "^3.0.4",
+    "husky": "^3.0.5",
     "imagemin": "^7.0.0",
     "imagemin-mozjpeg": "^8.0.0",
     "imagemin-optipng": "^7.0.0",
