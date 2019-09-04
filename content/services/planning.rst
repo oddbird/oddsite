@@ -3,7 +3,7 @@ location: planning
 pageclasses: services-layout
 grid_template: true
 image:
-  - src: 'pages/research.jpg'
+  - src: 'pages/design-sketch.jpg'
 headline:
   - tagline: 'Let’s discover what your customers or users need'
     type: 'Services'
