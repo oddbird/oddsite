@@ -358,6 +358,20 @@ Options include title (default is none), url (default is none), and small (defau
   .. callmacro:: content.macros.j2#divider
 
 
+Divider Title:
+
+.. callmacro:: content.macros.j2#divider
+  :title: 'Sample Title'
+
+
+Divider Title:
+
+.. callmacro:: content.macros.j2#divider
+  :title: 'Sample Title with Link'
+  :url: 'https://oddbird.net'
+
+
+
 Small Divider:
 
 .. callmacro:: content.macros.j2#divider
