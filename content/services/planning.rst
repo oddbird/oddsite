@@ -149,8 +149,8 @@ industry:
       Because your digital product needs to serve different people with
       distinct needs, we would like to have direct conversations with a
       variety of users in order to create something they will all find
-      useful. These interviews can happen over the phone, via video chat, or
-      through an online survey.
+      useful. These interviews can happen over the phone, via video chat,
+      or through an online survey.
 summary: |
   **Most projects start with Research & Concepting**
   to make sure we thoroughly understand your project.
