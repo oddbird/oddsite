@@ -54,3 +54,13 @@
     margin-top: negative('shim');
   }
 }
+
+.text-sample {
+  border-left: size('border') solid color('callout');
+  margin: size('shim') 0;
+  padding: 0 size('shim');
+
+  strong {
+    display: block;
+  }
+}
