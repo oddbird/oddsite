@@ -1,4 +1,5 @@
 public: no
+grid_template: true
 tags: [CSS, RST, Code]
 headline:
   - tagline: 'sample rST document'
@@ -17,6 +18,17 @@ quotes:
   - text: 'Another Great quote.'
     name: 'Some Client'
     slug: 'great'
+wrapped:
+  - title: 'Wrapping Sample'
+    icon: 'map'
+    text: |
+      How we can use YAML front matter to format things like examples.
+
+      .. wrap:: figure
+        :class: text-sample
+
+        **This is a block wrapped in bold markdown**
+        *This is italic but it doesn't have to be.* Regular text is A-OK here as well.
 summary: |
   This is that short summary that appears on archive pages and as the default
   summary when shared on social media.
@@ -25,11 +37,15 @@ summary: |
 This is the Post Title
 ======================
 
+.. callmacro:: content.macros.j2#rst
+  :tag: 'start'
+
 This is a p tag. Pellentesque habitant morbi tristique senectus et netus et
 malesuada fames ac turpis egestas. Vestibulum tortor quam.
 
 To create more complex, multipart headlines,
 you can add metadata to the YAML at the top of the document:
+
 
 .. code:: yaml
 
@@ -213,7 +229,6 @@ relative to the root ``content/`` directory,
 with ``.rst`` removed,
 and no ``/`` at the start or finish.
 
-
 Images
 ~~~~~~
 
@@ -356,33 +371,108 @@ Options include title (default is none), url (default is none), and small (defau
 .. code:: rst
 
   .. callmacro:: content.macros.j2#divider
+    :title: 'Sample Title'
+    :url: 'https://oddbird.net'
 
 
-Divider Title:
+Small Divider with Title
+........................
 
 .. callmacro:: content.macros.j2#divider
-  :title: 'Sample Title'
+  :title: 'Small Title Divider'
 
 
-Divider Title:
+Small Divider with Linked Title
+...............................
 
 .. callmacro:: content.macros.j2#divider
   :title: 'Sample Title with Link'
   :url: 'https://oddbird.net'
 
 
+Large Divider with Title
+.........................
 
-Small Divider:
+.. callmacro:: content.macros.j2#divider
+  :title: 'Do we use large dividers with titles anywhere?'
+  :small: false
+
+
+Small Divider
+.............
 
 .. callmacro:: content.macros.j2#divider
 
 
-Large Divider:
+Large Divider
+.............
 
 .. callmacro:: content.macros.j2#divider
   :small: false
 
 
+Examples, Figures, etc that should stand out a bit from body copy
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+When you want to make a distinction from regular copy, you may want to use the ``text-sample`` class. Doing anything fancy in YAML is tricky so we've cheated a bit here and added a block display to anything in **bold** to get our desired effect. See the sample below:
+
+.. code:: yaml
+
+  wrapped:
+    - title: 'Wrapping Sample'
+      icon: 'map'
+      text: |
+        How we can use YAML front matter to format things like examples.
+
+       .. wrap:: figure
+        :class: text-sample
+
+        **This bold markdown line turns into a block**
+        *This is italic but it doesn't have to be.* Regular text is A-OK here as well.
+
+
+.. callmacro:: content.macros.j2#rst
+  :tag: 'end'
+
+
+.. callmacro:: content.macros.j2#icon_block
+  :slug: 'docs/sample'
+  :data: 'wrapped'
+
+.. callmacro:: content.macros.j2#rst
+  :tag: 'start'
+
+Icon Blocks
+~~~~~~~~~~~
+
+The above example also shows the icon block macro.
+In the front matter, you need a group (``wrapped`` in the above example) with the following:
+
+- ``title``
+- ``icon`` (filename without extension, svg must be in the ``templates/icon`` folder)
+- ``text``
+
+The code block above shows the front matter for an icon block.
+
+To display this block, you use ``callmacro`` within the body of
+the rst file and include:
+
+- macro location and name
+- ``slug``
+- ``data``
+
+These last two items point to the part of the front matter that
+contains the content you want to display.
+In the example below, we are pointing to the ``wrapped`` data in this file:
+
+.. code:: rst
+
+  .. callmacro:: content.macros.j2#icon_block
+    :slug: 'docs/sample'
+    :data: 'wrapped'
+
+.. callmacro:: content.macros.j2#rst
+  :tag: 'end'
 
 .. _content guidelines: /styleguide
 
