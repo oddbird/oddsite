@@ -6,7 +6,7 @@ Babel==2.7.0
 blinker==1.4
 docutils==0.15.2
 Jinja2==2.10.1
-Werkzeug==0.15.5
+Werkzeug==0.15.6
 Pygments==2.4.2
 smartypants==2.0.1
 Pillow==6.1.0
