@@ -19,12 +19,14 @@ $quote-circle-type: calc(5rem + 2vw);
   align-items: start;
   display: grid;
   grid-column-gap: size('double-gutter');
-  grid-template-columns: repeat(auto-fit, minmax(size('quote-items'), 1fr));
+
+  @include above('small-page') {
+    grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+  }
 
   .pullquote,
   blockquote {
     justify-self: center;
-    max-width: size('small-page');
 
     &:nth-child(odd) {
       &:last-child {
