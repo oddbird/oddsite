@@ -107,16 +107,16 @@ planning2:
 
         **As a Coach, I want...**
 
-        - ...to see a dashboard.
-        - ...to check alerts.
-        - ...to see and confirm appointments on a calendar.
-        - ...to view a client’s profile with need requests.
+        - to see a dashboard.
+        - to check alerts.
+        - to see and confirm appointments on a calendar.
+        - to view a client’s profile with need requests.
 
         **As a Client, I want...**
 
-        - ...to create a profile.
-        - ...to request an appointment on a calendar.
-        - ...to select specific services from a list.
+        - to create a profile.
+        - to request an appointment on a calendar.
+        - to select specific services from a list.
   - title: 'Data Model/Glossary'
     icon: 'site-map'
     text: |
