@@ -11,7 +11,6 @@ const eslint = require('gulp-eslint');
 const fs = require('fs-extra');
 const gulp = require('gulp');
 const log = require('fancy-log');
-const mocha = require('gulp-mocha');
 const path = require('path');
 const prettier = require('gulp-prettier-plugin');
 const rename = require('gulp-rename');
@@ -144,12 +143,6 @@ gulp.task('eslint-nofail', () => eslintTask(paths.ALL_JS));
 gulp.task('sasslint', () => sasslintTask(paths.SASS, true));
 
 gulp.task('sasslint-nofail', () => sasslintTask(paths.SASS));
-
-gulp.task('sasstest', () =>
-  gulp
-    .src([`${paths.SASS_TESTS_DIR}test_sass.js`], { read: false })
-    .pipe(mocha({ reporter: 'dot' })),
-);
 
 gulp.task('dev-clean', cb => {
   fs.emptyDir(paths.DIST_DIR, cb);
@@ -320,9 +313,6 @@ gulp.task(
       // lint all scss when rules change
       gulp.watch('**/.stylelintrc.yml', gulp.parallel('sasslint-nofail'));
 
-      // run sass tests on changes
-      gulp.watch(paths.SASS, gulp.parallel('sasstest'));
-
       // run webpack to compile svg icons and styleguide assets
       gulp.watch(
         [
@@ -379,15 +369,12 @@ gulp.task('prod-serve', cb => {
   browserSync.init(getServeOpts(paths.PROD_DIST_DIR), getBsCb(cb));
 });
 
-gulp.task('test', gulp.series('sasstest', 'jstest'));
+gulp.task('test', gulp.parallel('jstest'));
 gulp.task('serve', gulp.parallel('watch', 'runserver'));
 gulp.task('quick-serve', gulp.parallel('runserver', 'webpack'));
-gulp.task(
-  'dev',
-  gulp.series(gulp.parallel('eslint', 'sasslint', 'sasstest'), 'serve'),
-);
+gulp.task('dev', gulp.series(gulp.parallel('eslint', 'sasslint'), 'serve'));
 gulp.task('prod', gulp.series('update-subproject-docs', 'webpack-prod'));
 gulp.task(
   'default',
-  gulp.series(gulp.parallel('sasslint', 'eslint', 'sasstest'), 'jstest'),
+  gulp.series(gulp.parallel('sasslint', 'eslint'), 'jstest'),
 );

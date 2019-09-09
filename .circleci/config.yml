@@ -30,9 +30,6 @@ jobs:
           name: Lint Sass
           command: gulp sasslint
       - run:
-          name: Test Sass
-          command: gulp sasstest
-      - run:
           name: Test JS
           command: karma start --reporters dots,coverage-istanbul,junit --browsers ChromeHeadless
       - run:
