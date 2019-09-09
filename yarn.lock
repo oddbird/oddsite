@@ -6706,7 +6706,7 @@ js-tokens@^3.0.2:
   resolved "https://registry.yarnpkg.com/js-tokens/-/js-tokens-3.0.2.tgz#9866df395102130e38f7f996bceb65443209c25b"
   integrity sha1-mGbfOVECEw449/mWvOtlRDIJwls=
 
-js-yaml@3.13.1, js-yaml@^3.12.0, js-yaml@^3.13.1:
+js-yaml@3.13.1, js-yaml@^3.13.1:
   version "3.13.1"
   resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-3.13.1.tgz#aff151b30bfdfa8e49e05da22e7415e9dfa37847"
   integrity sha512-YfbcO7jXDdyj0DGxYVSlSeQNHbD7XPWvrVWeVUujrQEoZzWJIRrCPoyk6kL6IAjAG2IolMK4T0hNUe0HOUs5Jw==
@@ -10528,7 +10528,7 @@ sassdoc-extras@^2.4.1, sassdoc-extras@^2.5.0:
   dependencies:
     marked "^0.6.2"
 
-sassdoc-theme-default@^2.8.1:
+sassdoc-theme-default@^2.8.3:
   version "2.8.3"
   resolved "https://registry.yarnpkg.com/sassdoc-theme-default/-/sassdoc-theme-default-2.8.3.tgz#092854a5654aa5c2820983fbe669dfbff2ef7bd1"
   integrity sha512-KEl1ghIAwkkBGiYvkwVFepOA8IDEqgKsm0fGHUIcepcXiIp2SoHA0ZC5TZFjwaTrs296K1QK5WL4QtjNhS76+g==
@@ -10567,19 +10567,19 @@ sassdoc-theme-herman@^3.0.2:
     unixify "^1.0.0"
     vinyl-fs "^3.0.3"
 
-sassdoc@^2.7.0:
-  version "2.7.0"
-  resolved "https://registry.yarnpkg.com/sassdoc/-/sassdoc-2.7.0.tgz#41504feb9ae9b0ffaa45520ed247093c376ef0fc"
-  integrity sha512-mj+kJJdZwgg2Jw41rR9owLZbrphEoSH+p2V3xV9YWZOy15cL7O25OcWFPZ2Cqcc0ETP+VybN9ZWe+GXSFq00Xw==
+sassdoc@^2.7.1:
+  version "2.7.1"
+  resolved "https://registry.yarnpkg.com/sassdoc/-/sassdoc-2.7.1.tgz#7c0f10fd99b3f553697c8827d8149dab9df8afa9"
+  integrity sha512-eE06YYOyZAWccMl2mEIPnCgxiHKTwJ/vWGis9ZqVrXiYzQm3GKigsoQjU4Nz6/sp6qm7mY0RKgmlAkeBuhkxxg==
   dependencies:
     ansi-styles "^3.2.1"
     babel-runtime "^6.26.0"
-    chalk "^2.4.1"
+    chalk "^2.4.2"
     concat-stream "^1.6.2"
     docopt "^0.6.1"
-    glob "^7.1.3"
+    glob "^7.1.4"
     glob2base "0.0.12"
-    js-yaml "^3.12.0"
+    js-yaml "^3.13.1"
     lodash.difference "^4.5.0"
     lodash.uniq "^4.5.0"
     minimatch "^3.0.4"
@@ -10588,7 +10588,7 @@ sassdoc@^2.7.0:
     rimraf "^2.6.2"
     safe-wipe "0.2.4"
     sass-convert "^0.5.0"
-    sassdoc-theme-default "^2.8.1"
+    sassdoc-theme-default "^2.8.3"
     scss-comment-parser "^0.8.4"
     strip-indent "^2.0.0"
     through2 "1.1.1"
