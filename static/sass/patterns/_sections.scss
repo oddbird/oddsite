@@ -55,7 +55,6 @@
 // --------------
 
 [divider='large'] {
-  @include extend('extend-full');
   @include z-index('large-divider');
   margin-top: size('spacer');
   text-align: center;

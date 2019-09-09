@@ -21,7 +21,7 @@
   margin: size('gutter');
 
   @include above('#splash-items' ('times': 2)) {
-    width: size('splash-items');
+    max-width: size('splash-items');
   }
 
   @include above('medium-page') {
