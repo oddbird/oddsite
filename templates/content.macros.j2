@@ -102,8 +102,7 @@
       {% if item.title %}
         <h3>{{ utility.link_if(item.title|safe, item.url) }}</h3>
       {% endif %}
-
-      <p>{{ item.text|safe }}</p>
+      {{ item.text | rst | safe }}
     </div>
   </div>
 {% endmacro %}
