@@ -80,8 +80,9 @@ planning:
     text: |
       Each user story defined one task that a specific user
       might want to accomplish on CoachHub.
-      <em>(“As a Client, I want to schedule an appointment.”)</em>
-      Using <a href="http://www.pivotaltracker.com/">Pivotal Tracker</a>,
+      *(“As a Client, I want to schedule an appointment.”)*
+      Using a project management tool –
+      in this case `Pivotal Tracker <http://www.pivotaltracker.com/>`_ –
       we listed each user story and provided itemized story estimates.
       This allowed ORCAS to add, prioritize, and remove stories
       before we began development and throughout the project –
@@ -94,10 +95,8 @@ planning:
       built around conversations with the entire team
       to determine not just *what is included*
       but *how users will interact* with the available models:
-      <em>
-        "A <strong>Client Profile</strong> contains all the public information
-        about a CLIENT, for use in Q&A forums, messaging, etc."
-      </em>
+      *"A CLIENT PROFILE contains all the public information
+      about a CLIENT, for use in Q&A forums, messaging, etc."*
       The resulting document also acts as a glossary of terms,
       to help the entire team communicate consistently
       and write code that integrates smoothly.
