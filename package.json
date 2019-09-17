@@ -111,7 +111,7 @@
       "stylelint",
       "git add"
     ],
-    "*.{json,yml}": [
+    "{package.json,*.yml}": [
       "prettier --write",
       "git add"
     ]
