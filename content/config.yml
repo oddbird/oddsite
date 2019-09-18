@@ -77,7 +77,7 @@ template_path: ../templates
 asset_map_path: static/assets.json
 rst_writer: html5writer
 smart_quotes: true
-ignore_files: ['.*', '_*', 'config*.yml', 'Makefile', 'README', '*.conf', '*~']
+ignore_files: ['.*', 'config*.yml', 'Makefile', 'README', '*.conf', '*~']
 modules:
   blog:
     index_url: /blog/

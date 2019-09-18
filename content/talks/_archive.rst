@@ -1,4 +1,5 @@
 public: no
+redirect_url: '/services/speaking/'
 location: speaking
 interviews:
   - venue: 'Parent Programming'
