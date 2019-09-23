@@ -70,7 +70,7 @@
     "sass-true": "^5.0.0",
     "sassdoc": "^2.7.1",
     "sassdoc-theme-herman": "^3.0.2",
-    "sinon": "^7.4.2",
+    "sinon": "^7.5.0",
     "sinon-chai": "^3.3.0",
     "stylelint": "^11.0.0",
     "stylelint-config-recommended": "^3.0.0",
