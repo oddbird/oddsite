@@ -16,7 +16,7 @@ short_bio: |
   `Jonny Gerig Meyer`_
   is an architect of clean,
   well-tested JavaScript web applications,
-  and a brewer of delicious IPA's.
+  and a brewer of delicious IPAs.
 
   .. _Jonny Gerig Meyer: /authors/jonny/
 summary: |
@@ -24,7 +24,7 @@ summary: |
   turning your ideas into functional interactions.
   He has been writing clean,
   well-tested JavaScript web applications
-  for nearly a decade.
+  for more than a decade.
   Experienced in a wide variety of JavaScript frameworks,
   he is passionate about front-end architecture,
   code test coverage, and sweating the details.
@@ -33,7 +33,7 @@ summary: |
   numerous open-source projects.
   He's easily distracted by a game of ultimate frisbee,
   homebrewing delicious IPAs and stouts,
-  and trying to keep up with his two young kids.
+  and trying to keep up with his dog and two young kids.
 
 
 Jonny Gerig Meyer
