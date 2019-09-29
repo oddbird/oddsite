@@ -62,16 +62,16 @@
 
 
 {% macro oss_list(author, page) %}
-  {% set oss = page.config.oss_by_author[author] %}
+  {% set oss = page.config.oss_by_author[author]|list + page.config.oss_by_author['oddbird']|list %}
   {% set oss = oss|filter_pages('public', 'neq', false) %}
   {% set oss = oss|collect('contributors', label_with='slug') %}
-  {% set oss = oss|selectattr('author', 'equalto', author)|list %}
+  {% set oss = oss|selectattr('author', 'in', [author, 'oddbird'])|list %}
 
   {% if oss and (oss|length > 0) %}
     <section data-module="contributions">
       {{ content.divider(title='Open Source Contributions') }}
       {% for group in oss|groupby('role') %}
-        <h3 class="oss-role">{{ group.grouper }}</h3>
+        <h3 class="oss-role">{{ 'co-creator' if group.grouper == 'creators' else group.grouper }}</h3>
         <ul class="title-list">
           {% for item in group.list %}
             {% set page = all_pages|filter_pages('slug', 'eq', item.slug)|get_page %}

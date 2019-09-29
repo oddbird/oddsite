@@ -8,8 +8,8 @@
     "yarn": "1.17.3"
   },
   "devDependencies": {
-    "@babel/core": "^7.6.0",
-    "@babel/preset-env": "^7.6.0",
+    "@babel/core": "^7.6.2",
+    "@babel/preset-env": "^7.6.2",
     "accoutrement": "^2.1.2",
     "autoprefixer": "^9.6.1",
     "babel-eslint": "^10.0.3",
@@ -38,7 +38,7 @@
     "gulp-stylelint": "^9.0.0",
     "gulp-svg-symbols": "^3.2.3",
     "gulp-svgmin": "^2.2.0",
-    "husky": "^3.0.5",
+    "husky": "^3.0.7",
     "imagemin": "^7.0.0",
     "imagemin-mozjpeg": "^8.0.0",
     "imagemin-optipng": "^7.0.0",
@@ -55,7 +55,7 @@
     "karma-mocha-reporter": "^2.2.4",
     "karma-sourcemap-loader": "^0.3.7",
     "karma-webpack": "4.0.2",
-    "lint-staged": "^9.3.0",
+    "lint-staged": "^9.4.0",
     "lodash.set": "^4.3.2",
     "mini-css-extract-plugin": "^0.8.0",
     "mocha": "^6.2.0",
@@ -76,7 +76,7 @@
     "stylelint-config-recommended": "^3.0.0",
     "stylelint-scss": "^3.11.1",
     "touch": "^3.1.0",
-    "webpack": "^4.40.2",
+    "webpack": "^4.41.0",
     "webpack-assets-manifest": "^3.1.1",
     "webpack-cli": "^3.3.9",
     "webpack-merge": "^4.2.2"
