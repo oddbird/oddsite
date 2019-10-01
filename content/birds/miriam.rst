@@ -11,13 +11,12 @@ social:
     github: 'mirisuzanne'
     codepen: 'mirisuzanne'
     stackoverflow: '1930386'
-    dribbble: 'miriamsuzanne'
 og:
   - facebook: 'mirisuzanne'
     twitter: 'mirisuzanne'
 short_bio: |
   `Miriam Suzanne`_
-  is a product manager,
+  is a product lead,
   user-experience designer,
   writer, speaker,
   and open source developer.
@@ -32,7 +31,9 @@ summary: |
   member of the `Sass`_ core team,
   and creator of the popular `Susy`_
   and `True`_ libraries.
-  Miriam is a staff writer for `CSS Tricks`_,
+  Miriam is a
+  teacher and open-web advocate for `Mozilla Developer`_,
+  staff writer for `CSS Tricks`_,
   co-author of SitePoint’s `Jump Start Sass`_,
   and internationally known
   `conference speaker`_,
@@ -44,6 +45,7 @@ summary: |
   .. _Sass: https://sass-lang.com
   .. _Susy: /susy/
   .. _True: /true/
+  .. _Mozilla Developer: https://www.youtube.com/MozillaDeveloper
   .. _CSS Tricks: http://css-tricks.com
   .. _Jump Start Sass: https://www.sitepoint.com/premium/books/jump-start-sass
   .. _conference speaker: /services/speaking/
