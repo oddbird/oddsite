@@ -60,7 +60,7 @@
     slice=2
   ) }}
 
-  {% if not (ctx.config.event_type == 'podcast') %}
+  {% if not (ctx.config.event_type in ['podcast', 'video']) %}
     <section class="events-by-talk">
       {{ content.divider(title='Event Schedule') }}
 
@@ -260,17 +260,18 @@
   {% set event_date = event.date|make_date %}
   {% set talk = talk if talk else all_pages|filter_pages('slug', 'eq', event.slug)|get_page %}
   {% set event_type = talk.config.event_type or 'talk' %}
+  {% set type = event.type or event_type %}
   {% set tbd = (event_type|lower == 'tbd') %}
   {% set url = event.url if (details or venue_link or tbd) else (event.post or content.page_link(talk)) %}
 
   <article class="event">
     <h4 class="event-venue">
       {{ utility.link_if(
-        content=event.venue,
+        content=(talk.title if (type == 'video') else event.venue)|typogrify,
         url=url
         )  }}
       {% if (event_type != 'talk') or event.type %}
-        [{{ event.type or event_type }}]
+        [{{ type }}]
       {% endif %}
     </h4>
 
