@@ -10,6 +10,7 @@ events:
   - venue: 'Agnes Scott College'
     date: [2019, 9, 16]
     adr: 'Atlanta, GA'
+    type: keynote
   - venue: 'Design 4 Drupal'
     url: 'https://design4drupal.org/'
     date: [2019, 6, 26]

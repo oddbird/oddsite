@@ -364,6 +364,27 @@
 
 
 {#
+  video
+  -----
+#}
+{% macro video(
+  embed,
+  caption=none
+) %}
+  {% set caption = caption if (caption != none) else caller() %}
+
+  <figure class='figure extend-small'>
+    <div class="video img-border">
+      {{ embed|safe }}
+    </div>
+    {% if caption %}
+      <figcaption class="caption">{{ caption | rst | safe }}</figcaption>
+    {% endif %}
+  </figure>
+{% endmacro %}
+
+
+{#
   iframe
   ------
 #}
