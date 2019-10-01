@@ -15,6 +15,8 @@ project:
 contributors:
   - author: 'miriam'
     role: 'creator'
+  - author: 'jonny'
+    role: 'core developer'
 accoutrement_modules:
   - title: 'Core'
     url: '/accoutrement/docs/core.html'
