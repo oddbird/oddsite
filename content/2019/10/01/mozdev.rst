@@ -66,7 +66,7 @@ and toggle print preview mode.
 If you’ve ever struggled to style lists
 with customized bullets and numbers,
 Miriam Suzanne has a video all about the
-`::marker` pseudo-element and list counters.
+``::marker`` pseudo-element and list counters.
 Watch the video, and go play with the `demo on codepen`_.
 
 .. _demo on codepen: https://codepen.io/mirisuzanne/pen/BaBKowO?editors=0100
