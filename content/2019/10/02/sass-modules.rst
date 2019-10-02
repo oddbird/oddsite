@@ -21,7 +21,7 @@ Sass Modules, a Primer
 ======================
 
 Don't worry if it doesn't make sense right away:
-this version is completely backwards compatatbile,
+this version is completely backwards compatible,
 and we have at least a year
 before anything will be deprecated
 from the old way of doing things.
@@ -75,8 +75,8 @@ so the two would conflict.
 
 .. _Accoutrement: https://www.oddbird.net/accoutrement/
 
-Modules are meant to clarify that,
-both for us as developers,
+Modules are meant to clarify those relationships,
+both for us as developers
 and for the compiler.
 Every file is a "module",
 and everything in that module is explicitly defined --
@@ -92,7 +92,7 @@ I could do something like this:
   // configuration…
   $font-path: '../fonts/';
 
-  // accoutrement nowhas access to my configuration…
+  // accoutrement now has access to my configuration…
   @import 'accoutrement/sass/tools';
 
   // all these files have access to accoutrement, and each other…
@@ -158,9 +158,9 @@ and using it for new code.
 
 Since the module system is all about explicit naming
 (and namespacing) of dependencies,
-We'll often need one or more ``@use``
+We'll often need one or more ``@use`` statements
 at the top of Sass documents.
-If we want access to Accoutrment in a file,
+If we want access to Accoutrement in a file,
 we can ``@use`` Accoutrement:
 
 .. code:: scss
@@ -186,7 +186,7 @@ Manage namespaces when using
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 A "namespace" works like a prefix.
-Theh default namespace is based on
+The default namespace is based on
 the end of the import path,
 so ``accoutrement/sass/tools``
 will create a ``tools`` namespace.
@@ -273,7 +273,7 @@ Since Accoutrement (in our example)
 has no access to local variables,
 we need a way to explicitly configure the library
 before we ``@use`` it.
-In breif,
+In brief,
 module configuration looks like this:
 
 .. code:: scss
@@ -292,7 +292,7 @@ This is where things can get the most confusing, because
 
 - A module can only be configured once
 - Configuration has to happen the very first time
-  a module is ``@use`` d
+  you ``@use`` a module
 
 This will take some getting used to,
 but you can avoid a lot of issues
@@ -344,7 +344,7 @@ from Sass core modules
 (e.g. ``@use 'sass:math'``)
 to import-only files,
 public and private members,
-the `load-css()` mixin,
+the ``load-css()`` mixin,
 and so on.
 I'll cover all of that in the
 article for CSS Tricks
@@ -370,4 +370,3 @@ but feel free to dig around.
 Check back soon for more details --
 and if you have questions,
 feel free to reach out.
-

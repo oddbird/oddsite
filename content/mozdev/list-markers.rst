@@ -23,8 +23,9 @@ Powerful New CSS for Styling Lists
 
 - Use the ``::marker`` pseudo element to style list bullets & numbers
 - Use ``display: list-item`` to add a counter on any element
-- Use ``counter-reset`` and `counter-increment` to create your own counters
-- Use ``counter()`` and ``counters()`` to control how counter numbers are displayed
+- Use ``counter-reset`` and ``counter-increment`` to create your own counters
+- Use ``counter()`` and ``counters()`` to control how counter numbers are
+  displayed
 
 I'll also show you how the ``::marker`` element
 is different from ``::before`` or ``::after``.
