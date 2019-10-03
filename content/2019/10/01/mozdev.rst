@@ -1,10 +1,8 @@
 public: yes
 author: miriam
-canonical: https://hacks.mozilla.org/2019/10/video-shorts-from-mozilla-developer/
 headline:
   - tagline: a gift from Mozilla (and OddBird)
-elsewhere: Mozilla Hacks
-tags: [Elsewhere, CSS, 'Mozilla Hacks', Code, Video]
+tags: [CSS, 'Mozilla Hacks', Code, Video]
 image:
   - src: 'mozdev/mozilla-youtube.png'
 summary: |
