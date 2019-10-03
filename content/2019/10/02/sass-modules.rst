@@ -7,14 +7,15 @@ tags: [Sass, Code, Tutorial, Modules]
 image:
   - src: 'projects/sass.jpg'
 summary: |
-  `Dart Sass v1.23.0`_ was released last night,
-  with a major new feature: modules.
+  `Dart Sass`_ (the primary Sass implementation)
+  released version ``1.23.0`` last night
+  with a major new feature: **modules**.
   This is a common feature in many languages --
   but for those of us who primarily write CSS,
   it can be a big mental shift.
   Let's take a look at the basics.
 
-  .. _Dart Sass v1.23.0: https://www.npmjs.com/package/sass
+  .. _Dart Sass: https://www.npmjs.com/package/sass
 
 
 Sass Modules, a Primer
@@ -30,16 +31,16 @@ During that transition period:
 
 - There are built-in features to help library authors
   take advantage of the new syntax
-  without deprecating the old
+  without deprecating the old.
 - Stylesheet authors can use the new syntax,
-  even if they rely on libraries that haven't upgraded
+  even if they rely on libraries that haven't upgraded.
 - There is an automated `Migration Tool`_
   that can help all of us upgrade more smoothly.
 
 .. _Migration Tool: https://sass-lang.com/documentation/cli/migrator
 
 I'll be posting a more in-depth article
-to `CSS Tricks`_ later in the week,
+to `CSS Tricks`_ on Monday,
 but I wanted to get a quick primer out
 right away.
 I'll link the full article
@@ -283,7 +284,6 @@ module configuration looks like this:
     /* additional config variables as needed */
   );
 
-
 It's like a Sass map,
 but with ``$`` on all the key names
 to make it clear they are variables.
@@ -295,17 +295,13 @@ This is where things can get the most confusing, because
   you ``@use`` a module
 
 This will take some getting used to,
-but you can avoid a lot of issues
-by combining ``@use`` with ``@forward``,
-to make things more clear.
-
-Start by creating a "config" file
-for any module that you will need to configure.
-Name it something you like as a namespace
-for the module you are importing.
-This is the one and only place that we'll
-``@use`` and configure the module --
-and then ``@forward`` the results:
+and can be difficult to debug --
+but there are a few patterns you can use.
+Either put configurations at the very top of your
+"entrypoint" (the main file that imports everything else),
+or combine ``@use`` with ``@forward``
+to create a wrapper around the configured library,
+and forward the results with optional extensions:
 
 .. code:: scss
 
@@ -315,6 +311,8 @@ and then ``@forward`` the results:
   );
 
   @forward 'accoutrement/sass/tools';
+
+  // add extensions here, as desired
 
 Now Accoutrement has been used
 and configured
