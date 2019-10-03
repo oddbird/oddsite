@@ -7,7 +7,7 @@ tags: [Sass, Code, Tutorial, Modules]
 image:
   - src: 'projects/sass.jpg'
 summary: |
-  `Dart Sass`_ (the primay Sass implementation)
+  `Dart Sass`_ (the primary Sass implementation)
   released version ``1.23.0`` last night,
   with a major new feature: **modules**.
   This is a common feature in many languages --

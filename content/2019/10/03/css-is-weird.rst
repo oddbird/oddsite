@@ -26,7 +26,7 @@ Why is CSS so Weird?
 
   CSS is for documents,
   and also for apps
-  on a univerally accessible web.
+  on a universally accessible web.
 
 This is a young platform, and all the core languages are growing fast,
 with CSS advancing leaps and bounds over the last few years,
