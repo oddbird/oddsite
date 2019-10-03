@@ -5,7 +5,7 @@
   "title": "OddSite",
   "engines": {
     "node": "10.16.3",
-    "yarn": "1.17.3"
+    "yarn": "1.19.0"
   },
   "devDependencies": {
     "@babel/core": "^7.6.2",
@@ -23,7 +23,7 @@
     "core-js": "^3.2.1",
     "css-loader": "^3.2.0",
     "del": "^5.1.0",
-    "eslint": "^6.4.0",
+    "eslint": "^6.5.1",
     "eslint-config-prettier": "^6.3.0",
     "eslint-plugin-prettier": "^3.1.1",
     "extend": "^3.0.2",
@@ -38,10 +38,10 @@
     "gulp-stylelint": "^9.0.0",
     "gulp-svg-symbols": "^3.2.3",
     "gulp-svgmin": "^2.2.0",
-    "husky": "^3.0.7",
+    "husky": "^3.0.8",
     "imagemin": "^7.0.0",
     "imagemin-mozjpeg": "^8.0.0",
-    "imagemin-optipng": "^7.0.0",
+    "imagemin-optipng": "^7.1.0",
     "img-loader": "^3.0.1",
     "istanbul-instrumenter-loader": "^3.0.1",
     "jquery": "^3.4.1",
@@ -55,10 +55,10 @@
     "karma-mocha-reporter": "^2.2.4",
     "karma-sourcemap-loader": "^0.3.7",
     "karma-webpack": "4.0.2",
-    "lint-staged": "^9.4.0",
+    "lint-staged": "^9.4.1",
     "lodash.set": "^4.3.2",
     "mini-css-extract-plugin": "^0.8.0",
-    "mocha": "^6.2.0",
+    "mocha": "^6.2.1",
     "node-sass": "^4.12.0",
     "nyc": "^14.1.1",
     "optimize-css-assets-webpack-plugin": "^5.0.3",
