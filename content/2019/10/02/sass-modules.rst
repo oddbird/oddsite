@@ -8,7 +8,7 @@ image:
   - src: 'projects/sass.jpg'
 summary: |
   `Dart Sass`_ (the primary Sass implementation)
-  released version ``1.23.0`` last night,
+  released version ``1.23.0`` last night
   with a major new feature: **modules**.
   This is a common feature in many languages --
   but for those of us who primarily write CSS,
@@ -31,9 +31,9 @@ During that transition period:
 
 - There are built-in features to help library authors
   take advantage of the new syntax
-  without deprecating the old
+  without deprecating the old.
 - Stylesheet authors can use the new syntax,
-  even if they rely on libraries that haven't upgraded
+  even if they rely on libraries that haven't upgraded.
 - There is an automated `Migration Tool`_
   that can help all of us upgrade more smoothly.
 

@@ -2,7 +2,7 @@ public: yes
 author: miriam
 headline:
   - tagline: a gift from Mozilla (and OddBird)
-tags: [CSS, 'Mozilla Hacks', Code, Video]
+tags: [CSS, 'Mozilla Developer', Code, Video]
 image:
   - src: 'mozdev/mozilla-youtube.png'
 summary: |
