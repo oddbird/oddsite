@@ -23,7 +23,7 @@
 // Running Footer
 // --------------
 
-.contact-wrap {
+.cta-footer {
   $opaque: color(
     'contact-bg',
     (
@@ -36,7 +36,7 @@
   padding: size('gutter') 0;
 }
 
-[data-module='contact-cta'] {
+[data-module='cta-content'] {
   @include before(null) {
     display: none;
   }

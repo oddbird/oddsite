@@ -24,35 +24,52 @@
 {% endmacro %}
 
 
-{% macro footer(location) %}
-  {% set contact_page = 'contact/index'|get_config %}
-  {% set cta = contact_page.config.cta_footer[0] if contact_page.config.cta_footer %}
+{% macro footer(
+  location,
+  action=none
+) %}
+  {% set actions = {
+    'design-systems': 'workshop'
+  } %}
+  {% set action = action or actions[location] or 'default' %}
+  {% set page = all_pages|filter_pages('cta_is', 'eq', action)|get_page %}
+  {% set cta = page.config.cta_meta[0] %}
 
-  {% if cta %}
-    <div class="contact-wrap">
-      <section data-module="contact-cta">
-        {% set name = birds.name_link(cta.contact, full_name=false) %}
-        {% set main_content = cta.content|rst|replace('%s', name) %}
-        {% set action = cta.action %}
+  {% if page %}
+    {% set title %}
+      <h2>{{ cta.title|typogrify }}</h2>
+    {% endset %}
 
-        <div class="contact-miriam" data-media-block="start">
-          {{ birds.face(cta.contact, 'media-image') }}
-          <div class="media-content">
-            <h2>
-              {% if ('susysite' in location) or ('hermansite' in location) %}
-                {{ cta.project_title }}
-              {% else %}
-                {{ cta.title }}
-              {% endif %}
-            </h2>
+    {% set title %}
+      {% if cta.img %}
+        <header class="cta-header">
+          <img src="static/images/{{ cta.img }}" alt="{{ cta.alt }}">
+          {{ title }}
+        </header>
+      {% else %}
+        {{ title }}
+      {% endif %}
+    {% endset %}
 
-            {{ main_content }}
-            {{ content.link_button(
-              url=action.url,
-              content=action.text|replace('%s', cta.contact|capitalize)
-            ) }}
-          </div>
-        </div>
+    {% set content %}
+      {{ title }}
+      {{ page.render_summary() }}
+    {% endset %}
+
+    {% set content %}
+      {% if cta.face %}
+        {{ birds.face_block(
+          cta.face,
+          content
+        ) }}
+      {% else %}
+        {{ content }}
+      {% endif %}
+    {% endset %}
+
+    <div class="cta-footer">
+      <section data-module="cta-content">
+        {{ content }}
       </section>
     </div>
   {% endif %}

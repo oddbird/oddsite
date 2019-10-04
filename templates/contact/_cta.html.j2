@@ -5,5 +5,8 @@
   {{ content.divider(small=false) }}
 {% else %}
   {{ content.divider(small=false) }}
-  {{ contact.footer(config.location) }}
+  {{ contact.footer(
+    location=config.location,
+    action=config.footer_action
+  ) }}
 {% endif %}
