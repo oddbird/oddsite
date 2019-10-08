@@ -47,7 +47,7 @@ I'll link the full article
 from our blog as well,
 once it's live.
 
-.. _CSS Tricks: https://css-tricks.com/
+.. _CSS Tricks: https://css-tricks.com/introducing-sass-modules/
 
 
 What are modules, and why?
