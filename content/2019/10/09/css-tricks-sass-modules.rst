@@ -12,7 +12,7 @@ summary: |
   The new syntax will replace ``@import`` with
   ``@use`` and ``@forward`` --
   a big step forward for making Sass partials
-  (one of the languages most used features)
+  (one of the language's most used features)
   more readable, performant, and safe.
   This article goes into detail,
   but you can also read our
