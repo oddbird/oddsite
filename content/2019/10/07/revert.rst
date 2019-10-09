@@ -9,8 +9,8 @@ summary: |
   I've often used ``initial`` and ``unset`` in my CSS --
   global keywords that can be applied to any property.
   The difference is small, but important:
-  unset allows inheritance,
-  while initial does not.
+  ``unset`` allows inheritance,
+  while ``initial`` does not.
   But then Firefox implemented ``revert`` and I was confused --
   how is this one different from the others?!
 
@@ -28,4 +28,4 @@ It rolls back styles to the expected browser default for each element,
 rather than using the specification default for each property.
 
 - MDN `documentation <https://developer.mozilla.org/en-US/docs/Web/CSS/revert>`_
-- Codepen `demo <https://codepen.io/mirisuzanne/pen/WVjNZP>`_
+- CodePen `demo <https://codepen.io/mirisuzanne/pen/WVjNZP>`_
