@@ -6,7 +6,7 @@ tags: [Elsewhere, Code, Modules, Sass, Tutorial, CSS Tricks]
 image:
   - src: 'blog/2019/sass-logo.png'
 summary: |
-  Sass rercently launched a major new feature
+  Sass recently launched a major new feature
   you might recognize from other languages:
   a module system.
   The new syntax will replace ``@import`` with
@@ -15,8 +15,9 @@ summary: |
   (one of the languages most used features)
   more readable, performant, and safe.
   This article goes into detail,
-  but you can also read `brief primer </2019/10/02/sass-modules>`_
-  for a quick introduction.
+  but you can also read our
+  "`Sass Modules, a Primer </2019/10/02/sass-modules>`_" article
+  for the quick introduction.
 
 
 CSS Tricks: Introducing Sass Modules
