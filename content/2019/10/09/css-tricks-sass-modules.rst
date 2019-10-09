@@ -2,12 +2,21 @@ public: yes
 author: miriam
 canonical: https://css-tricks.com/introducing-sass-modules/
 elsewhere: CSS Tricks
-tags: [Elsewhere, code, modules, sass]
+tags: [Elsewhere, Code, Modules, Sass, Tutorial, CSS Tricks]
 image:
   - src: 'blog/2019/sass-logo.png'
 summary: |
-  Sass just launched a major new feature you might recognize from other languages: a module system. This is a big step forward for @import. one 
-  of the most-used Sass-features. While the current @import rule allows you to pull in third-party packages, and split your Sass into manageable "partials," it has a few limitations:
+  Sass rercently launched a major new feature
+  you might recognize from other languages:
+  a module system.
+  The new syntax will replace ``@import`` with
+  ``@use`` and ``@forward`` --
+  a big step forward for making Sass partials
+  (one of the languages most used features)
+  more readable, performant, and safe.
+  This article goes into detail,
+  but you can also read `brief primer </2019/10/02/sass-modules>`_
+  for a quick introduction.
 
 
 CSS Tricks: Introducing Sass Modules

@@ -39,15 +39,16 @@ During that transition period:
 
 .. _Migration Tool: https://sass-lang.com/documentation/cli/migrator
 
-I'll be posting a more in-depth article
+I'll be posting
+a more in-depth article
 to `CSS Tricks`_ on Monday,
 but I wanted to get a quick primer out
 right away.
-I'll link the full article
-from our blog as well,
-once it's live.
+
+[**Update**: the `full article is now live`_ at CSS Tricks]
 
 .. _CSS Tricks: https://css-tricks.com/introducing-sass-modules/
+.. _full article is now live: https://css-tricks.com/introducing-sass-modules/
 
 
 What are modules, and why?
@@ -344,9 +345,10 @@ to import-only files,
 public and private members,
 the ``load-css()`` mixin,
 and so on.
-I'll cover all of that in the
-article for CSS Tricks
-(and cross-post it here).
+I cover all of that in the
+`article for CSS Tricks`_.
+
+.. _article for CSS Tricks: https://css-tricks.com/introducing-sass-modules/
 
 If you want to get a head start,
 the amazing `new documentation`_
