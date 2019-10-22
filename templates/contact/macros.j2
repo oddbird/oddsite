@@ -33,33 +33,31 @@
   } %}
   {% set action = action or actions[location] or 'default' %}
   {% set page = all_pages|filter_pages('cta_is', 'eq', action)|get_page %}
-  {% set cta = page.config.cta_meta[0] %}
 
   {% if page %}
-    {% set title %}
-      <h2>{{ cta.title|typogrify }}</h2>
-    {% endset %}
-
-    {% set title %}
-      {% if cta.img %}
-        <header class="cta-header">
-          <img src="static/images/{{ cta.img }}" alt="{{ cta.alt }}">
-          {{ title }}
-        </header>
-      {% else %}
-        {{ title }}
-      {% endif %}
-    {% endset %}
+    {% set config = page.config %}
+    {% set cta_img = config.cta_img[0] if config.cta_img else none %}
+    {% set cta_head = config.headline[0] if config.headline else none %}
 
     {% set content %}
-      {{ title }}
+      {% if cta_head or cta_img %}
+        <header class="cta-header">
+          {% if cta_img %}
+            <img src="/static/images/{{ cta_img.src }}" alt="{{ cta_img.alt }}">
+          {% endif %}
+          <h2>{{ cta_head.title|typogrify }}</h2>
+          {% if cta_head.tagline %}
+            <h3>{{ cta_head.tagline|typogrify }}</h3>
+          {% endif %}
+        </header>
+      {% endif %}
       {{ page.render_summary() }}
     {% endset %}
 
     {% set content %}
-      {% if cta.face %}
+      {% if config.cta_face %}
         {{ birds.face_block(
-          cta.face,
+          config.cta_face,
           content
         ) }}
       {% else %}

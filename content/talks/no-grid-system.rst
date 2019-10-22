@@ -55,13 +55,6 @@ quotes:
     role: 'Frontend Developer at XING'
     url: 'https://twitter.com/frontend_cat/status/993799732018532352'
     slug: 'useful'
-brag: |
-  The creator of `Susy`_
-  provides **practical techniques**
-  for avoiding grid systems.
-  **"Best Of" CSS Dev Conf, 2017**.
-
-  .. _Susy: /susy/
 summary: |
   `Miriam`_
   (the creator of `Susy`_)

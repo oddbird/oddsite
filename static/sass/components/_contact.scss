@@ -40,13 +40,4 @@
   @include before(null) {
     display: none;
   }
-
-  h2,
-  p {
-    margin: 0;
-  }
-
-  .btn {
-    margin-top: size('shim');
-  }
 }

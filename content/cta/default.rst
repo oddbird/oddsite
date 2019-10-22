@@ -1,8 +1,8 @@
 public: no
 cta_is: default
-cta_meta:
-  - face: miriam
-    title: We're here for you
+cta_face: miriam
+headline:
+  - title: We're here for you
 summary: |
   Ask us anything.
   We want to answer your questions,

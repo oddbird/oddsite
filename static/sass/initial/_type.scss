@@ -119,7 +119,8 @@ a {
 // Paragraphs
 // ----------
 
-p {
+p,
+ul.simple {
   margin-bottom: size('shim', 'em');
   margin-top: size('shim', 'em');
 }
