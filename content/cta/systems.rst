@@ -2,33 +2,24 @@ public: no
 cta_is: workshop
 cta_img:
   - src: talks/mia-btconf.jpg
-    alt: Struggling with design systems, CSS, or front end process?
+    alt: Miriam presenting
 headline:
-  - title: Resilient Web Systems Training & Consulting
-    tagline: |
-      Improve bowser compatability & team communication,
-      reduce maintainance, and scale your app
+  - title: Resilient&nbsp;Web Training&nbsp;&amp;&nbsp;Consulting
 summary: |
-  Set your team up for long-term success
-  with an in-depth training on front end code and workflow --
-  from advanced HTML/CSS
-  to component libraries and documentation.
-  OddBird offers
-  `1-3 day workshops with ongoing consulting`_:
-
-  .. _`1-3 day workshops with ongoing consulting`: /talks/resilient-systems/
-
-  - Take full advantage of the universal web
-  - Improve browser compatibility
-  - Streamline team workflow and communication
-  - Reduce maintainance as you scale
+  Take full advantage of the universal web,
+  and reduce maintenance over the long term
+  with resilient HTML, CSS, and JS systems.
+  OddBird provides **custom consulting and in-depth trainings**
+  on front-end architecture and workflow --
+  from advanced HTML/CSS to integrated design systems,
+  component libraries, testing, and documentation.
 
   .. callmacro:: birds/utility.macros.j2#face_block
     :author: 'miriam'
 
-    Learn more about our workshops,
-    and custom application design and development services --
-    with automated design systems built in:
+    Contact us for 1-3 day workshops with Miriam Suzanne,
+    or ongoing consulting with our team of Python, UX,
+    and front-end experts.
 
     .. callmacro:: content.macros.j2#link_button
       :content: 'Schedule a call with Miriam'

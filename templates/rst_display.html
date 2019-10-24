@@ -49,11 +49,7 @@
 
 
 {% block location -%}
-  {%- set override = 'blog' if ctx.author else none -%}
-  {%- set override = 'speaking' if config.events else override -%}
-  {%- set override = 'open-source' if config.contributors else override -%}
-  {%- set override = 'case-studies' if config.client else override -%}
-  {{- config.location or override or super() -}}
+  {{- utility.location(config) or super() -}}
 {%- endblock %}
 
 

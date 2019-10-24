@@ -1,3 +1,4 @@
+{% import 'utility.macros.j2' as utility %}
 {% import 'content.macros.j2' as content %}
 {% import 'contact/macros.j2' as contact %}
 
@@ -6,7 +7,7 @@
 {% else %}
   {{ content.divider(small=false) }}
   {{ contact.footer(
-    location=config.location,
+    location=utility.location(config),
     action=config.footer_action
   ) }}
 {% endif %}

@@ -28,10 +28,11 @@
   location,
   action=none
 ) %}
-  {% set actions = {
-    'design-systems': 'workshop'
+  {% set location_actions = {
+    'design-systems': 'workshop',
+    'blog': 'workshop'
   } %}
-  {% set action = action or actions[location] or 'default' %}
+  {% set action = action or location_actions[location] or 'default' %}
   {% set page = all_pages|filter_pages('cta_is', 'eq', action)|get_page %}
 
   {% if page %}
@@ -43,31 +44,33 @@
       {% if cta_head or cta_img %}
         <header class="cta-header">
           {% if cta_img %}
-            <img src="/static/images/{{ cta_img.src }}" alt="{{ cta_img.alt }}">
+            <img
+              src="/static/images/{{ cta_img.src }}"
+              alt="{{ cta_img.alt }}"
+              class="cta-img"
+            >
           {% endif %}
-          <h2>{{ cta_head.title|typogrify }}</h2>
-          {% if cta_head.tagline %}
-            <h3>{{ cta_head.tagline|typogrify }}</h3>
-          {% endif %}
+          <h2 class="cta-title">
+            <span class="cta-span">
+              {{ cta_head.title|safe|typogrify }}
+            </span>
+          </h2>
         </header>
       {% endif %}
+
       {{ page.render_summary() }}
     {% endset %}
 
-    {% set content %}
-      {% if config.cta_face %}
-        {{ birds.face_block(
-          config.cta_face,
-          content
-        ) }}
-      {% else %}
-        {{ content }}
-      {% endif %}
-    {% endset %}
-
-    <div class="cta-footer">
+    <div class="cta-block">
       <section data-module="cta-content">
-        {{ content }}
+        {% if config.cta_face %}
+          {{ birds.face_block(
+            config.cta_face,
+            content
+          ) }}
+        {% else %}
+          {{ content }}
+        {% endif %}
       </section>
     </div>
   {% endif %}
