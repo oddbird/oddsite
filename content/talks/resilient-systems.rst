@@ -23,12 +23,11 @@ modules:
       as they become available.
   - title: Intrinsic & Responsive Layouts
     summary: |
-      The web layout system has come a long way --
-      with grids, flexbox, alignment,
-      and intrinsic sizing.
-      We'll cover the system as a whole,
-      and when to use each technique
-      to achieve dynamic & resilient layouts fast.
+      We'll cover the web layout system as a whole --
+      grids, flow, flexbox, alignment,
+      intrinsic sizing, and queries --
+      showing when and how to mix and match techniques
+      for fast and dynamic layouts.
   - title: Naming & Organizing Conventions
     summary: |
       From OOCSS to ITCSS, SMACSS, BEM, and atomic design,
@@ -36,8 +35,8 @@ modules:
       conventions that can help us write
       modular & maintainable CSS.
       We'll look at what these systems have in common,
-      and how to mix-and-match for the needs
-      of a particular team or project.
+      and how to adapt those principles for the needs
+      of your team or project.
   - title: Design Systems & Component Libraries
     summary: |
       Reusable design & component systems
@@ -71,8 +70,7 @@ modules:
       or communication between designers & developers?
       We can help you find the
       practical workflows that keep your
-      process running smoothly
-      to create beautiful & integrated user experiences.
+      process running smoothly.
   - title: HTML & CSS in JS Frameworks
     summary: |
       With the advent of JavaScript frameworks,
@@ -83,12 +81,19 @@ modules:
       in tools like React and Vue
       without losing sight of what HTML & CSS provide.
 summary: |
-  **Set your team & project up for long-term success**
-  with an in-depth training on front end code and workflow --
-  from advanced HTML/CSS
-  to design systems, component libraries,
-  responsive & intrinsic layouts,
-  naming conventions, and documentation.
+  **Take full advantage of the universal web,
+  and reduce maintenance over the long term**
+  with resilient HTML, CSS, and JS systems.
+  OddBird provides **custom consulting and in-depth trainings**
+  on front-end architecture and workflow --
+  from advanced HTML/CSS to integrated design systems,
+  component libraries, testing, and documentation.
+
+  .. callmacro:: content.macros.j2#link_button
+    :url: '/contact/'
+    :class: 'section-end'
+
+    Get started with a free consultation
 
 
 Resilient Web Systems

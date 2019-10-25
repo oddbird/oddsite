@@ -45,26 +45,3 @@
     display: none;
   }
 }
-
-.cta-header {
-  display: grid;
-  grid: auto / 1fr min-content;
-}
-
-.cta-img {
-  grid-area: 1 / 1 / -1 / -1;
-}
-
-.cta-img + .cta-title {
-  align-self: end;
-  grid-area: 1 / 2 / -1 / -1;
-  justify-self: end;
-  margin: size('shim');
-  text-align: right;
-
-  .cta-span {
-    background: color('text');
-    color: color('background');
-    padding: 0 size('half-shim');
-  }
-}
