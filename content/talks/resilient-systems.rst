@@ -14,8 +14,8 @@ brag: |
 modules:
   - title: Resilient & Universal Code
     summary: |
-      Browser & device support
-      doesn't have to be difficult and expensive.
+      Browser support & device compatibility
+      don't have to be difficult and expensive.
       We'll cover a number of techniques
       for building more resilient and universal
       front end code,
