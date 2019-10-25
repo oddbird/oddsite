@@ -71,9 +71,12 @@
     {{ events.by_talk(ctx) }}
   {% endif %}
 
-  {% if ctx.author %}
+  {% if ctx.author or ctx.config.speakers %}
     <div class="author-summary inverted">
-      {{ birds.get_card(ctx.author, details=true) }}
+      {{ birds.get_card(
+        ctx.author or ctx.config.speakers[0],
+        details=true
+      ) }}
     </div>
   {% endif %}
 

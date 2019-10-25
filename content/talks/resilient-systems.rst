@@ -3,67 +3,110 @@ speakers: [miriam]
 headline:
   - type: Training & Consulting
     tagline: |
-      Improve team communication & browser compatibility,
-      reduce maintenance, and scale your app
+      Upgrade your app with resilient systems training, tooling & consulting
 image:
   - src: 'talks/miriam.jpg'
 event_type: workshop
+grid_template: true
 brag: |
-  Improve team communication & browser compatibility,
-  reduce maintenance, and scale your app
+  Upgrade your app with resilient systems
+  training, tooling & consulting
+modules:
+  - title: Resilient & Universal Code
+    summary: |
+      Browser & device support
+      don't have to be difficult and expensive.
+      We'll cover a number of techniques
+      for building more resilient and universal
+      front end code,
+      while taking advantage of new browser features
+      as they become available.
+  - title: Intrinsic & Responsive Layouts
+    summary: |
+      The web layout system has come a long way --
+      with grids, flexbox, alignment,
+      and intrinsic sizing.
+      We'll cover the system as a whole,
+      and when to use each technique
+      to achieve dynamic & resilient layouts fast.
+  - title: Naming & Organizing Conventions
+    summary: |
+      From OOCSS to ITCSS, SMACSS, BEM, and atomic design,
+      there are a number of naming and organizing
+      conventions that can help us write
+      modular & maintainable CSS.
+      We'll look at what these systems have in common,
+      and how to mix-and-match for the needs
+      of a particular team or project.
+  - title: Design Systems & Component Libraries
+    summary: |
+      Reusable design & component systems
+      can improve consistency,
+      code-quality,
+      and team communication.
+      You don't need a dedicated team and budget
+      to get started.
+      We'll talk about planning and designing systems
+      in an agile and integrated environment.
+  - title: Style Guides & Documentation
+    summary: |
+      Documentation is central to maintainable code,
+      but how do we make sure the documentation
+      itself is maintained and up-to-date?
+      We'll look at workflow and tooling
+      for automated and integrated style guides
+      and documentation.
+  - title: Tooling & Testing
+    summary: |
+      The tools we use help define our workflow,
+      and the long-term reliability of our code.
+      Tools & tests should help encourage best-practice
+      without locking us into antiquated systems.
+      We'll talk about designing
+      the right tooling and testing workflow
+      for your team or project.
+  - title: Team Process & Wokflow
+    summary: |
+      Struggling with messy handoff
+      or communication between designers & developers?
+      We can help you find the
+      practical workflows that keep your
+      process running smoothly
+      to create beautiful & integrated user experiences.
+  - title: HTML & CSS in JS Frameworks
+    summary: |
+      With the advent of JS frameworks,
+      we need to rethink exactly how the there
+      core web languages relate and work together.
+      With some thoughtful integration
+      we can take advantage of all the new power
+      in tools like React and Vue
+      without losing site of what HTML & CSS provide.
 summary: |
-  Struggling with messy communication,
-  browser compatibility,
-  or technical debt?
-  Set your team up for long-term success
+  **Set your team & project up for long-term success**
   with an in-depth training on front end code and workflow --
   from advanced HTML/CSS
-  to component libraries and documentation.
-  We offer 1-3 day workshops with ongoing consulting
-  to help you take full advantage of the web,
-  improve team process,
-  and reduce maintenance over the long term.
+  to design systems, component libraries,
+  responsive & intrinsic layouts,
+  naming conventions, and documentation.
 
 
 Resilient Web Systems
 =====================
 
-While the `1-day workshop <#@@@>`_
-covers fundamentals for a wide range of attendees,
-we can customize the material for internal team trainings.
-Whether you work in Django, jQuery, React, Vue, or something else entirely -- 
-we'll dig into your specific needs,
-to find a process and architecture that works for you.
-That can include a range of topics:
+.. callmacro:: content.macros.j2#rst
 
-- Integrating design and development processes around a design system
-- Organizing and packaging full HTML/CSS/JS component libraries
-- Managing complex and user-customizable themes across applications
-- Finding the tools and conventions that work best for your team
-- Improving performance and accessibility with components
+  The web platform is designed to be universally
+  accessible and resilient across a range of
+  devices and interfaces.
+  That presents a unique set of challenges and opportunities
+  for our web applications.
 
+  We offer 1-3 day workshops with ongoing consulting
+  to help you take full advantage of the web,
+  improve team process,
+  and reduce maintenance over the long term.
 
-One-Day Package
----------------
-
-Join Miriam for a deep-dive into the heart of the front end
-with CSS fundamentals and best practice:
-how it works, what makes it special, and how we can harness it
-for resilient and maintainable design systems that scale.
-Rather than learning a single convention or toolkit,
-you'll learn what all the conventions share -- 
-how to think with CSS, and make smart decisions for your own project:
-
-- Why CSS works the way it does:
-  from cascade and inheritance to normal flow and formatting contexts
-- Modern and "intrinsic" web layout in-depth:
-  putting flexbox, grid, floats, alignment, writing modes,
-  media queries and display in context
-- Moving past "browser support" to write modern and resilient CSS everywhere,
-  to take advantage of new features
-  without duplicating your efforts and driving up budgets
-- The foundations of every CSS architecture and naming convention,
-  from OOCSS to BEM, SMACSS, ITCSS and beyond
-- Building meaningful and maintainable design systems with modern CSS and Sass
-- Integrating documentation and cross-team communication
-- Where CSS is going, and how you can get involved
+.. callmacro:: content.macros.j2#grid
+  :slug: 'talks/resilient-systems'
+  :data: 'modules'

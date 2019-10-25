@@ -158,24 +158,40 @@
   </span>
 {% endmacro %}
 
+
 {% macro rst_meta(
   ctx
 ) %}
-  {% if ctx.pub_date or ctx.tags %}
+  {% if ctx.pub_date or ctx.tags or ctx.author or ctx.config.speakers %}
     <div class="rst-meta">
-      {% if ctx.pub_date %}
-        <p class="byline">
-          {% if ctx.author %}
-            <span class="meta-preposition">by</span>
-            {{ birds_util.name_link(ctx.author) }}
-          {% endif %}
-          <span class="meta-preposition">on</span>
-          {{ utility.datetime(ctx.pub_date) }}
-        </p>
-      {% endif %}
+        {{ byline(
+          authors=[ctx.author] if ctx.author else ctx.config.speakers,
+          pubdate=ctx.pub_date
+        ) }}
 
       {{ tags(ctx.tags) }}
     </div>
+  {% endif %}
+{% endmacro %}
+
+
+{% macro byline(
+  authors,
+  pubdate=none
+) %}
+  {% if authors or pubdate %}
+    <p class="byline">
+      {% if authors %}
+        <span class="meta-preposition">by</span>
+        {% for author in authors %}
+          {{ birds_util.name_link(author) }}{{ '' if loop.last else ',' }}
+        {% endfor %}
+      {% endif %}
+      {% if pubdate %}
+        <span class="meta-preposition">on</span>
+        {{ utility.datetime(pubdate) }}
+      {% endif %}
+    </p>
   {% endif %}
 {% endmacro %}
 
@@ -234,16 +250,6 @@
 {% endmacro %}
 
 
-{%- macro speaker_list(speakers) -%}
-  {{- 'by ' -}}
-  {%- for speaker in speakers -%}
-    {{- 'and ' if loop.last and not loop.first -}}
-    {{- birds_util.get_bird_name(speaker) -}}
-    {{- ', ' if (speakers|length > 2) and (not loop.last) else ' ' -}}
-  {%- endfor -%}
-{%- endmacro -%}
-
-
 {% macro header(rst, ctx, show_summary=true) %}
   {% set headline = ctx.config.headline[0] if ctx.config.headline else none %}
   {% set project = ctx.config.project[0] if ctx.config.project else none %}
@@ -265,8 +271,7 @@
 
   {% set page_sub = headline.tagline if (headline and headline.tagline) else none %}
   {% set proj_sub = project.tagline if (project and project.tagline) else none %}
-  {% set by_sub = speaker_list(ctx.config.speakers) if ctx.config.speakers else none %}
-  {% set sub = page_sub or proj_sub or by_sub %}
+  {% set sub = page_sub or proj_sub %}
 
   {% set is_event = ctx.config.event_type and (ctx.config.events|length == 1) %}
   {% set event = ctx.config.events[0] if is_event else none %}
@@ -307,14 +312,6 @@
           details='birdpage'
         ) }}
       {% endif %}
-
-      {% for bird in ctx.config.speakers %}
-        {% set birdpage = all_pages|filter_pages('bird', 'eq', bird)|get_page %}
-        {{ birds_util.card(
-          birdpage,
-          details=true
-        ) }}
-      {% endfor %}
 
       {{ ctx.render_summary()|typogrify }}
       {{ header_actions(actions, project, slides, elsewhere, event) }}

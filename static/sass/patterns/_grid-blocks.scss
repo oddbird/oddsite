@@ -1,0 +1,30 @@
+ul.grid-block {
+  display: flex;
+  display: grid;
+  flex-flow: row wrap;
+  grid-template-columns: repeat(auto-fit, minmax(size('splash-items'), 1fr));
+  justify-content: center;
+  list-style: none;
+  margin: size('spacer') auto;
+  max-width: 100%;
+  padding: 0;
+  width: size('large-page');
+
+  @supports (display: grid) {
+    grid-gap: size('gutter');
+  }
+}
+
+.grid-block-item {
+  flex: 1 1 size('splash-items');
+  padding: size('shim');
+
+  @supports (display: grid) {
+    padding: 0;
+  }
+}
+
+.grid-block-title {
+  font-size: inherit;
+  margin: 0;
+}
