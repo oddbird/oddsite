@@ -29,4 +29,4 @@ summary: |
 Resilient Web Systems
 =====================
 
-.. sadly, we cant easily access title/content easily in rstBlog, only metadata
+.. sadly, we can't easily access title/content in rstBlog, only metadata

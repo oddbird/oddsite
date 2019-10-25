@@ -15,7 +15,7 @@ modules:
   - title: Resilient & Universal Code
     summary: |
       Browser & device support
-      don't have to be difficult and expensive.
+      doesn't have to be difficult and expensive.
       We'll cover a number of techniques
       for building more resilient and universal
       front end code,
@@ -65,7 +65,7 @@ modules:
       We'll talk about designing
       the right tooling and testing workflow
       for your team or project.
-  - title: Team Process & Wokflow
+  - title: Team Process & Workflow
     summary: |
       Struggling with messy handoff
       or communication between designers & developers?
@@ -75,13 +75,13 @@ modules:
       to create beautiful & integrated user experiences.
   - title: HTML & CSS in JS Frameworks
     summary: |
-      With the advent of JS frameworks,
-      we need to rethink exactly how the there
+      With the advent of JavaScript frameworks,
+      we need to rethink exactly how the
       core web languages relate and work together.
       With some thoughtful integration
       we can take advantage of all the new power
       in tools like React and Vue
-      without losing site of what HTML & CSS provide.
+      without losing sight of what HTML & CSS provide.
 summary: |
   **Set your team & project up for long-term success**
   with an in-depth training on front end code and workflow --
