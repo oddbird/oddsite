@@ -73,7 +73,7 @@ modules:
       process running smoothly.
   - title: HTML & CSS in JS Frameworks
     summary: |
-      With the advent of JavaScript frameworks,
+      With the proliferation of modern JavaScript frameworks,
       we need to rethink exactly how the
       core web languages relate and work together.
       With some thoughtful integration
