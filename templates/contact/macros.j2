@@ -24,35 +24,51 @@
 {% endmacro %}
 
 
-{% macro footer(location) %}
-  {% set contact_page = 'contact/index'|get_config %}
-  {% set cta = contact_page.config.cta_footer[0] if contact_page.config.cta_footer %}
+{% macro footer(
+  location,
+  action=none
+) %}
+  {% set location_actions = {
+    'design-systems': 'workshop',
+    'blog': 'workshop'
+  } %}
+  {% set action = action or location_actions[location] or 'default' %}
+  {% set page = all_pages|filter_pages('cta_is', 'eq', action)|get_page %}
 
-  {% if cta %}
-    <div class="contact-wrap">
-      <section data-module="contact-cta">
-        {% set name = birds.name_link(cta.contact, full_name=false) %}
-        {% set main_content = cta.content|rst|replace('%s', name) %}
-        {% set action = cta.action %}
+  {% if page %}
+    {% set config = page.config %}
+    {% set cta_img = config.cta_img[0] if config.cta_img else none %}
+    {% set cta_head = config.headline[0] if config.headline else none %}
 
-        <div class="contact-miriam" data-media-block="start">
-          {{ birds.face(cta.contact, 'media-image') }}
-          <div class="media-content">
-            <h2>
-              {% if ('susysite' in location) or ('hermansite' in location) %}
-                {{ cta.project_title }}
-              {% else %}
-                {{ cta.title }}
-              {% endif %}
-            </h2>
+    {% set content %}
+      {% if cta_head or cta_img %}
+        <header class="cta-header">
+          {% if cta_img %}
+            <img
+              src="/static/images/{{ cta_img.src }}"
+              alt="{{ cta_img.alt }}"
+              class="cta-img"
+            >
+          {% endif %}
+          <h2 class="cta-title">
+            {{ cta_head.title|safe|typogrify }}
+          </h2>
+        </header>
+      {% endif %}
 
-            {{ main_content }}
-            {{ content.link_button(
-              url=action.url,
-              content=action.text|replace('%s', cta.contact|capitalize)
-            ) }}
-          </div>
-        </div>
+      {{ page.render_summary() }}
+    {% endset %}
+
+    <div class="cta-block">
+      <section data-module="cta-content">
+        {% if config.cta_face %}
+          {{ birds.face_block(
+            config.cta_face,
+            content
+          ) }}
+        {% else %}
+          {{ content }}
+        {% endif %}
       </section>
     </div>
   {% endif %}

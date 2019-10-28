@@ -6,7 +6,7 @@ event_type: workshop
 events:
   - venue: 'Webconf.Asia'
     url: 'https://2019.webconf.asia/'
-    date: [2019, 11, 21]
+    date: [2020, 8, 27]
     adr: 'Hong Kong'
   - venue: 'Generate 2019'
     url: 'https://www.generateconf.com/generate2019/workshops'

@@ -86,3 +86,12 @@
     </time>
   {% endif %}
 {% endmacro %}
+
+
+{% macro location(config) -%}
+  {%- set override = 'blog' if config.author else none -%}
+  {%- set override = 'speaking' if (config.speakers) else override -%}
+  {%- set override = 'open-source' if config.contributors else override -%}
+  {%- set override = 'case-studies' if config.client else override -%}
+  {{ config.location or override }}
+{%- endmacro %}

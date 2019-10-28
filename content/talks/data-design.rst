@@ -7,7 +7,7 @@ slides: 'https://talks.oddbird.net/dynamic-css/'
 events:
   - venue: 'Webconf.Asia'
     url: 'https://2019.webconf.asia/'
-    date: [2019, 11, 22]
+    date: [2020, 8, 28]
     adr: 'Hong Kong'
   - venue: 'Develop Denver'
     url: 'https://developdenver.org/'
@@ -93,11 +93,6 @@ quotes:
     role: 'Principal Designer at Prefect.io'
     url: 'https://twitter.com/itsngansense/status/1111001282528063488'
     slug: 'squishy'
-brag: |
-  Learn to **integrate design and code**
-  to isolate components and
-  automate style documentation
-  with a **design system built for your needs**.
 summary: |
   **CSS has come a long way since the browser wars** of the late 90s.
   What used to be a struggle,

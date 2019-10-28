@@ -108,7 +108,7 @@ h6 {
   }
 
   @include above('small-page') {
-    margin-right: size('gutter');
+    margin-right: size('shim');
   }
 }
 

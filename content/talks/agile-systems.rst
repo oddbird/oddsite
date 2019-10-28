@@ -40,10 +40,6 @@ quotes:
     role: 'Microsoft Sr. Developer Advocate & Vue Core Team member'
     url: 'https://twitter.com/sarah_edo/status/979023728611905536'
     slug: 'audit'
-brag: |
-  A talk on how we
-  **automate style documentation** by
-  building patterns directly into our code.
 summary: |
   **Style Guides & Pattern Libraries are great tools**
   for documenting the relationships between code and design,
