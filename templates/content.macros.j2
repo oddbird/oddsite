@@ -30,21 +30,30 @@
 
 {% macro grid(
   slug,
-  data
+  data,
+  title=none
 ) %}
   {% set page = slug|get_config %}
   {% set data = page.config[data] %}
 
-  {% if data %}
-    <ul class="grid-block">
-      {% for item in data %}
-        <li  class="grid-block-item">
-          <h2 class="grid-block-title">{{ item.title }}</h2>
-          {{ item.summary | rst | safe }}
-        </li>
-      {% endfor %}
-    </ul>
-  {% endif %}
+  <section class="grid-block-container">
+
+    {% if title %}
+      {{ divider(title) }}
+    {% endif %}
+
+    {% if data %}
+      <ul class="grid-block">
+        {% for item in data %}
+          <li  class="grid-block-item">
+            <h2 class="grid-block-title">{{ item.title }}</h2>
+            {{ item.summary | rst | safe }}
+          </li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+
+  </section>
 {% endmacro %}
 
 
