@@ -166,7 +166,8 @@
     <div class="rst-meta">
         {{ byline(
           authors=[ctx.author] if ctx.author else ctx.config.speakers,
-          pubdate=ctx.pub_date
+          pubdate=ctx.pub_date,
+          preposition='with' if ctx.config.speakers else 'by'
         ) }}
 
       {{ tags(ctx.tags) }}
@@ -177,12 +178,13 @@
 
 {% macro byline(
   authors,
-  pubdate=none
+  pubdate=none,
+  preposition=none
 ) %}
   {% if authors or pubdate %}
     <p class="byline">
       {% if authors %}
-        <span class="meta-preposition">by</span>
+        <span class="meta-preposition">{{ preposition or 'by' }}</span>
         {% for author in authors %}
           {{ birds_util.name_link(author) }}{{ '' if loop.last else ',' }}
         {% endfor %}

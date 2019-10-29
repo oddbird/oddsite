@@ -3,9 +3,9 @@ speakers: [miriam]
 headline:
   - type: Training & Consulting
     tagline: |
-      Upgrade your app with resilient systems training, tooling & consulting
+      Upgrade your app with front-end training & consulting
 image:
-  - src: 'talks/miriam.jpg'
+  - src: blog/2019/mia-jen-smashing.jpg
 event_type: workshop
 grid_template: true
 brag: |
@@ -93,7 +93,7 @@ summary: |
     :url: '/contact/'
     :class: 'section-end'
 
-    Get started with a free consultation
+    Schedule a call to begin
 
 
 Resilient Web Systems
@@ -115,3 +115,4 @@ Resilient Web Systems
 .. callmacro:: content.macros.j2#grid
   :slug: 'talks/resilient-systems'
   :data: 'modules'
+  :title: 'Choose Your Own Adventure'
