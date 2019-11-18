@@ -6,10 +6,22 @@ image:
   - src: 'talks/miriam.jpg'
 event_type: talk
 events:
+  - venue: 'Smashing Conf Austin'
+    url: 'https://smashingconf.com/austin-2020/'
+    date: [2020, 6, 9]
+    adr: 'Austin, TX'
+  - venue: 'Front Range Front End'
+    url: 'https://www.meetup.com/front-range-front-end/events/bxrfwqyzpbkb/'
+    date: [2019, 11, 7]
+    adr: 'Denver, CO'
+    video_link: https://youtu.be/bSITeqDKkb8
+    video: '<iframe width="560" height="315" src="https://www.youtube.com/embed/bSITeqDKkb8" frameborder="0" allowfullscreen></iframe>'
   - venue: 'Smashing Conf'
     url: 'https://smashingconf.com/ny-2019/'
     date: [2019, 10, 16]
     adr: 'New York, NY'
+    video_link: 'https://vimeo.com/367890815'
+    video: '<iframe src="https://player.vimeo.com/video/367890815" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>'
 brag: |
   Learn to **build resilient cross-platform sites**
   without waiting for universal feature support.
