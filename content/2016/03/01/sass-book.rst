@@ -27,7 +27,7 @@ summary: |
 Jump Start Sass
 ===============
 
-.. sub-headers struggle without prior content...
+.. sub-headers struggle without prior content…
 
 Components and Organization
 ---------------------------

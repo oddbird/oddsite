@@ -94,8 +94,8 @@ and share any tools we build.
 .. _source code: https://github.com/oddbird/oddsite/
 
 
-Our Process From Here...
-------------------------
+Our Process From Here…
+----------------------
 
 These are the rough stages we expect to go through:
 
@@ -149,8 +149,8 @@ These are the rough stages we expect to go through:
 .. _Sondra: /authors/sondra/
 
 
-Rinse and Repeat...
--------------------
+Rinse and Repeat…
+-----------------
 
 The steps can be listed like a numbered waterfall,
 but that's not how it will happen in practice.

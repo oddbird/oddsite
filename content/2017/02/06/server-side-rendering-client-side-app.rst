@@ -191,7 +191,7 @@ Or for a view with a collection of models:
 
     // Create a child view (used for each individual model).
     const MyChildView = Mnt.View.extend({
-      // ...
+      // …
     });
 
     const ViewWithCollection = Mnt.CollectionView.extend({

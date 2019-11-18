@@ -107,7 +107,7 @@ And in our HTML, after the JS file has been executed:
 
     <script>
       if(!window.isSpamReferral()) {
-        // ... initialize Google Analytics
+        // … initialize Google Analytics
       }
     </script>
 
@@ -135,7 +135,7 @@ And our modified HTML:
 
     <script>
       if(!window.isSpamReferral() && !window.isDevelopment()) {
-        // ... initialize Google Analytics
+        // … initialize Google Analytics
       }
     </script>
 

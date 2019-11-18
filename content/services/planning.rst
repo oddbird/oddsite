@@ -79,7 +79,7 @@ planning1:
         It is easy to continue to the next customer
         because the tool bar with alerts
         still appears at the top of this page.
-        After taking care of the immediate tasks...
+        After taking care of the immediate tasks…
   - title: 'Interactive Wireframe'
     icon: 'interact'
     text: |
@@ -105,14 +105,14 @@ planning2:
       .. wrap:: figure
         :class: text-sample
 
-        **As a Coach, I want...**
+        **As a Coach, I want…**
 
         - to see a dashboard.
         - to check alerts.
         - to see and confirm appointments on a calendar.
         - to view a client’s profile with need requests.
 
-        **As a Client, I want...**
+        **As a Client, I want…**
 
         - to create a profile.
         - to request an appointment on a calendar.

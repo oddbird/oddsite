@@ -293,7 +293,7 @@ one small piece at a time?
 
 Lucky for you,
 there’s nothing I love
-more than over-engineering Sass tools...
+more than over-engineering Sass tools…
 
 
 A Functional Solution

@@ -1,7 +1,7 @@
 public: yes
 speakers: [miriam]
 headline:
-  - tagline: Have ever set a width in CSS, and... nothing happens?
+  - tagline: Have ever set a width in CSS, and… nothing happens?
 image:
   - src: 'mozdev/inactive-css.png'
 event_type: video

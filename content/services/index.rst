@@ -123,7 +123,7 @@ Application Design & Development
   :slug: 'handoff'
 
 .. callmacro:: projects/macros.j2#process
-  :title: 'Our process is...'
+  :title: 'Our process is…'
   :slug: 'services/index'
   :data: 'process'
 

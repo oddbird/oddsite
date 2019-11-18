@@ -218,7 +218,7 @@ Here are just a few of their options:
     ///   }
 
 Herman supports `all SassDoc annotations`_,
-and we've added style guide features of our own...
+and we've added style guide features of our own…
 
 .. _all SassDoc annotations: http://sassdoc.com/annotations/
 

@@ -62,7 +62,7 @@ bind JS data to HTML attributes:
 .. code:: html
 
    <table :style="{'--scale': graph.scale}">
-     <!-- ... -->
+     <!-- … -->
      <td :style="{'--value': item.value}">{{ item.value }}%</td>
 
 CSS variables

@@ -49,7 +49,7 @@ We're experts at building systems on a budget,
 and integrating tools & daily process
 to keep your system meaningful and up-to-date.
 
-You're team will learn to...
+You're team will learn to…
 
 - Audit existing sites for patterns and problems
 - Maintain consistency in the design throughout an application
@@ -87,5 +87,3 @@ We work with you to determine the best tools for your company.
 
 .. callmacro:: content.macros.j2#rst
   :tag: 'end'
-
-

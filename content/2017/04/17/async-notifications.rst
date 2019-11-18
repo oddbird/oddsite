@@ -167,11 +167,11 @@ And now you can push messages to users yourself:
 .. code:: python
 
     def my_background_task(message):
-        # ...
+        # …
         Group(get_group_id_from(message)).send({
             "text": some_status_update,
         })
-        # ...
+        # …
 
 And the front-end JavaScript will receive it over the websocket. Display it in
 a toast or other style of your choosing, and you're good to go!

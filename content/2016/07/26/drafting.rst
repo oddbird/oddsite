@@ -176,4 +176,4 @@ Sass Toolkits and Configuration
 - accoutrement-init
 - accoutrement-type
 - accoutrement-colors
-- more?...
+- more?…

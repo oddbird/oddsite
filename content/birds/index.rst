@@ -3,7 +3,7 @@ location: birds
 image:
   - src: 'pages/faces-hero.jpg'
 headline:
-  - tagline: "The people you'll work with..."
+  - tagline: "The people you'll work with…"
     type: 'About Us'
 after:
   - include: 'birds/_list.html.j2'

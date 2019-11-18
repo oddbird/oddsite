@@ -1,7 +1,7 @@
 public: yes
 author: miriam
 headline:
-  - tagline: Have ever set a width in CSS, and... nothing happens?
+  - tagline: Have ever set a width in CSS, and… nothing happens?
 tags: [CSS, 'Mozilla Developer', Code, Video]
 image:
   - src: 'mozdev/inactive-css.png'
