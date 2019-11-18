@@ -24,8 +24,3 @@ Subgrid will be available in Firefox 71 (Dec 3),
 and you can use it already in Firefox Nightly --
 but there's no need to wait.
 Subgrid works great as a quick enhancement on top of your existing layouts!
-
-.. callmacro:: content.macros.j2#video
-  :embed: '<iframe width="560" height="315" src="https://www.youtube.com/embed/gmQlK3kRft4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
-
-  Laying out Forms using Subgrid

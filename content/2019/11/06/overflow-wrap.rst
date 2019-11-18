@@ -25,7 +25,7 @@ and how to use them.
 .. callmacro:: content.macros.j2#video
   :embed: '<iframe width="560" height="315" src="https://www.youtube.com/embed/UOKQ6gw21NA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
 
-  Overflow-Wrap is the proper way to break words in CSS
+  Overflow-wrap is the proper way to break words in CSS
 
 - `MDN Overflow-Wrap <https://developer.mozilla.org/en-US/docs/Web/CSS/overflow-wrap>`_
 - `MDN Hyphens <https://developer.mozilla.org/en-US/docs/Web/CSS/hyphens>`_

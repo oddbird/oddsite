@@ -21,8 +21,3 @@ summary: |
 
 Why isn’t this CSS doing anything?
 ==================================
-
-.. callmacro:: content.macros.j2#video
-  :embed: '<iframe width="560" height="315" src="https://www.youtube.com/embed/O3DAm82vIvU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
-
-  Handy new developer tools in Firefox!

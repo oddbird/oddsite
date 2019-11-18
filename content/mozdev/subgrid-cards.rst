@@ -28,8 +28,3 @@ and available now in Firefox Nightly.
 This is a great opportunity to
 quickly enhance our designs for modern browsers,
 without losing anything in the browsers lacking subgrid support.
-
-.. callmacro:: content.macros.j2#video
-  :embed: '<iframe width="560" height="315" src="https://www.youtube.com/embed/lLnFtK1LNu4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
-
-  Subgrid for Better Card Layouts, with fallbacks for legacy browsers
