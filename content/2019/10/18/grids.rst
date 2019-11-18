@@ -38,4 +38,4 @@ we can also start to lay out nested elements on a shared grid:
 .. callmacro:: content.macros.j2#video
   :embed: '<iframe width="560" height="315" src="https://www.youtube.com/embed/gmQlK3kRft4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
 
-  Laying out Forms using Subgrid
+  Laying Out Forms using Subgrid

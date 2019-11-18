@@ -16,7 +16,7 @@ summary: |
   handling everything from ``block`` and ``inline`` boxes
   to ``list-items`` and full layout systems like ``flexbox`` or ``grid``.
   Now the ``display`` syntax is getting an upgrade
-  to match it's multiple uses.
+  to match its multiple uses.
 
 
 Inner & Outer Values of the Display Property

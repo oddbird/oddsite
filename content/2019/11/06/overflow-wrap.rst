@@ -16,7 +16,7 @@ summary: |
 How do you wrap long words in CSS?
 ==================================
 
-We can now use overflow-wrap to control how words break --
+We can now use ``overflow-wrap`` to control how words break --
 and combine that with hyphens to make wrapped text more readable.
 The solutions aren't perfect yet,
 but I'll walk you through the options we have,
