@@ -4,7 +4,7 @@ headline:
   - tagline: a gift from Mozilla (and OddBird)
 tags: [CSS, 'Mozilla Developer', Code, Video]
 image:
-  - src: 'mozdev/mozilla-youtube.png'
+  - src: 'mozdev/mozilla-youtube.jpg'
 summary: |
   Over the summer,
   we've been working with Mozilla
