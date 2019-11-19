@@ -126,11 +126,11 @@ Here are a few grids:
 
   // use a grid locally
   @include use-grid($960-ish) {
-    /* This code will use the $960-ish grid... */
+    /* This code will use the $960-ish grid… */
   }
 
 You can use ``set-grid()`` to establish new grids anywhere you need,
-or ``use-grid() { ... }`` to use a new grid for one block of code.
+or ``use-grid() { … }`` to use a new grid for one block of code.
 
 As you can see,
 we're trying to make the system as flexible as possible,

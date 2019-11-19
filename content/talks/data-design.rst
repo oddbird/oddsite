@@ -13,6 +13,8 @@ events:
     url: 'https://developdenver.org/'
     date: [2019, 8, 15]
     adr: 'Denver, CO'
+    video_link: 'https://www.youtube.com/watch?v=JnvkjhwcMcM'
+    video: '<iframe width="560" height="315" src="https://www.youtube.com/embed/JnvkjhwcMcM" frameborder="0" allowfullscreen></iframe>'
   - venue: 'Generate 2019'
     url: 'https://www.generateconf.com/generate2019/'
     date: [2019, 4, 25]
@@ -26,6 +28,7 @@ events:
     date: [2019, 4, 16]
     adr: 'San Francisco, CA'
     video_link: 'https://vimeo.com/331571593'
+    video: '<iframe src="https://player.vimeo.com/video/331571593" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>'
     slides: 'https://talks.oddbird.net/dynamic-css/smashingsf19/'
     post: '/2019/05/17/smashing'
   - venue: 'VueConf US'

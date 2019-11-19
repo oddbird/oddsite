@@ -209,7 +209,7 @@ OK, but what does that ``Consumer`` look like?
             )
 
          def get_serializer(self, *, data):
-             # ... omitted for brevity. See
+             # … omitted for brevity. See
              # https://github.com/encode/django-rest-framework/blob/master/rest_framework/generics.py
 
 And now you'll want to add some stuff to your ``routing`` module, too:
@@ -329,7 +329,7 @@ little like this:
    await some_notification_async_function()
    response = await communicator.receive_json_from()
    assert response == {
-       # ... whatever you expect
+       # … whatever you expect
    }
 
    await communicator.disconnect()

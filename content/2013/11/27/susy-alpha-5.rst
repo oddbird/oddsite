@@ -106,7 +106,7 @@ both for grid-settings and for spans:
   );
 
   @include use-grid($large inside) {
-    // ...
+    // …
   }
 
   @include span(3 $large);

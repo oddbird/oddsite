@@ -8,7 +8,7 @@
     {{ birds.list(author=author) }}
   {% endfor %}
 {% else %}
-  {# If no list is given, show all bird pages... #}
+  {# If no list is given, show all bird pages… #}
   {% for page in all_pages|filter_pages('bird')|get_page() %}
     {{ birds.list(page=page) }}
   {% endfor %}

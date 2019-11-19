@@ -172,7 +172,7 @@ we can ``@use`` Accoutrement:
 Like ``@import``,
 that makes Accoutrement tools available
 in our file!
-Unlike ``@import``...
+Unlike ``@import``…
 
 - Accoutrement will not be passed along
   to other files that we ``@use`` after it
@@ -249,7 +249,7 @@ so I can import them all at once:
   @import 'footer';
 
   // app-styles.scss
-  @import 'layout'; // sass knows to grab the index file...
+  @import 'layout'; // sass knows to grab the index file…
 
 The new module system
 has a special syntax for that:
@@ -335,8 +335,8 @@ duplicate  or out-of-order configurations:
   // etc…
 
 
-So much more...
----------------
+So much more…
+-------------
 
 There is much more to cover --
 from Sass core modules

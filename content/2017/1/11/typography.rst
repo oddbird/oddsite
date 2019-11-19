@@ -67,7 +67,7 @@ unique associations and histories and uses. Serifs make long chunks of small
 text easier to read. Typefaces like Times New Roman, Georgia, and Baskerville
 have been around forever and are often used to present serious news.
 Associations like classic and trustworthy spring to mind. According to a `study
-by Errol Morris`_, “Baskerville, a 250-year-old serif...was statistically more
+by Errol Morris`_, “Baskerville, a 250-year-old serif…was statistically more
 likely to influence the minds of readers than Computer Modern, Georgia,
 Helvetica, Comic Sans or Trebuchet.”
 
@@ -263,7 +263,7 @@ typefaces receiving six thumbs up.
 Pros and Cons of Freight Sans and Freight Text Font Pair
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-And the winning pair is...
+And the winning pair is…
 
 OddBird chose Freight Sans for headlines and Freight Text for the body. Fun
 without being flashy. Professional without being stuffy. Trustworthy yet odd.
