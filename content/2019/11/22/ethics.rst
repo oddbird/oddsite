@@ -1,6 +1,6 @@
 public: yes
 author: stacy
-canonical: https://css-tricks.com/introducing-sass-modules/
+canonical: https://css-tricks.com/its-my-job-and-yours/
 elsewhere: CSS Tricks
 tags: [Elsewhere, Code, Design, Ethics, CSS Tricks]
 headline:
@@ -111,7 +111,7 @@ Also, variable fonts.
 
 -------
 
-If you are interested in learning more about Ethic in Design,
+If you are interested in learning more about Ethics in Design,
 here are some resources that I recommend:
 
 - Cennydd Bowles -
