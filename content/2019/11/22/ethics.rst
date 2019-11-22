@@ -5,7 +5,6 @@ elsewhere: CSS Tricks
 tags: [Elsewhere, Code, Design, Ethics, CSS Tricks]
 headline:
   - tagline: CSS Tricks asked a number of web builders the same question…
-tags: [CSS, 'Mozilla Developer', Code, Video]
 image:
   - src: 'herman/stacy-design-systems-training.jpg'
 summary: |
