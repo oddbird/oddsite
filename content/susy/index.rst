@@ -58,7 +58,7 @@ brag: |
 quotes:
   - text: 'I like the idea of grids-on-demand, rather than a strict framework.'
     name: 'Chris Coyier'
-    role: 'CSS Tricks'
+    role: 'CSS-Tricks'
     url: 'http://css-tricks.com/build-web-layouts-easily-susy/'
     slug: 'on-demand'
   - text: |

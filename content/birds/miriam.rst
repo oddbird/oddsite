@@ -33,7 +33,7 @@ summary: |
   and `True`_ libraries.
   Miriam is a
   teacher and open-web advocate for `Mozilla Developer`_,
-  staff writer for `CSS Tricks`_,
+  staff writer for `CSS-Tricks`_,
   co-author of SitePoint’s `Jump Start Sass`_,
   and internationally known
   `conference speaker`_,
@@ -46,7 +46,7 @@ summary: |
   .. _Susy: /susy/
   .. _True: /true/
   .. _Mozilla Developer: https://www.youtube.com/MozillaDeveloper
-  .. _CSS Tricks: http://css-tricks.com
+  .. _CSS-Tricks: http://css-tricks.com
   .. _Jump Start Sass: https://www.sitepoint.com/premium/books/jump-start-sass
   .. _conference speaker: /services/speaking/
   .. _CSS Dev Conf: https://blog.cssdevconf.com/slides-and-resources-from-css-dev-conf-2017-new-orleans-8e2a5edb06b0#2b07

@@ -41,13 +41,13 @@ During that transition period:
 
 I'll be posting
 a more in-depth article
-to `CSS Tricks`_ on Monday,
+to `CSS-Tricks`_ on Monday,
 but I wanted to get a quick primer out
 right away.
 
-[**Update**: the `full article is now live`_ at CSS Tricks]
+[**Update**: the `full article is now live`_ at CSS-Tricks]
 
-.. _CSS Tricks: https://css-tricks.com/introducing-sass-modules/
+.. _CSS-Tricks: https://css-tricks.com/introducing-sass-modules/
 .. _full article is now live: https://css-tricks.com/introducing-sass-modules/
 
 
@@ -346,9 +346,9 @@ public and private members,
 the ``load-css()`` mixin,
 and so on.
 I cover all of that in the
-`article for CSS Tricks`_.
+`article for CSS-Tricks`_.
 
-.. _article for CSS Tricks: https://css-tricks.com/introducing-sass-modules/
+.. _article for CSS-Tricks: https://css-tricks.com/introducing-sass-modules/
 
 If you want to get a head start,
 the amazing `new documentation`_

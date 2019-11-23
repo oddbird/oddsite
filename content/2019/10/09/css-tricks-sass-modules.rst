@@ -1,8 +1,8 @@
 public: yes
 author: miriam
 canonical: https://css-tricks.com/introducing-sass-modules/
-elsewhere: CSS Tricks
-tags: [Elsewhere, Code, Modules, Sass, Tutorial, CSS Tricks]
+elsewhere: CSS-Tricks
+tags: [Elsewhere, Code, Modules, Sass, Tutorial, CSS-Tricks]
 image:
   - src: 'blog/2019/sass-logo.png'
 summary: |
@@ -20,5 +20,5 @@ summary: |
   for the quick introduction.
 
 
-CSS Tricks: Introducing Sass Modules
+CSS-Tricks: Introducing Sass Modules
 ====================================

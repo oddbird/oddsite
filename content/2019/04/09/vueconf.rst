@@ -41,7 +41,7 @@ VueFinder at VueConf, 2019
 
 After learning about Vue
 from `Sarah Drasner`_'s
-stream of articles on `CSS Tricks`_,
+stream of articles on `CSS-Tricks`_,
 I had the pleasure of speaking at
 `VueConf 2018`_.
 I really enjoyed that conference,
@@ -56,7 +56,7 @@ and quickly learned to
 bind JS data to HTML attributes:
 
 .. _Sarah Drasner: https://twitter.com/sarah_edo
-.. _CSS Tricks: https://css-tricks.com/author/sdrasner/
+.. _CSS-Tricks: https://css-tricks.com/author/sdrasner/
 .. _VueConf 2018: /2018/05/14/vueconfus/
 
 .. code:: html
@@ -73,7 +73,7 @@ While most inline styles are difficult to override,
 CSS variables can instead be ignored --
 making their inline specificity harmless.
 
-I wrote a quick demo for CSS Tricks --
+I wrote a quick demo for CSS-Tricks --
 `More CSS Charts, with Grid & Custom Properties`_ --
 and continued to develop the idea
 into my latest talk:
