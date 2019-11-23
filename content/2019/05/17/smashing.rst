@@ -213,13 +213,13 @@ I found several examples and articles:
 - `Live Theming with CSS Variables <https://www.jonathan-harrell.com/live-theming-with-css-variables/>`_
 - `Advanced CSS Theming with Custom Properties and JavaScript <https://www.sitepoint.com/css-theming-custom-properties-javascript/>`_
 
-`CSS Tricks also provides a rundown`_
+`CSS-Tricks also provides a rundown`_
 with links to more articles.
 There's a lot of room left to explore here,
 so play with it,
 and share what you find!
 
-.. _CSS Tricks also provides a rundown: https://css-tricks.com/css-custom-properties-theming/
+.. _CSS-Tricks also provides a rundown: https://css-tricks.com/css-custom-properties-theming/
 
 Unit Tests
 ~~~~~~~~~~

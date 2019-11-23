@@ -1,10 +1,10 @@
 public: yes
 author: stacy
 canonical: https://css-tricks.com/its-my-job-and-yours/
-elsewhere: CSS Tricks
-tags: [Elsewhere, Code, Design, Ethics, CSS Tricks]
+elsewhere: CSS-Tricks
+tags: [Elsewhere, Code, Design, Ethics, CSS-Tricks]
 headline:
-  - tagline: CSS Tricks asked a number of web builders the same question…
+  - tagline: CSS-Tricks asked a number of web builders the same question…
 image:
   - src: 'herman/stacy-design-systems-training.jpg'
 summary: |

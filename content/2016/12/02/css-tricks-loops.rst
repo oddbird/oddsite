@@ -1,8 +1,8 @@
 public: yes
 author: miriam
 canonical: https://css-tricks.com/loops-css-preprocessors/
-elsewhere: CSS Tricks
-tags: [Elsewhere, CSS, Sass, Less, Stylus, CSS Tricks]
+elsewhere: CSS-Tricks
+tags: [Elsewhere, CSS, Sass, Less, Stylus, CSS-Tricks]
 image:
   - src: 'blog/2016/trick-loops.jpg'
 summary: |
@@ -18,5 +18,5 @@ summary: |
   Sass, Less, and Stylus.
 
 
-CSS Tricks: Loops in CSS Preprocessors
+CSS-Tricks: Loops in CSS Preprocessors
 ======================================

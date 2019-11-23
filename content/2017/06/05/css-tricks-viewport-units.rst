@@ -1,8 +1,8 @@
 public: yes
 author: miriam
 canonical: https://css-tricks.com/fun-viewport-units/
-elsewhere: CSS Tricks
-tags: [Elsewhere, CSS, CSS Tricks]
+elsewhere: CSS-Tricks
+tags: [Elsewhere, CSS, CSS-Tricks]
 image:
   - src: 'blog/elsewhere/css-tricks.jpg'
 summary: |
@@ -13,5 +13,5 @@ summary: |
   and then round-up some of my favorite use-cases.
 
 
-CSS Tricks: Fun with Viewport Units
+CSS-Tricks: Fun with Viewport Units
 ===================================
