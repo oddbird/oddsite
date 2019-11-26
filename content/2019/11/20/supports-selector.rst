@@ -4,7 +4,7 @@ headline:
   - tagline: |
       Just in time for
       `Selectors Level 4 <https://www.w3.org/TR/selectors-4/>`_!
-tags: [CSS, 'Mozilla Developer', Code, Video]
+tags: [CSS, 'Mozilla Developer', AboutWeb, Code, Video]
 image:
   - src: 'mozdev/supports_selector.png'
 summary: |

@@ -2,7 +2,7 @@ public: yes
 author: miriam
 headline:
   - tagline: And ``subgrid``, landing on Dec 3
-tags: [CSS, 'Mozilla Developer', Code, Video]
+tags: [CSS, 'Mozilla Developer', AboutWeb, Code, Video]
 image:
   - src: 'mozdev/grid.png'
 summary: |

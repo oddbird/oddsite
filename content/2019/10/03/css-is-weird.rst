@@ -2,7 +2,7 @@ public: yes
 author: miriam
 headline:
   - tagline: How can we design for an unknown & infinite canvas?
-tags: [CSS, 'Mozilla Developer', Code, Video]
+tags: [CSS, 'Mozilla Developer', AboutWeb, Code, Video]
 image:
   - src: 'mozdev/css-is-weird.png'
 summary: |
