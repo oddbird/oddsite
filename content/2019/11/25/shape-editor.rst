@@ -26,14 +26,16 @@ and create shapes directly in the browser.
   Use the shape path editor to create and adjust shapes on the fly!
 
 Resources:
-- `MDN Article » <https://developer.mozilla.org/en-US/docs/Tools/Page_Inspector/How_to/Edit_CSS_shapes>`_
--`Clippy <https://bennettfeely.com/clippy/>`_
 
-Shape Demos showm:
--`widehive.com <http://www.widehive.com/artists>`_
--`miriamsuzanne.com <https://www.miriamsuzanne.com/2019/10/03/css-is-weird/>`_
--`Stacy ellipse pen <https://codepen.io/stacy/full/449546ec58c27981aa764fe6a8d0d02b>`_
--`Stacy starfish pen <https://codepen.io/stacy/full/zjOeWa>`_
--`Scrolling Alice in Wonderland <https://adobe-webplatform.github.io/Demo-for-Alice-s-Adventures-in-Wonderland/>`_
--`Jen Simmons Labs <https://labs.jensimmons.com/#shapes>`_
--`Stacy yoga pen <https://codepen.io/stacy/full/aWKerN>`_
+- `MDN Article » <https://developer.mozilla.org/en-US/docs/Tools/Page_Inspector/How_to/Edit_CSS_shapes>`_
+- `Clippy <https://bennettfeely.com/clippy/>`_
+
+Shape Demos shown:
+
+- `widehive.com <http://www.widehive.com/artists>`_
+- `miriamsuzanne.com <https://www.miriamsuzanne.com/2019/10/03/css-is-weird/>`_
+- `Stacy ellipse pen <https://codepen.io/stacy/full/449546ec58c27981aa764fe6a8d0d02b>`_
+- `Stacy starfish pen <https://codepen.io/stacy/full/zjOeWa>`_
+- `Scrolling Alice in Wonderland <https://adobe-webplatform.github.io/Demo-for-Alice-s-Adventures-in-Wonderland/>`_
+- `Jen Simmons Labs <https://labs.jensimmons.com/#shapes>`_
+- `Stacy yoga pen <https://codepen.io/stacy/full/aWKerN>`_
