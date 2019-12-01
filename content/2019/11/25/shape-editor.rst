@@ -27,7 +27,7 @@ and create shapes directly in the browser.
 
 Resources:
 
-- `MDN Article » <https://developer.mozilla.org/en-US/docs/Tools/Page_Inspector/How_to/Edit_CSS_shapes>`_
+- `MDN Article <https://developer.mozilla.org/en-US/docs/Tools/Page_Inspector/How_to/Edit_CSS_shapes>`_
 - `Clippy <https://bennettfeely.com/clippy/>`_
 
 Shape Demos shown:
