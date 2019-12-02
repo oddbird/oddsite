@@ -2,7 +2,7 @@ public: yes
 author: miriam
 headline:
   - tagline: Have you ever set a ``width`` in CSS, and… nothing happens?
-tags: [CSS, 'Mozilla Developer', Code, Video]
+tags: [CSS, 'Mozilla Developer', DevTools, Code, Video]
 image:
   - src: 'mozdev/inactive-css.png'
 summary: |

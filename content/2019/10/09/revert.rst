@@ -2,7 +2,7 @@ public: yes
 author: miriam
 headline:
   - tagline: And how is it different from ``unset`` or ``initial``?
-tags: [CSS, 'Mozilla Developer', Code, Video]
+tags: [CSS, 'Mozilla Developer', AboutWeb, Code, Video]
 image:
   - src: 'mozdev/revert.png'
 summary: |

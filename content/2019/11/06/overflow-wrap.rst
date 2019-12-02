@@ -2,7 +2,7 @@ public: yes
 author: miriam
 headline:
   - tagline: None of the solutions are perfect, but we have some options
-tags: [CSS, 'Mozilla Developer', Code, Video]
+tags: [CSS, 'Mozilla Developer', AboutWeb, Code, Video]
 image:
   - src: 'mozdev/overflow_wrap.png'
 summary: |
