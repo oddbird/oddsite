@@ -2,7 +2,7 @@ public: yes
 author: miriam
 headline:
   - tagline: Allow us to be more explicit & expressive about layouts
-tags: [CSS, 'Mozilla Developer', Code, Video]
+tags: [CSS, 'Mozilla Developer', AboutWeb, Code, Video]
 image:
   - src: 'mozdev/multi-display.png'
 summary: |
