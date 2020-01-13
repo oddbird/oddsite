@@ -1024,10 +1024,10 @@ accepts@~1.3.4:
     mime-types "~2.1.24"
     negotiator "0.6.2"
 
-accoutrement@^2.1.2:
-  version "2.1.2"
-  resolved "https://registry.yarnpkg.com/accoutrement/-/accoutrement-2.1.2.tgz#41713543e0b280ea23995eb8c041f57284bb5e30"
-  integrity sha512-se0jj7gShxxWEX1cjPVH2jSzWnC0GCoNERZ055S9YIHydzZxXxjOu2NxgGTBqt+mKhapcI5GDClNcfWl4DCPyA==
+accoutrement@^2.1.3:
+  version "2.1.3"
+  resolved "https://registry.yarnpkg.com/accoutrement/-/accoutrement-2.1.3.tgz#28f82d2ca8dfe598bca85274ceec3f4320a54dbd"
+  integrity sha512-4Gmg9+mNmeEMzxedzTtkBDH/cQ7EFN9epNGEZMb8SMRmls8pRKLAhYNFhLqLQnwSh5AGgmaVJ9FRmc2SG2hZsw==
 
 acorn-jsx@^5.1.0:
   version "5.1.0"
