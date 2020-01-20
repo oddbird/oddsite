@@ -66,7 +66,7 @@
     "postcss-loader": "^3.0.0",
     "prettier": "^1.19.1",
     "raw-loader": "4.0.0",
-    "sass-loader": "^8.0.0",
+    "sass-loader": "^8.0.2",
     "sass-true": "^5.0.0",
     "sassdoc": "^2.7.1",
     "sassdoc-theme-herman": "^3.0.2",
