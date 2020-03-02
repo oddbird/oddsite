@@ -19,7 +19,7 @@ summary: |
   site performance, and accessibility.
 
   .. _writing: /blog/
-  .. _improve design systems: /talks/agile-systems-workshop/
+  .. _improve design systems: /talks/agile-systems/
 
 
 Speaking & Training
