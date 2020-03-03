@@ -12,6 +12,14 @@ brag: |
   Upgrade your app with resilient systems
   training, tooling & consulting
 modules:
+  - title: CSS Fundamentals In-Depth
+    summary: |
+      It's possible to write CSS for years
+      without fully understanding
+      the core features of the language:
+      from the cascade & inheritance,
+      to the declarative & contextual
+      programming paradigm.
   - title: Resilient & Universal Code
     summary: |
       Browser support & device compatibility
@@ -80,11 +88,21 @@ modules:
       we can take advantage of all the new power
       in tools like React and Vue
       without losing sight of what HTML & CSS provide.
+  - title: Sass Modules & Pre-Processing
+    summary: |
+      Sass has become one of the fundamental tools
+      for writing clear & maintainable CSS,
+      and is growing quickly
+      with a new modular syntax,
+      more powerful math,
+      and new features landing regularly.
+      We'll help you get the most out of
+      everything Sass has to offer.
 summary: |
   **Take full advantage of the universal web,
   and reduce maintenance over the long term**
   with resilient HTML, CSS, and JS systems.
-  OddBird provides **custom consulting and in-depth trainings**
+  We offer **in-depth workshops, with ongoing consulting**
   on front-end architecture and workflow --
   from advanced HTML/CSS to integrated design systems,
   component libraries, testing, and documentation.
@@ -99,20 +117,16 @@ summary: |
 Resilient Web Systems
 =====================
 
-.. callmacro:: content.macros.j2#rst
-
-  The web platform is designed to be universally
-  accessible and resilient across a range of
-  devices and interfaces.
-  That presents a unique set of challenges and opportunities
-  for our web applications.
-
-  We offer 1-3 day workshops with ongoing consulting
-  to help you take full advantage of the web,
-  improve team process,
-  and reduce maintenance over the long term.
-
 .. callmacro:: content.macros.j2#grid
   :slug: 'talks/resilient-systems'
   :data: 'modules'
   :title: 'Choose Your Own Adventure'
+
+.. callmacro:: content.macros.j2#divider
+
+.. callmacro:: content.macros.j2#rst
+
+  Prices are negotiable,
+  depending on the event size, location, and context.
+  Workshops can range from half-day to 3-day intensive.
+  `Contact us </contact/>`_ for details.

@@ -2,6 +2,8 @@ public: yes
 speakers: [miriam]
 event_type: talk
 slides: 'https://talks.oddbird.net/agile-systems/'
+image:
+  - src: 'blog/2017/herman-intro/header.jpg'
 actions:
   - text: Download checklist
     url: /static/resources/design-systems-checklist.pdf
