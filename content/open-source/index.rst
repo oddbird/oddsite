@@ -7,6 +7,7 @@ after:
   - include: 'projects/_feature.html.j2'
     has: 'contributors'
     slugs:
+      - 'open-source/csswg'
       - 'open-source/sass'
       - 'open-source/django'
       - 'herman/index'

@@ -28,6 +28,7 @@ summary: |
   and find solutions to their unique problems.
   She is a user-experience expert,
   and a pioneer of modern CSS techniques –
+  W3C Invited Expert on the `CSS Working Group`_,
   member of the `Sass`_ core team,
   and creator of the popular `Susy`_
   and `True`_ libraries.
@@ -36,12 +37,12 @@ summary: |
   staff writer for `CSS-Tricks`_,
   co-author of SitePoint’s `Jump Start Sass`_,
   and internationally known
-  `conference speaker`_,
-  winning "Best of" `CSS Dev Conf`_ in 2017.
+  `conference speaker`_.
   She is also a multimedia artist
   with extensive experience in theatre,
   writing, music, and visual art.
 
+  .. _CSS Working Group: https://www.w3.org/Style/CSS/
   .. _Sass: https://sass-lang.com
   .. _Susy: /susy/
   .. _True: /true/
@@ -49,7 +50,6 @@ summary: |
   .. _CSS-Tricks: http://css-tricks.com
   .. _Jump Start Sass: https://www.sitepoint.com/premium/books/jump-start-sass
   .. _conference speaker: /services/speaking/
-  .. _CSS Dev Conf: https://blog.cssdevconf.com/slides-and-resources-from-css-dev-conf-2017-new-orleans-8e2a5edb06b0#2b07
 
 
 Miriam Suzanne

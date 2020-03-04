@@ -149,6 +149,7 @@ Software for Humans
   :headline: 'Developer Tools We Build'
   :url: '/open-source/'
   :slugs: [
+      'open-source/csswg',
       'open-source/sass',
       'open-source/django',
       'susy/index',
