@@ -37,7 +37,7 @@ so that authors can define
 Jen Simmons presented the proposal
 at a CSSWG "face-to-face" meeting,
 along with `supporting slides`_.
-I'll write a more detailed article
+I'll write an article
 with details about the proposal soon.
 
 .. _custom CSS origins: https://github.com/w3c/csswg-drafts/issues/4470
