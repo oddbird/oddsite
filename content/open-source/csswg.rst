@@ -28,11 +28,10 @@ summary: |
   Cascading & Inheritance,
   in addition to other CSS standards.
   Miriam is also active in the
-  `CSS4 <https://www.w3.org/community/css4/>`_,
+  `CSS4 <https://www.w3.org/community/css4/>`_
   and `Design Token <https://www.w3.org/community/design-tokens/>`_
   Community Groups.
 
 
 CSS Working Group
 =================
-
