@@ -7,6 +7,6 @@ blinker==1.4
 docutils==0.16
 Jinja2==2.11.1
 Werkzeug==0.16.1
-Pygments==2.5.2
+Pygments==2.6.1
 smartypants==2.0.1
 Pillow==6.2.1
