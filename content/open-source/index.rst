@@ -11,6 +11,7 @@ after:
       - 'open-source/sass'
       - 'open-source/django'
       - 'herman/index'
+      - 'blend/index'
       - 'susy/index'
       - 'true/index'
       - 'accoutrement/index'
