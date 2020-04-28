@@ -27,9 +27,9 @@ summary: |
 Blend
 =====
 
-.. image:: https://badge.fury.io/js/susy.svg
+.. image:: https://badge.fury.io/js/%40oddbird%2Fblend.svg
   :alt: 'npm package'
-  :target: https://www.npmjs.com/package/susy
+  :target: https://www.npmjs.com/package/@oddbird/blend
 
 .. code:: bash
 
@@ -38,7 +38,7 @@ Blend
 Blend is written using the `Sass module syntax`_,
 only supported by the Dart Sass compiler at this point.
 
-.. _Sass module syntax: http://oddsite.hexxie.com:3000/2019/10/02/sass-modules/
+.. _Sass module syntax: /2019/10/02/sass-modules/
 
 .. code:: scss
 
@@ -148,14 +148,14 @@ particular range (or gamut) of colors. Print design often relies on the
 **sRGB**.
 
 If you write much CSS, you are likely familiar with several ``sRGB``
-formats — including ``hexidecimal``, ``rgb()``, and ``hsl()``. While
+formats – including ``hexidecimal``, ``rgb()``, and ``hsl()``. While
 ``hex`` and ``rgb`` formats describe the space based on linear
 adjustments of ``red``, ``green``, and ``blue`` axis, the ``hsl()``
 format moves around sRGB space as a cylinder.
 
 But ``sRGB`` provides a limited gamut of colors, and some unpredictable
 results. While ``hsl`` helps provide a human readable format, the colors
-are not **perceptually uniform** — yellow and blue ``hues`` with the
+are not **perceptually uniform** – yellow and blue ``hues`` with the
 same ``lightness`` provide drastically different *luminosity* and
 contrast.
 
@@ -170,7 +170,7 @@ lightness should provide the same luminosity. That makes LCH a great
 choice for color systems that involve automation.
 
 Eventually, we will be able to use LCH and other wide-gamut formats
-directly in the browser, but for now colors must be converted to sRGB —
+directly in the browser, but for now colors must be converted to sRGB –
 and colors that fall outside the sRGB gamut need to be adjusted.
 
 That’s where we come in.
