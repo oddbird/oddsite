@@ -138,3 +138,12 @@
     height: size('alt-logo-y');
   }
 }
+
+// Announcements
+// -------------
+
+#sitewide-announcement {
+  @include invert;
+  padding: size('quarter-shim') size('gutter');
+  text-align: center;
+}
