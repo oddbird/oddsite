@@ -7,6 +7,11 @@
 {% import 'community/subscribe.macros.j2' as news %}
 
 {% block layout %}
+  {% if config.announce %}
+    <section id="sitewide-announcement">
+      {{ config.announce | rst | safe }}
+    </section>
+  {% endif %}
 
   <header data-region="banner">
     <div class="brand">
