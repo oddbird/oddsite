@@ -125,7 +125,7 @@ Black Lives Matter
   Make a donation to any of the people & organizations listed above,
   on or after June 4,
   with funds under your own name,
-  and then show us the reciept with the donation amount.
+  and then show us the receipt with the donation amount.
 
   You can contact us `@OddBird on Twitter`_,
   or via `email to birds@oddbird.net`_
