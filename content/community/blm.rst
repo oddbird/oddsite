@@ -130,7 +130,7 @@ Black Lives Matter
   You can contact us `@OddBird on Twitter`_,
   or via `email to birds@oddbird.net`_
 
-  .. _`@OddBird on Twitter`: https://oddbird.net/
+  .. _`@OddBird on Twitter`: https://twitter.com/oddbird
   .. _`email to birds@oddbird.net`: mailto:birds@oddbird.net
 
 
