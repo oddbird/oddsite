@@ -1,9 +1,9 @@
 // Inverted Sections
 // =================
 
-@mixin invert {
-  @include contrasted('invert');
-  @include link-color-for('invert');
+@mixin invert($bg: 'invert') {
+  @include contrasted($bg);
+  @include link-color-for($bg);
 }
 
 .inverted {
