@@ -17,25 +17,16 @@ giving:
   - name: 'Django Girls'
     url: 'https://djangogirls.org/'
     type: 'donations'
-    years: '2015–2019'
+    years: '2015–2020'
     description: |
       is a non-profit organization
       and a community that empowers and helps women to organize free,
       one-day programming workshops by providing tools,
       resources and support.
-  - name: 'App Camp for Girls'
-    url: 'https://appcamp4girls.com/'
-    type: 'donations'
-    years: '2018'
-    description: |
-      is a one-week summer day program where girls,
-      transgender & gender non-conforming youth
-      can put their creative powers to work
-      designing and building apps.
   - name: 'Black Girls CODE'
     url: 'http://blackgirlscode.com/'
     type: 'donations'
-    years: '2013–2016, 2018'
+    years: '2013–2016, 2018–2019'
     description: |
       has set out to prove to the world
       that girls of every color have the skills
@@ -45,6 +36,22 @@ giving:
       working in technology,
       and give underprivileged girls a chance
       to become the masters of their technological worlds.
+  - name: 'CallbackWomen'
+    url: 'https://www.callbackwomen.com/'
+    type: 'donations'
+    years: '2019'
+    description: |
+      works to radically expand gender diversity
+      among speakers at professional programmers' conferences.
+  - name: 'App Camp for Girls'
+    url: 'https://appcamp4girls.com/'
+    type: 'donations'
+    years: '2018'
+    description: |
+      is a one-week summer day program where girls,
+      transgender & gender non-conforming youth
+      can put their creative powers to work
+      designing and building apps.
   - name: 'Electronic Frontier Foundation'
     url: 'https://www.eff.org/'
     type: 'donations'
@@ -114,7 +121,7 @@ giving:
   - name: 'Goshen Ultimate Summer League'
     url: 'http://goshenultimate.com/'
     type: 'sponsorships'
-    years: '2014–2018'
+    years: '2014–2020'
     description: |
       provides opportunities to learn, play,
       and teach spirited Ultimate in Goshen, IN and surrounding areas.
