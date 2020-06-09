@@ -7,6 +7,11 @@ headline:
 image:
   - src: blog/2019/mia-jen-smashing.jpg
 event_type: workshop
+events:
+  - venue: 'Smashing Conf Austin'
+    url: 'https://smashingconf.com/austin-2020/'
+    date: [2020, 10, 12]
+    adr: 'Austin, TX'
 grid_template: true
 brag: |
   Upgrade your app with resilient systems

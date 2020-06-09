@@ -8,7 +8,7 @@ event_type: talk
 events:
   - venue: 'Smashing Conf Austin'
     url: 'https://smashingconf.com/austin-2020/'
-    date: [2020, 6, 9]
+    date: [2020, 10, 13]
     adr: 'Austin, TX'
   - venue: 'Front Range Front End'
     url: 'https://www.meetup.com/front-range-front-end/events/bxrfwqyzpbkb/'
