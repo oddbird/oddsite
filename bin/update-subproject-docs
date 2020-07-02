@@ -1,7 +1,8 @@
 #!/bin/sh
 
-yarn global add @oddbird/blend susy sass-true sassdoc-theme-herman accoutrement accoutrement-color accoutrement-init accoutrement-layout accoutrement-scale accoutrement-type --no-lockfile --ignore-scripts --no-bin-links --global-folder temp
+yarn global add @oddbird/blend cascading-color-systems susy sass-true sassdoc-theme-herman accoutrement accoutrement-color accoutrement-init accoutrement-layout accoutrement-scale accoutrement-type --no-lockfile --ignore-scripts --no-bin-links --global-folder temp
 rm -rf ./content/blend/docs; cp -a ./temp/node_modules/@oddbird/blend/docs ./content/blend/
+rm -rf ./content/cascading-colors/docs; cp -a ./temp/node_modules/cascading-color-systems/docs ./content/cascading-colors/
 rm -rf ./content/susy/docs; cp -a ./temp/node_modules/susy/docs ./content/susy/
 rm -rf ./content/true/docs; cp -a ./temp/node_modules/sass-true/docs ./content/true/
 rm -rf ./content/herman/docs; cp -a ./temp/node_modules/sassdoc-theme-herman/docs ./content/herman/
