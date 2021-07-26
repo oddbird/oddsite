@@ -117,7 +117,7 @@ susytwo:
     url: 'http://www.zell-weekeat.com/static-grids-with-susy2/'
     type: 'tutorial'
   - title: 'My Favorite Sass Tools'
-    author: 'Hugo Giraudel'
+    author: 'Kitty Giraudel'
     source: 'SitePoint'
     url: 'http://www.sitepoint.com/my-favorite-sass-tools/'
     type: 'article'

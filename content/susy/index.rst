@@ -75,7 +75,7 @@ quotes:
   - text: |
       If you're interested in reading Sass poetry,
       be sure to look at Susy's source code!
-    name: 'Hugo Giraudel'
+    name: 'Kitty Giraudel'
     role: 'SitePoint'
     url: 'http://www.sitepoint.com/my-favorite-sass-tools/'
     slug: 'poetry'

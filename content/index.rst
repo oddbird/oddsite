@@ -116,7 +116,7 @@ Software for Humans
 
 .. callmacro:: content.macros.j2#image_block
   :image: '/static/images/pages/jssass.png'
-  :alt: 'Jump Start Sass: a beginners guide from SitePoint, written by Miriam Suzanne & Hugo Giraudel'
+  :alt: 'Jump Start Sass: a beginners guide from SitePoint, written by Miriam Suzanne & Kitty Giraudel'
   :url: 'https://www.sitepoint.com/premium/books/jump-start-sass'
   :headline: 'Performant Python, JavaScript, & CSS'
 

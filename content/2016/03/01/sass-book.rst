@@ -11,14 +11,14 @@ headline:
 summary: |
   I'm excited to release
   `Jump Start Sass`_,
-  a book I co-authored with `Hugo Giraudel`_.
+  a book I co-authored with `Kitty Giraudel`_.
   Digital coppies are available from `SitePoint`_,
   wih print edditions sold by `O'Reilly`_.
   Here's an excerpt from Chapter 11,
   `Sass Architecture`_.
 
   .. _Jump Start Sass: https://www.sitepoint.com/premium/books/jump-start-sass
-  .. _Hugo Giraudel: http://hugogiraudel.com/
+  .. _Kitty Giraudel: http://kittygiraudel.com/
   .. _SitePoint: https://www.sitepoint.com/
   .. _O'Reilly: http://shop.oreilly.com/product/9780994182678.do
   .. _Sass Architecture: https://www.sitepoint.com/architecture-in-sass/
