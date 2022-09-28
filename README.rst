@@ -1,5 +1,5 @@
-OddBird
-=======
+DEPRECATED
+==========
 
 
 Development setup
